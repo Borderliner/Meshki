@@ -1,19 +1,19 @@
 {
-  "name": "skeleton",
-  "version": "2.0.4",
-  "homepage": "http://getskeleton.com/",
+  "name": "meshki",
+  "version": "1.0.0.",
+  "homepage": "http://qolak.com/meshki",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dhg/Skeleton"
+    "url": "https://github.com/Qolak/Meshki"
   },
   "authors": [
-    "Dave Gamache <hello@davegamache.com> (http://davegamache.com/)"
+    "Mohammad Reza Hajianpour <borderliner@protonmail.com> (http://noder.ir/)"
   ],
-  "description": "Skeleton is a dead-simple, responsive boilerplate to kickstart any responsive project.",
-  "main": "css/skeleton.css",
+  "description": "Meshki is a dead-simple, responsive boilerplate to kickstart any responsive project.",
+  "main": "css/meshki.css",
   "keywords": [
     "css",
-    "skeleton",
+    "meshki",
     "responsive",
     "boilerplate"
   ],
