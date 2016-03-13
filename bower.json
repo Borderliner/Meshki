@@ -10,7 +10,7 @@
     "Mohammad Reza Hajianpour <borderliner@protonmail.com> (http://noder.ir/)"
   ],
   "description": "Meshki is a dead-simple, responsive boilerplate to kickstart any responsive project.",
-  "main": "css/meshki.css",
+  "main": "src/css/meshki.css",
   "keywords": [
     "css",
     "meshki",

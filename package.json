@@ -1,0 +1,30 @@
+{
+  "name": "meshki",
+  "version": "1.0.0",
+  "description": "Meshki is a dead-simple, responsive boilerplate to kickstart any responsive project.",
+  "main": "src/meshki.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "grunt cssmin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qolak/Meshki.git"
+  },
+  "keywords": [
+    "css",
+    "meshki",
+    "responsive",
+    "boilerplate"
+  ],
+  "author": "Qolak Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Qolak/Meshki/issues"
+  },
+  "homepage": "https://github.com/Qolak/Meshki#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-cssmin": "^1.0.0"
+  }
+}
