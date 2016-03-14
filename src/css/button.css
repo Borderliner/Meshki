@@ -165,9 +165,9 @@ button.green,
 input[type="submit"].green,
 input[type="reset"].green,
 input[type="button"].green {
-  color: #000;
-  background-color: #76FF03;
-  border-color: #64DD17; }
+ color: #FFF;
+ background-color: #2ECC71;
+ border-color: #27AE60; }
 .button.green:hover,
 button.green:hover,
 input[type="submit"].green:hover,
@@ -178,9 +178,9 @@ button.green:focus,
 input[type="submit"].green:focus,
 input[type="reset"].green:focus,
 input[type="button"].green:focus {
-  color: #000;
-  background-color: #B2FF59;
-  border-color: #76FF03; }
+ color: #FFF;
+ background-color: #2FD876;
+ border-color: #27AE60; }
 
 /* Teal */
 .button.teal,
