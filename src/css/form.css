@@ -20,7 +20,7 @@ textarea,
 select {
   height: 38px;
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
-  background-color: #fff;
+  background-color: #E0E0E0;
   border: 1px solid #D1D1D1;
   border-radius: 4px;
   box-shadow: none;
@@ -67,3 +67,7 @@ label > .label-body {
   display: inline-block;
   margin-left: .5rem;
   font-weight: normal; }
+
+input.round, textarea.round, button.round {
+  border-radius: 20px;
+}
