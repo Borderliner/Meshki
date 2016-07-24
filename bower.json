@@ -1,13 +1,13 @@
 {
   "name": "meshki",
-  "version": "1.0.0.",
-  "homepage": "http://qolak.com/meshki",
+  "version": "0.1.0.",
+  "homepage": "http://borderliner.ir/meshki",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Qolak/Meshki"
+    "url": "https://github.com/Borderliner/Meshki"
   },
   "authors": [
-    "Mohammad Reza Hajianpour <borderliner@protonmail.com> (http://noder.ir/)"
+    "Mohammad Reza Hajianpour <hajianpour.mr@gmail.com> (http://borderliner.ir/)"
   ],
   "description": "Meshki is a dead-simple, responsive boilerplate to kickstart any responsive project.",
   "main": "src/css/meshki.css",

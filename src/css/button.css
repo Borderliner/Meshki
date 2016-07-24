@@ -16,7 +16,7 @@ input[type="button"] {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
-  color: #555;
+  color: #E0E0E0;
   text-align: center;
   font-size: 11px;
   font-weight: 600;
@@ -40,7 +40,7 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  color: #333;
+  color: #888;
   border-color: #888;
   outline: 0; }
 
@@ -73,7 +73,7 @@ button.red,
 input[type="submit"].red,
 input[type="reset"].red,
 input[type="button"].red {
-  color: #FFF;
+  color: #222;
   background-color: #F44336;
   border-color: #E53935; }
 .button.red:hover,
@@ -86,8 +86,8 @@ button.red:focus,
 input[type="submit"].red:focus,
 input[type="reset"].red:focus,
 input[type="button"].red:focus {
-  color: #FFF;
-  background-color: #EF5350;
+  color: #222;
+  background-color: #F96B61;
   border-color: #F44336; }
 
 /* Purple */
@@ -132,8 +132,8 @@ button.yellow:focus,
 input[type="submit"].yellow:focus,
 input[type="reset"].yellow:focus,
 input[type="button"].yellow:focus {
-  color: #000;
-  background-color: #FFEE58;
+  color: #222;
+  background-color: #FFF27C;
   border-color: #FFEB3B; }
 
 /* Orange */
@@ -142,7 +142,7 @@ button.orange,
 input[type="submit"].orange,
 input[type="reset"].orange,
 input[type="button"].orange {
-  color: #000;
+  color: #222;
   background-color: #FF9800;
   border-color: #FB8C00; }
 .button.orange:hover,
@@ -155,8 +155,8 @@ button.orange:focus,
 input[type="submit"].orange:focus,
 input[type="reset"].orange:focus,
 input[type="button"].orange:focus {
-  color: #000;
-  background-color: #FFA726;
+  color: #222;
+  background-color: #FFBB57;
   border-color: #FF9800; }
 
 /* Green */
@@ -165,9 +165,9 @@ button.green,
 input[type="submit"].green,
 input[type="reset"].green,
 input[type="button"].green {
- color: #FFF;
- background-color: #2ECC71;
- border-color: #27AE60; }
+ color: #222;
+ background-color: #2CFF85;
+ border-color: #00E260; }
 .button.green:hover,
 button.green:hover,
 input[type="submit"].green:hover,
@@ -178,9 +178,9 @@ button.green:focus,
 input[type="submit"].green:focus,
 input[type="reset"].green:focus,
 input[type="button"].green:focus {
- color: #FFF;
- background-color: #2FD876;
- border-color: #27AE60; }
+ color: #222;
+ background-color: #75FFAF;
+ border-color: #00E260; }
 
 /* Teal */
 .button.teal,

@@ -13,8 +13,9 @@ code {
   margin: 0 .2rem;
   font-size: 90%;
   white-space: nowrap;
-  background: #F1F1F1;
+  background: #E0E0E0;
   border: 1px solid #E1E1E1;
+  color: #222;
   border-radius: 4px; }
 pre > code {
   display: block;
