@@ -8,15 +8,22 @@
 
 /* Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+div.code {
+  background-color: #E1E1E1;
+  border: 2px solid #E1E1E1;
+  border-radius: 5px;
+  padding: .7rem;
+  margin: .2rem;
+  color: #000;
+}
+div.code.glass {
+  background-color: transparent;
+  color: #E1E1E1;
+}
 code {
-  padding: .2rem .5rem;
-  margin: 0 .2rem;
   font-size: 90%;
   white-space: nowrap;
-  background: #E0E0E0;
-  border: 1px solid #E1E1E1;
-  color: #222;
-  border-radius: 4px; }
+}
 pre > code {
   display: block;
   padding: 1rem 1.5rem;
