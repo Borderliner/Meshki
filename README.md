@@ -6,7 +6,7 @@ Check out <http://borderliner.ir/meshki> for samples and details.
 ## Getting started
 
 There are a couple ways to download Meshki:
-- [Download the zip](https://github.com/Borderliner/Meshki/releases/download/0.1.0/Meshki-0.1.0.zip)
+- [Download the zip](https://github.com/Borderliner/Meshki/archive/v0.1.0-alpha.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v0.1.0-alpha.tar.gz)
 - Clone the repo: `git clone https://github.com/Borderliner/Meshki.git` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download)
 
 
