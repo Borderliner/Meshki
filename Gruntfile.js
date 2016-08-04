@@ -21,10 +21,18 @@ module.exports = function(grunt){
 	        'dist/meshki.min.js': ['src/js/meshki.js']
 	      }
 	    }
-	  }
+	  },
+	  copy: {
+		  main: {
+		    expand: true,
+		    src: 'src/js/meshki.js',
+		    dest: 'dist/',
+		  },
+		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.registerTask('default', ['cssmin']);
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.registerTask('default', ['cssmin', 'uglify', 'copy']);
 };
