@@ -5,7 +5,7 @@
   "main": "dist/meshki.min.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "grunt cssmin && grunt uglify && grunt copy"
+    "compile": "grunt default"
   },
   "repository": {
     "type": "git",
