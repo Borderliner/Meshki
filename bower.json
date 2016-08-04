@@ -10,7 +10,11 @@
     "Mohammad Reza Hajianpour <hajianpour.mr@gmail.com> (http://borderliner.ir/)"
   ],
   "description": "Meshki is a dead-simple, black-colored, responsive boilerplate to kickstart any responsive project.",
-  "main": "dist/meshki.min.css",
+  "main": [
+    "dist/meshki.css",
+    "dist/meshki.js",
+    "dist/fonts/Raleway-Regular.ttf"
+  ],
   "keywords": [
     "css",
     "meshki",
