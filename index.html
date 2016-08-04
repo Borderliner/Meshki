@@ -3,34 +3,47 @@
 <head>
   <title>Meshki Components</title>
   <link rel="stylesheet" type="text/css" href="dist/meshki.min.css">
+  <script type="text/javascript" src="src/js/meshki.js"></script>
 </head>
 <body>
-  <ul class="nav">
-    <li><a class="logo" href="#home">Meshki</a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#about">About</a></li>
-  </ul>
-
-  <div class="container">
-    <h1 class="text-center">Meshki</h2>
-    <div class="centerize text-center">
-      <a class="button">Simple</a>
-      <button class="default">Default</button>
-      <button class="success">Success</button>
-      <button class="danger">Danger</button>
-      <button class="warning">Warning</button>
-    </div><br />
-    <div class="code glass">
-      <code>
-        var app = require('express');<br>
-        app = express();<br>
-        var compression = require('compression');<br><br>
-
-        app.use(compression());<br>
-      </code>
-    </div>
-    
+  <div id="sidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="meshki.closeNav()">&times;</a>
+    <a href="#">Home</a>
+    <a href="#">Components</a>
+    <a href="#">Docs</a>
+    <a href="#">About</a>
   </div>
+
+  <div id="content" class="content">
+  
+    <ul class="nav">
+      <li><a class="logo" href="#" onclick="meshki.openNav()">Meshki</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+
+    <div class="container">
+      <h1 class="text-center">Meshki</h2>
+      <div class="centerize text-center">
+        <a class="button">Simple</a>
+        <button class="default">Default</button>
+        <button class="success">Success</button>
+        <button class="danger">Danger</button>
+        <button class="warning">Warning</button>
+      </div><br />
+      <div class="code glass">
+        <code>
+          var app = require('express');<br>
+          app = express();<br>
+          var compression = require('compression');<br><br>
+
+          app.use(compression());<br>
+        </code>
+      </div>
+    </div>
+
+  </div>
+    
 </body>
 </html>
