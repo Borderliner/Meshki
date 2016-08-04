@@ -28,6 +28,12 @@ module.exports = function(grunt){
 		    src: 'src/js/meshki.js',
 		    dest: 'dist/meshki.js',
 		  },
+		  fonts: {
+		  	cwd: 'src',
+		  	expand: true,
+		  	src: 'fonts/*.ttf',
+		  	dest: 'dist/'
+		  }
 		},
 		concat_css: {
 	    options: {},
