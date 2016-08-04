@@ -1,13 +1,13 @@
 # [Meshki](http://borderliner.ir/meshki)
-Meshki is a simple, black-colored, responsive boilerplate to kickstart any responsive project.
-It is only <b>10 KiB</b> (minified) and 23.1 KiB (normal), including both CSS and JS files.
+Meshki is a simple, black-colored, responsive boilerplate to kickstart any responsive project.<br>
+It is only <b>10 KiB</b> (minified) and 23.1 KiB (normal), including both CSS and JS files.<br>
 Check out <http://borderliner.ir/meshki> for samples and details.
 
 ## Getting started
 
 There are a couple ways to download Meshki:
 - [Download the zip](https://github.com/Borderliner/Meshki/archive/v0.2.0-alpha.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v0.2.0-alpha.tar.gz)
-- Clone the repo: `git clone https://github.com/Borderliner/Meshki.git` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download)
+- Clone the repo: `git clone https://github.com/Borderliner/Meshki.git` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download)<br>
 You can also download it via `bower install meshki --save`
 
 ### How to compile
@@ -49,7 +49,7 @@ Meshki/
 Meshki is lightweight, stylish and simple. It styles only raw HTML elements (with a few exceptions) and provides a responsive grid with a minimal and clean interface.
 - Around 1k lines of CSS unminified and with comments
 - Although it's not a UI framework, you can create most of the interface with just Meshki
-- No compiling or installing...just 2 files of CSS + JS
+- No compiling or installing. Just 2 files of CSS + JS
 - Can be installed via `bower` and `npm`
 - Clean code, clean interface, without any headaches
 
@@ -67,9 +67,10 @@ The above list is non-exhaustive. Meshki works perfectly with almost all older v
 
 ## License
 
-All parts of Meshki are free to use and abuse under the [open-source MIT license](https://github.com/Borderliner/Meshki/blob/master/LICENSE.md).
+All parts of Meshki are free to use and abuse under the [open-source MIT license](https://github.com/Borderliner/Meshki/blob/master/LICENSE.md).<br>
+All other non-Meshki codes have their own licenses. Check out their repositories for more information.
 
 ## Acknowledgement
 
-Meshki started by Mohammad Reza Hajianpour as a fork of [Skeleton](https://github.com/dhg/Skeleton). Although it has changed a lot, and Meshki has experienced a total overhaul.
+Meshki started by Mohammad Reza Hajianpour as a fork of [Skeleton](https://github.com/dhg/Skeleton). Although it has changed a lot, and Meshki has experienced a total overhaul.<br>
 Skeleton was created by [Dave Gamache](https://twitter.com/dhg).
