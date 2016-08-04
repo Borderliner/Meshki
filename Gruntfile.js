@@ -24,15 +24,23 @@ module.exports = function(grunt){
 	  },
 	  copy: {
 		  main: {
-		    expand: true,
+		    expand: false,
 		    src: 'src/js/meshki.js',
-		    dest: 'dist/',
+		    dest: 'dist/meshki.js',
 		  },
-		}
+		},
+		concat_css: {
+	    options: {},
+	    all: {
+	    	src: ['src/css/*.css'],
+	    	dest: 'dist/meshki.css'
+	    }
+	  }
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-concat-css');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.registerTask('default', ['cssmin', 'uglify', 'copy']);
+	grunt.registerTask('default', ['cssmin', 'uglify', 'copy', 'concat_css']);
 };
