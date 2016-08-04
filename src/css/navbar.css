@@ -1,0 +1,37 @@
+ul.nav {
+  list-style-type: none;
+  margin: 0 0 .75rem 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+  border-bottom: 2px solid #E1E1E1;
+}
+
+ul.nav li {
+  float: left;
+  margin-bottom: 0px;
+}
+
+ul.nav li a {
+  display: block;
+  color: #E1E1E1;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.nav li a.logo {
+  background-color: #E1E1E1;
+  color: black;
+}
+
+ul.nav li a.logo:hover {
+  background-color: #EAEAEA;
+  color: black;
+}
+
+/* Change the link color to #111 (black) on hover */
+ul.nav li a:hover {
+  background-color: #111;
+  text-decoration: ;
+}

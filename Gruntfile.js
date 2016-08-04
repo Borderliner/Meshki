@@ -11,9 +11,36 @@ module.exports = function(grunt){
 				src: 'src/css/*.css',
 				dest: 'dist/meshki.min.css'
 			}
-		}
+		},
+		uglify: {
+	    options: {
+	      mangle: false
+	    },
+	    my_target: {
+	      files: {
+	        'dist/meshki.min.js': ['src/js/meshki.js']
+	      }
+	    }
+	  },
+	  copy: {
+		  main: {
+		    expand: false,
+		    src: 'src/js/meshki.js',
+		    dest: 'dist/meshki.js',
+		  },
+		},
+		concat_css: {
+	    options: {},
+	    all: {
+	    	src: ['src/css/*.css'],
+	    	dest: 'dist/meshki.css'
+	    }
+	  }
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.registerTask('default', ['cssmin']);
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-concat-css');
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.registerTask('default', ['cssmin', 'uglify', 'copy', 'concat_css']);
 };

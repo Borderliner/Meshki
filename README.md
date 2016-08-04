@@ -9,6 +9,12 @@ There are a couple ways to download Meshki:
 - [Download the zip](https://github.com/Borderliner/Meshki/archive/v0.1.0-alpha.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v0.1.0-alpha.tar.gz)
 - Clone the repo: `git clone https://github.com/Borderliner/Meshki.git` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download)
 
+### How to compile
+You need node.js to minify the source .css files and produce an output. Head over to [nodejs.org](https://nodejs.org/en/) and download a version for your system, or download it from your package manager. Next install `Grunt` with this command:
+
+`npm install -g grunt-cli`
+
+Then `cd` into the root folder of the project, and run the command `npm run compile`. This will produce a file named "meshki.min.css" into the "/dist" folder.
 
 ### What's in the download?
 
