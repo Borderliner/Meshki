@@ -1,0 +1,12 @@
+i.fa {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 7rem;
+}
+
+.column, .columns {
+  margin-bottom: 15px;
+}
