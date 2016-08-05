@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Meshki Components</title>
-  <link rel="stylesheet" type="text/css" href="dist/meshki.min.css">
+  <link rel="stylesheet" type="text/css" href="dist/meshki.css">
   <link rel="stylesheet" type="text/css" href="custom.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <script type="text/javascript" src="dist/meshki.min.js"></script>
@@ -17,14 +17,16 @@
   </div>
 
   <div class="content">
-  
-    <ul class="nav">
-      <li><a class="logo" href="#" onclick="meshki.openNav()">Meshki</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-
+    
+    <div>
+      <ul class="nav fixed">
+        <li><a class="logo" href="#" onclick="meshki.openNav()">Meshki</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+    
     <div class="container">
       <div class="row">
         <h1 class="text-center title">Meshki</h2>
@@ -64,21 +66,31 @@
         </p>
       </div>
 
-      <div class="centerize text-center">
-        <a class="button">Simple</a>
-        <button class="default">Default</button>
-        <button class="success">Success</button>
-        <button class="danger">Danger</button>
-        <button class="warning">Warning</button>
-      </div><br />
-      <div class="code glass">
-        <code>
-          var app = require('express');<br>
-          app = express();<br>
-          var compression = require('compression');<br><br>
-
-          app.use(compression());<br>
-        </code>
+      <div class="row">
+        <h4 class="text-center">Buttons</h4>
+        <p>
+          You can create buttons easily with &lt;a&gt;, &lt;button&gt;, &lt;input type="submit"&gt;, &lt;input type="reset"&gt; and &lt;input type="button"&gt;. There are also five different types of buttons:
+        </p>
+        <div class="centerize text-center">
+          <a class="button">Simple</a>
+          <button class="default">Default</button>
+          <input type="submit" class="success" value="Success" />
+          <input type="reset" class="danger" value="Danger" />
+          <input type="button" class="warning" value="Warning" />
+        </div><br>
+      
+        <span>Here's the code for them:</span><br><br>
+        <div class="code glass">
+          <pre>
+            <code>
+    &lt;a class="button"&gt;Simple&lt;/a&gt;
+    &lt;button class="default"&gt;Default&lt;/button&gt;
+    &lt;input type="submit" class="success" value="Success" /&gt;
+    &lt;input type="reset" class="danger" value="Danger" /&gt;
+    &lt;input type="button" class="warning" value="Warning" /&gt;
+            </code>
+          </pre>
+        </div>
       </div>
     </div>
 
