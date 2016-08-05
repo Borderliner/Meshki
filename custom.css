@@ -14,3 +14,7 @@ i.fa {
 a {
   text-decoration: none;
 }
+
+.container {
+  padding-top: 75px;
+}
