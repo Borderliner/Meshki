@@ -12,8 +12,6 @@ div.code {
   background-color: #E1E1E1;
   border: 2px solid #E1E1E1;
   border-radius: 5px;
-  padding: .7rem;
-  margin: .2rem;
   color: #000;
 }
 div.code.glass {
@@ -26,5 +24,4 @@ code {
 }
 pre > code {
   display: block;
-  padding: 1rem 1.5rem;
   white-space: pre; }
