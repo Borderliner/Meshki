@@ -1,10 +1,15 @@
 ul.nav {
   list-style-type: none;
-  margin: 0 0 .75rem 0;
   padding: 0;
   overflow: hidden;
-  background-color: transparent;
+  background-color: #222;
   border-bottom: 2px solid #E1E1E1;
+}
+
+ul.nav.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 ul.nav li {
