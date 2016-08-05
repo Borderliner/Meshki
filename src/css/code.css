@@ -13,6 +13,7 @@ div.code {
   border: 2px solid #E1E1E1;
   border-radius: 5px;
   color: #000;
+  overflow-x: auto;
 }
 div.code.glass {
   background-color: transparent;
