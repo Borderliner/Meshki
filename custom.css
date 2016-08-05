@@ -18,3 +18,12 @@ a {
 .container {
   padding-top: 75px;
 }
+
+.grid-table div div {
+  text-align: center;
+  border-style: solid;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  color: #222;
+  background-color: #E0E0E0;
+}
