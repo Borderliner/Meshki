@@ -1,7 +1,7 @@
 {
   "name": "meshki",
-  "version": "0.1.0",
-  "description": "Meshki is a dead-simple, responsive boilerplate to kickstart any responsive project.",
+  "version": "0.2.0",
+  "description": "Meshki is a dead-simple, black-colored, responsive boilerplate to kickstart any responsive project.",
   "main": "dist/meshki.min.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,9 +15,10 @@
     "css",
     "meshki",
     "responsive",
-    "boilerplate"
+    "boilerplate",
+    "black"
   ],
-  "author": "Qolak Team",
+  "author": "Borderliner",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Borderliner/Meshki/issues"
