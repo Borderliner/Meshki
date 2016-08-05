@@ -9,11 +9,15 @@
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* css for the shiny buttons */
-button:focus {
+a.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
   outline: 0;
 }
 
-.button,
+a.button,
 button,
 input[type="submit"],
 input[type="reset"],
@@ -34,7 +38,7 @@ input[type="button"] {
   border: 2px solid #c7c7c7;
 }
 
-.button:hover,
+a.button:hover,
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
@@ -43,7 +47,7 @@ input[type="button"]:hover {
   color: #000;
 }
 
-.button.default,
+a.button.default,
 button.default,
 input[type="submit"].default,
 input[type="reset"].default,
@@ -52,7 +56,7 @@ input[type="button"].default {
   border: 2px #55acee solid;
 }
 
-.button.default:hover,
+a.button.default:hover,
 button.default:hover,
 input[type="submit"].default:hover,
 input[type="reset"].default:hover,
@@ -61,7 +65,7 @@ input[type="button"].default:hover {
   color: #fff
 }
 
-.button.success,
+a.button.success,
 button.success,
 input[type="submit"].success,
 input[type="reset"].success,
@@ -70,7 +74,7 @@ input[type="button"].success {
   border: 2px #2ecc71 solid;
 }
 
-.button.success:hover,
+a.button.success:hover,
 button.success:hover,
 input[type="submit"].success:hover,
 input[type="reset"].success:hover,
@@ -79,7 +83,7 @@ input[type="button"].success:hover {
   background-color: #2ecc71;
 }
 
-.button.danger,
+a.button.danger,
 button.danger,
 input[type="submit"].danger,
 input[type="reset"].danger,
@@ -88,7 +92,7 @@ input[type="button"].danger {
   border: 2px #e74c3c solid;
 }
 
-.button.danger:hover,
+a.button.danger:hover,
 button.danger:hover,
 input[type="submit"].danger:hover,
 input[type="reset"].danger:hover,
@@ -97,7 +101,7 @@ input[type="button"].danger:hover {
   background-color: #e74c3c;
 }
 
-.button.warning,
+a.button.warning,
 button.warning,
 input[type="submit"].warning,
 input[type="reset"].warning,
@@ -106,7 +110,7 @@ input[type="button"].warning {
   border: 2px #e67e22 solid;
 }
 
-.button.warning:hover,
+a.button.warning:hover,
 button.warning:hover,
 input[type="submit"].warning:hover,
 input[type="reset"].warning:hover,
@@ -128,9 +132,8 @@ div.code {
   background-color: #E1E1E1;
   border: 2px solid #E1E1E1;
   border-radius: 5px;
-  padding: .7rem;
-  margin: .2rem;
   color: #000;
+  overflow-x: auto;
 }
 div.code.glass {
   background-color: transparent;
@@ -141,8 +144,7 @@ code {
   white-space: nowrap;
 }
 pre > code {
-  display: block;
-  padding: 1rem 1.5rem;
+  display: inline;
   white-space: pre; }
 /*
 * Meshki V1.0.0
@@ -231,6 +233,18 @@ input.round, textarea.round, button.round {
   margin-left: auto;
   margin-right: auto;
 }
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .container {
   position: relative;
   width: 100%;
@@ -381,22 +395,24 @@ body {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: #0091FF; }
 a:hover {
-  color: #0FA0CE; }
+  color: #59B8FF; }
 
 
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 button,
-.button {
+a.button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
   margin-bottom: 1rem; }
 input,
 textarea,
 select,
 fieldset {
   margin-bottom: 1.5rem; }
-pre,
 blockquote,
 dl,
 figure,
@@ -469,11 +485,16 @@ there.
 @media (min-width: 1200px) {}
 ul.nav {
   list-style-type: none;
-  margin: 0 0 .75rem 0;
   padding: 0;
   overflow: hidden;
-  background-color: transparent;
+  background-color: #222;
   border-bottom: 2px solid #E1E1E1;
+}
+
+ul.nav.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 ul.nav li {
@@ -928,7 +949,7 @@ textarea {
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: 10; /* Stay on top */
     top: 0;
     left: 0;
     background-color: #111; /* Black*/
