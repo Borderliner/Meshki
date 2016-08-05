@@ -1,6 +1,6 @@
 {
   "name": "meshki",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Meshki is a dead-simple, black-colored, responsive boilerplate to kickstart any responsive project.",
   "main": "dist/meshki.min.css",
   "scripts": {
