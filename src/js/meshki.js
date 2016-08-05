@@ -1,12 +1,12 @@
 var meshki = {
   openNav: function() {
-    document.getElementById("sidenav").style.width = "250px";
+    document.getElementsByClassName("sidenav")[0].style.width = "250px";
     if (window.innerWidth > 544)
-      document.getElementById("content").style.marginLeft = "250px";
+      document.getElementsByClassName("content")[0].style.marginLeft = "250px";
   },
   closeNav: function() {
-    document.getElementById("sidenav").style.width = "0";
+    document.getElementsByClassName("sidenav")[0].style.width = "0";
     if (window.innerWidth > 544)
-      document.getElementById("content").style.marginLeft = "0";
+      document.getElementsByClassName("content")[0].style.marginLeft = "0";
   }
 };

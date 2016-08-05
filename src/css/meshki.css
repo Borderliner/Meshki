@@ -40,22 +40,24 @@ body {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: #0091FF; }
 a:hover {
-  color: #0FA0CE; }
+  color: #59B8FF; }
 
 
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 button,
-.button {
+a.button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
   margin-bottom: 1rem; }
 input,
 textarea,
 select,
 fieldset {
   margin-bottom: 1.5rem; }
-pre,
 blockquote,
 dl,
 figure,
