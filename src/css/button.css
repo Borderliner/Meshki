@@ -34,8 +34,8 @@ input[type="button"] {
   -o-transition: .3s;
   display: inline-block;
   background-color: transparent;
-  color: #c7c7c7;
-  border: 2px solid #c7c7c7;
+  color: #E1E1E1;
+  border: 2px solid #E1E1E1;
 }
 
 a.button:hover,
@@ -43,7 +43,7 @@ button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
-  background-color: #c7c7c7;
+  background-color: #E1E1E1;
   color: #000;
 }
 

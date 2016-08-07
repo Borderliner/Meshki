@@ -27,6 +27,21 @@ select {
   box-sizing: border-box;
   transition: border .3s, background-color .3s, box-shadow .3s;
 }
+
+input[type="email"]:disabled,
+input[type="number"]:disabled,
+input[type="search"]:disabled,
+input[type="text"]:disabled,
+input[type="tel"]:disabled,
+input[type="url"]:disabled,
+input[type="password"]:disabled,
+textarea:disabled,
+select:disabled {
+  background-color: #B1B1B1;
+  color: #303030;
+  border-color: #B1B1B1;
+}
+
 /* Removes awkward default styles on some inputs for iOS */
 input[type="email"],
 input[type="number"],
@@ -40,7 +55,9 @@ textarea {
      -moz-appearance: none;
           appearance: none;
 }
-
+.expand {
+  width: 100%;
+}
 textarea {
   min-height: 65px;
   padding-top: 6px;
@@ -76,4 +93,54 @@ label > .label-body {
 
 input.round, textarea.round, button.round {
   border-radius: 20px;
+}
+
+/* Checkboxes and Radio buttons */
+
+input[type="checkbox"], input[type="radio"] {
+    opacity: 0;
+    position: absolute;   
+}
+
+input[type="checkbox"], label.checkbox, input[type="radio"], label.radio {
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+
+label.checkbox, label.radio {
+    position: relative;
+}
+
+input[type="checkbox"] + label.checkbox:before, input[type="radio"] + label.radio:before {
+    content: '';
+    background-color: #E1E1E1;
+    border: 2px solid #E1E1E1;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+    transition: background-color .3s, box-shadow .3s;
+}
+
+input[type="checkbox"]:checked + label.checkbox:before {
+    background-color: #33BBF0;
+    box-shadow: inset 0px 0px 0px 2px #E1E1E1;
+}
+
+input[type="radio"] + label.radio:before, input[type="checkbox"] + label.checkbox:before {
+    border-radius: 5px;
+}
+
+input[type="radio"]:checked + label.radio:before {
+    background-color: #33BBF0;
+    box-shadow: inset 0px 0px 0px 2px #E1E1E1;
+}
+
+
+input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label.radio {
+  outline: none;
 }
