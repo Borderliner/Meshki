@@ -39,6 +39,7 @@ textarea {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  width: 95%;
 }
 
 textarea {
