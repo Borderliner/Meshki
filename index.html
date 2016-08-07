@@ -185,6 +185,146 @@
         </div>
       </div>
 
+      <div class="row">
+        <h4 class="text-center">Form Elements</h4>
+        <p>
+          Meshki also has customized form elemets, which are just as beautiful as the others. Here are some examples of form elements you can use:
+        </p>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <label for="user1">Username:</label>
+          <input id="user1" class="expand" type="text" name="user1" placeholder="Enter text here">
+        </div>
+        <div class="six columns">
+          <label for="pass1">Password:</label>
+          <input id="pass1" class="expand" type="password" name="pass1">
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+          <label for="dis-email1">Email:</label>
+          <input id="dis-email1" class="expand" type="email" name="dis-email1" value="borderliner@borderliner.ir" disabled>
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+          <textarea class="expand">This is a sample &lt;textarea&gt; element. You can also expand it!</textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <select class="expand">
+            <option selected disabled hidden>Choose your country</option>
+            <option value="us">United Stated</option>
+            <option value="ca">Canada</option>
+            <option value="de">Germany</option>
+            <option value="jp">Japan</option>
+          </select>
+        </div>
+        <div class="six columns">
+          <select class="expand" disabled style="width: 100%">
+            <option selected disabled hidden>This dropdown is disabled</option>
+            <option value="us">United Stated</option>
+            <option value="ca">Canada</option>
+            <option value="de">Germany</option>
+            <option value="jp">Japan</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <input id="rad-male" type="radio" name="gender" value="male">
+          <label for="rad-male" class="radio">Male</label>
+          <input id="rad-female" type="radio" name="gender" value="female">
+          <label for="rad-female" class="radio">Female</label>
+          <input id="rad-other" type="radio" name="gender" value="other">
+          <label for="rad-other" class="radio">Other</label>
+        </div>
+        <div class="six columns">
+          <input id="chk-eula" type="checkbox" name="chk-eula">
+          <label for="chk-eula" class="checkbox">I've read and agree with Terms of Service.</label>
+          <input id="chk-news" type="checkbox" name="chk-news">
+          <label for="chk-news" class="checkbox">I wish to receive newsletters from this site.</label>
+        </div>
+      </div>
+      <div class="row">
+        <button>Submit</button>
+      </div>
+      <div class="row">
+        <p>
+          This is the code snippet on how you can use form elements:
+        </p>
+        <div class="code glass">
+          <pre>
+            <code>
+    &lt;form>
+      &lt;!--Text Inputs -->
+      &lt;div class="row">
+        &lt;div class="six columns">
+          &lt;label for="user1">Username:&lt;/label>
+          &lt;input id="user1" class="expand" type="text" name="user1" placeholder="Enter text here">
+        &lt;/div>
+        &lt;div class="six columns">
+          &lt;label for="pass1">Password:&lt;/label>
+          &lt;input id="pass1" class="expand" type="password" name="pass1">
+        &lt;/div>
+      &lt;/div>
+
+      &lt;!--Disabled Text Inputs -->
+      &lt;div class="row">
+        &lt;div class="twelve columns">
+          &lt;label for="dis-email1">Email:&lt;/label>
+          &lt;input id=dis-email1"" class="expand" type="email" name="dis-email1" value="me@borderliner.ir" disabled>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;!--Text Area -->
+      &lt;div class="row">
+        &lt;div class="twelve columns">
+          &lt;textarea class="expand">This is a sample &lt;textarea&gt; element.&lt;/textarea>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;!--Dropdown -->
+      &lt;div class="row">
+        &lt;div class="six columns">
+          &lt;select class="expand">
+            &lt;option selected disabled hidden>Choose your country&lt;/option>
+            &lt;option value="us">United Stated&lt;/option>
+            &lt;option value="ca">Canada&lt;/option>
+            &lt;option value="de">Germany&lt;/option>
+            &lt;option value="jp">Japan&lt;/option>
+          &lt;/select>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;!--Checkboxes and Radio Buttons -->
+      &lt;div class="row">
+        &lt;div class="six columns">
+          &lt;input id="rad-male" type="radio" name="gender" value="male">
+          &lt;label for="rad-male" class="radio">Male&lt;/label>
+          &lt;input id="rad-female" type="radio" name="gender" value="female">
+          &lt;label for="rad-female" class="radio">Female&lt;/label>
+          &lt;input id="rad-other" type="radio" name="gender" value="other">
+          &lt;label for="rad-other" class="radio">Other&lt;/label>
+        &lt;/div>
+        &lt;div class="six columns">
+          &lt;input id="chk-eula" type="checkbox" name="chk-eula">
+          &lt;label for="chk-eula" class="checkbox">I've read and agree with Terms of Service.&lt;/label>
+          &lt;input id="chk-news" type="checkbox" name="chk-news">
+          &lt;label for="chk-news" class="checkbox">I wish to receive newsletters from this site.&lt;/label>
+        &lt;/div>
+      &lt;/div>
+      
+      &lt;div class="row">
+        &lt;button>Submit&lt;/button>
+      &lt;/div>
+    &lt;/form>
+            </code>
+          </pre>
+        </div>
+      </div>
 
     </div>
 
