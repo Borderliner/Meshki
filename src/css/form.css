@@ -38,6 +38,7 @@ input[type="password"]:disabled,
 textarea:disabled,
 select:disabled {
   background-color: #B1B1B1;
+  color: #303030;
 }
 
 /* Removes awkward default styles on some inputs for iOS */
