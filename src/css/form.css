@@ -23,8 +23,10 @@ select {
   background-color: #E0E0E0;
   border: 1px solid #D1D1D1;
   border-radius: 4px;
-  box-shadow: none;
-  box-sizing: border-box; }
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+  box-sizing: border-box;
+  transition: border .3s, background-color .3s, box-shadow .3s;
+}
 /* Removes awkward default styles on some inputs for iOS */
 input[type="email"],
 input[type="number"],
@@ -36,7 +38,9 @@ input[type="password"],
 textarea {
   -webkit-appearance: none;
      -moz-appearance: none;
-          appearance: none; }
+          appearance: none;
+}
+
 textarea {
   min-height: 65px;
   padding-top: 6px;
@@ -50,7 +54,9 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #33C3F0;
+  border: 1px solid #33BBF0;
+  background-color: #FFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
   outline: 0; }
 label,
 legend {
