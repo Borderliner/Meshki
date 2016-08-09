@@ -15,6 +15,7 @@ code {
   border: #E1E1E1 solid 1px;
   border-radius: 5px;
   color: #000;
+  padding: 1px 5px 1px 5px;
 }
 
 code.glass {
