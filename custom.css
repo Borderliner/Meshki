@@ -35,3 +35,10 @@ a {
   color: #222;
   background-color: #E0E0E0;
 }
+
+.heading-font-size {
+  font-size: 1.2rem;
+  color: #959595;
+  letter-spacing: 1px;
+  vertical-align: middle;
+}

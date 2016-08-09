@@ -68,12 +68,14 @@
         <h3>Components</h3>
         <hr>
         <p>
-          Meshki has various ready-to-use components which you can create anywhere you like. Here are a list of components and how you can put them into use:
+          Meshki has various ready-to-use components which you can create anywhere you like. Keep in mind that <u>being small and "enough" are our main goals</u>, and <u> Meshki is not a UI framework</u>, therefore you may need to add extra libraries for other fancy stuff. However, most of the common components are ready to use and well-tested. But don't worry! We'll make sure that you always get the most stable UI and a beautiful experience, and we may add extra components from time to time.<br><br>
+          Here are a list of components and how you can put them into use:
         </p>
       </div>
 
       <div class="row">
-        <h4 class="text-center">Buttons</h4>
+        <h4>Buttons</h4>
+        <hr>
         <p>
           You can create buttons easily with &lt;a&gt;, &lt;button&gt;, &lt;input type="submit"&gt;, &lt;input type="reset"&gt; and &lt;input type="button"&gt;. There are also five different types of buttons:
         </p>
@@ -86,8 +88,7 @@
         </div><br>
       
         <span>Here's the code for them:</span><br><br>
-        <div class="code glass">
-          <pre>
+          <pre class="glass">
             <code>
     &lt;a class="button"&gt;Simple&lt;/a&gt;
     &lt;button class="default"&gt;Default&lt;/button&gt;
@@ -96,11 +97,11 @@
     &lt;input type="button" class="warning" value="Warning" /&gt;
             </code>
           </pre>
-        </div>
       </div>
-
+      
       <div class="row">
-        <h4 class="text-center">The Grid System</h4>
+        <h4>The Grid System</h4>
+        <hr>
         <p>
           The grid is a <u>12-column fluid grid with a max width of 960px</u>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. The syntax is simple and it makes coding responsive much easier. Go ahead, resize the browser.
         </p>
@@ -156,8 +157,7 @@
         <p>
           Here's the code for how to use the grid system:
         </p>
-        <div class="code glass">
-          <pre>
+          <pre class="glass">
             <code>
     &lt;div class="row"&gt;
       &lt;div class="one column"&gt;
@@ -188,11 +188,11 @@
 
             </code>
           </pre>
-        </div>
       </div>
-
+      
       <div class="row">
-        <h4 class="text-center">Form Elements</h4>
+        <h4>Form Elements</h4>
+        <hr>
         <p>
           Meshki also has customized form elemets, which are just as beautiful as the others. Here are some examples of form elements you can use:
         </p>
@@ -261,8 +261,7 @@
         <p>
           This is the code snippet on how you can use form elements:
         </p>
-        <div class="code glass">
-          <pre>
+          <pre class="glass">
             <code>
     &lt;form>
       &lt;!--Text Inputs -->
@@ -329,6 +328,25 @@
     &lt;/form>
             </code>
           </pre>
+      </div>
+      
+      <div class="row">
+        <h4>Typography</h4>
+        <hr>
+        <p>
+Type is all set with the <code>&lt;rems></code>, so font-sizes and spacial relationships can be responsively sized based on a single <code>&lt;html></code> font-size property. Out of the box, Skeleton never changes the <code>&lt;html></code> font-size, but it's there in case you need it for your project. All measurements are still base 10 though so, an <code>&lt;h1></code> with <code>5.0rem</code> font-size just means <code>50px</code>.</p>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          The typography base is <a href="http://www.google.com/fonts/specimen/Raleway">Raleway</a>, which is served locally, set at 15rem (15px) over a 1.6 line height (24px). Other type basics like <a href="#">anchors</a>, <b>strong</b>, <i>emphasis</i>, and <u>underline</u> are all obviously included.
+        </div>
+        <div class="six columns">
+          <h1>Heading <span class="heading-font-size"><code>&lt;h1></code> 50rem</span></h1>
+          <h2>Heading <span class="heading-font-size"><code>&lt;h2></code> 42rem</span></h2>
+          <h3>Heading <span class="heading-font-size"><code>&lt;h3></code> 36rem</span></h3>
+          <h4>Heading <span class="heading-font-size"><code>&lt;h4></code> 30rem</span></h4>
+          <h5>Heading <span class="heading-font-size"><code>&lt;h5></code> 24rem</span></h5>
+          <h6>Heading <span class="heading-font-size"><code>&lt;h6></code> 15rem</span></h6>
         </div>
       </div>
 
