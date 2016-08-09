@@ -19,7 +19,8 @@
     font-size: 18px;
     color: #818181;
     display: block;
-    transition: 0.3s
+    transition: 0.3s;
+    white-space: nowrap;
 }
 
 /* When you mouse over the navigation links, change their color */
