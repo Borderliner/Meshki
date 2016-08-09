@@ -25,7 +25,12 @@
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+    color: #E1E1E1;
+}
+
+.sidenav a[disabled]:hover, .offcanvas a[disabled]:focus{
+    color: #818181;
+    cursor: default;
 }
 
 /* Position and style the close button (top right corner) */
