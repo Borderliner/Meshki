@@ -4,6 +4,7 @@ ul.nav {
   overflow: hidden;
   background-color: #222;
   border-bottom: 2px solid #E1E1E1;
+  margin-top: 0px;
 }
 
 ul.nav.fixed {
