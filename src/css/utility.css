@@ -1,0 +1,22 @@
+.expand {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.expand-max {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.centerize {
+  margin-left: auto;
+  margin-right: auto;
+}

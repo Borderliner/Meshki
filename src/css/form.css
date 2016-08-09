@@ -55,9 +55,7 @@ textarea {
      -moz-appearance: none;
           appearance: none;
 }
-.expand {
-  width: 100%;
-}
+
 textarea {
   min-height: 65px;
   padding-top: 6px;
