@@ -3,6 +3,14 @@ i.fa {
   margin-bottom: 20px;
 }
 
+div.share-links {
+  display: -webkit-flex;
+}
+
+div.share-links i.fa {
+  font-size: 4rem;
+}
+
 .title {
   font-size: 7rem;
 }
