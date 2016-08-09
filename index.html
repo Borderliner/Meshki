@@ -334,7 +334,8 @@
         <h4>Typography</h4>
         <hr>
         <p>
-Type is all set with the <code class="glass">&lt;rems></code>, so font-sizes and spacial relationships can be responsively sized based on a single <code class="glass">&lt;html></code> font-size property. Out of the box, Skeleton never changes the <code class="glass">&lt;html></code> font-size, but it's there in case you need it for your project. All measurements are still base 10 though so, an < class="glass"code>&lt;h1></code> with <code class="glass">5.0rem</code> font-size just means <code class="glass">50px</code>.</p>
+          Type is all set with the <code class="glass">&lt;rems></code>, so font-sizes and spacial relationships can be responsively sized based on a single <code class="glass">&lt;html></code> font-size property. Out of the box, Meshki never changes the <code class="glass">&lt;html></code> font-size, but it's there in case you need it for your project. All measurements are still base 10 though so, an < class="glass"code>&lt;h1></code> with <code class="glass">5.0rem</code> font-size just means <code class="glass">50px</code>.
+        </p>
       </div>
       <div class="row">
         <div class="six columns">
@@ -436,6 +437,51 @@ Type is all set with the <code class="glass">&lt;rems></code>, so font-sizes and
             </tbody>
           </table>
         </div>
+      </div>
+
+      <div class="row">
+        <h4>Media Queries</h4>
+        <hr>
+        <p>
+        Meshki uses media queries to serve its scalable grid, but also has a list of queries for convenience of styling your site across devices. The sizes for queries have been taken from <a href="http://getbootstrap.com">Twitter's Bootstrap</a> for more compatibility. The queries are mobile-first, meaning they target min-width. Mobile-first queries are how Meshki's grid is built and is the preferrable method of organizing CSS. It means all styles outside of a query apply to all devices, then larger devices are targeted for enhancement. This prevents small devices from having to parse tons of unused CSS. The sizes for the queries are:
+        </p>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <ul>
+            <li><b>Desktop HD</b>: 1200px</li>
+            <li><b>Desktop</b>: 992px</li>
+            <li><b>Tablet</b>: 768px</li>
+          </ul>
+        </div>
+        <div class="six columns">
+          <ul>
+            <li><b>Phablet</b>: 544px</li>
+            <li><b>Mobile</b>: 400px</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <pre class="glass">
+          <code>
+    /* Mobile first queries */
+
+    /* Larger than mobile */
+    @media (min-width: 400px) {}
+
+    /* Larger than phablet */
+    @media (min-width: 544px) {}
+
+    /* Larger than tablet */
+    @media (min-width: 768px) {}
+
+    /* Larger than desktop */
+    @media (min-width: 992px) {}
+
+    /* Larger than Desktop HD */
+    @media (min-width: 1200px) {}
+          </code>
+        </pre>
       </div>
 
     </div>
