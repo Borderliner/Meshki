@@ -8,21 +8,40 @@
 
 /* Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-div.code {
+code {
+  font-size: 90%;
+  white-space: nowrap;
+  background-color: #E1E1E1;
+  border: #E1E1E1 solid 1px;
+  border-radius: 5px;
+  color: #000;
+}
+
+code.glass {
+  background-color: transparent;
+  color: #E1E1E1;
+}
+
+pre {
   background-color: #E1E1E1;
   border: 2px solid #E1E1E1;
   border-radius: 5px;
   color: #000;
   overflow-x: auto;
 }
-div.code.glass {
+
+pre.glass {
   background-color: transparent;
   color: #E1E1E1;
 }
-code {
-  font-size: 90%;
-  white-space: nowrap;
-}
+
 pre > code {
   display: inline;
-  white-space: pre; }
+  white-space: pre;
+}
+
+pre.glass > code {
+  background-color: transparent;
+  color: #E1E1E1;
+  border: none;
+}
