@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Meshki Components</title>
+  <title>Meshki</title>
   <link rel="stylesheet" type="text/css" href="dist/meshki.css">
   <link rel="stylesheet" type="text/css" href="custom.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -9,11 +9,17 @@
 </head>
 <body>
   <div class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="meshki.closeNav()">&times;</a>
-    <a href="#">Home</a>
-    <a href="#">Components</a>
-    <a href="#">Docs</a>
-    <a href="#">About</a>
+    <a href="#" class="closebtn" onclick="meshki.closeNav()">&times;</a>
+    <a href="">Home</a>
+    <a href="https://github.com/Borderliner/Meshki">GitHub</a>
+    <a href="http://borderliner.ir">About Me</a>
+    <a href="https://github.com/Borderliner/Meshki/blob/master/README.md">About Meshki</a>
+    <a href="#" disabled style="font-size: 1.5rem">Share on:</a>
+    <div class="share-links">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://borderliner.ir/meshki/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+      <a href="https://twitter.com/home?status=http://borderliner.ir/meshki/" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+      <a href="https://plus.google.com/share?url=http%3A//borderliner.ir/meshki/" target="_blank"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
+    </div>
   </div>
 
   <div class="content">
@@ -21,9 +27,9 @@
     <div>
       <ul class="nav fixed">
         <li><a class="logo" href="#" onclick="meshki.openNav()">Meshki</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="https://github.com/Borderliner/Meshki/releases">News</a></li>
+        <li><a href="https://github.com/Borderliner/Meshki">GitHub</a></li>
+        <li><a href="#components">Components</a></li>
       </ul>
     </div>
     
@@ -54,7 +60,7 @@
         <p>
           Meshki is a simple, black-colored, responsive boilerplate to kickstart any responsive project. It is only ~10 KiB (minified) and ~23 KiB (normal), including both CSS and JS files, which makes it superb for small to medium projects. It's easy to use, clean and is just beautiful.
           It started as a fork of <a href="http://getskeleton.com" target="_blank">Skeleton</a> project, and it still uses some of the codes of it, Meshki is considered to be a total overhaul of Skeleton and it barely resembles it when you take a look at it.
-          Don't be afraid to have a look at Meshki's code! If you spot any bugs, or you want some improvements, head to <a href="https://github.com/Borderliner/Meshki" target="_blank">our GitHub repository</a> and open an issue or a pull request!
+          Don't be afraid to have a look at Meshki's code! If you spot any bugs, or you want some improvements, head to <a id="components" href="https://github.com/Borderliner/Meshki" target="_blank">our GitHub repository</a> and open an issue or a pull request!
         </p>
       </div>
 
@@ -62,12 +68,14 @@
         <h3>Components</h3>
         <hr>
         <p>
-          Meshki has various ready-to-use components which you can create anywhere you like. Here are a list of components and how you can put them into use:
+          Meshki has various ready-to-use components which you can create anywhere you like. Keep in mind that <u>being small and "enough" are our main goals</u>, and <u> Meshki is not a UI framework</u>, therefore you may need to add extra libraries for other fancy stuff. However, most of the common components are ready to use and well-tested. But don't worry! We'll make sure that you always get the most stable UI and a beautiful experience, and we may add extra components from time to time.<br><br>
+          Here are a list of components and how you can put them into use:
         </p>
       </div>
 
       <div class="row">
-        <h4 class="text-center">Buttons</h4>
+        <h4>Buttons</h4>
+        <hr>
         <p>
           You can create buttons easily with &lt;a&gt;, &lt;button&gt;, &lt;input type="submit"&gt;, &lt;input type="reset"&gt; and &lt;input type="button"&gt;. There are also five different types of buttons:
         </p>
@@ -80,8 +88,7 @@
         </div><br>
       
         <span>Here's the code for them:</span><br><br>
-        <div class="code glass">
-          <pre>
+          <pre class="glass">
             <code>
     &lt;a class="button"&gt;Simple&lt;/a&gt;
     &lt;button class="default"&gt;Default&lt;/button&gt;
@@ -90,11 +97,11 @@
     &lt;input type="button" class="warning" value="Warning" /&gt;
             </code>
           </pre>
-        </div>
       </div>
-
+      
       <div class="row">
-        <h4 class="text-center">The Grid System</h4>
+        <h4>The Grid System</h4>
+        <hr>
         <p>
           The grid is a <u>12-column fluid grid with a max width of 960px</u>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. The syntax is simple and it makes coding responsive much easier. Go ahead, resize the browser.
         </p>
@@ -150,8 +157,7 @@
         <p>
           Here's the code for how to use the grid system:
         </p>
-        <div class="code glass">
-          <pre>
+          <pre class="glass">
             <code>
     &lt;div class="row"&gt;
       &lt;div class="one column"&gt;
@@ -182,11 +188,11 @@
 
             </code>
           </pre>
-        </div>
       </div>
-
+      
       <div class="row">
-        <h4 class="text-center">Form Elements</h4>
+        <h4>Form Elements</h4>
+        <hr>
         <p>
           Meshki also has customized form elemets, which are just as beautiful as the others. Here are some examples of form elements you can use:
         </p>
@@ -255,8 +261,7 @@
         <p>
           This is the code snippet on how you can use form elements:
         </p>
-        <div class="code glass">
-          <pre>
+          <pre class="glass">
             <code>
     &lt;form>
       &lt;!--Text Inputs -->
@@ -323,8 +328,206 @@
     &lt;/form>
             </code>
           </pre>
+      </div>
+      
+      <div class="row">
+        <h4>Typography</h4>
+        <hr>
+        <p>
+          Type is all set with the <code class="glass">&lt;rems></code>, so font-sizes and spacial relationships can be responsively sized based on a single <code class="glass">&lt;html></code> font-size property. Out of the box, Meshki never changes the <code class="glass">&lt;html></code> font-size, but it's there in case you need it for your project. All measurements are still base 10 though so, an < class="glass"code>&lt;h1></code> with <code class="glass">5.0rem</code> font-size just means <code class="glass">50px</code>.
+        </p>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          The typography base is <a href="http://www.google.com/fonts/specimen/Raleway">Raleway</a>, which is served locally, set at 15rem (15px) over a 1.6 line height (24px). Other type basics like <a href="#">anchors</a>, <b>strong</b>, <i>emphasis</i>, and <u>underline</u> are all obviously included.
+        </div>
+        <div class="six columns">
+          <h1>Heading <span class="heading-font-size"><code>&lt;h1></code> 50rem</span></h1>
+          <h2>Heading <span class="heading-font-size"><code>&lt;h2></code> 42rem</span></h2>
+          <h3>Heading <span class="heading-font-size"><code>&lt;h3></code> 36rem</span></h3>
+          <h4>Heading <span class="heading-font-size"><code>&lt;h4></code> 30rem</span></h4>
+          <h5>Heading <span class="heading-font-size"><code>&lt;h5></code> 24rem</span></h5>
+          <h6>Heading <span class="heading-font-size"><code>&lt;h6></code> 15rem</span></h6>
         </div>
       </div>
+
+      <div class="row">
+        <h4>Code</h4>
+        <hr>
+        <p>
+          Code styling is kept basic: just wrap anything in a <code> &lt;code></code> and it will appear like <code>this</code>. It also has a <code class="glass">glass</code> style which is like <code class="glass">this</code>. For blocks of code, wrap a &lt;code> with a &lt;pre>.<br>
+          Note that for blocks of code, <code class="glass">glass</code> class needs to be added to the &lt;pre>, not &lt;code>.
+        </p>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+          <pre class="glass">
+            <code>
+
+    &lt;code>bower install meshki&lt;/code>
+    &lt;code class="glass">bower install meshki&lt;/code>
+
+    &lt;pre>
+      &lt;code>.some-class {
+        background-color: red;
+      }&lt;/code>
+    &lt;/pre>
+
+    &lt;pre class="glass">
+      &lt;code>(function(
+        console.log('Hello world!');
+      ))();&lt;/code>
+    &lt;/pre>
+
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <div class="row">
+        <h4>Tables</h4>
+        <hr>
+        <p>
+          Be sure to use properly formed table markup with <code class="glass">&lt;thead></code> and <code class="glass">&lt;tbody></code> when building a <code class="glass">table</code>.
+        </p>
+        <p>
+          You can customize your table with the below classes:
+          <ul>
+            <li><code class="glass">hover</code> : Makes your table's rows highlighted when hovering over them with mouse.</li>
+            <li><code class="glass">striped</code> : It stripes your table (even rows, except the header).</li>
+          </ul>
+        </p>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+          <table class="expand hover">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mohammad reza Hajianpour</td>
+                <td>23</td>
+                <td>Male</td>
+                <td>Iran</td>
+              </tr>
+              <tr>
+                <td>Carl Johnson</td>
+                <td>48</td>
+                <td>Male</td>
+                <td>Los Santos</td>
+              </tr>
+              <tr>
+                <td>Malena Morgan</td>
+                <td>25</td>
+                <td>Female</td>
+                <td>Florida</td>
+              </tr>
+              <tr>
+                <td>Harry Truman</td>
+                <td>88</td>
+                <td>Male</td>
+                <td>Missouri</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row">
+        <h4>Media Queries</h4>
+        <hr>
+        <p>
+        Meshki uses media queries to serve its scalable grid, but also has a list of queries for convenience of styling your site across devices. The sizes for queries have been taken from <a href="http://getbootstrap.com">Twitter's Bootstrap</a> for more compatibility. The queries are mobile-first, meaning they target min-width. Mobile-first queries are how Meshki's grid is built and is the preferrable method of organizing CSS. It means all styles outside of a query apply to all devices, then larger devices are targeted for enhancement. This prevents small devices from having to parse tons of unused CSS. The sizes for the queries are:
+        </p>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <ul>
+            <li><b>Desktop HD</b>: 1200px</li>
+            <li><b>Desktop</b>: 992px</li>
+            <li><b>Tablet</b>: 768px</li>
+          </ul>
+        </div>
+        <div class="six columns">
+          <ul>
+            <li><b>Phablet</b>: 544px</li>
+            <li><b>Mobile</b>: 400px</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <pre class="glass">
+          <code>
+    /* Mobile first queries */
+
+    /* Larger than mobile */
+    @media (min-width: 400px) {}
+
+    /* Larger than phablet */
+    @media (min-width: 544px) {}
+
+    /* Larger than tablet */
+    @media (min-width: 768px) {}
+
+    /* Larger than desktop */
+    @media (min-width: 992px) {}
+
+    /* Larger than Desktop HD */
+    @media (min-width: 1200px) {}
+          </code>
+        </pre>
+      </div>
+
+    <div class="row">
+      <h4>Utilities</h4>
+      <hr>
+      <p>
+        Meshki has a number of small utility classes that act as easy-to-use helpers. Sometimes it's better to use a utility class than create a whole new class just to float an element.
+      </p>
+    </div>
+    <div class="row">
+      <pre class="glass">
+        <code>
+    /* Make element full width */
+    .expand {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Make sure elements don't run outside containers (great for images in columns) */
+    .expand-container {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Float either direction */
+    .float-left {
+      float: left;
+    }
+
+    .float-right {
+      float: right;
+    }
+
+    /* Center an element */
+    .centerize {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Center a text */
+    .text-center {
+      text-align: center;
+    }
+        </code>
+      </pre>
+    </div>
 
     </div>
 

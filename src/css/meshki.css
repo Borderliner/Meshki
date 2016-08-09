@@ -1,5 +1,5 @@
 /*
-* Meshki v0.3.0
+* Meshki v0.3.1
 * Copyright 2016, Mohammad reza Hajianpour
 * http://borderliner.ir/meshki
 * Free to use under the MIT license.
@@ -67,20 +67,6 @@ ul,
 ol,
 form {
   margin-bottom: 2.5rem; }
-
-
-/* Utilities
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.u-full-width {
-  width: 100%;
-  box-sizing: border-box; }
-.u-max-full-width {
-  max-width: 100%;
-  box-sizing: border-box; }
-.u-pull-right {
-  float: right; }
-.u-pull-left {
-  float: left; }
 
 
 /* Misc

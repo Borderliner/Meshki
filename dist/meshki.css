@@ -128,24 +128,44 @@ input[type="button"].warning:hover {
 
 /* Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-div.code {
+code {
+  font-size: 90%;
+  white-space: nowrap;
+  background-color: #E1E1E1;
+  border: #E1E1E1 solid 1px;
+  border-radius: 5px;
+  color: #000;
+  padding: 1px 5px 1px 5px;
+}
+
+code.glass {
+  background-color: transparent;
+  color: #E1E1E1;
+}
+
+pre {
   background-color: #E1E1E1;
   border: 2px solid #E1E1E1;
   border-radius: 5px;
   color: #000;
   overflow-x: auto;
 }
-div.code.glass {
+
+pre.glass {
   background-color: transparent;
   color: #E1E1E1;
 }
-code {
-  font-size: 90%;
-  white-space: nowrap;
-}
+
 pre > code {
   display: inline;
-  white-space: pre; }
+  white-space: pre;
+}
+
+pre.glass > code {
+  background-color: transparent;
+  color: #E1E1E1;
+  border: none;
+}
 /*
 * Meshki V1.0.0
 * Copyright 2016, Qolak Team
@@ -203,9 +223,7 @@ textarea {
      -moz-appearance: none;
           appearance: none;
 }
-.expand {
-  width: 100%;
-}
+
 textarea {
   min-height: 65px;
   padding-top: 6px;
@@ -302,14 +320,11 @@ input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.centerize {
-  margin-left: auto;
-  margin-right: auto;
-}
+
 .row {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .row:after {
@@ -415,9 +430,7 @@ ul {
   list-style: circle inside; }
 ol {
   list-style: decimal inside; }
-ol, ul {
-  padding-left: 0;
-  margin-top: 0; }
+
 ul ul,
 ul ol,
 ol ol,
@@ -497,20 +510,6 @@ form {
   margin-bottom: 2.5rem; }
 
 
-/* Utilities
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.u-full-width {
-  width: 100%;
-  box-sizing: border-box; }
-.u-max-full-width {
-  max-width: 100%;
-  box-sizing: border-box; }
-.u-pull-right {
-  float: right; }
-.u-pull-left {
-  float: left; }
-
-
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
@@ -562,6 +561,7 @@ ul.nav {
   overflow: hidden;
   background-color: #222;
   border-bottom: 2px solid #E1E1E1;
+  margin-top: 0px;
 }
 
 ul.nav.fixed {
@@ -1038,12 +1038,18 @@ textarea {
     font-size: 18px;
     color: #818181;
     display: block;
-    transition: 0.3s
+    transition: 0.3s;
+    white-space: nowrap;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+    color: #E1E1E1;
+}
+
+.sidenav a[disabled]:hover, .offcanvas a[disabled]:focus{
+    color: #818181;
+    cursor: default;
 }
 
 /* Position and style the close button (top right corner) */
@@ -1075,17 +1081,39 @@ textarea {
 
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+table {
+  border-spacing: 0px;
+}
+
 th,
 td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #E1E1E1; }
+  border-bottom: 1px solid #7C7C7C;
+}
 th:first-child,
 td:first-child {
   padding-left: 0; }
 th:last-child,
 td:last-child {
   padding-right: 0; }
+
+tr.striped:nth-child(even) {
+  background-color: #2F2F2F;
+}
+
+table.centerize > thead th,
+table.centerize > tbody td {
+  text-align: center;
+}
+table.hover > thead tr,
+table.hover > tbody tr {
+  transition: background-color 0.3s;
+}
+table.hover > thead tr:hover,
+table.hover > tbody tr:hover {
+  background-color: #404040;
+}
 /*
 * Meshki V1.0.0
 * Copyright 2016, Qolak Team
@@ -1119,6 +1147,29 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 
 p {
   margin-top: 0; }
+.expand {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.expand-max {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.centerize {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .text-center {
   text-align: center;
 }

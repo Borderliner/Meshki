@@ -1,5 +1,5 @@
 /*
-* Meshki v0.3.0
+* Meshki v0.3.1
 * Copyright 2016, Mohammad reza Hajianpour
 * http://borderliner.ir/meshki
 * Free to use under the MIT license.
@@ -12,6 +12,7 @@ ul.nav {
   overflow: hidden;
   background-color: #222;
   border-bottom: 2px solid #E1E1E1;
+  margin-top: 0px;
 }
 
 ul.nav.fixed {

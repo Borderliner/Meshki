@@ -1,0 +1,39 @@
+/*
+* Meshki v0.3.1
+* Copyright 2016, Mohammad reza Hajianpour
+* http://borderliner.ir/meshki
+* Free to use under the MIT license.
+* https://opensource.org/licenses/MIT
+*/
+
+/* Make element full width */
+.expand {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Make sure elements don't run outside containers (great for images in columns) */
+.expand-container {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Float either direction */
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+/* Center an element */
+.centerize {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Center a text */
+.text-center {
+  text-align: center;
+}

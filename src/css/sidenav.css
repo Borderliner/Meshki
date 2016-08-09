@@ -1,5 +1,5 @@
 /*
-* Meshki v0.3.0
+* Meshki v0.3.1
 * Copyright 2016, Mohammad reza Hajianpour
 * http://borderliner.ir/meshki
 * Free to use under the MIT license.
@@ -27,12 +27,18 @@
     font-size: 18px;
     color: #818181;
     display: block;
-    transition: 0.3s
+    transition: 0.3s;
+    white-space: nowrap;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+    color: #E1E1E1;
+}
+
+.sidenav a[disabled]:hover, .offcanvas a[disabled]:focus{
+    color: #818181;
+    cursor: default;
 }
 
 /* Position and style the close button (top right corner) */

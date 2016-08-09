@@ -3,6 +3,14 @@ i.fa {
   margin-bottom: 20px;
 }
 
+div.share-links {
+  display: -webkit-flex;
+}
+
+div.share-links i.fa {
+  font-size: 4rem;
+}
+
 .title {
   font-size: 7rem;
 }
@@ -26,4 +34,11 @@ a {
   font-size: 1.5rem;
   color: #222;
   background-color: #E0E0E0;
+}
+
+.heading-font-size {
+  font-size: 1.2rem;
+  color: #959595;
+  letter-spacing: 1px;
+  vertical-align: middle;
 }
