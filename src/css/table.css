@@ -8,14 +8,36 @@
 
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+table {
+  border-spacing: 0px;
+}
+
 th,
 td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #E1E1E1; }
+  border-bottom: 1px solid #7C7C7C;
+}
 th:first-child,
 td:first-child {
   padding-left: 0; }
 th:last-child,
 td:last-child {
   padding-right: 0; }
+
+tr.striped:nth-child(even) {
+  background-color: #2F2F2F;
+}
+
+table.centerize > thead th,
+table.centerize > tbody td {
+  text-align: center;
+}
+table.hover > thead tr,
+table.hover > tbody tr {
+  transition: background-color 0.3s;
+}
+table.hover > thead tr:hover,
+table.hover > tbody tr:hover {
+  background-color: #404040;
+}
