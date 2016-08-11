@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="sidenav">
-    <a href="#" class="closebtn" onclick="meshki.closeNav()">&times;</a>
+    <a href="javascript:void(0);" class="closebtn" onclick="meshki.closeNav()">&times;</a>
     <a href="">Home</a>
     <a href="https://github.com/Borderliner/Meshki">GitHub</a>
     <a href="http://borderliner.ir">About Me</a>
@@ -26,7 +26,7 @@
     
     <div>
       <ul class="nav fixed">
-        <li><a class="logo" href="#" onclick="meshki.openNav()">Meshki</a></li>
+        <li><a class="logo" href="javascript:void(0);" onclick="meshki.openNav()">Meshki</a></li>
         <li><a href="https://github.com/Borderliner/Meshki/releases">News</a></li>
         <li><a href="https://github.com/Borderliner/Meshki">GitHub</a></li>
         <li><a href="#components">Components</a></li>
@@ -69,7 +69,7 @@
         <hr>
         <p>
           Meshki uses a fixed structure to lessen the burden of setting extra ids and classes. So you always need to create the same structure for all your apps. Don't worry, this structure is very basic and it does not limit you in any ways.<br>
-          First of all, you need to have a <code class="glass">&lt;div></code> with the <code class="glass">sidenav</code> class, just after the beginning of the body. Your <a href="#">sidenav</a>'s links will reside in here. Then, you need to create a <code class="glass">&lt;div></code> after the sidenav's div, with the <code class="glass">content</code> class. The rest of your body should be created inside the "content" div. Inspect the elements on this page to understand the structure. Also, here's a sample code:<br>
+          First of all, you need to have a <code class="glass">&lt;div></code> with the <code class="glass">sidenav</code> class, just after the beginning of the body. Your <a href="#sidenav-doc">sidenav</a>'s links will reside in here. Then, you need to create a <code class="glass">&lt;div></code> after the sidenav's div, with the <code class="glass">content</code> class. The rest of your body should be created inside the "content" div. Inspect the elements on this page to understand the structure. Also, here's a sample code:<br>
         </p>
         <pre class="glass">
           <code>
@@ -130,7 +130,7 @@
           </pre>
       </div>
 
-      <div class="row">
+      <div class="row" id="sidenav-doc">
         <h4>Sidenav</h4>
         <hr>
         <p>
@@ -140,7 +140,8 @@
           <code>
     &lt;body>
       &lt;div class="sidenav">
-        &lt;a href="#" class="closebtn" onclick="meshki.closeNav()">&amp;times;&lt;/a>
+        &lt;!-- Note that javascript:void(0) stops your page from jumping to the top -->
+        &lt;a href="javascript:void(0)" class="closebtn" onclick="meshki.closeNav()">&amp;times;&lt;/a>
         &lt;a href="">Home&lt;/a>
         &lt;a href="https://github.com/Borderliner/Meshki">GitHub&lt;/a>
         &lt;a href="http://borderliner.ir">About Me&lt;/a>
@@ -164,7 +165,8 @@
           <code>
     &lt;div>
       &lt;ul class="nav fixed">
-        &lt;li>&lt;a class="logo" href="#" onclick="meshki.openNav()">Meshki&lt;/a>&lt;/li>
+        &lt;!-- Note that javascript:void(0) stops your page from jumping to the top -->
+        &lt;li>&lt;a class="logo" href="javascript:void(0)" onclick="meshki.openNav()">Meshki&lt;/a>&lt;/li>
         &lt;li>&lt;a href="https://github.com/Borderliner/Meshki/releases">News&lt;/a>&lt;/li>
         &lt;li>&lt;a href="https://github.com/Borderliner/Meshki">GitHub&lt;/a>&lt;/li>
         &lt;li>&lt;a href="#components">Components&lt;/a>&lt;/li>
@@ -178,7 +180,8 @@
         <h4>The Grid System</h4>
         <hr>
         <p>
-          The grid is a <u>12-column fluid grid with a max width of 960px</u>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. The syntax is simple and it makes coding responsive much easier. Go ahead, resize the browser.
+          The grid is a <u>12-column fluid grid with a max width of 960px</u>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. The syntax is simple and it makes coding responsive much easier. Go ahead, resize the browser.<br>
+          <u><b>Note</b>: The columns must be the first elements at the beginning of a "row". This is very important.</u>
         </p>
       </div>
       
