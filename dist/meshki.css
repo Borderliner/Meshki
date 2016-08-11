@@ -1,7 +1,7 @@
 /*
-* Meshki V1.0.0
-* Copyright 2016, Qolak Team
-* www.qolak.com/meshki
+* Meshki v0.4.0
+* Copyright 2016, Mohammad reza Hajianpour
+* http://borderliner.ir/meshki
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
@@ -119,9 +119,9 @@ input[type="button"].warning:hover {
   background-color: #e67e22;
 }
 /*
-* Meshki V1.0.0
-* Copyright 2016, Qolak Team
-* www.qolak.com/meshki
+* Meshki v0.4.0
+* Copyright 2016, Mohammad reza Hajianpour
+* http://borderliner.ir/meshki
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
@@ -167,9 +167,46 @@ pre.glass > code {
   border: none;
 }
 /*
-* Meshki V1.0.0
-* Copyright 2016, Qolak Team
-* www.qolak.com/meshki
+* Meshki v0.4.0
+* Copyright 2016, Mohammad reza Hajianpour
+* http://borderliner.ir/meshki
+* Free to use under the MIT license.
+* https://opensource.org/licenses/MIT
+*/
+
+footer, .footer {
+  max-width: 100%;
+  margin: 25px 0px 0px 0px;
+  padding: 25px 50px 25px 50px;
+  background-color: #111;
+  border-top: 2px solid #E1E1E1;
+  text-align: center;
+}
+
+footer.compact, .footer.compact {
+  padding-bottom: 0px;
+}
+
+footer.compact .column,
+.footer.compact .column,
+footer.compact .columns,
+.footer.compact .columns {
+  margin-bottom: 0px;
+}
+
+footer .row {
+  margin-bottom: 0px;
+}
+
+@media (min-width: 544px) {
+  footer, .footer {
+    text-align: left;
+  }
+}
+/*
+* Meshki v0.4.0
+* Copyright 2016, Mohammad reza Hajianpour
+* http://borderliner.ir/meshki
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
@@ -311,9 +348,9 @@ input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label
   outline: none;
 }
 /*
-* Meshki V1.0.0
-* Copyright 2016, Qolak Team
-* www.qolak.com/meshki
+* Meshki v0.4.0
+* Copyright 2016, Mohammad reza Hajianpour
+* http://borderliner.ir/meshki
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
@@ -417,9 +454,9 @@ input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label
 
 }
 /*
-* Meshki V1.0.0
-* Copyright 2016, Qolak Team
-* www.qolak.com/meshki
+* Meshki v0.4.0
+* Copyright 2016, Mohammad reza Hajianpour
+* http://borderliner.ir/meshki
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
@@ -440,9 +477,9 @@ ol ul {
 li {
   margin-bottom: 1rem; }
 /*
-* Meshki V1.0.0
-* Copyright 2016, Qolak Team
-* www.qolak.com/meshki
+* Meshki v0.4.0
+* Copyright 2016, Mohammad reza Hajianpour
+* http://borderliner.ir/meshki
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
@@ -468,14 +505,18 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  height: 100%;
+}
 body {
   font-size: 1.6em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #222;
-  color: #E0E0E0; }
+  color: #E0E0E0;
+  height: 100%;
+}
 
 
 /* Links
@@ -555,6 +596,14 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
+/*
+* Meshki v0.4.0
+* Copyright 2016, Mohammad reza Hajianpour
+* http://borderliner.ir/meshki
+* Free to use under the MIT license.
+* https://opensource.org/licenses/MIT
+*/
+
 ul.nav {
   list-style-type: none;
   padding: 0;
@@ -1017,6 +1066,14 @@ textarea {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
+/*
+* Meshki v0.4.0
+* Copyright 2016, Mohammad reza Hajianpour
+* http://borderliner.ir/meshki
+* Free to use under the MIT license.
+* https://opensource.org/licenses/MIT
+*/
+
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
@@ -1072,9 +1129,9 @@ textarea {
     .sidenav a {font-size: 25px;}
 }
 /*
-* Meshki V1.0.0
-* Copyright 2016, Qolak Team
-* www.qolak.com/meshki
+* Meshki v0.4.0
+* Copyright 2016, Mohammad reza Hajianpour
+* http://borderliner.ir/meshki
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
@@ -1115,9 +1172,9 @@ table.hover > tbody tr:hover {
   background-color: #404040;
 }
 /*
-* Meshki V1.0.0
-* Copyright 2016, Qolak Team
-* www.qolak.com/meshki
+* Meshki v0.4.0
+* Copyright 2016, Mohammad reza Hajianpour
+* http://borderliner.ir/meshki
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
@@ -1147,16 +1204,27 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 
 p {
   margin-top: 0; }
+/*
+* Meshki v0.4.0
+* Copyright 2016, Mohammad reza Hajianpour
+* http://borderliner.ir/meshki
+* Free to use under the MIT license.
+* https://opensource.org/licenses/MIT
+*/
+
+/* Make element full width */
 .expand {
   width: 100%;
   box-sizing: border-box;
 }
 
-.expand-max {
+/* Make sure elements don't run outside containers (great for images in columns) */
+.expand-container {
   max-width: 100%;
   box-sizing: border-box;
 }
 
+/* Float either direction */
 .float-left {
   float: left;
 }
@@ -1165,11 +1233,13 @@ p {
   float: right;
 }
 
+/* Center an element */
 .centerize {
   margin-left: auto;
   margin-right: auto;
 }
 
+/* Center a text */
 .text-center {
   text-align: center;
 }
