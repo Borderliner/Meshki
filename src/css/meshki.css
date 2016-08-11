@@ -27,14 +27,18 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  height: 100%;
+}
 body {
   font-size: 1.6em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #222;
-  color: #E0E0E0; }
+  color: #E0E0E0;
+  height: 100%;
+}
 
 
 /* Links
