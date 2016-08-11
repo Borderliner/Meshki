@@ -42,3 +42,13 @@ a {
   letter-spacing: 1px;
   vertical-align: middle;
 }
+
+.custom-text-right {
+  text-align: center;
+}
+
+@media (min-width: 544px) {
+  .custom-text-right {
+    text-align: right;
+  }
+}
