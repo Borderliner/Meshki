@@ -1,0 +1,37 @@
+/*
+* Meshki v0.4.0
+* Copyright 2016, Mohammad reza Hajianpour
+* http://borderliner.ir/meshki
+* Free to use under the MIT license.
+* https://opensource.org/licenses/MIT
+*/
+
+footer, .footer {
+  max-width: 100%;
+  margin: 25px 0px 0px 0px;
+  padding: 25px 50px 25px 50px;
+  background-color: #111;
+  border-top: 2px solid #E1E1E1;
+  text-align: center;
+}
+
+footer.compact, .footer.compact {
+  padding-bottom: 0px;
+}
+
+footer.compact .column,
+.footer.compact .column,
+footer.compact .columns,
+.footer.compact .columns {
+  margin-bottom: 0px;
+}
+
+footer .row {
+  margin-bottom: 0px;
+}
+
+@media (min-width: 544px) {
+  footer, .footer {
+    text-align: left;
+  }
+}

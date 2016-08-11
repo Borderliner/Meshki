@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Meshki</title>
   <link rel="stylesheet" type="text/css" href="dist/meshki.css">
@@ -7,9 +8,10 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <script type="text/javascript" src="dist/meshki.min.js"></script>
 </head>
+
 <body>
   <div class="sidenav">
-    <a href="#" class="closebtn" onclick="meshki.closeNav()">&times;</a>
+    <a href="javascript:void(0);" class="closebtn" onclick="meshki.closeNav()">&times;</a>
     <a href="">Home</a>
     <a href="https://github.com/Borderliner/Meshki">GitHub</a>
     <a href="http://borderliner.ir">About Me</a>
@@ -21,23 +23,20 @@
       <a href="https://plus.google.com/share?url=http%3A//borderliner.ir/meshki/" target="_blank"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
     </div>
   </div>
-
   <div class="content">
-    
     <div>
       <ul class="nav fixed">
-        <li><a class="logo" href="#" onclick="meshki.openNav()">Meshki</a></li>
+        <li><a class="logo" href="javascript:void(0);" onclick="meshki.openNav()">Meshki</a></li>
         <li><a href="https://github.com/Borderliner/Meshki/releases">News</a></li>
         <li><a href="https://github.com/Borderliner/Meshki">GitHub</a></li>
         <li><a href="#components">Components</a></li>
       </ul>
     </div>
-    
     <div class="container">
       <div class="row">
         <h1 class="text-center title">Meshki</h2>
-        <h2 class="text-center">Stylish. Black. Responsive.</h2>
-      </div>
+                <h2 class="text-center">Stylish. Black. Responsive.</h2>
+            </div>
     
       <div class="row">
         <div class="four columns text-center">
@@ -62,6 +61,37 @@
           It started as a fork of <a href="http://getskeleton.com" target="_blank">Skeleton</a> project, and it still uses some of the codes of it, Meshki is considered to be a total overhaul of Skeleton and it barely resembles it when you take a look at it.
           Don't be afraid to have a look at Meshki's code! If you spot any bugs, or you want some improvements, head to <a id="components" href="https://github.com/Borderliner/Meshki" target="_blank">our GitHub repository</a> and open an issue or a pull request!
         </p>
+      </div>
+
+      <div class="row">
+        <h3>Getting Started</h3>
+        <hr>
+        <p>
+          Meshki uses a fixed structure to lessen the burden of setting extra ids and classes. So you always need to create the same structure for all your apps. Don't worry, this structure is very basic and it does not limit you in any ways.<br>
+          First of all, you need to have a <code class="glass">&lt;div></code> with the <code class="glass">sidenav</code> class, just after the beginning of the body. Your <a href="#sidenav-doc">sidenav</a>'s links will reside in here. Then, you need to create a <code class="glass">&lt;div></code> after the sidenav's div, with the <code class="glass">content</code> class. The rest of your body should be created inside the "content" div. Inspect the elements on this page to understand the structure. Also, here's a sample code:<br>
+        </p>
+        <pre class="glass">
+          <code>
+    &lt;!DOCTYPE html>
+    &lt;html>
+    &lt;head>
+      &lt;title>Meshki&lt;/title>
+      &lt;link rel="stylesheet" type="text/css" href="dist/meshki.min.css">
+      &lt;script type="text/javascript" src="dist/meshki.min.js">&lt;/script>
+    &lt;/head>
+    &lt;body>
+      &lt;div class="sidenav">
+        &lt;!-- Sidenav links here -->
+      &lt;/div>
+      &lt;div class="content">
+        &lt;div class="row">
+          &lt;h3>Welcome to my cool website&lt;/h3>
+          &lt;p>This is a sample paragraph.&lt;/p>
+        &lt;/div>
+      &lt;/div>
+    &lt;/body>
+          </code>
+        </pre>
       </div>
 
       <div class="row">
@@ -98,12 +128,59 @@
             </code>
           </pre>
       </div>
+
+      <div class="row" id="sidenav-doc">
+        <h4>Sidenav</h4>
+        <hr>
+        <p>
+          Creating a sidenav is easy: Just create a <code class="glass">&lt;div></code> with the <code class="glass">&lt;sidenav</code> class after the opening body tag. Then add <code class="glass">&lt;a></code> tags to make sidenav links. It's pretty easy and straight-forward. Use the JavaScript functions of <code class="glass">meshki.openNav()</code> and <code class="glass">meshki.closeNav()</code> on events to open and close sidenav respectively. Here's an example for your convenience:
+        </p>
+        <pre class="glass">
+          <code>
+    &lt;body>
+      &lt;div class="sidenav">
+        &lt;!-- Note that javascript:void(0) stops your page from jumping to the top -->
+        &lt;a href="javascript:void(0)" class="closebtn" onclick="meshki.closeNav()">&amp;times;&lt;/a>
+        &lt;a href="">Home&lt;/a>
+        &lt;a href="https://github.com/Borderliner/Meshki">GitHub&lt;/a>
+        &lt;a href="http://borderliner.ir">About Me&lt;/a>
+        &lt;a href="https://github.com/Borderliner/Meshki/blob/master/README.md">About Meshki&lt;/a>
+        &lt;a href="#" disabled>Share on:&lt;/a>
+      &lt;/div>
+    .
+    .
+    .
+          </code>
+        </pre>
+      </div>
+
+      <div class="row">
+        <h4>Navbar</h4>
+        <hr>
+        <p>
+          Meshki comes with a beautiful navbar built-in. At the beginning of the <code class="glass">content</code> div, create an empty div, and then create a <code class="glass">&lt;ul class="nav"></code> inside that. Now any <code class="glass">&lt;li>&lt;a href="#">Link&lt;/a>&lt;/li></code> will appear as a button in the navbar. You can also add the <code class="glass">fixed</code> class to make the navbar fixed.
+        </p>
+        <pre class="glass">
+          <code>
+    &lt;div>
+      &lt;ul class="nav fixed">
+        &lt;!-- Note that javascript:void(0) stops your page from jumping to the top -->
+        &lt;li>&lt;a class="logo" href="javascript:void(0)" onclick="meshki.openNav()">Meshki&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="https://github.com/Borderliner/Meshki/releases">News&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="https://github.com/Borderliner/Meshki">GitHub&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#components">Components&lt;/a>&lt;/li>
+      &lt;/ul>
+    &lt;/div>
+          </code>
+        </pre>
+      </div>
       
       <div class="row">
         <h4>The Grid System</h4>
         <hr>
         <p>
-          The grid is a <u>12-column fluid grid with a max width of 960px</u>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. The syntax is simple and it makes coding responsive much easier. Go ahead, resize the browser.
+          The grid is a <u>12-column fluid grid with a max width of 960px</u>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. The syntax is simple and it makes coding responsive much easier. Go ahead, resize the browser.<br>
+          <u><b>Note</b>: The columns must be the first elements at the beginning of a "row". This is very important.</u>
         </p>
       </div>
       
@@ -343,47 +420,45 @@
         </div>
         <div class="six columns">
           <h1>Heading <span class="heading-font-size"><code>&lt;h1></code> 50rem</span></h1>
-          <h2>Heading <span class="heading-font-size"><code>&lt;h2></code> 42rem</span></h2>
-          <h3>Heading <span class="heading-font-size"><code>&lt;h3></code> 36rem</span></h3>
-          <h4>Heading <span class="heading-font-size"><code>&lt;h4></code> 30rem</span></h4>
-          <h5>Heading <span class="heading-font-size"><code>&lt;h5></code> 24rem</span></h5>
-          <h6>Heading <span class="heading-font-size"><code>&lt;h6></code> 15rem</span></h6>
+        <h2>Heading <span class="heading-font-size"><code>&lt;h2></code> 42rem</span></h2>
+        <h3>Heading <span class="heading-font-size"><code>&lt;h3></code> 36rem</span></h3>
+        <h4>Heading <span class="heading-font-size"><code>&lt;h4></code> 30rem</span></h4>
+        <h5>Heading <span class="heading-font-size"><code>&lt;h5></code> 24rem</span></h5>
+        <h6>Heading <span class="heading-font-size"><code>&lt;h6></code> 15rem</span></h6>
         </div>
       </div>
-
       <div class="row">
         <h4>Code</h4>
         <hr>
         <p>
-          Code styling is kept basic: just wrap anything in a <code> &lt;code></code> and it will appear like <code>this</code>. It also has a <code class="glass">glass</code> style which is like <code class="glass">this</code>. For blocks of code, wrap a &lt;code> with a &lt;pre>.<br>
-          Note that for blocks of code, <code class="glass">glass</code> class needs to be added to the &lt;pre>, not &lt;code>.
+          Code styling is kept basic: just wrap anything in a <code> &lt;code></code> and it will appear like <code>this</code>. It also has a <code class="glass">glass</code> style which is like <code class="glass">this</code>. For blocks of code, wrap a &lt;code> with a &lt;pre>.
+          <br> Note that for blocks of code, <code class="glass">glass</code> class needs to be added to the &lt;pre>, not &lt;code>.
         </p>
       </div>
       <div class="row">
         <div class="twelve columns">
           <pre class="glass">
-            <code>
+              <code>
 
-    &lt;code>bower install meshki&lt;/code>
-    &lt;code class="glass">bower install meshki&lt;/code>
+      &lt;code>bower install meshki&lt;/code>
+      &lt;code class="glass">bower install meshki&lt;/code>
 
-    &lt;pre>
-      &lt;code>.some-class {
-        background-color: red;
-      }&lt;/code>
-    &lt;/pre>
+      &lt;pre>
+        &lt;code>.some-class {
+          background-color: red;
+        }&lt;/code>
+      &lt;/pre>
 
-    &lt;pre class="glass">
-      &lt;code>(function(
-        console.log('Hello world!');
-      ))();&lt;/code>
-    &lt;/pre>
+      &lt;pre class="glass">
+        &lt;code>(function(
+          console.log('Hello world!');
+        ))();&lt;/code>
+      &lt;/pre>
 
-            </code>
-          </pre>
+              </code>
+            </pre>
         </div>
       </div>
-
       <div class="row">
         <h4>Tables</h4>
         <hr>
@@ -438,12 +513,34 @@
           </table>
         </div>
       </div>
+      <div class="row">
+        <h4>Footer</h4>
+        <hr>
+        <p>
+          Meshki has a customized footer which is ready to use out-of-the-box. Create a <code class="glass">&lt;footer></code> element (or a div with "footer" class, since IE8 does not support &lt;footer>). You can also have a "compact" version of the footer by adding "compact" class to the footer.
+          <b>Note</b> that Meshki's footer does not enforce footer's height, so the more you add, the bigger it gets.
+        </p>
+        <pre class="glass">
+          <code>
+    &lt;footer class="compact">
+      &lt;div class="row">
+        &lt;div class="six columns">
+          &lt;p>Created by: Mohammad reza Hajianpour (Borderliner)&lt;/p>
+        &lt;/div>
+        &lt;div class="six columns custom-text-right">
+          &lt;p>2016, Licensed under MIT&lt;/p>
+        &lt;/div>
+      &lt;/div>
+    &lt;/footer>
+          </code>
+        </pre>
+      </div>
 
       <div class="row">
         <h4>Media Queries</h4>
         <hr>
         <p>
-        Meshki uses media queries to serve its scalable grid, but also has a list of queries for convenience of styling your site across devices. The sizes for queries have been taken from <a href="http://getbootstrap.com">Twitter's Bootstrap</a> for more compatibility. The queries are mobile-first, meaning they target min-width. Mobile-first queries are how Meshki's grid is built and is the preferrable method of organizing CSS. It means all styles outside of a query apply to all devices, then larger devices are targeted for enhancement. This prevents small devices from having to parse tons of unused CSS. The sizes for the queries are:
+          Meshki uses media queries to serve its scalable grid, but also has a list of queries for convenience of styling your site across devices. The sizes for queries have been taken from <a href="http://getbootstrap.com">Twitter's Bootstrap</a> for more compatibility. The queries are mobile-first, meaning they target min-width. Mobile-first queries are how Meshki's grid is built and is the preferrable method of organizing CSS. It means all styles outside of a query apply to all devices, then larger devices are targeted for enhancement. This prevents small devices from having to parse tons of unused CSS. The sizes for the queries are:
         </p>
       </div>
       <div class="row">
@@ -463,75 +560,82 @@
       </div>
       <div class="row">
         <pre class="glass">
+            <code>
+      /* Mobile first queries */
+
+      /* Larger than mobile */
+      @media (min-width: 400px) {}
+
+      /* Larger than phablet */
+      @media (min-width: 544px) {}
+
+      /* Larger than tablet */
+      @media (min-width: 768px) {}
+
+      /* Larger than desktop */
+      @media (min-width: 992px) {}
+
+      /* Larger than Desktop HD */
+      @media (min-width: 1200px) {}
+            </code>
+          </pre>
+      </div>
+      <div class="row">
+        <h4>Utilities</h4>
+        <hr>
+        <p>
+          Meshki has a number of small utility classes that act as easy-to-use helpers. Sometimes it's better to use a utility class than create a whole new class just to float an element.
+        </p>
+      </div>
+      <div class="row">
+        <pre class="glass">
           <code>
-    /* Mobile first queries */
+      /* Make element full width */
+      .expand {
+        width: 100%;
+        box-sizing: border-box;
+      }
 
-    /* Larger than mobile */
-    @media (min-width: 400px) {}
+      /* Make sure elements don't run outside containers (great for images in columns) */
+      .expand-container {
+        max-width: 100%;
+        box-sizing: border-box;
+      }
 
-    /* Larger than phablet */
-    @media (min-width: 544px) {}
+      /* Float either direction */
+      .float-left {
+        float: left;
+      }
 
-    /* Larger than tablet */
-    @media (min-width: 768px) {}
+      .float-right {
+        float: right;
+      }
 
-    /* Larger than desktop */
-    @media (min-width: 992px) {}
+      /* Center an element */
+      .centerize {
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-    /* Larger than Desktop HD */
-    @media (min-width: 1200px) {}
+      /* Center a text */
+      .text-center {
+        text-align: center;
+      }
           </code>
         </pre>
       </div>
-
-    <div class="row">
-      <h4>Utilities</h4>
-      <hr>
-      <p>
-        Meshki has a number of small utility classes that act as easy-to-use helpers. Sometimes it's better to use a utility class than create a whole new class just to float an element.
-      </p>
     </div>
-    <div class="row">
-      <pre class="glass">
-        <code>
-    /* Make element full width */
-    .expand {
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    /* Make sure elements don't run outside containers (great for images in columns) */
-    .expand-container {
-      max-width: 100%;
-      box-sizing: border-box;
-    }
-
-    /* Float either direction */
-    .float-left {
-      float: left;
-    }
-
-    .float-right {
-      float: right;
-    }
-
-    /* Center an element */
-    .centerize {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Center a text */
-    .text-center {
-      text-align: center;
-    }
-        </code>
-      </pre>
-    </div>
-
-    </div>
-
+    <footer class="compact">
+      <div class="row">
+        <div class="six columns">
+          <p>Created by: Mohammad reza Hajianpour (<a href="https://github.com/Borderliner">Borderliner</a>)</p>
+        </div>
+        <div class="six columns custom-text-right">
+          <p>2016, Licensed under <a href="https://github.com/Borderliner/Meshki/blob/master/LICENSE.md">MIT</a></p>
+        </div>
+      </div>
+    </footer>
   </div>
-    
 </body>
+
 </html>
