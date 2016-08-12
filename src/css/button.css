@@ -55,8 +55,8 @@ button.default,
 input[type="submit"].default,
 input[type="reset"].default,
 input[type="button"].default {
-  color: #55acee;
   border: 2px #55acee solid;
+  color: #55acee;
 }
 
 /* Default blue button's hover */
@@ -75,8 +75,8 @@ button.success,
 input[type="submit"].success,
 input[type="reset"].success,
 input[type="button"].success {
-  color: #2ecc71;
   border: 2px #2ecc71 solid;
+  color: #2ecc71;
 }
 
 /* Success green button's hover */
@@ -85,8 +85,8 @@ button.success:hover,
 input[type="submit"].success:hover,
 input[type="reset"].success:hover,
 input[type="button"].success:hover {
-  color: #fff;
   background-color: #2ecc71;
+  color: #fff;
 }
 
 /* Danger red button */
@@ -95,8 +95,8 @@ button.danger,
 input[type="submit"].danger,
 input[type="reset"].danger,
 input[type="button"].danger {
-  color: #e74c3c;
   border: 2px #e74c3c solid;
+  color: #e74c3c;
 }
 
 /* Danger red button's hover */
@@ -105,8 +105,8 @@ button.danger:hover,
 input[type="submit"].danger:hover,
 input[type="reset"].danger:hover,
 input[type="button"].danger:hover {
-  color: #fff;
   background-color: #e74c3c;
+  color: #fff;
 }
 
 /* Warning orange button */
@@ -115,8 +115,8 @@ button.warning,
 input[type="submit"].warning,
 input[type="reset"].warning,
 input[type="button"].warning {
-  color: #e67e22;
   border: 2px #e67e22 solid;
+  color: #e67e22;
 }
 
 /* Warning orange button's hover */
@@ -125,6 +125,6 @@ button.warning:hover,
 input[type="submit"].warning:hover,
 input[type="reset"].warning:hover,
 input[type="button"].warning:hover {
-  color: #fff;
   background-color: #e67e22;
+  color: #fff;
 }
