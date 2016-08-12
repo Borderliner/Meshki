@@ -40,24 +40,24 @@
 
 @media (max-width: 544px) {
   .hide-on-mobile {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (max-width: 768px) {
   .hide-on-tablet {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (min-width: 768px) {
   .hide-on-desktop {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (min-width: 544px) {
   .hide-on-non-mobile {
-    display: none;
+    display: none !important;
   }
 }
