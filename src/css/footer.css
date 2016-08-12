@@ -6,6 +6,7 @@
 * https://opensource.org/licenses/MIT
 */
 
+/* The footer tag, or a div with footer (Useful for IE) */
 footer, .footer {
   max-width: 100%;
   margin: 25px 0px 0px 0px;
@@ -15,10 +16,12 @@ footer, .footer {
   text-align: center;
 }
 
+/* Remove bottom padding in compact mode */
 footer.compact, .footer.compact {
   padding-bottom: 0px;
 }
 
+/* Remove bottom margins of columns in compact mode */
 footer.compact .column,
 .footer.compact .column,
 footer.compact .columns,
@@ -26,10 +29,12 @@ footer.compact .columns,
   margin-bottom: 0px;
 }
 
+/* Remove bottom margin of .row for footer, it takes lots of space */
 footer .row {
   margin-bottom: 0px;
 }
 
+/* Align the text of the footer to the left for non-mobile */
 @media (min-width: 544px) {
   footer, .footer {
     text-align: left;
