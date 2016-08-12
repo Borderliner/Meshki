@@ -14,7 +14,7 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  outline: 0;
+  outline: 0 !important;
 }
 
 /* Simple button, with no style */
