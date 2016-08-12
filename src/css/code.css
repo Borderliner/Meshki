@@ -13,9 +13,9 @@ code {
   font-size: 90%;
   white-space: nowrap;
   background-color: #E1E1E1;
+  color: #000;
   border: #E1E1E1 solid 1px;
   border-radius: 5px;
-  color: #000;
   padding: 1px 5px 1px 5px;
 }
 
@@ -28,9 +28,9 @@ code.glass {
 /* pre is used for a block of code */
 pre {
   background-color: #E1E1E1;
+  color: #000;
   border: 2px solid #E1E1E1;
   border-radius: 5px;
-  color: #000;
   overflow-x: auto;
 }
 
