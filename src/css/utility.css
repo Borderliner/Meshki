@@ -37,3 +37,27 @@
 .text-center {
   text-align: center;
 }
+
+@media (max-width: 544px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hide-on-tablet {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .hide-on-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 544px) {
+  .hide-on-non-mobile {
+    display: none;
+  }
+}
