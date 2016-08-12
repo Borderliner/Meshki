@@ -1,7 +1,7 @@
 {
   "name": "meshki",
-  "version": "0.4.0",
-  "description": "Meshki is a dead-simple, black-colored, responsive boilerplate to kickstart any responsive project.",
+  "version": "0.4.1",
+  "description": "Meshki: A Black-Colored, Responsive Boilerplate for UI Development",
   "main": "dist/meshki.min.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/Borderliner/Meshki/issues"
   },
-  "homepage": "http://borderliner.ir/meshki",
+  "homepage": "http://meshki.borderliner.ir/",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-concat-css": "^0.3.1",
