@@ -8,6 +8,7 @@
 
 /* Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Single code, default style */
 code {
   font-size: 90%;
   white-space: nowrap;
@@ -18,11 +19,13 @@ code {
   padding: 1px 5px 1px 5px;
 }
 
+/* Single code, glass style */
 code.glass {
   background-color: transparent;
   color: #E1E1E1;
 }
 
+/* pre is used for a block of code */
 pre {
   background-color: #E1E1E1;
   border: 2px solid #E1E1E1;
@@ -31,16 +34,19 @@ pre {
   overflow-x: auto;
 }
 
+/* Glass mode for blocks of code */
 pre.glass {
   background-color: transparent;
   color: #E1E1E1;
 }
 
+/* If the code is the immediate child of pre */
 pre > code {
   display: inline;
   white-space: pre;
 }
 
+/* If the code is the immediate child of pre with glass mode */
 pre.glass > code {
   background-color: transparent;
   color: #E1E1E1;
