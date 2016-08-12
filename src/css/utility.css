@@ -1,5 +1,5 @@
 /*
-* Meshki v0.4.0
+* Meshki v0.4.1
 * Copyright 2016, Mohammad reza Hajianpour
 * http://borderliner.ir/meshki
 * Free to use under the MIT license.
@@ -20,11 +20,11 @@
 
 /* Float either direction */
 .float-left {
-  float: left;
+  float: left !important;
 }
 
 .float-right {
-  float: right;
+  float: right !important;
 }
 
 /* Center an element */
@@ -36,4 +36,28 @@
 /* Center a text */
 .text-center {
   text-align: center;
+}
+
+@media (max-width: 544px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hide-on-tablet {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hide-on-desktop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 544px) {
+  .hide-on-non-mobile {
+    display: none !important;
+  }
 }

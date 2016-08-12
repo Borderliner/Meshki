@@ -1,5 +1,5 @@
 /*
-* Meshki v0.4.0
+* Meshki v0.4.1
 * Copyright 2016, Mohammad reza Hajianpour
 * http://borderliner.ir/meshki
 * Free to use under the MIT license.
@@ -41,8 +41,13 @@
     cursor: default;
 }
 
+.sidenav hr {
+    border-color: #818181;
+    width: 80%;
+}
+
 /* Position and style the close button (top right corner) */
-.closebtn {
+.sidenav-close-button {
     position: absolute;
     top: 0;
     right: 25px;

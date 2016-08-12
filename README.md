@@ -1,6 +1,6 @@
 # [Meshki](http://meshki.borderliner.ir/)
 Meshki is a simple, black-colored, responsive boilerplate to kickstart any responsive project.<br>
-It is only <b>11.6 KiB</b> (minified) and 25.3 KiB (normal), including both CSS and JS files.<br>
+It is only <b>~12 KiB</b> (minified) and ~28 KiB (normal), including both CSS and JS files.<br>
 Check out <http://meshki.borderliner.ir/> for samples and details.
 
 ## Getting started
