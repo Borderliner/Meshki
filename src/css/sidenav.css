@@ -41,8 +41,13 @@
     cursor: default;
 }
 
+.sidenav hr {
+    border-color: #818181;
+    width: 80%;
+}
+
 /* Position and style the close button (top right corner) */
-.closebtn {
+.sidenav-close-button {
     position: absolute;
     top: 0;
     right: 25px;
