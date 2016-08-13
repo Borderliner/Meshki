@@ -6,7 +6,7 @@
 
 ## v0.4.3:
   - [x] Add proper meta tags to the document, and work on SEO
-  - [] Fix outline for sidenav-close-button
+  - [x] Fix outline for sidenav-close-button
   - [] Disabled links on sidenav still works when clicked on
   - [] Fix Midori's issue with buttons
   - [] Set the default style of codes to "glass"
