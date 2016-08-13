@@ -1,6 +1,8 @@
 ## v0.4.4
   1. Let the user choose between pushing sidenav or a normal one
   2. A note about Meshki's website which uses pure Meshki
+  3. Textarea's text needs padding
+  4. Change checkboxes and radio buttons
 
 ## v0.4.3:
   0. Add proper meta tags to the document, and work on SEO
