@@ -1,7 +1,9 @@
 ## v0.4.4
   1. Let the user choose between pushing sidenav or a normal one
+  2. A note about Meshki's website which uses pure Meshki
 
 ## v0.4.3:
+  0. Add proper meta tags to the document, and work on SEO
   1. Fix outline for sidenav-close-button
   2. Disabled links on sidenav still works when clicked on
   3. Fix Midori's issue with buttons
