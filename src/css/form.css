@@ -131,6 +131,7 @@ input[type="checkbox"] + label.checkbox:before, input[type="radio"] + label.radi
     content: '';
     background-color: #E1E1E1;
     border: 2px solid #E1E1E1;
+    border-radius: 5px;
     display: inline-block;
     vertical-align: middle;
     width: 10px;
@@ -145,11 +146,6 @@ input[type="checkbox"] + label.checkbox:before, input[type="radio"] + label.radi
 input[type="checkbox"]:checked + label.checkbox:before {
     background-color: #33BBF0;
     box-shadow: inset 0px 0px 0px 2px #E1E1E1;
-}
-
-/* FIXME: Redundant! */
-input[type="radio"] + label.radio:before, input[type="checkbox"] + label.checkbox:before {
-    border-radius: 5px;
 }
 
 /* When the radio button is checked */
