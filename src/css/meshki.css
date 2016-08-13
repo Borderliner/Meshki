@@ -18,36 +18,43 @@
 
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* NOTE
-html is set to 62.5% so that all the REM measurements throughout Skeleton
-are based on 10px sizing. So basically 1.5rem = 15px :) */
+
+/* Default font face for Meshki */
 @font-face {
   font-family: 'Raleway';
   src: url('fonts/Raleway-Regular.ttf');
 }
 
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%;
   height: 100%;
 }
+
+/* General attributes of the body tag */
 body {
   font-size: 1.6em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  height: 100%;
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #222;
   color: #E0E0E0;
-  height: 100%;
 }
 
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Nice blue for links */
 a {
-  color: rgb(60, 216, 255); }
-a:hover {
-  color: #59B8FF; }
+  color: rgb(60, 216, 255);
+}
 
+a:hover {
+  color: #59B8FF;
+}
 
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -56,12 +63,16 @@ a.button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+}
+
 input,
 textarea,
 select,
 fieldset {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+}
+
 blockquote,
 dl,
 figure,
@@ -70,29 +81,29 @@ p,
 ul,
 ol,
 form {
-  margin-bottom: 2.5rem; }
-
+  margin-bottom: 2.5rem;
+}
 
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Default <hr> tag */
 hr {
+  border-width: 0;
+  border-top: 1px solid #E1E1E1;
   margin-top: 3rem;
   margin-bottom: 3.5rem;
-  border-width: 0;
-  border-top: 1px solid #E1E1E1; }
-
+}
 
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Self Clearing Goodness */
 .container:after,
-.row:after,
-.u-cf {
+.row:after {
   content: "";
   display: table;
-  clear: both; }
-
+  clear: both;
+}
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -100,9 +111,9 @@ hr {
 Note: The best way to structure the use of media queries is to create the queries
 near the relevant code. For example, if you wanted to change the styles for buttons
 on small devices, paste the mobile query code up in the buttons section and style it
-there.
+there. These media queries have been taken from Twitter's Bootstrap for
+compatibility reasons.
 */
-
 
 /* Larger than mobile */
 @media (min-width: 400px) {}
