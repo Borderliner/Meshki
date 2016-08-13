@@ -5,6 +5,7 @@
   - [] Change checkboxes and radio buttons
   - [] Fix ugly form dropdown in Firefox
   - [] Add button sizes
+  - [] Add latest version's label to index.html
 
 ## v0.4.3:
   - [x] Add proper meta tags to the document, and work on SEO

@@ -1,12 +1,12 @@
 # [Meshki](http://meshki.borderliner.ir/)
 Meshki is a simple, black-colored, responsive boilerplate to kickstart any responsive project.<br>
-It is only <b>~13 KiB</b> (minified) and ~31 KiB (normal), including both CSS and JS files.<br>
+It is only <b>~13 KiB</b> (minified) and ~30 KiB (normal), including both CSS and JS files.<br>
 Check out <http://meshki.borderliner.ir/> for samples and details.
 
 ## Getting started
 
 There are a couple ways to download Meshki:
-- [Download the zip](https://github.com/Borderliner/Meshki/archive/v0.4.2.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v0.4.2.tar.gz)
+- [Download the zip](https://github.com/Borderliner/Meshki/archive/v0.4.3.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v0.4.3.tar.gz)
 - Clone the repo: `git clone https://github.com/Borderliner/Meshki.git` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download)<br>
 You can also download it via `bower install meshki --save`
 
