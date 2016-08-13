@@ -9,18 +9,21 @@
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* Center the row, used to hold columns */
 .row {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
 }
 
+/* Cleaning after the row */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
+/* Container creates a responsive space to hold page data */
 .container {
   position: relative;
   width: 100%;
@@ -28,26 +31,31 @@
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
+
+/* Columns fill their parent from the left side */
 .column,
 .columns {
   width: 100%;
   float: left;
   box-sizing: border-box; }
 
-/* For devices larger than 400px */
+/* Decrease the container width for non-mobiles */
 @media (min-width: 400px) {
   .container {
     width: 85%;
     padding: 0; }
 }
 
-/* For devices larger than 550px */
+/* For devices larger than 544px */
 @media (min-width: 544px) {
+  /* Decrease container width for a proper look */
   .container {
     width: 80%; }
+  /* Left margin for columns so they do not collide */
   .column,
   .columns {
     margin-left: 4%; }
+  /* The first column doesn't need left margin */
   .column:first-child,
   .columns:first-child {
     margin-left: 0; }
@@ -64,12 +72,18 @@
   .nine.columns                   { width: 74.0%;          }
   .ten.columns                    { width: 82.6666666667%; }
   .eleven.columns                 { width: 91.3333333333%; }
+  /* Fill the row, with no margin on the left */
   .twelve.columns                 { width: 100%; margin-left: 0; }
 
-  .one-third.column               { width: 30.6666666667%; }
-  .two-thirds.column              { width: 65.3333333333%; }
+  /* Proportional columns */
+  .one-third.column,
+  .one.third.column,              { width: 30.6666666667%; }
+  .two-thirds.column,
+  .two.thirds.column              { width: 65.3333333333%; }
 
-  .one-half.column                { width: 48%; }
+  /* Half of the container columns */
+  .one-half.column,
+  .one.half.column                { width: 48%; }
 
   /* Offsets */
   .offset-by-one.column,
