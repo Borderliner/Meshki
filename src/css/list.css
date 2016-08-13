@@ -11,11 +11,13 @@
 
 /* Unordered Lists have empty circle style */
 ul {
-  list-style: circle inside; }
+  list-style: circle inside;
+}
 
 /* Ordered Lists have numerical style */
 ol {
-  list-style: decimal inside; }
+  list-style: decimal inside;
+}
 
 /* Change the style of nested lists */
 ul ul,
@@ -23,8 +25,10 @@ ul ol,
 ol ol,
 ol ul {
   margin: 1.5rem 0 1.5rem 3rem;
-  font-size: 90%; }
+  font-size: 90%;
+}
 
 /* Lists have bottom margin */
 li {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+}
