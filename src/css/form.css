@@ -9,6 +9,7 @@
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* General attributes */
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -28,6 +29,7 @@ select {
   transition: border .3s, background-color .3s, box-shadow .3s;
 }
 
+/* Dim the form elements when they're disabled */
 input[type="email"]:disabled,
 input[type="number"]:disabled,
 input[type="search"]:disabled,
@@ -60,6 +62,8 @@ textarea {
   min-height: 65px;
   padding-top: 6px;
   padding-bottom: 6px; }
+
+/* Blue light animation when the form elements get focus */
 input[type="email"]:focus,
 input[type="number"]:focus,
 input[type="search"]:focus,
@@ -73,43 +77,56 @@ select:focus {
   background-color: #FFF;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
   outline: 0; }
+
+/* Label and Legend normalization */
 label,
 legend {
   display: block;
   margin-bottom: .5rem;
   font-weight: 600; }
+
+/* Fieldset normalization */
 fieldset {
   padding: 0;
   border-width: 0; }
+
+/* Checkbox and Radio normalization */
 input[type="checkbox"],
 input[type="radio"] {
   display: inline; }
+
+/* FIXME: Examine how this works */
 label > .label-body {
   display: inline-block;
   margin-left: .5rem;
   font-weight: normal; }
 
+/* FIXME: Examine what this does actually */
 input.round, textarea.round, button.round {
   border-radius: 20px;
 }
 
 /* Checkboxes and Radio buttons */
 
+/* Make the actual boxes invisible */
 input[type="checkbox"], input[type="radio"] {
     opacity: 0;
     position: absolute;   
 }
 
+/* Checkbox and radio normalization */
 input[type="checkbox"], label.checkbox, input[type="radio"], label.radio {
     vertical-align: middle;
     margin: 5px;
     cursor: pointer;
 }
 
+/* Labels for checkboxes and radios have relative position to their parent */
 label.checkbox, label.radio {
     position: relative;
 }
 
+/* General attributes for checkboxes and radio buttons */
 input[type="checkbox"] + label.checkbox:before, input[type="radio"] + label.radio:before {
     content: '';
     background-color: #E1E1E1;
@@ -124,21 +141,24 @@ input[type="checkbox"] + label.checkbox:before, input[type="radio"] + label.radi
     transition: background-color .3s, box-shadow .3s;
 }
 
+/* When the checkbox is checked */
 input[type="checkbox"]:checked + label.checkbox:before {
     background-color: #33BBF0;
     box-shadow: inset 0px 0px 0px 2px #E1E1E1;
 }
 
+/* FIXME: Redundant! */
 input[type="radio"] + label.radio:before, input[type="checkbox"] + label.checkbox:before {
     border-radius: 5px;
 }
 
+/* When the radio button is checked */
 input[type="radio"]:checked + label.radio:before {
     background-color: #33BBF0;
     box-shadow: inset 0px 0px 0px 2px #E1E1E1;
 }
 
-
+/* Remove outlines of checkboxes and radio buttons, especially for Firefox */
 input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label.radio {
   outline: none;
 }
