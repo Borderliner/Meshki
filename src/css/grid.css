@@ -16,13 +16,6 @@
   margin-bottom: 20px;
 }
 
-/* Cleaning after the row */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* Container creates a responsive space to hold page data */
 .container {
   position: relative;
