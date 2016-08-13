@@ -8,35 +8,49 @@
 
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* General attributes */
 table {
   border-spacing: 0px;
 }
 
+/* Padding and stuff for each cell */
 th,
 td {
   padding: 12px 15px;
   text-align: left;
   border-bottom: 1px solid #7C7C7C;
 }
+
+/* First and last children (most right and most left cells) do not need padding */
 th:first-child,
 td:first-child {
-  padding-left: 0; }
+  padding-left: 0;
+}
+
 th:last-child,
 td:last-child {
-  padding-right: 0; }
+  padding-right: 0;
+}
 
-tr.striped:nth-child(even) {
+/* Stripped table! */
+table.striped tr:nth-child(even) {
   background-color: #2F2F2F;
 }
 
+/* Centerizes the texts inside each cell */
 table.centerize > thead th,
 table.centerize > tbody td {
   text-align: center;
 }
+
+/* Hover effect activated for each row */
 table.hover > thead tr,
 table.hover > tbody tr {
   transition: background-color 0.3s;
 }
+
+/* Changes color when the mouse is over each row */
 table.hover > thead tr:hover,
 table.hover > tbody tr:hover {
   background-color: #404040;
