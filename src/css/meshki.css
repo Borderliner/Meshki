@@ -35,7 +35,7 @@ html {
 
 /* General attributes of the body tag */
 body {
-  font-size: 1.6em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  font-size: 1.6rem;
   height: 100%;
   line-height: 1.6;
   font-weight: 400;
