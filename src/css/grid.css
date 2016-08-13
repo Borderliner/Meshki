@@ -30,35 +30,43 @@
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /* Columns fill their parent from the left side */
 .column,
 .columns {
   width: 100%;
   float: left;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /* Decrease the container width for non-mobiles */
 @media (min-width: 400px) {
   .container {
     width: 85%;
-    padding: 0; }
+    padding: 0;
+  }
 }
 
 /* For devices larger than 544px */
 @media (min-width: 544px) {
   /* Decrease container width for a proper look */
   .container {
-    width: 80%; }
+    width: 80%;
+  }
+
   /* Left margin for columns so they do not collide */
   .column,
   .columns {
-    margin-left: 4%; }
+    margin-left: 4%;
+  }
+
   /* The first column doesn't need left margin */
   .column:first-child,
   .columns:first-child {
-    margin-left: 0; }
+    margin-left: 0;
+  }
 
   .one.column,
   .one.columns                    { width: 4.66666666667%; }
@@ -116,5 +124,4 @@
 
   .offset-by-one-half.column,
   .offset-by-one-half.columns     { margin-left: 52%; }
-
 }
