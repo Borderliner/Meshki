@@ -99,15 +99,8 @@ input[type="radio"] {
   display: inline;
 }
 
-/* FIXME: Examine how this works */
-label > .label-body {
-  font-weight: normal;
-  display: inline-block;
-  margin-left: .5rem;
-}
-
-/* FIXME: Examine what this does actually */
-input.round, textarea.round, button.round {
+/* Round input, for every mood! */
+input.round, textarea.round, button.round, .button.round {
   border-radius: 20px;
 }
 

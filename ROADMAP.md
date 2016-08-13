@@ -3,6 +3,7 @@
   - [] A note about Meshki's website which uses pure Meshki
   - [] Textarea's text needs padding
   - [] Change checkboxes and radio buttons
+  - [] Fix ugly form dropdown in Firefox
 
 ## v0.4.3:
   - [x] Add proper meta tags to the document, and work on SEO
@@ -13,4 +14,4 @@
   - [x] Utility section of the document lacks proper comments
   - [] Append (Borderliner) to my real name as a copyright holder
   - [x] Code for buttons section in the document has extra useless line ends
-  - [] Try fixing several FIXME's inside the code
+  - [x] Try fixing several FIXME's inside the code
