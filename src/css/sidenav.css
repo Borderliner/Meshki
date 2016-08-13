@@ -32,15 +32,21 @@
   text-decoration: none;
   white-space: nowrap;
   transition: 0.3s;
+  outline: 0 !important;
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover, .offcanvas a:focus{
+.sidenav a:hover {
   color: #E1E1E1;
 }
 
 /* No color change for disabled sidenav links */
-.sidenav a[disabled]:hover, .offcanvas a[disabled]:focus{
+.sidenav a[disabled] {
+  cursor: default;
+}
+
+.sidenav a[disabled]:hover {
+  pointer-events: none;
   color: #818181;
   cursor: default;
 }
