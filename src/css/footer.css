@@ -1,24 +1,30 @@
 /*
-* Meshki v0.4.1
+* Meshki v0.4.2
 * Copyright 2016, Mohammad reza Hajianpour
-* http://borderliner.ir/meshki
+* http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
 
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* The footer tag, or a div with footer (Useful for IE) */
 footer, .footer {
   max-width: 100%;
-  margin: 25px 0px 0px 0px;
-  padding: 25px 50px 25px 50px;
   background-color: #111;
   border-top: 2px solid #E1E1E1;
+  margin: 25px 0px 0px 0px;
+  padding: 25px 50px 25px 50px;
   text-align: center;
 }
 
+/* Remove bottom padding in compact mode */
 footer.compact, .footer.compact {
   padding-bottom: 0px;
 }
 
+/* Remove bottom margins of columns in compact mode */
 footer.compact .column,
 .footer.compact .column,
 footer.compact .columns,
@@ -26,10 +32,12 @@ footer.compact .columns,
   margin-bottom: 0px;
 }
 
+/* Remove bottom margin of .row for footer, it takes lots of space */
 footer .row {
   margin-bottom: 0px;
 }
 
+/* Align the text of the footer to the left for non-mobile */
 @media (min-width: 544px) {
   footer, .footer {
     text-align: left;

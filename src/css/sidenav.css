@@ -1,67 +1,77 @@
 /*
-* Meshki v0.4.1
+* Meshki v0.4.2
 * Copyright 2016, Mohammad reza Hajianpour
-* http://borderliner.ir/meshki
+* http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
 
+/* Sidenav
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 /* The side navigation menu */
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 10; /* Stay on top */
-    top: 0;
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 15px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  height: 100%;
+  width: 0; /* changes with meshki.js */
+  position: fixed;
+  z-index: 10; /* Stays on top of everything, unless a modal is implemented */
+  top: 0;
+  left: 0;
+  background-color: #111;
+  padding-top: 15px;
+  overflow-x: hidden;
+  transition: 0.5s;
 }
 
-/* The navigation menu links */
+/* The navigation menu's links */
 .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-    white-space: nowrap;
+  display: block;
+  font-size: 1.8rem;
+  color: #818181;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus{
-    color: #E1E1E1;
+  color: #E1E1E1;
 }
 
+/* No color change for disabled sidenav links */
 .sidenav a[disabled]:hover, .offcanvas a[disabled]:focus{
-    color: #818181;
-    cursor: default;
+  color: #818181;
+  cursor: default;
 }
 
+/* Special form of <hr> for sidenav */
 .sidenav hr {
-    border-color: #818181;
-    width: 80%;
+  width: 80%;
+  border-color: #818181;
 }
 
 /* Position and style the close button (top right corner) */
 .sidenav-close-button {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px !important;
-    margin-left: 50px;
+  font-size: 3.6rem !important;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  margin-left: 50px;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+/* Pushes the content div with effect */
 .content {
-    transition: margin-left .5s;
+  transition: margin-left .5s;
 }
 
-/* On smaller screens, where width is more than 544px, change the style of the sidenav (more padding and a bigger font size) */
+/* Change the style of the sidenav for non-mobiles */
 @media (min-width: 544px) {
-    .sidenav {padding-top: 60px;}
-    .sidenav a {font-size: 25px;}
+  .sidenav {
+    padding-top: 60px;
+  }
+
+  .sidenav a {
+    font-size: 25px;
+  }
 }

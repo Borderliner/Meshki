@@ -1,62 +1,72 @@
 /*
-* Meshki v0.4.1
+* Meshki v0.4.2
 * Copyright 2016, Mohammad reza Hajianpour
-* http://borderliner.ir/meshki
+* http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
 
+/* Navbar
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* General attributes */
 ul.nav {
-  list-style-type: none;
-  padding: 0;
-  overflow: hidden;
+  width: 100%;
   background-color: #222;
   border-bottom: 2px solid #E1E1E1;
+  padding: 0;
   margin-top: 0px;
+  list-style-type: none;
+  overflow: hidden;
 }
 
+/* Fixed navbar's attributes */
 ul.nav.fixed {
   position: fixed;
-  width: 100%;
   z-index: 1;
 }
 
+/* Elements in the navbar start from the left side */
 ul.nav li {
   float: left;
   margin-bottom: 0px;
 }
 
+/* Anchors inside lists' attributes */
 ul.nav li a {
   display: block;
   color: #E1E1E1;
-  text-align: center;
   padding: 14px 16px;
+  text-align: center;
   text-decoration: none;
 }
 
-ul.nav li a.logo {
+/* Logo of the website, it must be the first child of navbar*/
+ul.nav li:first-child a.logo {
   background-color: #E1E1E1;
   color: black;
 }
 
-ul.nav li a.logo:hover {
+/* Lighten the logo when the mouse is over it */
+ul.nav li:first-child a.logo:hover {
   background-color: #EAEAEA;
   color: black;
 }
 
 /**
  * Change the link color to #111 (black) on hover
- * Only direct children are affected
+ * Only direct children are affected, which means it excludes dropdowns
  */
 ul.nav li > a:hover {
   background-color: #111;
 }
 
+/* Send the elements to the right side with nav-right */
 ul.nav li.nav-right {
-  float: right !important;
-  position: absolute;
+  position: inherit;
   top: 7px;
   right: 16px;
+  float: right !important;
 }
 
 /* Navigation Dropdown Button */
@@ -64,27 +74,27 @@ li.nav-dropdown {
     display: inline-block;
 }
 
-/* Dropdown content for normal nav */
+/* Dropdown content attributes */
 ul.nav .nav-dropdown-content {
   display: none;
   position: absolute;
-  background-color: #111;
   min-width: 160px;
+  background-color: #111;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-/* If the navbar is a fixed one */
+/* If the navbar is a fixed one, so is it's position */
 ul.nav.fixed .nav-dropdown-content {
   position: fixed;
 }
 
 /* Each link in dropdown's content */
 .nav-dropdown-content a {
-    color: #E1E1E1;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+  display: block;
+  color: #E1E1E1;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-align: left;
 }
 
 /* When the mouse is on each option */

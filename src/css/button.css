@@ -1,22 +1,24 @@
 /*
-* Meshki v0.4.1
+* Meshki v0.4.2
 * Copyright 2016, Mohammad reza Hajianpour
-* http://borderliner.ir/meshki
+* http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* css for the shiny buttons */
+
+/* Removed focus outlines, especially in Firefox */
 a.button:focus,
 button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  outline: 0;
+  outline: 0 !important;
 }
 
+/* Simple button, with no style */
 a.button,
 button,
 input[type="submit"],
@@ -38,6 +40,7 @@ input[type="button"] {
   border: 2px solid #E1E1E1;
 }
 
+/* Simple button's hover */
 a.button:hover,
 button:hover,
 input[type="submit"]:hover,
@@ -47,15 +50,17 @@ input[type="button"]:hover {
   color: #000;
 }
 
+/* Default blue button */
 a.button.default,
 button.default,
 input[type="submit"].default,
 input[type="reset"].default,
 input[type="button"].default {
-  color: #55acee;
   border: 2px #55acee solid;
+  color: #55acee;
 }
 
+/* Default blue button's hover */
 a.button.default:hover,
 button.default:hover,
 input[type="submit"].default:hover,
@@ -65,56 +70,62 @@ input[type="button"].default:hover {
   color: #fff
 }
 
+/* Success green button */
 a.button.success,
 button.success,
 input[type="submit"].success,
 input[type="reset"].success,
 input[type="button"].success {
-  color: #2ecc71;
   border: 2px #2ecc71 solid;
+  color: #2ecc71;
 }
 
+/* Success green button's hover */
 a.button.success:hover,
 button.success:hover,
 input[type="submit"].success:hover,
 input[type="reset"].success:hover,
 input[type="button"].success:hover {
-  color: #fff;
   background-color: #2ecc71;
+  color: #fff;
 }
 
+/* Danger red button */
 a.button.danger,
 button.danger,
 input[type="submit"].danger,
 input[type="reset"].danger,
 input[type="button"].danger {
-  color: #e74c3c;
   border: 2px #e74c3c solid;
+  color: #e74c3c;
 }
 
+/* Danger red button's hover */
 a.button.danger:hover,
 button.danger:hover,
 input[type="submit"].danger:hover,
 input[type="reset"].danger:hover,
 input[type="button"].danger:hover {
-  color: #fff;
   background-color: #e74c3c;
+  color: #fff;
 }
 
+/* Warning orange button */
 a.button.warning,
 button.warning,
 input[type="submit"].warning,
 input[type="reset"].warning,
 input[type="button"].warning {
-  color: #e67e22;
   border: 2px #e67e22 solid;
+  color: #e67e22;
 }
 
+/* Warning orange button's hover */
 a.button.warning:hover,
 button.warning:hover,
 input[type="submit"].warning:hover,
 input[type="reset"].warning:hover,
 input[type="button"].warning:hover {
-  color: #fff;
   background-color: #e67e22;
+  color: #fff;
 }
