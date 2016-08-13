@@ -61,7 +61,8 @@ textarea {
 textarea {
   min-height: 65px;
   padding-top: 6px;
-  padding-bottom: 6px; }
+  padding-bottom: 6px;
+}
 
 /* Blue light animation when the form elements get focus */
 input[type="email"]:focus,
@@ -76,30 +77,35 @@ select:focus {
   border: 1px solid #33BBF0;
   background-color: #FFF;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
-  outline: 0; }
+  outline: 0;
+}
 
 /* Label and Legend normalization */
 label,
 legend {
   display: block;
   margin-bottom: .5rem;
-  font-weight: 600; }
+  font-weight: 600;
+}
 
 /* Fieldset normalization */
 fieldset {
   padding: 0;
-  border-width: 0; }
+  border-width: 0;
+}
 
 /* Checkbox and Radio normalization */
 input[type="checkbox"],
 input[type="radio"] {
-  display: inline; }
+  display: inline;
+}
 
 /* FIXME: Examine how this works */
 label > .label-body {
   display: inline-block;
   margin-left: .5rem;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 /* FIXME: Examine what this does actually */
 input.round, textarea.round, button.round {
