@@ -1,6 +1,6 @@
 /*
-* Meshki v0.4.2
-* Copyright 2016, Mohammad reza Hajianpour
+* Meshki v0.4.3
+* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -28,7 +28,7 @@ input[type="button"] {
   margin: 5px !important;
   border-radius: 5px;
   text-decoration: none;
-  padding: 5px 10px 5px 10px;
+  padding: 8px 10px;
   transition: .3s;
   font-size: 1.6rem;
   -webkit-transition: .3s;
@@ -38,6 +38,7 @@ input[type="button"] {
   background-color: transparent;
   color: #E1E1E1;
   border: 2px solid #E1E1E1;
+  line-height: normal !important; /* Fix Midori bug */
 }
 
 /* Simple button's hover */
@@ -130,8 +131,8 @@ input[type="button"].warning:hover {
   color: #fff;
 }
 /*
-* Meshki v0.4.2
-* Copyright 2016, Mohammad reza Hajianpour
+* Meshki v0.4.3
+* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -144,49 +145,50 @@ input[type="button"].warning:hover {
 code {
   font-size: 90%;
   white-space: nowrap;
-  background-color: #E1E1E1;
-  color: #000;
+  background-color: transparent;
+  color: #E1E1E1;
   border: #E1E1E1 solid 1px;
   border-radius: 5px;
   padding: 1px 5px 1px 5px;
 }
 
-/* Single code, glass style */
-code.glass {
-  background-color: transparent;
-  color: #E1E1E1;
+/* Single code, filled style */
+code.filled {
+  background-color: #E1E1E1;
+  color: #000;
 }
 
 /* pre is used for a block of code */
 pre {
-  background-color: #E1E1E1;
-  color: #000;
+  background-color: transparent;
+  color: #E1E1E1;
   border: 2px solid #E1E1E1;
   border-radius: 5px;
   overflow-x: auto;
+  white-space: normal;
 }
 
-/* Glass mode for blocks of code */
-pre.glass {
-  background-color: transparent;
-  color: #E1E1E1;
+/* Filled mode for blocks of code */
+pre.filled {
+  background-color: #E1E1E1;
+  color: #000;
 }
 
 /* If the code is the immediate child of pre */
 pre > code {
   display: inline;
   white-space: pre;
-}
-
-/* If the code is the immediate child of pre with glass mode */
-pre.glass > code {
-  background-color: transparent;
-  color: #E1E1E1;
   border: none;
 }
+
+/* If the code is the immediate child of pre with filled mode */
+pre.filled > code {
+  background-color: #E1E1E1;
+  color: #000;
+}
 /*
-* Meshki v0.4.2
-* Copyright 2016, Mohammad reza Hajianpour
+* Meshki v0.4.3
+* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -230,8 +232,8 @@ footer .row {
   }
 }
 /*
-* Meshki v0.4.2
-* Copyright 2016, Mohammad reza Hajianpour
+* Meshki v0.4.3
+* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -330,15 +332,8 @@ input[type="radio"] {
   display: inline;
 }
 
-/* FIXME: Examine how this works */
-label > .label-body {
-  font-weight: normal;
-  display: inline-block;
-  margin-left: .5rem;
-}
-
-/* FIXME: Examine what this does actually */
-input.round, textarea.round, button.round {
+/* Round input, for every mood! */
+input.round, textarea.round, button.round, .button.round {
   border-radius: 20px;
 }
 
@@ -395,8 +390,8 @@ input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label
   outline: none !important;
 }
 /*
-* Meshki v0.4.2
-* Copyright 2016, Mohammad reza Hajianpour
+* Meshki v0.4.3
+* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -515,8 +510,8 @@ input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label
   .offset-by-one-half.columns     { margin-left: 52%; }
 }
 /*
-* Meshki v0.4.2
-* Copyright 2016, Mohammad reza Hajianpour
+* Meshki v0.4.3
+* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -549,8 +544,8 @@ li {
   margin-bottom: 1rem;
 }
 /*
-* Meshki v0.4.2
-* Copyright 2016, Mohammad reza Hajianpour
+* Meshki v0.4.3
+* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -680,8 +675,8 @@ compatibility reasons.
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
 /*
-* Meshki v0.4.2
-* Copyright 2016, Mohammad reza Hajianpour
+* Meshki v0.4.3
+* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -1212,8 +1207,8 @@ textarea {
   font: inherit; /* 2 */
 }
 /*
-* Meshki v0.4.2
-* Copyright 2016, Mohammad reza Hajianpour
+* Meshki v0.4.3
+* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -1245,15 +1240,21 @@ textarea {
   text-decoration: none;
   white-space: nowrap;
   transition: 0.3s;
+  outline: 0 !important;
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover, .offcanvas a:focus{
+.sidenav a:hover {
   color: #E1E1E1;
 }
 
 /* No color change for disabled sidenav links */
-.sidenav a[disabled]:hover, .offcanvas a[disabled]:focus{
+.sidenav a[disabled] {
+  cursor: default;
+}
+
+.sidenav a[disabled]:hover {
+  pointer-events: none;
   color: #818181;
   cursor: default;
 }
@@ -1271,6 +1272,7 @@ textarea {
   top: 0;
   right: 25px;
   margin-left: 50px;
+  outline: 0 !important;
 }
 
 /* Pushes the content div with effect */
@@ -1289,8 +1291,8 @@ textarea {
   }
 }
 /*
-* Meshki v0.4.2
-* Copyright 2016, Mohammad reza Hajianpour
+* Meshki v0.4.3
+* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -1344,8 +1346,8 @@ table.hover > tbody tr:hover {
   background-color: #404040;
 }
 /*
-* Meshki v0.4.2
-* Copyright 2016, Mohammad reza Hajianpour
+* Meshki v0.4.3
+* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -1381,8 +1383,8 @@ p {
   margin-top: 0;
 }
 /*
-* Meshki v0.4.2
-* Copyright 2016, Mohammad reza Hajianpour
+* Meshki v0.4.3
+* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT

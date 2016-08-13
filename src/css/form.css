@@ -1,6 +1,6 @@
 /*
-* Meshki v0.4.2
-* Copyright 2016, Mohammad reza Hajianpour
+* Meshki v0.4.3
+* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -99,15 +99,8 @@ input[type="radio"] {
   display: inline;
 }
 
-/* FIXME: Examine how this works */
-label > .label-body {
-  font-weight: normal;
-  display: inline-block;
-  margin-left: .5rem;
-}
-
-/* FIXME: Examine what this does actually */
-input.round, textarea.round, button.round {
+/* Round input, for every mood! */
+input.round, textarea.round, button.round, .button.round {
   border-radius: 20px;
 }
 

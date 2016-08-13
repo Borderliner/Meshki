@@ -5,6 +5,7 @@ i.fa {
 
 div.share-links {
   display: -webkit-flex;
+  display: -moz-box;
 }
 
 div.share-links i.fa {

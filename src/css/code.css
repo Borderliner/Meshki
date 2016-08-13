@@ -1,6 +1,6 @@
 /*
-* Meshki v0.4.2
-* Copyright 2016, Mohammad reza Hajianpour
+* Meshki v0.4.3
+* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -13,43 +13,44 @@
 code {
   font-size: 90%;
   white-space: nowrap;
-  background-color: #E1E1E1;
-  color: #000;
+  background-color: transparent;
+  color: #E1E1E1;
   border: #E1E1E1 solid 1px;
   border-radius: 5px;
   padding: 1px 5px 1px 5px;
 }
 
-/* Single code, glass style */
-code.glass {
-  background-color: transparent;
-  color: #E1E1E1;
+/* Single code, filled style */
+code.filled {
+  background-color: #E1E1E1;
+  color: #000;
 }
 
 /* pre is used for a block of code */
 pre {
-  background-color: #E1E1E1;
-  color: #000;
+  background-color: transparent;
+  color: #E1E1E1;
   border: 2px solid #E1E1E1;
   border-radius: 5px;
   overflow-x: auto;
+  white-space: normal;
 }
 
-/* Glass mode for blocks of code */
-pre.glass {
-  background-color: transparent;
-  color: #E1E1E1;
+/* Filled mode for blocks of code */
+pre.filled {
+  background-color: #E1E1E1;
+  color: #000;
 }
 
 /* If the code is the immediate child of pre */
 pre > code {
   display: inline;
   white-space: pre;
+  border: none;
 }
 
-/* If the code is the immediate child of pre with glass mode */
-pre.glass > code {
-  background-color: transparent;
-  color: #E1E1E1;
-  border: none;
+/* If the code is the immediate child of pre with filled mode */
+pre.filled > code {
+  background-color: #E1E1E1;
+  color: #000;
 }

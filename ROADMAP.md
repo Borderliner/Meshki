@@ -1,12 +1,19 @@
-## v0.4.4
-  1. Let the user choose between pushing sidenav or a normal one
+## v0.4.4:
+  - [] Let the user choose between pushing sidenav or a normal one
+  - [] A note about Meshki's website which uses pure Meshki
+  - [] Textarea's text needs padding
+  - [] Change checkboxes and radio buttons
+  - [] Fix ugly form dropdown in Firefox
+  - [] Add button sizes
+  - [] Add latest version's label to index.html
 
 ## v0.4.3:
-  1. Fix outline for sidenav-close-button
-  2. Disabled links on sidenav still works when clicked on
-  3. Fix Midori's issue with buttons
-  4. Set the default style of codes to "glass"
-  5. Utility section of the document lacks proper comments
-  6. Append (Borderliner) to my real name as a copyright holder
-  7. Code for buttons section in the document has extra useless line ends
-  8. Try fixing several FIXME's inside the code
+  - [x] Add proper meta tags to the document, and work on SEO
+  - [x] Fix outline for sidenav-close-button
+  - [x] Disabled links on sidenav still works when clicked on
+  - [x] Fix Midori's issue with buttons
+  - [x] Set the default style of codes to "glass"
+  - [x] Utility section of the document lacks proper comments
+  - [x] Append (Borderliner) to my real name as a copyright holder
+  - [x] Code for buttons section in the document has extra useless line ends
+  - [x] Try fixing several FIXME's inside the code
