@@ -33,6 +33,7 @@ pre {
   border: 2px solid #E1E1E1;
   border-radius: 5px;
   overflow-x: auto;
+  white-space: normal;
 }
 
 /* Filled mode for blocks of code */

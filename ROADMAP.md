@@ -12,5 +12,5 @@
   - [x] Set the default style of codes to "glass"
   - [x] Utility section of the document lacks proper comments
   - [] Append (Borderliner) to my real name as a copyright holder
-  - [] Code for buttons section in the document has extra useless line ends
+  - [x] Code for buttons section in the document has extra useless line ends
   - [] Try fixing several FIXME's inside the code
