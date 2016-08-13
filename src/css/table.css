@@ -17,9 +17,9 @@ table {
 /* Padding and stuff for each cell */
 th,
 td {
+  border-bottom: 1px solid #7C7C7C;
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #7C7C7C;
 }
 
 /* First and last children (most right and most left cells) do not need padding */
@@ -45,13 +45,11 @@ table.centerize > tbody td {
 }
 
 /* Hover effect activated for each row */
-table.hover > thead tr,
 table.hover > tbody tr {
   transition: background-color 0.3s;
 }
 
 /* Changes color when the mouse is over each row */
-table.hover > thead tr:hover,
 table.hover > tbody tr:hover {
   background-color: #404040;
 }
