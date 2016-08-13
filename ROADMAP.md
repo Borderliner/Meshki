@@ -1,4 +1,7 @@
-## v.0.4.3:
+## v0.4.4
+  1. Let the user choose between pushing sidenav or a normal one
+
+## v0.4.3:
   1. Fix outline for sidenav-close-button
   2. Disabled links on sidenav still works when clicked on
   3. Fix Midori's issue with buttons
