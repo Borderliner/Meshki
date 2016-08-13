@@ -9,7 +9,7 @@
   - [x] Fix outline for sidenav-close-button
   - [x] Disabled links on sidenav still works when clicked on
   - [] Fix Midori's issue with buttons
-  - [] Set the default style of codes to "glass"
+  - [x] Set the default style of codes to "glass"
   - [] Utility section of the document lacks proper comments
   - [] Append (Borderliner) to my real name as a copyright holder
   - [] Code for buttons section in the document has extra useless line ends

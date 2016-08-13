@@ -107,9 +107,9 @@
         <hr>
         <p>
           Meshki uses a fixed structure to lessen the burden of setting extra ids and classes. So you always need to create the same structure for all your apps. Don't worry, this structure is very basic and it does not limit you in any ways.<br>
-          First of all, you need to have a <code class="glass">&lt;div></code> with the <code class="glass">sidenav</code> class, just after the beginning of the body. Your <a href="#sidenav-doc">sidenav</a>'s links will reside in here. Then, you need to create a <code class="glass">&lt;div></code> after the sidenav's div, with the <code class="glass">content</code> class. The rest of your body should be created inside the "content" div. Inspect the elements on this page to understand the structure. Also, here's a sample code:<br>
+          First of all, you need to have a <code>&lt;div></code> with the <code>sidenav</code> class, just after the beginning of the body. Your <a href="#sidenav-doc">sidenav</a>'s links will reside in here. Then, you need to create a <code>&lt;div></code> after the sidenav's div, with the <code>content</code> class. The rest of your body should be created inside the "content" div. Inspect the elements on this page to understand the structure. Also, here's a sample code:<br>
         </p>
-        <pre class="glass">
+        <pre>
           <code>
     &lt;!DOCTYPE html>
     &lt;html>
@@ -157,7 +157,7 @@
         </div><br>
       
         <span>Here's the code for them:</span><br><br>
-          <pre class="glass">
+          <pre>
             <code>
     &lt;a class="button"&gt;Simple&lt;/a&gt;
     &lt;button class="default"&gt;Default&lt;/button&gt;
@@ -172,9 +172,9 @@
         <h4>Sidenav</h4>
         <hr>
         <p>
-          Creating a sidenav is easy: Just create a <code class="glass">&lt;div></code> with the <code class="glass">&lt;sidenav</code> class after the opening body tag. Then add <code class="glass">&lt;a></code> tags to make sidenav links. It's pretty easy and straight-forward. Use the JavaScript functions of <code class="glass">meshki.openNav()</code> and <code class="glass">meshki.closeNav()</code> on events to open and close sidenav respectively. Here's an example for your convenience:
+          Creating a sidenav is easy: Just create a <code>&lt;div></code> with the <code>&lt;sidenav</code> class after the opening body tag. Then add <code>&lt;a></code> tags to make sidenav links. It's pretty easy and straight-forward. Use the JavaScript functions of <code>meshki.openNav()</code> and <code>meshki.closeNav()</code> on events to open and close sidenav respectively. Here's an example for your convenience:
         </p>
-        <pre class="glass">
+        <pre>
           <code>
     &lt;body>
       &lt;div class="sidenav">
@@ -198,9 +198,9 @@
         <h4>Navbar</h4>
         <hr>
         <p>
-          Meshki comes with a beautiful navbar built-in. At the beginning of the <code class="glass">content</code> div, create an empty div, and then create a <code class="glass">&lt;ul class="nav"></code> inside that. Now any <code class="glass">&lt;li>&lt;a href="#">Link&lt;/a>&lt;/li></code> will appear as a button in the navbar. You can also add the <code class="glass">fixed</code> class to make the navbar fixed.
+          Meshki comes with a beautiful navbar built-in. At the beginning of the <code>content</code> div, create an empty div, and then create a <code>&lt;ul class="nav"></code> inside that. Now any <code>&lt;li>&lt;a href="#">Link&lt;/a>&lt;/li></code> will appear as a button in the navbar. You can also add the <code>fixed</code> class to make the navbar fixed.
         </p>
-        <pre class="glass">
+        <pre>
           <code>
     &lt;div>
       &lt;ul class="nav fixed">
@@ -274,7 +274,7 @@
         <p>
           Here's the code for how to use the grid system:
         </p>
-          <pre class="glass">
+          <pre>
             <code>
     &lt;div class="row"&gt;
       &lt;div class="one column"&gt;
@@ -378,7 +378,7 @@
         <p>
           This is the code snippet on how you can use form elements:
         </p>
-          <pre class="glass">
+          <pre>
             <code>
     &lt;form>
       &lt;!--Text Inputs -->
@@ -451,7 +451,7 @@
         <h4>Typography</h4>
         <hr>
         <p>
-          Type is all set with the <code class="glass">&lt;rems></code>, so font-sizes and spacial relationships can be responsively sized based on a single <code class="glass">&lt;html></code> font-size property. Out of the box, Meshki never changes the <code class="glass">&lt;html></code> font-size, but it's there in case you need it for your project. All measurements are still base 10 though so, an < class="glass"code>&lt;h1></code> with <code class="glass">5.0rem</code> font-size just means <code class="glass">50px</code>.
+          Type is all set with the <code>&lt;rems></code>, so font-sizes and spacial relationships can be responsively sized based on a single <code>&lt;html></code> font-size property. Out of the box, Meshki never changes the <code>&lt;html></code> font-size, but it's there in case you need it for your project. All measurements are still base 10 though so, an <code>&lt;h1></code> with <code>5.0rem</code> font-size just means <code>50px</code>.
         </p>
       </div>
       <div class="row">
@@ -471,45 +471,51 @@
         <h4>Code</h4>
         <hr>
         <p>
-          Code styling is kept basic: just wrap anything in a <code> &lt;code></code> and it will appear like <code>this</code>. It also has a <code class="glass">glass</code> style which is like <code class="glass">this</code>. For blocks of code, wrap a &lt;code> with a &lt;pre>.
-          <br> Note that for blocks of code, <code class="glass">glass</code> class needs to be added to the &lt;pre>, not &lt;code>.
+          Code styling is kept basic: just wrap anything in a <code>&lt;code></code> and it will appear like <code>this</code>. It also has a <code>filled</code> style which is like <code class="filled">this</code>. For blocks of code, wrap a &lt;code> with a &lt;pre>.
+          <br> Note that for blocks of code, <code>filled</code> class needs to be added to the &lt;pre>, not &lt;code>.
         </p>
       </div>
       <div class="row">
         <div class="twelve columns">
-          <pre class="glass">
-              <code>
-
+          <pre>
+            <code>
       &lt;code>bower install meshki&lt;/code>
-      &lt;code class="glass">bower install meshki&lt;/code>
 
       &lt;pre>
-        &lt;code>.some-class {
+        &lt;code>
+        .some-class {
           background-color: red;
-        }&lt;/code>
+        }
+        &lt;/code>
       &lt;/pre>
+            </code>
+          </pre>
+          <pre class="filled">
+            <code>
+      &lt;code class="filled">bower install meshki&lt;/code>
 
-      &lt;pre class="glass">
-        &lt;code>(function(
+      &lt;pre class="filled">
+        &lt;code>
+        (function(
           console.log('Hello world!');
-        ))();&lt;/code>
+        ))();
+        &lt;/code>
       &lt;/pre><div id="tables-doc"></div>
-
-              </code>
-            </pre>
+            </code>
+          </pre>
         </div>
       </div>
       <div class="row">
         <h4>Tables</h4>
         <hr>
         <p>
-          Be sure to use properly formed table markup with <code class="glass">&lt;thead></code> and <code class="glass">&lt;tbody></code> when building a <code class="glass">table</code>.
+          Be sure to use properly formed table markup with <code>&lt;thead></code> and <code>&lt;tbody></code> when building a <code>table</code>.
         </p>
         <p>
           You can customize your table with the below classes:
           <ul>
-            <li><code class="glass">hover</code> : Makes your table's rows highlighted when hovering over them with mouse.</li>
-            <li><code class="glass">striped</code> : It stripes your table (even rows, except the header).</li>
+            <li><code>hover</code> : Makes your table's rows highlighted when hovering over them with mouse.</li>
+            <li><code>striped</code> : It stripes your table (even rows, except the header).</li>
           </ul>
         </p>
       </div>
@@ -557,10 +563,10 @@
         <h4>Footer</h4>
         <hr>
         <p>
-          Meshki has a customized footer which is ready to use out-of-the-box. Create a <code class="glass">&lt;footer></code> element (or a div with "footer" class, since IE8 does not support &lt;footer>). You can also have a "compact" version of the footer by adding "compact" class to the footer.
+          Meshki has a customized footer which is ready to use out-of-the-box. Create a <code>&lt;footer></code> element (or a div with "footer" class, since IE8 does not support &lt;footer>). You can also have a "compact" version of the footer by adding "compact" class to the footer.
           <b>Note</b> that Meshki's footer does not enforce footer's height, so the more you add, the bigger it gets.
         </p>
-        <pre class="glass">
+        <pre>
           <code>
     &lt;footer class="compact">
       &lt;div class="row">
@@ -599,7 +605,7 @@
         </div>
       </div>
       <div class="row">
-        <pre class="glass">
+        <pre>
             <code>
       /* Mobile first queries */
 
@@ -628,7 +634,7 @@
         </p>
       </div>
       <div class="row">
-        <pre class="glass">
+        <pre>
           <code>
       /* Make element full width */
       .expand {
