@@ -25,7 +25,7 @@
 </head>
 
 <body>
-  <div class="sidenav">
+  <div class="sidenav push">
     <a href="javascript:void(0);" class="sidenav-close-button" onclick="meshki.closeNav()">&times;</a>
     <a href="">Home</a>
     <a href="https://github.com/Borderliner/Meshki">GitHub</a>
@@ -191,12 +191,12 @@
         <h4>Sidenav</h4>
         <hr>
         <p>
-          Creating a sidenav is easy: Just create a <code>&lt;div></code> with the <code>&lt;sidenav</code> class after the opening body tag. Then add <code>&lt;a></code> tags to make sidenav links. It's pretty easy and straight-forward. Use the JavaScript functions of <code>meshki.openNav()</code> and <code>meshki.closeNav()</code> on events to open and close sidenav respectively. Here's an example for your convenience:
+          Creating a sidenav is easy: Just create a <code>&lt;div></code> with the <code>&lt;sidenav</code> class after the opening body tag. Then add <code>&lt;a></code> tags to make sidenav links. It's pretty easy and straight-forward. Use the JavaScript functions of <code>meshki.openNav()</code> and <code>meshki.closeNav()</code> on events to open and close sidenav respectively. You can also add <code>push</code> class to make if even more fun! Here's an example for your convenience:
         </p>
         <pre>
           <code>
     &lt;body>
-      &lt;div class="sidenav">
+      &lt;div class="sidenav push">
         &lt;!-- Note that javascript:void(0) stops your page from jumping to the top -->
         &lt;a href="javascript:void(0)" class="sidenav-close-button" onclick="meshki.closeNav()">&amp;times;&lt;/a>
         &lt;a href="">Home&lt;/a>

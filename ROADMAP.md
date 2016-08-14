@@ -2,10 +2,10 @@
   - [ ] Fix the navbar's dropdown in handheld devices
 
 ## v0.4.4:
-  - [ ] Let the user choose between pushing sidenav or a normal one
+  - [x] Let the user choose between pushing sidenav or a normal one
   - [x] A note about Meshki's website which uses pure Meshki
   - [x] Textarea's text needs padding
-  - [ ] Change checkboxes and radio buttons
+  - [x] Change checkboxes and radio buttons
   - [ ] Fix ugly form dropdown in Firefox
   - [x] Add button sizes
   - [x] Add latest version's label to index.html
