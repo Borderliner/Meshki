@@ -130,26 +130,30 @@ input[type="checkbox"] + label.checkbox:before, input[type="radio"] + label.radi
     display: inline-block;
     width: 10px;
     height: 10px;
-    background-color: #E1E1E1;
+    background-color: transparent;
     border: 2px solid #E1E1E1;
     border-radius: 5px;
     padding: 2px;
     margin-right: 10px;
+    margin-bottom: 3px;
     vertical-align: middle;
     text-align: center;
     transition: background-color .3s, box-shadow .3s;
 }
 
+/* Round shape for radio boxes */
+input[type="radio"] + label.radio:before {
+  border-radius: 20px;
+}
+
 /* When the checkbox is checked */
 input[type="checkbox"]:checked + label.checkbox:before {
     background-color: #33BBF0;
-    box-shadow: inset 0px 0px 0px 2px #E1E1E1;
 }
 
 /* When the radio button is checked */
 input[type="radio"]:checked + label.radio:before {
     background-color: #33BBF0;
-    box-shadow: inset 0px 0px 0px 2px #E1E1E1;
 }
 
 /* Remove outlines of checkboxes and radio buttons, especially for Firefox */
