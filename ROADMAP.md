@@ -1,11 +1,11 @@
 ## v0.4.4:
-  - [] Let the user choose between pushing sidenav or a normal one
-  - [] A note about Meshki's website which uses pure Meshki
-  - [] Textarea's text needs padding
-  - [] Change checkboxes and radio buttons
-  - [] Fix ugly form dropdown in Firefox
-  - [] Add button sizes
-  - [] Add latest version's label to index.html
+  - [ ] Let the user choose between pushing sidenav or a normal one
+  - [ ] A note about Meshki's website which uses pure Meshki
+  - [x] Textarea's text needs padding
+  - [ ] Change checkboxes and radio buttons
+  - [ ] Fix ugly form dropdown in Firefox
+  - [ ] Add button sizes
+  - [ ] Add latest version's label to index.html
 
 ## v0.4.3:
   - [x] Add proper meta tags to the document, and work on SEO
