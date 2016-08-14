@@ -24,7 +24,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  cursor: default;
+  cursor: pointer;
   margin: 5px !important;
   border-radius: 5px;
   text-decoration: none;
