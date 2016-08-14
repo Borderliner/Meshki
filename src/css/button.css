@@ -41,6 +41,30 @@ input[type="button"] {
   line-height: normal !important; /* Fix Midori bug */
 }
 
+a.button.small,
+button.small,
+input[type="submit"].small,
+input[type="reset"].small,
+input[type="button"].small {
+  font-size: 1.2rem;
+}
+
+a.button.medium,
+button.medium,
+input[type="submit"].medium,
+input[type="reset"].medium,
+input[type="button"].medium {
+  font-size: 1.6rem;
+}
+
+a.button.large,
+button.large,
+input[type="submit"].large,
+input[type="reset"].large,
+input[type="button"].large {
+  font-size: 2.2rem;
+}
+
 /* Simple button's hover */
 a.button:hover,
 button:hover,
