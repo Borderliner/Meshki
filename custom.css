@@ -6,6 +6,7 @@ i.fa {
 div.share-links {
   display: -webkit-flex;
   display: -moz-box;
+  display: inline-flex;
 }
 
 div.share-links i.fa {

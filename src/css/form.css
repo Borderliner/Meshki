@@ -1,5 +1,5 @@
 /*
-* Meshki v0.4.3
+* Meshki v0.4.4
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -52,15 +52,30 @@ input[type="text"],
 input[type="tel"],
 input[type="url"],
 input[type="password"],
-textarea {
+textarea,
+select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
 
+/* Firefox outline bug */
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
+/* Dropdown arrow for everyone! */
+select {
+  outline: 0 !important;
+  background: url("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Im0xMjEuMywzNC42Yy0xLjYtMS42LTQuMi0xLjYtNS44LDBsLTUxLDUxLjEtNTEuMS01MS4xYy0xLjYtMS42LTQuMi0xLjYtNS44LDAtMS42LDEuNi0xLjYsNC4yIDAsNS44bDUzLjksNTMuOWMwLjgsMC44IDEuOCwxLjIgMi45LDEuMiAxLDAgMi4xLTAuNCAyLjktMS4ybDUzLjktNTMuOWMxLjctMS42IDEuNy00LjIgMC4xLTUuOHoiIGZpbGw9IiMwMDAwMDAiLz4KICA8L2c+Cjwvc3ZnPgo=") no-repeat;
+  background-color: #E1E1E1;
+  background-position: 98% 50%;
+}
+
 textarea {
   min-height: 65px;
-  padding: 6px 0px 6px 0px;
+  padding: 6px 10px;
 }
 
 /* Blue light animation when the form elements get focus */
@@ -130,26 +145,30 @@ input[type="checkbox"] + label.checkbox:before, input[type="radio"] + label.radi
     display: inline-block;
     width: 10px;
     height: 10px;
-    background-color: #E1E1E1;
+    background-color: transparent;
     border: 2px solid #E1E1E1;
     border-radius: 5px;
     padding: 2px;
     margin-right: 10px;
+    margin-bottom: 3px;
     vertical-align: middle;
     text-align: center;
     transition: background-color .3s, box-shadow .3s;
 }
 
+/* Round shape for radio boxes */
+input[type="radio"] + label.radio:before {
+  border-radius: 20px;
+}
+
 /* When the checkbox is checked */
 input[type="checkbox"]:checked + label.checkbox:before {
     background-color: #33BBF0;
-    box-shadow: inset 0px 0px 0px 2px #E1E1E1;
 }
 
 /* When the radio button is checked */
 input[type="radio"]:checked + label.radio:before {
     background-color: #33BBF0;
-    box-shadow: inset 0px 0px 0px 2px #E1E1E1;
 }
 
 /* Remove outlines of checkboxes and radio buttons, especially for Firefox */

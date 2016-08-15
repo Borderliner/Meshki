@@ -1,5 +1,5 @@
 /*
-* Meshki v0.4.3
+* Meshki v0.4.4
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -24,7 +24,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  cursor: default;
+  cursor: pointer;
   margin: 5px !important;
   border-radius: 5px;
   text-decoration: none;
@@ -39,6 +39,30 @@ input[type="button"] {
   color: #E1E1E1;
   border: 2px solid #E1E1E1;
   line-height: normal !important; /* Fix Midori bug */
+}
+
+a.button.small,
+button.small,
+input[type="submit"].small,
+input[type="reset"].small,
+input[type="button"].small {
+  font-size: 1.2rem;
+}
+
+a.button.medium,
+button.medium,
+input[type="submit"].medium,
+input[type="reset"].medium,
+input[type="button"].medium {
+  font-size: 1.6rem;
+}
+
+a.button.large,
+button.large,
+input[type="submit"].large,
+input[type="reset"].large,
+input[type="button"].large {
+  font-size: 2.2rem;
 }
 
 /* Simple button's hover */

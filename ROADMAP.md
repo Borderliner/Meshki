@@ -1,11 +1,15 @@
+## v0.4.5:
+  - [ ] Fix the navbar's dropdown in handheld devices
+  - [ ] The font seems to be weird in smaller texts and needs to be fixed.
+
 ## v0.4.4:
-  - [] Let the user choose between pushing sidenav or a normal one
-  - [] A note about Meshki's website which uses pure Meshki
-  - [] Textarea's text needs padding
-  - [] Change checkboxes and radio buttons
-  - [] Fix ugly form dropdown in Firefox
-  - [] Add button sizes
-  - [] Add latest version's label to index.html
+  - [x] Let the user choose between pushing sidenav or a normal one
+  - [x] A note about Meshki's website which uses pure Meshki
+  - [x] Textarea's text needs padding
+  - [x] Change checkboxes and radio buttons
+  - [x] Fix ugly form dropdown in Firefox
+  - [x] Add button sizes
+  - [x] Add latest version's label to index.html
 
 ## v0.4.3:
   - [x] Add proper meta tags to the document, and work on SEO
