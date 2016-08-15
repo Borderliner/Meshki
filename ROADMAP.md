@@ -2,8 +2,8 @@
   - [x] Fix the navbar's dropdown in handheld devices (Tried my best)
   - [x] Raleway is not clear on small sizes. Change it to ~~Roboto~~ Ubuntu.
   - [x] Add active navbar button
-  - [ ] Update docs
-  - [ ] Host Meshki on a popular CDN
+  - [x] Update docs
+  - [x] Host Meshki on a popular CDN
 
 ## v0.4.4:
   - [x] Let the user choose between pushing sidenav or a normal one
