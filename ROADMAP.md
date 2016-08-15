@@ -1,7 +1,7 @@
-## v0.4.5:
-  - [ ] Fix the navbar's dropdown in handheld devices
+## v0.5.0:
+  - [x] Fix the navbar's dropdown in handheld devices (Tried my best)
   - [x] Raleway is not clear on small sizes. Change it to ~~Roboto~~ Ubuntu.
-  - [ ] Add active navbar button
+  - [x] Add active navbar button
   - [ ] Update docs
   - [ ] Host Meshki on a popular CDN
 

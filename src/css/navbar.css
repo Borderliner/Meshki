@@ -33,12 +33,17 @@ ul.nav li {
 }
 
 /* Anchors inside lists' attributes */
-ul.nav li a {
-  display: block;
+ul.nav li > a {
+  display: inline-block;
   color: #E1E1E1;
   padding: 14px 16px;
   text-align: center;
   text-decoration: none;
+}
+
+/* Active navbar button */
+ul.nav li > a.active {
+  background-color: #111;
 }
 
 /* Logo of the website, it must be the first child of navbar*/
