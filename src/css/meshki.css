@@ -21,8 +21,8 @@
 
 /* Default font face for Meshki */
 @font-face {
-  font-family: 'Raleway';
-  src: url('fonts/Raleway-Regular.ttf');
+  font-family: 'Ubuntu';
+  src: url('fonts/Ubuntu-Regular.ttf');
 }
 
 /* NOTE
@@ -39,7 +39,7 @@ body {
   height: 100%;
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Ubuntu", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #222;
   color: #E0E0E0;
 }
