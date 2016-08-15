@@ -1,6 +1,9 @@
 ## v0.4.5:
   - [ ] Fix the navbar's dropdown in handheld devices
-  - [ ] The font seems to be weird in smaller texts and needs to be fixed.
+  - [ ] Raleway is not clear on small sizes. Change it to Roboto.
+  - [ ] Add active navbar button
+  - [ ] Update docs
+  - [ ] Host Meshki on a popular CDN
 
 ## v0.4.4:
   - [x] Let the user choose between pushing sidenav or a normal one
