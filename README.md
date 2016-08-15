@@ -6,7 +6,7 @@ Check out <http://meshki.borderliner.ir/> for samples and details.
 ## Getting started
 
 There are a couple ways to download Meshki:
-- [Download the zip](https://github.com/Borderliner/Meshki/archive/v0.4.4.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v0.4.4.tar.gz)
+- [Download the zip](https://github.com/Borderliner/Meshki/archive/v0.5.0.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v0.5.0.tar.gz)
 - Clone the repo: `git clone https://github.com/Borderliner/Meshki.git` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download)<br>
 You can also download it via `bower install meshki --save`
 
@@ -16,7 +16,7 @@ You need node.js to minify the source CSS and JavaScript files and produce outpu
 `npm install -g grunt-cli`<br>
 You may need to access root user to install node packages globally.
 
-Then `cd` into the root folder of the project, and run the command `npm run compile`. This will produce files for you in the `dist` folder, which includes both minified and normal versions of Meshki, plus a fonts folder which includes Raleway Regular font.
+Then `cd` into the root folder of the project, and run the command `npm run compile`. This will produce files for you in the `dist` folder, which includes both minified and normal versions of Meshki, plus a fonts folder which includes Ubuntu Regular font.
 
 ### What's in the download?
 
@@ -58,7 +58,7 @@ Meshki is lightweight, stylish and simple. It styles only raw HTML elements (wit
 
 - Chrome latest
 - Firefox latest
-- Microsoft Edge
+- Microsoft Edge latest
 - Opera latest
 - Safari latest
 - IE 9+ (Older versions are not guaranteed to work)
@@ -66,7 +66,8 @@ Meshki is lightweight, stylish and simple. It styles only raw HTML elements (wit
 The above list is non-exhaustive. Meshki works perfectly with almost all older versions of the browsers above, though IE certainly has large degradation prior to IE9.
 
 ## Major Known Issues
-Navbar's dropdown issue on handheld devices. Will be fixed in the next version.
+- Navbar's dropdown issue on handheld devices. (a fix released, untested)
+- Buttons created with anchor tag did not work properly on iOS the last time I checked. (Will be fixed in the next version)
 
 ## License
 

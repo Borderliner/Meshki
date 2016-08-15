@@ -1,3 +1,6 @@
+## v0.5.1:
+  - [ ] Fix anchor tag buttons in iOS
+
 ## v0.5.0:
   - [x] Fix the navbar's dropdown in handheld devices (Tried my best)
   - [x] Raleway is not clear on small sizes. Change it to ~~Roboto~~ Ubuntu.
