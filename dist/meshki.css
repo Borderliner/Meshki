@@ -1,5 +1,5 @@
 /*
-* Meshki v0.4.4
+* Meshki v0.5.0
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -155,7 +155,7 @@ input[type="button"].warning:hover {
   color: #fff;
 }
 /*
-* Meshki v0.4.4
+* Meshki v0.5.0
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -211,7 +211,7 @@ pre.filled > code {
   color: #000;
 }
 /*
-* Meshki v0.4.4
+* Meshki v0.5.0
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -256,7 +256,7 @@ footer .row {
   }
 }
 /*
-* Meshki v0.4.4
+* Meshki v0.5.0
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -433,7 +433,7 @@ input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label
   outline: none !important;
 }
 /*
-* Meshki v0.4.4
+* Meshki v0.5.0
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -553,7 +553,7 @@ input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label
   .offset-by-one-half.columns     { margin-left: 52%; }
 }
 /*
-* Meshki v0.4.4
+* Meshki v0.5.0
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -587,7 +587,7 @@ li {
   margin-bottom: 1rem;
 }
 /*
-* Meshki v0.4.4
+* Meshki v0.5.0
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -609,8 +609,8 @@ li {
 
 /* Default font face for Meshki */
 @font-face {
-  font-family: 'Raleway';
-  src: url('fonts/Raleway-Regular.ttf');
+  font-family: 'Ubuntu';
+  src: url('fonts/Ubuntu-Regular.ttf');
 }
 
 /* NOTE
@@ -627,7 +627,7 @@ body {
   height: 100%;
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Ubuntu", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #222;
   color: #E0E0E0;
 }
@@ -718,7 +718,7 @@ compatibility reasons.
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
 /*
-* Meshki v0.4.4
+* Meshki v0.5.0
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -752,12 +752,17 @@ ul.nav li {
 }
 
 /* Anchors inside lists' attributes */
-ul.nav li a {
-  display: block;
+ul.nav li > a {
+  display: inline-block;
   color: #E1E1E1;
   padding: 14px 16px;
   text-align: center;
   text-decoration: none;
+}
+
+/* Active navbar button */
+ul.nav li > a.active {
+  background-color: #111;
 }
 
 /* Logo of the website, it must be the first child of navbar*/
@@ -1250,7 +1255,7 @@ textarea {
   font: inherit; /* 2 */
 }
 /*
-* Meshki v0.4.4
+* Meshki v0.5.0
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -1334,7 +1339,7 @@ textarea {
   }
 }
 /*
-* Meshki v0.4.4
+* Meshki v0.5.0
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -1389,7 +1394,7 @@ table.hover > tbody tr:hover {
   background-color: #404040;
 }
 /*
-* Meshki v0.4.4
+* Meshki v0.5.0
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -1426,7 +1431,7 @@ p {
   margin-top: 0;
 }
 /*
-* Meshki v0.4.4
+* Meshki v0.5.0
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
