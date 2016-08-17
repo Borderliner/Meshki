@@ -1,7 +1,7 @@
 ## v0.5.1:
-  - [ ] Fix anchor tag buttons in iOS
-  - [ ] Navbar's dropdown is not fixed yet.
-  - [ ] Add animation to navbar's dropdown
+  - [x] Fix anchor tag buttons in iOS
+  - [x] Navbar's dropdown is not fixed yet.
+  - [x] Add animation to navbar's dropdown
 
 ## v0.5.0:
   - [x] Fix the navbar's dropdown in handheld devices (Tried my best)
