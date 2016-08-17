@@ -18,12 +18,12 @@ ul.nav {
   margin-top: 0px;
   list-style-type: none;
   overflow: hidden;
+  z-index: 1;
 }
 
 /* Fixed navbar's attributes */
 ul.nav.fixed {
   position: fixed;
-  z-index: 1;
 }
 
 /* Elements in the navbar start from the left side */
@@ -86,6 +86,7 @@ ul.nav .nav-dropdown-content {
   min-width: 160px;
   background-color: #111;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
 /* If the navbar is a fixed one, so is it's position */
