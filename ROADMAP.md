@@ -1,3 +1,9 @@
+## v0.6.0:
+  - [ ] Add simple Modals
+
+## v0.5.2:
+  - [ ] Add overlay to sidenav
+
 ## v0.5.1:
   - [x] Fix anchor tag buttons in iOS
   - [x] Navbar's dropdown is not fixed yet.
