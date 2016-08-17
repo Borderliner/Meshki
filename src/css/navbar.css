@@ -1,5 +1,5 @@
 /*
-* Meshki v0.5.0
+* Meshki v0.5.1
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -18,11 +18,6 @@ ul.nav {
   margin-top: 0px;
   list-style-type: none;
   overflow: hidden;
-}
-
-/* Fixed navbar's attributes */
-ul.nav.fixed {
-  position: fixed;
   z-index: 1;
 }
 
@@ -39,6 +34,7 @@ ul.nav li > a {
   padding: 14px 16px;
   text-align: center;
   text-decoration: none;
+  transition: background-color .2s ease-in-out;
 }
 
 /* Active navbar button */
@@ -68,10 +64,15 @@ ul.nav li > a:hover {
 
 /* Send the elements to the right side with nav-right */
 ul.nav li.nav-right {
-  position: inherit;
+  position: relative;
   top: 7px;
   right: 16px;
   float: right !important;
+}
+
+ul.nav a.button,
+ul.nav button {
+  margin: 0px 5px 0px 5px !important;
 }
 
 /* Navigation Dropdown Button */
@@ -81,16 +82,15 @@ li.nav-dropdown {
 
 /* Dropdown content attributes */
 ul.nav .nav-dropdown-content {
-  display: none;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
   min-width: 160px;
   background-color: #111;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-/* If the navbar is a fixed one, so is it's position */
-ul.nav.fixed .nav-dropdown-content {
-  position: fixed;
+  z-index: 1;
+  transition: visibility .2s, opacity .2s ease-in-out;
 }
 
 /* Each link in dropdown's content */
@@ -114,5 +114,6 @@ ul.nav.fixed .nav-dropdown-content {
 
 /* Display the content when the mouse is on dropdown's button */
 .nav-dropdown:hover .nav-dropdown-content {
-    display: block;
+    visibility: visible;
+    opacity: 1;
 }

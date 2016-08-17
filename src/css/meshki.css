@@ -1,5 +1,5 @@
 /*
-* Meshki v0.5.0
+* Meshki v0.5.1
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -49,11 +49,11 @@ body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Nice blue for links */
 a {
-  color: rgb(60, 216, 255);
+  color: #55acee;
 }
 
 a:hover {
-  color: #59B8FF;
+  color: #74C1FB;
 }
 
 /* Spacing

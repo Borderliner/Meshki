@@ -12,7 +12,7 @@
   <meta property="og:url" content="http://meshki.borderliner.ir"/>
   <meta property="og:description" content="Meshki: A Black-Colored, Responsive Boilerplate for UI Development"/>
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:url" content="http://meshki.borderliner.ir">
+  <meta name="twitter:site" content="@Meshki_UI">
   <meta name="twitter:title" content="Meshki UI">
   <meta name="twitter:description" content="Meshki: A Black-Colored, Responsive Boilerplate for UI Development">
   <meta name="twitter:image" content="meta-image.png">
@@ -20,6 +20,9 @@
   <link rel="stylesheet" type="text/css" href="dist/meshki.css">
   <link rel="stylesheet" type="text/css" href="custom.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
   <link rel="shortcut icon" href="dist/favicon.ico" type="image/x-icon" />
   <script type="text/javascript" src="dist/meshki.min.js"></script>
 </head>
@@ -52,12 +55,12 @@
   </div>
   <div class="content">
     <div>
-      <ul class="nav fixed">
+      <ul class="nav">
         <li><a class="logo" href="javascript:void(0);" onclick="meshki.openNav()">Meshki</a></li>
         <li><a href="https://github.com/Borderliner/Meshki/releases">News</a></li>
         <li><a href="https://github.com/Borderliner/Meshki">GitHub</a></li>
         <li class="nav-dropdown hide-on-mobile">
-          <a href="#components" class="nav-dropdown-button">Components</a>
+          <a href="javascript:void(0)" class="nav-dropdown-button">Components</a>
           <div class="nav-dropdown-content">
             <a href="#buttons-doc">Buttons</a>
             <a href="#sidenav-doc">Sidenav</a>
@@ -69,7 +72,8 @@
             <a href="#footer-doc">Footer</a>
           </div>
         </li>
-        <li class="nav-right hide-on-mobile"><input type="text" name="" placeholder="Search..."></li>
+        <li class="nav-right hide-on-tablet"><input type="text" name="" placeholder="Search..."></li>
+        <li class="nav-right hide-on-tablet"><button class="success">GO!</button></li>
       </ul>
     </div>
     <div class="container">
@@ -79,7 +83,7 @@
       </div>
 
       <div class="row text-center">
-        <a class="button large default" href="https://github.com/Borderliner/Meshki/archive/v0.5.0.zip">Download Meshki (v0.5.0)</a><br><br>
+        <a class="button large default" href="https://github.com/Borderliner/Meshki/archive/v0.5.1.zip">Download Meshki (v0.5.1)</a><br><br>
       </div>
     
       <div class="row">
@@ -415,7 +419,7 @@
         </div>
       </div>
       <div class="row text-center">
-        <button>Submit</button>
+        <button class="success">Submit</button>
       </div>
       <div class="row">
         <p>
