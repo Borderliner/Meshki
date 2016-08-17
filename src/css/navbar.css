@@ -21,11 +21,6 @@ ul.nav {
   z-index: 1;
 }
 
-/* Fixed navbar's attributes */
-ul.nav.fixed {
-  position: fixed;
-}
-
 /* Elements in the navbar start from the left side */
 ul.nav li {
   float: left;
@@ -68,10 +63,15 @@ ul.nav li > a:hover {
 
 /* Send the elements to the right side with nav-right */
 ul.nav li.nav-right {
-  position: inherit;
+  position: relative;
   top: 7px;
   right: 16px;
   float: right !important;
+}
+
+ul.nav a.button,
+ul.nav button {
+  margin: 0px 5px 0px 5px !important;
 }
 
 /* Navigation Dropdown Button */
@@ -87,11 +87,6 @@ ul.nav .nav-dropdown-content {
   background-color: #111;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-}
-
-/* If the navbar is a fixed one, so is it's position */
-ul.nav.fixed .nav-dropdown-content {
-  position: fixed;
 }
 
 /* Each link in dropdown's content */
