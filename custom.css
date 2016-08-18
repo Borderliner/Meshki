@@ -49,6 +49,10 @@ a {
   text-align: center;
 }
 
+#cdn {
+  display: none;
+}
+
 @media (min-width: 544px) {
   .custom-text-right {
     text-align: right;
