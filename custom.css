@@ -53,6 +53,20 @@ a {
   display: none;
 }
 
+.custom-love {
+  font-size: 1.7rem !important;
+  color: #E74C3C;
+  transition: color 0.3s;
+}
+
+.custom-love:hover {
+  color: #D01129;
+}
+
+.custom-love:active {
+  color: #80180D;
+}
+
 @media (min-width: 544px) {
   .custom-text-right {
     text-align: right;
