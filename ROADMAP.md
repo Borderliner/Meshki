@@ -3,7 +3,7 @@
 
 ## v0.5.2:
   - [x] Add overlay to sidenav
-  - [ ] Add info about default properties of Meshki
+  - [x] Add info about default properties of Meshki
 
 ## v0.5.1:
   - [x] Fix anchor tag buttons in iOS

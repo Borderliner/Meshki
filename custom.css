@@ -67,6 +67,11 @@ a {
   color: #80180D;
 }
 
+.custom-down-cdn {
+  width: 100%;
+  max-width: 300px;
+}
+
 @media (min-width: 544px) {
   .custom-text-right {
     text-align: right;
