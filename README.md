@@ -1,12 +1,12 @@
 # [Meshki](http://meshki.borderliner.ir/)
 Meshki is a simple, black-colored, responsive boilerplate to kickstart any responsive project.<br>
-It is only <b>~14 KiB</b> (minified) and ~31 KiB (normal), including both CSS and JS files.<br>
+It is only <b>~14 KiB</b> (minified) and ~35 KiB (normal), including both CSS and JS files.<br>
 Check out <http://meshki.borderliner.ir/> for samples and details.
 
 ## Getting started
 
 There are a couple ways to download Meshki:
-- [Download the zip](https://github.com/Borderliner/Meshki/archive/v0.5.1.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v0.5.1.tar.gz)
+- [Download the zip](https://github.com/Borderliner/Meshki/archive/v0.5.2.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v0.5.2.tar.gz)
 - Clone the repo: `git clone https://github.com/Borderliner/Meshki.git` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download)<br>
 You can also download it via `bower install meshki --save`
 
@@ -26,7 +26,7 @@ The download includes Meshki's CSS, Meshki's JavaScript, Normalize CSS as a rese
 Meshki/
 ├── dist/
 │   ├── fonts/
-│   │   └── Raleway-Regular.ttf
+│   │   └── Ubuntu-Regular.ttf
 │   ├── meshki.css
 │   ├── meshki.min.css
 │   ├── meshki.js
@@ -47,23 +47,23 @@ Meshki/
 ### Why it's awesome
 
 Meshki is lightweight, stylish and simple. It styles only raw HTML elements (with a few exceptions) and provides a responsive grid with a minimal and clean interface.
-- Around 1k lines of CSS unminified and with comments
-- Although it's not a UI framework, you can create most of the interface with just Meshki
-- No compiling or installing. Just 2 files of CSS + JS
+- Around 1.6k lines of CSS unminified and with comments
+- Although it's not a UI framework, you can create most of the interface just with Meshki
+- No compiling or installing needed. Just 2 files of CSS + JS
 - Can be installed via `bower` and `npm`
 - Clean code, clean interface, without any headaches
 
 
 ## Browser support
 
-- Chrome latest
-- Firefox latest
-- Microsoft Edge latest
-- Opera latest
-- Safari latest
-- IE 9+ (Older versions are not guaranteed to work)
+- Chrome & Chromium (latest)
+- Mozilla Firefox (latest)
+- Microsoft Edge (latest)
+- Opera (latest)
+- Safari (latest)
+- IE 9+ (No animations on IE 9. Do not open issues regarding IE 8 and below)
 
-The above list is non-exhaustive. Meshki works perfectly with almost all older versions of the browsers above, though IE certainly has large degradation prior to IE9.
+The above list is non-exhaustive. Meshki works perfectly with almost all older versions of the browsers above, though IE certainly has large degradation prior to IE 9.
 
 ## Major Known Issues
 - Fixed navbar was a plague and the source of many buyg, and was removed in v0.5.1. Should find a way to bring it back properly.
@@ -72,6 +72,7 @@ The above list is non-exhaustive. Meshki works perfectly with almost all older v
 
 All parts of Meshki are free to use and abuse under the [open-source MIT license](https://github.com/Borderliner/Meshki/blob/master/LICENSE.md).<br>
 All other non-Meshki codes have their own licenses. Check out their repositories for more information.
+The website of [Meshki](http://meshki.borderliner.ir) uses [font-awesome](http://fontawesome.io/)
 
 ## Acknowledgement
 
