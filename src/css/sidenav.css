@@ -69,7 +69,7 @@
 
 /* Pushes the content div with effect */
 .content {
-  transition: margin-left .5s;
+  transition: margin-left .5s, opacity .5s;
 }
 
 /* Change the style of the sidenav for non-mobiles */
