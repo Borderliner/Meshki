@@ -74,6 +74,7 @@
         </li>
         <li class="nav-right hide-on-tablet"><input type="text" name="" placeholder="Search..."></li>
         <li class="nav-right hide-on-tablet"><button class="success">GO!</button></li>
+        <li class="nav-right hide-on-tablet"><iframe src="https://ghbtns.com/github-btn.html?user=borderliner&repo=meshki&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe></li>
       </ul>
     </div>
     <div class="container">
@@ -83,12 +84,12 @@
       </div>
 
       <div class="row text-center">
-        <a class="button large default" href="https://github.com/Borderliner/Meshki/archive/v0.5.1.zip">Download Meshki (v0.5.1)</a><br>Or<br>
-        <a class="button large danger" href="javascript:void(0)" onclick="document.getElementById('cdn').style.display = 'block';">Use CDN</a><br>
+        <a class="button large default custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v0.5.2.zip">Download Meshki (v0.5.2)</a><br>Or<br>
+        <a class="button large danger custom-down-cdn" href="javascript:void(0)" onclick="document.getElementById('cdn').style.display = 'block';">Use CDN</a><br>
         <pre id="cdn">
           <code>
-https://cdnjs.cloudflare.com/ajax/libs/meshki/0.5.1/meshki.min.css
-https://cdnjs.cloudflare.com/ajax/libs/meshki/0.5.1/meshki.min.js
+https://cdnjs.cloudflare.com/ajax/libs/meshki/0.5.2/meshki.min.css
+https://cdnjs.cloudflare.com/ajax/libs/meshki/0.5.2/meshki.min.js
           </code>
         </pre>
       </div><br>
@@ -112,7 +113,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/0.5.1/meshki.min.js
         <h3>What is Meshki?</h3>
         <hr>
         <p>
-          Meshki is a simple, black-colored, responsive boilerplate to kickstart any responsive project. It is only ~14 KiB (minified) and ~31 KiB (normal), including both CSS and JS files, which makes it superb for small to medium projects. It's easy to use, clean and is just beautiful.
+          Meshki is a simple, black-colored, responsive boilerplate to kickstart any responsive project. It is only ~14 KiB (minified) and ~35 KiB (normal), including both CSS and JS files, which makes it superb for small to medium projects. It's easy to use, clean and is just beautiful.
           It started as a fork of <a href="http://getskeleton.com" target="_blank">Skeleton</a> project, and it still uses some of the codes of it, Meshki is considered to be a total overhaul of Skeleton and it barely resembles it when you take a look at it.
           Don't be afraid to have a look at Meshki's code! If you spot any bugs, or you want some improvements, head to <a href="https://github.com/Borderliner/Meshki" target="_blank">our GitHub repository</a> and open an issue or a pull request!
         </p>
@@ -184,6 +185,10 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/0.5.1/meshki.min.js
           <input type="submit" class="success large" value="Success" />
           <input type="reset" class="danger medium" value="Danger" />
           <input type="button" class="warning small" value="Warning" />
+          <br><br>
+          <button class="default expand small">Small Expanded Button</button>
+          <button class="danger expand medium">Medium Expanded Button</button>
+          <button class="expand large">Large Expanded Button</button>
         </div><br>
       
         <span>Here's the code for them:</span><br><br>
@@ -193,7 +198,9 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/0.5.1/meshki.min.js
     &lt;button class="default medium"&gt;Default&lt;/button&gt;
     &lt;input type="submit" class="success large" value="Success" /&gt;
     &lt;input type="reset" class="danger medium" value="Danger" /&gt;
-    &lt;input type="button" class="warning small" value="Warning" /&gt;<div id="sidenav-doc"></div>
+    &lt;input type="button" class="warning small" value="Warning" /&gt;
+
+    &lt;button class="expand large"&gt;Large Expanded Button&lt;/button&gt;<div id="sidenav-doc"></div>
             </code>
           </pre>
       </div>
@@ -426,7 +433,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/0.5.1/meshki.min.js
         </div>
       </div>
       <div class="row text-center">
-        <button class="success">Submit</button>
+        <button class="default expand">Submit</button>
       </div>
       <div class="row">
         <p>
@@ -494,7 +501,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/0.5.1/meshki.min.js
       &lt;/div>
       
       &lt;div class="row text-center">
-        &lt;button>Submit&lt;/button>
+        &lt;button class="expand">Submit&lt;/button>
       &lt;/div>
     &lt;/form><div id="typography-doc"></div>
             </code>
@@ -752,11 +759,17 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/0.5.1/meshki.min.js
           </code>
         </pre>
       </div>
+      <div class="row">
+        <p>
+          This website uses the awesome "<a href="http://fontawesome.io/" target="_blank">font-awesome</a>" to display icons and such. It is by far the best font icon set I've ever encountered. Make sure to check out their website.
+        </p>
+        <iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+      </div>
     </div>
     <footer class="compact">
       <div class="row">
         <div class="six columns">
-          <p>Created with &hearts; by Mohammad reza Hajianpour (<a href="https://github.com/Borderliner">Borderliner</a>)</p>
+          <p>Created with <i class="fa fa-heart custom-love"></i> by Mohammad reza Hajianpour (<a href="https://github.com/Borderliner">Borderliner</a>)</p>
         </div>
         <div class="six columns custom-text-right">
           <p>2016, Licensed under <a href="https://github.com/Borderliner/Meshki/blob/master/LICENSE.md">MIT</a></p>

@@ -2,7 +2,9 @@
   - [ ] Add simple Modals
 
 ## v0.5.2:
-  - [ ] Add overlay to sidenav
+  - [x] Add overlay to sidenav
+  - [x] Add info about default properties of Meshki
+  - [x] Update normalize-css from v4.1.1 to v4.2.0
 
 ## v0.5.1:
   - [x] Fix anchor tag buttons in iOS

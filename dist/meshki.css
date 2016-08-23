@@ -1,5 +1,5 @@
 /*
-* Meshki v0.5.1
+* Meshki v0.5.2
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -155,7 +155,7 @@ input[type="button"].warning:hover {
   color: #fff;
 }
 /*
-* Meshki v0.5.1
+* Meshki v0.5.2
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -211,7 +211,7 @@ pre.filled > code {
   color: #000;
 }
 /*
-* Meshki v0.5.1
+* Meshki v0.5.2
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -256,7 +256,7 @@ footer .row {
   }
 }
 /*
-* Meshki v0.5.1
+* Meshki v0.5.2
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -433,7 +433,7 @@ input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label
   outline: none !important;
 }
 /*
-* Meshki v0.5.1
+* Meshki v0.5.2
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -504,7 +504,7 @@ input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label
   .six.columns                    { width: 48%;            }
   .seven.columns                  { width: 56.6666666667%; }
   .eight.columns                  { width: 65.3333333333%; }
-  .nine.columns                   { width: 74.0%;          }
+  .nine.columns                   { width: 74%;            }
   .ten.columns                    { width: 82.6666666667%; }
   .eleven.columns                 { width: 91.3333333333%; }
   /* Fill the row, with no margin on the left */
@@ -553,7 +553,7 @@ input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label
   .offset-by-one-half.columns     { margin-left: 52%; }
 }
 /*
-* Meshki v0.5.1
+* Meshki v0.5.2
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -587,11 +587,66 @@ li {
   margin-bottom: 1rem;
 }
 /*
-* Meshki v0.5.1
+* Meshki v0.5.2
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
+*/
+
+/* Info
+--------------------------------------------------
+  Meshki has some default properties, like default text colors and the specific black
+color of the background. All these properties are set here to help the developer
+create a more consistent add-on components that can match the default properties of
+Meshki. Since CSS does not support variables like Sass and LESS, I am
+providing you the values here directly. Here you go:
+
+- $default-font-family:              'Ubuntu';
+- $default-font-weight:              400;
+- $container-max-width:              960px;
+- $container-width-mobile:           100%;
+- $container-width-phablet:          85%;
+- $container-width-tablet:           80%;
+
+- $media-mobile:                     400px;
+- $media-phablet:                    544px;
+- $media-tablet:                     768px;
+- $media-desktop:                    992px;
+- $media-desktop-hd:                 1200px;
+
+- $background-color:                 #222;
+- $text-color:                       #E1E1E1;
+- $default-white-color:              $text-color;
+- $button-simple-color:              $text-color;
+- $button-default-color:             #55ACEE;
+- $button-success-color:             #2ECC71;
+- $button-danger-color:              #E74C3C;
+- $button-warning-color:             #E67E22;
+- $link-default-color:               $button-default-color;
+- $link-hover-color:                 #74C1FB;
+
+- $button-small-size:                1.2rem;
+- $button-medium-size:               1.6rem;
+- $button-large-size:                2.2rem;
+
+- $sidenav-width:                    250px;
+- $sidenav-animation-duration:       0.5s;
+
+- $other-animation-duration:         0.3s;
+
+- $one-column-width:                 4.66666666667%;
+- $two-columns-width:                13.3333333333%;
+- $three-columns-width:              22%;
+- $four-columns-width:               30.6666666667%;
+- $five-columns-width:               39.3333333333%;
+- $six-columns-width:                48%;
+- $seven-columns-width:              56.6666666667%;
+- $eight-columns-width:              65.3333333333%;
+- $nine-columns-width:               74%;
+- $ten-columns-width:                82.6666666667%;
+- $eleven-columns-width:             91.3333333333%;
+- $twelve-columns-width:             100%;
 */
 
 /* Table of contents
@@ -609,8 +664,8 @@ li {
 
 /* Default font face for Meshki */
 @font-face {
-  font-family: 'Ubuntu';
-  src: url('fonts/Ubuntu-Regular.ttf');
+  font-family: "Ubuntu";
+  src: url("fonts/Ubuntu-Regular.ttf");
 }
 
 /* NOTE
@@ -629,7 +684,7 @@ body {
   font-weight: 400;
   font-family: "Ubuntu", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #222;
-  color: #E0E0E0;
+  color: #E1E1E1;
 }
 
 
@@ -718,7 +773,7 @@ compatibility reasons.
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
 /*
-* Meshki v0.5.1
+* Meshki v0.5.2
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -836,18 +891,26 @@ ul.nav .nav-dropdown-content {
     visibility: visible;
     opacity: 1;
 }
-/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
 
 /**
  * 1. Change the default font family in all browsers (opinionated).
- * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
+
+/* Document
+   ========================================================================== */
 
 html {
   font-family: sans-serif; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  line-height: 1.15; /* 2 */
+  -ms-text-size-adjust: 100%; /* 3 */
+  -webkit-text-size-adjust: 100%; /* 3 */
 }
+
+/* Sections
+   ========================================================================== */
 
 /**
  * Remove the margin in all browsers (opinionated).
@@ -857,69 +920,73 @@ body {
   margin: 0;
 }
 
-/* HTML5 display definitions
-   ========================================================================== */
-
 /**
  * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
- * 2. Add the correct display in IE.
  */
 
 article,
 aside,
-details, /* 1 */
-figcaption,
-figure,
 footer,
 header,
-main, /* 2 */
-menu,
 nav,
-section,
-summary { /* 1 */
+section {
   display: block;
 }
 
 /**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
  * Add the correct display in IE 9-.
- */
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-}
-
-/**
- * Add the correct display in iOS 4-7.
- */
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-
-progress {
-  vertical-align: baseline;
-}
-
-/**
- * Add the correct display in IE 10-.
  * 1. Add the correct display in IE.
  */
 
-template, /* 1 */
-[hidden] {
-  display: none;
+figcaption,
+figure,
+main { /* 1 */
+  display: block;
 }
 
-/* Links
+/**
+ * Add the correct margin in IE 8.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
    ========================================================================== */
 
 /**
@@ -941,9 +1008,6 @@ a:active,
 a:hover {
   outline-width: 0;
 }
-
-/* Text-level semantics
-   ========================================================================== */
 
 /**
  * 1. Remove the bottom border in Firefox 39-.
@@ -975,21 +1039,23 @@ strong {
 }
 
 /**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
  * Add the correct font style in Android 4.3-.
  */
 
 dfn {
   font-style: italic;
-}
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
 }
 
 /**
@@ -1034,6 +1100,24 @@ sup {
    ========================================================================== */
 
 /**
+ * Add the correct display in IE 9-.
+ */
+
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
  * Remove the border on images inside links in IE 10-.
  */
 
@@ -1049,63 +1133,23 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-/* Grouping content
-   ========================================================================== */
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-/**
- * Add the correct margin in IE 8.
- */
-
-figure {
-  margin: 1em 40px;
-}
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-
-hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
-}
-
 /* Forms
    ========================================================================== */
 
 /**
- * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 1. Change the font styles in all browsers (opinionated).
  * 2. Remove the margin in Firefox and Safari.
  */
 
 button,
 input,
+optgroup,
 select,
 textarea {
-  font: inherit; /* 1 */
+  font-family: sans-serif; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
-}
-
-/**
- * Restore the font weight unset by the previous rule.
- */
-
-optgroup {
-  font-weight: bold;
 }
 
 /**
@@ -1191,6 +1235,16 @@ legend {
 }
 
 /**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
  * Remove the default vertical scrollbar in IE.
  */
 
@@ -1238,15 +1292,6 @@ textarea {
 }
 
 /**
- * Correct the text style of placeholders in Chrome, Edge, and Safari.
- */
-
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54;
-}
-
-/**
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
@@ -1255,8 +1300,59 @@ textarea {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
+
+/* Interactive
+   ========================================================================== */
+
 /*
-* Meshki v0.5.1
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+
+details, /* 1 */
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10-.
+ */
+
+[hidden] {
+  display: none;
+}
+/*
+* Meshki v0.5.2
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -1326,7 +1422,7 @@ textarea {
 
 /* Pushes the content div with effect */
 .content {
-  transition: margin-left .5s;
+  transition: margin-left .5s, opacity .5s;
 }
 
 /* Change the style of the sidenav for non-mobiles */
@@ -1340,7 +1436,7 @@ textarea {
   }
 }
 /*
-* Meshki v0.5.1
+* Meshki v0.5.2
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -1395,7 +1491,7 @@ table.hover > tbody tr:hover {
   background-color: #404040;
 }
 /*
-* Meshki v0.5.1
+* Meshki v0.5.2
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -1432,7 +1528,7 @@ p {
   margin-top: 0;
 }
 /*
-* Meshki v0.5.1
+* Meshki v0.5.2
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.

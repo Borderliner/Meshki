@@ -1,9 +1,64 @@
 /*
-* Meshki v0.5.1
+* Meshki v0.5.2
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
+*/
+
+/* Info
+--------------------------------------------------
+  Meshki has some default properties, like default text colors and the specific black
+color of the background. All these properties are set here to help the developer
+create a more consistent add-on components that can match the default properties of
+Meshki. Since CSS does not support variables like Sass and LESS, I am
+providing you the values here directly. Here you go:
+
+- $default-font-family:              'Ubuntu';
+- $default-font-weight:              400;
+- $container-max-width:              960px;
+- $container-width-mobile:           100%;
+- $container-width-phablet:          85%;
+- $container-width-tablet:           80%;
+
+- $media-mobile:                     400px;
+- $media-phablet:                    544px;
+- $media-tablet:                     768px;
+- $media-desktop:                    992px;
+- $media-desktop-hd:                 1200px;
+
+- $background-color:                 #222;
+- $text-color:                       #E1E1E1;
+- $default-white-color:              $text-color;
+- $button-simple-color:              $text-color;
+- $button-default-color:             #55ACEE;
+- $button-success-color:             #2ECC71;
+- $button-danger-color:              #E74C3C;
+- $button-warning-color:             #E67E22;
+- $link-default-color:               $button-default-color;
+- $link-hover-color:                 #74C1FB;
+
+- $button-small-size:                1.2rem;
+- $button-medium-size:               1.6rem;
+- $button-large-size:                2.2rem;
+
+- $sidenav-width:                    250px;
+- $sidenav-animation-duration:       0.5s;
+
+- $other-animation-duration:         0.3s;
+
+- $one-column-width:                 4.66666666667%;
+- $two-columns-width:                13.3333333333%;
+- $three-columns-width:              22%;
+- $four-columns-width:               30.6666666667%;
+- $five-columns-width:               39.3333333333%;
+- $six-columns-width:                48%;
+- $seven-columns-width:              56.6666666667%;
+- $eight-columns-width:              65.3333333333%;
+- $nine-columns-width:               74%;
+- $ten-columns-width:                82.6666666667%;
+- $eleven-columns-width:             91.3333333333%;
+- $twelve-columns-width:             100%;
 */
 
 /* Table of contents
@@ -21,8 +76,8 @@
 
 /* Default font face for Meshki */
 @font-face {
-  font-family: 'Ubuntu';
-  src: url('fonts/Ubuntu-Regular.ttf');
+  font-family: "Ubuntu";
+  src: url("fonts/Ubuntu-Regular.ttf");
 }
 
 /* NOTE
@@ -41,7 +96,7 @@ body {
   font-weight: 400;
   font-family: "Ubuntu", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #222;
-  color: #E0E0E0;
+  color: #E1E1E1;
 }
 
 

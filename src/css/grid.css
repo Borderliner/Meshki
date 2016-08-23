@@ -1,5 +1,5 @@
 /*
-* Meshki v0.5.1
+* Meshki v0.5.2
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -70,7 +70,7 @@
   .six.columns                    { width: 48%;            }
   .seven.columns                  { width: 56.6666666667%; }
   .eight.columns                  { width: 65.3333333333%; }
-  .nine.columns                   { width: 74.0%;          }
+  .nine.columns                   { width: 74%;            }
   .ten.columns                    { width: 82.6666666667%; }
   .eleven.columns                 { width: 91.3333333333%; }
   /* Fill the row, with no margin on the left */
