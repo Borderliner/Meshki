@@ -1,4 +1,4 @@
-## v1.2:
+## v1.2.0:
   - [x] Added fixed navbar again, works completely
   - [x] Improve the documents
   - [x] Change main font to "Open Sans"

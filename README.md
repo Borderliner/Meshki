@@ -12,7 +12,7 @@ Check out <http://meshki.borderliner.ir/> for samples and details.
 ## Getting started
 
 There are a couple ways to download Meshki:
-- [Download the zip](https://github.com/Borderliner/Meshki/archive/v0.5.2.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v0.5.2.tar.gz)
+- [Download the zip](https://github.com/Borderliner/Meshki/archive/v1.2.0.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v1.2.0.tar.gz)
 - Clone the repo: `git clone https://github.com/Borderliner/Meshki.git` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download)<br>
 You can also download it via `bower install meshki --save`
 
@@ -22,7 +22,7 @@ You need node.js to minify the source CSS and JavaScript files and produce outpu
 `npm install -g grunt-cli`<br>
 You may need to access root user to install node packages globally.
 
-Then `cd` into the root folder of the project, and run the command `npm run compile`. This will produce files for you in the `dist` folder, which includes both minified and normal versions of Meshki, plus a fonts folder which includes Ubuntu Regular font.
+Then `cd` into the root folder of the project, and run the command `npm run compile`. This will produce files for you in the `dist` folder, which includes both minified and normal versions of Meshki, plus a fonts folder which includes Open Sans Regular font.
 
 ### What's in the download?
 
@@ -32,7 +32,7 @@ The download includes Meshki's CSS, Meshki's JavaScript, Normalize CSS as a rese
 Meshki/
 ├── dist/
 │   ├── fonts/
-│   │   └── Ubuntu-Regular.ttf
+│   │   └── OpenSans-Regular.ttf
 │   ├── meshki.css
 │   ├── meshki.min.css
 │   ├── meshki.js
@@ -72,7 +72,7 @@ Meshki is lightweight, stylish and simple. It styles only raw HTML elements (wit
 The above list is non-exhaustive. Meshki works perfectly with almost all older versions of the browsers above, though IE certainly has large degradation prior to IE 9.
 
 ## Major Known Issues
-- Fixed navbar was a plague and the source of many buyg, and was removed in v0.5.1. Should find a way to bring it back properly.
+- I once saw very bad rendering on a low resolution laptop. It's probably nothing I can do about. Report any issues with bad font rendering. I recently changed it to Open Sans, which is very clean and well-tested.
 
 ## License
 
