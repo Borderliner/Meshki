@@ -1,6 +1,11 @@
-i.fa {
+.meshki-features i.fa {
   font-size: 5rem;
   margin-bottom: 20px;
+}
+
+.logo i.fa {
+  font-size: 2rem;
+  padding-right: 8px;
 }
 
 div.share-links {
