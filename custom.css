@@ -22,7 +22,8 @@ div.share-links i.fa {
 }
 
 .title {
-  font-size: 7rem;
+    font-size: 12vmax;
+    padding-bottom: 10px;
 }
 
 .column, .columns {
@@ -34,7 +35,7 @@ a {
 }
 
 .container {
-  padding-top: 100px;
+  padding-top: 160px;
 }
 
 .grid-table div div {

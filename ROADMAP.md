@@ -2,6 +2,7 @@
   - [x] Added fixed navbar again, works completely
   - [x] Improve the documents
   - [x] Change main font to "Open Sans"
+  - [x] New modern front page
 
 ## v0.5.2:
   - [x] Add overlay to sidenav
