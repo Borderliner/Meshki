@@ -10,7 +10,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* General attributes */
-ul.nav {
+.nav ul {
   width: 100%;
   background-color: #222;
   border-bottom: 2px solid #E1E1E1;
@@ -21,14 +21,21 @@ ul.nav {
   z-index: 1;
 }
 
+/* Fixed Navbar properties */
+.nav.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
 /* Elements in the navbar start from the left side */
-ul.nav li {
+.nav ul li {
   float: left;
   margin-bottom: 0px;
 }
 
 /* Anchors inside lists' attributes */
-ul.nav li > a {
+.nav ul li > a {
   display: inline-block;
   color: #E1E1E1;
   padding: 14px 16px;
@@ -38,18 +45,18 @@ ul.nav li > a {
 }
 
 /* Active navbar button */
-ul.nav li > a.active {
+.nav ul li > a.active {
   background-color: #111;
 }
 
 /* Logo of the website, it must be the first child of navbar*/
-ul.nav li:first-child a.logo {
+.nav ul li:first-child a.logo {
   background-color: #E1E1E1;
   color: black;
 }
 
 /* Lighten the logo when the mouse is over it */
-ul.nav li:first-child a.logo:hover {
+.nav ul li:first-child a.logo:hover {
   background-color: #EAEAEA;
   color: black;
 }
@@ -58,20 +65,20 @@ ul.nav li:first-child a.logo:hover {
  * Change the link color to #111 (black) on hover
  * Only direct children are affected, which means it excludes dropdowns
  */
-ul.nav li > a:hover {
+.nav ul li > a:hover {
   background-color: #111;
 }
 
 /* Send the elements to the right side with nav-right */
-ul.nav li.nav-right {
+.nav ul li.nav-right {
   position: relative;
   top: 7px;
   right: 16px;
   float: right !important;
 }
 
-ul.nav a.button,
-ul.nav button {
+.nav ul a.button,
+.nav ul button {
   margin: 0px 5px 0px 5px !important;
 }
 
@@ -81,7 +88,7 @@ li.nav-dropdown {
 }
 
 /* Dropdown content attributes */
-ul.nav .nav-dropdown-content {
+.nav ul .nav-dropdown-content {
   display: block;
   visibility: hidden;
   opacity: 0;

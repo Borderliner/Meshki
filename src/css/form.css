@@ -97,7 +97,7 @@ select:focus {
 /* Label and Legend normalization */
 label,
 legend {
-  font-weight: 600;
+  font-weight: normal;
   display: block;
   margin-bottom: .5rem;
 }

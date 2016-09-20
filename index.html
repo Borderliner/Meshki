@@ -54,9 +54,9 @@
     </div>
   </div>
   <div class="content">
-    <div>
-      <ul class="nav">
-        <li><a class="logo" href="javascript:void(0);" onclick="meshki.openNav()">Meshki</a></li>
+    <div class="nav fixed">
+      <ul>
+        <li><a class="logo" href="javascript:void(0);" onclick="meshki.openNav()"><i class="fa fa-bars" aria-hidden="true"></i>Meshki</a></li>
         <li><a href="https://github.com/Borderliner/Meshki/releases">News</a></li>
         <li><a href="https://github.com/Borderliner/Meshki">GitHub</a></li>
         <li class="nav-dropdown hide-on-mobile">
@@ -73,8 +73,8 @@
           </div>
         </li>
         <li class="nav-right hide-on-tablet"><input type="text" name="" placeholder="Search..."></li>
-        <li class="nav-right hide-on-tablet"><button class="success">GO!</button></li>
-        <li class="nav-right hide-on-tablet"><iframe src="https://ghbtns.com/github-btn.html?user=borderliner&repo=meshki&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe></li>
+        <li class="nav-right hide-on-tablet"><button class="success"><i class="fa fa-search" aria-hidden="true"></i></button></li>
+        <li class="nav-right hide-on-tablet"><iframe src="https://ghbtns.com/github-btn.html?user=borderliner&repo=meshki&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px" style="margin-top:3px;position:relative;left:20px;opacity:0.95;"></iframe></li>
       </ul>
     </div>
     <div class="container">
@@ -83,25 +83,25 @@
         <h2 class="text-center">Stylish. Black. Responsive.</h2>
       </div>
 
-      <div class="row text-center">
-        <a class="button large default custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v0.5.2.zip">Download Meshki (v0.5.2)</a><br>Or<br>
+      <div class="row text-center" style="margin-bottom: 175px;margin-top: 20px;">
+        <a class="button large default custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.2.0.zip">Download Meshki (v1.2.0)</a><br>Or<br>
         <a class="button large danger custom-down-cdn" href="javascript:void(0)" onclick="document.getElementById('cdn').style.display = 'block';">Use CDN</a><br>
         <pre id="cdn">
           <code>
-https://cdnjs.cloudflare.com/ajax/libs/meshki/0.5.2/meshki.min.css
-https://cdnjs.cloudflare.com/ajax/libs/meshki/0.5.2/meshki.min.js
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.css
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.js
           </code>
         </pre>
       </div><br>
     
-      <div class="row">
+      <div class="row meshki-features">
         <div class="four columns text-center">
           <i class="fa fa-clock-o" aria-hidden="true"></i><br>
-          <span>Design your whole UI in absolutely no time. We have done our best to keep Meshki stupidly simple and clean.</span>
+          <span>Design your whole UI in absolutely no time. We have done our best to keep Meshki stupidly simple and clean, and bring you an up-to-date document for your convenience.</span>
         </div>
         <div class="four columns text-center">
-          <i class="fa fa-smile-o" aria-hidden="true"></i><br>
-          <span>Code while smiling. Meshki is easy to use and edit. Just grab a text editor and start building your web pages in total elegance.</span>
+          <i class="fa fa-eye" aria-hidden="true"></i><br>
+          <span>We care for your eyes! Making use of a pleasant dark color, your eyes will feel at ease when reading pages that use Meshki. This is very important in web pages with plenty of textual contents.</span>
         </div>
         <div class="four columns text-center">
           <i class="fa fa-rocket" aria-hidden="true"></i><br>
@@ -235,12 +235,12 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/0.5.2/meshki.min.js
         <h4>Navbar</h4>
         <hr>
         <p>
-          Meshki comes with a beautiful navbar built-in. At the beginning of the <code>content</code> div, create an empty div, and then create a <code>&lt;ul class="nav"></code> inside that. Now any <code>&lt;li>&lt;a href="#">Link&lt;/a>&lt;/li></code> will appear as a button in the navbar. You can also add the <code>fixed</code> class to make the navbar fixed.
+          Meshki comes with a beautiful navbar built-in. At the beginning of the <code>div.content</code>, create a <code>&lt;div class="nav"></code>, and then create a <code>&lt;ul></code> inside that. Now any <code>&lt;li>&lt;a href="#">Link&lt;/a>&lt;/li></code> inside the "ul" will appear as a button in the navbar. You can also add the <code>fixed</code> class to the <code>div.nav</code> to make the navbar fixed.
         </p>
         <pre>
           <code>
-    &lt;div>
-      &lt;ul class="nav fixed">
+    &lt;div class="nav fixed">
+      &lt;ul>
         &lt;!-- Note that javascript:void(0) stops your page from jumping to the top -->
         &lt;li>&lt;a class="logo" href="javascript:void(0)" onclick="meshki.openNav()">Meshki&lt;/a>&lt;/li>
         &lt;li>&lt;a href="https://github.com/Borderliner/Meshki/releases">News&lt;/a>&lt;/li>
@@ -517,7 +517,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/0.5.2/meshki.min.js
       </div>
       <div class="row">
         <div class="six columns">
-          The typography base is <a href="https://fonts.google.com/specimen/Ubuntu">Ubuntu</a> font, which is served locally, set at 15rem (15px) over a 1.6 line height (24px). Other type basics like <a href="#">anchors</a>, <b>strong</b>, <i>emphasis</i>, and <u>underline</u> are all obviously included.
+          The typography base is <a href="https://fonts.google.com/specimen/Open+Sans">Open Sans</a> font, which is served locally, set at 15rem (15px) over a 1.6 line height (24px). Other type basics like <a href="#">anchors</a>, <b>strong</b>, <i>emphasis</i>, and <u>underline</u> are all obviously included.
         </div>
         <div class="six columns">
           <h1>Heading <span class="heading-font-size"><code>&lt;h1></code> 50rem</span></h1>
@@ -763,7 +763,6 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/0.5.2/meshki.min.js
         <p>
           This website uses the awesome "<a href="http://fontawesome.io/" target="_blank">font-awesome</a>" to display icons and such. It is by far the best font icon set I've ever encountered. Make sure to check out their website.
         </p>
-        <iframe src="https://ghbtns.com/github-btn.html?user=Borderliner&repo=Meshki&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
       </div>
     </div>
     <footer class="compact">

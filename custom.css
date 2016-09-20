@@ -1,6 +1,14 @@
-i.fa {
+.meshki-features i.fa {
   font-size: 5rem;
   margin-bottom: 20px;
+}
+
+.nav i.fa {
+  font-size: 1.8rem;
+}
+
+.logo i.fa {
+  padding-right: 8px;
 }
 
 div.share-links {
@@ -14,7 +22,8 @@ div.share-links i.fa {
 }
 
 .title {
-  font-size: 7rem;
+    font-size: 12vmax;
+    padding-bottom: 10px;
 }
 
 .column, .columns {
@@ -26,7 +35,7 @@ a {
 }
 
 .container {
-  padding-top: 25px;
+  padding-top: 160px;
 }
 
 .grid-table div div {

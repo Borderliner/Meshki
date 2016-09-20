@@ -1,5 +1,8 @@
-## v0.6.0:
-  - [ ] Add simple Modals
+## v1.2.0:
+  - [x] Added fixed navbar again, works completely
+  - [x] Improve the documents
+  - [x] Change main font to "Open Sans"
+  - [x] New modern front page
 
 ## v0.5.2:
   - [x] Add overlay to sidenav
