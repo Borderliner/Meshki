@@ -3,8 +3,11 @@
   margin-bottom: 20px;
 }
 
+.nav i.fa {
+  font-size: 1.8rem;
+}
+
 .logo i.fa {
-  font-size: 2rem;
   padding-right: 8px;
 }
 
