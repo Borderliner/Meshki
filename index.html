@@ -54,8 +54,8 @@
     </div>
   </div>
   <div class="content">
-    <div>
-      <ul class="nav">
+    <div class="nav fixed">
+      <ul>
         <li><a class="logo" href="javascript:void(0);" onclick="meshki.openNav()"><i class="fa fa-bars" aria-hidden="true"></i>Meshki</a></li>
         <li><a href="https://github.com/Borderliner/Meshki/releases">News</a></li>
         <li><a href="https://github.com/Borderliner/Meshki">GitHub</a></li>
@@ -235,12 +235,12 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/0.5.2/meshki.min.js
         <h4>Navbar</h4>
         <hr>
         <p>
-          Meshki comes with a beautiful navbar built-in. At the beginning of the <code>content</code> div, create an empty div, and then create a <code>&lt;ul class="nav"></code> inside that. Now any <code>&lt;li>&lt;a href="#">Link&lt;/a>&lt;/li></code> will appear as a button in the navbar. You can also add the <code>fixed</code> class to make the navbar fixed.
+          Meshki comes with a beautiful navbar built-in. At the beginning of the <code>div.content</code>, create a <code>&lt;div class="nav"></code>, and then create a <code>&lt;ul></code> inside that. Now any <code>&lt;li>&lt;a href="#">Link&lt;/a>&lt;/li></code> inside the "ul" will appear as a button in the navbar. You can also add the <code>fixed</code> class to the <code>div.nav</code> to make the navbar fixed.
         </p>
         <pre>
           <code>
-    &lt;div>
-      &lt;ul class="nav fixed">
+    &lt;div class="nav fixed">
+      &lt;ul>
         &lt;!-- Note that javascript:void(0) stops your page from jumping to the top -->
         &lt;li>&lt;a class="logo" href="javascript:void(0)" onclick="meshki.openNav()">Meshki&lt;/a>&lt;/li>
         &lt;li>&lt;a href="https://github.com/Borderliner/Meshki/releases">News&lt;/a>&lt;/li>
