@@ -76,8 +76,8 @@ providing you the values here directly. Here you go:
 
 /* Default font face for Meshki */
 @font-face {
-  font-family: "Ubuntu";
-  src: url("fonts/Ubuntu-Regular.ttf");
+  font-family: "Open Sans";
+  src: url("fonts/OpenSans-Regular.ttf");
 }
 
 /* NOTE
@@ -94,7 +94,7 @@ body {
   height: 100%;
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Ubuntu", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #222;
   color: #E1E1E1;
 }
