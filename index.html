@@ -83,9 +83,12 @@
         <h2 class="text-center">Stylish. Black. Responsive.</h2>
       </div>
 
-      <div class="row text-center" style="margin-bottom: 250px;margin-top: 20px;">
-        <a class="button large default custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.2.0.zip">Download Meshki (v1.2.0)</a><br>Or<br>
-        <a class="button large danger custom-down-cdn" href="javascript:void(0)" onclick="var cdn=document.getElementById('cdn');cdn.style.display=='none'?cdn.style.display='block':cdn.style.display='none';">Use CDN</a><br>
+      <div class="row text-center" style="margin-bottom: 250px;margin-top: 50px;">
+        <div class="button-couple">
+          <a class="button default large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.2.0.zip">Download (v1.2.0)</a>
+          <a class="button large" disabled>or</a>
+          <a class="button danger large custom-down-cdn" href="javascript:void(0)" onclick="var cdn=document.getElementById('cdn');cdn.style.display=='none'?cdn.style.display='block':cdn.style.display='none';">Use CDN</a>
+        </div><br>
         <pre id="cdn" style="display: none;">
           <code>
 https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.css
@@ -188,6 +191,12 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.js
           <input type="submit" class="success large" value="Success" />
           <input type="reset" class="danger medium" value="Danger" />
           <input type="button" class="warning small" value="Warning" />
+          <br><br><br>
+          <div class="button-couple">
+            <button class="default medium">Agree</button>
+            <button class="medium">or</button>
+            <button class="danger medium">Disagree</button>
+          </div>
           <br><br>
           <button class="default expand small">Small Expanded Button</button>
           <button class="danger expand medium">Medium Expanded Button</button>
@@ -202,6 +211,12 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.js
     &lt;input type="submit" class="success large" value="Success" /&gt;
     &lt;input type="reset" class="danger medium" value="Danger" /&gt;
     &lt;input type="button" class="warning small" value="Warning" /&gt;
+
+    &lt;div class="button-couple">
+      &lt;button class="default">Agree&lt;/button>
+      &lt;button>or&lt;/button>
+      &lt;button class="danger">Disagree&lt;/button>
+    &lt;/div>
 
     &lt;button class="expand large"&gt;Large Expanded Button&lt;/button&gt;<div id="sidenav-doc"></div>
             </code>
