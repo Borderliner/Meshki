@@ -154,3 +154,39 @@ input[type="button"].warning:hover {
   background-color: #e67e22;
   color: #fff;
 }
+
+.button-double button:not(:first-child):not(:last-child),
+.button-double a:not(:first-child):not(:last-child) {
+  pointer-events: none;
+  border-style: none;
+  border-radius: 0;
+  display: block;
+  margin: -4px !important;
+}
+
+@media (min-width: 768px) {
+  .button-double button:first-child,
+  .button-double a:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: 0 !important;
+  }
+
+  .button-double button:not(:first-child):not(:last-child),
+  .button-double a:not(:first-child):not(:last-child) {
+    pointer-events: none;
+    border-style: solid;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    display: inline;
+    margin: -4px !important;
+  }
+
+  .button-double button:last-child,
+  .button-double a:last-child {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    margin-left: 0 !important;
+  }
+}

@@ -3,8 +3,8 @@
   - [x] Add heart animation to the documents
   - [x] Document improvement and typo fixes
   - [x] Remove unused Ubuntu font
-  - [ ] Add striped table toggle button
-  - [ ] Add a double-button (X or Y)
+  - [x] Add striped table toggle button
+  - [x] Add a double-button (X or Y)
   - [x] Add Grunt Watch to compile on file change
   - [x] Add Vertical Line element
 
