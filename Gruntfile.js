@@ -2,14 +2,8 @@ module.exports = function(grunt){
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
-      css: {
-        files: ['src/css/*.css'],
-        tasks: ['cssmin', 'copy', 'concat_css']
-      },
-      js: {
-        files: ['src/js/*.js'],
-        tasks: ['uglify', 'copy']
-      }
+      files: ['src/**/*.*'],
+      tasks: ['default']
     },
 		cssmin: {
 			options: {
