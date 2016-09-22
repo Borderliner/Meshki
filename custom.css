@@ -64,16 +64,8 @@ a {
 
 .custom-love {
   font-size: 1.7rem !important;
-  color: #E74C3C;
-  transition: color 0.3s;
-}
-
-.custom-love:hover {
-  color: #D01129;
-}
-
-.custom-love:active {
-  color: #80180D;
+  color: red;
+  animation: heart-beat 1s infinite;
 }
 
 .custom-down-cdn {
@@ -85,4 +77,9 @@ a {
   .custom-text-right {
     text-align: right;
   }
+}
+
+@keyframes heart-beat {
+  0%   { opacity: 1; }
+  100% { opacity: .5; }
 }
