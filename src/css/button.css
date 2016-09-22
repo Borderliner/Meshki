@@ -155,8 +155,8 @@ input[type="button"].warning:hover {
   color: #fff;
 }
 
-.button-double button:not(:first-child):not(:last-child),
-.button-double a:not(:first-child):not(:last-child) {
+.button-couple button:not(:first-child):not(:last-child),
+.button-couple a:not(:first-child):not(:last-child) {
   pointer-events: none;
   border-style: none;
   border-radius: 0;
@@ -165,15 +165,15 @@ input[type="button"].warning:hover {
 }
 
 @media (min-width: 768px) {
-  .button-double button:first-child,
-  .button-double a:first-child {
+  .button-couple button:first-child,
+  .button-couple a:first-child {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     margin-right: 0 !important;
   }
 
-  .button-double button:not(:first-child):not(:last-child),
-  .button-double a:not(:first-child):not(:last-child) {
+  .button-couple button:not(:first-child):not(:last-child),
+  .button-couple a:not(:first-child):not(:last-child) {
     pointer-events: none;
     border-style: solid;
     border-right: 0;
@@ -183,8 +183,8 @@ input[type="button"].warning:hover {
     margin: -4px !important;
   }
 
-  .button-double button:last-child,
-  .button-double a:last-child {
+  .button-couple button:last-child,
+  .button-couple a:last-child {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     margin-left: 0 !important;
