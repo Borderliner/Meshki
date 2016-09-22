@@ -41,6 +41,11 @@
   text-align: center;
 }
 
+/* Vertical line */
+.vertical-line {
+  border-left: 1px solid #E1E1E1;
+}
+
 /* Hides the element on mobiles and phablets */
 @media (max-width: 544px) {
   .hide-on-mobile {

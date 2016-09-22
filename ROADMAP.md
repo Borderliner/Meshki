@@ -7,6 +7,7 @@
   - [ ] Add striped table toggle button
   - [ ] Add a double-button (X or Y)
   - [x] Add Grunt Watch to compile on file change
+  - [x] Add Vertical Line element
 
 ## v1.2.0:
   - [x] Added fixed navbar again, works completely
