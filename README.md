@@ -6,13 +6,13 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/meshki_ui.svg?style=social&label=Follow&maxAge=2592000?style=flat-square)](https://twitter.com/Meshki_UI)
 
 Meshki is a simple, black-colored, responsive boilerplate to kickstart any responsive project.<br>
-It is only <b>~14 KiB</b> (minified) and ~35 KiB (normal), including both CSS and JS files.<br>
+It is only <b>~15 KiB</b> (minified) and ~36 KiB (normal), including both CSS and JS files.<br>
 Check out <http://meshki.borderliner.ir/> for samples and details.
 
 ## Getting started
 
 There are a couple ways to download Meshki:
-- [Download the zip](https://github.com/Borderliner/Meshki/archive/v1.2.0.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v1.2.0.tar.gz)
+- [Download the zip](https://github.com/Borderliner/Meshki/archive/v1.2.1.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v1.2.1.tar.gz)
 - Clone the repo: `git clone https://github.com/Borderliner/Meshki.git` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download)<br>
 You can also download it via `bower install meshki --save`
 
@@ -22,7 +22,7 @@ You need node.js to minify the source CSS and JavaScript files and produce outpu
 `npm install -g grunt-cli`<br>
 You may need to access root user to install node packages globally.
 
-Then `cd` into the root folder of the project, and run the command `npm run compile`. This will produce files for you in the `dist` folder, which includes both minified and normal versions of Meshki, plus a fonts folder which includes Open Sans Regular font.
+Then `cd` into the root folder of the project, and run the command `npm run compile`. This will produce files for you in the `dist` folder, which includes both minified and normal versions of Meshki, plus a fonts folder which includes Open Sans Regular font. You can also run `npm run watch` to watch source files for change, and compile them automatically if there has been a change recently.
 
 ### What's in the download?
 
@@ -43,10 +43,12 @@ Meshki/
 │   │   ├── meshki.css
 │   │   └── *.css
 │   ├── fonts/
+│   │   └── OpenSans-Regular.ttf
 │   ├── images/
 │   │   └── favicon.ico
 │   └── js/
-└──
+│       └── meshki.js
+└
 
 ```
 

@@ -23,6 +23,20 @@
   transition: 0.5s;
 }
 
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: inline;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  transition: opacity .5s, visibility .5s;
+}
+
 /* The navigation menu's links */
 .sidenav a {
   display: block;
@@ -69,7 +83,7 @@
 
 /* Pushes the content div with effect */
 .content {
-  transition: margin-left .5s, opacity .5s;
+  transition: margin-left .5s;
 }
 
 /* Change the style of the sidenav for non-mobiles */

@@ -1,6 +1,10 @@
 module.exports = function(grunt){
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		watch: {
+      files: ['src/**/*.*'],
+      tasks: ['default']
+    },
 		cssmin: {
 			options: {
 				shorthandCompacting: false,
@@ -48,5 +52,6 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-concat-css');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.registerTask('default', ['cssmin', 'uglify', 'copy', 'concat_css']);
 };

@@ -35,7 +35,7 @@ a {
 }
 
 .container {
-  padding-top: 160px;
+  padding-top: 140px;
 }
 
 .grid-table div div {
@@ -54,35 +54,28 @@ a {
   vertical-align: middle;
 }
 
-.custom-text-right {
-  text-align: center;
-}
-
-#cdn {
-  display: none;
+.custom-textarea {
+  height: 200px;
 }
 
 .custom-love {
   font-size: 1.7rem !important;
-  color: #E74C3C;
-  transition: color 0.3s;
-}
-
-.custom-love:hover {
-  color: #D01129;
-}
-
-.custom-love:active {
-  color: #80180D;
+  color: red;
+  animation: heart-beat 1s infinite;
 }
 
 .custom-down-cdn {
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
 }
 
 @media (min-width: 544px) {
   .custom-text-right {
     text-align: right;
   }
+}
+
+@keyframes heart-beat {
+  0%   { opacity: 1; }
+  100% { opacity: .5; }
 }

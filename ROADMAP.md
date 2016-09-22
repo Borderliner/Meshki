@@ -1,3 +1,13 @@
+## v1.2.1
+  - [x] Add a better overlay for Sidenav
+  - [x] Add heart animation to the documents
+  - [x] Document improvement and typo fixes
+  - [x] Remove unused Ubuntu font
+  - [x] Add striped table toggle button
+  - [x] Add a double-button (X or Y)
+  - [x] Add Grunt Watch to compile on file change
+  - [x] Add Vertical Line element
+
 ## v1.2.0:
   - [x] Added fixed navbar again, works completely
   - [x] Improve the documents
@@ -40,3 +50,4 @@
   - [x] Append (Borderliner) to my real name as a copyright holder
   - [x] Code for buttons section in the document has extra useless line ends
   - [x] Try fixing several FIXME's inside the code
+ 

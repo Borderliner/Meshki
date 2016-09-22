@@ -17,7 +17,7 @@
   <meta name="twitter:description" content="Meshki: A Black-Colored, Responsive Boilerplate for UI Development">
   <meta name="twitter:image" content="meta-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="dist/meshki.css">
+  <link rel="stylesheet" type="text/css" href="dist/meshki.min.css">
   <link rel="stylesheet" type="text/css" href="custom.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <!--[if lt IE 9]>
@@ -83,18 +83,24 @@
         <h2 class="text-center">Stylish. Black. Responsive.</h2>
       </div>
 
-      <div class="row text-center" style="margin-bottom: 175px;margin-top: 20px;">
-        <a class="button large default custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.2.0.zip">Download Meshki (v1.2.0)</a><br>Or<br>
-        <a class="button large danger custom-down-cdn" href="javascript:void(0)" onclick="document.getElementById('cdn').style.display = 'block';">Use CDN</a><br>
-        <pre id="cdn">
+      <div class="row text-center" style="margin-bottom: 250px;margin-top: 50px;">
+        <div class="button-couple">
+          <a class="button default large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.2.1.zip">Download (v1.2.1)</a>
+          <a class="button large" disabled>or</a>
+          <a class="button danger large custom-down-cdn" href="javascript:void(0)" onclick="var cdn=document.getElementById('cdn');cdn.style.display=='none'?cdn.style.display='block':cdn.style.display='none';">Use CDN</a>
+        </div><br>
+        <pre id="cdn" style="display: none;">
           <code>
-https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.css
-https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.js
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.1/meshki.min.css
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.1/meshki.min.js
           </code>
         </pre>
       </div><br>
-    
-      <div class="row meshki-features">
+      
+      <hr />
+      <h3 class="text-center" style="margin-bottom: 50px;">Ice-Cool Features</h3>
+      <div class="row meshki-features" style="margin-bottom: 90px;">
+
         <div class="four columns text-center">
           <i class="fa fa-clock-o" aria-hidden="true"></i><br>
           <span>Design your whole UI in absolutely no time. We have done our best to keep Meshki stupidly simple and clean, and bring you an up-to-date document for your convenience.</span>
@@ -113,7 +119,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.js
         <h3>What is Meshki?</h3>
         <hr>
         <p>
-          Meshki is a simple, black-colored, responsive boilerplate to kickstart any responsive project. It is only ~14 KiB (minified) and ~35 KiB (normal), including both CSS and JS files, which makes it superb for small to medium projects. It's easy to use, clean and is just beautiful.
+          Meshki is a simple, black-colored, responsive boilerplate to kickstart any responsive project. It is only ~15 KiB (minified) and ~36 KiB (normal), including both CSS and JS files, which makes it superb for small to medium projects. It's easy to use, clean and is just beautiful.
           It started as a fork of <a href="http://getskeleton.com" target="_blank">Skeleton</a> project, and it still uses some of the codes of it, Meshki is considered to be a total overhaul of Skeleton and it barely resembles it when you take a look at it.
           Don't be afraid to have a look at Meshki's code! If you spot any bugs, or you want some improvements, head to <a href="https://github.com/Borderliner/Meshki" target="_blank">our GitHub repository</a> and open an issue or a pull request!
         </p>
@@ -177,7 +183,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.js
         <h4>Buttons</h4>
         <hr>
         <p>
-          You can create buttons easily with &lt;a&gt;, &lt;button&gt;, &lt;input type="submit"&gt;, &lt;input type="reset"&gt; and &lt;input type="button"&gt;. There are also five different types of buttons:
+          You can create buttons easily with <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;input type="submit"&gt;</code>, <code>&lt;input type="reset"&gt;</code> and <code>&lt;input type="button"&gt;</code>. There are also five different types of buttons:
         </p>
         <div class="centerize text-center">
           <a class="button small">Simple</a>
@@ -185,6 +191,12 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.js
           <input type="submit" class="success large" value="Success" />
           <input type="reset" class="danger medium" value="Danger" />
           <input type="button" class="warning small" value="Warning" />
+          <br><br><br>
+          <div class="button-couple">
+            <button class="default medium">Agree</button>
+            <button class="medium">or</button>
+            <button class="danger medium">Disagree</button>
+          </div>
           <br><br>
           <button class="default expand small">Small Expanded Button</button>
           <button class="danger expand medium">Medium Expanded Button</button>
@@ -199,6 +211,12 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.js
     &lt;input type="submit" class="success large" value="Success" /&gt;
     &lt;input type="reset" class="danger medium" value="Danger" /&gt;
     &lt;input type="button" class="warning small" value="Warning" /&gt;
+
+    &lt;div class="button-couple">
+      &lt;button class="default">Agree&lt;/button>
+      &lt;button>or&lt;/button>
+      &lt;button class="danger">Disagree&lt;/button>
+    &lt;/div>
 
     &lt;button class="expand large"&gt;Large Expanded Button&lt;/button&gt;<div id="sidenav-doc"></div>
             </code>
@@ -235,7 +253,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.js
         <h4>Navbar</h4>
         <hr>
         <p>
-          Meshki comes with a beautiful navbar built-in. At the beginning of the <code>div.content</code>, create a <code>&lt;div class="nav"></code>, and then create a <code>&lt;ul></code> inside that. Now any <code>&lt;li>&lt;a href="#">Link&lt;/a>&lt;/li></code> inside the "ul" will appear as a button in the navbar. You can also add the <code>fixed</code> class to the <code>div.nav</code> to make the navbar fixed.
+          Meshki comes with a beautiful navbar built-in. At the beginning of the <code>div.content</code>, create a <code>&lt;div class="nav"></code>, and then create a <code>&lt;ul></code> inside that. Now any <code>&lt;li>&lt;a href="#">Link&lt;/a>&lt;/li></code> inside the <code>&lt;ul></code> will appear as a button in the navbar. You can also add the <code>fixed</code> class to the <code>div.nav</code> to make the navbar fixed.
         </p>
         <pre>
           <code>
@@ -257,7 +275,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.js
         <hr>
         <p>
           The grid is a <u>12-column fluid grid with a max width of 960px</u>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. The syntax is simple and it makes coding responsive much easier. Go ahead, resize the browser.<br>
-          <u><b>Note</b>: The columns must be the first elements at the beginning of a "row". This is very important.</u>
+          <b>Note</b>: The columns must be the first elements at the beginning of a <code>row</code>. <u>This is very important.</u>
         </p>
       </div>
       
@@ -393,7 +411,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.js
       </div>
       <div class="row">
         <div class="twelve columns">
-          <textarea class="expand">This is a sample &lt;textarea&gt; element. You can also expand it!</textarea>
+          <textarea class="expand custom-textarea">This is a sample &lt;textarea&gt; element. The corners are round, and there's a glowing effect when you select an element. You can also expand it!</textarea>
         </div>
       </div>
       <div class="row">
@@ -435,6 +453,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.js
       <div class="row text-center">
         <button class="default expand">Submit</button>
       </div>
+      <br />
       <div class="row">
         <p>
           This is the code snippet on how you can use form elements:
@@ -512,12 +531,12 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.js
         <h4>Typography</h4>
         <hr>
         <p>
-          Type is all set with the <code>&lt;rems></code>, so font-sizes and spacial relationships can be responsively sized based on a single <code>&lt;html></code> font-size property. Out of the box, Meshki never changes the <code>&lt;html></code> font-size, but it's there in case you need it for your project. All measurements are still base 10 though so, an <code>&lt;h1></code> with <code>5.0rem</code> font-size just means <code>50px</code>.
+          Type is all set with the <code>rem</code>, so font-sizes and special relationships can be responsively sized based on a single <code>&lt;html></code> font-size property. Out of the box, Meshki never changes the <code>&lt;html></code> font-size, but it's there in case you need it for your project. All measurements are still base on 10 though, so a <code>&lt;h1></code> with <code>5.0rem</code> font-size just means <code>50px</code>.
         </p>
       </div>
       <div class="row">
         <div class="six columns">
-          The typography base is <a href="https://fonts.google.com/specimen/Open+Sans">Open Sans</a> font, which is served locally, set at 15rem (15px) over a 1.6 line height (24px). Other type basics like <a href="#">anchors</a>, <b>strong</b>, <i>emphasis</i>, and <u>underline</u> are all obviously included.
+          The typography base is <a href="https://fonts.google.com/specimen/Open+Sans">Open Sans</a> font, which is served locally, set at 15rem (15px) over a 1.6 line height (24px). Other type basics like <a href="javascript:void(0);">anchors</a>, <b>strong</b>, <i>emphasis</i>, and <u>underline</u> are all obviously included.
         </div>
         <div class="six columns">
           <h1>Heading <span class="heading-font-size"><code>&lt;h1></code> 50rem</span></h1>
@@ -582,7 +601,8 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.js
       </div>
       <div class="row">
         <div class="twelve columns">
-          <table class="expand hover">
+        Toggle: <button class="medium" onclick="var tbl=document.getElementById('table-example');tbl.classList.contains('striped')?(tbl.className='expand hover', this.innerHTML='Not Striped', this.className='medium'):(tbl.className='expand hover striped', this.innerHTML='Striped', this.className='medium default')">Not Striped</button>
+          <table class="expand hover" id="table-example">
             <thead>
               <tr>
                 <th>Name</th>
@@ -634,7 +654,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.js
         &lt;div class="six columns">
           &lt;p>Created by: Mohammad reza Hajianpour (Borderliner)&lt;/p>
         &lt;/div>
-        &lt;div class="six columns custom-text-right">
+        &lt;div class="six columns text-center">
           &lt;p>2016, Licensed under MIT&lt;/p>
         &lt;/div>
       &lt;/div>
@@ -658,7 +678,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.js
             <li><b>Tablet</b>: 768px</li>
           </ul>
         </div>
-        <div class="six columns">
+        <div class="six columns vertical-line">
           <ul>
             <li><b>Phablet</b>: 544px</li>
             <li><b>Mobile</b>: 400px</li>
@@ -729,6 +749,11 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.js
         text-align: center;
       }
 
+      /* Vertical line */
+      .vertical-line {
+        border-left: 1px solid #E1E1E1;
+      }
+
       /* Hides the element on mobiles and phablets */
       @media (max-width: 544px) {
         .hide-on-mobile {
@@ -770,7 +795,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.js
         <div class="six columns">
           <p>Created with <i class="fa fa-heart custom-love"></i> by Mohammad reza Hajianpour (<a href="https://github.com/Borderliner">Borderliner</a>)</p>
         </div>
-        <div class="six columns custom-text-right">
+        <div class="six columns text-center">
           <p>2016, Licensed under <a href="https://github.com/Borderliner/Meshki/blob/master/LICENSE.md">MIT</a></p>
         </div>
       </div>
