@@ -161,7 +161,9 @@ input[type="button"].warning:hover {
   border-style: none;
   border-radius: 0;
   display: block;
-  margin: -4px !important;
+  margin: -5px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
 }
 
 @media (min-width: 768px) {
