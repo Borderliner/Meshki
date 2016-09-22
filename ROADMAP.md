@@ -1,7 +1,7 @@
 ## v1.2.1
   - [x] Add a better overlay for Sidenav
   - [x] Add heart animation to the documents
-  - [ ] Document improvement and typo fixes
+  - [x] Document improvement and typo fixes
   - [ ] Nicer "Form Elements" examples
   - [ ] Remove unused Ubuntu font
   - [ ] Add striped table toggle button
