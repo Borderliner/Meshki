@@ -154,6 +154,44 @@ input[type="button"].warning:hover {
   background-color: #e67e22;
   color: #fff;
 }
+
+.button-couple button:not(:first-child):not(:last-child),
+.button-couple a:not(:first-child):not(:last-child) {
+  pointer-events: none;
+  border-style: none;
+  border-radius: 0;
+  display: block;
+  margin: -5px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+@media (min-width: 768px) {
+  .button-couple button:first-child,
+  .button-couple a:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: 0 !important;
+  }
+
+  .button-couple button:not(:first-child):not(:last-child),
+  .button-couple a:not(:first-child):not(:last-child) {
+    pointer-events: none;
+    border-style: solid;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    display: inline;
+    margin: -4px !important;
+  }
+
+  .button-couple button:last-child,
+  .button-couple a:last-child {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    margin-left: 0 !important;
+  }
+}
 /*
 * Meshki v0.5.2
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
@@ -1383,6 +1421,20 @@ template {
   transition: 0.5s;
 }
 
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: inline;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  transition: opacity .5s, visibility .5s;
+}
+
 /* The navigation menu's links */
 .sidenav a {
   display: block;
@@ -1429,7 +1481,7 @@ template {
 
 /* Pushes the content div with effect */
 .content {
-  transition: margin-left .5s, opacity .5s;
+  transition: margin-left .5s;
 }
 
 /* Change the style of the sidenav for non-mobiles */
@@ -1575,6 +1627,11 @@ p {
 /* Center a text */
 .text-center {
   text-align: center;
+}
+
+/* Vertical line */
+.vertical-line {
+  border-left: 1px solid #E1E1E1;
 }
 
 /* Hides the element on mobiles and phablets */
