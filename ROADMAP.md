@@ -2,8 +2,7 @@
   - [x] Add a better overlay for Sidenav
   - [x] Add heart animation to the documents
   - [x] Document improvement and typo fixes
-  - [ ] Nicer "Form Elements" examples
-  - [ ] Remove unused Ubuntu font
+  - [x] Remove unused Ubuntu font
   - [ ] Add striped table toggle button
   - [ ] Add a double-button (X or Y)
   - [x] Add Grunt Watch to compile on file change
