@@ -586,7 +586,8 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.0/meshki.min.js
       </div>
       <div class="row">
         <div class="twelve columns">
-          <table class="expand hover">
+        Toggle: <button class="medium" onclick="var tbl=document.getElementById('table-example');tbl.classList.contains('striped')?(tbl.className='expand hover', this.innerHTML='Not Striped', this.className='medium'):(tbl.className='expand hover striped', this.innerHTML='Striped', this.className='medium default')">Not Striped</button>
+          <table class="expand hover" id="table-example">
             <thead>
               <tr>
                 <th>Name</th>
