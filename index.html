@@ -31,8 +31,9 @@
   <div class="sidenav push">
     <a href="javascript:void(0);" class="sidenav-close-button" onclick="meshki.closeNav()">&times;</a>
     <a href="">Home</a>
-    <a href="https://github.com/Borderliner/Meshki">GitHub</a>
-    <a href="http://borderliner.ir">About Me</a>
+    <a href="https://github.com/Borderliner/Meshki/issues">Issues</a>
+    <a href="https://www.npmjs.com/package/meshki">@npm</a>
+    <a href="http://borderliner.ir/blog/">Blog</a>
     <a href="https://github.com/Borderliner/Meshki/blob/master/README.md">About Meshki</a>
     <hr class="hide-on-non-mobile">
     <div class="hide-on-non-mobile">
@@ -46,18 +47,19 @@
       <a href="#footer-doc" onclick="meshki.closeNav()">Footer</a>
     </div>
     <hr>
+    <a href="https://twitter.com/Meshki_UI" class="twitter-follow-button" data-show-count="true">Follow @Meshki_UI</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <a href="javascript:void(0)" disabled style="font-size: 1.5rem">Share on:</a>
     <div class="share-links">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=http://borderliner.ir/meshki/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-      <a href="https://twitter.com/home?status=http://borderliner.ir/meshki/" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-      <a href="https://plus.google.com/share?url=http%3A//borderliner.ir/meshki/" target="_blank"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://meshki.borderliner.ir/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+      <a href="https://twitter.com/home?status=http://meshki.borderliner.ir/" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+      <a href="https://plus.google.com/share?url=http://meshki.borderliner.ir/" target="_blank"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
     </div>
   </div>
   <div class="content">
     <div class="nav fixed">
       <ul>
         <li><a class="logo" href="javascript:void(0);" onclick="meshki.openNav()"><i class="fa fa-bars" aria-hidden="true"></i>Meshki</a></li>
-        <li><a href="https://github.com/Borderliner/Meshki/releases">News</a></li>
+        <li><a href="http://borderliner.ir/blog/tag/meshki/">News</a></li>
         <li><a href="https://github.com/Borderliner/Meshki">GitHub</a></li>
         <li class="nav-dropdown hide-on-mobile">
           <a href="javascript:void(0)" class="nav-dropdown-button">Components</a>
@@ -74,7 +76,7 @@
         </li>
         <li class="nav-right hide-on-tablet"><input type="text" name="" placeholder="Search..."></li>
         <li class="nav-right hide-on-tablet"><button class="success"><i class="fa fa-search" aria-hidden="true"></i></button></li>
-        <li class="nav-right hide-on-tablet"><iframe src="https://ghbtns.com/github-btn.html?user=borderliner&repo=meshki&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px" style="margin-top:3px;position:relative;left:20px;opacity:0.95;"></iframe></li>
+        <li class="nav-right hide-on-tablet"><iframe src="https://ghbtns.com/github-btn.html?user=borderliner&repo=meshki&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px" style="margin-top:5px;position:relative;left:20px;opacity:0.95;"></iframe></li>
       </ul>
     </div>
     <div class="container">
@@ -802,6 +804,24 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.1/meshki.min.js
       </div>
     </footer>
   </div>
+  <script>
+  window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+  }(document, "script", "twitter-wjs"));
+  </script>
 </body>
 
 </html>

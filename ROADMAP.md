@@ -4,8 +4,8 @@
 ## v1.2.2
   - [x] Fix overlapping issue in button-couple
   - [ ] Add the tools used in Meshki's development to README.md
-  - [ ] Renew links on the docs
-  - [ ] Add twitter follow button to the main page
+  - [x] Renew links on the docs
+  - [x] Add twitter follow button to the main page
   - [x] Grey-out disabled buttons
 
 ## v1.2.1
