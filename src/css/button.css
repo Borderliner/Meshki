@@ -75,6 +75,22 @@ input[type="button"]:hover {
   color: #000;
 }
 
+/* Disabled button */
+a.button:disabled,
+button:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled,
+input[type="button"]:disabled,
+a.button.disabled,
+button.disabled,
+input[type="submit"].disabled,
+input[type="reset"].disabled,
+input[type="button"].disabled {
+  color: #888;
+  border-color: #888;
+  pointer-events: none;
+}
+
 /* Default blue button */
 a.button.default,
 button.default,
@@ -172,14 +188,13 @@ input[type="button"].warning:hover {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     margin-right: 0 !important;
+    border-right: 0;
   }
 
   .button-couple button:not(:first-child):not(:last-child),
   .button-couple a:not(:first-child):not(:last-child) {
     pointer-events: none;
     border-style: solid;
-    border-right: 0;
-    border-left: 0;
     border-radius: 0;
     display: inline;
     margin: -4px !important;
@@ -190,5 +205,6 @@ input[type="button"].warning:hover {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     margin-left: 0 !important;
+    border-left: 0;
   }
 }
