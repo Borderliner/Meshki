@@ -1,9 +1,10 @@
 ## v1.3.0
   - [ ] Add basic RTL support, for right-to-left languages (like Persian, Arabic, Hebrew, etc.)
+  - [ ] Fix button-couples on tablets, where they crash after opening the push slider
 
 ## v1.2.2
   - [x] Fix overlapping issue in button-couple
-  - [ ] Add the tools used in Meshki's development to README.md
+  - [x] Add the tools used in Meshki's development to README.md
   - [x] Renew links on the docs
   - [x] Add twitter follow button to the main page
   - [x] Grey-out disabled buttons

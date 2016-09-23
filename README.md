@@ -22,7 +22,7 @@ You need node.js to minify the source CSS and JavaScript files and produce outpu
 `npm install -g grunt-cli`<br>
 You may need to access root user to install node packages globally.
 
-Then `cd` into the root folder of the project, and run the command `npm run compile`. This will produce files for you in the `dist` folder, which includes both minified and normal versions of Meshki, plus a fonts folder which includes Open Sans Regular font. You can also run `npm run watch` to watch source files for change, and compile them automatically if there has been a change recently.
+Then `cd` into the root folder of the project, issue the command `npm install` to install development dependencies. After that, run the command `npm run compile`. This will produce files for you in the `dist` folder, which includes both minified and normal versions of Meshki, plus a fonts folder which includes Open Sans Regular font. You can also run `npm run watch` (or `grunt watch`) to watch source files for change, and compile them automatically if there has been a change recently.
 
 ### What's in the download?
 
@@ -58,7 +58,7 @@ Meshki is lightweight, stylish and simple. It styles only raw HTML elements (wit
 - Around 1.6k lines of CSS unminified and with comments
 - Although it's not a UI framework, you can create most of the interface just with Meshki
 - No compiling or installing needed. Just 2 files of CSS + JS
-- Can be installed via `bower` and `npm`
+- Can be installed via `bower` and `npm` (`bower install meshki` and `npm install meshki`)
 - Clean code, clean interface, without any headaches
 
 
@@ -74,7 +74,12 @@ Meshki is lightweight, stylish and simple. It styles only raw HTML elements (wit
 The above list is non-exhaustive. Meshki works perfectly with almost all older versions of the browsers above, though IE certainly has large degradation prior to IE 9.
 
 ## Major Known Issues
-- I once saw very bad rendering on a low resolution laptop. It's probably nothing I can do about. Report any issues with bad font rendering. I recently changed it to Open Sans, which is very clean and well-tested.
+- I once saw very bad rendering on a low resolution laptop. It's probably nothing I can do about, but report any issues related to bad font rendering. I recently changed it to Open Sans, which is very clean and well-tested.
+- On tablets, opening the push slider messes up the button-couples. Will find a workaround in the future release.
+
+## Tools Used
+
+Meshki has been developed on my [Arch Linux](https://www.archlinux.org/) system, using a free version of [Sublime Text 3](https://www.sublimetext.com/3) and [GNU Emacs](https://www.gnu.org/s/emacs). Meshki uses tons of ideas I found over the Internet, and they were all customized to satisfy Meshki's needs. The source code is hosted on [GitHub](https://github.com/) and uses [Git](https://git-scm.com/) as it's Version Control System.
 
 ## License
 
