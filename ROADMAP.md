@@ -1,3 +1,12 @@
+## v1.3.0
+  - [ ] Add basic RTL support, for right-to-left languages (like Persian, Arabic, Hebrew, etc.)
+
+## v1.2.2
+  - [ ] Fix overlapping issue in button-couple
+  - [ ] Add the tools used in Meshki's development to README.md
+  - [ ] Renew links on the docs
+  - [ ] Add twitter follow button to the main page
+
 ## v1.2.1
   - [x] Add a better overlay for Sidenav
   - [x] Add heart animation to the documents
