@@ -86,7 +86,7 @@
       <div class="row text-center" style="margin-bottom: 250px;margin-top: 50px;">
         <div class="button-couple">
           <a class="button default large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.2.1.zip">Download (v1.2.1)</a>
-          <a class="button large" disabled>or</a>
+          <a class="button large disabled" disabled>or</a>
           <a class="button danger large custom-down-cdn" href="javascript:void(0)" onclick="var cdn=document.getElementById('cdn');cdn.style.display=='none'?cdn.style.display='block':cdn.style.display='none';">Use CDN</a>
         </div><br>
         <pre id="cdn" style="display: none;">
@@ -194,12 +194,13 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.1/meshki.min.js
           <br><br><br>
           <div class="button-couple">
             <button class="default medium">Agree</button>
-            <button class="medium">or</button>
+            <button class="medium disabled" disabled>or</button>
             <button class="danger medium">Disagree</button>
           </div>
           <br><br>
           <button class="default expand small">Small Expanded Button</button>
           <button class="danger expand medium">Medium Expanded Button</button>
+          <button class="expand medium" disabled>Disabled Medium Expanded Button</button>
           <button class="expand large">Large Expanded Button</button>
         </div><br>
       
