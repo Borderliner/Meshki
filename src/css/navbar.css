@@ -57,7 +57,7 @@
 
 /* Lighten the logo when the mouse is over it */
 .nav ul li:first-child a.logo:hover {
-  background-color: #EAEAEA;
+  background-color: #F5F5F5;
   color: black;
 }
 
