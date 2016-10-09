@@ -51,6 +51,10 @@
   .hide-on-mobile {
     display: none !important;
   }
+
+  .vertical-line {
+    border-left: none;
+  }
 }
 
 /* Hides the element on tablets and smaller */
