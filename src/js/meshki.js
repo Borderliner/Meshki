@@ -28,7 +28,7 @@ var meshki = {
     if (window.innerWidth > 768 && isSidenavPush)
       content.style.marginLeft = '250px';
 
-    overlayDiv.style.opacity = 0.3;
+    overlayDiv.style.opacity = 0.4;
     overlayDiv.style.visibility = 'visible';
   },
 

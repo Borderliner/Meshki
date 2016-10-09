@@ -3,7 +3,7 @@
   - [ ] Fix button-couples on tablets, where they crash after opening the push slider
 
 ## v1.2.3
-  - [ ] Increase opacity of the overlay to 40%
+  - [x] Increase opacity of the overlay to 40%
   - [ ] Better close button for sidenav in docs
   - [ ] Hide vertical line on mobile/phablet
 
