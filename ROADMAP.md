@@ -1,6 +1,7 @@
 ## v1.3.0
   - [ ] Add basic RTL support, for right-to-left languages (like Persian, Arabic, Hebrew, etc.)
   - [ ] Fix button-couples on tablets, where they crash after opening the push slider
+  - [ ] Make Meshki font-agnostic
 
 ## v1.2.3
   - [x] Increase opacity of the overlay to 40%
