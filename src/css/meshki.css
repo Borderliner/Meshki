@@ -37,6 +37,7 @@ providing you the values here directly. Here you go:
 - $button-warning-color:             #E67E22;
 - $link-default-color:               $button-default-color;
 - $link-hover-color:                 #74C1FB;
+- $sidenav-lines-color:              #818181;
 
 - $button-small-size:                1.2rem;
 - $button-medium-size:               1.6rem;

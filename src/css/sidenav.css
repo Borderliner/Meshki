@@ -16,9 +16,10 @@
   position: fixed;
   z-index: 10; /* Stays on top of everything, unless a modal is implemented */
   top: 0;
-  left: 0;
+  left: -1px;
   background-color: #111;
   padding-top: 15px;
+  border-right: 1px solid #818181;
   overflow-x: hidden;
   transition: 0.5s;
 }
