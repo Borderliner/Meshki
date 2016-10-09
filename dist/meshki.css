@@ -1,5 +1,5 @@
 /*
-* Meshki v0.5.2
+* Meshki v1.2.3
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -209,7 +209,7 @@ input[type="button"].warning:hover {
   }
 }
 /*
-* Meshki v0.5.2
+* Meshki v1.2.3
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -265,7 +265,7 @@ pre.filled > code {
   color: #000;
 }
 /*
-* Meshki v0.5.2
+* Meshki v1.2.3
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -310,7 +310,7 @@ footer .row {
   }
 }
 /*
-* Meshki v0.5.2
+* Meshki v1.2.3
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -487,7 +487,7 @@ input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label
   outline: none !important;
 }
 /*
-* Meshki v0.5.2
+* Meshki v1.2.3
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -607,7 +607,7 @@ input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label
   .offset-by-one-half.columns     { margin-left: 52%; }
 }
 /*
-* Meshki v0.5.2
+* Meshki v1.2.3
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -641,7 +641,7 @@ li {
   margin-bottom: 1rem;
 }
 /*
-* Meshki v0.5.2
+* Meshki v1.2.3
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -679,6 +679,7 @@ providing you the values here directly. Here you go:
 - $button-warning-color:             #E67E22;
 - $link-default-color:               $button-default-color;
 - $link-hover-color:                 #74C1FB;
+- $sidenav-lines-color:              #818181;
 
 - $button-small-size:                1.2rem;
 - $button-medium-size:               1.6rem;
@@ -827,7 +828,7 @@ compatibility reasons.
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
 /*
-* Meshki v0.5.2
+* Meshki v1.2.3
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -885,7 +886,7 @@ compatibility reasons.
 
 /* Lighten the logo when the mouse is over it */
 .nav ul li:first-child a.logo:hover {
-  background-color: #EAEAEA;
+  background-color: #F5F5F5;
   color: black;
 }
 
@@ -1413,7 +1414,7 @@ template {
   display: none;
 }
 /*
-* Meshki v0.5.2
+* Meshki v1.2.3
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -1430,9 +1431,10 @@ template {
   position: fixed;
   z-index: 10; /* Stays on top of everything, unless a modal is implemented */
   top: 0;
-  left: 0;
+  left: -1px;
   background-color: #111;
   padding-top: 15px;
+  border-right: 1px solid #818181;
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -1490,8 +1492,8 @@ template {
   font-size: 3.6rem !important;
   position: absolute;
   top: 0;
-  right: 25px;
-  margin-left: 50px;
+  right: 0;
+  padding-right: 30px !important;
   outline: 0 !important;
 }
 
@@ -1511,7 +1513,7 @@ template {
   }
 }
 /*
-* Meshki v0.5.2
+* Meshki v1.2.3
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -1566,7 +1568,7 @@ table.hover > tbody tr:hover {
   background-color: #404040;
 }
 /*
-* Meshki v0.5.2
+* Meshki v1.2.3
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -1603,7 +1605,7 @@ p {
   margin-top: 0;
 }
 /*
-* Meshki v0.5.2
+* Meshki v1.2.3
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -1654,6 +1656,10 @@ p {
 @media (max-width: 544px) {
   .hide-on-mobile {
     display: none !important;
+  }
+
+  .vertical-line {
+    border-left: none;
   }
 }
 

@@ -1,5 +1,5 @@
 /*
-* Meshki v0.5.2
+* Meshki v1.2.3
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -16,9 +16,10 @@
   position: fixed;
   z-index: 10; /* Stays on top of everything, unless a modal is implemented */
   top: 0;
-  left: 0;
+  left: -1px;
   background-color: #111;
   padding-top: 15px;
+  border-right: 1px solid #818181;
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -76,8 +77,8 @@
   font-size: 3.6rem !important;
   position: absolute;
   top: 0;
-  right: 25px;
-  margin-left: 50px;
+  right: 0;
+  padding-right: 30px !important;
   outline: 0 !important;
 }
 

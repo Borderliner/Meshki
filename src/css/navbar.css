@@ -1,5 +1,5 @@
 /*
-* Meshki v0.5.2
+* Meshki v1.2.3
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -57,7 +57,7 @@
 
 /* Lighten the logo when the mouse is over it */
 .nav ul li:first-child a.logo:hover {
-  background-color: #EAEAEA;
+  background-color: #F5F5F5;
   color: black;
 }
 

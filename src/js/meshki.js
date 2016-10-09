@@ -1,3 +1,11 @@
+/*
+* Meshki v1.2.3
+* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
+* http://meshki.borderliner.ir/
+* Free to use under the MIT license.
+* https://opensource.org/licenses/MIT
+*/
+
 function ready(fn) {
   document.onreadystatechange = function () {
     if (document.readyState == 'complete')
@@ -28,7 +36,7 @@ var meshki = {
     if (window.innerWidth > 768 && isSidenavPush)
       content.style.marginLeft = '250px';
 
-    overlayDiv.style.opacity = 0.3;
+    overlayDiv.style.opacity = 0.4;
     overlayDiv.style.visibility = 'visible';
   },
 
