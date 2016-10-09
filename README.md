@@ -75,11 +75,11 @@ The above list is non-exhaustive. Meshki works perfectly with almost all older v
 
 ## Major Known Issues
 - I once saw very bad rendering on a low resolution laptop. It's probably nothing I can do about, but report any issues related to bad font rendering. I recently changed it to Open Sans, which is very clean and well-tested.
-- On tablets, opening the push slider messes up the button-couples. Will find a workaround in the future release.
+- On tablets, opening the push slider sometimes messes up the button-couples. Will find a workaround in the future release.
 
 ## Tools Used
 
-Meshki has been developed on my [Arch Linux](https://www.archlinux.org/) system, using a free version of [Sublime Text 3](https://www.sublimetext.com/3) and [GNU Emacs](https://www.gnu.org/s/emacs). Meshki uses tons of ideas I found over the Internet, and they were all customized to satisfy Meshki's needs. The source code is hosted on [GitHub](https://github.com/) and uses [Git](https://git-scm.com/) as it's Version Control System.
+Meshki has been developed on a GNU/Linux system (Arch Linux and Ubuntu), using a free version of [Sublime Text 3](https://www.sublimetext.com/3), [GNU Emacs](https://www.gnu.org/s/emacs) and the lovely [Atom Editor](https://atom.io/). Meshki uses tons of ideas I found over the Internet, and they were all customized to satisfy Meshki's needs. The source code is hosted on [GitHub](https://github.com/) and uses [Git](https://git-scm.com/) as the Version Control System, and [SmartGit 8](https://www.syntevo.com/smartgit/) as a Git GUI. GruntJS is also used for task automations.
 
 ## License
 

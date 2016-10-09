@@ -2,6 +2,11 @@
   - [ ] Add basic RTL support, for right-to-left languages (like Persian, Arabic, Hebrew, etc.)
   - [ ] Fix button-couples on tablets, where they crash after opening the push slider
 
+## v1.2.3
+  - [ ] Increase opacity of the overlay to 40%
+  - [ ] Better close button for sidenav in docs
+  - [ ] Hide vertical line on mobile/phablet
+
 ## v1.2.2
   - [x] Fix overlapping issue in button-couple
   - [x] Add the tools used in Meshki's development to README.md
@@ -61,4 +66,3 @@
   - [x] Append (Borderliner) to my real name as a copyright holder
   - [x] Code for buttons section in the document has extra useless line ends
   - [x] Try fixing several FIXME's inside the code
- 
