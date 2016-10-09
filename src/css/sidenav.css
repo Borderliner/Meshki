@@ -77,8 +77,8 @@
   font-size: 3.6rem !important;
   position: absolute;
   top: 0;
-  right: 25px;
-  margin-left: 50px;
+  right: 0;
+  padding-right: 30px !important;
   outline: 0 !important;
 }
 

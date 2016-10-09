@@ -4,7 +4,7 @@
 
 ## v1.2.3
   - [x] Increase opacity of the overlay to 40%
-  - [ ] Better close button for sidenav in docs
+  - [x] Better close button for sidenav in docs
   - [x] Hide vertical line on mobiles/phablets
 
 ## v1.2.2
