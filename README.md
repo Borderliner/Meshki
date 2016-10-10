@@ -24,6 +24,8 @@ You may need to access root user to install node packages globally.
 
 Then `cd` into the root folder of the project, issue the command `npm install` to install development dependencies. After that, run the command `npm run compile`. This will produce files for you in the `dist` folder, which includes both minified and normal versions of Meshki, plus a fonts folder which includes Open Sans Regular font. You can also run `npm run watch` (or `grunt watch`) to watch source files for change, and compile them automatically if there has been a change recently.
 
+Ruby programmers can also `cd` into the project folder, and issue `bundle install` command, followed by `bundle exec rake`, to compile and minify source codes. Make sure that you have `uglifyjs` installed and is in your $PATH. If not, install it with `sudo npm install -g uglifyjs`. Note that Grunt and Rake generate different outputs, so the sizes may vary. Meshki generates outputs using Grunt.
+
 ### What's in the download?
 
 The download includes Meshki's CSS, Meshki's JavaScript, Normalize CSS as a reset, a sample favicon, and an index.html as a starting point.
