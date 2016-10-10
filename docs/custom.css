@@ -1,0 +1,91 @@
+.meshki-features i.fa {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+.nav i.fa {
+  font-size: 1.8rem;
+}
+
+.logo i.fa {
+  padding-right: 8px;
+}
+
+div.share-links {
+  display: -webkit-flex;
+  display: -moz-box;
+  display: inline-flex;
+}
+
+div.share-links i.fa {
+  font-size: 4rem;
+}
+
+.title {
+    font-size: 12vmax;
+    padding-bottom: 10px;
+}
+
+.column, .columns {
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-top: 140px;
+}
+
+.grid-table div div {
+  text-align: center;
+  border-style: solid;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  color: #222;
+  background-color: #E0E0E0;
+}
+
+.heading-font-size {
+  font-size: 1.2rem;
+  color: #959595;
+  letter-spacing: 1px;
+  vertical-align: middle;
+}
+
+.custom-textarea {
+  height: 200px;
+}
+
+.custom-love {
+  font-size: 1.7rem !important;
+  color: red;
+  animation: heart-beat 1s infinite;
+}
+
+.custom-down-cdn {
+  width: 100%;
+  max-width: 250px;
+}
+
+#twitter-widget-0 {
+  margin-left: 20px;
+  opacity: 0.7;
+  transition: opacity .3s;
+}
+
+#twitter-widget-0:hover {
+  opacity: 1;
+}
+
+@media (min-width: 544px) {
+  .custom-text-right {
+    text-align: right;
+  }
+}
+
+@keyframes heart-beat {
+  0%   { opacity: 1; }
+  100% { opacity: .5; }
+}
