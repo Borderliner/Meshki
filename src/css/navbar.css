@@ -84,7 +84,7 @@
 
 /* Navigation Dropdown Button */
 li.nav-dropdown {
-    display: inline-block;
+  display: inline-block;
 }
 
 /* Dropdown content attributes */
@@ -121,6 +121,6 @@ li.nav-dropdown {
 
 /* Display the content when the mouse is on dropdown's button */
 .nav-dropdown:hover .nav-dropdown-content {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
