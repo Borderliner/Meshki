@@ -72,6 +72,7 @@ input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
   background-color: #E1E1E1;
+  border-color: #E1E1E1;
   color: #000;
 }
 
@@ -108,6 +109,7 @@ input[type="submit"].default:hover,
 input[type="reset"].default:hover,
 input[type="button"].default:hover {
   background-color: #55acee;
+  border-color: #55acee;
   color: #fff
 }
 
@@ -128,6 +130,7 @@ input[type="submit"].success:hover,
 input[type="reset"].success:hover,
 input[type="button"].success:hover {
   background-color: #2ecc71;
+  border-color: #2ecc71;
   color: #fff;
 }
 
@@ -148,6 +151,7 @@ input[type="submit"].danger:hover,
 input[type="reset"].danger:hover,
 input[type="button"].danger:hover {
   background-color: #e74c3c;
+  border-color: #e74c3c;
   color: #fff;
 }
 
@@ -168,6 +172,7 @@ input[type="submit"].warning:hover,
 input[type="reset"].warning:hover,
 input[type="button"].warning:hover {
   background-color: #e67e22;
+  border-color: #e67e22;
   color: #fff;
 }
 
@@ -193,9 +198,7 @@ input[type="button"].warning:hover {
 
   .button-couple button:not(:first-child):not(:last-child),
   .button-couple a:not(:first-child):not(:last-child) {
-    pointer-events: none;
     border-style: solid;
-    border-radius: 0;
     display: inline;
     margin: -4px !important;
   }
@@ -737,7 +740,7 @@ body {
   height: 100%;
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: #222;
   color: #E1E1E1;
 }
