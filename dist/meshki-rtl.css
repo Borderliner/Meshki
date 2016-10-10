@@ -5,4 +5,32 @@
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
-/* RTL */
+
+@font-face {
+  font-family: "B yekan";
+  src: url("fonts/B-Yekan.ttf");
+}
+
+body {
+  direction: rtl;
+  font-family: "B yekan", "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.nav ul li {
+  float: right;
+  margin-bottom: 0px;
+}
+
+/* Logo of the website, it must be the first child of navbar*/
+.nav ul li:first-child a.logo i {
+  color: black;
+}
+
+.sidenav {
+  right: -1px;
+  border-left: 1px solid #818181;
+}
+
+.sidenav a {
+  padding: 8px 32px 8px 8px;
+}

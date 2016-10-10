@@ -906,6 +906,14 @@ compatibility reasons.
   float: right !important;
 }
 
+/* Send the elements to the left side with nav-left */
+.nav ul li.nav-left {
+  position: relative;
+  top: 7px;
+  right: -16px;
+  float: left !important;
+}
+
 .nav ul a.button,
 .nav ul button {
   margin: 0px 5px 0px 5px !important;
@@ -1499,7 +1507,7 @@ template {
 
 /* Pushes the content div with effect */
 .content {
-  transition: margin-left .5s;
+  transition: margin-left .5s, margin-right .5s;
 }
 
 /* Change the style of the sidenav for non-mobiles */

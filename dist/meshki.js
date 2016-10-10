@@ -22,6 +22,10 @@ ready(function(){
   }
 });
 
+function is_rtl() {
+  return (window.getComputedStyle(document.body, null).getPropertyValue('direction') == 'rtl' ? true : false);
+}
+
 var meshki = {
   openNav: function() {
     var sidenav = document.getElementsByClassName('sidenav')[0];
@@ -34,7 +38,11 @@ var meshki = {
     sidenav.style.width = '250px';
     // If on Desktop and the sidenav is a push one, push "content"
     if (window.innerWidth > 768 && isSidenavPush)
-      content.style.marginLeft = '250px';
+      // If not RTL
+      if (!is_rtl)
+        content.style.marginLeft = '250px';
+      else
+        content.style.marginRight = '250px';
 
     overlayDiv.style.opacity = 0.4;
     overlayDiv.style.visibility = 'visible';
@@ -50,7 +58,7 @@ var meshki = {
     sidenav.style.width = '0';
 
     if (window.innerWidth > 768 && isSidenavPush)
-      content.style.marginLeft = '0';
+      content.style.margin = '0';
 
     overlayDiv.style.opacity = 0;
     overlayDiv.style.visibility = 'hidden';
