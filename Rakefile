@@ -1,11 +1,21 @@
-task default: %w[before_clean concat_css uglify_css uglify_js after_clean]
+task default: %w[before concat_css uglify_css uglify_js copy_fonts after]
 
-task :before_clean do
+task :before do
   puts colorize 36, "Cleaning old output files..."
 
   begin
-    puts 'rm -f dist/meshki2.css dist/meshki2.min.css'
-    system 'rm -f dist/meshki2.css dist/meshki2.min.css'
+    puts 'rm -rf dist'
+    system 'rm -rf dist'
+    puts colorize 32, 'DONE'
+  rescue Exception => msg
+    puts msg
+    puts colorize 31, 'FAILED'
+  end
+
+  puts colorize 36, "Creating `dist` folder..."
+  begin
+    puts 'mkdir -p dist/fonts/'
+    system 'mkdir -p dist/fonts/'
     puts colorize 32, 'DONE'
   rescue Exception => msg
     puts msg
@@ -18,8 +28,8 @@ task :concat_css do
   puts colorize 36, "Concatenating CSS files..."
 
   begin
-    puts 'cat src/css/*.css >> dist/meshki2.css'
-    system 'cat src/css/*.css >> dist/meshki2.css'
+    puts 'cat src/css/*.css >> dist/meshki.css'
+    system 'cat src/css/*.css >> dist/meshki.css'
     puts colorize 32, 'DONE'
   rescue Exception => msg
     puts msg
@@ -32,8 +42,8 @@ task :uglify_css do
   puts colorize 36, "Uglifying CSS files..."
 
   begin
-    puts 'sass --scss dist/meshki2.css:dist/meshki2.min.css --style compressed'
-    system 'sass --scss dist/meshki2.css:dist/meshki2.min.css --style compressed'
+    puts 'sass --scss dist/meshki.css:dist/meshki.min.css --style compressed'
+    system 'sass --scss dist/meshki.css:dist/meshki.min.css --style compressed'
     puts colorize 32, 'DONE'
   rescue Exception => msg
     puts msg
@@ -47,9 +57,9 @@ task :uglify_js do
 
   begin
     puts 'cp src/js/meshki.js dist/'
-    system 'cp src/js/meshki.js dist/meshki2.js'
-    puts 'uglifyjs --compress --mangle -o dist/meshki2.min.js dist/meshki2.js'
-    system 'uglifyjs --compress --mangle -o dist/meshki2.min.js dist/meshki2.js'
+    system 'cp src/js/meshki.js dist/meshki.js'
+    puts 'uglifyjs --compress --mangle -o dist/meshki.min.js dist/meshki.js'
+    system 'uglifyjs --compress --mangle -o dist/meshki.min.js dist/meshki.js'
     puts colorize 32, 'DONE'
   rescue Exception => msg
     puts msg
@@ -59,7 +69,21 @@ task :uglify_js do
 
 end
 
-task :after_clean do
+task :copy_fonts do
+  puts colorize 36, "Copying fonts into dist folder..."
+
+  begin
+    puts 'cp -f src/fonts/* dist/fonts/'
+    system 'cp -f src/fonts/* dist/fonts/'
+    puts 32, 'DONE'
+  rescue Exception => msg
+    puts msg
+    puts colorize 31, 'FAILED'
+  end
+
+end
+
+task :after do
   puts colorize 36, "Cleaning cached files..."
 
   begin
