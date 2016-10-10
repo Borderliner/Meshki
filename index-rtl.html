@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Meshki</title>
+  <meta name="description" content="Meshki: A Black-Colored, Responsive Boilerplate for UI Development">
+  <meta name="keywords" content="HTML,CSS,Meshki,UI,Framework,JavaScript">
+  <meta name="author" content="Mohammad reza Hajianpour">
+  <meta property="og:title" content="Meshki UI"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="meta-image.png"/>
+  <meta property="og:url" content="http://meshki.borderliner.ir"/>
+  <meta property="og:description" content="Meshki: A Black-Colored, Responsive Boilerplate for UI Development"/>
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@Meshki_UI">
+  <meta name="twitter:title" content="Meshki UI">
+  <meta name="twitter:description" content="Meshki: A Black-Colored, Responsive Boilerplate for UI Development">
+  <meta name="twitter:image" content="meta-image.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.3/meshki.min.css">
+  <link rel="stylesheet" type="text/css" href="custom.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <link rel="shortcut icon" href="dist/favicon.ico" type="image/x-icon" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.3/meshki.min.js"></script>
+</head>
+
+<body>
+  <div class="sidenav push">
+    <a href="javascript:void(0);" class="sidenav-close-button" onclick="meshki.closeNav()">&times;</a>
+    <a href="">Home</a>
+    <a href="https://github.com/Borderliner/Meshki/issues">Issues</a>
+    <a href="https://www.npmjs.com/package/meshki">@npm</a>
+    <a href="http://borderliner.ir/blog/">Blog</a>
+    <a href="https://github.com/Borderliner/Meshki/blob/master/README.md">About Meshki</a>
+    <hr class="hide-on-non-mobile">
+    <div class="hide-on-non-mobile">
+      <a href="#buttons-doc" onclick="meshki.closeNav()">Buttons</a>
+      <a href="#sidenav-doc" onclick="meshki.closeNav()">Sidenav</a>
+      <a href="#navbar-doc" onclick="meshki.closeNav()">Navbar</a>
+      <a href="#grid-doc" onclick="meshki.closeNav()">Grid System</a>
+      <a href="#form-doc" onclick="meshki.closeNav()">Forms</a>
+      <a href="#typography-doc" onclick="meshki.closeNav()">Typography</a>
+      <a href="#tables-doc" onclick="meshki.closeNav()">Tables</a>
+      <a href="#footer-doc" onclick="meshki.closeNav()">Footer</a>
+    </div>
+    <hr>
+    <a href="https://twitter.com/Meshki_UI" class="twitter-follow-button" data-show-count="true">Follow @Meshki_UI</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <a href="javascript:void(0)" disabled style="font-size: 1.5rem">Share on:</a>
+    <div class="share-links">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://meshki.borderliner.ir/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+      <a href="https://twitter.com/home?status=http://meshki.borderliner.ir/" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+      <a href="https://plus.google.com/share?url=http://meshki.borderliner.ir/" target="_blank"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
+    </div>
+  </div>
+  <div class="content">
+    <div class="nav fixed">
+      <ul>
+        <li><a class="logo" href="javascript:void(0);" onclick="meshki.openNav()"><i class="fa fa-bars" aria-hidden="true"></i>Meshki</a></li>
+        <li><a href="http://borderliner.ir/blog/tag/meshki/">News</a></li>
+        <li><a href="https://github.com/Borderliner/Meshki">GitHub</a></li>
+        <li class="nav-dropdown hide-on-mobile">
+          <a href="javascript:void(0)" class="nav-dropdown-button">Components</a>
+          <div class="nav-dropdown-content">
+            <a href="#buttons-doc">Buttons</a>
+            <a href="#sidenav-doc">Sidenav</a>
+            <a href="#navbar-doc">Navbar</a>
+            <a href="#grid-doc">Grid System</a>
+            <a href="#form-doc">Forms</a>
+            <a href="#typography-doc">Typography</a>
+            <a href="#tables-doc">Tables</a>
+            <a href="#footer-doc">Footer</a>
+          </div>
+        </li>
+        <li class="nav-right hide-on-tablet"><input type="text" name="" placeholder="Search..."></li>
+        <li class="nav-right hide-on-tablet"><button class="success"><i class="fa fa-search" aria-hidden="true"></i></button></li>
+        <li class="nav-right hide-on-tablet"><iframe src="https://ghbtns.com/github-btn.html?user=borderliner&repo=meshki&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px" style="margin-top:5px;position:relative;left:20px;opacity:0.95;"></iframe></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="row">
+        <h1 class="text-center title">Meshki</h1>
+        <h2 class="text-center">Stylish. Black. Responsive.</h2>
+      </div>
+
+      <div class="row text-center" style="margin-bottom: 250px;margin-top: 50px;">
+        <div class="button-couple">
+          <a class="button default large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.2.3.zip">Download (v1.2.3)</a>
+          <a class="button large disabled" disabled>or</a>
+          <a class="button danger large custom-down-cdn" href="javascript:void(0)" onclick="var cdn=document.getElementById('cdn');cdn.style.display=='none'?cdn.style.display='block':cdn.style.display='none';">Use CDN</a>
+        </div><br>
+        <pre id="cdn" style="display: none;">
+          <code>
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.3/meshki.min.css
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.3/meshki.min.js
+          </code>
+        </pre>
+      </div><br>
+
+      <hr />
+      <h3 class="text-center" style="margin-bottom: 50px;">Ice-Cool Features</h3>
+      <div class="row meshki-features" style="margin-bottom: 90px;">
+
+        <div class="four columns text-center">
+          <i class="fa fa-clock-o" aria-hidden="true"></i><br>
+          <span>Design your whole UI in absolutely no time. We have done our best to keep Meshki stupidly simple and clean, and bring you an up-to-date document for your convenience.</span>
+        </div>
+        <div class="four columns text-center">
+          <i class="fa fa-eye" aria-hidden="true"></i><br>
+          <span>We care for your eyes! Making use of a pleasant dark color, your eyes will feel at ease when reading pages that use Meshki. This is very important in web pages with plenty of textual contents.</span>
+        </div>
+        <div class="four columns text-center">
+          <i class="fa fa-rocket" aria-hidden="true"></i><br>
+          <span>Oh did I say it's super fast? By using less code and less complex logics, Meshki is light-weight and is not resource-hungry.</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <h3>What is Meshki?</h3>
+        <hr>
+        <p>
+          Meshki is a simple, black-colored, responsive boilerplate to kickstart any responsive project. It is only ~15 KiB (minified) and ~36 KiB (normal), including both CSS and JS files, which makes it superb for small to medium projects. It's easy to use, clean and is just beautiful.
+          It started as a fork of <a href="http://getskeleton.com" target="_blank">Skeleton</a> project, and it still uses some of the codes of it, Meshki is considered to be a total overhaul of Skeleton and it barely resembles it when you take a look at it.
+          Don't be afraid to have a look at Meshki's code! If you spot any bugs, or you want some improvements, head to <a href="https://github.com/Borderliner/Meshki" target="_blank">our GitHub repository</a> and open an issue or a pull request!
+        </p>
+      </div>
+
+      <div class="row">
+        <h3>Why Meshki?</h3>
+        <hr>
+        <p>
+          This is a valid question. There are tons of UI libraries out there in the wild, but what makes Meshki different?<br>
+          Meshki tends to be light-weight, but useful. Contrary to most "light-weight" libraries, Meshki doesn't sacrifice usability for just being light-weight. This means that you don't need to reinvent the wheel, and many common components are ready for you to use out-of-the-box. I mean, everybody can create libraries less than 5 KiB, but does this actually make them useful?<br>
+          Also, Meshki strives to bring you a clean eye-candy interface, the black color doesn't hurt your eyes, and brings simplicity and elegance together. One of the main goals of Meshki is to be stable and reliable, so we try to provide you with updates and fixes as much as we can. Note that Meshki is still in alpha phase.<br>
+          Meshki and Skeleton have vast differences. Although Meshki is derived from Skeleton, it's far more complete than her parent. Just have a look at Skeleton's website. Most of the code there doesn't belong to original Skeleton and there are many custom CSS alongside the site. <b>But this website is pure Meshki</b>, and uses <a href="custom.css" id="components" target="_blank">custom.css</a> to customize website-related stuff.
+        </p>
+      </div>
+
+      <div class="row">
+        <h3>Getting Started</h3>
+        <hr>
+        <p>
+          Meshki uses a fixed structure to lessen the burden of setting extra ids and classes. So you always need to create the same structure for all your apps. Don't worry, this structure is very basic and it does not limit you in any ways.<br>
+          First of all, you need to have a <code>&lt;div></code> with the <code>sidenav</code> class, just after the beginning of the body. Your <a href="#sidenav-doc">sidenav</a>'s links will reside in here. Then, you need to create a <code>&lt;div></code> after the sidenav's div, with the <code>content</code> class. The rest of your body should be created inside the "content" div. Inspect the elements on this page to understand the structure. Also, here's a sample code:<br>
+        </p>
+        <pre>
+          <code>
+    &lt;!DOCTYPE html>
+    &lt;html>
+    &lt;head>
+      &lt;title>Meshki&lt;/title>
+      &lt;!-- Make the page Mobile-Friendly -->
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1">
+
+      &lt;link rel="stylesheet" type="text/css" href="dist/meshki.min.css">
+      &lt;script type="text/javascript" src="dist/meshki.min.js">&lt;/script>
+    &lt;/head>
+    &lt;body>
+      &lt;div class="sidenav">
+        &lt;!-- Sidenav links here -->
+      &lt;/div>
+      &lt;div class="content">
+        &lt;div class="row">
+          &lt;h3>Welcome to my cool website&lt;/h3>
+          &lt;p>This is a sample paragraph.&lt;/p>
+        &lt;/div>
+      &lt;/div>
+    &lt;/body>
+          </code>
+        </pre>
+      </div>
+
+      <div class="row">
+        <h3>Components</h3>
+        <hr>
+        <p>
+          Meshki has various ready-to-use components which you can create anywhere you like. Keep in mind that <u>being small and "enough" are our main goals</u>, and <u> Meshki is not a UI framework</u>, therefore you may need to add extra libraries for other fancy stuff. However, most of the common components are ready to use and well-tested. But don't worry! We'll make sure that you always get the most stable UI and a beautiful experience, and we may add extra components from time to time.<br id="buttons-doc"><br>
+          Here are a list of components and how you can put them into use:
+        </p>
+      </div>
+
+      <div class="row">
+        <h4>Buttons</h4>
+        <hr>
+        <p>
+          You can create buttons easily with <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;input type="submit"&gt;</code>, <code>&lt;input type="reset"&gt;</code> and <code>&lt;input type="button"&gt;</code>. There are also five different types of buttons:
+        </p>
+        <div class="centerize text-center">
+          <a class="button small">Simple</a>
+          <button class="default medium">Default</button>
+          <input type="submit" class="success large" value="Success" />
+          <input type="reset" class="danger medium" value="Danger" />
+          <input type="button" class="warning small" value="Warning" />
+          <br><br><br>
+          <div class="button-couple">
+            <button class="default medium">Agree</button>
+            <button class="medium disabled" disabled>or</button>
+            <button class="danger medium">Disagree</button>
+          </div>
+          <br><br>
+          <button class="default expand small">Small Expanded Button</button>
+          <button class="danger expand medium">Medium Expanded Button</button>
+          <button class="expand medium" disabled>Disabled Medium Expanded Button</button>
+          <button class="expand large">Large Expanded Button</button>
+        </div><br>
+
+        <span>Here's the code for them:</span><br><br>
+          <pre>
+            <code>
+    &lt;a class="button small"&gt;Simple&lt;/a&gt;
+    &lt;button class="default medium"&gt;Default&lt;/button&gt;
+    &lt;input type="submit" class="success large" value="Success" /&gt;
+    &lt;input type="reset" class="danger medium" value="Danger" /&gt;
+    &lt;input type="button" class="warning small" value="Warning" /&gt;
+
+    &lt;div class="button-couple">
+      &lt;button class="default">Agree&lt;/button>
+      &lt;button>or&lt;/button>
+      &lt;button class="danger">Disagree&lt;/button>
+    &lt;/div>
+
+    &lt;button class="expand large"&gt;Large Expanded Button&lt;/button&gt;<div id="sidenav-doc"></div>
+            </code>
+          </pre>
+      </div>
+
+      <div class="row">
+        <h4>Sidenav</h4>
+        <hr>
+        <p>
+          Creating a sidenav is easy: Just create a <code>&lt;div></code> with the <code>&lt;sidenav</code> class after the opening body tag. Then add <code>&lt;a></code> tags to make sidenav links. It's pretty easy and straight-forward. Use the JavaScript functions of <code>meshki.openNav()</code> and <code>meshki.closeNav()</code> on events to open and close sidenav respectively. You can also add <code>push</code> class to make if even more fun! Here's an example for your convenience:
+        </p>
+        <pre>
+          <code>
+    &lt;body>
+      &lt;div class="sidenav push">
+        &lt;!-- Note that javascript:void(0) stops your page from jumping to the top -->
+        &lt;a href="javascript:void(0)" class="sidenav-close-button" onclick="meshki.closeNav()">&amp;times;&lt;/a>
+        &lt;a href="">Home&lt;/a>
+        &lt;a href="https://github.com/Borderliner/Meshki">GitHub&lt;/a>
+        &lt;a href="http://borderliner.ir">About Me&lt;/a>
+        &lt;a href="https://github.com/Borderliner/Meshki/blob/master/README.md">About Meshki&lt;/a>
+        &lt;hr>
+        &lt;a href="javascript:void(0)" disabled>Share on:&lt;/a>
+      &lt;/div>
+    .
+    .
+    .<div id="navbar-doc"></div>
+          </code>
+        </pre>
+      </div>
+
+      <div class="row">
+        <h4>Navbar</h4>
+        <hr>
+        <p>
+          Meshki comes with a beautiful navbar built-in. At the beginning of the <code>div.content</code>, create a <code>&lt;div class="nav"></code>, and then create a <code>&lt;ul></code> inside that. Now any <code>&lt;li>&lt;a href="#">Link&lt;/a>&lt;/li></code> inside the <code>&lt;ul></code> will appear as a button in the navbar. You can also add the <code>fixed</code> class to the <code>div.nav</code> to make the navbar fixed.
+        </p>
+        <pre>
+          <code>
+    &lt;div class="nav fixed">
+      &lt;ul>
+        &lt;!-- Note that javascript:void(0) stops your page from jumping to the top -->
+        &lt;li>&lt;a class="logo" href="javascript:void(0)" onclick="meshki.openNav()">Meshki&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="https://github.com/Borderliner/Meshki/releases">News&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="https://github.com/Borderliner/Meshki">GitHub&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#components">Components&lt;/a>&lt;/li>
+      &lt;/ul>
+    &lt;/div><div id="grid-doc"></div>
+          </code>
+        </pre>
+      </div>
+
+      <div class="row">
+        <h4>The Grid System</h4>
+        <hr>
+        <p>
+          The grid is a <u>12-column fluid grid with a max width of 960px</u>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. The syntax is simple and it makes coding responsive much easier. Go ahead, resize the browser.<br>
+          <b>Note</b>: The columns must be the first elements at the beginning of a <code>row</code>. <u>This is very important.</u>
+        </p>
+      </div>
+
+      <div class="row grid-table">
+        <div>
+          <div class="one column">ONE</div>
+          <div class="eleven columns">ELEVEN</div>
+        </div>
+        <div>
+          <div class="two columns">TWO</div>
+          <div class="ten columns">TEN</div>
+        </div>
+        <div>
+          <div class="three columns">THREE</div>
+          <div class="nine columns">NINE</div>
+        </div>
+        <div>
+          <div class="four columns">FOUR</div>
+          <div class="eight columns">EIGHT</div>
+        </div>
+        <div>
+          <div class="five columns">FIVE</div>
+          <div class="seven columns">SEVEN</div>
+        </div>
+        <div>
+          <div class="six columns">SIX</div>
+          <div class="six columns">SIX</div>
+        </div>
+        <div>
+          <div class="seven columns">SEVEN</div>
+          <div class="five columns">FIVE</div>
+        </div>
+        <div>
+          <div class="eight columns">EIGHT</div>
+          <div class="four  columns">FOUR</div>
+        </div>
+        <div>
+          <div class="nine columns">NINE</div>
+          <div class="three columns">THREE</div>
+        </div>
+        <div>
+          <div class="ten columns">TEN</div>
+          <div class="two columns">TWO</div>
+        </div>
+        <div>
+          <div class="eleven columns">ELEVEN</div>
+          <div class="one column" style="margin-bottom: 50px">ONE</div>
+        </div>
+        <div>
+          <div class="six columns">NO OFFSET</div>
+          <div class="six columns">SIX</div>
+        </div>
+        <div>
+          <div class="six offset-by-two columns">OFFSET BY 1/6</div>
+          <div class="four columns">FOUR</div>
+        </div>
+        <div>
+          <div class="six offset-by-one-third columns">OFFSET BY 1/3</div>
+          <div class="two columns">TWO</div>
+        </div>
+        <div>
+          <div class="six offset-by-one-half columns">OFFSET BY 1/2</div>
+        </div>
+      </div>
+      <div class="row">
+        <p>
+          Here's the code for how to use the grid system:
+        </p>
+          <pre>
+            <code>
+    &lt;div class="row"&gt;
+      &lt;div class="one column"&gt;
+        A div with one column length
+      &lt;/div&gt;
+      &lt;div class="eleven columns"&gt;
+        A div with eleven columns length
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="row"&gt;
+      &lt;div class="one-third column"&gt;
+        A div with one-third of the screen's length
+      &lt;/div&gt;
+      &lt;div class="two-thirds columns"&gt;
+        A div with two-thirds of the screen's length
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="row"&gt;
+      &lt;div class="one-half column"&gt;
+        A div with half of the screen's length
+      &lt;/div&gt;
+      &lt;div class="one-half column"&gt;
+        A div with the other half of the screen's length
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="row"&gt;
+      &lt;div class="six offset-by-two columns"&gt;
+        &lt;!-- Pushes a six-width-element by two units -->
+      &lt;/div&gt;
+      &lt;div class="two columns"&gt;
+        &lt;!-- The rest of the screen -->
+      &lt;/div&gt;
+    &lt;/div&gt;<div id="form-doc"></div>
+
+            </code>
+          </pre>
+      </div>
+
+      <div class="row">
+        <h4>Form Elements</h4>
+        <hr>
+        <p>
+          Meshki also has customized form elemets, which are just as beautiful as the others. Here are some examples of form elements you can use:
+        </p>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <label for="user1">Username:</label>
+          <input id="user1" class="expand" type="text" name="user1" placeholder="Enter your username">
+        </div>
+        <div class="six columns">
+          <label for="pass1">Password:</label>
+          <input id="pass1" class="expand" type="password" name="pass1" placeholder="Enter your password">
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+          <label for="dis-email1">Email:</label>
+          <input id="dis-email1" class="expand" type="email" name="dis-email1" value="me@borderliner.ir" disabled>
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+          <textarea class="expand custom-textarea">This is a sample &lt;textarea&gt; element. The corners are round, and there's a glowing effect when you select an element. You can also expand it!</textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <select class="expand">
+            <option selected disabled hidden>Choose your country</option>
+            <option value="us">United Stated</option>
+            <option value="ca">Canada</option>
+            <option value="de">Germany</option>
+            <option value="jp">Japan</option>
+          </select>
+        </div>
+        <div class="six columns">
+          <select class="expand" disabled style="width: 100%">
+            <option selected disabled hidden>This dropdown is disabled</option>
+            <option value="us">United Stated</option>
+            <option value="ca">Canada</option>
+            <option value="de">Germany</option>
+            <option value="jp">Japan</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <input id="rad-male" type="radio" name="gender" value="male">
+          <label for="rad-male" class="radio">Male</label>
+          <input id="rad-female" type="radio" name="gender" value="female">
+          <label for="rad-female" class="radio">Female</label>
+          <input id="rad-other" type="radio" name="gender" value="other">
+          <label for="rad-other" class="radio">Other</label>
+        </div>
+        <div class="six columns">
+          <input id="chk-eula" type="checkbox" name="chk-eula">
+          <label for="chk-eula" class="checkbox">I've read and agree with Terms of Service.</label>
+          <input id="chk-news" type="checkbox" name="chk-news">
+          <label for="chk-news" class="checkbox">I wish to receive newsletters from this site.</label>
+        </div>
+      </div>
+      <div class="row text-center">
+        <button class="default expand">Submit</button>
+      </div>
+      <br />
+      <div class="row">
+        <p>
+          This is the code snippet on how you can use form elements:
+        </p>
+          <pre>
+            <code>
+    &lt;form>
+      &lt;!--Text Inputs -->
+      &lt;div class="row">
+        &lt;div class="six columns">
+          &lt;label for="user1">Username:&lt;/label>
+          &lt;input id="user1" class="expand" type="text" name="user1" placeholder="Enter text here">
+        &lt;/div>
+        &lt;div class="six columns">
+          &lt;label for="pass1">Password:&lt;/label>
+          &lt;input id="pass1" class="expand" type="password" name="pass1">
+        &lt;/div>
+      &lt;/div>
+
+      &lt;!--Disabled Text Inputs -->
+      &lt;div class="row">
+        &lt;div class="twelve columns">
+          &lt;label for="dis-email1">Email:&lt;/label>
+          &lt;input id=dis-email1"" class="expand" type="email" name="dis-email1" value="me@borderliner.ir" disabled>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;!--Text Area -->
+      &lt;div class="row">
+        &lt;div class="twelve columns">
+          &lt;textarea class="expand">This is a sample &lt;textarea&gt; element.&lt;/textarea>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;!--Dropdown -->
+      &lt;div class="row">
+        &lt;div class="six columns">
+          &lt;select class="expand">
+            &lt;option selected disabled hidden>Choose your country&lt;/option>
+            &lt;option value="us">United Stated&lt;/option>
+            &lt;option value="ca">Canada&lt;/option>
+            &lt;option value="de">Germany&lt;/option>
+            &lt;option value="jp">Japan&lt;/option>
+          &lt;/select>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;!--Checkboxes and Radio Buttons -->
+      &lt;div class="row">
+        &lt;div class="six columns">
+          &lt;input id="rad-male" type="radio" name="gender" value="male">
+          &lt;label for="rad-male" class="radio">Male&lt;/label>
+          &lt;input id="rad-female" type="radio" name="gender" value="female">
+          &lt;label for="rad-female" class="radio">Female&lt;/label>
+          &lt;input id="rad-other" type="radio" name="gender" value="other">
+          &lt;label for="rad-other" class="radio">Other&lt;/label>
+        &lt;/div>
+        &lt;div class="six columns">
+          &lt;input id="chk-eula" type="checkbox" name="chk-eula">
+          &lt;label for="chk-eula" class="checkbox">I've read and agree with Terms of Service.&lt;/label>
+          &lt;input id="chk-news" type="checkbox" name="chk-news">
+          &lt;label for="chk-news" class="checkbox">I wish to receive newsletters from this site.&lt;/label>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;div class="row text-center">
+        &lt;button class="expand">Submit&lt;/button>
+      &lt;/div>
+    &lt;/form><div id="typography-doc"></div>
+            </code>
+          </pre>
+      </div>
+
+      <div class="row">
+        <h4>Typography</h4>
+        <hr>
+        <p>
+          Type is all set with the <code>rem</code>, so font-sizes and special relationships can be responsively sized based on a single <code>&lt;html></code> font-size property. Out of the box, Meshki never changes the <code>&lt;html></code> font-size, but it's there in case you need it for your project. All measurements are still base on 10 though, so a <code>&lt;h1></code> with <code>5.0rem</code> font-size just means <code>50px</code>.
+        </p>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          The typography base is <a href="https://fonts.google.com/specimen/Open+Sans">Open Sans</a> font, which is served locally, set at 15rem (15px) over a 1.6 line height (24px). Other type basics like <a href="javascript:void(0);">anchors</a>, <b>strong</b>, <i>emphasis</i>, and <u>underline</u> are all obviously included.
+        </div>
+        <div class="six columns">
+          <h1>Heading <span class="heading-font-size"><code>&lt;h1></code> 50rem</span></h1>
+        <h2>Heading <span class="heading-font-size"><code>&lt;h2></code> 42rem</span></h2>
+        <h3>Heading <span class="heading-font-size"><code>&lt;h3></code> 36rem</span></h3>
+        <h4>Heading <span class="heading-font-size"><code>&lt;h4></code> 30rem</span></h4>
+        <h5>Heading <span class="heading-font-size"><code>&lt;h5></code> 24rem</span></h5>
+        <h6>Heading <span class="heading-font-size"><code>&lt;h6></code> 15rem</span></h6>
+        </div>
+      </div>
+      <div class="row">
+        <h4>Code</h4>
+        <hr>
+        <p>
+          Code styling is kept basic: just wrap anything in a <code>&lt;code></code> and it will appear like <code>this</code>. It also has a <code>filled</code> style which is like <code class="filled">this</code>. For blocks of code, wrap a &lt;code> with a &lt;pre>.
+          <br> Note that for blocks of code, <code>filled</code> class needs to be added to the &lt;pre>, not &lt;code>.
+        </p>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+          <pre>
+            <code>
+      &lt;code>bower install meshki&lt;/code>
+
+      &lt;pre>
+        &lt;code>
+        .some-class {
+          background-color: red;
+        }
+        &lt;/code>
+      &lt;/pre>
+            </code>
+          </pre>
+          <pre class="filled">
+            <code>
+      &lt;code class="filled">bower install meshki&lt;/code>
+
+      &lt;pre class="filled">
+        &lt;code>
+        (function(
+          console.log('Hello world!');
+        ))();
+        &lt;/code>
+      &lt;/pre><div id="tables-doc"></div>
+            </code>
+          </pre>
+        </div>
+      </div>
+      <div class="row">
+        <h4>Tables</h4>
+        <hr>
+        <p>
+          Be sure to use properly formed table markup with <code>&lt;thead></code> and <code>&lt;tbody></code> when building a <code>table</code>.
+        </p>
+        <p>
+          You can customize your table with the below classes:
+          <ul>
+            <li><code>hover</code> : Makes your table's rows highlighted when hovering over them with mouse.</li>
+            <li><code>striped</code> : It stripes your table (even rows, except the header).</li>
+          </ul>
+        </p>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+        Toggle: <button class="medium" onclick="var tbl=document.getElementById('table-example');tbl.classList.contains('striped')?(tbl.className='expand hover', this.innerHTML='Not Striped', this.className='medium'):(tbl.className='expand hover striped', this.innerHTML='Striped', this.className='medium default')">Not Striped</button>
+          <table class="expand hover" id="table-example">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mohammad reza Hajianpour</td>
+                <td>23</td>
+                <td>Male</td>
+                <td>Iran</td>
+              </tr>
+              <tr>
+                <td>Carl Johnson</td>
+                <td>48</td>
+                <td>Male</td>
+                <td>Los Santos</td>
+              </tr>
+              <tr>
+                <td>Malena Morgan</td>
+                <td>25</td>
+                <td>Female</td>
+                <td>Florida</td>
+              </tr>
+              <tr>
+                <td>Harry Truman</td>
+                <td>88</td>
+                <td>Male</td>
+                <td>Missouri</td>
+              </tr>
+            </tbody>
+          </table><div id="footer-doc"></div>
+        </div>
+      </div>
+      <div class="row">
+        <h4>Footer</h4>
+        <hr>
+        <p>
+          Meshki has a customized footer which is ready to use out-of-the-box. Create a <code>&lt;footer></code> element (or a div with "footer" class, since IE8 does not support &lt;footer>). You can also have a "compact" version of the footer by adding "compact" class to the footer.
+          <b>Note</b> that Meshki's footer does not enforce footer's height, so the more you add, the bigger it gets.
+        </p>
+        <pre>
+          <code>
+    &lt;footer class="compact">
+      &lt;div class="row">
+        &lt;div class="six columns">
+          &lt;p>Created by: Mohammad reza Hajianpour (Borderliner)&lt;/p>
+        &lt;/div>
+        &lt;div class="six columns text-center">
+          &lt;p>2016, Licensed under MIT&lt;/p>
+        &lt;/div>
+      &lt;/div>
+    &lt;/footer>
+          </code>
+        </pre>
+      </div>
+
+      <div class="row">
+        <h4>Media Queries</h4>
+        <hr>
+        <p>
+          Meshki uses media queries to serve its scalable grid, but also has a list of queries for convenience of styling your site across devices. The sizes for queries have been taken from <a href="http://getbootstrap.com">Twitter's Bootstrap</a> for more compatibility. The queries are mobile-first, meaning they target min-width. Mobile-first queries are how Meshki's grid is built and is the preferrable method of organizing CSS. It means all styles outside of a query apply to all devices, then larger devices are targeted for enhancement. This prevents small devices from having to parse tons of unused CSS. The sizes for the queries are:
+        </p>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <ul>
+            <li><b>Desktop HD</b>: 1200px</li>
+            <li><b>Desktop</b>: 992px</li>
+            <li><b>Tablet</b>: 768px</li>
+          </ul>
+        </div>
+        <div class="six columns vertical-line">
+          <ul>
+            <li><b>Phablet</b>: 544px</li>
+            <li><b>Mobile</b>: 400px</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <pre>
+            <code>
+      /* Mobile first queries */
+
+      /* Larger than mobile */
+      @media (min-width: 400px) {}
+
+      /* Larger than phablet */
+      @media (min-width: 544px) {}
+
+      /* Larger than tablet */
+      @media (min-width: 768px) {}
+
+      /* Larger than desktop */
+      @media (min-width: 992px) {}
+
+      /* Larger than Desktop HD */
+      @media (min-width: 1200px) {}
+            </code>
+          </pre>
+      </div>
+      <div class="row">
+        <h4>Utilities</h4>
+        <hr>
+        <p>
+          Meshki has a number of small utility classes that act as easy-to-use helpers. Sometimes it's better to use a utility class than create a whole new class just to float an element.
+        </p>
+      </div>
+      <div class="row">
+        <pre>
+          <code>
+      /* Make element full width */
+      .expand {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      /* Make sure elements don't run outside containers (great for images in columns) */
+      .expand-container {
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+      /* Float either direction */
+      .float-left {
+        float: left !important;
+      }
+
+      .float-right {
+        float: right !important;
+      }
+
+      /* Center an element */
+      .centerize {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Center a text */
+      .text-center {
+        text-align: center;
+      }
+
+      /* Vertical line */
+      .vertical-line {
+        border-left: 1px solid #E1E1E1;
+      }
+
+      /* Hides the element on mobiles and phablets */
+      @media (max-width: 544px) {
+        .hide-on-mobile {
+          display: none;
+        }
+      }
+
+      /* Hides the element on tablets and smaller */
+      @media (max-width: 768px) {
+        .hide-on-tablet {
+          display: none;
+        }
+      }
+
+      /* Hides the element on desktops */
+      @media (min-width: 768px) {
+        .hide-on-desktop {
+          display: none;
+        }
+      }
+
+      /* Hides the element on non-mobile and non-phablets */
+      @media (min-width: 544px) {
+        .hide-on-non-mobile {
+          display: none;
+        }
+      }
+          </code>
+        </pre>
+      </div>
+      <div class="row">
+        <p>
+          This website uses the awesome "<a href="http://fontawesome.io/" target="_blank">font-awesome</a>" to display icons and such. It is by far the best font icon set I've ever encountered. Make sure to check out their website.
+        </p>
+      </div>
+    </div>
+    <footer class="compact">
+      <div class="row">
+        <div class="six columns">
+          <p>Created with <i class="fa fa-heart custom-love"></i> by Mohammad reza Hajianpour (<a href="https://github.com/Borderliner">Borderliner</a>)</p>
+        </div>
+        <div class="six columns text-center">
+          <p>2016, Licensed under <a href="https://github.com/Borderliner/Meshki/blob/master/LICENSE.md">MIT</a></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+  window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+  }(document, "script", "twitter-wjs"));
+  </script>
+</body>
+
+</html>
