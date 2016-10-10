@@ -28,8 +28,14 @@ task :concat_css do
   puts colorize 36, "Concatenating CSS files..."
 
   begin
-    puts 'cat src/css/*.css >> dist/meshki.css'
-    system 'cat src/css/*.css >> dist/meshki.css'
+    puts "mv src/css/rtl.css src/css/rtl"
+    system "mv src/css/rtl.css src/css/rtl"
+    puts "cat src/css/*.css >> dist/meshki.css"
+    system "cat src/css/*.css >> dist/meshki.css"
+    puts "mv src/css/rtl src/css/rtl.css"
+    system "mv src/css/rtl src/css/rtl.css"
+    puts "cp src/css/rtl.css dist/"
+    system "cp src/css/rtl.css dist/meshki-rtl.css"
     puts colorize 32, 'DONE'
   rescue Exception => msg
     puts msg
@@ -44,6 +50,8 @@ task :uglify_css do
   begin
     puts 'sass --scss dist/meshki.css:dist/meshki.min.css --style compressed'
     system 'sass --scss dist/meshki.css:dist/meshki.min.css --style compressed'
+    puts 'sass --scss dist/meshki-rtl.css:dist/meshki-rtl.min.css --style compressed'
+    system 'sass --scss dist/meshki-rtl.css:dist/meshki-rtl.min.css --style compressed'
     puts colorize 32, 'DONE'
   rescue Exception => msg
     puts msg
