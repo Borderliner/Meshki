@@ -30,6 +30,11 @@ module.exports = function(grunt){
 		    src: 'src/js/meshki.js',
 		    dest: 'dist/meshki.js'
 		  },
+      js_rtl: {
+        expand: false,
+        src: 'src/js/meshki-rtl.js',
+        dest: 'dist/meshki-rtl.js'
+      },
 		  fonts: {
 		  	cwd: 'src',
 		  	expand: true,

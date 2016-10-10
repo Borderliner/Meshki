@@ -64,10 +64,12 @@ task :uglify_js do
   puts colorize 36, "Uglifying JS files..."
 
   begin
-    puts 'cp src/js/meshki.js dist/'
-    system 'cp src/js/meshki.js dist/meshki.js'
+    puts 'cp src/js/* dist/'
+    system 'cp src/js/* dist/'
     puts 'uglifyjs --compress --mangle -o dist/meshki.min.js dist/meshki.js'
     system 'uglifyjs --compress --mangle -o dist/meshki.min.js dist/meshki.js'
+    puts 'uglifyjs --compress --mangle -o dist/meshki-rtl.min.js dist/meshki-rtl.js'
+    system 'uglifyjs --compress --mangle -o dist/meshki-rtl.min.js dist/meshki-rtl.js'
     puts colorize 32, 'DONE'
   rescue Exception => msg
     puts msg
