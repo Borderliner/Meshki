@@ -68,8 +68,6 @@ task :uglify_js do
     system 'cp src/js/* dist/'
     puts 'uglifyjs --compress --mangle -o dist/meshki.min.js dist/meshki.js'
     system 'uglifyjs --compress --mangle -o dist/meshki.min.js dist/meshki.js'
-    puts 'uglifyjs --compress --mangle -o dist/meshki-rtl.min.js dist/meshki-rtl.js'
-    system 'uglifyjs --compress --mangle -o dist/meshki-rtl.min.js dist/meshki-rtl.js'
     puts colorize 32, 'DONE'
   rescue Exception => msg
     puts msg
