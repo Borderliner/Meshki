@@ -3,6 +3,9 @@
   - [ ] Fix button-couples on tablets, where they crash after opening the push slider
   - [ ] Make Meshki font-agnostic
 
+## v1.2.4 (HOTFIX)
+  - [x] Fix nav-right not working on nav-dropdown
+
 ## v1.2.3
   - [x] Increase opacity of the overlay to 40%
   - [x] Better close button for sidenav in docs
