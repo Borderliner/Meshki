@@ -75,6 +75,15 @@
   float: right !important;
 }
 
+/* Fix for #2 issue, where nav-dropdown-content would go off the screen. */
+.nav ul li.nav-right.nav-dropdown .nav-dropdown-content {
+  right: 0;
+}
+
+.nav ul li.nav-right.nav-dropdown ~ .nav-dropdown .nav-dropdown-content {
+  right: auto;
+}
+
 .nav ul a.button,
 .nav ul button {
   margin: 0px 5px 0px 5px !important;
