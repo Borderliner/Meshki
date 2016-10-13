@@ -12,9 +12,11 @@ Check out <http://meshki.borderliner.ir/> for samples and details.
 ## Getting started
 
 There are a couple ways to download Meshki:
-- [Download the zip](https://github.com/Borderliner/Meshki/archive/v1.2.4.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v1.2.4.tar.gz)
+- [Download the zip](https://github.com/Borderliner/Meshki/archive/v1.2.5.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v1.2.5.tar.gz)
 - Clone the repo: `git clone https://github.com/Borderliner/Meshki.git` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download)<br>
 You can also download it via `bower install meshki --save`
+- Use Bower: `bower install meshki --save`
+- Use NPM: `npm install meshki --save`
 
 ### How to compile
 You need node.js to minify the source CSS and JavaScript files and produce outputs. Head over to [nodejs.org](https://nodejs.org/en/) and download a version for your system, or download it from your package manager. Next, install `Grunt` with this command:

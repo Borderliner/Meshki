@@ -3,6 +3,9 @@
   - [ ] Fix button-couples on tablets, where they crash after opening the push slider
   - [ ] Make Meshki font-agnostic
 
+## v1.2.5 (HOTFIX)
+  - [x] Fix nav-dropdown-content.nav-right going off the screen
+
 ## v1.2.4 (HOTFIX)
   - [x] Fix nav-right not working on nav-dropdown
 
