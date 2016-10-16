@@ -14,7 +14,8 @@ create a more consistent add-on components that can match the default properties
 Meshki. Since CSS does not support variables like Sass and LESS, I am
 providing you the values here directly. Here you go:
 
-- $default-font-family:              'Ubuntu';
+- $default-font-family:              'Open Sans';
+- $default-rtl-font-family:          'B yekan';
 - $default-font-weight:              400;
 - $container-max-width:              960px;
 - $container-width-mobile:           100%;
@@ -74,12 +75,6 @@ providing you the values here directly. Here you go:
 
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-/* Default font face for Meshki */
-@font-face {
-  font-family: "Open Sans";
-  src: url("fonts/OpenSans-Regular.ttf");
-}
 
 /* NOTE
 html is set to 62.5% so that all the REM measurements throughout Skeleton

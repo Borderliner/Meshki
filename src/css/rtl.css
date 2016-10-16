@@ -6,14 +6,9 @@
 * https://opensource.org/licenses/MIT
 */
 
-@font-face {
-  font-family: "B yekan";
-  src: url("fonts/B-Yekan.ttf");
-}
-
 body {
   direction: rtl;
-  font-family: "B yekan", sans-serif;
+  font-family: "P Yekan", "Open Sans", sans-serif;
 }
 
 .nav ul li {
@@ -44,6 +39,10 @@ body {
   margin: -5px !important;
   margin-right: auto !important;
   margin-left: auto !important;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: "P Yekan";
 }
 
 @media (min-width: 768px) {

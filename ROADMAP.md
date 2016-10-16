@@ -1,7 +1,7 @@
 ## v1.3.0
   - [ ] Add ~~basic~~ complete RTL support, for right-to-left languages (like Persian, Arabic, Hebrew, etc.)
   - [ ] Fix button-couples on tablets, where they crash after opening the push slider
-  - [ ] Make Meshki font-agnostic
+  - [x] Make Meshki font-agnostic
   - [ ] Add pre-defined text selection color for better consistency across OSes.
   - [ ] Update Normalize.css to v5.0
   - [ ] Add 3rd state to buttons (:active)
