@@ -17,6 +17,7 @@ button, input, optgroup, select, textarea {
 
 .column, .columns {
   float: right;
+  margin-left: auto;
 }
 
 @media (min-width: 544px) {
