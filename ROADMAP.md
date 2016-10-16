@@ -4,6 +4,8 @@
   - [ ] Make Meshki font-agnostic
   - [ ] Add pre-defined text selection color for better consistency across OSes.
   - [ ] Update Normalize.css to v5.0
+  - [ ] Add 3rd state to buttons (:active)
+  - [ ] Add an rule to make the whole form elements have sharp edges
 
 ## v1.2.3
   - [x] Increase opacity of the overlay to 40%
