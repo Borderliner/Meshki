@@ -34,6 +34,13 @@ button, input, optgroup, select, textarea {
   padding: 8px 32px 8px 8px;
 }
 
+.sidenav-close-button {
+  right: auto;
+  left: 0;
+  padding-right: 0 !important;
+  padding-left: 30px !important;
+}
+
 .button-couple button:not(:first-child):not(:last-child),
 .button-couple a:not(:first-child):not(:last-child) {
   pointer-events: none;
