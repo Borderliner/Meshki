@@ -11,6 +11,10 @@ body {
   font-family: "P Yekan", "Open Sans", sans-serif;
 }
 
+button, input, optgroup, select, textarea {
+  font-family: "P Yekan", "Open Sans", sans-serif;
+}
+
 .nav ul li {
   float: right;
   margin-bottom: 0px;
@@ -41,10 +45,6 @@ body {
   margin-left: auto !important;
 }
 
-button, input, optgroup, select, textarea {
-  font-family: "P Yekan";
-}
-
 @media (min-width: 768px) {
   .button-couple button:first-child,
   .button-couple a:first-child {
@@ -53,15 +53,15 @@ button, input, optgroup, select, textarea {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     margin-right: 0 !important;
-    border-left: 0;
-    border-right: 2px solid;
+    border-left-style: none;
+    border-right-style: solid;
   }
 
   .button-couple button:not(:first-child):not(:last-child),
   .button-couple a:not(:first-child):not(:last-child) {
     border-style: solid;
     display: inline;
-    margin: -8px !important;
+    margin: -9px !important;
   }
 
   .button-couple button:last-child,
@@ -71,7 +71,7 @@ button, input, optgroup, select, textarea {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     margin-left: 0 !important;
-    border-right: 0;
-    border-left: 2px solid;
+    border-right-style: none;
+    border-left-style: solid;
   }
 }

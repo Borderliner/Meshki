@@ -193,14 +193,14 @@ input[type="button"].warning:hover {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     margin-right: 0 !important;
-    border-right: 0;
+    border-right-style: none;
   }
 
   .button-couple button:not(:first-child):not(:last-child),
   .button-couple a:not(:first-child):not(:last-child) {
     border-style: solid;
     display: inline;
-    margin: -4px !important;
+    margin: -5px !important;
   }
 
   .button-couple button:last-child,
@@ -208,6 +208,6 @@ input[type="button"].warning:hover {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     margin-left: 0 !important;
-    border-left: 0;
+    border-left-style: none;
   }
 }
