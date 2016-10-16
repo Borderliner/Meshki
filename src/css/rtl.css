@@ -15,6 +15,21 @@ button, input, optgroup, select, textarea {
   font-family: "P Yekan", "Open Sans", sans-serif;
 }
 
+.column, .columns {
+  float: right;
+}
+
+@media (min-width: 544px) {
+  .column:first-child, .columns:first-child {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .column, .columns {
+    margin-right: 4%;
+  }
+}
+
 .nav ul li {
   float: right;
   margin-bottom: 0px;
