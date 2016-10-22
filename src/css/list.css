@@ -9,14 +9,14 @@
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-/* Unordered Lists have empty circle style */
+/* Unordered Lists have empty disc style */
 ul {
-  list-style: circle inside;
+  list-style: disc;
 }
 
 /* Ordered Lists have numerical style */
 ol {
-  list-style: decimal inside;
+  list-style: decimal;
 }
 
 /* Change the style of nested lists */
