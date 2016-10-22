@@ -29,6 +29,7 @@
   <![endif]-->
   <link rel="shortcut icon" href="dist/favicon.ico" type="image/x-icon" />
   <script type="text/javascript" src="../dist/meshki.min.js"></script>
+  <script type="text/javascript" src="githubstars.js"></script>
 </head>
 
 <body>
@@ -44,9 +45,9 @@
       <a href="#buttons-doc" onclick="meshki.closeNav()">دکمه‌ها</a>
       <a href="#sidenav-doc" onclick="meshki.closeNav()">کشو</a>
       <a href="#navbar-doc" onclick="meshki.closeNav()">منو</a>
-      <a href="#grid-doc" onclick="meshki.closeNav()">سیستم صفحه</a>
-      <a href="#form-doc" onclick="meshki.closeNav()">فرم‌ها</a>
-      <a href="#typography-doc" onclick="meshki.closeNav()">نحوه چاپ</a>
+      <a href="#grid-doc" onclick="meshki.closeNav()">سیستم صفحه‌بندی</a>
+      <a href="#form-doc" onclick="meshki.closeNav()">اجزای فرم</a>
+      <a href="#typography-doc" onclick="meshki.closeNav()">نگارش</a>
       <a href="#tables-doc" onclick="meshki.closeNav()">جدول‌ها</a>
       <a href="#footer-doc" onclick="meshki.closeNav()">پابرگ</a>
     </div>
@@ -64,7 +65,7 @@
       <ul>
         <li><a class="logo" href="javascript:void(0);" onclick="meshki.openNav()"><i class="fa fa-bars" aria-hidden="true"></i>مشکی</a></li>
         <li><a href="http://borderliner.ir/blog/tag/meshki/">اخبار</a></li>
-        <li><a href="https://github.com/Borderliner/Meshki">گیت‌هاب</a></li>
+        <li><a href="https://github.com/Borderliner/Meshki" id="github-btn">گیت‌هاب</a></li>
         <li class="nav-dropdown hide-on-mobile">
           <a href="javascript:void(0)" class="nav-dropdown-button">اجزا</a>
           <div class="nav-dropdown-content">
@@ -72,15 +73,14 @@
             <a href="#sidenav-doc">کشو</a>
             <a href="#navbar-doc">منو</a>
             <a href="#grid-doc">سیستم صفحه‌بندی</a>
-            <a href="#form-doc">فرم‌ها</a>
+            <a href="#form-doc">اجزای فرم</a>
             <a href="#typography-doc">نگارش</a>
             <a href="#tables-doc">جدول‌ها</a>
-            <a href="#footer-doc">پا صفحه</a>
+            <a href="#footer-doc">پابرگ</a>
           </div>
         </li>
         <li class="nav-left hide-on-tablet"><input type="text" name="" placeholder="جستجو..."></li>
         <li class="nav-left hide-on-tablet"><button class="success"><i class="fa fa-search" aria-hidden="true"></i></button></li>
-        <li class="nav-left hide-on-tablet"><iframe src="https://ghbtns.com/github-btn.html?user=borderliner&repo=meshki&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px" style="margin-top:5px;position:relative;left:20px;opacity:0.95;"></iframe></li>
       </ul>
     </div>
     <div class="container">
@@ -145,7 +145,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.0/meshki.min.js
         در همین راستا، مشکی سعی می‌کند تا یک ظاهر فوق‌العاده جذاب را به ارمغان بیاورد: رنگ مشکی چشمان شمارا اذیت نمی‌کند، و سادگی و ظرافتی بی نظیر را تقدیم شما می‌کند. یکی از اهداف اصلی مشکی، پایدار و قابل اطمینان بودن است. برای همین ما تمام تلاشمان را می‌کنیم تا مشکی را همیشه به-روز نگاه داریم و ایرادات آن را به سرعت برطرف کنیم. مشکی درحال حاضر به اندازه کافی پایدار است.
         </p>
         <p>
-        مشکی و اسکلتون تفاوت‌های بسیاری دارند. اگرچه مشکی از اسکلتون مشتق شده است، ولی به شدت کامل‌تر از والد خود می‌باشد. کافیست به سایت اسکلتون نگاه کنید. مقدار زیادی از کدهای درون وب‌سایت متعلق به اسلتون نیست و فایل‌های جدای CSS نیز وجود دارند. اما <b>این سایت به طور خالص از مشکی استفاده می‌کند</b>، و از یک فایل <a href="custom-rtl.css" id="components" target="_blank">custom-rtl.css</a> برای شخصی‌سازی بهره می‌برد.
+        مشکی و اسکلتون تفاوت‌های بسیاری دارند. اگرچه مشکی از اسکلتون مشتق شده است، ولی به شدت کامل‌تر از والد خود می‌باشد. کافیست به سایت اسکلتون نگاه کنید. مقدار زیادی از کدهای درون وب‌سایت متعلق به اسکلتون نیست و فایل‌های جدای CSS نیز وجود دارند. اما <b>این سایت به طور خالص از مشکی استفاده می‌کند</b>، و از یک فایل <a href="custom-rtl.css" id="components" target="_blank">custom-rtl.css</a> برای شخصی‌سازی بهره می‌برد.
         </p>
       </div>
 
@@ -486,7 +486,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.0/meshki.min.js
           <pre>
             <code>
     &lt;form>
-      &lt;!--ورودی‌های متن -->
+      &lt;!-- ورودی‌های متن -->
       &lt;div class="row">
         &lt;div class="six columns">
           &lt;label for="user1">نام کاربری:&lt;/label>
@@ -498,7 +498,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.0/meshki.min.js
         &lt;/div>
       &lt;/div>
 
-      &lt;!--Disabled Text Inputs -->
+      &lt;!-- ورودی‌های متن غیرفعال -->
       &lt;div class="row">
         &lt;div class="twelve columns">
           &lt;label for="dis-email1">پست الکترونیکی:&lt;/label>
@@ -506,7 +506,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.0/meshki.min.js
         &lt;/div>
       &lt;/div>
 
-      &lt;!-- Text Area -->
+      &lt;!-- ناحیه متن -->
       &lt;div class="row">
         &lt;div class="twelve columns">
           &lt;textarea class="expand">این یک نمونه است &lt;textarea&gt; element.&lt;/textarea>
@@ -574,7 +574,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.0/meshki.min.js
         </div>
       </div>
       <div class="row">
-        <h4>کد</h4>
+        <h4>کدها</h4>
         <hr>
         <p>
           شکل‌دهی به کدها در مشکی کار آسانیست: هر چیزی که درون <code>&lt;code></code> قرار بگیرد، <code>این شکلی</code> می‌شود. همچنین می‌توانید کلاس <code>filled</code> را به آن اضافه کنید تا <code class="filled">این شکلی</code> شود. برای قطعه کد‌ها، تگ <code>&lt;code></code> را درون یک تگ <code>&lt;pre></code> قرار دهید.
@@ -614,7 +614,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.0/meshki.min.js
         </div>
       </div>
       <div class="row">
-        <h4>Tables</h4>
+        <h4>جدول‌ها</h4>
         <hr>
         <p>
           حتما سعی کنید از ساختار صحیح جدول برای ساخت آنها استفاده کنید. یعنی جداول شما باید دارای <code>&lt;thead></code> و <code>&lt;tbody></code> باشد.
@@ -697,69 +697,69 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.0/meshki.min.js
         <h4>سایز صفحه</h4>
         <hr>
         <p>
-          Meshki uses media queries to serve its scalable grid, but also has a list of queries for convenience of styling your site across devices. The sizes for queries have been taken from <a href="http://getbootstrap.com">Twitter's Bootstrap</a> for more compatibility. The queries are mobile-first, meaning they target min-width. Mobile-first queries are how Meshki's grid is built and is the preferrable method of organizing CSS. It means all styles outside of a query apply to all devices, then larger devices are targeted for enhancement. This prevents small devices from having to parse tons of unused CSS. The sizes for the queries are:
+          مشکی از اندازه‌های ثابتی برای صفحه‌بندی خود استفاده می‌کند، اما برای راحتی شما، این سایزها را برای شما لیست کرده‌ایم تا بتوانید بهتر برای دستگاه‌های مختلف برنامه‌نویسی کنید. اندازه‌های مورد استفاده در مشکی از <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> گرفته شده‌اند تا بیشترین هماهنگی را با سایر کتابخانه‌ها به همراه آورد. اولویت این اندازه‌ها با موبایل است (Mobile-First)، یعنی حداقل عرض را تنظیم می‌کند. از این روش برای ساخت سیستم صفحه‌بندی مشکی نیز استفاده شده است و بهترین راه برای نظم‌دهی به کدهای CSS است. طریقه کار این است که اولیت به موبایل‌ها داده شده است تا نیازی نباشد کدهای بسیار زیاد مربوط به دسکتاپ، روی موبایل بارگذاری شود. اگر نیاز به صفحات بزرگ بود، مشکی کدهای جدید را اضافه می‌نماید. این سایز‌ها از قرار زیر هستند:
         </p>
       </div>
       <div class="row">
-        <div class="six columns">
-          <ul>
-            <li><b>Desktop HD</b>: 1200px</li>
-            <li><b>Desktop</b>: 992px</li>
-            <li><b>Tablet</b>: 768px</li>
-          </ul>
-        </div>
         <div class="six columns vertical-line">
           <ul>
-            <li><b>Phablet</b>: 544px</li>
-            <li><b>Mobile</b>: 400px</li>
+            <li><b>دسکتاپ باکیفیت</b>: 1200 پیکسل</li>
+            <li><b>دسکتاپ</b>: 992 پیکسل</li>
+            <li><b>تبلت</b>: 768 پیکسل</li>
+          </ul>
+        </div>
+        <div class="six columns">
+          <ul>
+            <li><b>فبلت</b>: 544 پیکسل</li>
+            <li><b>موبایل</b>: 400 پیکسل</li>
           </ul>
         </div>
       </div>
       <div class="row">
         <pre>
             <code>
-      /* Mobile first queries */
+      /* اندازه‌ها با اولویت موبایل */
 
-      /* Larger than mobile */
+      /* بزرگتر از موبایل */
       @media (min-width: 400px) {}
 
-      /* Larger than phablet */
+      /* بزرگتر از فبلت */
       @media (min-width: 544px) {}
 
-      /* Larger than tablet */
+      /* بزرگتر از تبلت */
       @media (min-width: 768px) {}
 
-      /* Larger than desktop */
+      /* بزرگتر از دسکتاپ */
       @media (min-width: 992px) {}
 
-      /* Larger than Desktop HD */
+      /* بزرگتر از دسکتاپ HD */
       @media (min-width: 1200px) {}
             </code>
           </pre>
       </div>
       <div class="row">
-        <h4>Utilities</h4>
+        <h4>ابزارهای جانبی</h4>
         <hr>
         <p>
-          Meshki has a number of small utility classes that act as easy-to-use helpers. Sometimes it's better to use a utility class than create a whole new class just to float an element.
+          مشکی با بهره‌گیری از کلاسهای جانبی، از نوشتن کدهای اضافی CSS جلوگیری می‌کند. شما می‌توانید از کلاس‌های زیر به راحتی در پروژه‌های خود استفاده کنید.
         </p>
       </div>
       <div class="row">
         <pre>
           <code>
-      /* Make element full width */
+      /* گسترش دادن یک المان */
       .expand {
         width: 100%;
         box-sizing: border-box;
       }
 
-      /* Make sure elements don't run outside containers (great for images in columns) */
+      /* مراقب باشید تا اجزا از محدوده‌شان خارج نشوند. برای عکسهای داخل ستون انتخاب مناسبیست. */
       .expand-container {
         max-width: 100%;
         box-sizing: border-box;
       }
 
-      /* Float either direction */
+      /* شناور کردن یک جزء به دو طرف */
       .float-left {
         float: left !important;
       }
@@ -768,44 +768,44 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.0/meshki.min.js
         float: right !important;
       }
 
-      /* Center an element */
+      /* قرار دادن یک جزء در مرکز صفحه */
       .centerize {
         margin-left: auto;
         margin-right: auto;
       }
 
-      /* Center a text */
+      /* قرار دادن یک متن در مرکز صفحه */
       .text-center {
         text-align: center;
       }
 
-      /* Vertical line */
+      /* خط عمودی */
       .vertical-line {
         border-left: 1px solid #E1E1E1;
       }
 
-      /* Hides the element on mobiles and phablets */
+      /* جزء مورد نظر را در موبایل و فبلت پنهان می‌کند */
       @media (max-width: 544px) {
         .hide-on-mobile {
           display: none;
         }
       }
 
-      /* Hides the element on tablets and smaller */
+      /* اجزا را از تبلت‌ها پنهان می‌کند */
       @media (max-width: 768px) {
         .hide-on-tablet {
           display: none;
         }
       }
 
-      /* Hides the element on desktops */
+      /* اجزا را از دسکتاپ‌ها پنهان می‌کند */
       @media (min-width: 768px) {
         .hide-on-desktop {
           display: none;
         }
       }
 
-      /* Hides the element on non-mobile and non-phablets */
+      /* اجزا را در دستگاه‌هایی غیر از موبایل و فبلت پنهان می‌کند */
       @media (min-width: 544px) {
         .hide-on-non-mobile {
           display: none;
@@ -816,21 +816,25 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.0/meshki.min.js
       </div>
       <div class="row">
         <p>
-          This website uses the awesome "<a href="http://fontawesome.io/" target="_blank">font-awesome</a>" to display icons and such. It is by far the best font icon set I've ever encountered. Make sure to check out their website.
+          این وب‌سایت از فونت بی‌نظیر "<a href="http://fontawesome.io/" target="_blank">font-awesome</a>" برای نمایش اشکال مختلف استفاده می‌کند. به نظر من بهترین فونت-آیکون موجود است. حتما به وبسایت این پروژه سری بزنید!
         </p>
       </div>
     </div>
     <footer class="compact">
       <div class="row">
         <div class="six columns">
-          <p>Created with <i class="fa fa-heart custom-love"></i> by Mohammad reza Hajianpour (<a href="https://github.com/Borderliner">Borderliner</a>)</p>
+          <p>ساخته شده با <i class="fa fa-heart custom-love"></i> توسط محمدرضا حاجیانپور (<a href="https://github.com/Borderliner">Borderliner</a>)</p>
         </div>
         <div class="six columns text-center">
-          <p>2016, Licensed under <a href="https://github.com/Borderliner/Meshki/blob/master/LICENSE.md">MIT</a></p>
+          <p>2016، تحت مجوز <a href="https://github.com/Borderliner/Meshki/blob/master/LICENSE.md">MIT</a></p>
         </div>
       </div>
     </footer>
   </div>
+  <script type="text/javascript">
+    var elem = document.getElementById('github-btn');
+    elem.innerHTML = 'گیتهاب (' + githubStars('Borderliner/Meshki') + ')';
+  </script>
   <script>
   window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],

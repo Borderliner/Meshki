@@ -193,14 +193,14 @@ input[type="button"].warning:hover {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     margin-right: 0 !important;
-    border-right: 0;
+    border-right-style: none;
   }
 
   .button-couple button:not(:first-child):not(:last-child),
   .button-couple a:not(:first-child):not(:last-child) {
     border-style: solid;
     display: inline;
-    margin: -4px !important;
+    margin: -5px !important;
   }
 
   .button-couple button:last-child,
@@ -208,7 +208,7 @@ input[type="button"].warning:hover {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     margin-left: 0 !important;
-    border-left: 0;
+    border-left-style: none;
   }
 }
 /*
@@ -463,8 +463,7 @@ input[type="checkbox"] + label.checkbox:before, input[type="radio"] + label.radi
   border: 2px solid #E1E1E1;
   border-radius: 5px;
   padding: 2px;
-  margin-right: 10px;
-  margin-bottom: 3px;
+  margin: auto 10px 3px auto;
   vertical-align: middle;
   text-align: center;
   transition: background-color .3s, box-shadow .3s;
@@ -620,14 +619,14 @@ input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-/* Unordered Lists have empty circle style */
+/* Unordered Lists have empty disc style */
 ul {
-  list-style: circle inside;
+  list-style: disc;
 }
 
 /* Ordered Lists have numerical style */
 ol {
-  list-style: decimal inside;
+  list-style: decimal;
 }
 
 /* Change the style of nested lists */
@@ -659,7 +658,8 @@ create a more consistent add-on components that can match the default properties
 Meshki. Since CSS does not support variables like Sass and LESS, I am
 providing you the values here directly. Here you go:
 
-- $default-font-family:              'Ubuntu';
+- $default-font-family:              'Open Sans';
+- $default-rtl-font-family:          'B yekan';
 - $default-font-weight:              400;
 - $container-max-width:              960px;
 - $container-width-mobile:           100%;
@@ -719,12 +719,6 @@ providing you the values here directly. Here you go:
 
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-/* Default font face for Meshki */
-@font-face {
-  font-family: "Open Sans";
-  src: url("fonts/OpenSans-Regular.ttf");
-}
 
 /* NOTE
 html is set to 62.5% so that all the REM measurements throughout Skeleton

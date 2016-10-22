@@ -19,14 +19,17 @@
   <meta name="twitter:image" content="meta-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.3/meshki.min.css">
+  <link rel="stylesheet" type="text/css" href="../dist/meshki.min.css">
   <link rel="stylesheet" type="text/css" href="custom.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   <link rel="shortcut icon" href="dist/favicon.ico" type="image/x-icon" />
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.3/meshki.min.js"></script>
+  <script type="text/javascript" src="../dist/meshki.min.js"></script>
+  <script type="text/javascript" src="githubstars.js">
+
+  </script>
 </head>
 
 <body>
@@ -62,7 +65,7 @@
       <ul>
         <li><a class="logo" href="javascript:void(0);" onclick="meshki.openNav()"><i class="fa fa-bars" aria-hidden="true"></i>Meshki</a></li>
         <li><a href="http://borderliner.ir/blog/tag/meshki/">News</a></li>
-        <li><a href="https://github.com/Borderliner/Meshki">GitHub</a></li>
+        <li><a href="https://github.com/Borderliner/Meshki" id="github-btn">GitHub</a></li>
         <li class="nav-dropdown hide-on-mobile">
           <a href="javascript:void(0)" class="nav-dropdown-button">Components</a>
           <div class="nav-dropdown-content">
@@ -78,7 +81,7 @@
         </li>
         <li class="nav-right hide-on-tablet"><input type="text" name="" placeholder="Search..."></li>
         <li class="nav-right hide-on-tablet"><button class="success"><i class="fa fa-search" aria-hidden="true"></i></button></li>
-        <li class="nav-right hide-on-tablet"><iframe src="https://ghbtns.com/github-btn.html?user=borderliner&repo=meshki&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px" style="margin-top:5px;position:relative;left:20px;opacity:0.95;"></iframe></li>
+        <!--<li class="nav-right hide-on-tablet"><iframe src="https://ghbtns.com/github-btn.html?user=borderliner&repo=meshki&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px" style="margin-top:5px;position:relative;left:20px;opacity:0.95;"></iframe></li>-->
       </ul>
     </div>
     <div class="container">
@@ -813,6 +816,10 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.2.3/meshki.min.js
       </div>
     </footer>
   </div>
+  <script type="text/javascript">
+    var elem = document.getElementById('github-btn');
+    elem.innerHTML = 'GitHub (' + githubStars('Borderliner/Meshki') + ')';
+  </script>
   <script>
   window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
