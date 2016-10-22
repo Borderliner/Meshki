@@ -15,6 +15,14 @@ button, input, optgroup, select, textarea {
   font-family: "P Yekan", "Open Sans", sans-serif;
 }
 
+pre {
+  direction: ltr;
+}
+
+select {
+  background-position: 2% 50%;
+}
+
 .nav ul li {
   float: right;
   margin-bottom: 0px;
@@ -41,8 +49,8 @@ button, input, optgroup, select, textarea {
   padding-left: 30px !important;
 }
 
-pre {
-  direction: ltr;
+input[type=checkbox]+label.checkbox:before, input[type=radio]+label.radio:before {
+  margin: 4px auto auto 10px;
 }
 
 .button-couple button:not(:first-child):not(:last-child),
@@ -51,9 +59,7 @@ pre {
   border-style: none;
   border-radius: 0;
   display: block;
-  margin: -5px !important;
-  margin-right: auto !important;
-  margin-left: auto !important;
+  margin: -5px auto -5px auto !important;
 }
 
 @media (min-width: 768px) {
