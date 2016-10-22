@@ -23,6 +23,10 @@ select {
   background-position: 2% 50%;
 }
 
+td, th {
+  text-align: right;
+}
+
 .nav ul li {
   float: right;
   margin-bottom: 0px;
