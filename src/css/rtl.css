@@ -57,6 +57,10 @@ button, input, optgroup, select, textarea {
   padding-left: 30px !important;
 }
 
+pre {
+  direction: ltr;
+}
+
 .button-couple button:not(:first-child):not(:last-child),
 .button-couple a:not(:first-child):not(:last-child) {
   pointer-events: none;
