@@ -19,6 +19,14 @@ pre {
   direction: ltr;
 }
 
+a.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  padding: 6px 15px;
+}
+
 select {
   background-position: 2% 50%;
 }
