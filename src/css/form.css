@@ -149,8 +149,7 @@ input[type="checkbox"] + label.checkbox:before, input[type="radio"] + label.radi
   border: 2px solid #E1E1E1;
   border-radius: 5px;
   padding: 2px;
-  margin-right: 10px;
-  margin-bottom: 3px;
+  margin: auto 10px 3px auto;
   vertical-align: middle;
   text-align: center;
   transition: background-color .3s, box-shadow .3s;
