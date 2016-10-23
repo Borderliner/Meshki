@@ -1,3 +1,11 @@
+/*
+* Meshki v1.3.0
+* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
+* http://meshki.borderliner.ir/
+* Free to use under the MIT license.
+* https://opensource.org/licenses/MIT
+*/
+
 module.exports = function(grunt){
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),

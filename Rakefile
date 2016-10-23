@@ -1,3 +1,9 @@
+# Meshki v1.3.0
+# Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
+# http://meshki.borderliner.ir/
+# Free to use under the MIT license.
+# https://opensource.org/licenses/MIT
+
 task default: %w[before concat_css uglify_css uglify_js copy_fonts after]
 
 task :before do

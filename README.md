@@ -9,14 +9,14 @@ Meshki is a simple, black-colored, responsive boilerplate to kickstart any respo
 It is only <b>~16 KiB</b> (minified) and ~40 KiB (normal), including both CSS and JS files.<br>
 Check out <http://meshki.borderliner.ir/> for samples and details.
 
-## Getting started
+## Getting Started
 
 There are a couple ways to download Meshki:
-- [Download the zip](https://github.com/Borderliner/Meshki/archive/v1.2.3.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v1.2.3.tar.gz)
+- [Download the zip](https://github.com/Borderliner/Meshki/archive/v1.3.0.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v1.3.0.tar.gz)
 - Clone the repo: `git clone https://github.com/Borderliner/Meshki.git` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download)<br>
 You can also download it via `bower install meshki --save`
 
-### How to compile
+### How to Compile
 You need node.js to minify the source CSS and JavaScript files and produce outputs. Head over to [nodejs.org](https://nodejs.org/en/) and download a version for your system, or download it from your package manager. Next, install `Grunt` with this command:
 
 `npm install -g grunt-cli`<br>
@@ -26,9 +26,9 @@ Then `cd` into the root folder of the project, issue the command `npm install` t
 
 Ruby programmers can also `cd` into the project folder, and issue `bundle install` command, followed by `bundle exec rake`, to compile and minify source codes. Make sure that you have `uglifyjs` installed and is in your $PATH. If not, install it with `sudo npm install -g uglifyjs`. Note that Grunt and Rake generate different outputs, so the sizes may vary. Meshki generates outputs using Grunt.
 
-### What's in the download?
+### What's in the package?
 
-The download includes Meshki's CSS, Meshki's JavaScript, Normalize CSS as a reset, a sample favicon, and an index.html as a starting point.
+The package includes Meshki's CSS, Meshki's JavaScript, Normalize CSS as a reset, a sample favicon, and an index.html as a starting point.
 
 ```
 Meshki/
@@ -54,7 +54,7 @@ Meshki/
 
 ```
 
-### Why it's awesome
+### Why Meshki is Awesome
 
 Meshki is lightweight, stylish and simple. It styles only raw HTML elements (with a few exceptions) and provides a responsive grid with a minimal and clean interface.
 - Around 1.6k lines of CSS unminified and with comments
@@ -64,7 +64,7 @@ Meshki is lightweight, stylish and simple. It styles only raw HTML elements (wit
 - Clean code, clean interface, without any headaches
 
 
-## Browser support
+## Browser Support
 
 - Chrome & Chromium (latest)
 - Mozilla Firefox (latest)
