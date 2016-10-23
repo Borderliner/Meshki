@@ -76,6 +76,16 @@ input[type="button"]:hover {
   color: #000;
 }
 
+/* Simple button's active */
+a.button:active,
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active {
+  background-color: #b9b9b9;
+  border-color: #b9b9b9;
+}
+
 /* Disabled button */
 a.button:disabled,
 button:disabled,
@@ -113,6 +123,17 @@ input[type="button"].default:hover {
   color: #fff
 }
 
+/* Default blue button's active */
+a.button.default:active,
+button.default:active,
+input[type="submit"].default:active,
+input[type="reset"].default:active,
+input[type="button"].default:active {
+  background-color: #4b82b7;
+  border-color: #4b82b7;
+
+}
+
 /* Success green button */
 a.button.success,
 button.success,
@@ -132,6 +153,16 @@ input[type="button"].success:hover {
   background-color: #2ecc71;
   border-color: #2ecc71;
   color: #fff;
+}
+
+/* Success green button's active */
+a.button.success:active,
+button.success:active,
+input[type="submit"].success:active,
+input[type="reset"].success:active,
+input[type="button"].success:active {
+  background-color: #21a057;
+  border-color: #21a057;
 }
 
 /* Danger red button */
@@ -155,6 +186,16 @@ input[type="button"].danger:hover {
   color: #fff;
 }
 
+/* Danger red button's active */
+a.button.danger:active,
+button.danger:active,
+input[type="submit"].danger:active,
+input[type="reset"].danger:active,
+input[type="button"].danger:active {
+  background-color: #bd382a;
+  border-color: #bd382a;
+}
+
 /* Warning orange button */
 a.button.warning,
 button.warning,
@@ -174,6 +215,16 @@ input[type="button"].warning:hover {
   background-color: #e67e22;
   border-color: #e67e22;
   color: #fff;
+}
+
+/* Warning orange button's active */
+a.button.warning:active,
+button.warning:active,
+input[type="submit"].warning:active,
+input[type="reset"].warning:active,
+input[type="button"].warning:active {
+  background-color: #c16819;
+  border-color: #c16819;
 }
 
 .button-couple button:not(:first-child):not(:last-child),
@@ -789,6 +840,14 @@ hr {
   margin-bottom: 3.5rem;
 }
 
+/* Text selection color */
+::selection {
+  background: #15acee; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #15acee; /* Gecko Browsers */
+}
+
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -958,12 +1017,13 @@ li.nav-dropdown {
   visibility: visible;
   opacity: 1;
 }
-/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /**
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Correct the line height in all browsers.
- * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
  */
 
 /* Document
@@ -1350,7 +1410,7 @@ textarea {
 }
 
 /**
- * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
  */
 
 [type="search"]::-webkit-search-cancel-button,
