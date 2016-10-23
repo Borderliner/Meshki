@@ -145,6 +145,14 @@ hr {
   margin-bottom: 3.5rem;
 }
 
+/* Text selection color */
+::selection {
+  background: #15acee; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #15acee; /* Gecko Browsers */
+}
+
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 

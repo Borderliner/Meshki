@@ -1,11 +1,11 @@
 ## v1.3.0
   - [x] Add ~~basic~~ complete RTL support, for right-to-left languages (like Persian, Arabic, Hebrew, etc.)
-  - [ ] Fix button-couples on tablets, where they crash after opening the push slider
+  - [ ] ~~Fix button-couples on tablets, where they crash after opening the push slider~~ (Future releases)
   - [x] Make Meshki font-agnostic
-  - [ ] Add pre-defined text selection color for better consistency across OSes.
+  - [x] Add pre-defined text selection color for better consistency across OSes.
   - [x] Update Normalize.css to v5.0
   - [x] Add 3rd state to buttons (:active)
-  - [ ] Add an rule to make the whole form elements have sharp edges
+  - [ ] ~~Add an rule to make the whole form elements have sharp edges~~ (Will be a plugin)
 
 ## v1.2.3
   - [x] Increase opacity of the overlay to 40%
