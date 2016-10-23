@@ -71,18 +71,23 @@
 
 /* Send the elements to the right side with nav-right */
 .nav ul li.nav-right {
-  position: relative;
-  top: 7px;
-  right: 16px;
+  position: inherit;
   float: right !important;
 }
 
 /* Send the elements to the left side with nav-left */
 .nav ul li.nav-left {
-  position: relative;
-  top: 7px;
-  right: -16px;
+  position: inherit;
   float: left !important;
+}
+
+/* Fix for #2 issue, where nav-dropdown-content would go off the screen. */
+.nav ul li.nav-right.nav-dropdown .nav-dropdown-content {
+  right: 0;
+}
+
+.nav ul li.nav-right.nav-dropdown ~ .nav-dropdown .nav-dropdown-content {
+  right: auto;
 }
 
 .nav ul a.button,
