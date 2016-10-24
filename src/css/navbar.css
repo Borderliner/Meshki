@@ -44,6 +44,13 @@
   transition: background-color .2s ease-in-out;
 }
 
+/* Buttons positioning on navbar */
+.nav ul li > a.button,
+.nav ul li > button,
+.nav ul li > input {
+margin: 7px 5px auto 5px !important;
+}
+
 /* Active navbar button */
 .nav ul li > a.active {
   background-color: #111;
@@ -88,11 +95,6 @@
 
 .nav ul li.nav-right.nav-dropdown ~ .nav-dropdown .nav-dropdown-content {
   right: auto;
-}
-
-.nav ul a.button,
-.nav ul button {
-  margin: 0px 5px 0px 5px !important;
 }
 
 /* Navigation Dropdown Button */
