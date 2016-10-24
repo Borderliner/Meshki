@@ -7,11 +7,6 @@
   font-size: 1.8rem;
 }
 
-.nav li button {
-  position: relative;
-  top: -1px;
-}
-
 .logo i.fa {
   padding-left: 8px;
 }
