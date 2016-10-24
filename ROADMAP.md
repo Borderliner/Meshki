@@ -1,3 +1,6 @@
+## v1.3.2
+  - [ ] Fix RTL text align for dropdown-content
+
 ## v1.3.1
   - [x] Fix critical Sidenav errors
   - [x] Fix Footer text alignment
