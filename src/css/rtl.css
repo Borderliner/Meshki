@@ -6,19 +6,23 @@
 * https://opensource.org/licenses/MIT
 */
 
+/* General RTL Settings */
 body {
   direction: rtl;
   font-family: "P Yekan", "Open Sans", sans-serif;
 }
 
+/* Buttons should use RTL font too */
 button, input, optgroup, select, textarea {
   font-family: "P Yekan", "Open Sans", sans-serif;
 }
 
+/* Keep the blocks of code LTR */
 pre {
   direction: ltr;
 }
 
+/* Change the button size for RTL version */
 a.button,
 button,
 input[type="submit"],
@@ -27,17 +31,19 @@ input[type="button"] {
   padding: 6px 15px;
 }
 
+/* Select background must be on the left */
 select {
   background-position: 2% 50%;
 }
 
+/* Align the table content to right */
 td, th {
   text-align: right;
 }
 
+/* Navbar buttons should be on the right side */
 .nav ul li {
   float: right;
-  margin-bottom: 0px;
 }
 
 /* Logo of the website, it must be the first child of navbar*/
@@ -45,16 +51,19 @@ td, th {
   color: black;
 }
 
+/* Sidenav starts from the right */
 .sidenav {
   left: auto;
   right: -1px;
   border-left: 1px solid #818181;
 }
 
+/* Different padding of RTL Sidenav */
 .sidenav a {
   padding: 8px 32px 8px 8px;
 }
 
+/* Sidenav close button should be on the left */
 .sidenav-close-button {
   right: auto;
   left: 0;
@@ -62,20 +71,23 @@ td, th {
   padding-left: 30px !important;
 }
 
+/* Margin fix for checkboxes and radio buttons */
 input[type=checkbox]+label.checkbox:before, input[type=radio]+label.radio:before {
   margin: 4px auto auto 10px;
 }
 
+/* Middle button of button couples for mobile version */
 .button-couple button:not(:first-child):not(:last-child),
 .button-couple a:not(:first-child):not(:last-child) {
-  pointer-events: none;
   border-style: none;
   border-radius: 0;
   display: block;
-  margin: -5px auto -5px auto !important;
+  margin: -5px auto !important;
 }
 
+/* Button couples for tablets and upper */
 @media (min-width: 768px) {
+  /* First button */
   .button-couple button:first-child,
   .button-couple a:first-child {
     border-top-right-radius: 5px;
@@ -86,7 +98,7 @@ input[type=checkbox]+label.checkbox:before, input[type=radio]+label.radio:before
     border-left-style: none;
     border-right-style: solid;
   }
-
+  /* Middle button */
   .button-couple button:not(:first-child):not(:last-child),
   .button-couple a:not(:first-child):not(:last-child) {
     border-style: solid;
@@ -94,6 +106,7 @@ input[type=checkbox]+label.checkbox:before, input[type=radio]+label.radio:before
     margin: -9px !important;
   }
 
+  /* Last button */
   .button-couple button:last-child,
   .button-couple a:last-child {
     border-top-right-radius: 0;
@@ -106,12 +119,14 @@ input[type=checkbox]+label.checkbox:before, input[type=radio]+label.radio:before
   }
 }
 
+/* RTL columns */
 .column, .columns {
   float: right;
   margin-left: auto;
 }
 
 @media (min-width: 544px) {
+  /* A bit of clean up for columns on tablets and up */
   .column:first-child, .columns:first-child {
     margin-right: 0;
     margin-left: auto;
@@ -121,7 +136,12 @@ input[type=checkbox]+label.checkbox:before, input[type=radio]+label.radio:before
     margin-right: 4%;
   }
 
-  /* Offsets */
+  /* Footer text alignment for RTL */
+  footer, .footer {
+    text-align: right;
+  }
+
+  /* Offsets from right */
   .offset-by-one.column,
   .offset-by-one.columns          { margin-right: 8.66666666667%; }
   .offset-by-two.column,
