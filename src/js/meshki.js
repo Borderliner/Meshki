@@ -39,7 +39,7 @@ var meshki = {
     // If on Desktop and the sidenav is a push one, push "content"
     if (window.innerWidth > 768 && isSidenavPush)
       // If not RTL
-      if (!is_rtl)
+      if (!is_rtl())
         content.style.marginLeft = '250px';
       else
         content.style.marginRight = '250px';
