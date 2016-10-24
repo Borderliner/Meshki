@@ -1,5 +1,5 @@
 /*
-* Meshki v1.3.0
+* Meshki v1.3.1
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -233,9 +233,7 @@ input[type="button"].warning:active {
   border-style: none;
   border-radius: 0;
   display: block;
-  margin: -5px !important;
-  margin-right: auto !important;
-  margin-left: auto !important;
+  margin: -5px auto !important;
 }
 
 @media (min-width: 768px) {
@@ -263,7 +261,7 @@ input[type="button"].warning:active {
   }
 }
 /*
-* Meshki v1.3.0
+* Meshki v1.3.1
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -319,7 +317,7 @@ pre.filled > code {
   color: #000;
 }
 /*
-* Meshki v1.3.0
+* Meshki v1.3.1
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -364,7 +362,7 @@ footer .row {
   }
 }
 /*
-* Meshki v1.3.0
+* Meshki v1.3.1
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -540,7 +538,7 @@ input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label
   outline: none !important;
 }
 /*
-* Meshki v1.3.0
+* Meshki v1.3.1
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -660,7 +658,7 @@ input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label
   .offset-by-one-half.columns     { margin-left: 52%; }
 }
 /*
-* Meshki v1.3.0
+* Meshki v1.3.1
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -694,7 +692,7 @@ li {
   margin-bottom: 1rem;
 }
 /*
-* Meshki v1.3.0
+* Meshki v1.3.1
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -884,7 +882,7 @@ compatibility reasons.
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
 /*
-* Meshki v1.3.0
+* Meshki v1.3.1
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -927,6 +925,13 @@ compatibility reasons.
   text-align: center;
   text-decoration: none;
   transition: background-color .2s ease-in-out;
+}
+
+/* Buttons positioning on navbar */
+.nav ul li > a.button,
+.nav ul li > button,
+.nav ul li > input {
+margin: 7px 5px auto 5px !important;
 }
 
 /* Active navbar button */
@@ -973,11 +978,6 @@ compatibility reasons.
 
 .nav ul li.nav-right.nav-dropdown ~ .nav-dropdown .nav-dropdown-content {
   right: auto;
-}
-
-.nav ul a.button,
-.nav ul button {
-  margin: 0px 5px 0px 5px !important;
 }
 
 /* Navigation Dropdown Button */
@@ -1484,7 +1484,7 @@ template {
   display: none;
 }
 /*
-* Meshki v1.3.0
+* Meshki v1.3.1
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -1583,7 +1583,7 @@ template {
   }
 }
 /*
-* Meshki v1.3.0
+* Meshki v1.3.1
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -1638,7 +1638,7 @@ table.hover > tbody tr:hover {
   background-color: #404040;
 }
 /*
-* Meshki v1.3.0
+* Meshki v1.3.1
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -1675,7 +1675,7 @@ p {
   margin-top: 0;
 }
 /*
-* Meshki v1.3.0
+* Meshki v1.3.1
 * Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.

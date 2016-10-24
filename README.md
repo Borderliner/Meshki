@@ -12,9 +12,10 @@ Check out <http://meshki.borderliner.ir/> for samples and details.
 ## Getting Started
 
 There are a couple ways to download Meshki:
-- [Download the zip](https://github.com/Borderliner/Meshki/archive/v1.3.0.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v1.3.0.tar.gz)
-- Clone the repo: `git clone https://github.com/Borderliner/Meshki.git` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download)<br>
-You can also download it via `bower install meshki --save`
+- [Download the zip](https://github.com/Borderliner/Meshki/archive/v1.3.1.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v1.3.1.tar.gz)
+- Clone the repo: `git clone https://github.com/Borderliner/Meshki.git` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download)
+- Use Bower: `bower install meshki` **(Recommended)**
+- Use npm: `npm install meshki`
 
 ### How to Compile
 You need node.js to minify the source CSS and JavaScript files and produce outputs. Head over to [nodejs.org](https://nodejs.org/en/) and download a version for your system, or download it from your package manager. Next, install `Grunt` with this command:
@@ -57,21 +58,23 @@ Meshki/
 ### Why Meshki is Awesome
 
 Meshki is lightweight, stylish and simple. It styles only raw HTML elements (with a few exceptions) and provides a responsive grid with a minimal and clean interface.
-- Around 1.6k lines of CSS unminified and with comments
+- Around 1.6k lines of unminified CSS, with comments
 - Although it's not a UI framework, you can create most of the interface just with Meshki
-- No compiling or installing needed. Just 2 files of CSS + JS
+- No compilation or installation needed. Just 2 files of CSS + JS
 - Can be installed via `bower` and `npm` (`bower install meshki` and `npm install meshki`)
+- Available through [CloudFlare](https://cdnjs.com/libraries/meshki)'s CDN
 - Clean code, clean interface, without any headaches
+- Dependency-free! You don't need jQuery to run Meshki. All pure JavaScript
 
 
 ## Browser Support
 
-- Chrome & Chromium (latest)
-- Mozilla Firefox (latest)
+- Chrome & Chromium (latest) **Well-Tested**
+- Mozilla Firefox (latest) **Well-Tested**
 - Microsoft Edge (latest)
 - Opera (latest)
-- Safari (latest)
-- IE 9+ (No animations on IE 9. Do not open issues regarding IE 8 and below)
+- Safari (latest) **Well-Tested**
+- IE 9+ (No animations on IE 9. Do not open issues regarding IE 8 and below) **Change Your Browser, Please!**
 
 The above list is non-exhaustive. Meshki works perfectly with almost all older versions of the browsers above, though IE certainly has large degradation prior to IE 9.
 

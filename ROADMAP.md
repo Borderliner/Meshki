@@ -1,3 +1,8 @@
+## v1.3.1
+  - [x] Fix critical Sidenav errors
+  - [x] Fix Footer text alignment
+  - [x] Fix critical Navbar elements positioning
+
 ## v1.3.0
   - [x] Add ~~basic~~ complete RTL support, for right-to-left languages (like Persian, Arabic, Hebrew, etc.)
   - [ ] ~~Fix button-couples on tablets, where they crash after opening the push slider~~ (Future releases)
