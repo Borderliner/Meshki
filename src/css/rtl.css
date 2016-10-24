@@ -46,6 +46,7 @@ td, th {
 }
 
 .sidenav {
+  left: auto;
   right: -1px;
   border-left: 1px solid #818181;
 }
