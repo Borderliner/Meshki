@@ -97,14 +97,14 @@
 
       <div class="row text-center" style="margin-bottom: 250px;margin-top: 50px;">
         <div class="button-couple">
-          <a class="button default large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.3.1.zip">Download (v1.3.1)</a>
+          <a class="button default large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.3.2.zip">Download (v1.3.2)</a>
           <a class="button large disabled" disabled>or</a>
           <a class="button danger large custom-down-cdn" href="javascript:void(0)" onclick="var cdn=document.getElementById('cdn');cdn.style.display=='none'?cdn.style.display='block':cdn.style.display='none';">Use CDN</a>
         </div><br>
         <pre id="cdn" style="display: none;">
           <code>
-https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.1/meshki.min.css
-https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.1/meshki.min.js
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.2/meshki.min.css
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.2/meshki.min.js
           </code>
         </pre>
       </div><br>
@@ -159,7 +159,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.1/meshki.min.js
         <hr>
         <p>
           Meshki uses a fixed structure to lessen the burden of setting extra ids and classes. So you always need to create the same structure for all your apps. Don't worry, this structure is very basic and it does not limit you in any ways.<br>
-          First of all, you need to have a <code>&lt;div></code> with the <code>sidenav</code> class, just after the beginning of the body. Your <a href="#sidenav-doc">sidenav</a>'s links will reside in here. Then, you need to create a <code>&lt;div></code> after the sidenav's div, with the <code>content</code> class. The rest of your body should be created inside the "content" div. Inspect the elements on this page to understand the structure. Also, here's a sample code:<br>
+          First of all, you need to have a <code>&lt;div></code> with the <code>sidenav</code> class, just after the beginning of the body. Your <a href="#sidenav-doc">sidenav</a>'s links will reside in here. Then, you need to create a <code>&lt;div></code> after the sidenav's div, with the <code>content</code> class. The rest of your body should be created inside the "content" div. Inspect the elements on this page to understand the structure. Ah! Here's a sample code:<br>
         </p>
         <pre>
           <code>
@@ -175,18 +175,45 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.1/meshki.min.js
       &lt;script type="text/javascript" src="dist/meshki.min.js">&lt;/script>
     &lt;/head>
     &lt;body>
+
       &lt;div class="sidenav">
         &lt;!-- Sidenav links here -->
       &lt;/div>
+
       &lt;div class="content">
-        &lt;div class="row">
+
+        &lt;nav>
+          &lt;ul>
+            &lt;li>&lt;a class="logo" href="javascript:void(0)">My Website&lt;/a>&lt;/li>
+          &lt;/ul>
+        &lt;/nav>
+
+        &lt;div class="container">
           &lt;h3>Welcome to my cool website&lt;/h3>
           &lt;p>This is a sample paragraph.&lt;/p>
         &lt;/div>
       &lt;/div>
+
+      &lt;footer>
+        &lt;div class="row">
+          &lt;div class="six">
+            &lt;p>A text on the footer&lt;/p>
+          &lt;/div>
+        &lt;/div>
+      &lt;/footer>
+
     &lt;/body>
           </code>
         </pre>
+
+        <div class="row">
+          <figure class="twelve centerize text-center">
+            <img class="responsive" src="meshki_structure.png" />
+            <figcaption>
+              The above picture demonstrates the recommended structure for your application.
+            </figcaption>
+          </figure>
+        </div>
       </div>
 
       <div class="row">
@@ -743,8 +770,8 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.1/meshki.min.js
         box-sizing: border-box;
       }
 
-      /* Make sure elements don't run outside containers (great for images in columns) */
-      .expand-container {
+      /* Makes sure elements don't run outside containers (great for images in columns) */
+      .responsive {
         max-width: 100%;
         box-sizing: border-box;
       }
@@ -810,7 +837,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.1/meshki.min.js
         </p>
       </div>
     </div>
-    <footer class="compact">
+    <div class="footer compact">
       <div class="row">
         <div class="six columns">
           <p>Created with <i class="fa fa-heart custom-love"></i> by Mohammad reza Hajianpour (<a href="https://github.com/Borderliner">Borderliner</a>)</p>
@@ -819,7 +846,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.1/meshki.min.js
           <p>2016, Licensed under <a href="https://github.com/Borderliner/Meshki/blob/master/LICENSE.md">MIT</a></p>
         </div>
       </div>
-    </footer>
+    </div>
   </div>
   <script type="text/javascript">
     var elem = document.getElementById('github-btn');

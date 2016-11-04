@@ -1,6 +1,6 @@
 /*
-* Meshki v1.3.1
-* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
+* Meshki v1.3.2
+* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -16,7 +16,7 @@
 }
 
 /* Make sure elements don't run outside containers (great for images in columns) */
-.expand-container {
+.responsive {
   max-width: 100%;
   box-sizing: border-box;
 }

@@ -1,6 +1,6 @@
 /*
-* Meshki v1.3.1
-* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
+* Meshki v1.3.2
+* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -10,6 +10,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* General attributes */
+nav ul,
 .nav ul {
   width: 100%;
   background-color: #222;
@@ -22,6 +23,7 @@
 }
 
 /* Fixed Navbar properties */
+nav.fixed,
 .nav.fixed {
   position: fixed;
   width: 100%;
@@ -29,12 +31,14 @@
 }
 
 /* Elements in the navbar start from the left side */
+nav ul li,
 .nav ul li {
   float: left;
   margin-bottom: 0px;
 }
 
 /* Anchors inside lists' attributes */
+nav ul li > a,
 .nav ul li > a {
   display: inline-block;
   color: #E1E1E1;
@@ -45,6 +49,9 @@
 }
 
 /* Buttons positioning on navbar */
+nav ul li > a.button,
+nav ul li > button,
+nav ul li > input,
 .nav ul li > a.button,
 .nav ul li > button,
 .nav ul li > input {
@@ -52,17 +59,20 @@ margin: 7px 5px auto 5px !important;
 }
 
 /* Active navbar button */
+nav ul li > a.active,
 .nav ul li > a.active {
   background-color: #111;
 }
 
 /* Logo of the website, it must be the first child of navbar*/
+nav ul li:first-child a.logo,
 .nav ul li:first-child a.logo {
   background-color: #E1E1E1;
   color: black;
 }
 
 /* Lighten the logo when the mouse is over it */
+nav ul li:first-child a.logo:hover,
 .nav ul li:first-child a.logo:hover {
   background-color: #F5F5F5;
   color: black;
@@ -72,28 +82,29 @@ margin: 7px 5px auto 5px !important;
  * Change the link color to #111 (black) on hover
  * Only direct children are affected, which means it excludes dropdowns
  */
+nav ul li > a:hover,
 .nav ul li > a:hover {
   background-color: #111;
 }
 
 /* Send the elements to the right side with nav-right */
-.nav ul li.nav-right {
+li.nav-right {
   position: inherit;
   float: right !important;
 }
 
 /* Send the elements to the left side with nav-left */
-.nav ul li.nav-left {
+li.nav-left {
   position: inherit;
   float: left !important;
 }
 
 /* Fix for #2 issue, where nav-dropdown-content would go off the screen. */
-.nav ul li.nav-right.nav-dropdown .nav-dropdown-content {
+li.nav-dropdown.nav-right .nav-dropdown-content {
   right: 0;
 }
 
-.nav ul li.nav-right.nav-dropdown ~ .nav-dropdown .nav-dropdown-content {
+li.nav-dropdown.nav-right ~ .nav-dropdown .nav-dropdown-content {
   right: auto;
 }
 
@@ -103,7 +114,7 @@ li.nav-dropdown {
 }
 
 /* Dropdown content attributes */
-.nav ul .nav-dropdown-content {
+.nav-dropdown-content {
   display: block;
   visibility: hidden;
   opacity: 0;

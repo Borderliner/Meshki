@@ -1,6 +1,6 @@
 /*
-* Meshki v1.3.1
-* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
+* Meshki v1.3.2
+* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT

@@ -1,3 +1,7 @@
+## v1.3.2
+  - [x] Fix RTL text align for dropdown-content
+  - [x] Update Getting Started structure
+
 ## v1.3.1
   - [x] Fix critical Sidenav errors
   - [x] Fix Footer text alignment

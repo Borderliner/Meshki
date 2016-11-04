@@ -97,16 +97,16 @@
 
       <div class="row text-center" style="margin-bottom: 250px;margin-top: 50px;">
         <div class="button-couple">
-          <a class="button default large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.3.1.zip">دانلود (نسخه 1.3.1)</a>
+          <a class="button default large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.3.2.zip">دانلود (نسخه 1.3.2)</a>
           <a class="button large disabled" disabled>یا</a>
           <a class="button danger large custom-down-cdn" href="javascript:void(0)" onclick="var cdn=document.getElementById('cdn');cdn.style.display=='none'?cdn.style.display='block':cdn.style.display='none';">استفاده از <span>CDN</span></a>
         </div><br>
         <pre id="cdn" style="display: none;">
           <code>
-https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.1/meshki.min.css
-https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.1/meshki.min.js
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.2/meshki.min.css
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.2/meshki.min.js
 
-https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.1/meshki-rtl.min.css
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.2/meshki-rtl.min.css
           </code>
         </pre>
       </div><br>
@@ -177,23 +177,50 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.1/meshki-rtl.min.css
       &lt;meta name="viewport" content="width=device-width, initial-scale=1">
 
       &lt;link rel="stylesheet" type="text/css" href="dist/meshki.min.css">
-      &lt;!-- نسخه فارسی مشکی باید اضافه شود -->
+      &lt;!-- نسخه فارسی مشکی باید بعد از مشکی اصلی اضافه شود -->
       &lt;link rel="stylesheet" type="text/css" href="dist/meshki-rtl.min.css">
       &lt;script type="text/javascript" src="dist/meshki.min.js">&lt;/script>
     &lt;/head>
     &lt;body>
+
       &lt;div class="sidenav">
-        &lt;!-- لینک‌های کشو اینجا میروند -->
+        &lt;!-- لینک‌های کشو اینجا هستند -->
       &lt;/div>
+
       &lt;div class="content">
-        &lt;div class="row">
-          &lt;h3>به وب‌سایت من خوش آمدید!&lt;/h3>
+
+        &lt;nav>
+          &lt;ul>
+            &lt;li>&lt;a class="logo" href="javascript:void(0)">وب‌سایت من&lt;/a>&lt;/li>
+          &lt;/ul>
+        &lt;/nav>
+
+        &lt;div class="container">
+          &lt;h3>به وب‌سایت من خوش‌آمدید!&lt;/h3>
           &lt;p>این یک پاراگراف نمونه است.&lt;/p>
         &lt;/div>
       &lt;/div>
+
+      &lt;footer>
+        &lt;div class="row">
+          &lt;div class="six">
+            &lt;p>یک متن در پابرگ&lt;/p>
+          &lt;/div>
+        &lt;/div>
+      &lt;/footer>
+
     &lt;/body>
           </code>
         </pre>
+
+        <div class="row">
+          <figure class="twelve centerize text-center">
+            <img class="responsive" src="meshki_structure.png" />
+            <figcaption>
+              شکل بالا ساختار توصیه شده برای ساختن برنامه با مشکی را تشریح می‌کند.
+            </figcaption>
+          </figure>
+        </div>
       </div>
 
       <div class="row">
@@ -761,8 +788,8 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.1/meshki-rtl.min.css
         box-sizing: border-box;
       }
 
-      /* مراقب باشید تا اجزا از محدوده‌شان خارج نشوند. برای عکسهای داخل ستون انتخاب مناسبیست. */
-      .expand-container {
+      /* باعث می‌شود تا اجزا از محدوده‌شان خارج نشوند. برای عکسهای داخل ستون انتخاب مناسبی است. */
+      .responsive {
         max-width: 100%;
         box-sizing: border-box;
       }
@@ -828,7 +855,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.1/meshki-rtl.min.css
         </p>
       </div>
     </div>
-    <footer class="compact">
+    <div class="footer compact">
       <div class="row">
         <div class="six columns">
           <p>ساخته شده با <i class="fa fa-heart custom-love"></i> توسط محمدرضا حاجیانپور (<a href="https://github.com/Borderliner">Borderliner</a>)</p>
@@ -837,7 +864,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.1/meshki-rtl.min.css
           <p>2016، تحت مجوز <a href="https://github.com/Borderliner/Meshki/blob/master/LICENSE.md">MIT</a></p>
         </div>
       </div>
-    </footer>
+    </div>
   </div>
   <script type="text/javascript">
     var elem = document.getElementById('github-btn');
