@@ -16,7 +16,7 @@
 }
 
 /* Make sure elements don't run outside containers (great for images in columns) */
-.expand-container {
+.responsive {
   max-width: 100%;
   box-sizing: border-box;
 }
