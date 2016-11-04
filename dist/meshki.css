@@ -1,6 +1,6 @@
 /*
-* Meshki v1.3.1
-* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
+* Meshki v1.3.2
+* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -261,8 +261,8 @@ input[type="button"].warning:active {
   }
 }
 /*
-* Meshki v1.3.1
-* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
+* Meshki v1.3.2
+* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -317,8 +317,8 @@ pre.filled > code {
   color: #000;
 }
 /*
-* Meshki v1.3.1
-* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
+* Meshki v1.3.2
+* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -332,8 +332,8 @@ footer, .footer {
   max-width: 100%;
   background-color: #111;
   border-top: 2px solid #E1E1E1;
-  margin: 25px 0px 0px 0px;
-  padding: 25px 50px 25px 50px;
+  margin: 25px 0 0 0;
+  padding: 25px 50px;
   text-align: center;
 }
 
@@ -351,7 +351,8 @@ footer.compact .columns,
 }
 
 /* Remove bottom margin of .row for footer, it takes lots of space */
-footer .row {
+footer .row,
+.footer .row {
   margin-bottom: 0px;
 }
 
@@ -362,8 +363,8 @@ footer .row {
   }
 }
 /*
-* Meshki v1.3.1
-* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
+* Meshki v1.3.2
+* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -538,8 +539,8 @@ input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label
   outline: none !important;
 }
 /*
-* Meshki v1.3.1
-* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
+* Meshki v1.3.2
+* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -566,8 +567,9 @@ input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label
 }
 
 /* Columns fill their parent from the left side */
-.column,
-.columns {
+.one, .two, .three, .four, .five,
+.six, .seven, .eight, .nine,
+.ten, .eleven, .twelve {
   width: 100%;
   float: left;
   box-sizing: border-box;
@@ -589,77 +591,65 @@ input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label
   }
 
   /* Left margin for columns so they do not collide */
-  .column,
-  .columns {
+  .one, .two, .three, .four, .five,
+  .six, .seven, .eight, .nine,
+  .ten, .eleven, .twelve {
     margin-left: 4%;
   }
 
   /* The first column doesn't need left margin */
-  .column:first-child,
-  .columns:first-child {
+  .one:first-child, .two:first-child, .three:first-child, .four:first-child,
+  .five:first-child, .six:first-child, .seven:first-child, .eight:first-child,
+  .nine:first-child, .ten:first-child, .eleven:first-child,
+  .twelve:first-child {
     margin-left: 0;
   }
 
-  .one.column,
-  .one.columns                    { width: 4.66666666667%; }
-  .two.columns                    { width: 13.3333333333%; }
-  .three.columns                  { width: 22%;            }
-  .four.columns                   { width: 30.6666666667%; }
-  .five.columns                   { width: 39.3333333333%; }
-  .six.columns                    { width: 48%;            }
-  .seven.columns                  { width: 56.6666666667%; }
-  .eight.columns                  { width: 65.3333333333%; }
-  .nine.columns                   { width: 74%;            }
-  .ten.columns                    { width: 82.6666666667%; }
-  .eleven.columns                 { width: 91.3333333333%; }
+  .one                    { width: 4.66666666667%; }
+  .two                    { width: 13.3333333333%; }
+  .three                  { width: 22%;            }
+  .four                   { width: 30.6666666667%; }
+  .five                   { width: 39.3333333333%; }
+  .six                    { width: 48%;            }
+  .seven                  { width: 56.6666666667%; }
+  .eight                  { width: 65.3333333333%; }
+  .nine                   { width: 74%;            }
+  .ten                    { width: 82.6666666667%; }
+  .eleven                 { width: 91.3333333333%; }
   /* Fill the row, with no margin on the left */
-  .twelve.columns                 { width: 100%; margin-left: 0; }
+  .twelve                 { width: 100%; margin-left: 0; }
 
   /* Proportional columns */
-  .one-third.column,
-  .one.third.column,              { width: 30.6666666667%; }
-  .two-thirds.column,
-  .two.thirds.column              { width: 65.3333333333%; }
+  .one-third,
+  .one.third,              { width: 30.6666666667%; }
+  .two-thirds,
+  .two.thirds              { width: 65.3333333333%; }
 
   /* Half of the container columns */
-  .one-half.column,
-  .one.half.column                { width: 48%; }
+  .one-half,
+  .one.half                { width: 48%; }
 
   /* Offsets */
-  .offset-by-one.column,
-  .offset-by-one.columns          { margin-left: 8.66666666667%; }
-  .offset-by-two.column,
-  .offset-by-two.columns          { margin-left: 17.3333333333%; }
-  .offset-by-three.column,
-  .offset-by-three.columns        { margin-left: 26%;            }
-  .offset-by-four.column,
-  .offset-by-four.columns         { margin-left: 34.6666666667%; }
-  .offset-by-five.column,
-  .offset-by-five.columns         { margin-left: 43.3333333333%; }
-  .offset-by-six.column,
-  .offset-by-six.columns          { margin-left: 52%;            }
-  .offset-by-seven.column,
-  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
-  .offset-by-eight.column,
-  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
-  .offset-by-nine.column,
-  .offset-by-nine.columns         { margin-left: 78.0%;          }
-  .offset-by-ten.column,
-  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
-  .offset-by-eleven.column,
-  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+  .offset-by-one          { margin-left: 8.66666666667%; }
+  .offset-by-two          { margin-left: 17.3333333333%; }
+  .offset-by-three        { margin-left: 26%;            }
+  .offset-by-four         { margin-left: 34.6666666667%; }
+  .offset-by-five         { margin-left: 43.3333333333%; }
+  .offset-by-six          { margin-left: 52%;            }
+  .offset-by-seven        { margin-left: 60.6666666667%; }
+  .offset-by-eight        { margin-left: 69.3333333333%; }
+  .offset-by-nine         { margin-left: 78.0%;          }
+  .offset-by-ten          { margin-left: 86.6666666667%; }
+  .offset-by-eleven       { margin-left: 95.3333333333%; }
 
-  .offset-by-one-third.column,
-  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
-  .offset-by-two-thirds.column,
-  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+  .offset-by-one-third    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds   { margin-left: 69.3333333333%; }
 
-  .offset-by-one-half.column,
-  .offset-by-one-half.columns     { margin-left: 52%; }
+  .offset-by-one-half     { margin-left: 52%; }
 }
 /*
-* Meshki v1.3.1
-* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
+* Meshki v1.3.2
+* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -692,8 +682,8 @@ li {
   margin-bottom: 1rem;
 }
 /*
-* Meshki v1.3.1
-* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
+* Meshki v1.3.2
+* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -882,8 +872,8 @@ compatibility reasons.
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
 /*
-* Meshki v1.3.1
-* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
+* Meshki v1.3.2
+* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -893,6 +883,7 @@ compatibility reasons.
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* General attributes */
+nav ul,
 .nav ul {
   width: 100%;
   background-color: #222;
@@ -905,6 +896,7 @@ compatibility reasons.
 }
 
 /* Fixed Navbar properties */
+nav.fixed,
 .nav.fixed {
   position: fixed;
   width: 100%;
@@ -912,12 +904,14 @@ compatibility reasons.
 }
 
 /* Elements in the navbar start from the left side */
+nav ul li,
 .nav ul li {
   float: left;
   margin-bottom: 0px;
 }
 
 /* Anchors inside lists' attributes */
+nav ul li > a,
 .nav ul li > a {
   display: inline-block;
   color: #E1E1E1;
@@ -928,6 +922,9 @@ compatibility reasons.
 }
 
 /* Buttons positioning on navbar */
+nav ul li > a.button,
+nav ul li > button,
+nav ul li > input,
 .nav ul li > a.button,
 .nav ul li > button,
 .nav ul li > input {
@@ -935,17 +932,20 @@ margin: 7px 5px auto 5px !important;
 }
 
 /* Active navbar button */
+nav ul li > a.active,
 .nav ul li > a.active {
   background-color: #111;
 }
 
 /* Logo of the website, it must be the first child of navbar*/
+nav ul li:first-child a.logo,
 .nav ul li:first-child a.logo {
   background-color: #E1E1E1;
   color: black;
 }
 
 /* Lighten the logo when the mouse is over it */
+nav ul li:first-child a.logo:hover,
 .nav ul li:first-child a.logo:hover {
   background-color: #F5F5F5;
   color: black;
@@ -955,28 +955,29 @@ margin: 7px 5px auto 5px !important;
  * Change the link color to #111 (black) on hover
  * Only direct children are affected, which means it excludes dropdowns
  */
+nav ul li > a:hover,
 .nav ul li > a:hover {
   background-color: #111;
 }
 
 /* Send the elements to the right side with nav-right */
-.nav ul li.nav-right {
+li.nav-right {
   position: inherit;
   float: right !important;
 }
 
 /* Send the elements to the left side with nav-left */
-.nav ul li.nav-left {
+li.nav-left {
   position: inherit;
   float: left !important;
 }
 
 /* Fix for #2 issue, where nav-dropdown-content would go off the screen. */
-.nav ul li.nav-right.nav-dropdown .nav-dropdown-content {
+li.nav-dropdown.nav-right .nav-dropdown-content {
   right: 0;
 }
 
-.nav ul li.nav-right.nav-dropdown ~ .nav-dropdown .nav-dropdown-content {
+li.nav-dropdown.nav-right ~ .nav-dropdown .nav-dropdown-content {
   right: auto;
 }
 
@@ -986,7 +987,7 @@ li.nav-dropdown {
 }
 
 /* Dropdown content attributes */
-.nav ul .nav-dropdown-content {
+.nav-dropdown-content {
   display: block;
   visibility: hidden;
   opacity: 0;
@@ -1484,8 +1485,8 @@ template {
   display: none;
 }
 /*
-* Meshki v1.3.1
-* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
+* Meshki v1.3.2
+* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -1583,8 +1584,8 @@ template {
   }
 }
 /*
-* Meshki v1.3.1
-* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
+* Meshki v1.3.2
+* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -1638,8 +1639,8 @@ table.hover > tbody tr:hover {
   background-color: #404040;
 }
 /*
-* Meshki v1.3.1
-* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
+* Meshki v1.3.2
+* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -1675,8 +1676,8 @@ p {
   margin-top: 0;
 }
 /*
-* Meshki v1.3.1
-* Copyright 2016, Mohammad reza Hajianpour <me@borderliner.ir>
+* Meshki v1.3.2
+* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -1692,7 +1693,7 @@ p {
 }
 
 /* Make sure elements don't run outside containers (great for images in columns) */
-.expand-container {
+.responsive {
   max-width: 100%;
   box-sizing: border-box;
 }

@@ -12,7 +12,7 @@ Check out <http://meshki.borderliner.ir/> for samples and details.
 ## Getting Started
 
 There are a couple ways to download Meshki:
-- [Download the zip](https://github.com/Borderliner/Meshki/archive/v1.3.1.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v1.3.1.tar.gz)
+- [Download the zip](https://github.com/Borderliner/Meshki/archive/v1.3.2.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v1.3.2.tar.gz)
 - Clone the repo: `git clone https://github.com/Borderliner/Meshki.git` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download)
 - Use Bower: `bower install meshki` **(Recommended)**
 - Use npm: `npm install meshki`
@@ -34,10 +34,10 @@ The package includes Meshki's CSS, Meshki's JavaScript, Normalize CSS as a reset
 ```
 Meshki/
 ├── dist/
-│   ├── fonts/
-│   │   └── OpenSans-Regular.ttf
 │   ├── meshki.css
 │   ├── meshki.min.css
+│   ├── meshki-rtl.css
+│   ├── meshki-rtl.min.css
 │   ├── meshki.js
 │   └── meshki.min.js
 ├── src/
@@ -45,8 +45,6 @@ Meshki/
 │   │   ├── normalize.css
 │   │   ├── meshki.css
 │   │   └── *.css
-│   ├── fonts/
-│   │   └── OpenSans-Regular.ttf
 │   ├── images/
 │   │   └── favicon.ico
 │   └── js/
@@ -94,5 +92,5 @@ The website of [Meshki](http://meshki.borderliner.ir) uses [font-awesome](http:/
 
 ## Acknowledgement
 
-[Meshki](http://meshki.borderliner.ir) started by Mohammad Reza Hajianpour as a fork of [Skeleton](https://github.com/dhg/Skeleton). Although it has changed a lot, and Meshki has experienced a total overhaul.<br>
+[Meshki](http://meshki.borderliner.ir) started by [Mohammad Reza Hajianpour](mailto:hajianpour.mr@gmail.com) as a fork of [Skeleton](https://github.com/dhg/Skeleton). Although it has changed a lot, and Meshki has experienced a total overhaul.<br>
 Skeleton was created by [Dave Gamache](https://twitter.com/dhg).
