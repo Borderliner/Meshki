@@ -51,6 +51,10 @@ td, th {
   color: black;
 }
 
+.nav-dropdown-content a {
+  text-align: right;
+}
+
 /* Sidenav starts from the right */
 .sidenav {
   left: auto;
