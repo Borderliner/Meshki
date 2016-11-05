@@ -1,5 +1,5 @@
 /*
-* Meshki v1.3.2
+* Meshki v1.3.3
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -27,9 +27,7 @@
 }
 
 /* Columns fill their parent from the left side */
-.one, .two, .three, .four, .five,
-.six, .seven, .eight, .nine,
-.ten, .eleven, .twelve {
+.col {
   width: 100%;
   float: left;
   box-sizing: border-box;
@@ -51,59 +49,54 @@
   }
 
   /* Left margin for columns so they do not collide */
-  .one, .two, .three, .four, .five,
-  .six, .seven, .eight, .nine,
-  .ten, .eleven, .twelve {
+  .col {
     margin-left: 4%;
   }
 
   /* The first column doesn't need left margin */
-  .one:first-child, .two:first-child, .three:first-child, .four:first-child,
-  .five:first-child, .six:first-child, .seven:first-child, .eight:first-child,
-  .nine:first-child, .ten:first-child, .eleven:first-child,
-  .twelve:first-child {
+  .col:first-child {
     margin-left: 0;
   }
 
-  .one                    { width: 4.66666666667%; }
-  .two                    { width: 13.3333333333%; }
-  .three                  { width: 22%;            }
-  .four                   { width: 30.6666666667%; }
-  .five                   { width: 39.3333333333%; }
-  .six                    { width: 48%;            }
-  .seven                  { width: 56.6666666667%; }
-  .eight                  { width: 65.3333333333%; }
-  .nine                   { width: 74%;            }
-  .ten                    { width: 82.6666666667%; }
-  .eleven                 { width: 91.3333333333%; }
+  .one.col                    { width: 4.66666666667%; }
+  .two.col                    { width: 13.3333333333%; }
+  .three.col                  { width: 22%;            }
+  .four.col                   { width: 30.6666666667%; }
+  .five.col                   { width: 39.3333333333%; }
+  .six.col                    { width: 48%;            }
+  .seven.col                  { width: 56.6666666667%; }
+  .eight.col                  { width: 65.3333333333%; }
+  .nine.col                   { width: 74%;            }
+  .ten.col                    { width: 82.6666666667%; }
+  .eleven.col                 { width: 91.3333333333%; }
   /* Fill the row, with no margin on the left */
-  .twelve                 { width: 100%; margin-left: 0; }
+  .twelve.col                 { width: 100%; margin-left: 0; }
 
   /* Proportional columns */
-  .one-third,
-  .one.third,              { width: 30.6666666667%; }
-  .two-thirds,
-  .two.thirds              { width: 65.3333333333%; }
+  .one-third.col,
+  .one.third.col,              { width: 30.6666666667%; }
+  .two-thirds.col,
+  .two.thirds.col              { width: 65.3333333333%; }
 
   /* Half of the container columns */
-  .one-half,
-  .one.half                { width: 48%; }
+  .one-half.col,
+  .one.half.col                { width: 48%; }
 
   /* Offsets */
-  .offset-by-one          { margin-left: 8.66666666667%; }
-  .offset-by-two          { margin-left: 17.3333333333%; }
-  .offset-by-three        { margin-left: 26%;            }
-  .offset-by-four         { margin-left: 34.6666666667%; }
-  .offset-by-five         { margin-left: 43.3333333333%; }
-  .offset-by-six          { margin-left: 52%;            }
-  .offset-by-seven        { margin-left: 60.6666666667%; }
-  .offset-by-eight        { margin-left: 69.3333333333%; }
-  .offset-by-nine         { margin-left: 78.0%;          }
-  .offset-by-ten          { margin-left: 86.6666666667%; }
-  .offset-by-eleven       { margin-left: 95.3333333333%; }
+  .offset-by-one.col          { margin-left: 8.66666666667%; }
+  .offset-by-two.col          { margin-left: 17.3333333333%; }
+  .offset-by-three.col        { margin-left: 26%;            }
+  .offset-by-four.col         { margin-left: 34.6666666667%; }
+  .offset-by-five.col         { margin-left: 43.3333333333%; }
+  .offset-by-six.col          { margin-left: 52%;            }
+  .offset-by-seven.col        { margin-left: 60.6666666667%; }
+  .offset-by-eight.col        { margin-left: 69.3333333333%; }
+  .offset-by-nine.col         { margin-left: 78.0%;          }
+  .offset-by-ten.col          { margin-left: 86.6666666667%; }
+  .offset-by-eleven.col       { margin-left: 95.3333333333%; }
 
-  .offset-by-one-third    { margin-left: 34.6666666667%; }
-  .offset-by-two-thirds   { margin-left: 69.3333333333%; }
+  .offset-by-one-third.col    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.col   { margin-left: 69.3333333333%; }
 
-  .offset-by-one-half     { margin-left: 52%; }
+  .offset-by-one-half.col     { margin-left: 52%; }
 }

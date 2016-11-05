@@ -1,3 +1,7 @@
+## v1.3.3
+  - [x] Fix grid offset which is caused after changing the whole system
+  - [x] Update grid system docs
+
 ## v1.3.2
   - [x] Fix RTL text align for dropdown-content
   - [x] Update Getting Started structure
