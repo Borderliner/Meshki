@@ -1,6 +1,6 @@
 ## v1.3.3
-  - [ ] Fix grid offset which is caused after changing the whole system
-  - [ ] Update grid system docs
+  - [x] Fix grid offset which is caused after changing the whole system
+  - [x] Update grid system docs
 
 ## v1.3.2
   - [x] Fix RTL text align for dropdown-content
