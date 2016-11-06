@@ -1,7 +1,7 @@
 ## v1.3.4
   - [x] Fix navbar bottom padding overlaying the content
   - [x] Better sidenav color, without borders
-  - [ ] More compact footer
+  - [x] More compact footer
 
 ## v1.3.3
   - [x] Fix grid offset which is caused after changing the whole system
