@@ -1,5 +1,5 @@
 ## v1.3.4
-  - [ ] Fix navbar bottom padding overlaying the content
+  - [x] Fix navbar bottom padding overlaying the content
   - [ ] Better sidenav color, without borders
   - [ ] More compact footer
 
