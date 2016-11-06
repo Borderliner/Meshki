@@ -175,8 +175,7 @@ input[type=checkbox]+label.checkbox:before, input[type=radio]+label.radio:before
 /* Sidenav starts from the right */
 .sidenav {
   left: auto;
-  right: -1px;
-  border-left: 1px solid #818181;
+  right: 0px;
 }
 
 /* Different padding of RTL Sidenav */
