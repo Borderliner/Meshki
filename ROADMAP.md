@@ -2,6 +2,7 @@
   - [x] Fix navbar bottom padding overlaying the content
   - [x] Better sidenav color, without borders
   - [x] More compact footer
+  - [x] Add slider component
 
 ## v1.3.3
   - [x] Fix grid offset which is caused after changing the whole system
