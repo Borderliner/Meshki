@@ -39,6 +39,8 @@ input[type="button"] {
   color: #E1E1E1;
   border: 2px solid #E1E1E1;
   line-height: normal !important; /* Fix Midori bug */
+  /* Button expands out of boundary bug */
+  max-width: 98%;
 }
 
 a.button.small,
