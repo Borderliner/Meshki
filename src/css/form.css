@@ -104,8 +104,10 @@ legend {
 
 /* Fieldset normalization */
 fieldset {
-  border-width: 0;
-  padding: 0;
+  border: 2px solid #E1E1E1 !important;
+  border-radius: 5px;
+  padding: 20px !important;
+  margin: 10px 5px !important;
 }
 
 /* Checkbox and Radio normalization */
