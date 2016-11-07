@@ -97,14 +97,14 @@
 
       <div class="row text-center" style="margin-bottom: 250px;margin-top: 50px;">
         <div class="button-couple">
-          <a class="button default large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.3.3.zip">Download (v1.3.3)</a>
+          <a class="button default large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.4.0.zip">Download (v1.4.0)</a>
           <a class="button large disabled" disabled>or</a>
           <a class="button danger large custom-down-cdn" href="javascript:void(0)" onclick="var cdn=document.getElementById('cdn');cdn.style.display=='none'?cdn.style.display='block':cdn.style.display='none';">Use CDN</a>
         </div><br>
         <pre id="cdn" style="display: none;">
           <code>
-https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.3/meshki.min.css
-https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.3/meshki.min.js
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.0/meshki.min.css
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.0/meshki.min.js
           </code>
         </pre>
       </div><br>
@@ -131,7 +131,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.3/meshki.min.js
         <h3>What is Meshki?</h3>
         <hr>
         <p>
-          Meshki is a simple, black-colored, responsive boilerplate to kickstart any responsive project. It is only ~16 KiB (minified) and ~40 KiB (normal), including both CSS and JS files, which makes it superb for small to medium projects. It's easy to use, clean and is just beautiful.
+          Meshki is a simple, black-colored, responsive boilerplate to kickstart any responsive project. It is only ~18 KiB (minified) and ~41 KiB (normal), including both CSS and JS files, which makes it superb for small to medium projects. It's easy to use, clean and is just beautiful.
           It started as a fork of <a href="http://getskeleton.com" target="_blank">Skeleton</a> project, and it still uses some of the codes of it, Meshki is considered to be a total overhaul of Skeleton and it barely resembles it when you take a look at it.
           Don't be afraid to have a look at Meshki's code! If you spot any bugs, or you want some improvements, head to <a href="https://github.com/Borderliner/Meshki" target="_blank">our GitHub repository</a> and open an issue or a pull request!
         </p>
@@ -144,7 +144,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.3/meshki.min.js
           This is a valid question. There are tons of UI libraries out there in the wild, but what makes Meshki different?
         </p>
         <p>
-          Meshki tends to be light-weight, but useful. Contrary to most "light-weight" libraries, Meshki doesn't sacrifice usability for just being light-weight. This means that you don't need to reinvent the wheel, and many common components are ready for you to use out-of-the-box. I mean, everybody can create libraries less than 16 KiB, but does this actually make them useful?
+          Meshki tends to be light-weight, but useful. Contrary to most "light-weight" libraries, Meshki doesn't sacrifice usability for just being light-weight. This means that you don't need to reinvent the wheel, and many common components are ready for you to use out-of-the-box. I mean, everybody can create libraries less than 18 KiB, but does this actually make them useful?
         </p>
         <p>
           Also, Meshki strives to bring you a clean eye-candy interface, the black color doesn't hurt your eyes, and brings simplicity and elegance together. One of the main goals of Meshki is to be stable and reliable, so we try to provide you with updates and fixes as much as we can. Meshki is stable enough right now.
@@ -497,6 +497,31 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.3/meshki.min.js
           <label for="chk-news" class="checkbox">I wish to receive newsletters from this site.</label>
         </div>
       </div>
+
+      <div class="row">
+        <div class="two col">
+          Budget: <span id="percent_value">0</span> $
+        </div>
+        <div class="nine col">
+          <input class="expand" type="range" id="percent" name="percent" min="0" max="100" step="1" value="0">
+        </div>
+        <div class="one col">
+          <span>100 $</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="twelve col">
+          <fieldset>
+            <legend>Overview</legend>
+            <span><b>First Name</b>: Walter</span><br>
+            <span><b>Last Name</b>: White</span><br>
+            <span><b>Age</b>: 50</span><br>
+            <span><b>Location</b>: Albuquerque, New Mexico</span>
+          </fieldset>
+        </div>
+      </div>
+
       <div class="row text-center">
         <button class="default expand">Submit</button>
       </div>
@@ -565,6 +590,18 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.3/meshki.min.js
           &lt;label for="chk-news" class="checkbox">I wish to receive newsletters from this site.&lt;/label>
         &lt;/div>
       &lt;/div>
+
+      &lt;div class="row">
+        &lt;input class="expand" type="range"name="percent" min="0" max="100" step="1" value="0">
+      &lt;/div>
+
+      &lt;fieldset>
+        &lt;legend>Overview&lt;/legend>
+        &lt;span>First Name: Walter&lt;/span>
+        &lt;span>Last Name: White&lt;/span>
+        &lt;span>Age: 50&lt;/span>
+        &lt;span>Location: Albuquerque, New Mexico&lt;/span>
+      &lt;/fieldset>
 
       &lt;div class="row text-center">
         &lt;button class="expand">Submit&lt;/button>
@@ -849,8 +886,16 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.3.3/meshki.min.js
     </div>
   </div>
   <script type="text/javascript">
-    var elem = document.getElementById('github-btn');
-    elem.innerHTML = 'GitHub (' + githubStars('Borderliner/Meshki') + ')';
+    var elem = document.getElementById("github-btn");
+    elem.innerHTML = "GitHub (" + githubStars("Borderliner/Meshki") + ")";
+
+    var percent_update = function() {
+      document.getElementById("percent_value").innerHTML = this.value;
+      console.log(this.value);
+    };
+
+    document.getElementById("percent").onchange = percent_update;
+    document.getElementById("percent").oninput = percent_update;
   </script>
   <script>
   window.twttr = (function(d, s, id) {

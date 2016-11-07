@@ -1,5 +1,5 @@
 /*
-* Meshki v1.3.3
+* Meshki v1.4.0
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -39,6 +39,8 @@ input[type="button"] {
   color: #E1E1E1;
   border: 2px solid #E1E1E1;
   line-height: normal !important; /* Fix Midori bug */
+  /* Button expands out of boundary bug */
+  max-width: 98%;
 }
 
 a.button.small,

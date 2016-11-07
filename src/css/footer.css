@@ -1,5 +1,5 @@
 /*
-* Meshki v1.3.3
+* Meshki v1.4.0
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -15,20 +15,13 @@ footer, .footer {
   background-color: #111;
   border-top: 2px solid #E1E1E1;
   margin: 25px 0 0 0;
-  padding: 25px 50px;
+  padding: 25px 50px 0 50px;
   text-align: center;
 }
 
-/* Remove bottom padding in compact mode */
-footer.compact, .footer.compact {
-  padding-bottom: 0px;
-}
-
-/* Remove bottom margins of columns in compact mode */
-footer.compact .column,
-.footer.compact .column,
-footer.compact .columns,
-.footer.compact .columns {
+/* Remove bottom margins of columns */
+footer .col,
+.footer .col {
   margin-bottom: 0px;
 }
 

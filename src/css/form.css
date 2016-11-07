@@ -1,5 +1,5 @@
 /*
-* Meshki v1.3.3
+* Meshki v1.4.0
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * http://meshki.borderliner.ir/
 * Free to use under the MIT license.
@@ -104,8 +104,10 @@ legend {
 
 /* Fieldset normalization */
 fieldset {
-  border-width: 0;
-  padding: 0;
+  border: 2px solid #E1E1E1 !important;
+  border-radius: 5px;
+  padding: 20px !important;
+  margin: 10px 5px !important;
 }
 
 /* Checkbox and Radio normalization */
@@ -173,4 +175,104 @@ input[type="radio"]:checked + label.radio:before {
 /* Remove outlines of checkboxes and radio buttons, especially for Firefox */
 input[type="checkbox"]:focus + label.checkbox, input[type="radio"]:focus + label.radio {
   outline: none !important;
+}
+
+/* Style input range */
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 0 5px;
+  background-color: transparent;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 26px;
+  cursor: pointer;
+  background: #222;
+  border-radius: 25px;
+  border: 2px solid #E1E1E1;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 25px;
+  background-color: #E1E1E1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: 1px;
+  border: 2px solid transparent;
+  transition: background-color .3s, border-color .3s;
+}
+
+input[type=range]:focus::-webkit-slider-thumb,
+input[type=range]:hover::-webkit-slider-thumb {
+  background-color: #55acee;
+  border-color: #E1E1E1;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 23px;
+  cursor: pointer;
+  background-color: #222;
+  border-radius: 25px;
+  border: 2px solid #E1E1E1;
+}
+
+input[type=range]::-moz-range-thumb {
+  height: 17px;
+  width: 17px;
+  border-radius: 25px;
+  background-color: #E1E1E1;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color .3s, border-color .3s;
+}
+
+input[type=range]:focus::-moz-range-thumb,
+input[type=range]:hover::-moz-range-thumb {
+  background-color: #55acee;
+  border-color: #E1E1E1;
+}
+
+/* Fix Firefox outline bug */
+input[type=range]::-moz-focus-outer {
+  border: 0;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 26px;
+  cursor: pointer;
+  background-color: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower,
+input[type=range]::-ms-fill-upper {
+  background-color: #222;
+  border: 2px solid #E1E1E1;
+  border-radius: 50px;
+}
+
+input[type=range]::-ms-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 25px;
+  background-color: #E1E1E1;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color .3s, border-color .3s;
+}
+
+input[type=range]:focus::-ms-thumb,
+input[type=range]:hover::-ms-thumb {
+  background-color: #55acee;
+  border-color: #E1E1E1;
 }
