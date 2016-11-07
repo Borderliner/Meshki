@@ -1,3 +1,6 @@
+## v1.4.1
+  - [ ] Disable blue highlight on touch devices
+
 ## v1.4.0
   - [x] Fix navbar bottom padding overlaying the content
   - [x] Better sidenav color, without borders
