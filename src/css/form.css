@@ -206,13 +206,6 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   margin-top: 1px;
   border: 2px solid transparent;
-  transition: background-color .3s, border-color .3s;
-}
-
-input[type=range]:focus::-webkit-slider-thumb,
-input[type=range]:hover::-webkit-slider-thumb {
-  background-color: #55acee;
-  border-color: #E1E1E1;
 }
 
 input[type=range]::-moz-range-track {
@@ -231,13 +224,6 @@ input[type=range]::-moz-range-thumb {
   background-color: #E1E1E1;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: background-color .3s, border-color .3s;
-}
-
-input[type=range]:focus::-moz-range-thumb,
-input[type=range]:hover::-moz-range-thumb {
-  background-color: #55acee;
-  border-color: #E1E1E1;
 }
 
 /* Fix Firefox outline bug */
@@ -268,11 +254,4 @@ input[type=range]::-ms-thumb {
   background-color: #E1E1E1;
   cursor: pointer;
   border: 2px solid transparent;
-  transition: background-color .3s, border-color .3s;
-}
-
-input[type=range]:focus::-ms-thumb,
-input[type=range]:hover::-ms-thumb {
-  background-color: #55acee;
-  border-color: #E1E1E1;
 }

@@ -1,5 +1,6 @@
 ## v1.4.1
-  - [ ] Disable blue highlight on touch devices
+  - [x] Disable blue highlight on touch devices
+  - [x] Remove slider's knob animation
 
 ## v1.4.0
   - [x] Fix navbar bottom padding overlaying the content
