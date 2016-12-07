@@ -82,6 +82,8 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%;
   height: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* Remove highlight color */
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* General attributes of the body tag */
