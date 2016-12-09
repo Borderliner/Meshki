@@ -1,6 +1,6 @@
 {
   "name": "meshki",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Meshki: A Black-Colored, Responsive Boilerplate for UI Development",
   "main": "dist/meshki.min.css",
   "scripts": {
@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/Borderliner/Meshki/issues"
   },
-  "homepage": "http://meshki.borderliner.ir/",
+  "homepage": "https://borderliner.github.io/Meshki/",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-concat-css": "^0.3.1",
