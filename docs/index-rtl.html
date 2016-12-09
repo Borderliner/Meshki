@@ -32,7 +32,7 @@
   <script type="text/javascript" src="githubstars.js"></script>
 </head>
 
-<body>
+<body class="">
   <div class="sidenav push">
     <a href="javascript:void(0);" class="sidenav-close-button" onclick="meshki.closeNav()">&times;</a>
     <a href="">خانه</a>
@@ -885,6 +885,12 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.0/meshki-rtl.min.css
       }
           </code>
         </pre>
+      </div>
+      <div class="row">
+        <p>
+          شما می‌توانید از کلاس <code>sharp</code> بر روی هر عنصر استفاده کنید تا گوشه‌های اجزای صفحه تیز شوند. همچنین می‌توانید از این کلاس برروی تگ body استفاده کنید تا کل صفحه از حالت گرد بودن خارج شود. دکمه زیر به شما نشان می‌دهد که «حالت تیز» چه شکلی است! :) <br /><br />
+          <button class="large expand" onclick="document.body.classList.contains('sharp')?(document.body.className='', this.innerHTML='تیز نیست', this.className='large expand'):(document.body.className='sharp', this.innerHTML='تیز است', this.className='large expand default')">تیز نیست</button>
+        </p>
       </div>
       <div class="row">
         <p>
