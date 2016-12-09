@@ -2,6 +2,7 @@
   - [x] Disable blue highlight on touch devices
   - [x] Remove slider's knob animation
   - [x] Add sharp class to sharpen elements
+  - [x] Host docs on GitHub for better accessibility
 
 ## v1.4.0
   - [x] Fix navbar bottom padding overlaying the content

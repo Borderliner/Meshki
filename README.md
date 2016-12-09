@@ -1,4 +1,4 @@
-# [Meshki](http://meshki.borderliner.ir/)
+# [Meshki](https://borderliner.github.io/Meshki/)
 [![npm](https://img.shields.io/npm/dm/meshki.svg?maxAge=2592000?style=flat-square)](https://www.npmjs.com/package/meshki)
 [![GitHub tag](https://img.shields.io/github/tag/borderliner/meshki.svg?maxAge=2592000?style=flat-square)](https://github.com/Borderliner/Meshki/releases)
 [![npm](https://img.shields.io/npm/l/meshki.svg?maxAge=2592000?style=flat-square)](https://github.com/Borderliner/Meshki/blob/master/LICENSE.md)
@@ -7,7 +7,7 @@
 
 Meshki is a simple, black-colored, responsive boilerplate to kickstart any responsive project.<br>
 It is only <b>~18 KiB</b> (minified) and ~41 KiB (normal), including both CSS and JS files.<br>
-Check out <http://meshki.borderliner.ir/> for samples and details.
+Check out <https://borderliner.github.io/Meshki/> for samples and details.
 
 ## Getting Started
 
@@ -88,9 +88,9 @@ Meshki has been developed on a GNU/Linux system (Arch Linux and Ubuntu), using a
 
 All parts of Meshki are free to use and abuse under the [open-source MIT license](https://github.com/Borderliner/Meshki/blob/master/LICENSE.md).<br>
 All other non-Meshki codes have their own licenses. Check out their repositories for more information.
-The website of [Meshki](http://meshki.borderliner.ir) uses [font-awesome](http://fontawesome.io/)
+The website of [Meshki](https://borderliner.github.io/Meshki/) uses [font-awesome](http://fontawesome.io/)
 
 ## Acknowledgement
 
-[Meshki](http://meshki.borderliner.ir) started by [Mohammad Reza Hajianpour](mailto:hajianpour.mr@gmail.com) as a fork of [Skeleton](https://github.com/dhg/Skeleton). Although it has changed a lot, and Meshki has experienced a total overhaul.<br>
+[Meshki](https://borderliner.github.io/Meshki/) started by [Mohammad Reza Hajianpour](mailto:hajianpour.mr@gmail.com) as a fork of [Skeleton](https://github.com/dhg/Skeleton). Although it has changed a lot, and Meshki has experienced a total overhaul.<br>
 Skeleton was created by [Dave Gamache](https://twitter.com/dhg).
