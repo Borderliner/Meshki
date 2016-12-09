@@ -1,7 +1,7 @@
 /*
-* Meshki v1.4.0
+* Meshki v1.4.1
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
-* http://meshki.borderliner.ir/
+* https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
@@ -263,9 +263,9 @@ input[type="button"].warning:active {
   }
 }
 /*
-* Meshki v1.4.0
+* Meshki v1.4.1
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
-* http://meshki.borderliner.ir/
+* https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
@@ -319,9 +319,9 @@ pre.filled > code {
   color: #000;
 }
 /*
-* Meshki v1.4.0
+* Meshki v1.4.1
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
-* http://meshki.borderliner.ir/
+* https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
@@ -358,9 +358,9 @@ footer .row,
   }
 }
 /*
-* Meshki v1.4.0
+* Meshki v1.4.1
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
-* http://meshki.borderliner.ir/
+* https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
@@ -422,6 +422,58 @@ select {
 select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
+}
+
+select.sharp,
+button.sharp,
+textarea.sharp,
+input.sharp,
+fieldset.sharp,
+pre.sharp,
+code.sharp,
+a.button.sharp {
+  border-radius: 0 !important;
+}
+
+body.sharp select,
+body.sharp button,
+body.sharp textarea,
+body.sharp input,
+body.sharp fieldset,
+body.sharp pre,
+body.sharp code,
+body.sharp a.button,
+body.sharp .button-couple a.button,
+body.sharp .button-couple button,
+body.sharp input[type=checkbox]+label.checkbox:before {
+  border-radius: 0;
+}
+
+body.sharp input[type=range]::-webkit-slider-runnable-track,
+body.sharp input[type=range]::-webkit-slider-thumb {
+  border-radius: 0;
+}
+
+body.sharp input[type=range]::-moz-range-track,
+body.sharp input[type=range]::-moz-range-thumb {
+  border-radius: 0;
+}
+
+body.sharp input[type=range]::-ms-thumb,
+body.sharp input[type=range]::-ms-fill-lower,
+body.sharp input[type=range]::-ms-fill-upper {
+  border-radius: 0;
+}
+
+select.unsharp,
+button.unsharp,
+textarea.unsharp,
+input.unsharp,
+fieldset.unsharp,
+pre.unsharp,
+code.unsharp,
+a.button.unsharp {
+  border-radius: 5px !important;
 }
 
 /* Dropdown arrow for everyone! */
@@ -557,21 +609,13 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 input[type=range]::-webkit-slider-thumb {
-  height: 20px;
-  width: 20px;
+  height: 22px;
+  width: 22px;
   border-radius: 25px;
   background-color: #E1E1E1;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: 1px;
   border: 2px solid transparent;
-  transition: background-color .3s, border-color .3s;
-}
-
-input[type=range]:focus::-webkit-slider-thumb,
-input[type=range]:hover::-webkit-slider-thumb {
-  background-color: #55acee;
-  border-color: #E1E1E1;
 }
 
 input[type=range]::-moz-range-track {
@@ -590,13 +634,6 @@ input[type=range]::-moz-range-thumb {
   background-color: #E1E1E1;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: background-color .3s, border-color .3s;
-}
-
-input[type=range]:focus::-moz-range-thumb,
-input[type=range]:hover::-moz-range-thumb {
-  background-color: #55acee;
-  border-color: #E1E1E1;
 }
 
 /* Fix Firefox outline bug */
@@ -627,18 +664,11 @@ input[type=range]::-ms-thumb {
   background-color: #E1E1E1;
   cursor: pointer;
   border: 2px solid transparent;
-  transition: background-color .3s, border-color .3s;
-}
-
-input[type=range]:focus::-ms-thumb,
-input[type=range]:hover::-ms-thumb {
-  background-color: #55acee;
-  border-color: #E1E1E1;
 }
 /*
-* Meshki v1.4.0
+* Meshki v1.4.1
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
-* http://meshki.borderliner.ir/
+* https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
@@ -738,9 +768,9 @@ input[type=range]:hover::-ms-thumb {
   .offset-by-one-half.col     { margin-left: 52%; }
 }
 /*
-* Meshki v1.4.0
+* Meshki v1.4.1
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
-* http://meshki.borderliner.ir/
+* https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
@@ -772,9 +802,9 @@ li {
   margin-bottom: 1rem;
 }
 /*
-* Meshki v1.4.0
+* Meshki v1.4.1
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
-* http://meshki.borderliner.ir/
+* https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
@@ -855,6 +885,8 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%;
   height: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* Remove highlight color */
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* General attributes of the body tag */
@@ -962,9 +994,9 @@ compatibility reasons.
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
 /*
-* Meshki v1.4.0
+* Meshki v1.4.1
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
-* http://meshki.borderliner.ir/
+* https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
@@ -1580,9 +1612,9 @@ template {
   display: none;
 }
 /*
-* Meshki v1.4.0
+* Meshki v1.4.1
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
-* http://meshki.borderliner.ir/
+* https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
@@ -1678,9 +1710,9 @@ template {
   }
 }
 /*
-* Meshki v1.4.0
+* Meshki v1.4.1
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
-* http://meshki.borderliner.ir/
+* https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
@@ -1733,9 +1765,9 @@ table.hover > tbody tr:hover {
   background-color: #404040;
 }
 /*
-* Meshki v1.4.0
+* Meshki v1.4.1
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
-* http://meshki.borderliner.ir/
+* https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */
@@ -1770,9 +1802,9 @@ p {
   margin-top: 0;
 }
 /*
-* Meshki v1.4.0
+* Meshki v1.4.1
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
-* http://meshki.borderliner.ir/
+* https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
 */

@@ -12,7 +12,7 @@ Check out <https://borderliner.github.io/Meshki/> for samples and details.
 ## Getting Started
 
 There are a couple ways to download Meshki:
-- [Download the zip](https://github.com/Borderliner/Meshki/archive/v1.4.0.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v1.4.0.tar.gz)
+- [Download the zip](https://github.com/Borderliner/Meshki/archive/v1.4.1.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v1.4.1.tar.gz)
 - Clone the repo: `git clone https://github.com/Borderliner/Meshki.git` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download)
 - Use Bower: `bower install meshki` **(Recommended)**
 - Use npm: `npm install meshki`
@@ -60,7 +60,7 @@ Meshki is lightweight, stylish and simple. It styles only raw HTML elements (wit
 - Although it's not a UI framework, you can create most of the interface just with Meshki
 - No compilation or installation needed. Just 2 files of CSS + JS
 - Can be installed via `bower` and `npm` (`bower install meshki` and `npm install meshki`)
-- Available through [CloudFlare](https://cdnjs.com/libraries/meshki)'s CDN
+- Available through [CloudFlare](https://cdnjs.com/libraries/meshki) and [jsDelivr](https://www.jsdelivr.com/projects/meshki) CDNs
 - Clean code, clean interface, without any headaches
 - Dependency-free! You don't need jQuery to run Meshki. All pure JavaScript
 
@@ -77,8 +77,7 @@ Meshki is lightweight, stylish and simple. It styles only raw HTML elements (wit
 The above list is non-exhaustive. Meshki works perfectly with almost all older versions of the browsers above, though IE certainly has large degradation prior to IE 9.
 
 ## Major Known Issues
-- I once saw very bad rendering on a low resolution laptop. It's probably nothing I can do about, but report any issues related to bad font rendering. I recently changed it to Open Sans, which is very clean and well-tested.
-- On tablets, opening the push slider sometimes messes up the button-couples. Will find a workaround in the future release.
+- On tablets, opening the push slider sometimes messes up the button-couples. Will find a workaround in the future releases.
 
 ## Tools Used
 
