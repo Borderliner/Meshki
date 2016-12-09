@@ -84,7 +84,9 @@ body.sharp fieldset,
 body.sharp pre,
 body.sharp code,
 body.sharp a.button,
-body.sharp input[type=checkbox]+label.checkbox:before{
+body.sharp .button-couple a.button,
+body.sharp .button-couple button,
+body.sharp input[type=checkbox]+label.checkbox:before {
   border-radius: 0;
 }
 
