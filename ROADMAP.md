@@ -1,3 +1,7 @@
+## v1.4.2
+  - [ ] Change sidenav animation to a simpler and smoother one
+  - [ ] Meshki RTL font served over HTTPS
+
 ## v1.4.1
   - [x] Disable blue highlight on touch devices
   - [x] Remove slider's knob animation
