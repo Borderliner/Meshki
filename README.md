@@ -5,6 +5,8 @@
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/meshki_ui.svg?style=social&label=Follow&maxAge=2592000?style=flat-square)](https://twitter.com/Meshki_UI)
 
+![Meshki Banner](https://borderliner.github.io/Meshki/meta-image.png)
+
 Meshki is a simple, black-colored, responsive boilerplate to kickstart any responsive project.<br>
 It is only <b>~18 KiB</b> (minified) and ~41 KiB (normal), including both CSS and JS files.<br>
 Check out <https://borderliner.github.io/Meshki/> for samples and details.
