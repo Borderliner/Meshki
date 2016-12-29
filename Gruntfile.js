@@ -41,7 +41,7 @@ module.exports = function(grunt){
 		  fonts: {
 		  	cwd: 'src',
 		  	expand: true,
-		  	src: 'fonts/*.ttf',
+		  	src: 'fonts/*.*',
 		  	dest: 'dist/'
 		  },
       css_rtl: {

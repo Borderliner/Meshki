@@ -20,6 +20,16 @@
 
 /* General RTL
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+@font-face {
+  font-family: 'P Yekan';
+  src: local('P Yekan'),
+  url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/fonts/p_yekan.woff') format('woff'),
+  url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/fonts/p_yekan.ttf') format('truetype'),
+  url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/fonts/p_yekan.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   direction: rtl;
   font-family: "P Yekan", "Open Sans", sans-serif;
