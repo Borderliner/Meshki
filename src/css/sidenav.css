@@ -23,6 +23,13 @@
   transition: 0.5s;
 }
 
+/* Pushes the content div with effect */
+.content {
+  position: absolute;
+  width: 100%;
+  transition: margin-left .5s, margin-right .5s;
+}
+
 .overlay {
   position: fixed;
   width: 100%;
@@ -79,11 +86,6 @@
   right: 0;
   padding-right: 30px !important;
   outline: 0 !important;
-}
-
-/* Pushes the content div with effect */
-.content {
-  transition: margin-left .5s, margin-right .5s;
 }
 
 /* Change the style of the sidenav for non-mobiles */
