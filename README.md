@@ -75,7 +75,7 @@ Meshki is lightweight, stylish and simple. It styles only raw HTML elements (wit
 The above list is non-exhaustive. Meshki works perfectly with almost all older versions of the browsers above, though IE certainly has large degradation prior to IE 9.
 
 ## Major Known Issues
-- On tablets, opening the push slider sometimes messes up the button-couples. Will find a workaround in the future releases.
+- Slider is somehow messed up on IE and Microsot Edge. Will be fixed soon.
 
 ## Tools Used
 
