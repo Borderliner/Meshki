@@ -1,6 +1,6 @@
 {
   "name": "meshki",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Meshki: A Black-Colored, Responsive Boilerplate for UI Development",
   "main": "dist/meshki.min.css",
   "scripts": {

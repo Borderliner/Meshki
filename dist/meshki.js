@@ -1,5 +1,5 @@
 /*
-* Meshki v1.4.1
+* Meshki v1.4.2
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
@@ -37,12 +37,15 @@ var meshki = {
     // Set Sidenav's width to 250px, starts sliding
     sidenav.style.width = '250px';
     // If on Desktop and the sidenav is a push one, push "content"
-    if (window.innerWidth > 768 && isSidenavPush)
+    if (window.innerWidth > 768 && isSidenavPush) {
+      // Hide body overflow-x
+      document.body.style.overflowX = 'hidden';
       // If not RTL
       if (!is_rtl())
         content.style.marginLeft = '250px';
       else
         content.style.marginRight = '250px';
+    }
 
     overlayDiv.style.opacity = 0.4;
     overlayDiv.style.visibility = 'visible';

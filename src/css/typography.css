@@ -1,5 +1,5 @@
 /*
-* Meshki v1.4.1
+* Meshki v1.4.2
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
