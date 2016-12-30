@@ -1,5 +1,5 @@
 /*
-* Meshki v1.4.1
+* Meshki v1.4.2
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
@@ -63,58 +63,6 @@ select {
 select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
-}
-
-select.sharp,
-button.sharp,
-textarea.sharp,
-input.sharp,
-fieldset.sharp,
-pre.sharp,
-code.sharp,
-a.button.sharp {
-  border-radius: 0 !important;
-}
-
-body.sharp select,
-body.sharp button,
-body.sharp textarea,
-body.sharp input,
-body.sharp fieldset,
-body.sharp pre,
-body.sharp code,
-body.sharp a.button,
-body.sharp .button-couple a.button,
-body.sharp .button-couple button,
-body.sharp input[type=checkbox]+label.checkbox:before {
-  border-radius: 0;
-}
-
-body.sharp input[type=range]::-webkit-slider-runnable-track,
-body.sharp input[type=range]::-webkit-slider-thumb {
-  border-radius: 0;
-}
-
-body.sharp input[type=range]::-moz-range-track,
-body.sharp input[type=range]::-moz-range-thumb {
-  border-radius: 0;
-}
-
-body.sharp input[type=range]::-ms-thumb,
-body.sharp input[type=range]::-ms-fill-lower,
-body.sharp input[type=range]::-ms-fill-upper {
-  border-radius: 0;
-}
-
-select.unsharp,
-button.unsharp,
-textarea.unsharp,
-input.unsharp,
-fieldset.unsharp,
-pre.unsharp,
-code.unsharp,
-a.button.unsharp {
-  border-radius: 5px !important;
 }
 
 /* Dropdown arrow for everyone! */

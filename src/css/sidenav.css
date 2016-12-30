@@ -1,5 +1,5 @@
 /*
-* Meshki v1.4.1
+* Meshki v1.4.2
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
@@ -23,6 +23,13 @@
   transition: 0.5s;
 }
 
+/* Pushes the content div with effect */
+.content {
+  position: absolute;
+  width: 100%;
+  transition: margin-left .5s, margin-right .5s;
+}
+
 .overlay {
   position: fixed;
   width: 100%;
@@ -37,7 +44,7 @@
   transition: opacity .5s, visibility .5s;
 }
 
-/* The navigation menu's links */
+/* The links inside side navigation panel */
 .sidenav a {
   display: block;
   font-size: 1.8rem;
@@ -47,6 +54,14 @@
   white-space: nowrap;
   transition: 0.3s;
   outline: 0 !important;
+}
+
+/* The buttons inside side navigation panel */
+.sidenav button {
+  margin-right: 20px !important;
+  margin-left: 20px !important;
+  width: 84%;
+  min-width: 150px;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -79,11 +94,6 @@
   right: 0;
   padding-right: 30px !important;
   outline: 0 !important;
-}
-
-/* Pushes the content div with effect */
-.content {
-  transition: margin-left .5s, margin-right .5s;
 }
 
 /* Change the style of the sidenav for non-mobiles */

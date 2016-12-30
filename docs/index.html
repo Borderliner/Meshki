@@ -19,14 +19,20 @@
   <meta name="twitter:image" content="meta-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.1/meshki.min.css">
+  <!-- DEVELOPMENT FILES
+  <link rel="stylesheet" type="text/css" href="../dist/meshki.min.css">
+  <script type="text/javascript" src="../dist/meshki.min.js"></script>
+  / DEVELOPMENT FILES -->
+  <!-- PRODUCTION FILES -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js"></script>
+  <!-- / PRODUCTION FILES -->
   <link rel="stylesheet" type="text/css" href="custom.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.1/meshki.min.js"></script>
   <script type="text/javascript" src="githubstars.js">
 
   </script>
@@ -52,7 +58,7 @@
       <a href="#footer-doc" onclick="meshki.closeNav()">Footer</a>
     </div>
     <hr>
-    <a href="https://twitter.com/Meshki_UI" class="twitter-follow-button" data-show-count="true">Follow @Meshki_UI</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <button onclick="location.href='https://twitter.com/Meshki_UI'" class="button default medium"><b>Meshki on </b><i class="fa fa-twitter" aria-hidden="true"></i></button>
     <a href="javascript:void(0)" disabled style="font-size: 1.5rem">Share on:</a>
     <div class="share-links">
       <a href="https://www.facebook.com/sharer/sharer.php?u=https://borderliner.github.io/Meshki/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
@@ -97,14 +103,14 @@
 
       <div class="row text-center" style="margin-bottom: 250px;margin-top: 50px;">
         <div class="button-couple">
-          <a class="button default large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.4.1.zip">Download (v1.4.1)</a>
+          <a class="button default large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.4.2.zip">Download (v1.4.2)</a>
           <a class="button large disabled" disabled>or</a>
           <a class="button danger large custom-down-cdn" href="javascript:void(0)" onclick="var cdn=document.getElementById('cdn');cdn.style.display=='none'?cdn.style.display='block':cdn.style.display='none';">Use CDN</a>
         </div><br>
         <pre id="cdn" style="display: none;">
           <code>
-https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.1/meshki.min.css
-https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.1/meshki.min.js
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.css
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
           </code>
         </pre>
       </div><br>
@@ -868,18 +874,14 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.1/meshki.min.js
           </code>
         </pre>
       </div>
-      <div class="row">
-        <p>
-          You can use the <code>sharp</code> class on each element to make the edges sharper. You can also add this class to the body tag to make everything look sharper. Here's the button to switch to the sharp mode! :D <br /> <br />
-          <button class="large expand" onclick="document.body.classList.contains('sharp')?(document.body.className='', this.innerHTML='Not Sharp', this.className='large expand'):(document.body.className='sharp', this.innerHTML='Sharp', this.className='large expand default')">Not Sharp</button>
-        </p>
-      </div>
+
       <div class="row">
         <p>
           This website uses the awesome "<a href="http://fontawesome.io/" target="_blank">font-awesome</a>" to display icons and such. It is by far the best font icon set I've ever encountered. Make sure to check out their website.
         </p>
       </div>
     </div>
+
     <div class="footer compact">
       <div class="row">
         <div class="six col">
@@ -902,24 +904,6 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.1/meshki.min.js
 
     document.getElementById("percent").onchange = percent_update;
     document.getElementById("percent").oninput = percent_update;
-  </script>
-  <script>
-  window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
-
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
-
-  return t;
-  }(document, "script", "twitter-wjs"));
   </script>
 </body>
 

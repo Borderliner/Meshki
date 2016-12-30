@@ -1,5 +1,5 @@
 /*
-* Meshki v1.4.1
+* Meshki v1.4.2
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
@@ -263,7 +263,7 @@ input[type="button"].warning:active {
   }
 }
 /*
-* Meshki v1.4.1
+* Meshki v1.4.2
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
@@ -319,7 +319,7 @@ pre.filled > code {
   color: #000;
 }
 /*
-* Meshki v1.4.1
+* Meshki v1.4.2
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
@@ -358,7 +358,7 @@ footer .row,
   }
 }
 /*
-* Meshki v1.4.1
+* Meshki v1.4.2
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
@@ -422,58 +422,6 @@ select {
 select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
-}
-
-select.sharp,
-button.sharp,
-textarea.sharp,
-input.sharp,
-fieldset.sharp,
-pre.sharp,
-code.sharp,
-a.button.sharp {
-  border-radius: 0 !important;
-}
-
-body.sharp select,
-body.sharp button,
-body.sharp textarea,
-body.sharp input,
-body.sharp fieldset,
-body.sharp pre,
-body.sharp code,
-body.sharp a.button,
-body.sharp .button-couple a.button,
-body.sharp .button-couple button,
-body.sharp input[type=checkbox]+label.checkbox:before {
-  border-radius: 0;
-}
-
-body.sharp input[type=range]::-webkit-slider-runnable-track,
-body.sharp input[type=range]::-webkit-slider-thumb {
-  border-radius: 0;
-}
-
-body.sharp input[type=range]::-moz-range-track,
-body.sharp input[type=range]::-moz-range-thumb {
-  border-radius: 0;
-}
-
-body.sharp input[type=range]::-ms-thumb,
-body.sharp input[type=range]::-ms-fill-lower,
-body.sharp input[type=range]::-ms-fill-upper {
-  border-radius: 0;
-}
-
-select.unsharp,
-button.unsharp,
-textarea.unsharp,
-input.unsharp,
-fieldset.unsharp,
-pre.unsharp,
-code.unsharp,
-a.button.unsharp {
-  border-radius: 5px !important;
 }
 
 /* Dropdown arrow for everyone! */
@@ -666,7 +614,7 @@ input[type=range]::-ms-thumb {
   border: 2px solid transparent;
 }
 /*
-* Meshki v1.4.1
+* Meshki v1.4.2
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
@@ -768,7 +716,7 @@ input[type=range]::-ms-thumb {
   .offset-by-one-half.col     { margin-left: 52%; }
 }
 /*
-* Meshki v1.4.1
+* Meshki v1.4.2
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
@@ -802,7 +750,7 @@ li {
   margin-bottom: 1rem;
 }
 /*
-* Meshki v1.4.1
+* Meshki v1.4.2
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
@@ -994,7 +942,7 @@ compatibility reasons.
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
 /*
-* Meshki v1.4.1
+* Meshki v1.4.2
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
@@ -1612,7 +1560,7 @@ template {
   display: none;
 }
 /*
-* Meshki v1.4.1
+* Meshki v1.4.2
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
@@ -1636,6 +1584,13 @@ template {
   transition: 0.5s;
 }
 
+/* Pushes the content div with effect */
+.content {
+  position: absolute;
+  width: 100%;
+  transition: margin-left .5s, margin-right .5s;
+}
+
 .overlay {
   position: fixed;
   width: 100%;
@@ -1650,7 +1605,7 @@ template {
   transition: opacity .5s, visibility .5s;
 }
 
-/* The navigation menu's links */
+/* The links inside side navigation panel */
 .sidenav a {
   display: block;
   font-size: 1.8rem;
@@ -1660,6 +1615,14 @@ template {
   white-space: nowrap;
   transition: 0.3s;
   outline: 0 !important;
+}
+
+/* The buttons inside side navigation panel */
+.sidenav button {
+  margin-right: 20px !important;
+  margin-left: 20px !important;
+  width: 84%;
+  min-width: 150px;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -1694,11 +1657,6 @@ template {
   outline: 0 !important;
 }
 
-/* Pushes the content div with effect */
-.content {
-  transition: margin-left .5s, margin-right .5s;
-}
-
 /* Change the style of the sidenav for non-mobiles */
 @media (min-width: 544px) {
   .sidenav {
@@ -1710,7 +1668,7 @@ template {
   }
 }
 /*
-* Meshki v1.4.1
+* Meshki v1.4.2
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
@@ -1765,7 +1723,7 @@ table.hover > tbody tr:hover {
   background-color: #404040;
 }
 /*
-* Meshki v1.4.1
+* Meshki v1.4.2
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
@@ -1802,7 +1760,7 @@ p {
   margin-top: 0;
 }
 /*
-* Meshki v1.4.1
+* Meshki v1.4.2
 * Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.

@@ -1,6 +1,9 @@
 ## v1.4.2
-  - [ ] Change sidenav animation to a simpler and smoother one
-  - [ ] Meshki RTL font served over HTTPS
+  - [x] Remove unnecessary Ruby code
+  - [x] Contain the "P Yekan" font built-in
+  - [x] Remove "Sharp" mode
+  - [x] Push sidenav now doesn't resize all elements (Much better performance)
+  - [x] Buttons can now be used inside sidenav
 
 ## v1.4.1
   - [x] Disable blue highlight on touch devices

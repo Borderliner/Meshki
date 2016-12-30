@@ -8,13 +8,13 @@
 ![Meshki Banner](https://borderliner.github.io/Meshki/meta-image.png)
 
 Meshki is a simple, black-colored, responsive boilerplate to kickstart any responsive project.<br>
-It is only <b>~18 KiB</b> (minified) and ~41 KiB (normal), including both CSS and JS files.<br>
+It is only <b>~17 KiB</b> (minified) and ~40 KiB (normal), including both CSS and JS files.<br>
 Check out <https://borderliner.github.io/Meshki/> for samples and details.
 
 ## Getting Started
 
 There are a couple ways to download Meshki:
-- [Download the zip](https://github.com/Borderliner/Meshki/archive/v1.4.1.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v1.4.1.tar.gz)
+- [Download the zip](https://github.com/Borderliner/Meshki/archive/v1.4.2.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v1.4.2.tar.gz)
 - Clone the repo: `git clone https://github.com/Borderliner/Meshki.git` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download)
 - Use Bower: `bower install meshki` **(Recommended)**
 - Use npm: `npm install meshki`
@@ -26,8 +26,6 @@ You need node.js to minify the source CSS and JavaScript files and produce outpu
 You may need to access root user to install node packages globally.
 
 Then `cd` into the root folder of the project, issue the command `npm install` to install development dependencies. After that, run the command `npm run compile`. This will produce files for you in the `dist` folder, which includes both minified and normal versions of Meshki, plus a fonts folder which includes Open Sans Regular font. You can also run `npm run watch` (or `grunt watch`) to watch source files for change, and compile them automatically if there has been a change recently.
-
-Ruby programmers can also `cd` into the project folder, and issue `bundle install` command, followed by `bundle exec rake`, to compile and minify source codes. Make sure that you have `uglifyjs` installed and is in your $PATH. If not, install it with `sudo npm install -g uglifyjs`. Note that Grunt and Rake generate different outputs, so the sizes may vary. Meshki generates outputs using Grunt.
 
 ### What's in the package?
 
@@ -41,7 +39,9 @@ Meshki/
 │   ├── meshki-rtl.css
 │   ├── meshki-rtl.min.css
 │   ├── meshki.js
-│   └── meshki.min.js
+│   ├── meshki.min.js
+|   └── fonts/
+|       └── p_yekan.ttf
 ├── src/
 │   ├── css/
 │   │   ├── normalize.css
@@ -49,8 +49,10 @@ Meshki/
 │   │   └── *.css
 │   ├── images/
 │   │   └── favicon.ico
-│   └── js/
-│       └── meshki.js
+│   ├── js/
+│   |   └── meshki.js
+|   └── fonts/
+|       └── p_yekan.ttf
 └
 
 ```
@@ -79,7 +81,7 @@ Meshki is lightweight, stylish and simple. It styles only raw HTML elements (wit
 The above list is non-exhaustive. Meshki works perfectly with almost all older versions of the browsers above, though IE certainly has large degradation prior to IE 9.
 
 ## Major Known Issues
-- On tablets, opening the push slider sometimes messes up the button-couples. Will find a workaround in the future releases.
+- Slider is somehow messed up on IE and Microsot Edge. Will be fixed soon.
 
 ## Tools Used
 
