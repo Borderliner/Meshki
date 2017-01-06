@@ -38,8 +38,9 @@ div.share-links i.fa {
 }
 
 .title {
-  font-size: 12vmax;
+  width: 40vmax;
   padding-bottom: 10px;
+  display: block;
 }
 
 .col {
