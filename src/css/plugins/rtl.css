@@ -24,7 +24,7 @@
   font-family: 'Yekan';
   src: local('Yekan'),
   url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.3/fonts/yekan.woff') format('woff'),
-  url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.3/fonts/yekan.ttf') format('truetype'),
+  url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.3/fonts/yekan.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
