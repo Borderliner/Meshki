@@ -36,6 +36,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css">
   <script type="text/javascript" src="../githubstars.js"></script>
 </head>
 
@@ -175,7 +177,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
           ابتدا، یک <code>div</code> که شامل کلاس <code>sidenav</code> است را بلافاصله بعد از شروع تگ <code>body</code> بسازید. لینک‌های <a href="#sidenav-doc">کشو</a> در اینجا سکونت خواهند داشت. سپس، یک <code>div</code> دیگر بعد از div کشو بسازید، که شامل کلاس <code>content</code> باشد. تمامی مطالب اصلی شما باید درون این div قرار بگیرد. اجزای این صفحه را با مرورگر خود مشاهده کنید تا ساختار دقیق را متوجه شوید. کد زیر هم نمونه‌ای از این ساختار است:
         </p>
         <pre>
-          <code>
+          <code class="language-html">
     &lt;!DOCTYPE html>
     &lt;html>
     &lt;head>
@@ -197,26 +199,29 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
 
       &lt;div class="content">
 
+        &lt;!-- این منوی شماست -->
         &lt;nav>
           &lt;ul>
             &lt;li>&lt;a class="logo" href="javascript:void(0)">وب‌سایت من&lt;/a>&lt;/li>
           &lt;/ul>
         &lt;/nav>
 
+        &lt;!-- مطالب صفحه در اینجا قرار میگیرد -->
         &lt;div class="container">
           &lt;h3>به وب‌سایت من خوش‌آمدید!&lt;/h3>
           &lt;p>این یک پاراگراف نمونه است.&lt;/p>
         &lt;/div>
-      &lt;/div>
 
-      &lt;footer>
-        &lt;div class="row">
-          &lt;div class="six col">
-            &lt;p>یک متن در پابرگ&lt;/p>
+        &lt;!-- و در آخر، پابرگ زیبای شما -->
+        &lt;footer>
+          &lt;div class="row">
+            &lt;div class="six col">
+              &lt;p>یک متن در پابرگ&lt;/p>
+            &lt;/div>
           &lt;/div>
-        &lt;/div>
-      &lt;/footer>
+        &lt;/footer>
 
+      &lt;/div>
     &lt;/body>
           </code>
         </pre>
@@ -269,7 +274,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
 
         <span>کدهای مربوطه از این قرار هستند:</span><br><br>
           <pre>
-            <code>
+            <code class="language-html">
     &lt;a class="button small"&gt;ساده&lt;/a&gt;
     &lt;button class="default medium"&gt;عادی&lt;/button&gt;
     &lt;input type="submit" class="success large" value="موفق‌آمیز" /&gt;
@@ -294,7 +299,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
           ساختن کشو آسان است: کافیست یک <code>div</code> با کلاس <code>sidenav</code> دقیقا بعد از شروع تگ body بسازید. سپس از <code>&lt;a></code> ها برای ساخت لینک‌های کشو استفاده کنید. کاملا آسان و ساده است. از توابع جاوااسکریپت <code>()meshki.openNav</code> و <code>()meshki.closeNav</code> روی کلیک دکمه‌ها استفاده کنید تا کشو باز و بسته شود. همچنین می‌توانید با اضافه کردن کلاس <code>push</code> داستان را جذاب‌تر کنید! مثال زیر را در نظر بگیرید:
         </p>
         <pre>
-          <code>
+          <code class="language-html">
     &lt;body>
       &lt;div class="sidenav push">
         &lt;!-- از پرش به بالای صفحه جلوگیری می‌کند javascript:void(0) توجه کنید که تابع -->
@@ -320,7 +325,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
           مشکی همراه با یک منوی زیبا در خدمت شماست! بعد از شروع <code>div.content</code> یک <code>&lt;"div class="nav></code> بسازید، و درون آن یک <code>&lt;ul></code> قرار دهید. حال به ازای هر <code>&lt;li>&lt;a>&lt;/a>&lt;/li></code> درون <code>&lt;ul></code>، یک دکمه به منوی شما اضافه می‌شود. همچنین می‌توانید از کلاس <code>fixed</code> برروی <code>div.nav</code> استفاده کنید تا منوی شما به بالای صفحه بچسبد.
         </p>
         <pre>
-          <code>
+          <code class="language-html">
     &lt;div class="nav fixed">
       &lt;ul>
         &lt;!-- از پرش به بالای صفحه جلوگیری می‌کند javascript:void(0) توجه کنید که تابع -->
@@ -411,7 +416,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
           کد زیر یک نمونه کد برای سیستم صفحه مشکی است:
         </p>
           <pre>
-            <code>
+            <code class="language-html">
     &lt;div class="row"&gt;
       &lt;div class="one col"&gt;
         با عرض یک ستون div یک
@@ -552,7 +557,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
           برای درک بهتر، از مثال‌های زیر استفاده کنید:
         </p>
           <pre>
-            <code>
+            <code class="language-html">
     &lt;form>
       &lt;!-- ورودی‌های متن -->
       &lt;div class="row">
@@ -570,7 +575,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
       &lt;div class="row">
         &lt;div class="twelve col">
           &lt;label for="dis-email1">پست الکترونیکی:&lt;/label>
-          &lt;input id=dis-email1"" class="expand" type="email" name="dis-email1" value="me@borderliner.ir" disabled>
+          &lt;input id="dis-email1" class="expand" type="email" name="dis-email1" value="me@borderliner.ir" disabled>
         &lt;/div>
       &lt;/div>
 
@@ -614,7 +619,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
       &lt;/div>
 
       &lt;div class="row">
-        &lt;input class="expand" type="range"name="percent" min="0" max="100" step="1" value="0">
+        &lt;input class="expand" type="range" name="percent" min="0" max="100" step="1" value="0">
       &lt;/div>
 
       &lt;fieldset>
@@ -642,7 +647,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
       </div>
       <div class="row">
         <div class="six col">
-          مشکی از فونت‌های <a href="hhttp://awebfont.ir/fonts?cat_id=1&fonts_id=1801">P Yekan</a> برای زبان فارسی و از <a href="https://fonts.google.com/specimen/Open+Sans">Open Sans</a> برای زبان انگلیسی استفاده می‌نماید. مشکی این فونت‌هارا به شما تحمیل نمی‌کند. به سادگی می‌توانید فونت‌های مورد نظر خود را جایگزین این فونت‌ها کنید، اما برای داشتن بهترین نگارش، این دو فونت را به شما توصیه می‌کنیم. سایز فونت پیشفرض 1.5rem (یعنی 15 پیکسل)، و فاصله خطوط از هم 1.6 است. بدیهیست که استفاده از انواعی مانند <a href="javascript:void(0);">لینک</a>، <b>درشت</b>، <i>تاکید</i> و <u>زیرخط</u> ممکن است.
+          مشکی از فونت Yekan برای زبان فارسی و از <a href="https://fonts.google.com/specimen/Open+Sans">Open Sans</a> برای زبان انگلیسی استفاده می‌نماید. مشکی این فونت‌هارا به شما تحمیل نمی‌کند. به سادگی می‌توانید فونت‌های مورد نظر خود را جایگزین این فونت‌ها کنید، اما برای داشتن بهترین نگارش، این دو فونت را به شما توصیه می‌کنیم. سایز فونت پیشفرض 1.5rem (یعنی 15 پیکسل)، و فاصله خطوط از هم 1.6 است. بدیهیست که استفاده از انواعی مانند <a href="javascript:void(0);">لینک</a>، <b>درشت</b>، <i>تاکید</i> و <u>زیرخط</u> ممکن است.
         </div>
         <div class="six col">
           <h1>سر برگ <span class="heading-font-size"><code>h1</code> 50rem</span></h1>
@@ -661,6 +666,9 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
         </p>
         <p>
           توجه داشته باشید که برای قطعه کدهای دارای کلاس <code>filled</code>، این کلاس باید به pre اضافه شود، نه به code.
+        </p>
+        <p>
+        نکته مهم دیگر اینکه مشکی درحالت عادی، کدها را همانند این صفحه رنگی نمیکند. برای اینکار از <a href="http://prismjs.com/">Prism</a> استفاده نمایید.
         </p>
       </div>
       <div class="row">
@@ -758,7 +766,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
         توجه کنید که پابرگ‌های مشکی، سایز مشخصی ندارند و متناسب با حجم متن، بزرگتر می‌شوند.
         </p>
         <pre>
-          <code>
+          <code class="language-html">
     &lt;footer class="compact">
       &lt;div class="row">
         &lt;div class="six col">
@@ -797,7 +805,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
       </div>
       <div class="row">
         <pre>
-            <code>
+            <code class="language-css">
       /* اندازه‌ها با اولویت موبایل */
 
       /* بزرگتر از موبایل */
@@ -826,7 +834,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
       </div>
       <div class="row">
         <pre>
-          <code>
+          <code class="language-css">
       /* گسترش دادن یک المان */
       .expand {
         width: 100%;
@@ -899,6 +907,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
         <p>
           این وب‌سایت از فونت بی‌نظیر "<a href="http://fontawesome.io/" target="_blank">font-awesome</a>" برای نمایش اشکال مختلف استفاده می‌کند. به نظر من بهترین فونت-آیکون موجود است. حتما به وبسایت این پروژه سری بزنید!
         </p>
+        <p>ما از <a href="http://prismjs.com/">Prism</a> برای رنگی کردن کدهای این صفحه استفاده میکنیم. بی نظیر است!</p>
       </div>
     </div>
 
@@ -925,6 +934,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
     document.getElementById("percent").onchange = percent_update;
     document.getElementById("percent").oninput = percent_update;
   </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
 </body>
 
 </html>

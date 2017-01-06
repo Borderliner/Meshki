@@ -33,9 +33,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <script type="text/javascript" src="githubstars.js">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css">
+  <script type="text/javascript" src="githubstars.js"></script>
 
-  </script>
 </head>
 
 <body class="">
@@ -169,7 +170,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
           First of all, you need to have a <code>&lt;div></code> with the <code>sidenav</code> class, just after the beginning of the body. Your <a href="#sidenav-doc">sidenav</a>'s links will reside in here. Then, you need to create a <code>&lt;div></code> after the sidenav's div, with the <code>content</code> class. The rest of your body should be created inside the "content" div. Inspect the elements on this page to understand the structure. Ah! Here's a sample code:<br>
         </p>
         <pre>
-          <code>
+          <code class="language-html">
     &lt;!DOCTYPE html>
     &lt;html>
     &lt;head>
@@ -189,26 +190,29 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
 
       &lt;div class="content">
 
+        &lt;!-- This is your navbar -->
         &lt;nav>
           &lt;ul>
             &lt;li>&lt;a class="logo" href="javascript:void(0)">My Website&lt;/a>&lt;/li>
           &lt;/ul>
         &lt;/nav>
 
+        &lt;!-- The main content goes here -->
         &lt;div class="container">
           &lt;h3>Welcome to my cool website&lt;/h3>
           &lt;p>This is a sample paragraph.&lt;/p>
         &lt;/div>
-      &lt;/div>
 
-      &lt;footer>
-        &lt;div class="row">
-          &lt;div class="six col">
-            &lt;p>A text on the footer&lt;/p>
+        &lt;!-- And finally, your cool footer -->
+        &lt;footer>
+          &lt;div class="row">
+            &lt;div class="six col">
+              &lt;p>A text on the footer&lt;/p>
+            &lt;/div>
           &lt;/div>
-        &lt;/div>
-      &lt;/footer>
+        &lt;/footer>
 
+      &lt;/div>
     &lt;/body>
           </code>
         </pre>
@@ -259,7 +263,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
 
         <span>Here's the code for them:</span><br><br>
           <pre>
-            <code>
+            <code class="language-html">
     &lt;a class="button small"&gt;Simple&lt;/a&gt;
     &lt;button class="default medium"&gt;Default&lt;/button&gt;
     &lt;input type="submit" class="success large" value="Success" /&gt;
@@ -284,7 +288,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
           Creating a sidenav is easy: Just create a <code>&lt;div></code> with the <code>sidenav</code> class after the opening body tag. Then add <code>&lt;a></code> tags to make sidenav links. It's pretty easy and straight-forward. Use the JavaScript functions of <code>meshki.openNav()</code> and <code>meshki.closeNav()</code> on events to open and close sidenav respectively. You can also add <code>push</code> class to make if even more fun! Here's an example for your convenience:
         </p>
         <pre>
-          <code>
+          <code class="language-html">
     &lt;body>
       &lt;div class="sidenav push">
         &lt;!-- Note that javascript:void(0) stops your page from jumping to the top -->
@@ -310,7 +314,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
           Meshki comes with a beautiful navbar built-in. At the beginning of the <code>div.content</code>, create a <code>&lt;div class="nav"></code>, and then create a <code>&lt;ul></code> inside that. Now any <code>&lt;li>&lt;a href="#">Link&lt;/a>&lt;/li></code> inside the <code>&lt;ul></code> will appear as a button in the navbar. You can also add the <code>fixed</code> class to the <code>div.nav</code> to make the navbar fixed.
         </p>
         <pre>
-          <code>
+          <code class="language-html">
     &lt;div class="nav fixed">
       &lt;ul>
         &lt;!-- Note that javascript:void(0) stops your page from jumping to the top -->
@@ -399,7 +403,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
           Here's the code for how to use the grid system:
         </p>
           <pre>
-            <code>
+            <code class="language-html">
     &lt;div class="row"&gt;
       &lt;div class="one col"&gt;
         A div with one col length
@@ -538,7 +542,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
           This is the code snippet on how you can use form elements:
         </p>
           <pre>
-            <code>
+            <code class="language-html">
     &lt;form>
       &lt;!--Text Inputs -->
       &lt;div class="row">
@@ -556,7 +560,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
       &lt;div class="row">
         &lt;div class="twelve col">
           &lt;label for="dis-email1">Email:&lt;/label>
-          &lt;input id=dis-email1"" class="expand" type="email" name="dis-email1" value="me@borderliner.ir" disabled>
+          &lt;input id="dis-email1" class="expand" type="email" name="dis-email1" value="me@borderliner.ir" disabled>
         &lt;/div>
       &lt;/div>
 
@@ -599,7 +603,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
       &lt;/div>
 
       &lt;div class="row">
-        &lt;input class="expand" type="range"name="percent" min="0" max="100" step="1" value="0">
+        &lt;input class="expand" type="range" name="percent" min="0" max="100" step="1" value="0">
       &lt;/div>
 
       &lt;fieldset>
@@ -645,6 +649,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
           Code styling is kept basic: just wrap anything in a <code>&lt;code></code> and it will appear like <code>this</code>. It also has a <code>filled</code> style which is like <code class="filled">this</code>. For blocks of code, wrap a &lt;code> with a &lt;pre>.
           <br> Note that for blocks of code, <code>filled</code> class needs to be added to the &lt;pre>, not &lt;code>.
         </p>
+        <p>Also note that originally, Meshki doesn't contain syntax highlighting as you can see in this website. We use <a href="http://prismjs.com/">Prism</a> for this website. Check it out!</p>
       </div>
       <div class="row">
         <div class="twelve col">
@@ -739,7 +744,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
           <b>Note</b> that Meshki's footer does not enforce footer's height, so the more you add, the bigger it gets.
         </p>
         <pre>
-          <code>
+          <code class="language-html">
     &lt;footer class="compact">
       &lt;div class="row">
         &lt;div class="six col">
@@ -778,7 +783,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
       </div>
       <div class="row">
         <pre>
-            <code>
+            <code class="language-css">
       /* Mobile first queries */
 
       /* Larger than mobile */
@@ -807,7 +812,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
       </div>
       <div class="row">
         <pre>
-          <code>
+          <code class="language-css">
       /* Make element full width */
       .expand {
         width: 100%;
@@ -880,6 +885,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
         <p>
           This website uses the awesome "<a href="http://fontawesome.io/" target="_blank">font-awesome</a>" to display icons and such. It is by far the best font icon set I've ever encountered. Make sure to check out their website.
         </p>
+        <p>We use <a href="http://prismjs.com/">Prism</a> to highlight code on this website. It's amazing!</p>
       </div>
     </div>
 
@@ -906,6 +912,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
     document.getElementById("percent").onchange = percent_update;
     document.getElementById("percent").oninput = percent_update;
   </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
 </body>
 
 </html>

@@ -33,6 +33,10 @@ div.share-links i.fa {
   font-size: 4rem;
 }
 
+:not(pre)>code[class*=language-], pre[class*=language-] {
+  background-color: #222 !important;
+}
+
 .title {
   font-size: 12vmax;
   padding-bottom: 10px;
