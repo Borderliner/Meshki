@@ -1,0 +1,92 @@
+/* Yellow button */
+a.button.yellow,
+button.yellow,
+input[type="submit"].yellow,
+input[type="reset"].yellow,
+input[type="button"].yellow {
+  border: 2px #f9f300 solid;
+  color: #f9f300;
+}
+
+/* Yellow button's hover */
+a.button.yellow:hover,
+button.yellow:hover,
+input[type="submit"].yellow:hover,
+input[type="reset"].yellow:hover,
+input[type="button"].yellow:hover {
+  background-color: #f9f300;
+  border-color: #f9f300;
+  color: #222;
+}
+
+/* Yellow button's active */
+a.button.yellow:active,
+button.yellow:active,
+input[type="submit"].yellow:active,
+input[type="reset"].yellow:active,
+input[type="button"].yellow:active {
+  background-color: #bfbb1a;
+  border-color: #bfbb1a;
+}
+
+/* Crimson button */
+a.button.crimson,
+button.crimson,
+input[type="submit"].crimson,
+input[type="reset"].crimson,
+input[type="button"].crimson {
+  border: 2px #9a0000 solid;
+  color: #9a0000;
+}
+
+/* Crimson button's hover */
+a.button.crimson:hover,
+button.crimson:hover,
+input[type="submit"].crimson:hover,
+input[type="reset"].crimson:hover,
+input[type="button"].crimson:hover {
+  background-color: #9a0000;
+  border-color: #9a0000;
+  color: #fff;
+}
+
+/* Crimson button's active */
+a.button.crimson:active,
+button.crimson:active,
+input[type="submit"].crimson:active,
+input[type="reset"].crimson:active,
+input[type="button"].crimson:active {
+  background-color: #6f0606;
+  border-color: #6f0606;
+}
+
+/* Pink button */
+a.button.pink,
+button.pink,
+input[type="submit"].pink,
+input[type="reset"].pink,
+input[type="button"].pink {
+  border: 2px #bf21d0 solid;
+  color: #bf21d0;
+}
+
+/* Pink button's hover */
+a.button.pink:hover,
+button.pink:hover,
+input[type="submit"].pink:hover,
+input[type="reset"].pink:hover,
+input[type="button"].pink:hover {
+  background-color: #bf21d0;
+  border-color: #bf21d0;
+  color: #fff;
+}
+
+/* Pink button's active */
+a.button.pink:active,
+button.pink:active,
+input[type="submit"].pink:active,
+input[type="reset"].pink:active,
+input[type="button"].pink:active {
+  background-color: #9b1da9;
+  border-color: #9b1da9;
+}

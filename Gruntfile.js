@@ -44,10 +44,11 @@ module.exports = function(grunt){
 		  	src: 'fonts/*.*',
 		  	dest: 'dist/'
 		  },
-      css_rtl: {
-        expand: false,
-        src: 'src/css/plugins/rtl.css',
-        dest: 'dist/plugins/meshki-rtl.css'
+      plugins: {
+				cwd: 'src/css',
+        expand: true,
+        src: 'plugins/*.*',
+        dest: 'dist/'
       }
 		},
 
@@ -61,9 +62,13 @@ module.exports = function(grunt){
 				dest: 'dist/meshki.min.css'
 			},
       minify_rtl: {
-        src: 'dist/plugins/meshki-rtl.css',
-        dest: 'dist/plugins/meshki-rtl.min.css'
-      }
+        src: 'dist/plugins/rtl.css',
+        dest: 'dist/plugins/rtl.min.css'
+      },
+			minify_button_colors: {
+				src: 'dist/plugins/button-colors.css',
+        dest: 'dist/plugins/button-colors.min.css'
+			}
 		},
 
 		uglify: {
