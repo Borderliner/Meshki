@@ -17,6 +17,18 @@ div.share-links {
   display: inline-flex;
 }
 
+.share-links .fb-share:hover {
+  color: #4570CC;
+}
+
+.share-links .tw-share:hover {
+  color: #1DA1F2;
+}
+
+.share-links .gp-share:hover {
+  color: #DB4437;
+}
+
 div.share-links i.fa {
   font-size: 4rem;
 }
