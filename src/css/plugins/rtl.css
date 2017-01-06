@@ -21,23 +21,22 @@
 /* General RTL
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @font-face {
-  font-family: 'P Yekan';
-  src: local('P Yekan'),
-  url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/fonts/p_yekan.woff') format('woff'),
-  url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/fonts/p_yekan.ttf') format('truetype'),
-  url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/fonts/p_yekan.svg') format('svg');
+  font-family: 'Yekan';
+  src: local('Yekan'),
+  url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.3/fonts/yekan.woff') format('woff'),
+  url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.3/fonts/yekan.ttf') format('truetype'),
   font-weight: normal;
   font-style: normal;
 }
 
 body {
   direction: rtl;
-  font-family: "P Yekan", "Open Sans", sans-serif;
+  font-family: "Yekan", "Open Sans", sans-serif;
 }
 
 /* Buttons should use RTL font too */
 button, input, optgroup, select, textarea {
-  font-family: "P Yekan", "Open Sans", sans-serif;
+  font-family: "Yekan", "Open Sans", sans-serif;
 }
 
 /* Keep the blocks of code LTR */

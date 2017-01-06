@@ -14,19 +14,19 @@ module.exports = function(grunt){
 	    options: {},
 	    css: {
         src: [
-          'src/css/button.css',
-          'src/css/code.css',
-          'src/css/footer.css',
-          'src/css/form.css',
-          'src/css/grid.css',
-          'src/css/list.css',
-          'src/css/meshki.css',
-          'src/css/navbar.css',
-          'src/css/normalize.css',
-          'src/css/sidenav.css',
-          'src/css/table.css',
-          'src/css/typography.css',
-          'src/css/utility.css'
+          'src/css/base/button.css',
+          'src/css/base/code.css',
+          'src/css/base/footer.css',
+          'src/css/base/form.css',
+          'src/css/base/grid.css',
+          'src/css/base/list.css',
+          'src/css/base/meshki.css',
+          'src/css/base/navbar.css',
+          'src/css/base/normalize.css',
+          'src/css/base/sidenav.css',
+          'src/css/base/table.css',
+          'src/css/base/typography.css',
+          'src/css/base/utility.css'
         ],
 	    	dest: 'dist/meshki.css'
 	    }
@@ -46,8 +46,8 @@ module.exports = function(grunt){
 		  },
       css_rtl: {
         expand: false,
-        src: 'src/css/rtl.css',
-        dest: 'dist/meshki-rtl.css'
+        src: 'src/css/plugins/rtl.css',
+        dest: 'dist/plugins/meshki-rtl.css'
       }
 		},
 
@@ -61,8 +61,8 @@ module.exports = function(grunt){
 				dest: 'dist/meshki.min.css'
 			},
       minify_rtl: {
-        src: 'dist/meshki-rtl.css',
-        dest: 'dist/meshki-rtl.min.css'
+        src: 'dist/plugins/meshki-rtl.css',
+        dest: 'dist/plugins/meshki-rtl.min.css'
       }
 		},
 
