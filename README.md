@@ -1,3 +1,5 @@
+# I don't have a PC right now to give updates. More work will be done after I can afford to buy a PC.
+
 # [Meshki](https://borderliner.github.io/Meshki/)
 [![npm](https://img.shields.io/npm/dm/meshki.svg?maxAge=2592000?style=flat-square)](https://www.npmjs.com/package/meshki)
 [![GitHub tag](https://img.shields.io/github/tag/borderliner/meshki.svg?maxAge=2592000?style=flat-square)](https://github.com/Borderliner/Meshki/releases)
