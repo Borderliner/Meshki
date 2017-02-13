@@ -70,7 +70,7 @@
       <a class="gp-share" href="https://plus.google.com/share?url=https://borderliner.github.io/Meshki/" target="_blank"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
     </div>
   </div>
-  <div class="content">
+  <div class="container">
     <div class="nav fixed">
       <ul>
         <li><a class="logo" href="javascript:void(0);" onclick="meshki.openNav()"><i class="fa fa-bars" aria-hidden="true"></i>Meshki</a></li>
@@ -99,7 +99,7 @@
         <li class="nav-right hide-on-tablet"><button class="success"><i class="fa fa-search" aria-hidden="true"></i></button></li>
       </ul>
     </div>
-    <div class="container">
+    <div class="content">
       <div class="row">
         <h1 class="text-center title">Meshki</h1>
         <h2 class="text-center">Stylish. Black. Responsive.</h2>
@@ -107,9 +107,9 @@
 
       <div class="row text-center" style="margin-bottom: 250px;margin-top: 50px;">
         <div class="button-couple">
-          <a class="button default large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.4.2.zip">Download (v1.4.2)</a>
+          <a class="button red large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.4.2.zip">Download (v1.4.2)</a>
           <a class="button large disabled" disabled>or</a>
-          <a class="button pink large custom-down-cdn" href="javascript:void(0)" onclick="var cdn=document.getElementById('cdn');cdn.style.display=='none'?cdn.style.display='block':cdn.style.display='none';">Use CDN</a>
+          <a class="button blue large custom-down-cdn" href="javascript:void(0)" onclick="var cdn=document.getElementById('cdn');cdn.style.display=='none'?cdn.style.display='block':cdn.style.display='none';">Use CDN</a>
         </div><br>
         <pre id="cdn" style="display: none;">
           <code>
@@ -121,7 +121,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
 
       <hr />
       <h3 class="text-center" style="margin-bottom: 50px;">Ice-Cool Features</h3>
-      <div class="row meshki-features" style="margin-bottom: 90px;">
+      <div class="row meshki-features" style="margin-bottom: 20px;">
 
         <div class="four col text-center">
           <i class="fa fa-clock-o" aria-hidden="true"></i><br>
@@ -134,6 +134,11 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
         <div class="four col text-center">
           <i class="fa fa-rocket" aria-hidden="true"></i><br>
           <span>Oh did I say it's super fast? By using less code and less complex logics, Meshki is light-weight and is not resource-hungry.</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col twelve text-center">
+          <img id="retro-logo-buttons" src="retro.png">
         </div>
       </div>
 
@@ -181,6 +186,10 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
       &lt;!-- Make the page Mobile-Friendly -->
       &lt;meta name="viewport" content="width=device-width, initial-scale=1">
 
+      &lt;!-- Add OpenSans font -->
+      &lt;link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+      &lt;!-- Add Meshki's files -->
       &lt;link rel="stylesheet" type="text/css" href="dist/meshki.min.css">
       &lt;script type="text/javascript" src="dist/meshki.min.js">&lt;/script>
     &lt;/head>
@@ -190,7 +199,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
         &lt;!-- Sidenav links here -->
       &lt;/div>
 
-      &lt;div class="content">
+      &lt;div class="container">
 
         &lt;!-- This is your navbar -->
         &lt;nav>
@@ -200,7 +209,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
         &lt;/nav>
 
         &lt;!-- The main content goes here -->
-        &lt;div class="container">
+        &lt;div class="content">
           &lt;h3>Welcome to my cool website&lt;/h3>
           &lt;p>This is a sample paragraph.&lt;/p>
         &lt;/div>
