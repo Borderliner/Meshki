@@ -60,8 +60,8 @@
       <a href="#footer-doc" onclick="meshki.closeNav()">Footer</a>
     </div>
     <hr>
-    <button onclick="location.href='https://twitter.com/Meshki_UI'" class="button default medium"><b>Meshki on </b><i class="fa fa-twitter" aria-hidden="true"></i></button>
-    <button onclick="location.href='https://www.npmjs.com/package/meshki'" class="button danger medium"><b>Meshki on npm</b></button>
+    <button onclick="location.href='https://twitter.com/Meshki_UI'" class="button blue medium"><b>Meshki on </b><i class="fa fa-twitter" aria-hidden="true"></i></button>
+    <button onclick="location.href='https://www.npmjs.com/package/meshki'" class="button red medium"><b>Meshki on npm</b></button>
     <button onclick="location.href='https://github.com/Borderliner/Meshki'" class="button medium"><b>Meshki on </b><i class="fa fa-github" aria-hidden="true"></i></button>
     <a href="javascript:void(0)" disabled style="font-size: 1.5rem">Share on:</a>
     <div class="share-links">
@@ -78,6 +78,7 @@
           <a href="javascript:void(0)" class="nav-dropdown-button">Plugins</a>
           <div class="nav-dropdown-content">
             <a href="rtl/">RTL Mode (Persian)</a>
+            <a href="#extra-button-colors">Extra Button Colors</a>
           </div>
         </li>
         <li><a href="http://borderliner.ir/blog/tag/meshki/">News</a></li>
@@ -95,8 +96,9 @@
             <a href="#footer-doc">Footer</a>
           </div>
         </li>
-        <li class="nav-right hide-on-tablet"><input type="text" name="" placeholder="Search..."></li>
-        <li class="nav-right hide-on-tablet"><button class="success"><i class="fa fa-search" aria-hidden="true"></i></button></li>
+        <li class="nav-right hide-on-tablet"><input type="text" name="searchbox" id="searchbox" placeholder="Search...">
+        <script type="text/javascript" src="finder.js"></script></li>
+        <li class="nav-right hide-on-tablet"><button class="green" onclick="meshki.search()"><i class="fa fa-search" aria-hidden="true"></i></button></li>
       </ul>
     </div>
     <div class="content">
@@ -255,19 +257,19 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
         </p>
         <div class="centerize text-center">
           <a class="button small">Simple</a>
-          <button class="default medium">Default</button>
-          <input type="submit" class="success large" value="Success" />
-          <input type="reset" class="danger medium" value="Danger" />
-          <input type="button" class="warning small" value="Warning" />
+          <button class="blue medium">Blue</button>
+          <input type="submit" class="green large" value="Green" />
+          <input type="reset" class="red medium" value="Red" />
+          <input type="button" class="orange small" value="Orange" />
           <br><br><br>
           <div class="button-couple">
-            <button class="default medium">Agree</button>
+            <button class="blue medium">Agree</button>
             <button class="medium disabled" disabled>or</button>
-            <button class="danger medium">Disagree</button>
+            <button class="red medium">Disagree</button>
           </div>
           <br><br>
-          <button class="default expand small">Small Expanded Button</button>
-          <button class="danger expand medium">Medium Expanded Button</button>
+          <button class="blue expand small">Small Expanded Button</button>
+          <button class="red expand medium">Medium Expanded Button</button>
           <button class="expand medium" disabled>Disabled Medium Expanded Button</button>
           <button class="expand large">Large Expanded Button</button>
         </div><br>
@@ -276,15 +278,15 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
           <pre>
             <code class="language-html">
     &lt;a class="button small"&gt;Simple&lt;/a&gt;
-    &lt;button class="default medium"&gt;Default&lt;/button&gt;
-    &lt;input type="submit" class="success large" value="Success" /&gt;
-    &lt;input type="reset" class="danger medium" value="Danger" /&gt;
-    &lt;input type="button" class="warning small" value="Warning" /&gt;
+    &lt;button class="blue medium"&gt;Blue&lt;/button&gt;
+    &lt;input type="submit" class="green large" value="Green" /&gt;
+    &lt;input type="reset" class="red medium" value="Red" /&gt;
+    &lt;input type="button" class="orange small" value="Orange" /&gt;
 
     &lt;div class="button-couple">
-      &lt;button class="default">Agree&lt;/button>
+      &lt;button class="blue">Agree&lt;/button>
       &lt;button>or&lt;/button>
-      &lt;button class="danger">Disagree&lt;/button>
+      &lt;button class="red">Disagree&lt;/button>
     &lt;/div>
 
     &lt;button class="expand large"&gt;Large Expanded Button&lt;/button&gt;<div id="sidenav-doc"></div>
@@ -322,11 +324,11 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
         <h4>Navbar</h4>
         <hr>
         <p>
-          Meshki comes with a beautiful navbar built-in. At the beginning of the <code>div.content</code>, create a <code>&lt;div class="nav"></code>, and then create a <code>&lt;ul></code> inside that. Now any <code>&lt;li>&lt;a href="#">Link&lt;/a>&lt;/li></code> inside the <code>&lt;ul></code> will appear as a button in the navbar. You can also add the <code>fixed</code> class to the <code>div.nav</code> to make the navbar fixed.
+          Meshki comes with a beautiful navbar built-in. At the beginning of the <code>div.content</code>, create a <code>&lt;div class="nav"></code> or a <code>&lt;nav></code>, and then create a <code>&lt;ul></code> inside that. Now any <code>&lt;li>&lt;a href="#">Link&lt;/a>&lt;/li></code> inside the <code>&lt;ul></code> will appear as a button in the navbar. You can also add the <code>fixed</code> class to your nav to make the navbar fixed.
         </p>
         <pre>
           <code class="language-html">
-    &lt;div class="nav fixed">
+    &lt;nav class="fixed">
       &lt;ul>
         &lt;!-- Note that javascript:void(0) stops your page from jumping to the top -->
         &lt;li>&lt;a class="logo" href="javascript:void(0)" onclick="meshki.openNav()">Meshki&lt;/a>&lt;/li>
@@ -334,7 +336,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
         &lt;li>&lt;a href="https://github.com/Borderliner/Meshki">GitHub&lt;/a>&lt;/li>
         &lt;li>&lt;a href="#components">Components&lt;/a>&lt;/li>
       &lt;/ul>
-    &lt;/div><div id="grid-doc"></div>
+    &lt;/nav><div id="grid-doc"></div>
           </code>
         </pre>
       </div>
@@ -545,7 +547,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
       </div>
 
       <div class="row text-center">
-        <button class="default expand">Submit</button>
+        <button class="blue expand">Submit</button>
       </div>
       <br />
       <div class="row">
@@ -613,10 +615,12 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
         &lt;/div>
       &lt;/div>
 
+      &lt;!-- Slider -->
       &lt;div class="row">
         &lt;input class="expand" type="range" name="percent" min="0" max="100" step="1" value="0">
       &lt;/div>
 
+      &lt;!-- Field Set -->
       &lt;fieldset>
         &lt;legend>Overview&lt;/legend>
         &lt;span>First Name: Walter&lt;/span>
@@ -624,10 +628,6 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
         &lt;span>Age: 50&lt;/span>
         &lt;span>Location: Albuquerque, New Mexico&lt;/span>
       &lt;/fieldset>
-
-      &lt;div class="row text-center">
-        &lt;button class="expand">Submit&lt;/button>
-      &lt;/div>
     &lt;/form><div id="typography-doc"></div>
             </code>
           </pre>
@@ -660,7 +660,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
           Code styling is kept basic: just wrap anything in a <code>&lt;code></code> and it will appear like <code>this</code>. It also has a <code>filled</code> style which is like <code class="filled">this</code>. For blocks of code, wrap a &lt;code> with a &lt;pre>.
           <br> Note that for blocks of code, <code>filled</code> class needs to be added to the &lt;pre>, not &lt;code>.
         </p>
-        <p>Also note that originally, Meshki doesn't contain syntax highlighting as you can see in this website. We use <a href="http://prismjs.com/">Prism</a> for this website. Check it out!</p>
+        <p>Also note that originally, Meshki doesn't contain syntax highlighting as you can see pn this webpage. We use <a href="http://prismjs.com/">Prism</a> for this website. Check it out!</p>
       </div>
       <div class="row">
         <div class="twelve col">
@@ -708,7 +708,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
       </div>
       <div class="row">
         <div class="twelve col">
-        Toggle: <button class="medium" onclick="var tbl=document.getElementById('table-example');tbl.classList.contains('striped')?(tbl.className='expand hover', this.innerHTML='Not Striped', this.className='medium'):(tbl.className='expand hover striped', this.innerHTML='Striped', this.className='medium default')">Not Striped</button>
+        Toggle: <button class="medium" onclick="var tbl=document.getElementById('table-example');tbl.classList.contains('striped')?(tbl.className='expand hover', this.innerHTML='Not Striped', this.className='medium'):(tbl.className='expand hover striped', this.innerHTML='Striped', this.className='medium blue')">Not Striped</button>
           <table class="expand hover" id="table-example">
             <thead>
               <tr>
@@ -893,10 +893,60 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
       </div>
 
       <div class="row">
+        <div id="extra-button-colors"></div>
+        <h4>[Plugin] Extra Button Colors</h4>
+        <hr>
         <p>
-          This website uses the awesome "<a href="http://fontawesome.io/" target="_blank">font-awesome</a>" to display icons and such. It is by far the best font icon set I've ever encountered. Make sure to check out their website.
+          Meshki v1.5.0 introduced more color options for you to choose. You only have to add the below line to the &lt;head> part of your page.
+          <pre>
+            <code class="language-html">
+  &lt;link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.0/button-colors.min.css">
+            </code>
+          </pre>
         </p>
-        <p>We use <a href="http://prismjs.com/">Prism</a> to highlight code on this website. It's amazing!</p>
+        <p>
+          Here are a couple of buttons for you to try and use:
+        </p>
+        <div class="row">
+          <div class="col four">
+            <button class="yellow expand">Yellow</button>
+          </div>
+          <div class="col four">
+            <button class="crimson expand">Crimson</button>
+          </div>
+          <div class="col four">
+            <button class="purple expand">Purple</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col three">
+            <button class="lime expand">Lime</button>
+          </div>
+          <div class="col three">
+            <button class="space expand">Space</button>
+          </div>
+          <div class="col three">
+            <button class="brown expand">Brown</button>
+          </div>
+          <div class="col three">
+            <button class="rose expand">Rose</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <h4>This webpage uses...</h4>
+        <hr>
+        <p>
+          <ul>
+            <li>
+              The awesome "<a href="http://fontawesome.io/" target="_blank">font-awesome</a>" to display icons and such. It is by far the best font icon set I've ever encountered. Make sure to check out their website.
+            </li>
+            <li>
+              The mighty <a href="http://prismjs.com/">Prism</a> as a syntax highlighter. It's amazing!
+            </li>
+          </ul>
+        </p>
       </div>
     </div>
 
