@@ -23,8 +23,8 @@
   transition: 0.5s;
 }
 
-/* Pushes the content div with effect */
-.content {
+/* Pushes the container div with effect */
+.container {
   position: absolute;
   width: 100%;
   transition: margin-left .5s, margin-right .5s;

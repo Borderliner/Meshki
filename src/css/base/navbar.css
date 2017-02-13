@@ -60,7 +60,7 @@ nav ul li > input,
 .nav ul li > a.button,
 .nav ul li > button,
 .nav ul li > input {
-margin: 7px 5px auto 5px !important;
+  margin: 7px 5px auto 5px !important;
 }
 
 /* Active navbar button */

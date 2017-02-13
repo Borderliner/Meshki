@@ -159,7 +159,7 @@ hr {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Self Clearing Goodness */
-.container:after,
+.content:after,
 .row:after {
   content: "";
   display: table;
