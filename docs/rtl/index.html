@@ -83,7 +83,7 @@
             <a href="#extra-button-colors">دکمه‌های رنگی بیشتر</a>
           </div>
         </li>
-        <li><a href="http://borderliner.ir/blog/tag/meshki/">اخبار</a></li>
+        <li><a href="https://github.com/Borderliner/Meshki/releases">اخبار</a></li>
         <li><a href="https://github.com/Borderliner/Meshki" id="github-btn">گیت‌هاب</a></li>
         <li class="nav-dropdown hide-on-mobile">
           <a href="javascript:void(0)" class="nav-dropdown-button">اجزا</a>
@@ -113,16 +113,18 @@
 
       <div class="row text-center" style="margin-bottom: 250px;margin-top: 50px;">
         <div class="button-couple">
-          <a class="button blue large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.4.2.zip">دانلود (نسخه 1.4.2)</a>
+          <a class="button blue large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.5.0.zip">دانلود (نسخه 1.5.0)</a>
           <a class="button large disabled" disabled>یا</a>
           <a class="button red large custom-down-cdn" href="javascript:void(0)" onclick="var cdn=document.getElementById('cdn');cdn.style.display=='none'?cdn.style.display='block':cdn.style.display='none';">استفاده از <span>CDN</span></a>
-        </div><br>
+        </div>
+        <p style="color: red">بسیار مهم! <a href="#important-notes">اینجا کلیک کنید!</a></p>
+        <br>
         <pre id="cdn" style="display: none;">
           <code>
-https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.css
-https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.0/meshki.min.css
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.0/meshki.min.js
 
-https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.0/meshki-rtl.min.css
           </code>
         </pre>
       </div><br>
@@ -974,6 +976,14 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
         </div>
       </div>
 
+      <div id="important-notes" class="row">
+        <h4>نکات مهم</h4>
+        <hr>
+        <p>
+          مشکی نسخه 1.5.0 تغییراتی را انجام داده که باعث می‌شود با نسخه‌های قبلی مشکی سازگار نباشد. برای مطلع شدن از تغییرات نسخه‌های مشکی، حتما <a href="https://github.com/Borderliner/Meshki/blob/master/CHANGELOG.md">Changelog</a> را مطالعه کنید تا به اشتباه از مشکی استفاده نکنید.
+        </p>
+      </div>
+
       <div class="row">
         <h4>این صفحه شامل...</h4>
         <hr>
@@ -1004,7 +1014,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
   </div>
   <script type="text/javascript">
     var elem = document.getElementById('github-btn');
-    elem.innerHTML = 'گیتهاب (' + githubStars('Borderliner/Meshki') + ')';
+    elem.innerHTML = 'گیت‌هاب (&#9733;' + githubStars('Borderliner/Meshki') + ')';
 
     var percent_update = function() {
       document.getElementById("percent_value").innerHTML = this.value;

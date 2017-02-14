@@ -81,7 +81,7 @@
             <a href="#extra-button-colors">Extra Button Colors</a>
           </div>
         </li>
-        <li><a href="http://borderliner.ir/blog/tag/meshki/">News</a></li>
+        <li><a href="https://github.com/Borderliner/Meshki/releases">News</a></li>
         <li><a href="https://github.com/Borderliner/Meshki" id="github-btn">GitHub</a></li>
         <li class="nav-dropdown hide-on-mobile">
           <a href="javascript:void(0)" class="nav-dropdown-button">Components</a>
@@ -111,14 +111,16 @@
 
       <div class="row text-center" style="margin-bottom: 250px;margin-top: 50px;">
         <div class="button-couple">
-          <a class="button red large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.4.2.zip">Download (v1.4.2)</a>
+          <a class="button red large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.5.0.zip">Download (v1.5.0)</a>
           <a class="button large disabled" disabled>or</a>
           <a class="button blue large custom-down-cdn" href="javascript:void(0)" onclick="var cdn=document.getElementById('cdn');cdn.style.display=='none'?cdn.style.display='block':cdn.style.display='none';">Use CDN</a>
-        </div><br>
+        </div>
+        <p style="color: red">Very important! <a href="#important-notes">Click here!</a></p>
+        <br>
         <pre id="cdn" style="display: none;">
           <code>
-https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.css
-https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.0/meshki.min.css
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.0/meshki.min.js
           </code>
         </pre>
       </div><br>
@@ -953,6 +955,14 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
         </div>
       </div>
 
+      <div id="important-notes" class="row">
+        <h4>Important Notes</h4>
+        <hr>
+        <p>
+          Meshki v1.5.0 introduced some breaking changes, which means that it's not backwards-compatible with previous versions. Make sure you read the <a href="https://github.com/Borderliner/Meshki/blob/master/CHANGELOG.md">Changelog</a>, so you can understand the latest important changes in Meshki.
+        </p>
+      </div>
+
       <div class="row">
         <h4>This webpage uses...</h4>
         <hr>
@@ -982,7 +992,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
   </div>
   <script type="text/javascript">
     var elem = document.getElementById("github-btn");
-    elem.innerHTML = "GitHub (" + githubStars("Borderliner/Meshki") + ")";
+    elem.innerHTML = "GitHub (&#9733;" + githubStars("Borderliner/Meshki") + ")";
 
     var percent_update = function() {
       document.getElementById("percent_value").innerHTML = this.value;
