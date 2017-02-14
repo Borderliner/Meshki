@@ -1,3 +1,11 @@
+/*
+* Meshki v1.5.0
+* Copyright 2016-2017, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
+* https://borderliner.github.io/Meshki/
+* Free to use under the MIT license.
+* https://opensource.org/licenses/MIT
+*/
+
 /* Yellow button */
 a.button.yellow,
 button.yellow,
@@ -97,8 +105,8 @@ button.lime,
 input[type="submit"].lime,
 input[type="reset"].lime,
 input[type="button"].lime {
-  border: 2px #CDDC39 solid;
-  color: #CDDC39;
+  border: 2px #C0CA33 solid;
+  color: #C0CA33;
 }
 
 /* Lime button's hover */
@@ -107,8 +115,8 @@ button.lime:hover,
 input[type="submit"].lime:hover,
 input[type="reset"].lime:hover,
 input[type="button"].lime:hover {
-  background-color: #CDDC39;
-  border-color: #CDDC39;
+  background-color: #C0CA33;
+  border-color: #C0CA33;
   color: #000;
 }
 

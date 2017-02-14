@@ -1,6 +1,6 @@
 /*
-* Meshki v1.4.2
-* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
+* Meshki v1.5.0
+* Copyright 2016-2017, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -23,8 +23,8 @@
 @font-face {
   font-family: 'Yekan';
   src: local('Yekan'),
-  url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.3/fonts/yekan.woff') format('woff'),
-  url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.3/fonts/yekan.ttf') format('truetype'),
+  url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.0/fonts/yekan.woff') format('woff'),
+  url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.0/fonts/yekan.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
