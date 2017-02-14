@@ -53,7 +53,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  padding: 6px 15px;
+  padding: 2px 11px;
 }
 
 /* Middle button of button couples for mobile version */
