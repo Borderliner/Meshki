@@ -12,7 +12,7 @@ Check out <https://borderliner.github.io/Meshki/> for samples and details.
 ## Getting Started
 
 There are a couple ways to download Meshki:
-- [Download the zip](https://github.com/Borderliner/Meshki/archive/v1.4.2.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v1.4.2.tar.gz)
+- [Download the zip](https://github.com/Borderliner/Meshki/archive/v1.5.0.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v1.5.0.tar.gz)
 - Clone the repo: `git clone https://github.com/Borderliner/Meshki.git` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download)
 - Use Bower: `bower install meshki` **(Recommended)**
 - Use npm: `npm install meshki`
@@ -30,28 +30,36 @@ Then `cd` into the root folder of the project, issue the command `npm install` t
 The package includes Meshki's CSS, Meshki's JavaScript, Normalize CSS as a reset, a sample favicon, and an index.html as a starting point.
 
 ```
-Meshki/
-├── dist/
-│   ├── meshki.css
-│   ├── meshki.min.css
-│   ├── meshki-rtl.css
-│   ├── meshki-rtl.min.css
-│   ├── meshki.js
-│   ├── meshki.min.js
-|   └── fonts/
-|       └── p_yekan.ttf
-├── src/
-│   ├── css/
-│   │   ├── normalize.css
-│   │   ├── meshki.css
-│   │   └── *.css
-│   ├── images/
-│   │   └── favicon.ico
-│   ├── js/
-│   |   └── meshki.js
-|   └── fonts/
-|       └── p_yekan.ttf
-└
+Meshki
+├── dist
+│   ├── fonts
+│   │   └── yekan.ttf
+│   ├── meshki.css
+│   ├── meshki.js
+│   └── plugins
+│       ├── button-colors.css
+│       └── rtl.css
+└── src
+    ├── css
+    │   ├── base
+    │   │   ├── button.css
+    │   │   ├── code.css
+    │   │   ├── footer.css
+    │   │   ├── form.css
+    │   │   ├── grid.css
+    │   │   ├── list.css
+    │   │   ├── meshki.css
+    │   │   ├── navbar.css
+    │   │   ├── normalize.css
+    │   │   ├── sidenav.css
+    │   │   ├── table.css
+    │   │   ├── typography.css
+    │   │   └── utility.css
+    │   └── plugins
+    │       ├── button-colors.css
+    │       └── rtl.css
+    └── js
+        └── meshki.js
 
 ```
 
