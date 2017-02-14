@@ -1,3 +1,6 @@
+## v2.0.0
+  - [x] Rewrite Meshki using a pre-processor
+
 ## v1.5.0
   - [x] Added new plugin named "Button colors"
   - [x] Updated documents and lots of refinements
