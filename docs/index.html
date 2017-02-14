@@ -96,8 +96,10 @@
             <a href="#footer-doc">Footer</a>
           </div>
         </li>
-        <li class="nav-right hide-on-tablet"><input type="text" name="searchbox" id="searchbox" placeholder="Search..." onkeydown="meshkiUtil.search(this)">
-        <script type="text/javascript" src="finder.js"></script></li>
+        <li class="nav-right hide-on-tablet">
+          <script type="text/javascript" src="finder.js"></script>
+          <input type="text" name="searchbox" id="searchbox" placeholder="Search..." onkeydown="meshkiUtil.search(this)">
+        </li>
         <li class="nav-right hide-on-tablet"><button class="green" onclick="meshkiUtil.search(true)"><i class="fa fa-search" aria-hidden="true"></i></button></li>
       </ul>
     </div>
@@ -224,8 +226,8 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
             &lt;/div>
           &lt;/div>
         &lt;/footer>
-
       &lt;/div>
+
     &lt;/body>
           </code>
         </pre>
@@ -244,12 +246,13 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
         <h3>Components</h3>
         <hr>
         <p>
-          Meshki has various ready-to-use components which you can create anywhere you like. Keep in mind that <u>being small and "enough" are our main goals</u>, and <u> Meshki is not a UI framework</u>, therefore you may need to add extra libraries for other fancy stuff. However, most of the common components are ready to use and well-tested. But don't worry! We'll make sure that you always get the most stable UI and a beautiful experience, and we may add extra components from time to time.<br id="buttons-doc"><br>
+          Meshki has various ready-to-use components which you can create anywhere you like. Keep in mind that <u>being small and "enough" are our main goals</u>, and <u> Meshki is not a UI framework</u>, therefore you may need to add extra libraries for other fancy stuff. However, most of the common components are ready to use and well-tested. But don't worry! We'll make sure that you always get the most stable UI and a beautiful experience, and we may add extra components from time to time.<br />
           Here are a list of components and how you can put them into use:
         </p>
       </div>
 
       <div class="row">
+        <div id="buttons-doc"></div>
         <h4>Buttons</h4>
         <hr>
         <p>
@@ -289,12 +292,13 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
       &lt;button class="red">Disagree&lt;/button>
     &lt;/div>
 
-    &lt;button class="expand large"&gt;Large Expanded Button&lt;/button&gt;<div id="sidenav-doc"></div>
+    &lt;button class="expand large"&gt;Large Expanded Button&lt;/button&gt;
             </code>
           </pre>
       </div>
 
       <div class="row">
+        <div id="sidenav-doc"></div>
         <h4>Sidenav</h4>
         <hr>
         <p>
@@ -315,12 +319,13 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
       &lt;/div>
     .
     .
-    .<div id="navbar-doc"></div>
+    .
           </code>
         </pre>
       </div>
 
       <div class="row">
+        <div id="navbar-doc"></div>
         <h4>Navbar</h4>
         <hr>
         <p>
@@ -334,14 +339,24 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
         &lt;li>&lt;a class="logo" href="javascript:void(0)" onclick="meshki.openNav()">Meshki&lt;/a>&lt;/li>
         &lt;li>&lt;a href="https://github.com/Borderliner/Meshki/releases">News&lt;/a>&lt;/li>
         &lt;li>&lt;a href="https://github.com/Borderliner/Meshki">GitHub&lt;/a>&lt;/li>
-        &lt;li>&lt;a href="#components">Components&lt;/a>&lt;/li>
+        
+        &lt;!-- Dropdown in Nav -->
+        &lt;li class="nav-dropdown">
+          &lt;a href="javascript:void(0)" class="nav-dropdown-button">Title&lt;/a>
+          &lt;div class="nav-dropdown-content">
+            &lt;a href="#">Sub 1&lt;/a>
+            &lt;a href="#">Sub 2&lt;/a>
+            &lt;a href="#">Sub 3&lt;/a>
+          &lt;/div>
+        &lt;/li>
       &lt;/ul>
-    &lt;/nav><div id="grid-doc"></div>
+    &lt;/nav>
           </code>
         </pre>
       </div>
 
       <div class="row">
+        <div id="grid-doc"></div>
         <h4>The Grid System</h4>
         <hr>
         <p>
@@ -451,13 +466,14 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
       &lt;div class="two col"&gt;
         &lt;!-- The rest of the screen -->
       &lt;/div&gt;
-    &lt;/div&gt;<div id="form-doc"></div>
+    &lt;/div&gt;
 
             </code>
           </pre>
       </div>
 
       <div class="row">
+        <div id="form-doc"></div>
         <h4>Form Elements</h4>
         <hr>
         <p>
@@ -628,12 +644,13 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
         &lt;span>Age: 50&lt;/span>
         &lt;span>Location: Albuquerque, New Mexico&lt;/span>
       &lt;/fieldset>
-    &lt;/form><div id="typography-doc"></div>
+    &lt;/form>
             </code>
           </pre>
       </div>
 
       <div class="row">
+        <div id="typography-doc"></div>
         <h4>Typography</h4>
         <hr>
         <p>
@@ -687,12 +704,13 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
           console.log('Hello world!');
         ))();
         &lt;/code>
-      &lt;/pre><div id="tables-doc"></div>
+      &lt;/pre>
             </code>
           </pre>
         </div>
       </div>
       <div class="row">
+        <div id="tables-doc"></div>
         <h4>Tables</h4>
         <hr>
         <p>
@@ -744,10 +762,11 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
                 <td>Missouri</td>
               </tr>
             </tbody>
-          </table><div id="footer-doc"></div>
+          </table>
         </div>
       </div>
       <div class="row">
+        <div id="footer-doc"></div>
         <h4>Footer</h4>
         <hr>
         <p>
