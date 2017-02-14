@@ -24,7 +24,7 @@ input[type="reset"].yellow:hover,
 input[type="button"].yellow:hover {
   background-color: #f9f300;
   border-color: #f9f300;
-  color: #222;
+  color: #000;
 }
 
 /* Yellow button's active */
@@ -221,4 +221,35 @@ input[type="reset"].rose:active,
 input[type="button"].rose:active {
   background-color: #C2185B;
   border-color: #C2185B;
+}
+
+/* Cyan button */
+a.button.cyan,
+button.cyan,
+input[type="submit"].cyan,
+input[type="reset"].cyan,
+input[type="button"].cyan {
+  border: 2px #00E5FF solid;
+  color: #00E5FF;
+}
+
+/* Cyan button's hover */
+a.button.cyan:hover,
+button.cyan:hover,
+input[type="submit"].cyan:hover,
+input[type="reset"].cyan:hover,
+input[type="button"].cyan:hover {
+  background-color: #00E5FF;
+  border-color: #00E5FF;
+  color: #000;
+}
+
+/* Cyan button's active */
+a.button.cyan:active,
+button.cyan:active,
+input[type="submit"].cyan:active,
+input[type="reset"].cyan:active,
+input[type="button"].cyan:active {
+  background-color: #00B8D4;
+  border-color: #00B8D4;
 }
