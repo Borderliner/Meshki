@@ -1,6 +1,11 @@
 ## v2.0.0
   - [x] Rewrite Meshki using a pre-processor
 
+## v1.5.1
+  - [x] Added Cyan button color
+  - [x] Better cross-browser compatibility
+  - [x] Small bug fixes and docs improvement
+
 ## v1.5.0
   - [x] Added new plugin named "Button colors"
   - [x] Updated documents and lots of refinements

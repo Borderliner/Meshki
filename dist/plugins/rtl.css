@@ -1,5 +1,5 @@
 /*
-* Meshki v1.5.0
+* Meshki v1.5.1
 * Copyright 2016-2017, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
@@ -23,8 +23,8 @@
 @font-face {
   font-family: 'Yekan';
   src: local('Yekan'),
-  url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.0/fonts/yekan.woff') format('woff'),
-  url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.0/fonts/yekan.ttf') format('truetype');
+  url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.1/fonts/yekan.woff') format('woff'),
+  url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.1/fonts/yekan.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -53,7 +53,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  padding: 6px 15px;
+  padding: 2px 11px;
 }
 
 /* Middle button of button couples for mobile version */
