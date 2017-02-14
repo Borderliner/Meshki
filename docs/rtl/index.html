@@ -19,16 +19,18 @@
   <meta name="twitter:image" content="../meta-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <!-- DEVELOPMENT FILES
+  <!-- DEVELOPMENT FILES -->
   <link rel="stylesheet" type="text/css" href="../../dist/meshki.min.css">
-  <link rel="stylesheet" type="text/css" href="../../dist/meshki-rtl.min.css">
+  <link rel="stylesheet" type="text/css" href="../../dist/plugins/rtl.min.css">
+  <link rel="stylesheet" type="text/css" href="../../dist/plugins/button-colors.min.css">
   <script type="text/javascript" src="../../dist/meshki.min.js"></script>
-  / DEVELOPMENT FILES -->
-  <!-- PRODUCTION FILES -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js"></script>
-  <!-- / PRODUCTION FILES -->
+  <!--/ DEVELOPMENT FILES -->
+  <!-- PRODUCTION FILES
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.3/meshki.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.3/rtl.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.3/button-colors.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.3/meshki.min.js"></script>
+   / PRODUCTION FILES -->
 
   <link rel="stylesheet" type="text/css" href="custom-rtl.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -36,6 +38,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css">
   <script type="text/javascript" src="../githubstars.js"></script>
 </head>
 
@@ -44,7 +48,6 @@
     <a href="javascript:void(0);" class="sidenav-close-button" onclick="meshki.closeNav()">&times;</a>
     <a href="">خانه</a>
     <a href="https://github.com/Borderliner/Meshki/issues">ایرادات</a>
-    <a href="https://www.npmjs.com/package/meshki">npm</a>
     <a href="http://borderliner.ir/blog/">وبلاگ</a>
     <a href="https://github.com/Borderliner/Meshki/blob/master/README.md">درباره مشکی</a>
     <hr class="hide-on-non-mobile">
@@ -59,15 +62,17 @@
       <a href="#footer-doc" onclick="meshki.closeNav()">پابرگ</a>
     </div>
     <hr>
-    <button onclick="location.href='https://twitter.com/Meshki_UI'" class="button default medium"><b>مشکی در </b><i class="fa fa-twitter" aria-hidden="true"></i></button>
+    <button onclick="location.href='https://twitter.com/Meshki_UI'" class="button blue medium"><b>مشکی در </b><i class="fa fa-twitter" aria-hidden="true"></i></button>
+    <button onclick="location.href='https://www.npmjs.com/package/meshki'" class="button red medium"><b>مشکی در npm</b></button>
+    <button onclick="location.href='https://github.com/Borderliner/Meshki'" class="button medium"><b>مشکی در </b><i class="fa fa-github" aria-hidden="true"></i></button>
     <a href="javascript:void(0)" disabled style="font-size: 1.5rem">اشتراک‌گذاری در:</a>
     <div class="share-links">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://borderliner.github.io/Meshki/rtl/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-      <a href="https://twitter.com/home?status=https://borderliner.github.io/Meshki/rtl/" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-      <a href="https://plus.google.com/share?url=https://borderliner.github.io/Meshki/rtl/" target="_blank"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
+      <a class="fb-share" href="https://www.facebook.com/sharer/sharer.php?u=https://borderliner.github.io/Meshki/rtl/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+      <a class="tw-share" href="https://twitter.com/home?status=https://borderliner.github.io/Meshki/rtl/" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+      <a class="gp-share" href="https://plus.google.com/share?url=https://borderliner.github.io/Meshki/rtl/" target="_blank"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
     </div>
   </div>
-  <div class="content">
+  <div class="container">
     <div class="nav fixed">
       <ul>
         <li><a class="logo" href="javascript:void(0);" onclick="meshki.openNav()"><i class="fa fa-bars" aria-hidden="true"></i>مشکی</a></li>
@@ -75,9 +80,10 @@
           <a href="javascript:void(0)" class="nav-dropdown-button">افزونه‌ها</a>
           <div class="nav-dropdown-content">
             <a href="/">چپ-به-راست (انگلیسی)</a>
+            <a href="#extra-button-colors">دکمه‌های رنگی بیشتر</a>
           </div>
         </li>
-        <li><a href="http://borderliner.ir/blog/tag/meshki/">اخبار</a></li>
+        <li><a href="https://github.com/Borderliner/Meshki/releases">اخبار</a></li>
         <li><a href="https://github.com/Borderliner/Meshki" id="github-btn">گیت‌هاب</a></li>
         <li class="nav-dropdown hide-on-mobile">
           <a href="javascript:void(0)" class="nav-dropdown-button">اجزا</a>
@@ -92,35 +98,40 @@
             <a href="#footer-doc">پابرگ</a>
           </div>
         </li>
-        <li class="nav-left hide-on-tablet"><input type="text" name="" placeholder="جستجو..."></li>
-        <li class="nav-left hide-on-tablet"><button class="success"><i class="fa fa-search" aria-hidden="true"></i></button></li>
+        <li class="nav-left hide-on-tablet">
+          <script type="text/javascript" src="../finder.js"></script>
+          <input type="text" name="searchbox" id="searchbox" placeholder="جستجو..." onkeydown="meshkiUtil.search(this)">
+        </li>
+        <li class="nav-left hide-on-tablet"><button class="green" onclick="meshkiUtil.search(true)"><i class="fa fa-search" aria-hidden="true"></i></button></li>
       </ul>
     </div>
-    <div class="container">
+    <div class="content">
       <div class="row">
-        <h1 class="text-center title">مشکی</h1>
+        <img class="text-center title centerize" src="meshki.png"></img>
         <h2 class="text-center">زیبا.  مشکی.  واکنش‌گرا.</h2>
       </div>
 
       <div class="row text-center" style="margin-bottom: 250px;margin-top: 50px;">
         <div class="button-couple">
-          <a class="button default large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.4.2.zip">دانلود (نسخه 1.4.2)</a>
+          <a class="button blue large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v1.5.0.zip">دانلود (نسخه 1.5.0)</a>
           <a class="button large disabled" disabled>یا</a>
-          <a class="button danger large custom-down-cdn" href="javascript:void(0)" onclick="var cdn=document.getElementById('cdn');cdn.style.display=='none'?cdn.style.display='block':cdn.style.display='none';">استفاده از <span>CDN</span></a>
-        </div><br>
+          <a class="button red large custom-down-cdn" href="javascript:void(0)" onclick="var cdn=document.getElementById('cdn');cdn.style.display=='none'?cdn.style.display='block':cdn.style.display='none';">استفاده از <span>CDN</span></a>
+        </div>
+        <p style="color: red">بسیار مهم! <a href="#important-notes">اینجا کلیک کنید!</a></p>
+        <br>
         <pre id="cdn" style="display: none;">
           <code>
-https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.css
-https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki.min.js
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.0/meshki.min.css
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.0/meshki.min.js
 
-https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
+https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.0/meshki-rtl.min.css
           </code>
         </pre>
       </div><br>
 
       <hr />
       <h3 class="text-center" style="margin-bottom: 50px;">امکانات بی نظیر</h3>
-      <div class="row meshki-features" style="margin-bottom: 90px;">
+      <div class="row meshki-features" style="margin-bottom: 20px;">
 
         <div class="four col text-center">
           <i class="fa fa-clock-o" aria-hidden="true"></i><br>
@@ -133,6 +144,11 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
         <div class="four col text-center">
           <i class="fa fa-rocket" aria-hidden="true"></i><br>
           <span>و مهم‌تر از همه! به خاطر کدهای بسیار کم و بهینه، و به‌کارگیری از ساختارهای ساده، «مشکی» بسیار کم حجم و سبک است و منابع سخت‌افزاری کمی را مصرف می‌کند.</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col twelve text-center">
+          <img id="retro-logo-buttons" src="../retro.png">
         </div>
       </div>
 
@@ -174,7 +190,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
           ابتدا، یک <code>div</code> که شامل کلاس <code>sidenav</code> است را بلافاصله بعد از شروع تگ <code>body</code> بسازید. لینک‌های <a href="#sidenav-doc">کشو</a> در اینجا سکونت خواهند داشت. سپس، یک <code>div</code> دیگر بعد از div کشو بسازید، که شامل کلاس <code>content</code> باشد. تمامی مطالب اصلی شما باید درون این div قرار بگیرد. اجزای این صفحه را با مرورگر خود مشاهده کنید تا ساختار دقیق را متوجه شوید. کد زیر هم نمونه‌ای از این ساختار است:
         </p>
         <pre>
-          <code>
+          <code class="language-html">
     &lt;!DOCTYPE html>
     &lt;html>
     &lt;head>
@@ -183,10 +199,15 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
       &lt;!-- تا صفحه قابل مشاهده در موبایل باشد -->
       &lt;meta name="viewport" content="width=device-width, initial-scale=1">
 
+      &lt;!-- OpenSans اضافه کردن فونت -->
+      &lt;link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+      &lt;!-- اضافه کردن فایلهای مشکی -->
       &lt;link rel="stylesheet" type="text/css" href="dist/meshki.min.css">
+      &lt;script type="text/javascript" src="dist/meshki.min.js">&lt;/script>
+
       &lt;!-- نسخه فارسی مشکی باید بعد از مشکی اصلی اضافه شود -->
       &lt;link rel="stylesheet" type="text/css" href="dist/meshki-rtl.min.css">
-      &lt;script type="text/javascript" src="dist/meshki.min.js">&lt;/script>
     &lt;/head>
     &lt;body>
 
@@ -194,27 +215,30 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
         &lt;!-- لینک‌های کشو اینجا هستند -->
       &lt;/div>
 
-      &lt;div class="content">
+      &lt;div class="container">
 
+        &lt;!-- این منوی شماست -->
         &lt;nav>
           &lt;ul>
             &lt;li>&lt;a class="logo" href="javascript:void(0)">وب‌سایت من&lt;/a>&lt;/li>
           &lt;/ul>
         &lt;/nav>
 
-        &lt;div class="container">
+        &lt;!-- مطالب صفحه در اینجا قرار میگیرد -->
+        &lt;div class="content">
           &lt;h3>به وب‌سایت من خوش‌آمدید!&lt;/h3>
           &lt;p>این یک پاراگراف نمونه است.&lt;/p>
         &lt;/div>
-      &lt;/div>
 
-      &lt;footer>
-        &lt;div class="row">
-          &lt;div class="six col">
-            &lt;p>یک متن در پابرگ&lt;/p>
+        &lt;!-- و در آخر، پابرگ زیبای شما -->
+        &lt;footer>
+          &lt;div class="row">
+            &lt;div class="six col">
+              &lt;p>یک متن در پابرگ&lt;/p>
+            &lt;/div>
           &lt;/div>
-        &lt;/div>
-      &lt;/footer>
+        &lt;/footer>
+      &lt;/div>
 
     &lt;/body>
           </code>
@@ -236,12 +260,13 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
         <p>
           مشکی اجزای متنوع آماده برای استفاده دارد، که میتوانید هرجا که خواستید از آنها استفاده کنید. توجه داشته باشید که <u>کوچک بودن و «کافی» بودن از اهداف اصلی ما هستند</u>، و <u>مشکی یک Framework برای ظاهر وب‌سایت نیست</u>. بنابراین شاید نیاز باشد تا کتابخانه‌های کوچک دیگری نیز برای زیباسازی بیشتر اضافه کنید. با این حال، بیشتر اجزای پراستفاده در اختیار شما قرار گرفته‌اند و آزموده شده‌اند. نگران چیزی نباشید! ما این اطمینان را به شما می‌دهیم که به-روزترین کتابخانه در اختیار شما قرار گیرد تا تجربه‌ای زیبا با مشکی داشته باشید، و اجزای جدیدی را در آینده معرفی خواهیم کرد.
         </p>
-        <p id="buttons-doc">
+        <p>
           لیستی از اجزای قابل استفاده را برای شما آماده کرده‌ایم:
         </p>
       </div>
 
       <div class="row">
+        <div id="buttons-doc"></div>
         <h4>دکمه‌ها</h4>
         <hr>
         <p>
@@ -249,51 +274,52 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
         </p>
         <div class="centerize text-center">
           <a class="button small">ساده</a>
-          <button class="default medium">عادی</button>
-          <input type="submit" class="success large" value="موفق‌آمیز" />
-          <input type="reset" class="danger medium" value="اخطار" />
-          <input type="button" class="warning small" value="هشدار" />
+          <button class="blue medium">آبی</button>
+          <input type="submit" class="green large" value="سبز" />
+          <input type="reset" class="red medium" value="قرمز" />
+          <input type="button" class="orange small" value="نارنجی" />
           <br><br><br>
           <div class="button-couple">
-            <button class="default medium">موافقم</button>
+            <button class="blue medium">موافقم</button>
             <button class="medium disabled" disabled>یا</button>
-            <button class="danger medium">موافق نیستم</button>
+            <button class="red medium">موافق نیستم</button>
           </div>
           <br><br>
-          <button class="default expand small">دکمه کوچک وسیع</button>
-          <button class="danger expand medium">دکمه متوسط وسیع</button>
+          <button class="blue expand small">دکمه کوچک وسیع</button>
+          <button class="red expand medium">دکمه متوسط وسیع</button>
           <button class="expand medium" disabled>دکمه غیرفعال متوسط وسیع</button>
           <button class="expand large">دکمه بزرگ وسیع</button>
         </div><br>
 
         <span>کدهای مربوطه از این قرار هستند:</span><br><br>
           <pre>
-            <code>
+            <code class="language-html">
     &lt;a class="button small"&gt;ساده&lt;/a&gt;
-    &lt;button class="default medium"&gt;عادی&lt;/button&gt;
-    &lt;input type="submit" class="success large" value="موفق‌آمیز" /&gt;
-    &lt;input type="reset" class="danger medium" value="اخطار" /&gt;
-    &lt;input type="button" class="warning small" value="هشدار" /&gt;
+    &lt;button class="blue medium"&gt;آبی&lt;/button&gt;
+    &lt;input type="submit" class="green large" value="سبز" /&gt;
+    &lt;input type="reset" class="red medium" value="قرمز" /&gt;
+    &lt;input type="button" class="orange small" value="نارنجی" /&gt;
 
     &lt;div class="button-couple">
-      &lt;button class="default">موافقم&lt;/button>
+      &lt;button class="blue">موافقم&lt;/button>
       &lt;button>یا&lt;/button>
-      &lt;button class="danger">موافق نیستم&lt;/button>
+      &lt;button class="red">موافق نیستم&lt;/button>
     &lt;/div>
 
-    &lt;button class="expand large"&gt;دکمه بزرگ وسیع&lt;/button&gt;<div id="sidenav-doc"></div>
+    &lt;button class="expand large"&gt;دکمه بزرگ وسیع&lt;/button&gt;
             </code>
           </pre>
       </div>
 
       <div class="row">
+        <div id="sidenav-doc"></div>
         <h4>کشو</h4>
         <hr>
         <p>
           ساختن کشو آسان است: کافیست یک <code>div</code> با کلاس <code>sidenav</code> دقیقا بعد از شروع تگ body بسازید. سپس از <code>&lt;a></code> ها برای ساخت لینک‌های کشو استفاده کنید. کاملا آسان و ساده است. از توابع جاوااسکریپت <code>()meshki.openNav</code> و <code>()meshki.closeNav</code> روی کلیک دکمه‌ها استفاده کنید تا کشو باز و بسته شود. همچنین می‌توانید با اضافه کردن کلاس <code>push</code> داستان را جذاب‌تر کنید! مثال زیر را در نظر بگیرید:
         </p>
         <pre>
-          <code>
+          <code class="language-html">
     &lt;body>
       &lt;div class="sidenav push">
         &lt;!-- از پرش به بالای صفحه جلوگیری می‌کند javascript:void(0) توجه کنید که تابع -->
@@ -307,33 +333,44 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
       &lt;/div>
     .
     .
-    .<div id="navbar-doc"></div>
+    .
           </code>
         </pre>
       </div>
 
       <div class="row">
+        <div id="navbar-doc"></div>
         <h4>منو</h4>
         <hr>
         <p>
-          مشکی همراه با یک منوی زیبا در خدمت شماست! بعد از شروع <code>div.content</code> یک <code>&lt;"div class="nav></code> بسازید، و درون آن یک <code>&lt;ul></code> قرار دهید. حال به ازای هر <code>&lt;li>&lt;a>&lt;/a>&lt;/li></code> درون <code>&lt;ul></code>، یک دکمه به منوی شما اضافه می‌شود. همچنین می‌توانید از کلاس <code>fixed</code> برروی <code>div.nav</code> استفاده کنید تا منوی شما به بالای صفحه بچسبد.
+          مشکی همراه با یک منوی زیبا در خدمت شماست! بعد از شروع <code>div.content</code> یک <code>&lt;"div class="nav></code> یا <code>&lt;nav></code> بسازید، و درون آن یک <code>&lt;ul></code> قرار دهید. حال به ازای هر <code>&lt;li>&lt;a>&lt;/a>&lt;/li></code> درون <code>&lt;ul></code>، یک دکمه به منوی شما اضافه می‌شود. همچنین می‌توانید از کلاس <code>fixed</code> برروی منوی خود استفاده کنید تا منوی شما به بالای صفحه بچسبد.
         </p>
         <pre>
-          <code>
+          <code class="language-html">
     &lt;div class="nav fixed">
       &lt;ul>
         &lt;!-- از پرش به بالای صفحه جلوگیری می‌کند javascript:void(0) توجه کنید که تابع -->
         &lt;li>&lt;a class="logo" href="javascript:void(0)" onclick="meshki.openNav()">مشکی&lt;/a>&lt;/li>
         &lt;li>&lt;a href="https://github.com/Borderliner/Meshki/releases">اخبار&lt;/a>&lt;/li>
         &lt;li>&lt;a href="https://github.com/Borderliner/Meshki">گیتهاب&lt;/a>&lt;/li>
-        &lt;li>&lt;a href="#components">اجزا&lt;/a>&lt;/li>
+        
+        &lt;!-- کشوها در منو -->
+        &lt;li class="nav-dropdown">
+          &lt;a href="javascript:void(0)" class="nav-dropdown-button">عنوان&lt;/a>
+          &lt;div class="nav-dropdown-content">
+            &lt;a href="#">زیر شاخه 1&lt;/a>
+            &lt;a href="#">زیر شاخه 2&lt;/a>
+            &lt;a href="#">زیر شاخه 3&lt;/a>
+          &lt;/div>
+        &lt;/li>
       &lt;/ul>
-    &lt;/div><div id="grid-doc"></div>
+    &lt;/div>
           </code>
         </pre>
       </div>
 
       <div class="row">
+        <div id="grid-doc"></div>
         <h4>صفحه‌بندی</h4>
         <hr>
         <p>
@@ -410,7 +447,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
           کد زیر یک نمونه کد برای سیستم صفحه مشکی است:
         </p>
           <pre>
-            <code>
+            <code class="language-html">
     &lt;div class="row"&gt;
       &lt;div class="one col"&gt;
         با عرض یک ستون div یک
@@ -445,13 +482,13 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
       &lt;div class="two col"&gt;
         &lt;!-- بقیه صفحه -->
       &lt;/div&gt;
-    &lt;/div&gt;<div id="form-doc"></div>
-
+    &lt;/div&gt;
             </code>
           </pre>
       </div>
 
       <div class="row">
+        <div id="form-doc"></div>
         <h4>فرم‌ها</h4>
         <hr>
         <p>
@@ -543,7 +580,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
       </div>
 
       <div class="row text-center">
-        <button class="default expand">ارسال</button>
+        <button class="blue expand">ارسال</button>
       </div>
       <br />
       <div class="row">
@@ -551,7 +588,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
           برای درک بهتر، از مثال‌های زیر استفاده کنید:
         </p>
           <pre>
-            <code>
+            <code class="language-html">
     &lt;form>
       &lt;!-- ورودی‌های متن -->
       &lt;div class="row">
@@ -569,7 +606,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
       &lt;div class="row">
         &lt;div class="twelve col">
           &lt;label for="dis-email1">پست الکترونیکی:&lt;/label>
-          &lt;input id=dis-email1"" class="expand" type="email" name="dis-email1" value="me@borderliner.ir" disabled>
+          &lt;input id="dis-email1" class="expand" type="email" name="dis-email1" value="me@borderliner.ir" disabled>
         &lt;/div>
       &lt;/div>
 
@@ -612,10 +649,12 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
         &lt;/div>
       &lt;/div>
 
+      &lt;!-- مثالی از یک لغزنده -->
       &lt;div class="row">
-        &lt;input class="expand" type="range"name="percent" min="0" max="100" step="1" value="0">
+        &lt;input class="expand" type="range" name="percent" min="0" max="100" step="1" value="0">
       &lt;/div>
 
+      &lt;!-- Fieldset یک نمونه -->
       &lt;fieldset>
         &lt;legend>نمای کلی&lt;/legend>
         &lt;span>نام: والتر&lt;/span>
@@ -623,16 +662,13 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
         &lt;span>سن: 50&lt;/span>
         &lt;span>مکان: آلباکرکی، نیو مکزیکو&lt;/span>
       &lt;/fieldset>
-
-      &lt;div class="row text-center">
-        &lt;button class="expand">ارسال&lt;/button>
-      &lt;/div>
-    &lt;/form><div id="typography-doc"></div>
+    &lt;/form>
             </code>
           </pre>
       </div>
 
       <div class="row">
+        <div id="typography-doc"></div>
         <h4>نگارش</h4>
         <hr>
         <p>
@@ -641,7 +677,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
       </div>
       <div class="row">
         <div class="six col">
-          مشکی از فونت‌های <a href="hhttp://awebfont.ir/fonts?cat_id=1&fonts_id=1801">P Yekan</a> برای زبان فارسی و از <a href="https://fonts.google.com/specimen/Open+Sans">Open Sans</a> برای زبان انگلیسی استفاده می‌نماید. مشکی این فونت‌هارا به شما تحمیل نمی‌کند. به سادگی می‌توانید فونت‌های مورد نظر خود را جایگزین این فونت‌ها کنید، اما برای داشتن بهترین نگارش، این دو فونت را به شما توصیه می‌کنیم. سایز فونت پیشفرض 1.5rem (یعنی 15 پیکسل)، و فاصله خطوط از هم 1.6 است. بدیهیست که استفاده از انواعی مانند <a href="javascript:void(0);">لینک</a>، <b>درشت</b>، <i>تاکید</i> و <u>زیرخط</u> ممکن است.
+          مشکی از فونت Yekan برای زبان فارسی و از <a href="https://fonts.google.com/specimen/Open+Sans">Open Sans</a> برای زبان انگلیسی استفاده می‌نماید. مشکی این فونت‌هارا به شما تحمیل نمی‌کند. به سادگی می‌توانید فونت‌های مورد نظر خود را جایگزین این فونت‌ها کنید، اما برای داشتن بهترین نگارش، این دو فونت را به شما توصیه می‌کنیم. سایز فونت پیشفرض 1.5rem (یعنی 15 پیکسل)، و فاصله خطوط از هم 1.6 است. بدیهیست که استفاده از انواعی مانند <a href="javascript:void(0);">لینک</a>، <b>درشت</b>، <i>تاکید</i> و <u>زیرخط</u> ممکن است.
         </div>
         <div class="six col">
           <h1>سر برگ <span class="heading-font-size"><code>h1</code> 50rem</span></h1>
@@ -660,6 +696,9 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
         </p>
         <p>
           توجه داشته باشید که برای قطعه کدهای دارای کلاس <code>filled</code>، این کلاس باید به pre اضافه شود، نه به code.
+        </p>
+        <p>
+        نکته مهم دیگر اینکه مشکی درحالت عادی، کدها را همانند این صفحه رنگی نمیکند. برای اینکار از <a href="http://prismjs.com/">Prism</a> استفاده نمایید.
         </p>
       </div>
       <div class="row">
@@ -708,7 +747,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
       </div>
       <div class="row">
         <div class="twelve col">
-        تغییر شکل: <button class="medium" onclick="var tbl=document.getElementById('table-example');tbl.classList.contains('striped')?(tbl.className='expand hover', this.innerHTML='راه‌راه نیست', this.className='medium'):(tbl.className='expand hover striped', this.innerHTML='راه‌راه است', this.className='medium default')">راه‌راه نیست</button>
+        تغییر شکل: <button class="medium" onclick="var tbl=document.getElementById('table-example');tbl.classList.contains('striped')?(tbl.className='expand hover', this.innerHTML='راه‌راه نیست', this.className='medium'):(tbl.className='expand hover striped', this.innerHTML='راه‌راه است', this.className='medium blue')">راه‌راه نیست</button>
           <table class="expand hover" id="table-example">
             <thead>
               <tr>
@@ -744,10 +783,11 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
                 <td>میسوری</td>
               </tr>
             </tbody>
-          </table><div id="footer-doc"></div>
+          </table>
         </div>
       </div>
       <div class="row">
+        <div id="footer-doc"></div>
         <h4>پابرگ</h4>
         <hr>
         <p>
@@ -757,7 +797,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
         توجه کنید که پابرگ‌های مشکی، سایز مشخصی ندارند و متناسب با حجم متن، بزرگتر می‌شوند.
         </p>
         <pre>
-          <code>
+          <code class="language-html">
     &lt;footer class="compact">
       &lt;div class="row">
         &lt;div class="six col">
@@ -796,7 +836,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
       </div>
       <div class="row">
         <pre>
-            <code>
+            <code class="language-css">
       /* اندازه‌ها با اولویت موبایل */
 
       /* بزرگتر از موبایل */
@@ -825,7 +865,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
       </div>
       <div class="row">
         <pre>
-          <code>
+          <code class="language-css">
       /* گسترش دادن یک المان */
       .expand {
         width: 100%;
@@ -895,10 +935,70 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
       </div>
 
       <div class="row">
+        <div id="extra-button-colors"></div>
+        <h4>[افزونه] دکمه‌های رنگی بیشتر</h4>
+        <hr>
         <p>
-          این وب‌سایت از فونت بی‌نظیر "<a href="http://fontawesome.io/" target="_blank">font-awesome</a>" برای نمایش اشکال مختلف استفاده می‌کند. به نظر من بهترین فونت-آیکون موجود است. حتما به وبسایت این پروژه سری بزنید!
+          مشکی نسخه v1.5.0 و به بالا، دکمه‌های رنگی بیشتری را در اختیار شما قرار میدهد. کافیست کد زیر را به قسمت &lt;head> صفحه‌ی خود اضافه کنید تا بتوانید از این دکمه‌های رنگی بهره مند شوید.
+          <pre>
+            <code class="language-html">
+  &lt;link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.0/button-colors.min.css">
+            </code>
+          </pre>
+        </p>
+        <p>
+          دکمه‌های رنگی که به عنوان افزونه همراه مشکی منتشر می‌شود، شامل دکمه‌های زیر هستند:
+        </p>
+        <div class="row">
+          <div class="col four">
+            <button class="yellow expand">زرد</button>
+          </div>
+          <div class="col four">
+            <button class="crimson expand">زرشکی</button>
+          </div>
+          <div class="col four">
+            <button class="purple expand">بنفش</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col three">
+            <button class="lime expand">لیمویی</button>
+          </div>
+          <div class="col three">
+            <button class="space expand">فضایی</button>
+          </div>
+          <div class="col three">
+            <button class="brown expand">قهوه‌ای</button>
+          </div>
+          <div class="col three">
+            <button class="rose expand">رز</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="important-notes" class="row">
+        <h4>نکات مهم</h4>
+        <hr>
+        <p>
+          مشکی نسخه 1.5.0 تغییراتی را انجام داده که باعث می‌شود با نسخه‌های قبلی مشکی سازگار نباشد. برای مطلع شدن از تغییرات نسخه‌های مشکی، حتما <a href="https://github.com/Borderliner/Meshki/blob/master/CHANGELOG.md">Changelog</a> را مطالعه کنید تا به اشتباه از مشکی استفاده نکنید.
         </p>
       </div>
+
+      <div class="row">
+        <h4>این صفحه شامل...</h4>
+        <hr>
+        <p>
+          <ul>
+            <li>
+              فونت بی‌نظیر "<a href="http://fontawesome.io/" target="_blank">font-awesome</a>" برای نمایش اشکال مختلف است. به نظر من بهترین فونت-آیکون موجود است. حتما به وبسایت این پروژه سری بزنید!
+            </li>
+            <li>
+              <a href="http://prismjs.com/">Prism</a> بی‌رقیب برای رنگی کردن کدهای این صفحه است. بی نظیر است!
+            </li>
+          </ul>
+        </p>
+      </div>
+
     </div>
 
     <div class="footer compact">
@@ -914,7 +1014,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
   </div>
   <script type="text/javascript">
     var elem = document.getElementById('github-btn');
-    elem.innerHTML = 'گیتهاب (' + githubStars('Borderliner/Meshki') + ')';
+    elem.innerHTML = 'گیت‌هاب (&#9733;' + githubStars('Borderliner/Meshki') + ')';
 
     var percent_update = function() {
       document.getElementById("percent_value").innerHTML = this.value;
@@ -924,6 +1024,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/1.4.2/meshki-rtl.min.css
     document.getElementById("percent").onchange = percent_update;
     document.getElementById("percent").oninput = percent_update;
   </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
 </body>
 
 </html>

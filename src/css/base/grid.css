@@ -1,6 +1,6 @@
 /*
-* Meshki v1.4.2
-* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
+* Meshki v1.5.0
+* Copyright 2016-2017, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -16,8 +16,8 @@
   margin-bottom: 20px;
 }
 
-/* Container creates a responsive space to hold page data */
-.container {
+/* Content creates a responsive space to hold page data */
+.content {
   position: relative;
   width: 100%;
   max-width: 960px;
@@ -33,9 +33,9 @@
   box-sizing: border-box;
 }
 
-/* Decrease the container width for non-mobiles */
+/* Decrease the content width for non-mobiles */
 @media (min-width: 400px) {
-  .container {
+  .content {
     width: 85%;
     padding: 0;
   }
@@ -43,8 +43,8 @@
 
 /* For devices larger than 544px */
 @media (min-width: 544px) {
-  /* Decrease container width for a proper look */
-  .container {
+  /* Decrease content width for a proper look */
+  .content {
     width: 80%;
   }
 

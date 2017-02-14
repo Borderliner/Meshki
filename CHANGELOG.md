@@ -1,3 +1,12 @@
+## v2.0.0
+  - [x] Rewrite Meshki using a pre-processor
+
+## v1.5.0
+  - [x] Added new plugin named "Button colors"
+  - [x] Updated documents and lots of refinements
+  - [x] Changed "container" and "content" roles
+  - [x] Code colorization using Prism in docs
+
 ## v1.4.2
   - [x] Remove unnecessary Ruby code
   - [x] Contain the "P Yekan" font built-in

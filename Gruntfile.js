@@ -1,6 +1,6 @@
 /*
-* Meshki v1.4.2
-* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
+* Meshki v1.5.0
+* Copyright 2016-2017, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -14,19 +14,19 @@ module.exports = function(grunt){
 	    options: {},
 	    css: {
         src: [
-          'src/css/button.css',
-          'src/css/code.css',
-          'src/css/footer.css',
-          'src/css/form.css',
-          'src/css/grid.css',
-          'src/css/list.css',
-          'src/css/meshki.css',
-          'src/css/navbar.css',
-          'src/css/normalize.css',
-          'src/css/sidenav.css',
-          'src/css/table.css',
-          'src/css/typography.css',
-          'src/css/utility.css'
+          'src/css/base/button.css',
+          'src/css/base/code.css',
+          'src/css/base/footer.css',
+          'src/css/base/form.css',
+          'src/css/base/grid.css',
+          'src/css/base/list.css',
+          'src/css/base/meshki.css',
+          'src/css/base/navbar.css',
+          'src/css/base/normalize.css',
+          'src/css/base/sidenav.css',
+          'src/css/base/table.css',
+          'src/css/base/typography.css',
+          'src/css/base/utility.css'
         ],
 	    	dest: 'dist/meshki.css'
 	    }
@@ -44,10 +44,11 @@ module.exports = function(grunt){
 		  	src: 'fonts/*.*',
 		  	dest: 'dist/'
 		  },
-      css_rtl: {
-        expand: false,
-        src: 'src/css/rtl.css',
-        dest: 'dist/meshki-rtl.css'
+      plugins: {
+				cwd: 'src/css',
+        expand: true,
+        src: 'plugins/*.*',
+        dest: 'dist/'
       }
 		},
 
@@ -61,9 +62,13 @@ module.exports = function(grunt){
 				dest: 'dist/meshki.min.css'
 			},
       minify_rtl: {
-        src: 'dist/meshki-rtl.css',
-        dest: 'dist/meshki-rtl.min.css'
-      }
+        src: 'dist/plugins/rtl.css',
+        dest: 'dist/plugins/rtl.min.css'
+      },
+			minify_button_colors: {
+				src: 'dist/plugins/button-colors.css',
+        dest: 'dist/plugins/button-colors.min.css'
+			}
 		},
 
 		uglify: {

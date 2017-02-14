@@ -1,6 +1,6 @@
 /*
-* Meshki v1.4.2
-* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
+* Meshki v1.5.0
+* Copyright 2016-2017, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -104,127 +104,127 @@ input[type="button"].disabled {
   pointer-events: none;
 }
 
-/* Default blue button */
-a.button.default,
-button.default,
-input[type="submit"].default,
-input[type="reset"].default,
-input[type="button"].default {
+/* Blue button */
+a.button.blue,
+button.blue,
+input[type="submit"].blue,
+input[type="reset"].blue,
+input[type="button"].blue {
   border: 2px #55acee solid;
   color: #55acee;
 }
 
-/* Default blue button's hover */
-a.button.default:hover,
-button.default:hover,
-input[type="submit"].default:hover,
-input[type="reset"].default:hover,
-input[type="button"].default:hover {
+/* Blue button's hover */
+a.button.blue:hover,
+button.blue:hover,
+input[type="submit"].blue:hover,
+input[type="reset"].blue:hover,
+input[type="button"].blue:hover {
   background-color: #55acee;
   border-color: #55acee;
   color: #fff
 }
 
-/* Default blue button's active */
-a.button.default:active,
-button.default:active,
-input[type="submit"].default:active,
-input[type="reset"].default:active,
-input[type="button"].default:active {
+/* Blue button's active */
+a.button.blue:active,
+button.blue:active,
+input[type="submit"].blue:active,
+input[type="reset"].blue:active,
+input[type="button"].blue:active {
   background-color: #4b82b7;
   border-color: #4b82b7;
 
 }
 
-/* Success green button */
-a.button.success,
-button.success,
-input[type="submit"].success,
-input[type="reset"].success,
-input[type="button"].success {
+/* Green button */
+a.button.green,
+button.green,
+input[type="submit"].green,
+input[type="reset"].green,
+input[type="button"].green {
   border: 2px #2ecc71 solid;
   color: #2ecc71;
 }
 
-/* Success green button's hover */
-a.button.success:hover,
-button.success:hover,
-input[type="submit"].success:hover,
-input[type="reset"].success:hover,
-input[type="button"].success:hover {
+/* Green button's hover */
+a.button.green:hover,
+button.green:hover,
+input[type="submit"].green:hover,
+input[type="reset"].green:hover,
+input[type="button"].green:hover {
   background-color: #2ecc71;
   border-color: #2ecc71;
   color: #fff;
 }
 
-/* Success green button's active */
-a.button.success:active,
-button.success:active,
-input[type="submit"].success:active,
-input[type="reset"].success:active,
-input[type="button"].success:active {
+/* Green button's active */
+a.button.green:active,
+button.green:active,
+input[type="submit"].green:active,
+input[type="reset"].green:active,
+input[type="button"].green:active {
   background-color: #21a057;
   border-color: #21a057;
 }
 
-/* Danger red button */
-a.button.danger,
-button.danger,
-input[type="submit"].danger,
-input[type="reset"].danger,
-input[type="button"].danger {
+/* Red button */
+a.button.red,
+button.red,
+input[type="submit"].red,
+input[type="reset"].red,
+input[type="button"].red {
   border: 2px #e74c3c solid;
   color: #e74c3c;
 }
 
-/* Danger red button's hover */
-a.button.danger:hover,
-button.danger:hover,
-input[type="submit"].danger:hover,
-input[type="reset"].danger:hover,
-input[type="button"].danger:hover {
+/* Red button's hover */
+a.button.red:hover,
+button.red:hover,
+input[type="submit"].red:hover,
+input[type="reset"].red:hover,
+input[type="button"].red:hover {
   background-color: #e74c3c;
   border-color: #e74c3c;
   color: #fff;
 }
 
-/* Danger red button's active */
-a.button.danger:active,
-button.danger:active,
-input[type="submit"].danger:active,
-input[type="reset"].danger:active,
-input[type="button"].danger:active {
+/* Red button's active */
+a.button.red:active,
+button.red:active,
+input[type="submit"].red:active,
+input[type="reset"].red:active,
+input[type="button"].red:active {
   background-color: #bd382a;
   border-color: #bd382a;
 }
 
-/* Warning orange button */
-a.button.warning,
-button.warning,
-input[type="submit"].warning,
-input[type="reset"].warning,
-input[type="button"].warning {
+/* Orange button */
+a.button.orange,
+button.orange,
+input[type="submit"].orange,
+input[type="reset"].orange,
+input[type="button"].orange {
   border: 2px #e67e22 solid;
   color: #e67e22;
 }
 
-/* Warning orange button's hover */
-a.button.warning:hover,
-button.warning:hover,
-input[type="submit"].warning:hover,
-input[type="reset"].warning:hover,
-input[type="button"].warning:hover {
+/* Orange button's hover */
+a.button.orange:hover,
+button.orange:hover,
+input[type="submit"].orange:hover,
+input[type="reset"].orange:hover,
+input[type="button"].orange:hover {
   background-color: #e67e22;
   border-color: #e67e22;
   color: #fff;
 }
 
-/* Warning orange button's active */
-a.button.warning:active,
-button.warning:active,
-input[type="submit"].warning:active,
-input[type="reset"].warning:active,
-input[type="button"].warning:active {
+/* Orange button's active */
+a.button.orange:active,
+button.orange:active,
+input[type="submit"].orange:active,
+input[type="reset"].orange:active,
+input[type="button"].orange:active {
   background-color: #c16819;
   border-color: #c16819;
 }
@@ -263,8 +263,8 @@ input[type="button"].warning:active {
   }
 }
 /*
-* Meshki v1.4.2
-* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
+* Meshki v1.5.0
+* Copyright 2016-2017, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -319,8 +319,8 @@ pre.filled > code {
   color: #000;
 }
 /*
-* Meshki v1.4.2
-* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
+* Meshki v1.5.0
+* Copyright 2016-2017, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -358,8 +358,8 @@ footer .row,
   }
 }
 /*
-* Meshki v1.4.2
-* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
+* Meshki v1.5.0
+* Copyright 2016-2017, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -614,8 +614,8 @@ input[type=range]::-ms-thumb {
   border: 2px solid transparent;
 }
 /*
-* Meshki v1.4.2
-* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
+* Meshki v1.5.0
+* Copyright 2016-2017, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -631,8 +631,8 @@ input[type=range]::-ms-thumb {
   margin-bottom: 20px;
 }
 
-/* Container creates a responsive space to hold page data */
-.container {
+/* Content creates a responsive space to hold page data */
+.content {
   position: relative;
   width: 100%;
   max-width: 960px;
@@ -648,9 +648,9 @@ input[type=range]::-ms-thumb {
   box-sizing: border-box;
 }
 
-/* Decrease the container width for non-mobiles */
+/* Decrease the content width for non-mobiles */
 @media (min-width: 400px) {
-  .container {
+  .content {
     width: 85%;
     padding: 0;
   }
@@ -658,8 +658,8 @@ input[type=range]::-ms-thumb {
 
 /* For devices larger than 544px */
 @media (min-width: 544px) {
-  /* Decrease container width for a proper look */
-  .container {
+  /* Decrease content width for a proper look */
+  .content {
     width: 80%;
   }
 
@@ -716,8 +716,8 @@ input[type=range]::-ms-thumb {
   .offset-by-one-half.col     { margin-left: 52%; }
 }
 /*
-* Meshki v1.4.2
-* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
+* Meshki v1.5.0
+* Copyright 2016-2017, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -750,8 +750,8 @@ li {
   margin-bottom: 1rem;
 }
 /*
-* Meshki v1.4.2
-* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
+* Meshki v1.5.0
+* Copyright 2016-2017, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -910,7 +910,7 @@ hr {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Self Clearing Goodness */
-.container:after,
+.content:after,
 .row:after {
   content: "";
   display: table;
@@ -942,8 +942,8 @@ compatibility reasons.
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
 /*
-* Meshki v1.4.2
-* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
+* Meshki v1.5.0
+* Copyright 2016-2017, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -1003,7 +1003,7 @@ nav ul li > input,
 .nav ul li > a.button,
 .nav ul li > button,
 .nav ul li > input {
-margin: 7px 5px auto 5px !important;
+  margin: 7px 5px auto 5px !important;
 }
 
 /* Active navbar button */
@@ -1560,8 +1560,8 @@ template {
   display: none;
 }
 /*
-* Meshki v1.4.2
-* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
+* Meshki v1.5.0
+* Copyright 2016-2017, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -1584,8 +1584,8 @@ template {
   transition: 0.5s;
 }
 
-/* Pushes the content div with effect */
-.content {
+/* Pushes the container div with effect */
+.container {
   position: absolute;
   width: 100%;
   transition: margin-left .5s, margin-right .5s;
@@ -1668,8 +1668,8 @@ template {
   }
 }
 /*
-* Meshki v1.4.2
-* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
+* Meshki v1.5.0
+* Copyright 2016-2017, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -1723,8 +1723,8 @@ table.hover > tbody tr:hover {
   background-color: #404040;
 }
 /*
-* Meshki v1.4.2
-* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
+* Meshki v1.5.0
+* Copyright 2016-2017, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
@@ -1760,8 +1760,8 @@ p {
   margin-top: 0;
 }
 /*
-* Meshki v1.4.2
-* Copyright 2016, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
+* Meshki v1.5.0
+* Copyright 2016-2017, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
 * https://borderliner.github.io/Meshki/
 * Free to use under the MIT license.
 * https://opensource.org/licenses/MIT
