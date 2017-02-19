@@ -1,13 +1,13 @@
 Meshki has 2 licenses, based on versions. Meshki v2.x.x is distributed under Apache License 2.0, while older versions (v0.x.x and v1.x.x) were distributed under MIT license.
 
-
+```
   __  __                _       _      _     ____                        
  |  \/  |   ___   ___  | |__   | | __ (_)   |___ \      __  __     __  __
  | |\/| |  / _ \ / __| | '_ \  | |/ / | |     __) |     \ \/ /     \ \/ /
  | |  | | |  __/ \__ \ | | | | |   <  | |    / __/   _   >  <   _   >  < 
  |_|  |_|  \___| |___/ |_| |_| |_|\_\ |_|   |_____| (_) /_/\_\ (_) /_/\_\
                                                                          
-                              
+```                              
 
                                  Apache License
                            Version 2.0, January 2004
@@ -211,6 +211,7 @@ Meshki has 2 licenses, based on versions. Meshki v2.x.x is distributed under Apa
    See the License for the specific language governing permissions and
    limitations under the License.
 
+```
   __  __                _       _      _      ___                        
  |  \/  |   ___   ___  | |__   | | __ (_)    / _ \      __  __     __  __
  | |\/| |  / _ \ / __| | '_ \  | |/ / | |   | | | |     \ \/ /     \ \/ /
@@ -224,6 +225,7 @@ Meshki has 2 licenses, based on versions. Meshki v2.x.x is distributed under Apa
  | |  | | |  __/ \__ \ | | | | |   <  | |   | |  _   >  <   _   >  < 
  |_|  |_|  \___| |___/ |_| |_| |_|\_\ |_|   |_| (_) /_/\_\ (_) /_/\_\
 
+```
 The MIT License (MIT)
 
 Copyright (c) 2016-2017 Mohammadreza Hajianpour <hajianpour.mr@gmail.com>
