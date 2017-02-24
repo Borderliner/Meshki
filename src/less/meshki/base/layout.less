@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-/* Variables
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Variables
+//////////////////////////////////////////////////
 @screen-max-width: 960px;
 @col-margin: 4%;
 
-/* Mixins
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* The idea is to remove 4% from the total width, which results in 96%.
- * Now we divide it to 12, to use a 12th-width grid.
- * Also, 2/3 means 0.666667, which is a number decreased or added to the result
- * of 96/12 to balance everything.
- */
+// Mixins
+//////////////////////////////////////////////////
+// The idea is to remove 4% from the total width, which results in 96%.
+// Now we divide it to 12, to use a 12th-width grid.
+// Also, 2/3 means 0.666667, which is a number decreased or added to the result
+// of 96/12 to balance everything.
+
 .col-width(@part) {
   // 1 <= @part < 6
   & when (@part >= 1) and (@part < 6) {
