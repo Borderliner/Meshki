@@ -5,8 +5,9 @@
   "main": "dist/meshki.min.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
     "compile": "gulp",
-    "watch": ""
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
@@ -20,10 +21,7 @@
     "black"
   ],
   "author": "Borderliner",
-  "license": {
-    "type": "Apache-2.0",
-    "url": "http://www.apache.org/licenses/LICENSE-2.0"
-  },
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/Borderliner/Meshki/issues"
   },
@@ -31,6 +29,10 @@
   "devDependencies": {
     "clean-css": "^4.0.8",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.0.3"
+    "gulp-clean-css": "^3.0.3",
+    "gulp-less": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-util": "^3.0.8"
   }
 }
