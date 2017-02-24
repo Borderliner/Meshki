@@ -1,18 +1,56 @@
 /*
-* Meshki v1.5.1
-* Copyright 2016-2017, Mohammad reza Hajianpour <hajianpour.mr@gmail.com>
-* https://borderliner.github.io/Meshki/
-* Free to use under the MIT license.
-* https://opensource.org/licenses/MIT
-*/
+ * Meshki v2.0.0 (https://borderliner.github.io/Meshki/)
+ * Copyright 2017 Mohammadreza Hajianpour <hajianpour.mr@gmail.com>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@screen-max-width: 960px;
+@col-margin: 4%;
+
+/* Mixins
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* The idea is to remove 4% from the total width, which results in 96%.
+ * Now we divide it to 12, to use a 12th-width grid.
+ * Also, 2/3 means 0.666667, which is a number decreased or added to the result
+ * of 96/12 to balance everything.
+ */
+.col-width(@part) {
+  // 1 <= @part < 6
+  & when (@part >= 1) and (@part < 6) {
+    @percent1: (((96 / 12) * @part) - ((6 - @part) * (2 / 3)));
+    width: percentage(@percent1 / 100);
+  }
+  // 6 <= @part < 12
+  & when (@part >= 6) and (@part < 12) {
+    @percent2: (((96 / 12) * @part) + ((@part - 6) * (2 / 3)));
+    width: percentage(@percent2 / 100);
+  }
+}
+
+.offset-col-margin(@part) {
+  @percent3: ((96 / 12) * @part) + (@part * (2 / 3));
+  margin-left: percentage(@percent3 / 100);
+}
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Center the row, used to hold columns */
 .row {
-  margin-left: auto;
-  margin-right: auto;
+  .centerize;
   margin-bottom: 20px;
 }
 
@@ -20,7 +58,7 @@
 .content {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: @screen-max-width;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
@@ -50,53 +88,59 @@
 
   /* Left margin for columns so they do not collide */
   .col {
-    margin-left: 4%;
+    margin-left: @col-margin;
   }
 
   /* The first column doesn't need left margin */
   .col:first-child {
     margin-left: 0;
   }
+}
 
-  .one.col                    { width: 4.66666666667%; }
-  .two.col                    { width: 13.3333333333%; }
-  .three.col                  { width: 22%;            }
-  .four.col                   { width: 30.6666666667%; }
-  .five.col                   { width: 39.3333333333%; }
-  .six.col                    { width: 48%;            }
-  .seven.col                  { width: 56.6666666667%; }
-  .eight.col                  { width: 65.3333333333%; }
-  .nine.col                   { width: 74%;            }
-  .ten.col                    { width: 82.6666666667%; }
-  .eleven.col                 { width: 91.3333333333%; }
+.col {
+  /* 12-based columns */
+  &.one    { .col-width(1);  }
+  &.two    { .col-width(2);  }
+  &.three  { .col-width(3);  }
+  &.four   { .col-width(4);  }
+  &.five   { .col-width(5);  }
+  &.six    { .col-width(6);  }
+  &.seven  { .col-width(7);  }
+  &.eight  { .col-width(8);  }
+  &.nine   { .col-width(9);  }
+  &.ten    { .col-width(10); }
+  &.eleven { .col-width(11); }
   /* Fill the row, with no margin on the left */
-  .twelve.col                 { width: 100%; margin-left: 0; }
+  &.twelve { width: 100%; margin-left: 0; }
 
   /* Proportional columns */
-  .one-third.col,
-  .one.third.col,              { width: 30.6666666667%; }
-  .two-thirds.col,
-  .two.thirds.col              { width: 65.3333333333%; }
+  &.one-third  { .col-width(4); }
+  &.two-third,
+  &.two-thirds { .col-width(8); }
 
   /* Half of the container columns */
-  .one-half.col,
-  .one.half.col                { width: 48%; }
+  &.half,
+  &.one-half   { .col-width(6); }
 
   /* Offsets */
-  .offset-by-one.col          { margin-left: 8.66666666667%; }
-  .offset-by-two.col          { margin-left: 17.3333333333%; }
-  .offset-by-three.col        { margin-left: 26%;            }
-  .offset-by-four.col         { margin-left: 34.6666666667%; }
-  .offset-by-five.col         { margin-left: 43.3333333333%; }
-  .offset-by-six.col          { margin-left: 52%;            }
-  .offset-by-seven.col        { margin-left: 60.6666666667%; }
-  .offset-by-eight.col        { margin-left: 69.3333333333%; }
-  .offset-by-nine.col         { margin-left: 78.0%;          }
-  .offset-by-ten.col          { margin-left: 86.6666666667%; }
-  .offset-by-eleven.col       { margin-left: 95.3333333333%; }
+  &.offset-by-one    { .offset-col-margin(1); }
+  &.offset-by-two    { .offset-col-margin(2); }
+  &.offset-by-three  { .offset-col-margin(3); }
+  &.offset-by-four   { .offset-col-margin(4); }
+  &.offset-by-five   { .offset-col-margin(5); }
+  &.offset-by-six    { .offset-col-margin(6); }
+  &.offset-by-seven  { .offset-col-margin(7); }
+  &.offset-by-eight  { .offset-col-margin(8); }
+  &.offset-by-nine   { .offset-col-margin(9); }
+  &.offset-by-ten    { .offset-col-margin(10); }
+  &.offset-by-eleven { .offset-col-margin(11); }
 
-  .offset-by-one-third.col    { margin-left: 34.6666666667%; }
-  .offset-by-two-thirds.col   { margin-left: 69.3333333333%; }
+  /* Proportional Offsets */
+  &.offset-by-one-third  { .offset-col-margin(4); }
+  &.offset-by-two-third,
+  &.offset-by-two-thirds { .offset-col-margin(8); }
 
-  .offset-by-one-half.col     { margin-left: 52%; }
+  /* Half of the container as offset */
+  &.offset-by-half,
+  &.offset-by-one-half   { .offset-col-margin(6); }
 }
