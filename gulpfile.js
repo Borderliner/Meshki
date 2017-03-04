@@ -22,6 +22,7 @@ var less = require('gulp-less');
 var srcmaps = require('gulp-sourcemaps');
 var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
+var uglify = require('gulp-uglify');
 
 var delDir = function(path) {
   if(fs.existsSync(path)) {
@@ -50,6 +51,20 @@ gulp.task('pre-compile', () => {
 });
 
 gulp.task('compile', ['pre-compile']);
+
+gulp.task('js-uglify', ['compile'], () => {
+  return gulp.src('src/js/meshki.js')
+    .pipe(rename((path) => {
+      path.basename = 'meshki.min'
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('js-copy', ['compile'], () => {
+  return gulp.src('src/js/meshki.js')
+    .pipe(gulp.dest('dist/'));
+});
 
 gulp.task('less-base', ['compile'], () => {
   return gulp.src('src/less/boot.less')
@@ -91,7 +106,7 @@ gulp.task('min-plugins', ['less-plugins'], () => {
     .pipe(gulp.dest('dist/plugins/'));
 });
 
-gulp.task('post-compile', ['min-base', 'min-plugins']);
+gulp.task('post-compile', ['min-base', 'min-plugins', 'js-copy', 'js-uglify']);
 
 gulp.task('fonts', ['compile'], () => {
   return gulp.src('src/fonts/**/*')
