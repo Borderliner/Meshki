@@ -9,6 +9,26 @@
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+// Mixins
+//////////////////////////////////////////////////
+.mx-button(@option) {
+  @selector: ~'a.button:@{option},
+  button:@{option},
+  input[type="submit"]:@{option},
+  input[type="reset"]:@{option},
+  input[type="button"]:@{option}'
+}
+
+.mx-button("focus");
+@{selector} {
+    color: white;
+}
+
+.mx-button("red");
+@{selector} {
+    color: red;
+}
+
 /* Removed focus outlines, especially in Firefox */
 a.button:focus,
 button:focus,
