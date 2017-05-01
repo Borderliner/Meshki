@@ -18,7 +18,7 @@
 var fs = require('fs');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
-var less = require('gulp-less');
+var sass = require('gulp-sass');
 var srcmaps = require('gulp-sourcemaps');
 var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
@@ -66,25 +66,25 @@ gulp.task('js-copy', ['compile'], () => {
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('less-base', ['compile'], () => {
-  return gulp.src('src/less/boot.less')
+gulp.task('sass-base', ['compile'], () => {
+  return gulp.src('src/sass/boot.scss')
     .pipe(rename((path) => {
       path.basename = 'meshki';
     }))
-    .pipe(less())
+    .pipe(sass.sync().on('error', sass.logError))
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('less-plugins', ['compile'], () => {
-  return gulp.src('src/less/plugins/*.less')
+gulp.task('sass-plugins', ['compile'], () => {
+  return gulp.src('src/sass/plugins/*.scss')
     .pipe(rename((path) => {
       path.basename = 'meshki-' + path.basename;
     }))
-    .pipe(less())
+    .pipe(sass.sync().on('error', sass.logError))
     .pipe(gulp.dest('dist/plugins/'));
 });
 
-gulp.task('min-base', ['less-base'], () => {
+gulp.task('min-base', ['sass-base'], () => {
   return gulp.src('dist/meshki.css')
     .pipe(rename((path) => {
       path.basename = 'meshki.min'
@@ -95,7 +95,7 @@ gulp.task('min-base', ['less-base'], () => {
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('min-plugins', ['less-plugins'], () => {
+gulp.task('min-plugins', ['sass-plugins'], () => {
   return gulp.src('dist/plugins/*.css')
     .pipe(rename((path) => {
       path.basename += '.min';
