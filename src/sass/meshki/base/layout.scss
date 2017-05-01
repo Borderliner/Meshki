@@ -17,32 +17,31 @@
 
 // Variables
 //////////////////////////////////////////////////
-@screen-max-width: 960px;
-@col-margin: 4%;
+$screen-max-width: 960px;
+$col-margin: 4%;
 
-// Mixins
+// Functions
 //////////////////////////////////////////////////
 // The idea is to remove 4% from the total width, which results in 96%.
 // Now we divide it to 12, to use a 12th-width grid.
 // Also, 2/3 means 0.666667, which is a number decreased or added to the result
 // of 96/12 to balance everything.
 
-.col-width(@part) {
-  // 1 <= @part < 6
-  & when (@part >= 1) and (@part < 6) {
-    @percent1: (((96 / 12) * @part) - ((6 - @part) * (2 / 3)));
-    width: percentage(@percent1 / 100);
+@function column-width($part) {
+  @if $part >= 1 and $part < 6 {
+    $size: (((96 / 12) * $part) - ((6 - $part) * (2 / 3)));
+    @return percentage($size / 100);
   }
-  // 6 <= @part < 12
-  & when (@part >= 6) and (@part < 12) {
-    @percent2: (((96 / 12) * @part) + ((@part - 6) * (2 / 3)));
-    width: percentage(@percent2 / 100);
+
+  @elseif $part >=6 and $part < 12 {
+    $size: (((96 / 12) * $part) + (($part - 6) * (2 / 3)));
+    @return percentage($size / 100);
   }
 }
 
-.offset-col-margin(@part) {
-  @percent3: ((96 / 12) * @part) + (@part * (2 / 3));
-  margin-left: percentage(@percent3 / 100);
+@function offset-column-margin($part) {
+  $size: ((96 / 12) * $part) + ($part * (2 / 3));
+  @return percentage($size / 100);
 }
 
 /* Grid
@@ -58,7 +57,7 @@
 .content {
   position: relative;
   width: 100%;
-  max-width: @screen-max-width;
+  max-width: $screen-max-width;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
@@ -88,7 +87,7 @@
 
   /* Left margin for columns so they do not collide */
   .col {
-    margin-left: @col-margin;
+    margin-left: $col-margin;
   }
 
   /* The first column doesn't need left margin */
@@ -99,48 +98,48 @@
 
 .col {
   /* 12-based columns */
-  &.one    { .col-width(1);  }
-  &.two    { .col-width(2);  }
-  &.three  { .col-width(3);  }
-  &.four   { .col-width(4);  }
-  &.five   { .col-width(5);  }
-  &.six    { .col-width(6);  }
-  &.seven  { .col-width(7);  }
-  &.eight  { .col-width(8);  }
-  &.nine   { .col-width(9);  }
-  &.ten    { .col-width(10); }
-  &.eleven { .col-width(11); }
+  &.one    { width: column-width(1);  }
+  &.two    { width: column-width(2);  }
+  &.three  { width: column-width(3);  }
+  &.four   { width: column-width(4);  }
+  &.five   { width: column-width(5);  }
+  &.six    { width: column-width(6);  }
+  &.seven  { width: column-width(7);  }
+  &.eight  { width: column-width(8);  }
+  &.nine   { width: column-width(9);  }
+  &.ten    { width: column-width(10); }
+  &.eleven { width: column-width(11); }
   /* Fill the row, with no margin on the left */
   &.twelve { width: 100%; margin-left: 0; }
 
   /* Proportional columns */
-  &.one-third  { .col-width(4); }
+  &.one-third  { width: column-width(4); }
   &.two-third,
-  &.two-thirds { .col-width(8); }
+  &.two-thirds { width: column-width(8); }
 
   /* Half of the container columns */
   &.half,
-  &.one-half   { .col-width(6); }
+  &.one-half   { width: column-width(6); }
 
   /* Offsets */
-  &.offset-by-one    { .offset-col-margin(1); }
-  &.offset-by-two    { .offset-col-margin(2); }
-  &.offset-by-three  { .offset-col-margin(3); }
-  &.offset-by-four   { .offset-col-margin(4); }
-  &.offset-by-five   { .offset-col-margin(5); }
-  &.offset-by-six    { .offset-col-margin(6); }
-  &.offset-by-seven  { .offset-col-margin(7); }
-  &.offset-by-eight  { .offset-col-margin(8); }
-  &.offset-by-nine   { .offset-col-margin(9); }
-  &.offset-by-ten    { .offset-col-margin(10); }
-  &.offset-by-eleven { .offset-col-margin(11); }
+  &.offset-by-one    { margin-left: offset-column-margin(1);  }
+  &.offset-by-two    { margin-left: offset-column-margin(2);  }
+  &.offset-by-three  { margin-left: offset-column-margin(3);  }
+  &.offset-by-four   { margin-left: offset-column-margin(4);  }
+  &.offset-by-five   { margin-left: offset-column-margin(5);  }
+  &.offset-by-six    { margin-left: offset-column-margin(6);  }
+  &.offset-by-seven  { margin-left: offset-column-margin(7);  }
+  &.offset-by-eight  { margin-left: offset-column-margin(8);  }
+  &.offset-by-nine   { margin-left: offset-column-margin(9);  }
+  &.offset-by-ten    { margin-left: offset-column-margin(10); }
+  &.offset-by-eleven { margin-left: offset-column-margin(11); }
 
   /* Proportional Offsets */
-  &.offset-by-one-third  { .offset-col-margin(4); }
+  &.offset-by-one-third  { margin-left: offset-column-margin(4); }
   &.offset-by-two-third,
-  &.offset-by-two-thirds { .offset-col-margin(8); }
+  &.offset-by-two-thirds { margin-left: offset-column-margin(8); }
 
   /* Half of the container as offset */
   &.offset-by-half,
-  &.offset-by-one-half   { .offset-col-margin(6); }
+  &.offset-by-one-half   { margin-left: offset-column-margin(6); }
 }
