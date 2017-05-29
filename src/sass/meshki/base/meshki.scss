@@ -18,41 +18,42 @@
 // Variables
 //////////////////////////////////////////////////
 
-@default-font-family:              "Open Sans", sans-serif;
-@default-font-weight:              400;
-@default-font-size::after          1.6rem;
-@container-max-width:              960px;
-@container-width-mobile:           100%;
-@container-width-phablet:          85%;
-@container-width-tablet:           80%;
+$default-font-family:              'Open Sans', sans-serif;
+$default-font-weight:              400;
+$default-font-size-after:          1.6rem;
+$container-max-width:              960px;
+$container-width-mobile:           100%;
+$container-width-phablet:          85%;
+$container-width-tablet:           80%;
 
-@media-mobile:                     400px;
-@media-phablet:                    544px;
-@media-tablet:                     768px;
-@media-desktop:                    992px;
-@media-desktop-hd:                 1200px;
+$media-mobile:                     400px;
+$media-phablet:                    544px;
+$media-tablet:                     768px;
+$media-desktop:                    992px;
+$media-desktop-hd:                 1200px;
 
-@background-color:                 #222;
-@text-color:                       #E1E1E1;
-@text-selection-color:             #15ACEE;
-@default-white-color:              @text-color;
-@button-simple-color:              @text-color;
-@button-default-color:             #55ACEE;
-@button-success-color:             #2ECC71;
-@button-danger-color:              #E74C3C;
-@button-warning-color:             #E67E22;
-@link-default-color:               @button-default-color;
-@link-hover-color:                 #74C1FB;
-@sidenav-lines-color:              #818181;
+$background-color:                 #222;
+$text-color:                       #e1e1e1;
+$text-selection-color:             #15acee;
+$default-white-color:              $text-color;
+$button-simple-color:              $text-color;
+$button-default-color:             #55acee;
+$button-success-color:             #2ecc71;
+$button-danger-color:              #e74c3c;
+$button-warning-color:             #e67e22;
+$link-default-color:               $button-default-color;
+$link-hover-color:                 #74c1fb;
+$sidenav-lines-color:              #818181;
+$transparent-color:                rgba(0, 0, 0, 0);
 
-@button-small-size:                1.2rem;
-@button-medium-size:               1.6rem;
-@button-large-size:                2.2rem;
+$button-small-size:                1.2rem;
+$button-medium-size:               1.6rem;
+$button-large-size:                2.2rem;
 
-@sidenav-width:                    250px;
-@sidenav-animation-duration:       0.5s;
+$sidenav-width:                    250px;
+$sidenav-animation-duration:       .5s;
 
-@other-animation-duration:         0.3s;
+$other-animation-duration:         .3s;
 
 
 /* Table of contents
@@ -72,21 +73,21 @@
 html is set to 62.5% so that all the REM measurements throughout Meshki
 are based on 10px sizing. So basically 1.5rem = 15px */
 html {
+  -webkit-tap-highlight-color: $transparent-color; /* Remove highlight color */
   font-size: 62.5%;
   height: 100%;
-  -webkit-tap-highlight-color: rgba(0,0,0,0); /* Remove highlight color */
-  -webkit-tap-highlight-color: transparent;
+
 }
 
 /* General attributes of the body tag */
 body {
-  font-size: @default-font-size;
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $default-font-family;
+  font-size: $default-font-size;
+  font-weight: $default-font-weight;
   height: 100%;
   line-height: 1.6;
-  font-weight: @default-font-weight;
-  font-family: @default-font-family;
-  background-color: @background-color;
-  color: @text-color;
 }
 
 
@@ -94,20 +95,20 @@ body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Nice blue for links */
 a {
-  color: @link-default-color;
-}
+  color: $link-default-color;
 
-a:hover {
-  color: @link-hover-color;
+  &:hover {
+    color: $link-hover-color;
+  }
 }
 
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 button,
 a.button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
   margin-bottom: 1rem;
 }
 
@@ -133,29 +134,32 @@ form {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Default <hr> tag */
 hr {
+  border-top: 1px solid $text-color;
   border-width: 0;
-  border-top: 1px solid @text-color;
-  margin-top: 3rem;
   margin-bottom: 3.5rem;
+  margin-top: 3rem;
 }
 
 /* Text selection color */
 ::selection {
-  background: @text-selection-color; /* WebKit/Blink Browsers */
+  background: $text-selection-color; /* WebKit/Blink Browsers */
 }
+
 ::-moz-selection {
-  background: @text-selection-color; /* Gecko Browsers */
+  background: $text-selection-color; /* Gecko Browsers */
 }
 
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Self Clearing Goodness */
-.content:after,
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.content,
+.row {
+  &::after {
+    clear: both;
+    content: none;
+    display: table;
+  }
 }
 
 /* Media Queries
@@ -169,16 +173,16 @@ compatibility reasons.
 */
 
 /* Larger than mobile */
-@media (min-width: @media-mobile) {}
+// @media (min-width: $media-mobile) {}
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: @media-phablet) {}
+// @media (min-width: $media-phablet) {}
 
 /* Larger than tablet */
-@media (min-width: @media-tablet) {}
+// @media (min-width: $media-tablet) {}
 
 /* Larger than desktop */
-@media (min-width: @media-desktop) {}
+// @media (min-width: $media-desktop) {}
 
 /* Larger than Desktop HD */
-@media (min-width: @media-desktop-hd) {}
+// @media (min-width: $media-desktop-hd) {}
