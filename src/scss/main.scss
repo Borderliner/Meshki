@@ -1,16 +1,11 @@
-@import 'meshki/base/meshki';
-@import 'meshki/base/normalize';
-@import 'meshki/util/utility';
+@import 'utils/variables';
+@import 'utils/colors';
 
-@import 'meshki/base/layout';
+@import 'utils/module';
+@import 'vendor/module';
 
-@import 'meshki/util/typography';
+@import 'base/module';
+@import 'layout/module';
+@import 'components/module';
 
-@import 'meshki/components/button';
-@import 'meshki/components/code';
-@import 'meshki/components/footer';
-@import 'meshki/components/form';
-@import 'meshki/components/list';
-@import 'meshki/components/navbar';
-@import 'meshki/components/sidenav';
-@import 'meshki/components/table';
+@import 'plugins/module';
