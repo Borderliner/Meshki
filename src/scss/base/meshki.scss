@@ -15,47 +15,6 @@
  * limitations under the License.
  */
 
-// Variables
-//////////////////////////////////////////////////
-
-$default-font-family:              'Open Sans', sans-serif;
-$default-font-weight:              400;
-$default-font-size-after:          1.6rem;
-$container-max-width:              960px;
-$container-width-mobile:           100%;
-$container-width-phablet:          85%;
-$container-width-tablet:           80%;
-
-$media-mobile:                     400px;
-$media-phablet:                    544px;
-$media-tablet:                     768px;
-$media-desktop:                    992px;
-$media-desktop-hd:                 1200px;
-
-$background-color:                 #222;
-$text-color:                       #e1e1e1;
-$text-selection-color:             #15acee;
-$default-white-color:              $text-color;
-$button-simple-color:              $text-color;
-$button-default-color:             #55acee;
-$button-success-color:             #2ecc71;
-$button-danger-color:              #e74c3c;
-$button-warning-color:             #e67e22;
-$link-default-color:               $button-default-color;
-$link-hover-color:                 #74c1fb;
-$sidenav-lines-color:              #818181;
-$transparent-color:                rgba(0, 0, 0, 0);
-
-$button-small-size:                1.2rem;
-$button-medium-size:               1.6rem;
-$button-large-size:                2.2rem;
-
-$sidenav-width:                    250px;
-$sidenav-animation-duration:       .5s;
-
-$other-animation-duration:         .3s;
-
-
 /* Table of contents
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 - Base Styles
