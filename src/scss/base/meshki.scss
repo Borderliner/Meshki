@@ -15,25 +15,10 @@
  * limitations under the License.
  */
 
-/* Table of contents
-––––––––––––––––––––––––––––––––––––––––––––––––––
-- Base Styles
-- Links
-- Spacing
-- Utilities
-- Clearing
-- Media Queries
-*/
-
-/* Base Styles
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-/* NOTE
-html is set to 62.5% so that all the REM measurements throughout Meshki
-are based on 10px sizing. So basically 1.5rem = 15px */
+// Base Styles
 html {
   -webkit-tap-highlight-color: $transparent-color; /* Remove highlight color */
-  font-size: 62.5%;
+  font-size: $font-size-global;
   height: 100%;
 
 }
@@ -42,27 +27,23 @@ html {
 body {
   background-color: $background-color;
   color: $text-color;
-  font-family: $default-font-family;
-  font-size: $default-font-size;
-  font-weight: $default-font-weight;
+  font-family: $font-family;
+  font-size: $font-size-body;
+  font-weight: $font-weight;
   height: 100%;
-  line-height: 1.6;
+  line-height: $font-line-height;
 }
 
-
-/* Links
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Nice blue for links */
+// Nice blue for links
 a {
-  color: $link-default-color;
+  color: $link-color-default;
 
   &:hover {
-    color: $link-hover-color;
+    color: $link-color-hover;
   }
 }
 
-/* Spacing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Spacing
 button,
 a.button,
 input[type='submit'],
@@ -89,9 +70,7 @@ form {
   margin-bottom: 2.5rem;
 }
 
-/* Misc
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Default <hr> tag */
+// Misc
 hr {
   border-top: 1px solid $text-color;
   border-width: 0;
@@ -108,10 +87,7 @@ hr {
   background: $text-selection-color; /* Gecko Browsers */
 }
 
-/* Clearing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-/* Self Clearing Goodness */
+// Self Clearing Goodness
 .content,
 .row {
   &::after {
@@ -121,8 +97,7 @@ hr {
   }
 }
 
-/* Media Queries
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Media Queries
 /*
 Note: The best way to structure the use of media queries is to create the queries
 near the relevant code. For example, if you wanted to change the styles for buttons
