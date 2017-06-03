@@ -15,14 +15,4 @@
  * limitations under the License.
  */
 
-@import 'utils/variables/module';
-@import 'utils/mixins/module';
-
-@import 'utils/module';
-@import 'vendor/module';
-
-@import 'base/module';
-@import 'layout/module';
-@import 'components/module';
-
-@import 'plugins/module';
+ @import 'button'

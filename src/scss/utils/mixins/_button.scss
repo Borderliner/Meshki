@@ -15,14 +15,19 @@
  * limitations under the License.
  */
 
-@import 'utils/variables/module';
-@import 'utils/mixins/module';
+ /* NOTE
+  * Use it like this:
+  * @include create-button(".large.yellow") {
+  *   width: 50%;
+  * }
+  */
 
-@import 'utils/module';
-@import 'vendor/module';
-
-@import 'base/module';
-@import 'layout/module';
-@import 'components/module';
-
-@import 'plugins/module';
+@mixin create-button($options) {
+  button#{$options},
+  a.button#{$options},
+  input[type="submit"]#{$options},
+  input[type="reset"]#{$options},
+  input[type="button"]#{$options} {
+    @content
+  }
+}
