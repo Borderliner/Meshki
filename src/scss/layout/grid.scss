@@ -15,88 +15,28 @@
  * limitations under the License.
  */
 
-// Variables
-//////////////////////////////////////////////////
-$screen-max-width: 960px;
-$col-margin: 4%;
-
-// Functions
-//////////////////////////////////////////////////
-// The idea is to remove 4% from the total width, which results in 96%.
-// Now we divide it to 12, to use a 12th-width grid.
-// Also, 2/3 means 0.666667, which is a number decreased or added to the result
-// of 96/12 to balance everything.
-
-@function column-width($part) {
-  @if $part >= 1 and $part < 6 {
-    $size: (((96 / 12) * $part) - ((6 - $part) * (2 / 3)));
-    @return percentage($size / 100);
-  }
-
-  @elseif $part >=6 and $part < 12 {
-    $size: (((96 / 12) * $part) + (($part - 6) * (2 / 3)));
-    @return percentage($size / 100);
-  }
-}
-
-@function offset-column-margin($part) {
-  $size: ((96 / 12) * $part) + ($part * (2 / 3));
-  @return percentage($size / 100);
-}
-
-/* Grid
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 /* Center the row, used to hold columns */
 .row {
-  .centerize;
+  @include centerize;
   margin-bottom: 20px;
 }
 
 /* Content creates a responsive space to hold page data */
 .content {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: $content-max-width;
+  padding: 0 20px;
   position: relative;
   width: 100%;
-  max-width: $screen-max-width;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
 }
 
 /* Columns fill their parent from the left side */
 .col {
-  width: 100%;
-  float: left;
   box-sizing: border-box;
-}
+  float: left;
+  width: 100%;
 
-/* Decrease the content width for non-mobiles */
-@media (min-width: 400px) {
-  .content {
-    width: 85%;
-    padding: 0;
-  }
-}
-
-/* For devices larger than 544px */
-@media (min-width: 544px) {
-  /* Decrease content width for a proper look */
-  .content {
-    width: 80%;
-  }
-
-  /* Left margin for columns so they do not collide */
-  .col {
-    margin-left: $col-margin;
-  }
-
-  /* The first column doesn't need left margin */
-  .col:first-child {
-    margin-left: 0;
-  }
-}
-
-.col {
   /* 12-based columns */
   &.one    { width: column-width(1);  }
   &.two    { width: column-width(2);  }
@@ -109,17 +49,26 @@ $col-margin: 4%;
   &.nine   { width: column-width(9);  }
   &.ten    { width: column-width(10); }
   &.eleven { width: column-width(11); }
+
   /* Fill the row, with no margin on the left */
-  &.twelve { width: 100%; margin-left: 0; }
+  &.twelve {
+    margin-left: 0;
+    width: 100%;
+  }
 
   /* Proportional columns */
   &.one-third  { width: column-width(4); }
+
   &.two-third,
-  &.two-thirds { width: column-width(8); }
+  &.two-thirds {
+    width: column-width(8);
+  }
 
   /* Half of the container columns */
   &.half,
-  &.one-half   { width: column-width(6); }
+  &.one-half   {
+    width: column-width(6);
+  }
 
   /* Offsets */
   &.offset-by-one    { margin-left: offset-column-margin(1);  }
@@ -136,10 +85,41 @@ $col-margin: 4%;
 
   /* Proportional Offsets */
   &.offset-by-one-third  { margin-left: offset-column-margin(4); }
+
   &.offset-by-two-third,
-  &.offset-by-two-thirds { margin-left: offset-column-margin(8); }
+  &.offset-by-two-thirds {
+    margin-left: offset-column-margin(8);
+  }
 
   /* Half of the container as offset */
   &.offset-by-half,
-  &.offset-by-one-half   { margin-left: offset-column-margin(6); }
+  &.offset-by-one-half   {
+    margin-left: offset-column-margin(6);
+  }
+}
+
+/* Decrease the content width for non-mobiles */
+@media (min-width: $media-mobile) {
+  .content {
+    padding: 0;
+    width: 85%;
+  }
+}
+
+/* For devices larger than 544px */
+@media (min-width: $media-phablet) {
+  /* Decrease content width for a proper look */
+  .content {
+    width: 80%;
+  }
+
+  /* Left margin for columns so they do not collide */
+  .col {
+    margin-left: $col-margin;
+
+    /* The first column doesn't need left margin */
+    &:first-child {
+      margin-left: 0;
+    }
+  }
 }
