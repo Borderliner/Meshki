@@ -29,7 +29,7 @@ body {
   font-family: $rtl-font-family, $font-family;
 }
 
-/* Buttons should use RTL font too */
+// Buttons should use RTL font too
 button,
 input,
 optgroup,
@@ -38,20 +38,19 @@ textarea {
   font-family: $rtl-font-family, $font-family;
 }
 
-/* Keep the blocks of code LTR */
+// Keep the blocks of code LTR
 pre {
   direction: ltr;
 }
 
-/* Buttons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Buttons //================================
 
-/* Change the button size for RTL version */
+// Change the button size for RTL version
 @include create-button {
   padding: 2px 11px;
 }
 
-/* Middle button of button couples for mobile version */
+// Middle button of button couples for mobile version
 .button-couple {
   button:not(:first-child):not(:last-child),
   a:not(:first-child):not(:last-child) {
@@ -62,11 +61,11 @@ pre {
   }
 }
 
-/* Button couples for tablets and upper */
+// Button couples for tablets and upper
 @media (min-width: $media-tablet) {
   .button-couple {
 
-    /* First button */
+    // First button
     button:first-child,
     a:first-child {
       border-bottom-left-radius: 0;
@@ -78,7 +77,7 @@ pre {
       margin-right: 0 !important;
     }
 
-    /* Middle button */
+    // Middle button
     button:not(:first-child):not(:last-child),
     a:not(:first-child):not(:last-child) {
       border-style: solid;
@@ -86,7 +85,7 @@ pre {
       margin: -9px !important;
     }
 
-    /* Last button */
+    // Last button
     button:last-child,
     a:last-child {
       border-bottom-left-radius: 5px;
@@ -100,51 +99,49 @@ pre {
   }
 }
 
-/* Footer
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Footer //================================
 
 @media (min-width: $media-phablet) {
-  /* Footer text alignment for RTL */
+  // Footer text alignment for RTL
   footer,
   .footer {
     text-align: right;
   }
 }
 
-/* Forms
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Forms //================================
 
-/* Select background must be on the left */
+// Select background must be on the left
 select {
   background-position: 2% 50%;
 }
 
-/* Margin fix for checkboxes and radio buttons */
+// Margin fix for checkboxes and radio buttons
 input[type=checkbox]+label.checkbox:before,
 input[type=radio]+label.radio:before {
   margin: 4px auto auto 10px;
 }
 
-/* Grid System
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Grid System //================================
 
-/* RTL columns */
+// RTL columns
 .col {
   float: right;
   margin-left: auto;
 }
 
+// TODO: Use functions to generate offset percentage
 @media (min-width: $media-phablet) {
   .col {
     margin-right: 4%;
 
-    /* A bit of clean up for columns on tablets and up */
+    // A bit of clean up for columns on tablets and up
     &:first-child {
       margin-left: auto;
       margin-right: 0;
     }
 
-    /* Offsets from right */
+    // Offsets from right
     &.offset-by-one          { margin-right: 8.66666666667%; }
     &.offset-by-two          { margin-right: 17.3333333333%; }
     &.offset-by-three        { margin-right: 26%;            }
@@ -164,17 +161,16 @@ input[type=radio]+label.radio:before {
   }
 }
 
-/* Navbar
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Navbar //================================
 
 .nav {
   ul {
-    /* Navbar buttons should be on the right side */
+    // Navbar buttons should be on the right side
     li {
       float: right;
     }
 
-    /* Logo of the website, it must be the first child of navbar*/
+    // Logo of the website, it must be the first child of navbar
     li:first-child a.logo i {
       color: $normal-black;
     }
@@ -187,21 +183,20 @@ input[type=radio]+label.radio:before {
   }
 }
 
-/* Sidenav
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Sidenav //================================
 
-/* Sidenav starts from the right */
+// Sidenav starts from the right
 .sidenav {
   left: auto;
   right: 0;
 
-  /* Different padding of RTL Sidenav */
+  // Different padding of RTL Sidenav
   a {
     padding: 8px 32px 8px 8px;
   }
 }
 
-/* Sidenav close button should be on the left */
+// Sidenav close button should be on the left
 .sidenav-close-button {
   left: 0;
   padding-left: 30px !important;
@@ -209,9 +204,8 @@ input[type=radio]+label.radio:before {
   right: auto;
 }
 
-/* Tables
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Align the table content to right */
+// Tables //================================
+// Align the table content to right
 td,
 th {
   text-align: right;

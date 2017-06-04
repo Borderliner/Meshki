@@ -17,153 +17,153 @@
 
 @import 'colors';
 
-/* Yellow button */
+// Yellow button
 @include create-button('.yellow') {
   border: 2px $x-button-color-yellow solid;
   color: $x-button-color-yellow;
 }
 
-/* Yellow button's hover */
+// Yellow button's hover
 @include create-button('.yellow:hover') {
   background-color: $x-button-color-yellow;
   border-color: $x-button-color-yellow;
   color: $meshki-black;
 }
 
-/* Yellow button's active */
+// Yellow button's active
 @include create-button('.yellow:active') {
   background-color: $x-button-color-yellow-active;
   border-color: $x-button-color-yellow-active;
 }
 
-/* Crimson button */
+// Crimson button
 @include create-button('.crimson') {
   border: 2px $x-button-color-crimson solid;
   color: $x-button-color-crimson;
 }
 
-/* Crimson button's hover */
+// Crimson button's hover
 @include create-button('.crimson:hover') {
   background-color: $x-button-color-crimson;
   border-color: $x-button-color-crimson;
   color: $text-color;
 }
 
-/* Crimson button's active */
+// Crimson button's active
 @include create-button('.crimson:active') {
   background-color: $x-button-color-crimson-active;
   border-color: $x-button-color-crimson-active;
 }
 
-/* Purple button */
+// Purple button
 @include create-button('.purple') {
   border: 2px $x-button-color-purple solid;
   color: $x-button-color-purple;
 }
 
-/* Purple button's hover */
+// Purple button's hover
 @include create-button('.purple:hover') {
   background-color: $x-button-color-purple;
   border-color: $x-button-color-purple;
   color: $text-color;
 }
 
-/* Purple button's active */
+// Purple button's active
 @include create-button('.purple:active') {
   background-color: $x-button-color-purple-active;
   border-color: $x-button-color-purple-active;
 }
 
-/* Lime button */
+// Lime button
 @include create-button('.lime') {
   border: 2px $x-button-color-lime solid;
   color: $x-button-color-lime;
 }
 
-/* Lime button's hover */
+// Lime button's hover
 @include create-button('.lime:hover') {
   background-color: $x-button-color-lime;
   border-color: $x-button-color-lime;
   color: $meshki-black;
 }
 
-/* Lime button's active */
+// Lime button's active
 @include create-button('.lime:active') {
   background-color: $x-button-color-lime-active;
   border-color: $x-button-color-lime-active;
 }
 
-/* Brown button */
+// Brown button
 @include create-button('.brown') {
   border: 2px $x-button-color-brown solid;
   color: $x-button-color-brown;
 }
 
-/* Brown button's hover */
+// Brown button's hover
 @include create-button('.brown:hover') {
   background-color: $x-button-color-brown;
   border-color: $x-button-color-brown;
   color: $text-color;
 }
 
-/* Brown button's active */
+// Brown button's active
 @include create-button('.brown:active') {
   background-color: $x-button-color-brown-active;
   border-color: $x-button-color-brown-active;
 }
 
-/* Space button */
+// Space button
 @include create-button('.space') {
   border: 2px $x-button-color-space solid;
   color: $x-button-color-space;
 }
 
-/* Space button's hover */
+// Space button's hover
 @include create-button('.space:hover') {
   background-color: $x-button-color-space;
   border-color: $x-button-color-space;
   color: $text-color;
 }
 
-/* Space button's active */
+// Space button's active
 @include create-button('.space:active') {
   background-color: $x-button-color-space-active;
   border-color: $x-button-color-space-active;
 }
 
-/* Rose button */
+// Rose button
 @include create-button('.rose') {
   border: 2px $x-button-color-rose solid;
   color: $x-button-color-rose;
 }
 
-/* Rose button's hover */
+// Rose button's hover
 @include create-button('.rose:hover') {
   background-color: $x-button-color-rose;
   border-color: $x-button-color-rose;
   color: $text-color;
 }
 
-/* Rose button's active */
+// Rose button's active
 @include create-button('.rose:active') {
   background-color: $x-button-color-rose-active;
   border-color: $x-button-color-rose-active;
 }
 
-/* Cyan button */
+// Cyan button
 @include create-button('.cyan') {
   border: 2px $x-button-color-cyan solid;
   color: $x-button-color-cyan;
 }
 
-/* Cyan button's hover */
+// Cyan button's hover
 @include create-button('.cyan:hover') {
   background-color: $x-button-color-cyan;
   border-color: $x-button-color-cyan;
   color: $meshki-black;
 }
 
-/* Cyan button's active */
+// Cyan button's active
 @include create-button('.cyan:active') {
   background-color: $x-button-color-cyan-active;
   border-color: $x-button-color-cyan-active;

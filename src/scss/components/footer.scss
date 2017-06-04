@@ -1,21 +1,4 @@
-/*
- * Meshki v2.0.0 (https://borderliner.github.io/Meshki/)
- * Copyright 2017 Mohammadreza Hajianpour <hajianpour.mr@gmail.com>
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/* The footer tag, or a div with footer (Useful for IE) */
+// The footer tag, or a div with footer (Useful for IE)
 footer,
 .footer {
   background-color: $footer-color-background;
@@ -25,8 +8,8 @@ footer,
   padding: 25px 50px 0;
   text-align: center;
 
-  /* Remove bottom margins of columns
-  /* Remove bottom margin of .row for footer, it takes lots of space */
+  // Remove bottom margins of columns
+  // Remove bottom margin of .row for footer, it takes lots of space
   .col,
   .row {
     margin-bottom: 0px;
@@ -34,7 +17,7 @@ footer,
 
 }
 
-/* Align the text of the footer to the left for non-mobile */
+// Align the text of the footer to the left for non-mobile
 @media (min-width: $media-phablet) {
   footer,
   .footer {

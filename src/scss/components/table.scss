@@ -1,29 +1,12 @@
-/*
- * Meshki v2.0.0 (https://borderliner.github.io/Meshki/)
- * Copyright 2017 Mohammadreza Hajianpour <hajianpour.mr@gmail.com>
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 table {
   border-spacing: 0;
 
-  /* Stripped table */
+  // Stripped table
   &.striped tr:nth-child(even) {
     background-color: $table-color-striped;
   }
 
-  /* Centerizes the texts inside each cell */
+  // Centerizes the texts inside each cell
   &.centerize {
     & > thead th,
     & > tbody td {
@@ -32,26 +15,26 @@ table {
   }
 
   &.hoverable {
-    /* Hover effect activated for each row */
+    // Hover effect activated for each row
     & > tbody tr {
       transition: background-color .3s;
     }
 
-    /* Changes color when the mouse is over each row */
+    // Changes color when the mouse is over each row
     & > tbody tr:hover {
       background-color: $table-color-hover;
     }
   }
 }
 
-/* Padding and stuff for each cell */
+// Padding and stuff for each cell
 th,
 td {
   border-bottom: 1px $table-color-border solid;
   padding: 12px 15px;
   text-align: left;
 
-  /* First and last children (most right and most left cells) do not need padding */
+  // First and last children (most right and most left cells) do not need padding
   &:first-child {
     padding-left: 0;
   }

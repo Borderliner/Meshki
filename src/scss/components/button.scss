@@ -1,26 +1,9 @@
-/*
- * Meshki v2.0.0 (https://borderliner.github.io/Meshki/)
- * Copyright 2017 Mohammadreza Hajianpour <hajianpour.mr@gmail.com>
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/* Removed focus outlines, especially in Firefox */
+// Removed focus outlines, especially in Firefox
 @include create-button(':focus') {
   outline: 0 !important;
 }
 
-/* Simple button, with no style */
+// Simple button, with no style
 @include create-button  {
   -moz-transition: .3s;
   -o-transition: .3s;
@@ -32,9 +15,9 @@
   cursor: pointer;
   display: inline-block;
   font-size: 1.6rem;
-  line-height: normal !important; /* Fix Midori bug */
+  line-height: normal !important; // Fix Midori bug
   margin: 5px !important;
-  /* Button expands out of boundary bug */
+  // Button expands out of boundary bug
   max-width: 98%;
   padding: 8px 10px;
   text-decoration: none;
@@ -53,20 +36,20 @@
   font-size: 2.2rem;
 }
 
-/* Simple button's hover */
+// Simple button's hover
 @include create-button(':hover') {
   background-color: $button-color-simple;
   border-color: $button-color-simple;
   color: $meshki-black;
 }
 
-/* Simple button's active */
+// Simple button's active
 @include create-button(':active') {
   background-color: $button-color-simple-active;
   border-color: $button-color-simple-active;
 }
 
-/* Disabled button */
+// Disabled button
 @include create-button(':disabled') {
   border-color: $button-color-disabled;
   color: $button-color-disabled;
@@ -79,77 +62,77 @@
   pointer-events: none;
 }
 
-/* Blue button */
+// Blue button
 @include create-button('.blue') {
   border: 2px $button-color-blue solid;
   color: $button-color-blue;
 }
 
-/* Blue button's hover */
+// Blue button's hover
 @include create-button('.blue:hover') {
   background-color: $button-color-blue;
   border-color: $button-color-blue;
   color: $text-color;
 }
 
-/* Blue button's active */
+// Blue button's active
 @include create-button('.blue:active') {
   background-color: $button-color-blue-active;
   border-color: $button-color-blue-active;
 }
 
-/* Green button */
+// Green button
 @include create-button('.green') {
   border: 2px $button-color-green solid;
   color: $button-color-green;
 }
 
-/* Green button's hover */
+// Green button's hover
 @include create-button('.green:hover') {
   background-color: $button-color-green;
   border-color: $button-color-green;
   color: $text-color;
 }
 
-/* Green button's active */
+// Green button's active
 @include create-button('.green:active') {
   background-color: $button-color-green-active;
   border-color: $button-color-green-active;
 }
 
-/* Red button */
+// Red button
 @include create-button('.red') {
   border: 2px $button-color-red solid;
   color: $button-color-red;
 }
 
-/* Red button's hover */
+// Red button's hover
 @include create-button('.red:hover') {
   background-color: $button-color-red;
   border-color: $button-color-red;
   color: $text-color;
 }
 
-/* Red button's active */
+// Red button's active
 @include create-button('.red:active') {
   background-color: $button-color-red-active;
   border-color: $button-color-red-active;
 }
 
-/* Orange button */
+// Orange button
 @include create-button('.orange') {
   border: 2px $button-color-orange solid;
   color: $button-color-orange;
 }
 
-/* Orange button's hover */
+// Orange button's hover
 @include create-button('.orange:hover') {
   background-color: $button-color-orange;
   border-color: $button-color-orange;
   color: $text-color;
 }
 
-/* Orange button's active */
+// Orange button's active
 @include create-button('.orange:active') {
   background-color: $button-color-orange-active;
   border-color: $button-color-orange-active;

@@ -1,19 +1,4 @@
-/*
- * Meshki v2.0.0 (https://borderliner.github.io/Meshki/)
- * Copyright 2017 Mohammadreza Hajianpour <hajianpour.mr@gmail.com>
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+// General Colors //================================
 
 $background-color:                 #222;
 $text-color:                       #e1e1e1;
@@ -43,19 +28,27 @@ $button-color-red-active:          #bd382a;
 $button-color-orange:              #e67e22;
 $button-color-orange-active:       #c16819;
 
+// Link Colors //================================
 $link-color-default:               $button-default-color;
 $link-color-hover:                 #74c1fb;
 
+// Sidenav Colors //================================
 $sidenav-color-bg:                 #000;
 $sidenav-color-links:              #818181;
 $sidenav-color-overlay:            #000;
 
+// Footer Colors //================================
+
 $footer-color-background:          #111;
+
+// Navbar Colors //================================
 
 $navbar-color-button-active:       $footer-color-background;
 $navbar-color-logo:                $text-color;
 $navbar-color-logo-hover:          #f5f5f5;
 $navbar-color-dropdown-button-bg:  #444;
+
+// Form Colors //================================
 
 $form-color-background:            $text-color;
 $form-color-border:                #d1d1d1;
@@ -64,6 +57,8 @@ $form-color-disabled-text:         #444;
 $form-color-border:                #33bbf0;
 $form-checkradio-color:            #33bbf0;
 $form-color-placeholder:           #6a6a6a;
+
+// Table Colors //================================
 
 $table-color-border:               #7c7c7c;
 $table-color-striped:              #2f2f2f;

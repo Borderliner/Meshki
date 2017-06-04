@@ -1,25 +1,8 @@
-/*
- * Meshki v2.0.0 (https://borderliner.github.io/Meshki/)
- * Copyright 2017 Mohammadreza Hajianpour <hajianpour.mr@gmail.com>
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 nav,
 .nav {
   height: 0;
 
-  /* Fixed Navbar properties */
+  // Fixed Navbar properties
   .fixed {
     position: fixed;
     width: 100%;
@@ -36,12 +19,12 @@ nav,
     width: 100%;
     z-index: 1;
 
-    /* Elements in the navbar start from the left side */
+    // Elements in the navbar start from the left side
     li {
       float: left;
       margin-bottom: 0;
 
-      /* Anchors inside lists' attributes */
+      // Anchors inside lists' attributes
       & > a {
         color: $text-color;
         display: inline-block;
@@ -51,33 +34,31 @@ nav,
         transition: background-color .2s ease-in-out;
       }
 
-      /*
-       * Change the link color to #111 (black) on hover
-       * Only direct children are affected, which means it excludes dropdowns
-       */
+       // Change the link color to #111 (black) on hover
+       // Only direct children are affected, which means it excludes dropdowns
       & > a:hover {
         background-color: $navbar-color-button-active;
       }
 
-      /* Buttons positioning on navbar */
+      // Buttons positioning on navbar
       & > a.button,
       & > button,
       & > input {
         margin: 7px 5px auto !important;
       }
 
-      /* Active navbar button */
+      // Active navbar button
       & > a.active {
         background-color: $navbar-color-button-active;
       }
 
-      /* Logo of the website, it must be the first child of navbar*/
+      // Logo of the website, it must be the first child of navbar
       &:first-child a.logo {
         background-color: $navbar-color-logo;
         color: $normal-black;
       }
 
-      /* Lighten the logo when the mouse is over it */
+      // Lighten the logo when the mouse is over it
       &:first-child a.logo:hover {
         background-color: $navbar-color-logo-hover;
         color: $normal-black;

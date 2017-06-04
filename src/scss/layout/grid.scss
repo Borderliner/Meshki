@@ -1,27 +1,10 @@
-/*
- * Meshki v2.0.0 (https://borderliner.github.io/Meshki/)
- * Copyright 2017 Mohammadreza Hajianpour <hajianpour.mr@gmail.com>
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/* Center the row, used to hold columns */
+// Center the row, used to hold columns
 .row {
   @include centerize;
   margin-bottom: 20px;
 }
 
-/* Content creates a responsive space to hold page data */
+// Content creates a responsive space to hold page data
 .content {
   box-sizing: border-box;
   margin: 0 auto;
@@ -31,13 +14,13 @@
   width: 100%;
 }
 
-/* Columns fill their parent from the left side */
+// Columns fill their parent from the left side
 .col {
   box-sizing: border-box;
   float: left;
   width: 100%;
 
-  /* 12-based columns */
+  // 12-based columns
   &.one    { width: column-width(1);  }
   &.two    { width: column-width(2);  }
   &.three  { width: column-width(3);  }
@@ -50,13 +33,13 @@
   &.ten    { width: column-width(10); }
   &.eleven { width: column-width(11); }
 
-  /* Fill the row, with no margin on the left */
+  // Fill the row, with no margin on the left
   &.twelve {
     margin-left: 0;
     width: 100%;
   }
 
-  /* Proportional columns */
+  // Proportional columns
   &.one-third  { width: column-width(4); }
 
   &.two-third,
@@ -64,13 +47,13 @@
     width: column-width(8);
   }
 
-  /* Half of the container columns */
+  // Half of the container columns
   &.half,
   &.one-half   {
     width: column-width(6);
   }
 
-  /* Offsets */
+  // Offsets
   &.offset-by-one    { margin-left: offset-column-margin(1);  }
   &.offset-by-two    { margin-left: offset-column-margin(2);  }
   &.offset-by-three  { margin-left: offset-column-margin(3);  }
@@ -83,7 +66,7 @@
   &.offset-by-ten    { margin-left: offset-column-margin(10); }
   &.offset-by-eleven { margin-left: offset-column-margin(11); }
 
-  /* Proportional Offsets */
+  // Proportional Offsets
   &.offset-by-one-third  { margin-left: offset-column-margin(4); }
 
   &.offset-by-two-third,
@@ -91,14 +74,14 @@
     margin-left: offset-column-margin(8);
   }
 
-  /* Half of the container as offset */
+  // Half of the container as offset
   &.offset-by-half,
   &.offset-by-one-half   {
     margin-left: offset-column-margin(6);
   }
 }
 
-/* Decrease the content width for non-mobiles */
+// Decrease the content width for non-mobiles
 @media (min-width: $media-mobile) {
   .content {
     padding: 0;
@@ -106,18 +89,18 @@
   }
 }
 
-/* For devices larger than 544px */
+// For devices larger than 544px
 @media (min-width: $media-phablet) {
-  /* Decrease content width for a proper look */
+  // Decrease content width for a proper look
   .content {
     width: 80%;
   }
 
-  /* Left margin for columns so they do not collide */
+  // Left margin for columns so they do not collide
   .col {
     margin-left: $col-margin;
 
-    /* The first column doesn't need left margin */
+    // The first column doesn't need left margin
     &:first-child {
       margin-left: 0;
     }
