@@ -17,98 +17,98 @@
 
 /* The side navigation menu */
 .sidenav {
+  background-color: $sidenav-color-bg;
   height: 100%;
-  width: 0; /* changes with meshki.js */
-  position: fixed;
-  z-index: 10; /* Stays on top of everything, unless a modal is implemented */
-  top: 0;
   left: -1px;
-  background-color: #000;
-  padding-top: 15px;
   overflow-x: hidden;
-  transition: 0.5s;
+  padding-top: 15px;
+  position: fixed;
+  top: 0;
+  transition: .5s;
+  width: 0; /* changes with meshki.js */
+  z-index: 10; /* Stays on top of everything, unless a modal is implemented */
+
+  /* Position and style the close button (top right corner) */
+  .sidenav-close-button {
+    font-size: 3.6rem !important;
+    outline: 0 !important;
+    padding-right: 30px !important;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  /* Special form of <hr> for sidenav */
+  hr {
+    border-color: $sidenav-color-links;
+    width: 80%;
+  }
+
+  /* The links inside side navigation panel */
+  a {
+    color: $sidenav-color-links;
+    display: block;
+    font-size: 1.8rem;
+    outline: 0 !important;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    transition: .3s;
+    white-space: nowrap;
+
+    &:hover {
+      color: $text-color;
+    }
+
+    /* No color change for disabled sidenav links */
+    &[disabled] {
+      cursor: default;
+    }
+
+    &[disabled]:hover {
+      color: $sidenav-color-links;
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  /* The buttons inside side navigation panel */
+  button {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    min-width: 150px;
+    width: 84%;
+
+  }
 }
 
 /* Pushes the container div with effect */
 .container {
   position: absolute;
-  width: 100%;
   transition: margin-left .5s, margin-right .5s;
+  width: 100%;
 }
 
 .overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
+  background-color: $sidenav-color-overlay;
   display: inline;
-  top: 0;
+  height: 100%;
   left: 0;
-  background-color: black;
   opacity: 0;
-  visibility: hidden;
-  z-index: 1;
-  transition: opacity .5s, visibility .5s;
-}
-
-/* The links inside side navigation panel */
-.sidenav a {
-  display: block;
-  font-size: 1.8rem;
-  color: #818181;
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: 0.3s;
-  outline: 0 !important;
-}
-
-/* The buttons inside side navigation panel */
-.sidenav button {
-  margin-right: 20px !important;
-  margin-left: 20px !important;
-  width: 84%;
-  min-width: 150px;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #E1E1E1;
-}
-
-/* No color change for disabled sidenav links */
-.sidenav a[disabled] {
-  cursor: default;
-}
-
-.sidenav a[disabled]:hover {
-  pointer-events: none;
-  color: #818181;
-  cursor: default;
-}
-
-/* Special form of <hr> for sidenav */
-.sidenav hr {
-  width: 80%;
-  border-color: #818181;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav-close-button {
-  font-size: 3.6rem !important;
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0;
-  padding-right: 30px !important;
-  outline: 0 !important;
+  transition: opacity .5s, visibility .5s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 1;
 }
 
 /* Change the style of the sidenav for non-mobiles */
-@media (min-width: 544px) {
+@media (min-width: $media-phablet) {
   .sidenav {
     padding-top: 60px;
-  }
 
-  .sidenav a {
-    font-size: 25px;
+    a {
+      font-size: 25px;
+    }
   }
 }
