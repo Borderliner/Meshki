@@ -1,36 +1,17 @@
-/*
- * Meshki v2.0.0 (https://borderliner.github.io/Meshki/)
- * Copyright 2017 Mohammadreza Hajianpour <hajianpour.mr@gmail.com>
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 
-/* Utility
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-/* Make element full width */
+// Make element full width
 .expand {
   box-sizing: border-box;
   width: 100%;
 }
 
-/* Make sure elements don't run outside containers (great for images in columns) */
+// Make sure elements don't run outside containers (great for images in columns)
 .responsive {
   box-sizing: border-box;
   max-width: 100%;
 }
 
-/* Float either direction */
+// Float either direction
 .float-left {
   float: left !important;
 }
@@ -39,23 +20,23 @@
   float: right !important;
 }
 
-/* Center an element */
+// Center an element
 .centerize {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Center a text */
+// Center a text
 .text-center {
   text-align: center;
 }
 
-/* Vertical line */
+// Vertical line
 .vertical-line {
-  border-left: 1px solid #E1E1E1;
+  border-left: 1px $text-color solid;
 }
 
-/* Hides the element on mobiles and phablets */
+// Hides the element on mobiles and phablets
 @media (max-width: $media-phablet) {
   .hide-on-mobile {
     display: none !important;
@@ -66,21 +47,21 @@
   }
 }
 
-/* Hides the element on tablets and smaller */
+// Hides the element on tablets and smaller
 @media (max-width: $media-tablet) {
   .hide-on-tablet {
     display: none !important;
   }
 }
 
-/* Hides the element on desktops */
+// Hides the element on desktops
 @media (min-width: $media-tablet) {
   .hide-on-desktop {
     display: none !important;
   }
 }
 
-/* Hides the element on non-mobile and non-phablets */
+// Hides the element on non-mobile and non-phablets
 @media (min-width: $media-phablet) {
   .hide-on-non-mobile {
     display: none !important;
