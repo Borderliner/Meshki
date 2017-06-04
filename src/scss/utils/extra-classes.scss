@@ -20,14 +20,14 @@
 
 /* Make element full width */
 .expand {
-  width: 100%;
   box-sizing: border-box;
+  width: 100%;
 }
 
 /* Make sure elements don't run outside containers (great for images in columns) */
 .responsive {
-  max-width: 100%;
   box-sizing: border-box;
+  max-width: 100%;
 }
 
 /* Float either direction */
@@ -56,32 +56,32 @@
 }
 
 /* Hides the element on mobiles and phablets */
-@media (max-width: 544px) {
+@media (max-width: $media-phablet) {
   .hide-on-mobile {
     display: none !important;
   }
 
   .vertical-line {
-    border-left: none;
+    border-left: 0;
   }
 }
 
 /* Hides the element on tablets and smaller */
-@media (max-width: 768px) {
+@media (max-width: $media-tablet) {
   .hide-on-tablet {
     display: none !important;
   }
 }
 
 /* Hides the element on desktops */
-@media (min-width: 768px) {
+@media (min-width: $media-tablet) {
   .hide-on-desktop {
     display: none !important;
   }
 }
 
 /* Hides the element on non-mobile and non-phablets */
-@media (min-width: 544px) {
+@media (min-width: $media-phablet) {
   .hide-on-non-mobile {
     display: none !important;
   }
