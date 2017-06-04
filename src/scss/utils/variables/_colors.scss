@@ -20,12 +20,27 @@ $text-color:                       #e1e1e1;
 $text-selection-color:             #15acee;
 $white-color:                      $text-color;
 $transparent-color:                rgba(0, 0, 0, 0);
+$meshki-black:                     #222;
+$normal-black:                     #000;
+
+// Button Colors //================================
+
+$button-color-disabled:            #888;
 
 $button-color-simple:              $text-color;
+$button-color-simple-active:       #b9b9b9;
+
 $button-color-blue:                #55acee;
+$button-color-blue-active:         #4b82b7;
+
 $button-color-green:               #2ecc71;
+$button-color-green-active:        #21a057;
+
 $button-color-red:                 #e74c3c;
+$button-color-red-active:          #bd382a;
+
 $button-color-orange:              #e67e22;
+$button-color-orange-active:       #c16819;
 
 $link-color-default:               $button-default-color;
 $link-color-hover:                 #74c1fb;

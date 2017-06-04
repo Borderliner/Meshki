@@ -44,11 +44,7 @@ a {
 }
 
 // Spacing
-button,
-a.button,
-input[type='submit'],
-input[type='reset'],
-input[type='button'] {
+@include create-button {
   margin-bottom: 1rem;
 }
 

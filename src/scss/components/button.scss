@@ -14,275 +14,180 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
-.mx-button(@option) {
-  @selector: ~'a.button:@{option},
-  button:@{option},
-  input[type="submit"]:@{option},
-  input[type="reset"]:@{option},
-  input[type="button"]:@{option}'
-}
-
-.mx-button("focus");
-@{selector} {
-    color: white;
-}
-
-.mx-button("red");
-@{selector} {
-    color: red;
-}
 
 /* Removed focus outlines, especially in Firefox */
-a.button:focus,
-button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus {
+@include create-button(':focus') {
   outline: 0 !important;
 }
 
 /* Simple button, with no style */
-a.button,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  cursor: pointer;
-  margin: 5px !important;
-  border-radius: 5px;
-  text-decoration: none;
-  padding: 8px 10px;
-  transition: .3s;
-  font-size: 1.6rem;
-  -webkit-transition: .3s;
+@include create-button  {
   -moz-transition: .3s;
   -o-transition: .3s;
-  display: inline-block;
+  -webkit-transition: .3s;
   background-color: transparent;
-  color: #E1E1E1;
-  border: 2px solid #E1E1E1;
+  border: 2px solid $button-color-simple;
+  border-radius: 5px;
+  color: $button-color-simple;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.6rem;
   line-height: normal !important; /* Fix Midori bug */
+  margin: 5px !important;
   /* Button expands out of boundary bug */
   max-width: 98%;
+  padding: 8px 10px;
+  text-decoration: none;
+  transition: .3s;
 }
 
-a.button.small,
-button.small,
-input[type="submit"].small,
-input[type="reset"].small,
-input[type="button"].small {
+@include create-button('.small')  {
   font-size: 1.2rem;
 }
 
-a.button.medium,
-button.medium,
-input[type="submit"].medium,
-input[type="reset"].medium,
-input[type="button"].medium {
+@include create-button('.medium')  {
   font-size: 1.6rem;
 }
 
-a.button.large,
-button.large,
-input[type="submit"].large,
-input[type="reset"].large,
-input[type="button"].large {
+@include create-button('.large')  {
   font-size: 2.2rem;
 }
 
 /* Simple button's hover */
-a.button:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover {
-  background-color: #E1E1E1;
-  border-color: #E1E1E1;
-  color: #000;
+@include create-button(':hover') {
+  background-color: $button-color-simple;
+  border-color: $button-color-simple;
+  color: $meshki-black;
 }
 
 /* Simple button's active */
-a.button:active,
-button:active,
-input[type="submit"]:active,
-input[type="reset"]:active,
-input[type="button"]:active {
-  background-color: #b9b9b9;
-  border-color: #b9b9b9;
+@include create-button(':active') {
+  background-color: $button-color-simple-active;
+  border-color: $button-color-simple-active;
 }
 
 /* Disabled button */
-a.button:disabled,
-button:disabled,
-input[type="submit"]:disabled,
-input[type="reset"]:disabled,
-input[type="button"]:disabled,
-a.button.disabled,
-button.disabled,
-input[type="submit"].disabled,
-input[type="reset"].disabled,
-input[type="button"].disabled {
-  color: #888;
-  border-color: #888;
+@include create-button(':disabled') {
+  border-color: $button-color-disabled;
+  color: $button-color-disabled;
+  pointer-events: none;
+}
+
+@include create-button('.disabled') {
+  border-color: $button-color-disabled;
+  color: $button-color-disabled;
   pointer-events: none;
 }
 
 /* Blue button */
-a.button.blue,
-button.blue,
-input[type="submit"].blue,
-input[type="reset"].blue,
-input[type="button"].blue {
-  border: 2px #55acee solid;
-  color: #55acee;
+@include create-button('.blue') {
+  border: 2px $button-color-blue solid;
+  color: $button-color-blue;
 }
 
 /* Blue button's hover */
-a.button.blue:hover,
-button.blue:hover,
-input[type="submit"].blue:hover,
-input[type="reset"].blue:hover,
-input[type="button"].blue:hover {
-  background-color: #55acee;
-  border-color: #55acee;
-  color: #fff
+@include create-button('.blue:hover') {
+  background-color: $button-color-blue;
+  border-color: $button-color-blue;
+  color: $text-color;
 }
 
 /* Blue button's active */
-a.button.blue:active,
-button.blue:active,
-input[type="submit"].blue:active,
-input[type="reset"].blue:active,
-input[type="button"].blue:active {
-  background-color: #4b82b7;
-  border-color: #4b82b7;
-
+@include create-button('.blue:active') {
+  background-color: $button-color-blue-active;
+  border-color: $button-color-blue-active;
 }
 
 /* Green button */
-a.button.green,
-button.green,
-input[type="submit"].green,
-input[type="reset"].green,
-input[type="button"].green {
-  border: 2px #2ecc71 solid;
-  color: #2ecc71;
+@include create-button('.green') {
+  border: 2px $button-color-green solid;
+  color: $button-color-green;
 }
 
 /* Green button's hover */
-a.button.green:hover,
-button.green:hover,
-input[type="submit"].green:hover,
-input[type="reset"].green:hover,
-input[type="button"].green:hover {
-  background-color: #2ecc71;
-  border-color: #2ecc71;
-  color: #fff;
+@include create-button('.green:hover') {
+  background-color: $button-color-green;
+  border-color: $button-color-green;
+  color: $text-color;
 }
 
 /* Green button's active */
-a.button.green:active,
-button.green:active,
-input[type="submit"].green:active,
-input[type="reset"].green:active,
-input[type="button"].green:active {
-  background-color: #21a057;
-  border-color: #21a057;
+@include create-button('.green:active') {
+  background-color: $button-color-green-active;
+  border-color: $button-color-green-active;
 }
 
 /* Red button */
-a.button.red,
-button.red,
-input[type="submit"].red,
-input[type="reset"].red,
-input[type="button"].red {
-  border: 2px #e74c3c solid;
-  color: #e74c3c;
+@include create-button('.red') {
+  border: 2px $button-color-red solid;
+  color: $button-color-red;
 }
 
 /* Red button's hover */
-a.button.red:hover,
-button.red:hover,
-input[type="submit"].red:hover,
-input[type="reset"].red:hover,
-input[type="button"].red:hover {
-  background-color: #e74c3c;
-  border-color: #e74c3c;
-  color: #fff;
+@include create-button('.red:hover') {
+  background-color: $button-color-red;
+  border-color: $button-color-red;
+  color: $text-color;
 }
 
 /* Red button's active */
-a.button.red:active,
-button.red:active,
-input[type="submit"].red:active,
-input[type="reset"].red:active,
-input[type="button"].red:active {
-  background-color: #bd382a;
-  border-color: #bd382a;
+@include create-button('.red:active') {
+  background-color: $button-color-red-active;
+  border-color: $button-color-red-active;
 }
 
 /* Orange button */
-a.button.orange,
-button.orange,
-input[type="submit"].orange,
-input[type="reset"].orange,
-input[type="button"].orange {
-  border: 2px #e67e22 solid;
-  color: #e67e22;
+@include create-button('.orange') {
+  border: 2px $button-color-orange solid;
+  color: $button-color-orange;
 }
 
 /* Orange button's hover */
-a.button.orange:hover,
-button.orange:hover,
-input[type="submit"].orange:hover,
-input[type="reset"].orange:hover,
-input[type="button"].orange:hover {
-  background-color: #e67e22;
-  border-color: #e67e22;
-  color: #fff;
+@include create-button('.orange:hover') {
+  background-color: $button-color-orange;
+  border-color: $button-color-orange;
+  color: $text-color;
 }
 
 /* Orange button's active */
-a.button.orange:active,
-button.orange:active,
-input[type="submit"].orange:active,
-input[type="reset"].orange:active,
-input[type="button"].orange:active {
-  background-color: #c16819;
-  border-color: #c16819;
+@include create-button('.orange:active') {
+  background-color: $button-color-orange-active;
+  border-color: $button-color-orange-active;
 }
 
-.button-couple button:not(:first-child):not(:last-child),
-.button-couple a:not(:first-child):not(:last-child) {
-  pointer-events: none;
-  border-style: none;
-  border-radius: 0;
-  display: block;
-  margin: -5px auto !important;
-}
+@media (min-width: $media-tablet) {
+  .button-couple {
 
-@media (min-width: 768px) {
-  .button-couple button:first-child,
-  .button-couple a:first-child {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    margin-right: 0 !important;
-    border-right-style: none;
-  }
+    button:not(:first-child):not(:last-child),
+    a:not(:first-child):not(:last-child) {
+      border-radius: 0;
+      border-style: none;
+      display: block;
+      margin: -5px auto !important;
+      pointer-events: none;
+    }
 
-  .button-couple button:not(:first-child):not(:last-child),
-  .button-couple a:not(:first-child):not(:last-child) {
-    border-style: solid;
-    display: inline;
-    margin: -5px !important;
-  }
+    button:first-child,
+    a:first-child {
+      border-bottom-right-radius: 0;
+      border-right-style: none;
+      border-top-right-radius: 0;
+      margin-right: 0 !important;
+    }
 
-  .button-couple button:last-child,
-  .button-couple a:last-child {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    margin-left: 0 !important;
-    border-left-style: none;
+    button:not(:first-child):not(:last-child),
+    a:not(:first-child):not(:last-child) {
+      border-style: solid;
+      display: inline;
+      margin: -5px !important;
+    }
+
+    button:last-child,
+    a:last-child {
+      border-bottom-left-radius: 0;
+      border-left-style: none;
+      border-top-left-radius: 0;
+      margin-left: 0 !important;
+    }
   }
 }
