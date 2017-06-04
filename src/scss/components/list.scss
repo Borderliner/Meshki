@@ -15,23 +15,27 @@
  * limitations under the License.
  */
 
-/* Unordered Lists have empty disc style */
-ul {
-  list-style: disc;
-}
-
-/* Ordered Lists have numerical style */
-ol {
-  list-style: decimal;
-}
-
 /* Change the style of nested lists */
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
-  font-size: 90%;
+ul {
+  /* Unordered Lists have empty disc style */
+  list-style: disc;
+
+  ul,
+  ol {
+    font-size: 90%;
+    margin: 1.5rem 0 1.5rem 3rem;
+  }
+}
+
+ol {
+  /* Ordered Lists have numerical style */
+  list-style: decimal;
+
+  ul,
+  ol {
+    font-size: 90%;
+    margin: 1.5rem 0 1.5rem 3rem;
+  }
 }
 
 /* Lists have bottom margin */
