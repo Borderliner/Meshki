@@ -17,46 +17,46 @@
 
 /* Single code, default style */
 code {
-  font-size: 90%;
-  white-space: nowrap;
   background-color: transparent;
-  color: #E1E1E1;
-  border: #E1E1E1 solid 1px;
+  border: 1px $text-color solid;
   border-radius: 5px;
-  padding: 1px 5px 1px 5px;
-}
+  color: $text-color;
+  font-size: 90%;
+  padding: 1px 5px;
+  white-space: nowrap;
 
-/* Single code, filled style */
-code.filled {
-  background-color: #E1E1E1;
-  color: #000;
+  /* Single code, filled style */
+  .filled {
+    background-color: $text-color;
+    color: $meshki-black;
+  }
 }
 
 /* pre is used for a block of code */
 pre {
   background-color: transparent;
-  color: #E1E1E1;
-  border: 2px solid #E1E1E1;
+  border: 2px $text-color solid;
   border-radius: 5px;
+  color: $text-color;
   overflow-x: auto;
   white-space: normal;
-}
 
-/* Filled mode for blocks of code */
-pre.filled {
-  background-color: #E1E1E1;
-  color: #000;
+  /* Filled mode for blocks of code */
+  .filled {
+    background-color: $text-color;
+    color: $meshki-black;
+
+    /* If the code is the immediate child of pre with filled mode */
+    & > code {
+      background-color: $text-color;
+      color: $meshki-black;
+    }
+  }
 }
 
 /* If the code is the immediate child of pre */
 pre > code {
+  border: 0;
   display: inline;
   white-space: pre;
-  border: none;
-}
-
-/* If the code is the immediate child of pre with filled mode */
-pre.filled > code {
-  background-color: #E1E1E1;
-  color: #000;
 }
