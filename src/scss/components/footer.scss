@@ -16,30 +16,28 @@
  */
 
 /* The footer tag, or a div with footer (Useful for IE) */
-footer, .footer {
+footer,
+.footer {
+  background-color: $footer-color-background;
+  border-top: 2px solid $text-color;
+  margin: 25px 0 0;
   max-width: 100%;
-  background-color: #111;
-  border-top: 2px solid #E1E1E1;
-  margin: 25px 0 0 0;
-  padding: 25px 50px 0 50px;
+  padding: 25px 50px 0;
   text-align: center;
-}
 
-/* Remove bottom margins of columns */
-footer .col,
-.footer .col {
-  margin-bottom: 0px;
-}
+  /* Remove bottom margins of columns
+  /* Remove bottom margin of .row for footer, it takes lots of space */
+  .col,
+  .row {
+    margin-bottom: 0px;
+  }
 
-/* Remove bottom margin of .row for footer, it takes lots of space */
-footer .row,
-.footer .row {
-  margin-bottom: 0px;
 }
 
 /* Align the text of the footer to the left for non-mobile */
-@media (min-width: 544px) {
-  footer, .footer {
+@media (min-width: $media-phablet) {
+  footer,
+  .footer {
     text-align: left;
   }
 }
