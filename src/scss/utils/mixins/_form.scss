@@ -1,4 +1,4 @@
-@mixin create-input-elements($options) {
+@mixin create-input-elements($options:'') {
   input[type="email"]#{$options},
   input[type="number"]#{$options},
   input[type="search"]#{$options},
@@ -12,7 +12,7 @@
   }
 }
 
-@mixin create-checkradio($options) {
+@mixin create-checkradio($options:'') {
   input {
     &[type='checkbox']#{$options},
     &[type='radio']#{$options} {
