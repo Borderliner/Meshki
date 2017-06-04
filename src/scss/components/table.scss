@@ -15,47 +15,48 @@
  * limitations under the License.
  */
 
-/* General attributes */
 table {
-  border-spacing: 0px;
+  border-spacing: 0;
+
+  /* Stripped table */
+  &.striped tr:nth-child(even) {
+    background-color: $table-color-striped;
+  }
+
+  /* Centerizes the texts inside each cell */
+  &.centerize {
+    & > thead th,
+    & > tbody td {
+      text-align: center;
+    }
+  }
+
+  &.hoverable {
+    /* Hover effect activated for each row */
+    & > tbody tr {
+      transition: background-color .3s;
+    }
+
+    /* Changes color when the mouse is over each row */
+    & > tbody tr:hover {
+      background-color: $table-color-hover;
+    }
+  }
 }
 
 /* Padding and stuff for each cell */
 th,
 td {
-  border-bottom: 1px solid #7C7C7C;
+  border-bottom: 1px $table-color-border solid;
   padding: 12px 15px;
   text-align: left;
-}
 
-/* First and last children (most right and most left cells) do not need padding */
-th:first-child,
-td:first-child {
-  padding-left: 0;
-}
+  /* First and last children (most right and most left cells) do not need padding */
+  &:first-child {
+    padding-left: 0;
+  }
 
-th:last-child,
-td:last-child {
-  padding-right: 0;
-}
-
-/* Stripped table! */
-table.striped tr:nth-child(even) {
-  background-color: #2F2F2F;
-}
-
-/* Centerizes the texts inside each cell */
-table.centerize > thead th,
-table.centerize > tbody td {
-  text-align: center;
-}
-
-/* Hover effect activated for each row */
-table.hover > tbody tr {
-  transition: background-color 0.3s;
-}
-
-/* Changes color when the mouse is over each row */
-table.hover > tbody tr:hover {
-  background-color: #404040;
+  &:last-child {
+    padding-right: 0;
+  }
 }
