@@ -63,7 +63,7 @@ pre {
 }
 
 /* Button couples for tablets and upper */
-@media (min-width: 768px) {
+@media (min-width: $media-tablet) {
   .button-couple {
 
     /* First button */
@@ -134,7 +134,7 @@ input[type=radio]+label.radio:before {
   margin-left: auto;
 }
 
-@media (min-width: 544px) {
+@media (min-width: $media-phablet) {
   .col {
     margin-right: 4%;
 
