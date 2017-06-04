@@ -22,6 +22,7 @@ $white-color:                      $text-color;
 $transparent-color:                rgba(0, 0, 0, 0);
 $meshki-black:                     #222;
 $normal-black:                     #000;
+$white:                            #fff;
 
 // Button Colors //================================
 
@@ -48,3 +49,11 @@ $link-color-hover:                 #74c1fb;
 $sidenav-lines-color:              #818181;
 
 $footer-color-background:          #111;
+
+$form-color-background:            $text-color;
+$form-color-border:                #d1d1d1;
+$form-color-disabled:              #b1b1b1;
+$form-color-disabled-text:         #444;
+$form-color-border:                #33bbf0;
+$form-checkradio-color:            #33bbf0;
+$form-color-placeholder:           #6a6a6a;
