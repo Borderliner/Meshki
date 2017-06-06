@@ -58,7 +58,7 @@ function sassify_meshki() {
   })
   // Write CSS file
   try {
-    fs.writeFile(options.output_css, result.css)
+    fs.writeFileSync(options.output_css, result.css)
     console.log('=> Successfully compiled Meshki'.green)
   } catch (error) {
     console.log('Could not write the output to the disk. Check if you have write permissions.'.red)
@@ -75,7 +75,7 @@ function minify_meshki() {
   })
   // Write Minified CSS file
   try {
-    fs.writeFile(options.output_css_min, result.css)
+    fs.writeFileSync(options.output_css_min, result.css)
     console.log('=> Successfully minified Meshki'.green)
   } catch (error) {
     console.log('Could not write the output to the disk. Check if you have write permissions.'.red)
@@ -84,7 +84,7 @@ function minify_meshki() {
   if (options.source_map) {
     // Write SourceMaps
     try {
-      fs.writeFile(`${options.output_css}.map`, result.map)
+      fs.writeFileSync(`${options.output_css}.map`, result.map)
       console.log('=> Successfully generated source maps for Meshki'.green)
     } catch (error) {
       console.log('Could not write the output to the disk. Check if you have write permissions.'.red)
