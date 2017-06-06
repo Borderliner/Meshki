@@ -719,15 +719,15 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
         <p>
           You can customize your table with the below classes:
           <ul>
-            <li><code>hover</code> : Makes your table's rows highlighted when hovering over them with mouse.</li>
+            <li><code>hoverable</code> : Makes your table's rows highlighted when hovering over them with mouse.</li>
             <li><code>striped</code> : It stripes your table (even rows, except the header).</li>
           </ul>
         </p>
       </div>
       <div class="row">
         <div class="twelve col">
-        Toggle: <button class="medium" onclick="var tbl=document.getElementById('table-example');tbl.classList.contains('striped')?(tbl.className='expand hover', this.innerHTML='Not Striped', this.className='medium'):(tbl.className='expand hover striped', this.innerHTML='Striped', this.className='medium blue')">Not Striped</button>
-          <table class="expand hover" id="table-example">
+        Toggle: <button class="medium" onclick="var tbl=document.getElementById('table-example');tbl.classList.contains('striped')?(tbl.className='expand hoverable', this.innerHTML='Not Striped', this.className='medium'):(tbl.className='expand hoverable striped', this.innerHTML='Striped', this.className='medium blue')">Not Striped</button>
+          <table class="expand hoverable" id="table-example">
             <thead>
               <tr>
                 <th>Name</th>
