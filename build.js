@@ -1,3 +1,20 @@
+/*
+ * Meshki v2.0.0 (https://borderliner.github.io/Meshki/)
+ * Copyright 2017 Mohammadreza Hajianpour <hajianpour.mr@gmail.com>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 const fs        = require('fs')
 const fs_extra  = require('fs-extra')
 const path      = require('path')
@@ -18,6 +35,12 @@ const options = {
   output_fonts:   'dist/fonts/',
   plugins_dir:    'src/scss/plugins/',
   source_map:     true,
+  licensed:       [
+    'dist/js/meshki.min.js',
+    'dist/css/meshki.min.css',
+    'dist/plugins/meshki-extra-button-colors.min.css',
+    'dist/plugins/meshki-rtl.min.css',
+  ],
 }
 
 const plugins = list_dir(options.plugins_dir)
@@ -198,6 +221,25 @@ function copy_fonts() {
   })
 }
 
+function copy_license() {
+  let copying = ''
+  try {
+    copying = fs.readFileSync('COPYING', 'utf-8')
+    console.log(copying)
+  } catch (error) {
+    console.log(error)
+  }
+
+  options.licensed.forEach((file, index) => {
+    try {
+      let file_content = fs.readFileSync(file, 'utf-8')
+      fs.writeFileSync(file, `${copying}\n${file_content}`)
+    } catch (error) {
+      console.log(error)
+    }
+  })
+}
+
 create_dist()
 sassify_meshki()
 minify_meshki()
@@ -206,3 +248,4 @@ minify_plugins()
 uglify_js()
 copy_js()
 copy_fonts()
+copy_license()
