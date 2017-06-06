@@ -102,7 +102,7 @@ function sassify_plugins() {
     })
     // Write CSS file
     try {
-      fs.writeFileSync(`${options.output_dir}plugins/${name}.css`, result.css)
+      fs.writeFileSync(`${options.output_dir}plugins/meshki-${name}.css`, result.css)
       console.log(`=> Successfully compiled ${name}`.green)
     } catch (error) {
       console.log('Could not write the output to the disk. Check if you have write permissions.'.red)
@@ -124,7 +124,7 @@ function minify_plugins() {
 
     // Write CSS file
     try {
-      fs.writeFileSync(`${options.output_dir}plugins/${name}.min.css`, result.css)
+      fs.writeFileSync(`${options.output_dir}plugins/meshki-${name}.min.css`, result.css)
       console.log(`=> Successfully minified ${name}`.green)
     } catch (error) {
       console.log('Could not write the output to the disk. Check if you have write permissions.'.red)
@@ -134,7 +134,7 @@ function minify_plugins() {
     if (options.source_map) {
       // Write source map file
       try {
-        fs.writeFileSync(`${options.output_dir}plugins/${name}.map`, result.map)
+        fs.writeFileSync(`${options.output_dir}plugins/meshki-${name}.map`, result.map)
         console.log(`=> Successfully generated source map for ${name}`.green)
       } catch (error) {
         console.log('Could not write the output to the disk. Check if you have write permissions.'.red)
