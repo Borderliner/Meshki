@@ -25,7 +25,7 @@ pre {
   white-space: normal;
 
   // Filled mode for blocks of code
-  .filled {
+  &.filled {
     background-color: $text-color;
     color: $meshki-black;
 
