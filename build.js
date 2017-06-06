@@ -17,12 +17,15 @@ function remove_dir(path) {
 
 function create_dist() {
   if(!fs.existsSync('dist/')) {
-    console.log('No "dist" folder exists. Creating folders...'.yellow);
-    fs.mkdirSync('dist/');
-    fs.mkdirSync('dist/plugins/');
-    fs.mkdirSync('dist/fonts/');
+    console.log('No "dist" folder exists. Creating folders...'.yellow)
+    fs.mkdirSync('dist/')
+    fs.mkdirSync('dist/plugins/')
+    fs.mkdirSync('dist/fonts/')
+    fs.mkdirSync('dist/css/')
+    fs.mkdirSync('dist/js/')
   } else {
-    console.log('Cleaning previously compiled files...'.yellow);
-    remove_dir('dist/');
+    console.log('Cleaning previously compiled files...'.yellow)
+    remove_dir('dist/')
+    create_dist()
   }
 }
