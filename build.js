@@ -9,13 +9,15 @@ const uglifyJS  = require('uglify-js')
 const options = {
   main_scss:      'src/scss/main.scss',
   main_js:        'src/js/meshki.js',
+  main_fonts:     'src/fonts/',
   output_dir:     'dist/',
   output_css:     'dist/css/meshki.css',
   output_css_min: 'dist/css/meshki.min.css',
   output_js:      'dist/js/meshki.js',
   output_js_min:  'dist/js/meshki.min.js',
+  output_fonts:   'dist/fonts/',
   plugins_dir:    'src/scss/plugins/',
-  source_map:     false,
+  source_map:     true,
 }
 
 const plugins = list_dir(options.plugins_dir)
@@ -183,6 +185,19 @@ function copy_js() {
   }
 }
 
+function copy_fonts() {
+  console.log('Copying fonts to dist/fonts...'.yellow)
+  fs.readdirSync(options.main_fonts).forEach(file => {
+    try {
+      fs_extra.copySync(`${__dirname}/${options.main_fonts}${file}`, `${options.output_fonts}${file}`)
+      console.log(`=> Successfully copied ${file.blue} to dist/fonts/`.green)
+    } catch (error) {
+      console.log('Could not write the output to the disk. Check if you have write permissions.'.red)
+      console.log(error)
+    }
+  })
+}
+
 create_dist()
 sassify_meshki()
 minify_meshki()
@@ -190,3 +205,4 @@ sassify_plugins()
 minify_plugins()
 uglify_js()
 copy_js()
+copy_fonts()
