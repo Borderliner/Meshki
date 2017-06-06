@@ -1,4 +1,9 @@
+// NOTE: This folder does not get compiled along with Meshki itself.
 // You should consider including a license above each plugin's main module file
+
+@import '../utils/variables/module';
+@import '../utils/mixins/module';
+@import '../utils/functions/module';
 
 @import 'rtl/main';
 @import 'extra-button-colors/main';
