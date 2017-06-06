@@ -3,6 +3,7 @@ const path      = require('path')
 const colors    = require('colors')
 const sass      = require('node-sass')
 const cleanCSS  = require('clean-css')
+const uglifyJS  = require('uglify-js')
 
 const options = {
   main_scss:      'src/scss/main.scss',
@@ -143,6 +144,8 @@ function minify_plugins() {
     }
   })
 }
+
+
 
 create_dist()
 sassify_meshki()
