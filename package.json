@@ -27,6 +27,7 @@
   "devDependencies": {
     "clean-css": "^4.0.8",
     "colors": "^1.1.2",
+    "fs-extra": "^3.0.1",
     "node-sass": "^4.5.3",
     "uglify-js": "^3.0.15"
   }

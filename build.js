@@ -1,4 +1,5 @@
 const fs        = require('fs')
+const fs_extra  = require('fs-extra')
 const path      = require('path')
 const colors    = require('colors')
 const sass      = require('node-sass')
@@ -7,9 +8,12 @@ const uglifyJS  = require('uglify-js')
 
 const options = {
   main_scss:      'src/scss/main.scss',
+  main_js:        'src/js/meshki.js',
   output_dir:     'dist/',
   output_css:     'dist/css/meshki.css',
   output_css_min: 'dist/css/meshki.min.css',
+  output_js:      'dist/js/meshki.js',
+  output_js_min:  'dist/js/meshki.min.js',
   plugins_dir:    'src/scss/plugins/',
   source_map:     false,
 }
@@ -145,10 +149,44 @@ function minify_plugins() {
   })
 }
 
+function uglify_js() {
+  let code = ''
+  let uglified = ''
+  try {
+    code = fs.readFileSync(options.main_js, 'utf-8')
+    uglified = uglifyJS.minify(code, {
+      warnings: true,
+    })
+    console.log(uglified.warnings)
+  } catch (error) {
+    console.log('Could not read the input file from the disk. Check if you have read permissions.'.red)
+    console.log(error)
+  }
 
+  try {
+    fs.writeFileSync(options.output_js_min, uglified.code)
+    console.log(`=> Successfully uglified meshki.js`.green)
+  } catch (error) {
+    console.log('Could not write the output to the disk. Check if you have write permissions.'.red)
+    console.log(error)
+  }
+}
+
+function copy_js() {
+  console.log('Copying meshki.js to dist/js...'.yellow)
+  try {
+    fs_extra.copySync(path.resolve(__dirname, options.main_js), options.output_js)
+    console.log('=> Successfully copied meshki.js to dist/js/'.green)
+  } catch (error) {
+    console.log('Could not write the output to the disk. Check if you have write permissions.'.red)
+    console.log(error)
+  }
+}
 
 create_dist()
 sassify_meshki()
 minify_meshki()
 sassify_plugins()
 minify_plugins()
+uglify_js()
+copy_js()
