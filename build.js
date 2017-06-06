@@ -1,5 +1,6 @@
 const fs     = require('fs')
 const colors = require('colors')
+const sass   = require('node-sass')
 
 function remove_dir(path) {
   if (fs.existsSync(path)) {

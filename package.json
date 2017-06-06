@@ -26,6 +26,7 @@
   "homepage": "https://borderliner.github.io/Meshki/",
   "devDependencies": {
     "clean-css": "^4.0.8",
-    "colors": "^1.1.2"
+    "colors": "^1.1.2",
+    "node-sass": "^4.5.3"
   }
 }
