@@ -3,7 +3,7 @@ nav,
   height: 0;
 
   // Fixed Navbar properties
-  .fixed {
+  &.fixed {
     position: fixed;
     width: 100%;
     z-index: 1;
