@@ -81,12 +81,14 @@ function minify_meshki() {
     console.log('Could not write the output to the disk. Check if you have write permissions.'.red)
   }
 
-  // Write SourceMaps
-  try {
-    fs.writeFile(`${options.output_css}.map`, result.map)
-    console.log('=> Successfully generated source maps for Meshki'.green)
-  } catch (error) {
-    console.log('Could not write the output to the disk. Check if you have write permissions.'.red)
+  if (options.source_map) {
+    // Write SourceMaps
+    try {
+      fs.writeFile(`${options.output_css}.map`, result.map)
+      console.log('=> Successfully generated source maps for Meshki'.green)
+    } catch (error) {
+      console.log('Could not write the output to the disk. Check if you have write permissions.'.red)
+    }
   }
 }
 
@@ -109,7 +111,41 @@ function sassify_plugins() {
   })
 }
 
+function minify_plugins() {
+  console.log('Starting to minify plugins...'.blue)
+  plugins.forEach((name, index) => {
+    console.log(`Minifying `.yellow + `${name}`.blue)
+    let result = sass.renderSync({
+      file:        options.plugins_dir + name + '/main.scss',
+      outFile:     options.output_dir + 'plugins/',
+      outputStyle: 'compressed',
+      sourceMap:   options.source_map,
+    })
+
+    // Write CSS file
+    try {
+      fs.writeFileSync(`${options.output_dir}plugins/${name}.min.css`, result.css)
+      console.log(`=> Successfully minified ${name}`.green)
+    } catch (error) {
+      console.log('Could not write the output to the disk. Check if you have write permissions.'.red)
+      console.log(error)
+    }
+
+    if (options.source_map) {
+      // Write source map file
+      try {
+        fs.writeFileSync(`${options.output_dir}plugins/${name}.map`, result.map)
+        console.log(`=> Successfully generated source map for ${name}`.green)
+      } catch (error) {
+        console.log('Could not write the output to the disk. Check if you have write permissions.'.red)
+        console.log(error)
+      }
+    }
+  })
+}
+
 create_dist()
 sassify_meshki()
 minify_meshki()
 sassify_plugins()
+minify_plugins()
