@@ -138,17 +138,20 @@
   border-color: $button-color-orange-active;
 }
 
+.button-couple {
+
+  button:not(:first-child):not(:last-child),
+  a:not(:first-child):not(:last-child) {
+    border-radius: 0;
+    border-style: none;
+    display: block;
+    margin: -5px auto !important;
+    pointer-events: none;
+  }
+}
+
 @media (min-width: $media-tablet) {
   .button-couple {
-
-    button:not(:first-child):not(:last-child),
-    a:not(:first-child):not(:last-child) {
-      border-radius: 0;
-      border-style: none;
-      display: block;
-      margin: -5px auto !important;
-      pointer-events: none;
-    }
 
     button:first-child,
     a:first-child {
