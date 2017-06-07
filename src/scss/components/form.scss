@@ -74,10 +74,10 @@ legend {
 
 // Fieldset normalization
 fieldset {
-  border: 2px solid $text-color !important;
+  border: 2px solid $text-color;
   border-radius: 5px;
-  margin: 10px 5px !important;
-  padding: 20px !important;
+  margin: 10px 5px;
+  padding: 20px;
 }
 
 // Checkbox and Radio normalization
