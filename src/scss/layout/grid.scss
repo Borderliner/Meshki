@@ -10,6 +10,7 @@
   margin: 0 auto;
   max-width: $content-max-width;
   padding: 0 20px;
+  padding-top: 40px;
   position: relative;
   width: 100%;
 }
@@ -24,7 +25,7 @@
 // Decrease the content width for non-mobiles
 @media (min-width: $media-mobile) {
   .content {
-    padding: 0;
+    padding: auto 0;
     width: 85%;
   }
 }
