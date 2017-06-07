@@ -49,6 +49,21 @@ textarea {
   outline: 0 !important;
 }
 
+@include create-input-elements('.error') {
+  border: 1px $button-color-red solid;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .1) inset, 0 0 8px $button-color-red;
+}
+
+@include create-input-elements('.warning') {
+  border: 1px $button-color-orange solid;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .1) inset, 0 0 8px $button-color-orange;
+}
+
+@include create-input-elements('.success') {
+  border: 1px $button-color-green solid;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .1) inset, 0 0 8px $button-color-green;
+}
+
 // Label and Legend normalization
 label,
 legend {
