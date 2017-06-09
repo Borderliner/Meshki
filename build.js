@@ -29,7 +29,7 @@ const options = {
   main_scss: 'src/scss/main.scss',
   main_js: 'src/js/meshki.js',
   main_fonts: 'src/fonts/',
-  output_dir: 'dist',
+  output_dir: 'dist/',
   output_css: 'dist/css/meshki.css',
   output_css_min: 'dist/css/meshki.min.css',
   output_js: 'dist/js/meshki.js',
