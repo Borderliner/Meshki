@@ -15,28 +15,18 @@
  * limitations under the License.
  */
 
-function ready(fn) {
-  document.onreadystatechange = function () {
-    if (document.readyState == 'complete')
-      fn();
-  }​
-}
-
-ready(function(){
-  if (document.getElementsByClassName('sidenav')[0]) {
-    overlayDiv = document.createElement('div');
-    overlayDiv.className = 'overlay';
-    overlayDiv.onclick = function () { meshki.closeNav(); };
-    document.body.appendChild(overlayDiv);
-  }
-});
-
-function is_rtl() {
-  return (window.getComputedStyle(document.body, null).getPropertyValue('direction') == 'rtl' ? true : false);
-}
+// Disable ES6 specific eslint errors
+/* eslint prefer-arrow-callback: off */
+/* eslint no-var: off */
+/* eslint object-shorthand: off */
+/* eslint func-names: off */
 
 var meshki = {
-  openNav: function() {
+  isRTL: function () {
+    return (window.getComputedStyle(document.body, null).getPropertyValue('direction') === 'rtl');
+  },
+
+  openNav: function () {
     var sidenav = document.getElementsByClassName('sidenav')[0];
     var container = document.getElementsByClassName('container')[0];
     // Is sidenav a "Push Sidenav"?
@@ -50,17 +40,18 @@ var meshki = {
       // Hide body overflow-x
       document.body.style.overflowX = 'hidden';
       // If not RTL
-      if (!is_rtl())
+      if (!this.isRTL()) {
         container.style.marginLeft = '250px';
-      else
+      } else {
         container.style.marginRight = '250px';
+      }
     }
 
     overlayDiv.style.opacity = 0.4;
     overlayDiv.style.visibility = 'visible';
   },
 
-  closeNav: function() {
+  closeNav: function () {
     var sidenav = document.getElementsByClassName('sidenav')[0];
     var container = document.getElementsByClassName('container')[0];
     var overlayDiv = document.getElementsByClassName('overlay')[0];
@@ -69,10 +60,29 @@ var meshki = {
     // Close the Sidenav, pushes it back
     sidenav.style.width = '0';
 
-    if (window.innerWidth > 768 && isSidenavPush)
+    if (window.innerWidth > 768 && isSidenavPush) {
       container.style.margin = '0';
+    }
 
     overlayDiv.style.opacity = 0;
     overlayDiv.style.visibility = 'hidden';
-  }
+  },
 };
+
+function ready(fn) {
+  document.onreadystatechange = function () {
+    if (document.readyState === 'complete') {
+      fn();
+    }
+  };
+}
+
+ready(function () {
+  var overlayDiv = document.createElement('div');
+  if (document.getElementsByClassName('sidenav')[0]) {
+    overlayDiv.className = 'overlay';
+    overlayDiv.onclick = function () { meshki.closeNav(); };
+    document.body.appendChild(overlayDiv);
+  }
+});
+
