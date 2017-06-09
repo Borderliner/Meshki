@@ -25,10 +25,16 @@
   },
   "homepage": "https://borderliner.github.io/Meshki/",
   "devDependencies": {
-    "clean-css": "^4.0.8",
-    "colors": "^1.1.2",
-    "fs-extra": "^3.0.1",
-    "node-sass": "^4.5.3",
+    
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.3.0",
     "uglify-js": "^3.0.15"
+  },
+  "dependencies": {
+    "fs-extra": "^3.0.1",
+    "colors": "^1.1.2",
+    "node-sass": "^4.5.3",
+    "clean-css": "^4.0.8"
   }
 }
