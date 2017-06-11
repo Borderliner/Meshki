@@ -9,10 +9,10 @@
   "authors": [
     "Mohammadreza Hajianpour <hajianpour.mr@gmail.com> (http://borderliner.ir/)"
   ],
-  "description": "Meshki: A Black-Colored, Responsive Boilerplate for UI Development",
+  "description": "Meshki: The most stylish CSS library on planet Earth!",
   "main": [
-    "dist/meshki.css",
-    "dist/meshki.js"
+    "dist/css/meshki.min.css",
+    "dist/meshki.min.js"
   ],
   "keywords": [
     "css",

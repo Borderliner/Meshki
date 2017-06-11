@@ -1,7 +1,7 @@
 {
   "name": "meshki",
   "version": "2.0.0",
-  "description": "Meshki: A Black-Colored, Responsive Boilerplate for UI Development",
+  "description": "Meshki: The most stylish CSS library on planet Earth!",
   "main": "build.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
