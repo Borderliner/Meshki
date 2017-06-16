@@ -20,6 +20,7 @@ body {
 // Nice blue for links
 a {
   color: $link-color-default;
+  text-decoration: none;
 
   &:hover {
     color: $link-color-hover;
