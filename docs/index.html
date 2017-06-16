@@ -42,7 +42,7 @@
 
 <body class="">
   <div class="sidenav push">
-    <a href="javascript:void(0);" class="sidenav-close-button" onclick="meshki.closeNav()">&times;</a>
+    <a href="javascript:void(0);" class="sidenav-close-button" onclick="meshki.closeSidenav()">&times;</a>
     <a href="">Home</a>
     <a href="https://github.com/Borderliner/Meshki/issues">Issues</a>
     <a href="https://github.com/Borderliner/Meshki/pulls">Pull Requests</a>
@@ -74,7 +74,7 @@
   <div class="container">
     <div class="nav fixed">
       <ul>
-        <li><a class="logo" href="javascript:void(0);" onclick="meshki.openNav()"><i class="fa fa-bars" aria-hidden="true"></i>Meshki</a></li>
+        <li><a class="logo" href="javascript:void(0);" onclick="meshki.openSidenav()"><i class="fa fa-bars" aria-hidden="true"></i>Meshki</a></li>
         <li class="nav-dropdown hide-on-mobile">
           <a href="javascript:void(0)" class="nav-dropdown-button">Plugins</a>
           <div class="nav-dropdown-content">
@@ -330,7 +330,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
         <h4>Sidenav</h4>
         <hr>
         <p>
-          Creating a sidenav is easy: Just create a <code>&lt;div></code> with the <code>sidenav</code> class after the opening body tag. Then add <code>&lt;a></code> tags to make sidenav links. It's pretty easy and straight-forward. Use the JavaScript functions of <code>meshki.openNav()</code> and <code>meshki.closeNav()</code> on events to open and close sidenav respectively. You can also add <code>push</code> class to make if even more fun! Here's an example for your convenience:
+          Creating a sidenav is easy: Just create a <code>&lt;div></code> with the <code>sidenav</code> class after the opening body tag. Then add <code>&lt;a></code> tags to make sidenav links. It's pretty easy and straight-forward. Use the JavaScript functions of <code>meshki.openSidenav()</code> and <code>meshki.closeSidenav()</code> on events to open and close sidenav respectively. You can also add <code>push</code> class to make if even more fun! Here's an example for your convenience:
         </p>
         <pre>
           <code class="language-html">
