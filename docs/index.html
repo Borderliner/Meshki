@@ -260,7 +260,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
         <h3>Components</h3>
         <hr>
         <p>
-          Meshki has various ready-to-use components which you can create anywhere you like. Keep in mind that <u>being small and "enough" are our main goals</u>, and <u> Meshki is not a UI framework</u>, therefore you may need to add extra libraries for other fancy stuff. However, most of the common components are ready to use and well-tested. But don't worry! We'll make sure that you always get the most stable UI and a beautiful experience, and we may add extra components from time to time.<br />
+          Meshki has various ready-to-use components which you can create anywhere you like. Keep in mind that <u>being small and "enough" are our main goals</u>, and <u> Meshki is not a full-fledged UI framework</u>, therefore you may need to add extra libraries for other fancy stuff. However, most of the common components are ready to use and well-tested. But don't worry! We'll make sure that you always get the most stable UI and a beautiful experience, and we may add extra components from time to time.<br />
           Here are a list of components and how you can put them into use:
         </p>
       </div>
@@ -272,24 +272,38 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
         <p>
           You can create buttons easily with <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;input type="submit"&gt;</code>, <code>&lt;input type="reset"&gt;</code> and <code>&lt;input type="button"&gt;</code>. There are also five different types of buttons:
         </p>
-        <div class="centerize text-center">
-          <a class="button small">Simple</a>
-          <button class="blue medium">Blue</button>
-          <input type="submit" class="green large" value="Green" />
-          <input type="reset" class="red medium" value="Red" />
-          <input type="button" class="orange small" value="Orange" />
-          <br><br><br>
-          <div class="button-couple">
-            <button class="blue medium">Agree</button>
-            <button class="medium disabled" disabled>or</button>
-            <button class="red medium">Disagree</button>
+        <div class="row">
+          <div class="six col text-center">
+            <p>Default buttons</p>
+            <a class="button small">Simple</a>
+            <button class="blue medium">Blue</button>
+            <input type="submit" class="green large" value="Green" />
+            <input type="reset" class="red medium" value="Red" />
+            <input type="button" class="orange small" value="Orange" />
+
+            <div class="button-couple">
+              <button class="blue medium">Agree</button>
+              <button class="medium disabled" disabled>or</button>
+              <button class="red medium">Disagree</button>
+            </div>
           </div>
-          <br><br>
-          <button class="blue expand small">Small Expanded Button</button>
-          <button class="red expand medium">Medium Expanded Button</button>
-          <button class="expand medium" disabled>Disabled Medium Expanded Button</button>
-          <button class="expand large">Large Expanded Button</button>
-        </div><br>
+          <div class="six col text-center">
+            <p>Expanded buttons</p>
+            <button class="blue expand small">Small Expanded Button</button>
+            <button class="red expand medium">Medium Expanded Button</button>
+            <button class="expand medium" disabled>Disabled Medium Expanded Button</button>
+            <button class="expand large">Large Expanded Button</button>            
+          </div>
+          <div class="row text-center">
+            <div class="col six offset-by-three">
+              <p>These require "extra-button-colors" plugin.</p>
+              <button class="cyan medium expand">Cyan</button>
+              <button class="rose medium expand">Rose</button>
+              <button class="yellow medium expand">Yellow</button>
+              <span>and <a href="#extra-button-colors">more...</a></span>
+            </div>
+          </div>
+        </div>
 
         <span>Here's the code for them:</span><br><br>
           <pre>
