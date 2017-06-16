@@ -26,7 +26,7 @@ var meshki = {
     return (window.getComputedStyle(document.body, null).getPropertyValue('direction') === 'rtl');
   },
 
-  openNav: function () {
+  openSidenav: function () {
     var sidenav = document.getElementsByClassName('sidenav')[0];
     var container = document.getElementsByClassName('container')[0];
     // Is sidenav a "Push Sidenav"?
@@ -51,7 +51,7 @@ var meshki = {
     overlayDiv.style.visibility = 'visible';
   },
 
-  closeNav: function () {
+  closeSidenav: function () {
     var sidenav = document.getElementsByClassName('sidenav')[0];
     var container = document.getElementsByClassName('container')[0];
     var overlayDiv = document.getElementsByClassName('overlay')[0];
@@ -81,7 +81,7 @@ ready(function () {
   var overlayDiv = document.createElement('div');
   if (document.getElementsByClassName('sidenav')[0]) {
     overlayDiv.className = 'overlay';
-    overlayDiv.onclick = function () { meshki.closeNav(); };
+    overlayDiv.onclick = function () { meshki.closeSidenav(); };
     document.body.appendChild(overlayDiv);
   }
 });
