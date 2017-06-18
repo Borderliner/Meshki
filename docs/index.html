@@ -118,9 +118,13 @@
         </div>
         <br>
         <pre id="cdn" style="display: none;">
-          <code>
-https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/css/meshki.min.css
-https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
+          <button
+            class="blue small clipboard-btn"
+            title="Copy to clipboard"
+            data-clipboard-target="#code-cdn"><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+          <code class="language-html" id="code-cdn">
+&lt;link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/css/meshki.min.css">
+&lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js">&lt;/script>
           </code>
         </pre>
       </div>
@@ -867,22 +871,22 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
       <div class="row">
         <pre>
             <code class="language-css">
-      /* Mobile first queries */
+/* Mobile first queries */
 
-      /* Larger than mobile */
-      @media (min-width: 400px) {}
+/* Larger than mobile */
+@media (min-width: 400px) {}
 
-      /* Larger than phablet */
-      @media (min-width: 544px) {}
+/* Larger than phablet */
+@media (min-width: 544px) {}
 
-      /* Larger than tablet */
-      @media (min-width: 768px) {}
+/* Larger than tablet */
+@media (min-width: 768px) {}
 
-      /* Larger than desktop */
-      @media (min-width: 992px) {}
+/* Larger than desktop */
+@media (min-width: 992px) {}
 
-      /* Larger than Desktop HD */
-      @media (min-width: 1200px) {}
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
             </code>
           </pre>
       </div>
@@ -896,70 +900,70 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
       <div class="row">
         <pre>
           <code class="language-css">
-      /* Make element full width */
-      .expand {
-        width: 100%;
-        box-sizing: border-box;
-      }
+/* Make element full width */
+.expand {
+  width: 100%;
+  box-sizing: border-box;
+}
 
-      /* Makes sure elements don't run outside containers (great for images in col) */
-      .responsive {
-        max-width: 100%;
-        box-sizing: border-box;
-      }
+/* Makes sure elements don't run outside containers (great for images in col) */
+.responsive {
+  max-width: 100%;
+  box-sizing: border-box;
+}
 
-      /* Float either direction */
-      .float-left {
-        float: left !important;
-      }
+/* Float either direction */
+.float-left {
+  float: left !important;
+}
 
-      .float-right {
-        float: right !important;
-      }
+.float-right {
+  float: right !important;
+}
 
-      /* Center an element */
-      .centerize {
-        margin-left: auto;
-        margin-right: auto;
-      }
+/* Center an element */
+.centerize {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-      /* Center a text */
-      .text-center {
-        text-align: center;
-      }
+/* Center a text */
+.text-center {
+  text-align: center;
+}
 
-      /* Vertical line */
-      .vertical-line {
-        border-left: 1px solid #E1E1E1;
-      }
+/* Vertical line */
+.vertical-line {
+  border-left: 1px solid #E1E1E1;
+}
 
-      /* Hides the element on mobiles and phablets */
-      @media (max-width: 544px) {
-        .hide-on-mobile {
-          display: none;
-        }
-      }
+/* Hides the element on mobiles and phablets */
+@media (max-width: 544px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
 
-      /* Hides the element on tablets and smaller */
-      @media (max-width: 768px) {
-        .hide-on-tablet {
-          display: none;
-        }
-      }
+/* Hides the element on tablets and smaller */
+@media (max-width: 768px) {
+  .hide-on-tablet {
+    display: none;
+  }
+}
 
-      /* Hides the element on desktops */
-      @media (min-width: 768px) {
-        .hide-on-desktop {
-          display: none;
-        }
-      }
+/* Hides the element on desktops */
+@media (min-width: 768px) {
+  .hide-on-desktop {
+    display: none;
+  }
+}
 
-      /* Hides the element on non-mobile and non-phablets */
-      @media (min-width: 544px) {
-        .hide-on-non-mobile {
-          display: none;
-        }
-      }
+/* Hides the element on non-mobile and non-phablets */
+@media (min-width: 544px) {
+  .hide-on-non-mobile {
+    display: none;
+  }
+}
           </code>
         </pre>
       </div>
@@ -984,7 +988,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
           Here are a couple of buttons for you to try and use:
         </p>
         <div class="row">
-          <div class="row">
+          <div class="row" style="margin-bottom: 2px;">
             <div class="col four">
               <button class="yellow expand">Yellow</button>
             </div>
@@ -995,7 +999,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
               <button class="purple expand">Purple</button>
             </div>
           </div>
-          <div class="row">
+          <div class="row" style="margin-bottom: 2px;">
             <div class="col four">
               <button class="cyan expand">Cyan</button>
             </div>
@@ -1006,7 +1010,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
               <button class="space expand">Space</button>
             </div>
           </div>
-          <div class="row">
+          <div class="row" style="margin-bottom: 2px;">
             <div class="col six">
               <button class="brown expand">Brown</button>
             </div>
