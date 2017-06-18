@@ -193,54 +193,58 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
           First of all, you need to have a <code>&lt;div></code> with the <code>sidenav</code> class, just after the beginning of the body. Your <a href="#sidenav-doc">sidenav</a>'s links will reside in here. Then, you need to create a <code>&lt;div></code> after the sidenav's div, with the <code>container</code> class. The rest of your body should be created inside the "container" div. Inspect the elements on this page to understand the structure. Ah! Here's a sample code:<br>
         </p>
         <pre>
-          <code class="language-html">
-    &lt;!DOCTYPE html>
-    &lt;html>
-    &lt;head>
-      &lt;title>Meshki&lt;/title>
-      &lt;meta charset="UTF-8">
-      &lt;!-- Make the page Mobile-Friendly -->
-      &lt;meta name="viewport" content="width=device-width, initial-scale=1">
+          <button
+            class="blue small clipboard-btn"
+            title="Copy to clipboard"
+            data-clipboard-target="#code-get-started"><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+          <code class="language-html" id="code-get-started">
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+  &lt;title>Meshki&lt;/title>
+  &lt;meta charset="UTF-8">
+  &lt;!-- Make the page Mobile-Friendly -->
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1">
 
-      &lt;!-- Add OpenSans font -->
-      &lt;link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  &lt;!-- Add OpenSans font -->
+  &lt;link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
-      &lt;!-- Add Meshki's files -->
-      &lt;link rel="stylesheet" type="text/css" href="dist/css/meshki.min.css">
-      &lt;script type="text/javascript" src="dist/js/meshki.min.js">&lt;/script>
-    &lt;/head>
-    &lt;body>
+  &lt;!-- Add Meshki's files -->
+  &lt;link rel="stylesheet" type="text/css" href="dist/css/meshki.min.css">
+  &lt;script type="text/javascript" src="dist/js/meshki.min.js">&lt;/script>
+&lt;/head>
+&lt;body>
 
-      &lt;div class="sidenav">
-        &lt;!-- Sidenav links here -->
-      &lt;/div>
+  &lt;div class="sidenav">
+    &lt;!-- Sidenav links here -->
+  &lt;/div>
 
-      &lt;div class="container">
+  &lt;div class="container">
 
-        &lt;!-- This is your navbar -->
-        &lt;nav>
-          &lt;ul>
-            &lt;li>&lt;a class="logo" href="javascript:void(0)">My Website&lt;/a>&lt;/li>
-          &lt;/ul>
-        &lt;/nav>
+    &lt;!-- This is your navbar -->
+    &lt;nav>
+      &lt;ul>
+        &lt;li>&lt;a class="logo" href="javascript:void(0)">My Website&lt;/a>&lt;/li>
+      &lt;/ul>
+    &lt;/nav>
 
-        &lt;!-- The main content goes here -->
-        &lt;div class="content">
-          &lt;h3>Welcome to my cool website&lt;/h3>
-          &lt;p>This is a sample paragraph.&lt;/p>
+    &lt;!-- The main content goes here -->
+    &lt;div class="content">
+      &lt;h3>Welcome to my cool website&lt;/h3>
+      &lt;p>This is a sample paragraph.&lt;/p>
+    &lt;/div>
+
+    &lt;!-- And finally, your cool footer -->
+    &lt;footer>
+      &lt;div class="row">
+        &lt;div class="six col">
+          &lt;p>A text on the footer&lt;/p>
         &lt;/div>
-
-        &lt;!-- And finally, your cool footer -->
-        &lt;footer>
-          &lt;div class="row">
-            &lt;div class="six col">
-              &lt;p>A text on the footer&lt;/p>
-            &lt;/div>
-          &lt;/div>
-        &lt;/footer>
       &lt;/div>
+    &lt;/footer>
+  &lt;/div>
 
-    &lt;/body>
+&lt;/body>
           </code>
         </pre>
 
@@ -307,20 +311,24 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
 
         <span>Here's the code for them:</span><br><br>
           <pre>
-            <code class="language-html">
-    &lt;a class="button small"&gt;Simple&lt;/a&gt;
-    &lt;button class="blue medium"&gt;Blue&lt;/button&gt;
-    &lt;input type="submit" class="green large" value="Green" /&gt;
-    &lt;input type="reset" class="red medium" value="Red" /&gt;
-    &lt;input type="button" class="orange small" value="Orange" /&gt;
+            <button
+            class="blue small clipboard-btn"
+            title="Copy to clipboard"
+            data-clipboard-target="#code-buttons"><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+            <code class="language-html" id="code-buttons">
+&lt;a class="button small"&gt;Simple&lt;/a&gt;
+&lt;button class="blue medium"&gt;Blue&lt;/button&gt;
+&lt;input type="submit" class="green large" value="Green" /&gt;
+&lt;input type="reset" class="red medium" value="Red" /&gt;
+&lt;input type="button" class="orange small" value="Orange" /&gt;
 
-    &lt;div class="button-couple">
-      &lt;button class="blue">Agree&lt;/button>
-      &lt;button>or&lt;/button>
-      &lt;button class="red">Disagree&lt;/button>
-    &lt;/div>
+&lt;div class="button-couple">
+  &lt;button class="blue">Agree&lt;/button>
+  &lt;button>or&lt;/button>
+  &lt;button class="red">Disagree&lt;/button>
+&lt;/div>
 
-    &lt;button class="expand large"&gt;Large Expanded Button&lt;/button&gt;
+&lt;button class="expand large"&gt;Large Expanded Button&lt;/button&gt;
             </code>
           </pre>
       </div>
@@ -333,18 +341,22 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
           Creating a sidenav is easy: Just create a <code>&lt;div></code> with the <code>sidenav</code> class after the opening body tag. Then add <code>&lt;a></code> tags to make sidenav links. It's pretty easy and straight-forward. Use the JavaScript functions of <code>meshki.openSidenav()</code> and <code>meshki.closeSidenav()</code> on events to open and close sidenav respectively. You can also add <code>push</code> class to make if even more fun! Here's an example for your convenience:
         </p>
         <pre>
-          <code class="language-html">
-    &lt;body>
-      &lt;div class="sidenav push">
-        &lt;!-- Note that javascript:void(0) stops your page from jumping to the top -->
-        &lt;a href="javascript:void(0)" class="sidenav-close-button" onclick="meshki.closeSidenav()">&amp;times;&lt;/a>
-        &lt;a href="">Home&lt;/a>
-        &lt;a href="https://github.com/Borderliner/Meshki">GitHub&lt;/a>
-        &lt;a href="https://github.com/Borderliner/Meshki/blob/master/CHANGELOG.md">News&lt;/a>
-        &lt;a href="https://github.com/Borderliner/Meshki/blob/master/README.md">About Meshki&lt;/a>
-        &lt;hr>
-        &lt;a href="javascript:void(0)" disabled>Share on:&lt;/a>
-      &lt;/div>
+          <button
+            class="blue small clipboard-btn"
+            title="Copy to clipboard"
+            data-clipboard-target="#code-sidenav"><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+          <code class="language-html" id="code-sidenav">
+&lt;body>
+  &lt;div class="sidenav push">
+    &lt;!-- Note that javascript:void(0) stops your page from jumping to the top -->
+    &lt;a href="javascript:void(0)" class="sidenav-close-button" onclick="meshki.closeSidenav()">&amp;times;&lt;/a>
+    &lt;a href="">Home&lt;/a>
+    &lt;a href="https://github.com/Borderliner/Meshki">GitHub&lt;/a>
+    &lt;a href="https://github.com/Borderliner/Meshki/blob/master/CHANGELOG.md">News&lt;/a>
+    &lt;a href="https://github.com/Borderliner/Meshki/blob/master/README.md">About Meshki&lt;/a>
+    &lt;hr>
+    &lt;a href="javascript:void(0)" disabled>Share on:&lt;/a>
+  &lt;/div>
           </code>
         </pre>
       </div>
@@ -357,25 +369,29 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
           Meshki comes with a beautiful navbar built-in. At the beginning of the <code>div.content</code>, create a <code>&lt;div class="nav"></code> or a <code>&lt;nav></code>, and then create a <code>&lt;ul></code> inside that. Now any <code>&lt;li>&lt;a href="#">Link&lt;/a>&lt;/li></code> inside the <code>&lt;ul></code> will appear as a button in the navbar. You can also add the <code>fixed</code> class to your nav to make the navbar fixed.
         </p>
         <pre>
-          <code class="language-html">
-    &lt;nav class="fixed">
-      &lt;ul>
-        &lt;!-- Note that javascript:void(0) stops your page from jumping to the top -->
-        &lt;li>&lt;a class="logo" href="javascript:void(0)" onclick="meshki.openNav()">Meshki&lt;/a>&lt;/li>
-        &lt;li>&lt;a href="https://github.com/Borderliner/Meshki/releases">News&lt;/a>&lt;/li>
-        &lt;li>&lt;a href="https://github.com/Borderliner/Meshki">GitHub&lt;/a>&lt;/li>
+          <button
+            class="blue small clipboard-btn"
+            title="Copy to clipboard"
+            data-clipboard-target="#code-navbar"><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+          <code class="language-html" id="code-navbar">
+&lt;nav class="fixed">
+  &lt;ul>
+    &lt;!-- Note that javascript:void(0) stops your page from jumping to the top -->
+    &lt;li>&lt;a class="logo" href="javascript:void(0)" onclick="meshki.openNav()">Meshki&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="https://github.com/Borderliner/Meshki/releases">News&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="https://github.com/Borderliner/Meshki">GitHub&lt;/a>&lt;/li>
 
-        &lt;!-- Dropdown in Nav -->
-        &lt;li class="nav-dropdown">
-          &lt;a href="javascript:void(0)" class="nav-dropdown-button">Title&lt;/a>
-          &lt;div class="nav-dropdown-content">
-            &lt;a href="#">Sub 1&lt;/a>
-            &lt;a href="#">Sub 2&lt;/a>
-            &lt;a href="#">Sub 3&lt;/a>
-          &lt;/div>
-        &lt;/li>
-      &lt;/ul>
-    &lt;/nav>
+    &lt;!-- Dropdown in Nav -->
+    &lt;li class="nav-dropdown">
+      &lt;a href="javascript:void(0)" class="nav-dropdown-button">Title&lt;/a>
+      &lt;div class="nav-dropdown-content">
+        &lt;a href="#">Sub 1&lt;/a>
+        &lt;a href="#">Sub 2&lt;/a>
+        &lt;a href="#">Sub 3&lt;/a>
+      &lt;/div>
+    &lt;/li>
+  &lt;/ul>
+&lt;/nav>
           </code>
         </pre>
       </div>
@@ -456,42 +472,46 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
           Here's the code for how to use the grid system:
         </p>
           <pre>
-            <code class="language-html">
-    &lt;div class="row"&gt;
-      &lt;div class="one col"&gt;
-        A div with one col length
-      &lt;/div&gt;
-      &lt;div class="eleven col"&gt;
-        A div with eleven col length
-      &lt;/div&gt;
-    &lt;/div&gt;
+            <button
+            class="blue small clipboard-btn"
+            title="Copy to clipboard"
+            data-clipboard-target="#code-grid"><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+            <code class="language-html" id="code-grid">
+&lt;div class="row"&gt;
+  &lt;div class="one col"&gt;
+    A div with one col length
+  &lt;/div&gt;
+  &lt;div class="eleven col"&gt;
+    A div with eleven col length
+  &lt;/div&gt;
+&lt;/div&gt;
 
-    &lt;div class="row"&gt;
-      &lt;div class="one-third col"&gt;
-        A div with one-third of the screen's length
-      &lt;/div&gt;
-      &lt;div class="two-thirds col"&gt;
-        A div with two-thirds of the screen's length
-      &lt;/div&gt;
-    &lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="one-third col"&gt;
+    A div with one-third of the screen's length
+  &lt;/div&gt;
+  &lt;div class="two-thirds col"&gt;
+    A div with two-thirds of the screen's length
+  &lt;/div&gt;
+&lt;/div&gt;
 
-    &lt;div class="row"&gt;
-      &lt;div class="one-half col"&gt;
-        A div with half of the screen's length
-      &lt;/div&gt;
-      &lt;div class="one-half col"&gt;
-        A div with the other half of the screen's length
-      &lt;/div&gt;
-    &lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="one-half col"&gt;
+    A div with half of the screen's length
+  &lt;/div&gt;
+  &lt;div class="one-half col"&gt;
+    A div with the other half of the screen's length
+  &lt;/div&gt;
+&lt;/div&gt;
 
-    &lt;div class="row"&gt;
-      &lt;div class="six offset-by-two col"&gt;
-        &lt;!-- Pushes a six-width-element by two units -->
-      &lt;/div&gt;
-      &lt;div class="two col"&gt;
-        &lt;!-- The rest of the screen -->
-      &lt;/div&gt;
-    &lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="six offset-by-two col"&gt;
+    &lt;!-- Pushes a six-width-element by two units -->
+  &lt;/div&gt;
+  &lt;div class="two col"&gt;
+    &lt;!-- The rest of the screen -->
+  &lt;/div&gt;
+&lt;/div&gt;
 
             </code>
           </pre>
@@ -596,80 +616,84 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
           This is the code snippet on how you can use form elements:
         </p>
           <pre>
-            <code class="language-html">
-    &lt;form>
-      &lt;!--Text Inputs -->
-      &lt;div class="row">
-        &lt;div class="six col">
-          &lt;label for="user1">Username:&lt;/label>
-          &lt;input id="user1" class="expand" type="text" name="user1" placeholder="Enter text here">
-        &lt;/div>
-        &lt;div class="six col">
-          &lt;label for="pass1">Password:&lt;/label>
-          &lt;input id="pass1" class="expand" type="password" name="pass1">
-        &lt;/div>
-      &lt;/div>
+            <button
+            class="blue small clipboard-btn"
+            title="Copy to clipboard"
+            data-clipboard-target="#code-forms"><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+            <code class="language-html" id="code-forms">
+&lt;form>
+  &lt;!--Text Inputs -->
+  &lt;div class="row">
+    &lt;div class="six col">
+      &lt;label for="user1">Username:&lt;/label>
+      &lt;input id="user1" class="expand" type="text" name="user1" placeholder="Enter text here">
+    &lt;/div>
+    &lt;div class="six col">
+      &lt;label for="pass1">Password:&lt;/label>
+      &lt;input id="pass1" class="expand" type="password" name="pass1">
+    &lt;/div>
+  &lt;/div>
 
-      &lt;!--Disabled Text Inputs -->
-      &lt;div class="row">
-        &lt;div class="twelve col">
-          &lt;label for="dis-email1">Email:&lt;/label>
-          &lt;input id="dis-email1" class="expand" type="email" name="dis-email1" value="me@borderliner.ir" disabled>
-        &lt;/div>
-      &lt;/div>
+  &lt;!--Disabled Text Inputs -->
+  &lt;div class="row">
+    &lt;div class="twelve col">
+      &lt;label for="dis-email1">Email:&lt;/label>
+      &lt;input id="dis-email1" class="expand" type="email" name="dis-email1" value="me@borderliner.ir" disabled>
+    &lt;/div>
+  &lt;/div>
 
-      &lt;!--Text Area -->
-      &lt;div class="row">
-        &lt;div class="twelve col">
-          &lt;textarea class="expand">This is a sample &lt;textarea&gt; element.&lt;/textarea>
-        &lt;/div>
-      &lt;/div>
+  &lt;!--Text Area -->
+  &lt;div class="row">
+    &lt;div class="twelve col">
+      &lt;textarea class="expand">This is a sample &lt;textarea&gt; element.&lt;/textarea>
+    &lt;/div>
+  &lt;/div>
 
-      &lt;!--Dropdown -->
-      &lt;div class="row">
-        &lt;div class="six col">
-          &lt;select class="expand">
-            &lt;option selected disabled hidden>Choose your country&lt;/option>
-            &lt;option value="us">United Stated&lt;/option>
-            &lt;option value="ca">Canada&lt;/option>
-            &lt;option value="de">Germany&lt;/option>
-            &lt;option value="jp">Japan&lt;/option>
-          &lt;/select>
-        &lt;/div>
-      &lt;/div>
+  &lt;!--Dropdown -->
+  &lt;div class="row">
+    &lt;div class="six col">
+      &lt;select class="expand">
+        &lt;option selected disabled hidden>Choose your country&lt;/option>
+        &lt;option value="us">United Stated&lt;/option>
+        &lt;option value="ca">Canada&lt;/option>
+        &lt;option value="de">Germany&lt;/option>
+        &lt;option value="jp">Japan&lt;/option>
+      &lt;/select>
+    &lt;/div>
+  &lt;/div>
 
-      &lt;!--Checkboxes and Radio Buttons -->
-      &lt;div class="row">
-        &lt;div class="six col">
-          &lt;input id="rad-male" type="radio" name="gender" value="male">
-          &lt;label for="rad-male" class="radio">Male&lt;/label>
-          &lt;input id="rad-female" type="radio" name="gender" value="female">
-          &lt;label for="rad-female" class="radio">Female&lt;/label>
-          &lt;input id="rad-other" type="radio" name="gender" value="other">
-          &lt;label for="rad-other" class="radio">Other&lt;/label>
-        &lt;/div>
-        &lt;div class="six col">
-          &lt;input id="chk-eula" type="checkbox" name="chk-eula">
-          &lt;label for="chk-eula" class="checkbox">I've read and agree with Terms of Service.&lt;/label>
-          &lt;input id="chk-news" type="checkbox" name="chk-news">
-          &lt;label for="chk-news" class="checkbox">I wish to receive newsletters from this site.&lt;/label>
-        &lt;/div>
-      &lt;/div>
+  &lt;!--Checkboxes and Radio Buttons -->
+  &lt;div class="row">
+    &lt;div class="six col">
+      &lt;input id="rad-male" type="radio" name="gender" value="male">
+      &lt;label for="rad-male" class="radio">Male&lt;/label>
+      &lt;input id="rad-female" type="radio" name="gender" value="female">
+      &lt;label for="rad-female" class="radio">Female&lt;/label>
+      &lt;input id="rad-other" type="radio" name="gender" value="other">
+      &lt;label for="rad-other" class="radio">Other&lt;/label>
+    &lt;/div>
+    &lt;div class="six col">
+      &lt;input id="chk-eula" type="checkbox" name="chk-eula">
+      &lt;label for="chk-eula" class="checkbox">I've read and agree with Terms of Service.&lt;/label>
+      &lt;input id="chk-news" type="checkbox" name="chk-news">
+      &lt;label for="chk-news" class="checkbox">I wish to receive newsletters from this site.&lt;/label>
+    &lt;/div>
+  &lt;/div>
 
-      &lt;!-- Slider -->
-      &lt;div class="row">
-        &lt;input class="expand" type="range" name="percent" min="0" max="100" step="1" value="0">
-      &lt;/div>
+  &lt;!-- Slider -->
+  &lt;div class="row">
+    &lt;input class="expand" type="range" name="percent" min="0" max="100" step="1" value="0">
+  &lt;/div>
 
-      &lt;!-- Field Set -->
-      &lt;fieldset>
-        &lt;legend>Overview&lt;/legend>
-        &lt;span>First Name: Walter&lt;/span>
-        &lt;span>Last Name: White&lt;/span>
-        &lt;span>Age: 50&lt;/span>
-        &lt;span>Location: Albuquerque, New Mexico&lt;/span>
-      &lt;/fieldset>
-    &lt;/form>
+  &lt;!-- Field Set -->
+  &lt;fieldset>
+    &lt;legend>Overview&lt;/legend>
+    &lt;span>First Name: Walter&lt;/span>
+    &lt;span>Last Name: White&lt;/span>
+    &lt;span>Age: 50&lt;/span>
+    &lt;span>Location: Albuquerque, New Mexico&lt;/span>
+  &lt;/fieldset>
+&lt;/form>
             </code>
           </pre>
       </div>
@@ -687,7 +711,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
           The typography base is <a href="https://fonts.google.com/specimen/Open+Sans">Open Sans</a> font, which is served locally, set at 1.5rem (15px) over a 1.6 line height (24px). Other type basics like <a href="javascript:void(0);">anchors</a>, <b>strong</b>, <i>emphasis</i>, and <u>underline</u> are all obviously included.
         </div>
         <div class="six col">
-          <h1>Heading <span class="heading-font-size"><code>&lt;h1></code> 50rem</span></h1>
+        <h1>Heading <span class="heading-font-size"><code>&lt;h1></code> 50rem</span></h1>
         <h2>Heading <span class="heading-font-size"><code>&lt;h2></code> 42rem</span></h2>
         <h3>Heading <span class="heading-font-size"><code>&lt;h3></code> 36rem</span></h3>
         <h4>Heading <span class="heading-font-size"><code>&lt;h4></code> 30rem</span></h4>
@@ -708,28 +732,28 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
         <div class="twelve col">
           <pre>
             <code>
-      &lt;code>bower install meshki&lt;/code>
+&lt;code>bower install meshki&lt;/code>
 
-      &lt;pre>
-        &lt;code>
-        .some-class {
-          background-color: red;
-        }
-        &lt;/code>
-      &lt;/pre>
+&lt;pre>
+  &lt;code>
+  .some-class {
+    background-color: red;
+  }
+  &lt;/code>
+&lt;/pre>
             </code>
           </pre>
           <pre class="filled">
             <code>
-      &lt;code class="filled">bower install meshki&lt;/code>
+&lt;code class="filled">bower install meshki&lt;/code>
 
-      &lt;pre class="filled">
-        &lt;code>
-        (function(
-          console.log('Hello world!');
-        ))();
-        &lt;/code>
-      &lt;/pre>
+&lt;pre class="filled">
+  &lt;code>
+  (function(
+    console.log('Hello world!');
+  ))();
+  &lt;/code>
+&lt;/pre>
             </code>
           </pre>
         </div>
@@ -799,17 +823,21 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
           <b>Note</b> that Meshki's footer does not enforce footer's height, so the more you add, the bigger it gets.
         </p>
         <pre>
-          <code class="language-html">
-    &lt;footer class="compact">
-      &lt;div class="row">
-        &lt;div class="six col">
-          &lt;p>Created by: Mohammad reza Hajianpour (Borderliner)&lt;/p>
-        &lt;/div>
-        &lt;div class="six col text-center">
-          &lt;p>2016, Licensed under MIT&lt;/p>
-        &lt;/div>
-      &lt;/div>
-    &lt;/footer>
+          <button
+            class="blue small clipboard-btn"
+            title="Copy to clipboard"
+            data-clipboard-target="#code-footer"><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+          <code class="language-html" id="code-footer">
+&lt;footer class="compact">
+  &lt;div class="row">
+    &lt;div class="six col">
+      &lt;p>Created by: Mohammad reza Hajianpour (Borderliner)&lt;/p>
+    &lt;/div>
+    &lt;div class="six col text-center">
+      &lt;p>2016, Licensed under MIT&lt;/p>
+    &lt;/div>
+  &lt;/div>
+&lt;/footer>
           </code>
         </pre>
       </div>
@@ -943,8 +971,12 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
         <p>
           Meshki v1.5.0 introduced more color options for you to choose. You only have to add the below line to the &lt;head> part of your page.
           <pre>
-            <code class="language-html">
-  &lt;link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.1/button-colors.min.css">
+            <button
+            class="blue small clipboard-btn"
+            title="Copy to clipboard"
+            data-clipboard-target="#code-extra-button-colors"><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+            <code class="language-html" id="code-extra-button-colors">
+&lt;link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.1/button-colors.min.css">
             </code>
           </pre>
         </p>
@@ -1020,6 +1052,7 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
     </div>
   </div>
   
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
   <script type="text/javascript">
     var percent_update = function() {
       document.getElementById("percent_value").innerHTML = this.value;
@@ -1028,6 +1061,40 @@ https://cdnjs.cloudflare.com/ajax/libs/meshki/2.0.0/js/meshki.min.js
 
     document.getElementById("percent").onchange = percent_update;
     document.getElementById("percent").oninput = percent_update;
+
+    var clipboard = new Clipboard('.clipboard-btn');
+    clipboard.on('success', function(e) {
+      console.log(e);
+      var classArray = e.trigger.className.split(' ');
+      classArray.splice(classArray.indexOf('blue'), 1);
+      classArray.push('green');
+      e.trigger.className = classArray.join(' ');
+      e.trigger.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i> Copied!';
+
+      window.setTimeout(function(){
+        var classArray = e.trigger.className.split(' ');
+        classArray.splice(classArray.indexOf('green'), 1);
+        classArray.push('blue');
+        e.trigger.className = classArray.join(' ');
+        e.trigger.innerHTML = '<i class="fa fa-clipboard" aria-hidden="true"></i>';
+      }, 2000);
+    });
+
+    clipboard.on('error', function(e) {
+      var classArray = e.trigger.className.split(' ');
+      classArray.splice(classArray.indexOf('blue'), 1);
+      classArray.push('red');
+      e.trigger.className = classArray.join(' ');
+      e.trigger.innerHTML = '<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Error!';
+
+      window.setTimeout(function(){
+        var classArray = e.trigger.className.split(' ');
+        classArray.splice(classArray.indexOf('red'), 1);
+        classArray.push('blue');
+        e.trigger.className = classArray.join(' ');
+        e.trigger.innerHTML = '<i class="fa fa-clipboard" aria-hidden="true"></i>';
+      }, 2000);
+    });
   </script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
 </body>

@@ -80,6 +80,10 @@ div.share-links i.fa {
   width: 250px;
 }
 
+.clipboard-btn {
+  float: right;
+}
+
 @media (min-width: 544px) {
   .custom-text-right {
     text-align: right;
