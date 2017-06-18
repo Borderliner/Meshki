@@ -1068,7 +1068,6 @@
 
     var clipboard = new Clipboard('.clipboard-btn');
     clipboard.on('success', function(e) {
-      console.log(e);
       var classArray = e.trigger.className.split(' ');
       classArray.splice(classArray.indexOf('blue'), 1);
       classArray.push('green');
