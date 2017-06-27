@@ -66,13 +66,13 @@ function removeDirectory(srcpath) {
 
 function createDist() {
   if (!fs.existsSync('dist/')) {
-    console.log('No "dist" folder exists. Creating folders...'.yellow);
+    console.log('No '.yellow + '"dist"'.blue + ' folder exists. Creating folders...'.yellow);
     fs.mkdirSync('dist/');
     fs.mkdirSync('dist/plugins/');
     fs.mkdirSync('dist/fonts/');
     fs.mkdirSync('dist/css/');
     fs.mkdirSync('dist/js/');
-    console.log('=> "dist" folder was created successfully!'.green);
+    console.log('=> '.green + '"dist"'.blue + ' folder was created successfully!'.green);
   } else {
     console.log('Cleaning previously compiled files...'.yellow);
     removeDirectory('dist/');
@@ -83,7 +83,7 @@ function createDist() {
 const plugins = listDirectory(options.plugins_dir);
 
 function sassifyMeshki() {
-  console.log('Compiling Meshki...'.yellow);
+  console.log('Compiling '.yellow + 'meshki.scss'.blue + '...'.yellow);
   const result = sass.renderSync({
     file: options.main_scss,
     outFile: options.output_css,
@@ -91,14 +91,14 @@ function sassifyMeshki() {
   // Write CSS file
   try {
     fs.writeFileSync(options.output_css, result.css);
-    console.log('=> Successfully compiled Meshki'.green);
+    console.log('=> Successfully compiled '.green + 'meshki.scss'.blue);
   } catch (error) {
     console.log('Could not write the output to the disk. Check if you have write permissions.'.red);
   }
 }
 
 function minifyMeshki() {
-  console.log('Minifying Meshki...'.yellow);
+  console.log('Minifying '.yellow + 'meshki.css'.blue + '...'.yellow);
   const result = sass.renderSync({
     file: options.main_scss,
     outputStyle: 'compressed',
@@ -108,7 +108,7 @@ function minifyMeshki() {
   // Write Minified CSS file
   try {
     fs.writeFileSync(options.output_css_min, result.css);
-    console.log('=> Successfully minified Meshki'.green);
+    console.log('=> Successfully minified '.green + 'meshki.css'.blue);
   } catch (error) {
     console.log('Could not write the output to the disk. Check if you have write permissions.'.red);
   }
@@ -117,7 +117,7 @@ function minifyMeshki() {
     // Write SourceMaps
     try {
       fs.writeFileSync(`${options.output_css}.map`, result.map);
-      console.log('=> Successfully generated source maps for Meshki'.green);
+      console.log('=> Successfully generated source maps for '.green + 'meshki.min.css'.blue);
     } catch (error) {
       console.log('Could not write the output to the disk. Check if you have write permissions.'.red);
     }
@@ -125,7 +125,7 @@ function minifyMeshki() {
 }
 
 function sassifyPlugins() {
-  console.log('Starting to compile plugins...'.blue);
+  console.log('Starting to compile plugins...'.yellow);
   plugins.forEach((name) => {
     console.log('Compiling '.yellow + `${name}`.blue);
     const result = sass.renderSync({
@@ -135,7 +135,7 @@ function sassifyPlugins() {
     // Write CSS file
     try {
       fs.writeFileSync(`${options.output_dir}plugins/meshki-${name}.css`, result.css);
-      console.log(`=> Successfully compiled ${name}`.green);
+      console.log('=> Successfully compiled '.green + name.blue);
     } catch (error) {
       console.log('Could not write the output to the disk. Check if you have write permissions.'.red);
       console.log(error);
@@ -144,7 +144,7 @@ function sassifyPlugins() {
 }
 
 function minifyPlugins() {
-  console.log('Starting to minify plugins...'.blue);
+  console.log('Starting to minify plugins...'.yellow);
   plugins.forEach((name) => {
     console.log('Minifying '.yellow + `${name}`.blue);
     const result = sass.renderSync({
@@ -157,7 +157,7 @@ function minifyPlugins() {
     // Write CSS file
     try {
       fs.writeFileSync(`${options.output_dir}plugins/meshki-${name}.min.css`, result.css);
-      console.log(`=> Successfully minified ${name}`.green);
+      console.log('=> Successfully minified '.green + name.blue);
     } catch (error) {
       console.log('Could not write the output to the disk. Check if you have write permissions.'.red);
       console.log(error);
@@ -167,7 +167,7 @@ function minifyPlugins() {
       // Write source map file
       try {
         fs.writeFileSync(`${options.output_dir}plugins/meshki-${name}.map`, result.map);
-        console.log(`=> Successfully generated source map for ${name}`.green);
+        console.log('=> Successfully generated source map for '.green + name.blue);
       } catch (error) {
         console.log('Could not write the output to the disk. Check if you have write permissions.'.red);
         console.log(error);
@@ -178,13 +178,13 @@ function minifyPlugins() {
 
 function uglifyJavaScript() {
   let code = '';
-  let uglified = '';
+  let uglified = {};
   try {
     code = fs.readFileSync(options.main_js, 'utf-8');
     uglified = uglifyJS.minify(code, {
       warnings: true,
     });
-    console.log(uglified.warnings);
+    if (uglified.warnings) console.log(uglified.warnings);
   } catch (error) {
     console.log('Could not read the input file from the disk. Check if you have read permissions.'.red);
     console.log(error);
@@ -192,7 +192,7 @@ function uglifyJavaScript() {
 
   try {
     fs.writeFileSync(options.output_js_min, uglified.code);
-    console.log('=> Successfully uglified meshki.js'.green);
+    console.log('=> Successfully uglified '.green + 'meshki.js'.blue);
   } catch (error) {
     console.log('Could not write the output to the disk. Check if you have write permissions.'.red);
     console.log(error);
@@ -200,10 +200,10 @@ function uglifyJavaScript() {
 }
 
 function copyJavaScript() {
-  console.log('Copying meshki.js to dist/js...'.yellow);
+  console.log('Copying '.green + 'meshki.js'.blue + 'to dist/js...'.yellow);
   try {
     fsExtra.copySync(path.resolve(__dirname, options.main_js), options.output_js);
-    console.log('=> Successfully copied meshki.js to dist/js/'.green);
+    console.log('=> Successfully copied '.green + 'meshki.js'.blue + ' to dist/js/'.green);
   } catch (error) {
     console.log('Could not write the output to the disk. Check if you have write permissions.'.red);
     console.log(error);
@@ -215,7 +215,7 @@ function copyFonts() {
   fs.readdirSync(options.main_fonts).forEach((file) => {
     try {
       fsExtra.copySync(`${__dirname}/${options.main_fonts}${file}`, `${options.output_fonts}${file}`);
-      console.log(`=> Successfully copied ${file.blue} to dist/fonts/`.green);
+      console.log('=> Successfully copied '.green + file.blue + ' to dist/fonts/'.green);
     } catch (error) {
       console.log('Could not write the output to the disk. Check if you have write permissions.'.red);
       console.log(error);
@@ -227,7 +227,11 @@ function copyLicense() {
   let copying = '';
   try {
     copying = fs.readFileSync('COPYING', 'utf-8');
-    console.log(copying);
+    if (process.platform === 'darwin') {
+      console.log('✅ Meshki was compiled succesfully! Rock on! 🤘'.cyan);
+    } else {
+      console.log('--Meshki was compiled succesfully! Rock on!'.cyan);
+    }
   } catch (error) {
     console.log(error);
   }
