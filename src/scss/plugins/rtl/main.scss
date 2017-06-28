@@ -20,14 +20,16 @@
 
 @font-face {
   font-family: $rtl-font-family;
-  font-style: normal;
-  font-weight: normal;
   src: $rtl-font-source;
 }
 
 body {
   direction: rtl;
   font-family: $rtl-font-family, $font-family;
+  font-size: $rtl-font-size;
+  font-style: normal;
+  font-weight: normal;
+  word-spacing: $rtl-word-spacing;
 }
 
 // Buttons should use RTL font too
