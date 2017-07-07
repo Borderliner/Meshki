@@ -89,6 +89,12 @@ a {
   font-size: 1.7rem;
 }
 
+.clipboard-btn {
+  float: right;
+  position: absolute;
+  right: 35px;
+}
+
 @media (min-width: 544px) {
   .custom-text-right {
     text-align: right;
