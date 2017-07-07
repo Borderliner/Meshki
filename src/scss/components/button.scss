@@ -144,7 +144,7 @@
     border-radius: 0;
     border-style: none;
     display: block;
-    margin: -5px auto !important;
+    margin: -5px auto 5px auto !important;
     pointer-events: none;
   }
 }
@@ -155,14 +155,16 @@
     button:first-child,
     a:first-child {
       border-bottom-right-radius: 0;
-      border-right-style: none;
+      border-right-style: solid;
       border-top-right-radius: 0;
       margin-right: 0 !important;
+      margin-left: 3px;
     }
 
     button:not(:first-child):not(:last-child),
     a:not(:first-child):not(:last-child) {
-      border-style: solid;
+      border-bottom-style: solid;
+      border-top-style: solid;
       display: inline;
       margin: -5px !important;
     }
@@ -170,9 +172,9 @@
     button:last-child,
     a:last-child {
       border-bottom-left-radius: 0;
-      border-left-style: none;
+      border-left-style: solid;
       border-top-left-radius: 0;
-      margin-left: 0 !important;
+      margin: auto 3px auto 0 !important;
     }
   }
 }
