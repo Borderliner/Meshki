@@ -72,7 +72,7 @@ hr {
   clear: both;
   &::after {
     clear: both;
-    content: none;
+    content: "";
     display: table;
   }
 }

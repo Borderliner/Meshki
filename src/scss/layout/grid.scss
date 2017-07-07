@@ -1,7 +1,8 @@
 // Center the row, used to hold columns
 .row {
   @include centerize;
-  margin-bottom: 20px;
+  display: block;
+  margin-bottom: 30px;
 }
 
 // Content creates a responsive space to hold page data
