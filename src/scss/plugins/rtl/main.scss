@@ -1,0 +1,216 @@
+/*
+ * Meshki v2.0.0 (https://borderliner.github.io/Meshki/)
+ * Copyright 2017 Mohammadreza Hajianpour <hajianpour.mr@gmail.com>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@import '../meshki';
+@import 'variables';
+
+@font-face {
+  font-family: $rtl-font-family;
+  src: $rtl-font-source;
+}
+
+body {
+  direction: rtl;
+  font-family: $rtl-font-family, $font-family;
+  font-size: $rtl-font-size;
+  font-style: normal;
+  font-weight: normal;
+  word-spacing: $rtl-word-spacing;
+}
+
+// Buttons should use RTL font too
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $rtl-font-family, $font-family;
+}
+
+// Keep the blocks of code LTR
+pre {
+  direction: ltr;
+}
+
+// Buttons //================================
+
+// Change the button size for RTL version
+@include create-button {
+  padding: 2px 11px;
+}
+
+// Middle button of button couples for mobile version
+.button-couple {
+  button:not(:first-child):not(:last-child),
+  a:not(:first-child):not(:last-child) {
+    border-radius: 0;
+    border-style: none;
+    display: block;
+    margin: -5px auto 5px auto !important;
+  }
+}
+
+// Button couples for tablets and upper
+@media (min-width: $media-tablet) {
+  .button-couple {
+
+    // First button
+    button:first-child,
+    a:first-child {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 5px;
+      border-style: solid;
+      border-top-left-radius: 0;
+      border-top-right-radius: 5px;
+      margin-right: 0 !important;
+    }
+
+    // Middle button
+    button:not(:first-child):not(:last-child),
+    a:not(:first-child):not(:last-child) {
+      border-bottom-style: solid;
+      border-top-style: solid;
+      display: inline;
+      margin: -8px !important;
+      padding-right: 12px;
+      padding-left: 12px;
+    }
+
+    // Last button
+    button:last-child,
+    a:last-child {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 0;
+      border-style: solid;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 0;
+      margin-left: 0 !important;
+    }
+  }
+}
+
+// Footer //================================
+
+@media (min-width: $media-phablet) {
+  // Footer text alignment for RTL
+  footer,
+  .footer {
+    text-align: right;
+  }
+}
+
+// Forms //================================
+
+// Select background must be on the left
+select {
+  background-position: 2% 50%;
+}
+
+// Margin fix for checkboxes and radio buttons
+input[type=checkbox]+label.checkbox:before,
+input[type=radio]+label.radio:before {
+  margin: 4px auto auto 10px;
+}
+
+// Grid System //================================
+
+// RTL columns
+.col {
+  float: right;
+  margin-left: auto;
+}
+
+// TODO: Use functions to generate offset percentage
+@media (min-width: $media-phablet) {
+  .col {
+    margin-right: 4%;
+
+    // A bit of clean up for columns on tablets and up
+    &:first-child {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    // Offsets from right
+    &.offset-by-one          { margin-right: 8.66666666667%; }
+    &.offset-by-two          { margin-right: 17.3333333333%; }
+    &.offset-by-three        { margin-right: 26%;            }
+    &.offset-by-four         { margin-right: 34.6666666667%; }
+    &.offset-by-five         { margin-right: 43.3333333333%; }
+    &.offset-by-six          { margin-right: 52%;            }
+    &.offset-by-seven        { margin-right: 60.6666666667%; }
+    &.offset-by-eight        { margin-right: 69.3333333333%; }
+    &.offset-by-nine         { margin-right: 78%;            }
+    &.offset-by-ten          { margin-right: 86.6666666667%; }
+    &.offset-by-eleven       { margin-right: 95.3333333333%; }
+
+    &.offset-by-one-third    { margin-right: 34.6666666667%; }
+    &.offset-by-two-thirds   { margin-right: 69.3333333333%; }
+
+    &.offset-by-one-half     { margin-right: 52%; }
+  }
+}
+
+// Navbar //================================
+
+.nav {
+  ul {
+    // Navbar buttons should be on the right side
+    li {
+      float: right;
+    }
+
+    // Logo of the website, it must be the first child of navbar
+    li:first-child a.logo i {
+      color: $normal-black;
+    }
+  }
+}
+
+.nav-dropdown-content {
+  a {
+    text-align: right;
+  }
+}
+
+// Sidenav //================================
+
+// Sidenav starts from the right
+.sidenav {
+  left: auto;
+  right: 0;
+
+  // Different padding of RTL Sidenav
+  a {
+    padding: 8px 32px 8px 8px;
+  }
+}
+
+// Sidenav close button should be on the left
+.sidenav-close-button {
+  left: 0;
+  padding-left: 30px !important;
+  padding-right: 0 !important;
+  right: auto !important;
+}
+
+// Tables //================================
+// Align the table content to right
+td,
+th {
+  text-align: right;
+}

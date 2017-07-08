@@ -1,0 +1,27 @@
+// Change the style of nested lists
+ul {
+  // Unordered Lists have empty disc style
+  list-style: disc;
+
+  ul,
+  ol {
+    font-size: 90%;
+    margin: 1.5rem 0 1.5rem 3rem;
+  }
+}
+
+ol {
+  // Ordered Lists have numerical style
+  list-style: decimal;
+
+  ul,
+  ol {
+    font-size: 90%;
+    margin: 1.5rem 0 1.5rem 3rem;
+  }
+}
+
+// Lists have bottom margin
+li {
+  margin-bottom: 1rem;
+}

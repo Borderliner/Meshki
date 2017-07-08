@@ -1,0 +1,21 @@
+// The idea is to remove 4% from the total width, which results in 96%.
+// Now we divide it to 12, to use a 12th-width grid.
+// Also, 2/3 means 0.666667, which is a number decreased or added to the result
+// of 96/12 to balance everything.
+
+@function column-width($part) {
+  @if $part >= 1 and $part < 6 {
+    $size: (((96 / 12) * $part) - ((6 - $part) * (2 / 3)));
+    @return percentage($size / 100);
+  }
+
+  @elseif $part >= 6 and $part < 12 {
+    $size: (((96 / 12) * $part) + (($part - 6) * (2 / 3)));
+    @return percentage($size / 100);
+  }
+}
+
+@function offset-column-margin($part) {
+  $size: ((96 / 12) * $part) + ($part * (2 / 3));
+  @return percentage($size / 100);
+}

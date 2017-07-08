@@ -1,0 +1,14 @@
+// NOTE: Use it like this:
+// @include create-button(".large.yellow") {
+//   width: 50%;
+// }
+
+@mixin create-button($options:'') {
+  button#{$options},
+  a.button#{$options},
+  input[type="submit"]#{$options},
+  input[type="reset"]#{$options},
+  input[type="button"]#{$options} {
+    @content
+  }
+}

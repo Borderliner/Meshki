@@ -1,0 +1,22 @@
+@mixin create-input-elements($options:'') {
+  input[type="email"]#{$options},
+  input[type="number"]#{$options},
+  input[type="search"]#{$options},
+  input[type="text"]#{$options},
+  input[type="tel"]#{$options},
+  input[type="url"]#{$options},
+  input[type="password"]#{$options},
+  textarea#{$options},
+  select#{$options} {
+    @content
+  }
+}
+
+@mixin create-checkradio($options:'') {
+  input {
+    &[type='checkbox']#{$options},
+    &[type='radio']#{$options} {
+      @content
+    }
+  }
+}

@@ -1,0 +1,100 @@
+// Base Styles
+html {
+  -webkit-tap-highlight-color: $transparent-color; // Remove highlight color
+  font-size: $font-size-global;
+  height: 100%;
+
+}
+
+// General attributes of the body tag
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $font-family;
+  font-size: $font-size-body;
+  font-weight: $font-weight;
+  height: 100%;
+  line-height: $font-line-height;
+}
+
+// Nice blue for links
+a {
+  color: $link-color-default;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-color-hover;
+  }
+}
+
+// Spacing
+@include create-button {
+  margin-bottom: 1rem;
+}
+
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem;
+}
+
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem;
+}
+
+// Misc
+hr {
+  border-top: 1px solid $text-color;
+  margin-bottom: 3.5rem;
+  margin-top: 3rem;
+}
+
+// Text selection color
+::selection {
+  background: $text-selection-color; // WebKit/Blink Browsers
+}
+
+::-moz-selection {
+  background: $text-selection-color; // Gecko Browsers
+}
+
+// Self Clearing Goodness
+.content,
+.row {
+  clear: both;
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+// Media Queries
+// NOTE: The best way to structure the use of media queries is to create the
+// queries near the relevant code. For example, if you wanted to change the
+// styles for buttons on small devices, paste the mobile query code up in the
+// buttons section and style it there. These media queries have been taken from
+// Twitter's Bootstrap for compatibility reasons.
+
+// Larger than mobile
+// @media (min-width: $media-mobile) {}
+
+// Larger than phablet (also point when grid becomes active)
+// @media (min-width: $media-phablet) {}
+
+// Larger than tablet
+// @media (min-width: $media-tablet) {}
+
+// Larger than desktop
+// @media (min-width: $media-desktop) {}
+
+// Larger than Desktop HD
+// @media (min-width: $media-desktop-hd) {}

@@ -1,0 +1,68 @@
+// Make element full width
+.expand {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+// Make sure elements don't run outside containers (great for images in columns)
+.responsive {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+// Float either direction
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+// Center an element
+.centerize {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Center a text
+.text-center {
+  text-align: center;
+}
+
+// Vertical line
+.vertical-line {
+  border-left: 1px $text-color solid;
+}
+
+// Hides the element on mobiles and phablets
+@media (max-width: $media-phablet) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .vertical-line {
+    border-left: 0;
+  }
+}
+
+// Hides the element on tablets and smaller
+@media (max-width: $media-tablet) {
+  .hide-on-tablet {
+    display: none !important;
+  }
+}
+
+// Hides the element on desktops
+@media (min-width: $media-tablet) {
+  .hide-on-desktop {
+    display: none !important;
+  }
+}
+
+// Hides the element on non-mobile and non-phablets
+@media (min-width: $media-phablet) {
+  .hide-on-non-mobile {
+    display: none !important;
+  }
+}

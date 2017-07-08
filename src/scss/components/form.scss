@@ -1,0 +1,242 @@
+// General attributes
+@include create-input-elements {
+  // Removes awkward default styles on some inputs for iOS
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  background-color: $form-color-background;
+  border: 1px solid $form-color-border;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: $normal-black;
+  height: 38px;
+  padding: 0 10px;
+  transition: border .3s, background-color .3s, box-shadow .3s;
+}
+
+// Dim the form elements when they're disabled
+@include create-input-elements(':disabled') {
+  background-color: $form-color-disabled;
+  border-color: $form-color-disabled;
+  color: $form-color-disabled-text;
+}
+
+// Dropdown arrow for everyone!
+select {
+  background: $select-dropdown-arrow;
+  background-color: $form-color-background;
+  background-position: 98% 50%;
+  outline: 0 !important;
+
+  // Firefox outline bug
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $normal-black;
+  }
+}
+
+textarea {
+  min-height: 65px;
+  padding: 6px 10px;
+}
+
+// Blue light animation when the form elements get focus
+@include create-input-elements(':focus') {
+  background-color: $white;
+  // border: 1px solid $form-color-border;
+  // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+  outline: 0 !important;
+}
+
+@include create-input-elements('.error') {
+  border: 1px $button-color-red solid;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .1) inset, 0 0 8px $button-color-red;
+}
+
+@include create-input-elements('.warning') {
+  border: 1px $button-color-orange solid;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .1) inset, 0 0 8px $button-color-orange;
+}
+
+@include create-input-elements('.success') {
+  border: 1px $button-color-green solid;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .1) inset, 0 0 8px $button-color-green;
+}
+
+// Label and Legend normalization
+label,
+legend {
+  display: block;
+  font-weight: normal;
+  margin-bottom: .5rem;
+}
+
+// Fieldset normalization
+fieldset {
+  border: 2px solid $text-color;
+  border-radius: 5px;
+  margin: 10px 5px;
+  padding: 20px;
+}
+
+// Checkbox and Radio normalization
+@include create-checkradio {
+  display: inline;
+
+  // Make the actual boxes invisible
+  opacity: 0;
+  position: absolute;
+
+  // Checkbox and radio normalization
+  cursor: pointer;
+  margin: 5px;
+  vertical-align: middle;
+}
+
+
+// Labels for checkboxes and radios have relative position to their parent
+label {
+  .checkbox,
+  .radio {
+    cursor: pointer;
+    margin: 5px;
+    position: relative;
+    vertical-align: middle;
+  }
+}
+
+// General attributes for checkboxes and radio buttons
+input[type='checkbox'] + label.checkbox::before,
+input[type='radio'] + label.radio::before {
+  background-color: transparent;
+  border: 2px solid $text-color;
+  border-radius: 5px;
+  content: '';
+  display: inline-block;
+  height: 10px;
+  margin: auto 10px 3px auto;
+  padding: 2px;
+  text-align: center;
+  transition: background-color .3s, box-shadow .3s;
+  vertical-align: middle;
+  width: 10px;
+}
+
+// Round shape for radio boxes
+input[type='radio'] + label.radio::before {
+  border-radius: 20px;
+}
+
+// When the checkbox is checked
+input[type='checkbox']:checked + label.checkbox:before {
+  background-color: $form-checkradio-color;
+}
+
+// When the radio button is checked
+input[type='radio']:checked + label.radio:before {
+  background-color: $form-checkradio-color;
+}
+
+// Remove outlines of checkboxes and radio buttons, especially for Firefox
+input[type='checkbox']:focus + label.checkbox,
+input[type='radio']:focus + label.radio {
+  outline: none !important;
+}
+
+input {
+  &[type='range'] {
+    // Style input range
+    -webkit-appearance: none;
+    background-color: transparent;
+    margin: 0 5px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-slider-runnable-track {
+
+      background: $meshki-black;
+      border: 2px solid $form-color-background;
+      border-radius: 25px;
+      cursor: pointer;
+      height: 26px;
+      width: 100%;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      background-color: $form-color-background;
+      border: 2px solid transparent;
+      border-radius: 25px;
+      cursor: pointer;
+      height: 22px;
+      width: 22px;
+    }
+
+    &::-moz-range-track {
+      background-color: $meshki-black;
+      border: 2px solid $form-color-background;
+      border-radius: 25px;
+      cursor: pointer;
+      height: 23px;
+      width: 100%;
+    }
+
+    &::-moz-range-thumb {
+      background-color: $form-color-background;
+      border: 2px solid transparent;
+      border-radius: 25px;
+      cursor: pointer;
+      height: 17px;
+      width: 17px;
+    }
+
+    // Fix Firefox outline bug
+    &::-moz-focus-outer {
+      border: 0;
+    }
+
+    &::-ms-track {
+      background-color: transparent;
+      border-color: transparent;
+      color: transparent;
+      cursor: pointer;
+      height: 26px;
+      width: 100%;
+    }
+
+    &::-ms-fill-lower,
+    &::-ms-fill-upper {
+      background-color: $meshki-black;
+      border: 2px solid $form-color-background;
+      border-radius: 50px;
+    }
+
+    &::-ms-thumb {
+      background-color: $form-color-background;
+      border: 2px solid transparent;
+      border-radius: 25px;
+      cursor: pointer;
+      height: 20px;
+    }
+  }
+}
+
+
+// Change placeholder color for text inputs
+// Chrome
+::-webkit-input-placeholder,
+// IE 10+
+:-ms-input-placeholder {
+  color: $form-color-placeholder;
+}
+
+// Firefox 19+
+::-moz-placeholder,
+// Firefox 4 - 18
+:-moz-placeholder {
+  color: $form-color-placeholder;
+  opacity: 1;
+}

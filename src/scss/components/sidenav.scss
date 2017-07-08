@@ -1,0 +1,97 @@
+// The side navigation menu
+.sidenav {
+  background-color: $sidenav-color-bg;
+  height: 100%;
+  left: -1px;
+  overflow-x: hidden;
+  padding-top: 15px;
+  position: fixed;
+  top: 0;
+  transition: .5s;
+  width: 0; // changes with meshki.js
+  z-index: 10; // Stays on top of everything, unless a modal is implemented
+
+  // Position and style the close button (top right corner)
+  .sidenav-close-button {
+    font-size: 3.6rem !important;
+    outline: 0 !important;
+    padding-right: 30px !important;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  // Special form of <hr> for sidenav
+  hr {
+    border-color: $sidenav-color-links;
+    width: 80%;
+  }
+
+  // The links inside side navigation panel
+  a {
+    color: $sidenav-color-links;
+    display: block;
+    font-size: 1.6rem;
+    outline: 0 !important;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    transition: .3s;
+    white-space: nowrap;
+
+    &:hover {
+      color: $text-color;
+    }
+
+    // No color change for disabled sidenav links
+    &[disabled] {
+      cursor: default;
+    }
+
+    &[disabled]:hover {
+      color: $sidenav-color-links;
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  // The buttons inside side navigation panel
+  button {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    min-width: 150px;
+    width: 84%;
+
+  }
+}
+
+// Pushes the container div with effect
+.container {
+  position: absolute;
+  transition: margin-left .5s, margin-right .5s;
+  width: 100%;
+}
+
+.overlay {
+  background-color: $sidenav-color-overlay;
+  display: inline;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity .5s, visibility .5s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 1;
+}
+
+// Change the style of the sidenav for non-mobiles
+@media (min-width: $media-phablet) {
+  .sidenav {
+    padding-top: 60px;
+
+    a {
+      font-size: 2rem;
+    }
+  }
+}

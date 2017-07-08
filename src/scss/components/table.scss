@@ -1,0 +1,45 @@
+table {
+  border-spacing: 0;
+
+  // Stripped table
+  &.striped tr:nth-child(even) {
+    background-color: $table-color-striped;
+  }
+
+  // Centerizes the texts inside each cell
+  &.centerize {
+    & > thead th,
+    & > tbody td {
+      text-align: center;
+    }
+  }
+
+  &.hoverable {
+    // Hover effect activated for each row
+    & > tbody tr {
+      transition: background-color .3s;
+    }
+
+    // Changes color when the mouse is over each row
+    & > tbody tr:hover {
+      background-color: $table-color-hover;
+    }
+  }
+}
+
+// Padding and stuff for each cell
+th,
+td {
+  border-bottom: 1px $table-color-border solid;
+  padding: 12px 15px;
+  text-align: left;
+
+  // First and last children (most right and most left cells) do not need padding
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}

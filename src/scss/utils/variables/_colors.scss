@@ -1,0 +1,64 @@
+// General Colors //================================
+
+$background-color:                 #222;
+$text-color:                       #e1e1e1;
+$text-selection-color:             #15acee;
+$white-color:                      $text-color;
+$transparent-color:                rgba(0, 0, 0, 0);
+$meshki-black:                     #222;
+$normal-black:                     #000;
+$white:                            #fff;
+
+// Button Colors //================================
+
+$button-color-disabled:            #888;
+
+$button-color-simple:              $text-color;
+$button-color-simple-active:       #b9b9b9;
+
+$button-color-blue:                #55acee;
+$button-color-blue-active:         #4b82b7;
+
+$button-color-green:               #2ecc71;
+$button-color-green-active:        #21a057;
+
+$button-color-red:                 #e74c3c;
+$button-color-red-active:          #bd382a;
+
+$button-color-orange:              #e67e22;
+$button-color-orange-active:       #c16819;
+
+// Link Colors //================================
+$link-color-default:               #55acee;
+$link-color-hover:                 #74c1fb;
+
+// Sidenav Colors //================================
+$sidenav-color-bg:                 #000;
+$sidenav-color-links:              #818181;
+$sidenav-color-overlay:            #000;
+
+// Footer Colors //================================
+
+$footer-color-background:          #111;
+
+// Navbar Colors //================================
+
+$navbar-color-button-active:       $footer-color-background;
+$navbar-color-logo:                $text-color;
+$navbar-color-logo-hover:          #f5f5f5;
+$navbar-color-dropdown-button-bg:  #444;
+
+// Form Colors //================================
+
+$form-color-background:            $text-color;
+$form-color-border:                #d1d1d1;
+$form-color-disabled:              #b1b1b1;
+$form-color-disabled-text:         #444;
+$form-checkradio-color:            #33bbf0;
+$form-color-placeholder:           #6a6a6a;
+
+// Table Colors //================================
+
+$table-color-border:               #7c7c7c;
+$table-color-striped:              #2f2f2f;
+$table-color-hover:                #404040;

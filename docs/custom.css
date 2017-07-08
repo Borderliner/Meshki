@@ -46,12 +46,8 @@ div.share-links i.fa {
   margin-bottom: 15px;
 }
 
-a {
-  text-decoration: none;
-}
-
 .content {
-  padding-top: 140px;
+  padding-top: 170px;
 }
 
 .grid-table div div {
@@ -61,6 +57,7 @@ a {
   font-size: 1.5rem;
   color: #222;
   background-color: #E0E0E0;
+  margin-bottom: 5px;
 }
 
 .heading-font-size {
@@ -82,6 +79,12 @@ a {
 
 .custom-down-cdn {
   width: 250px;
+}
+
+.clipboard-btn {
+  float: right;
+  position: absolute;
+  right: 35px;
 }
 
 @media (min-width: 544px) {

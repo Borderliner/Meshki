@@ -1,0 +1,110 @@
+// Center the row, used to hold columns
+.row {
+  @include centerize;
+  display: block;
+  margin-bottom: 30px;
+}
+
+// Content creates a responsive space to hold page data
+.content {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: $content-max-width;
+  padding: 0 20px;
+  padding-top: 40px;
+  position: relative;
+  width: 100%;
+}
+
+// Columns fill their parent from the left side
+.col {
+  box-sizing: border-box;
+  float: left;
+  width: 100%;
+}
+
+// Decrease the content width for non-mobiles
+@media (min-width: $media-mobile) {
+  .content {
+    padding: auto 0;
+    width: 85%;
+  }
+}
+
+// For devices larger than 544px
+@media (min-width: $media-phablet) {
+  // Decrease content width for a proper look
+  .content {
+    width: 80%;
+  }
+
+  // Left margin for columns so they do not collide
+  .col {
+    margin-left: $col-margin;
+
+    // The first column doesn't need left margin
+    &:first-child {
+      margin-left: 0;
+    }
+
+    // 12-based columns
+    &.one    { width: column-width(1);  }
+    &.two    { width: column-width(2);  }
+    &.three  { width: column-width(3);  }
+    &.four   { width: column-width(4);  }
+    &.five   { width: column-width(5);  }
+    &.six    { width: column-width(6);  }
+    &.seven  { width: column-width(7);  }
+    &.eight  { width: column-width(8);  }
+    &.nine   { width: column-width(9);  }
+    &.ten    { width: column-width(10); }
+    &.eleven { width: column-width(11); }
+
+    // Fill the row, with no margin on the left
+    &.twelve {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    // Proportional columns
+    &.one-third  { width: column-width(4); }
+
+    &.two-third,
+    &.two-thirds {
+      width: column-width(8);
+    }
+
+    // Half of the container columns
+    &.half,
+    &.one-half   {
+      width: column-width(6);
+    }
+
+    // Offsets
+    &.offset-by-one    { margin-left: offset-column-margin(1);  }
+    &.offset-by-two    { margin-left: offset-column-margin(2);  }
+    &.offset-by-three  { margin-left: offset-column-margin(3);  }
+    &.offset-by-four   { margin-left: offset-column-margin(4);  }
+    &.offset-by-five   { margin-left: offset-column-margin(5);  }
+    &.offset-by-six    { margin-left: offset-column-margin(6);  }
+    &.offset-by-seven  { margin-left: offset-column-margin(7);  }
+    &.offset-by-eight  { margin-left: offset-column-margin(8);  }
+    &.offset-by-nine   { margin-left: offset-column-margin(9);  }
+    &.offset-by-ten    { margin-left: offset-column-margin(10); }
+    &.offset-by-eleven { margin-left: offset-column-margin(11); }
+
+    // Proportional Offsets
+    &.offset-by-one-third  { margin-left: offset-column-margin(4); }
+
+    &.offset-by-two-third,
+    &.offset-by-two-thirds {
+      margin-left: offset-column-margin(8);
+    }
+
+    // Half of the container as offset
+    &.offset-by-half,
+    &.offset-by-one-half   {
+      margin-left: offset-column-margin(6);
+    }
+  }
+}

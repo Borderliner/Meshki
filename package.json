@@ -1,12 +1,14 @@
 {
   "name": "meshki",
-  "version": "1.5.1",
-  "description": "Meshki: A Black-Colored, Responsive Boilerplate for UI Development",
-  "main": "dist/meshki.min.css",
+  "version": "2.0.0",
+  "description": "Meshki: The most stylish CSS library on planet Earth!",
+  "main": "build.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "grunt default",
-    "watch": "grunt watch"
+    "compile": "node build.js",
+    "watch": "node build.js --watch",
+    "rebuild-sass": "npm rebuild node-sass --force",
+    "start": "npm run compile"
   },
   "repository": {
     "type": "git",
@@ -20,17 +22,21 @@
     "black"
   ],
   "author": "Borderliner",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/Borderliner/Meshki/issues"
   },
   "homepage": "https://borderliner.github.io/Meshki/",
   "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-concat-css": "^0.3.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^1.0.0",
-    "grunt-contrib-uglify": "^2.0.0",
-    "grunt-contrib-watch": "^1.0.0"
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.3.0"
+  },
+  "dependencies": {
+    "colors": "^1.1.2",
+    "fs-extra": "^3.0.1",
+    "node-sass": "^4.5.3",
+    "node-watch": "^0.5.5",
+    "uglify-js": "^3.0.15"
   }
 }

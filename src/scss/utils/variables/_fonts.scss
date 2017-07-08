@@ -1,0 +1,10 @@
+$font-family:              'Open Sans', sans-serif;
+$font-weight:              400;
+$font-size-after:          1.6rem;
+
+// NOTE: html font-size is set to 62.5% so that all the REM measurements
+// throughout Meshki are based on 10px sizing. So basically 1.5rem = 15px
+$font-size-global:        62.5%;
+$font-size-body:          1.4rem;
+$font-line-height:        1.6;
+$font-size-button:       1.4rem;

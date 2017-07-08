@@ -1,0 +1,7 @@
+$rtl-font-family:   'Yekan';
+$rtl-font-source:   local($rtl-font-family),
+url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.1/fonts/yekan.woff') format('woff'),
+url('https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.1/fonts/yekan.ttf') format('truetype');
+
+$rtl-font-size: 1.5rem;
+$rtl-word-spacing: .12em;

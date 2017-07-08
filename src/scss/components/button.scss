@@ -1,0 +1,180 @@
+// Removed focus outlines, especially in Firefox
+@include create-button(':focus') {
+  outline: 0 !important;
+}
+
+// Simple button, with no style
+@include create-button  {
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  -webkit-transition: .3s;
+  background-color: transparent;
+  border: 2px solid $button-color-simple;
+  border-radius: 5px;
+  color: $button-color-simple;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $font-size-button;
+  line-height: normal !important; // Fix Midori bug
+  // Button expands out of boundary bug
+  max-width: 98%;
+  padding: 8px 10px;
+  text-decoration: none;
+  transition: .3s;
+}
+
+@include create-button('.small')  {
+  font-size: 1.2rem;
+}
+
+@include create-button('.medium')  {
+  font-size: 1.6rem;
+}
+
+@include create-button('.large')  {
+  font-size: 2.2rem;
+}
+
+// Simple button's hover
+@include create-button(':hover') {
+  background-color: $button-color-simple;
+  border-color: $button-color-simple;
+  color: $meshki-black;
+}
+
+// Simple button's active
+@include create-button(':active') {
+  background-color: $button-color-simple-active;
+  border-color: $button-color-simple-active;
+}
+
+// Disabled button
+@include create-button(':disabled') {
+  border-color: $button-color-disabled;
+  color: $button-color-disabled;
+  pointer-events: none;
+}
+
+@include create-button('.disabled') {
+  border-color: $button-color-disabled;
+  color: $button-color-disabled;
+  pointer-events: none;
+}
+
+// Blue button
+@include create-button('.blue') {
+  border: 2px $button-color-blue solid;
+  color: $button-color-blue;
+}
+
+// Blue button's hover
+@include create-button('.blue:hover') {
+  background-color: $button-color-blue;
+  border-color: $button-color-blue;
+  color: $text-color;
+}
+
+// Blue button's active
+@include create-button('.blue:active') {
+  background-color: $button-color-blue-active;
+  border-color: $button-color-blue-active;
+}
+
+// Green button
+@include create-button('.green') {
+  border: 2px $button-color-green solid;
+  color: $button-color-green;
+}
+
+// Green button's hover
+@include create-button('.green:hover') {
+  background-color: $button-color-green;
+  border-color: $button-color-green;
+  color: $text-color;
+}
+
+// Green button's active
+@include create-button('.green:active') {
+  background-color: $button-color-green-active;
+  border-color: $button-color-green-active;
+}
+
+// Red button
+@include create-button('.red') {
+  border: 2px $button-color-red solid;
+  color: $button-color-red;
+}
+
+// Red button's hover
+@include create-button('.red:hover') {
+  background-color: $button-color-red;
+  border-color: $button-color-red;
+  color: $text-color;
+}
+
+// Red button's active
+@include create-button('.red:active') {
+  background-color: $button-color-red-active;
+  border-color: $button-color-red-active;
+}
+
+// Orange button
+@include create-button('.orange') {
+  border: 2px $button-color-orange solid;
+  color: $button-color-orange;
+}
+
+// Orange button's hover
+@include create-button('.orange:hover') {
+  background-color: $button-color-orange;
+  border-color: $button-color-orange;
+  color: $text-color;
+}
+
+// Orange button's active
+@include create-button('.orange:active') {
+  background-color: $button-color-orange-active;
+  border-color: $button-color-orange-active;
+}
+
+.button-couple {
+
+  button:not(:first-child):not(:last-child),
+  a:not(:first-child):not(:last-child) {
+    border-radius: 0;
+    border-style: none;
+    display: block;
+    margin: -5px auto 5px auto !important;
+    pointer-events: none;
+  }
+}
+
+@media (min-width: $media-tablet) {
+  .button-couple {
+
+    button:first-child,
+    a:first-child {
+      border-bottom-right-radius: 0;
+      border-right-style: solid;
+      border-top-right-radius: 0;
+      margin-right: 0 !important;
+      margin-left: 3px;
+    }
+
+    button:not(:first-child):not(:last-child),
+    a:not(:first-child):not(:last-child) {
+      border-bottom-style: solid;
+      border-top-style: solid;
+      display: inline;
+      margin: -5px !important;
+    }
+
+    button:last-child,
+    a:last-child {
+      border-bottom-left-radius: 0;
+      border-left-style: solid;
+      border-top-left-radius: 0;
+      margin: auto 3px auto 0 !important;
+    }
+  }
+}
