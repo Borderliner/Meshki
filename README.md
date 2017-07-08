@@ -5,6 +5,8 @@
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/meshki_ui.svg?style=social&label=Follow&maxAge=2592000?style=flat-square)](https://twitter.com/Meshki_UI)
 
+## Meshki is being re-written using [Sass](http://sass-lang.com/). Take a look at [`sass-dev`](https://github.com/Borderliner/Meshki/tree/sass-dev) branch.
+
 ![Meshki Banner](https://borderliner.github.io/Meshki/meta-image.png)
 
 Meshki is a simple, black-colored, responsive boilerplate to kickstart any responsive project.
