@@ -20,6 +20,7 @@
   background-color: $form-color-disabled;
   border-color: $form-color-disabled;
   color: $form-color-disabled-text;
+  -webkit-text-fill-color: $form-color-disabled-text;
 }
 
 // Dropdown arrow for everyone!
@@ -227,16 +228,8 @@ input {
 
 // Change placeholder color for text inputs
 // Chrome
-::-webkit-input-placeholder,
-// IE 10+
-:-ms-input-placeholder {
-  color: $form-color-placeholder;
-}
-
-// Firefox 19+
-::-moz-placeholder,
-// Firefox 4 - 18
-:-moz-placeholder {
+::placeholder {
   color: $form-color-placeholder;
   opacity: 1;
 }
+

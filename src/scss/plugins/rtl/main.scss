@@ -214,3 +214,9 @@ td,
 th {
   text-align: right;
 }
+
+// Placeholder position bug
+::placeholder {
+  position: relative;
+  top: 4px;
+}
