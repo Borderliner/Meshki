@@ -1,3 +1,7 @@
+## v2.0.1
+  - [x] Fixed padding issues for forms in RTL version
+  - [x] Fixed placeholder colors not consistent on browsers
+
 ## v2.0.0
   - [x] Rewrite Meshki using a pre-processor
 
