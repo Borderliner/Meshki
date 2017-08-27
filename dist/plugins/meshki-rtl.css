@@ -151,3 +151,7 @@ input[type=radio] + label.radio:before {
 td,
 th {
   text-align: right; }
+
+::placeholder {
+  position: relative;
+  top: 4px; }

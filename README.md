@@ -13,22 +13,33 @@ It is only <b>~20 KiB</b> (minified) and ~30 KiB (normal), including both Scss/C
 
 Check out <https://borderliner.github.io/Meshki/> for samples and details.
 
-## Getting Started
+- [Getting Started](#getting-started)
+- [How to Compile](#how-to-compile)
+    - [npm](#npm)
+    - [Yarn](#yarn)
+- [Why Meshki is Awesome](#why-meshki-is-awesome)
+- [Browser Support](#browser-support)
+- [Major Known Issues](#major-known-issues)
+- [Tools Used](#tools-used)
+- [License](#license)
+- [Acknowledgement](#acknowledgement)
+
+# Getting Started
 
 There are a couple ways to download Meshki:
-- [Download the zip](https://github.com/Borderliner/Meshki/archive/v2.0.0.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v2.0.0.tar.gz)
+- [Download the zip](https://github.com/Borderliner/Meshki/archive/v2.0.1.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v2.0.1.tar.gz)
 - Clone the repo: `git clone https://github.com/Borderliner/Meshki.git` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download)
 - Use Bower: `bower install meshki` **(Recommended)**
 - Use npm: `npm install meshki`
 
-### How to Compile
+# How to Compile
 You need node.js to minify the source Scss and JavaScript files and produce outputs. Head over to [nodejs.org](https://nodejs.org/en/) and download a version for your system, or download it from your package manager. 
 
 Clone the repo:
 
 `git clone https://github.com/Borderliner/Meshki.git && cd Meshki`
 
-#### npm
+## npm
 
 Install all the dependencies with npm:
 
@@ -48,7 +59,7 @@ Sometimes when you upgrade your NodeJS, node-sass needs to be recompiled for the
 
 `npm run rebuild-sass`
 
-#### Yarn
+## Yarn
 
 Install all the dependencies with yarn:
 
@@ -68,7 +79,7 @@ Sometimes when you upgrade your NodeJS, node-sass needs to be recompiled for the
 
 `yarn run rebuild-sass`
 
-### Why Meshki is Awesome
+# Why Meshki is Awesome
 
 Meshki is lightweight, stylish and simple. It styles only raw HTML elements (with a few exceptions) and provides a responsive grid with a minimal and clean interface.
 - Around 1.3k lines of unminified CSS, with comments
@@ -80,7 +91,7 @@ Meshki is lightweight, stylish and simple. It styles only raw HTML elements (wit
 - Clean code, clean interface, without any headaches
 - Dependency-free! You don't need jQuery to run Meshki. All pure JavaScript
 
-## Browser Support
+# Browser Support
 
 - Chrome & Chromium (latest) **Well-Tested**
 - Mozilla Firefox (latest) **Well-Tested**
@@ -91,14 +102,14 @@ Meshki is lightweight, stylish and simple. It styles only raw HTML elements (wit
 
 The above list is non-exhaustive. Meshki works perfectly with almost all older versions of the browsers above, though IE certainly has large degradation prior to IE 9.
 
-## Major Known Issues
+# Major Known Issues
 - None yet
 
-## Tools Used
+# Tools Used
 
 Meshki has been developed mainly on macOS, using [Atom Editor](https://atom.io/) and [VSCode](https://code.visualstudio.com). For git GUI, [SourceTree](https://www.sourcetreeapp.com) has been used.
 
-## License
+# License
 
 All parts of Meshki are free to use under [Apache-2.0 License](https://github.com/Borderliner/Meshki/blob/master/LICENSE).
 
@@ -110,7 +121,7 @@ The website of [Meshki](https://borderliner.github.io/Meshki/) uses:
 - [Prism](http://prismjs.com)
 - [clipboard.js](https://clipboardjs.com)
 
-## Acknowledgement
+# Acknowledgement
 
 [Meshki](https://borderliner.github.io/Meshki/) started by [Mohammadreza Hajianpour](mailto:hajianpour.mr@gmail.com) as a fork of [Skeleton](https://github.com/dhg/Skeleton). Although it has changed a lot, and Meshki has experienced a total overhaul
 Skeleton was created by [Dave Gamache](https://twitter.com/dhg).
