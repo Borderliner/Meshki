@@ -126,6 +126,11 @@ input[type=radio]+label.radio:before {
   margin: 4px auto auto 10px;
 }
 
+// Fix a bug in the placeholder positioning
+input[type=text]::-webkit-input-placeholder {
+  top: 0px;
+}
+
 // Grid System //================================
 
 // RTL columns
