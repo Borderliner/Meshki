@@ -1,6 +1,6 @@
 /*
- * Meshki v2.2.0 (https://borderliner.github.io/Meshki/)
- * Copyright 2016+ Ryan Hajianpour <ryan.hajianpour@gmail.com>
+ * Meshki v2.3.0 (https://borderliner.github.io/Meshki/)
+ * Copyright 2016-2021 Mohammadreza Hajianpour <ryan.hajianpour@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,12 +15,12 @@
  * limitations under the License.
  */
 @font-face {
-  font-family: "Yekan";
-  src: local("Yekan"), url("https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.1/fonts/yekan.woff") format("woff"), url("https://cdnjs.cloudflare.com/ajax/libs/meshki/1.5.1/fonts/yekan.ttf") format("truetype"); }
+  font-family: "Vazir FD";
+  src: local("Vazir FD"), url("https://cdnjs.cloudflare.com/ajax/libs/meshki/2.3.0/fonts/Vazir-Regular-FD.woff") format("woff"), url("https://cdnjs.cloudflare.com/ajax/libs/meshki/2.3.0/fonts/Vazir-Regular-FD.ttf") format("truetype"); }
 
 body {
   direction: rtl;
-  font-family: "Yekan", "Open Sans", sans-serif;
+  font-family: "Vazir FD", "Open Sans", sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: normal;
@@ -31,7 +31,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: "Yekan", "Open Sans", sans-serif; }
+  font-family: "Vazir FD", "Open Sans", sans-serif; }
 
 pre {
   direction: ltr; }
@@ -87,6 +87,9 @@ select {
 input[type=checkbox] + label.checkbox:before,
 input[type=radio] + label.radio:before {
   margin: 4px auto auto 10px; }
+
+input[type=text]::-webkit-input-placeholder {
+  top: 0px; }
 
 .col {
   float: right;
