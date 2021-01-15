@@ -1,3 +1,10 @@
+## v2.3.0
+  - [x] Fix placeholder positioning bug for RTL
+  - [x] Update all dependencies to their recent stable version
+  - [x] Change RTL font from Yekan to Vazir
+  - [x] Update linting rules and apply them
+  - [x] Update Normalize.css to its recent version
+
 ## v2.0.1
   - [x] Fixed padding issues for forms in RTL version
   - [x] Fixed placeholder colors not consistent on browsers
