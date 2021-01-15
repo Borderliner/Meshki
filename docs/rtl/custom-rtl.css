@@ -1,7 +1,7 @@
 .meshki-features i.far,
 .meshki-features i.fas
  {
-  font-size: 5rem;
+  font-size: 4.2rem;
   margin-bottom: 20px;
 }
 
@@ -33,9 +33,10 @@ div.share-links {
   color: #DB4437;
 }
 
-div.share-links i.far,
-div.share-links i.fas {
-  font-size: 4rem;
+.share-links i.far,
+.share-links i.fas,
+.share-links i.fab {
+  font-size: 3rem;
 }
 
 :not(pre)>code[class*=language-], pre[class*=language-] {
@@ -43,9 +44,10 @@ div.share-links i.fas {
 }
 
 .title {
+  display: block;
   width: 40vmax;
   padding-bottom: 10px;
-  display: block;
+  padding-top: 4vw;
 }
 
 .col {
@@ -98,6 +100,38 @@ a {
   float: right;
   position: absolute;
   right: 35px;
+}
+
+.download-buttons {
+  margin-bottom: 32vh;
+  margin-top: 50px;
+}
+
+.extern-twitter {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.extern-twitter i {
+  font-size: 3rem;
+}
+
+.extern-npm {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.extern-npm i {
+  font-size: 4rem;
+}
+
+.extern-github {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.extern-github i {
+  font-size: 2.8rem;
 }
 
 @media (min-width: 544px) {
