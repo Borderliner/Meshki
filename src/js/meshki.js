@@ -20,6 +20,29 @@
 /* eslint no-var: off */
 /* eslint object-shorthand: off */
 /* eslint func-names: off */
+/*
+eslint-disable es5/no-es6-methods,
+es5/no-es6-static-methods,
+es5/no-arrow-functions,
+es5/no-binary-and-octal-literals,
+es5/no-block-scoping,
+es5/no-classes,
+es5/no-computed-properties,
+es5/no-default-parameters,
+es5/no-destructuring,
+es5/no-exponentiation-operator,
+es5/no-for-of,
+es5/no-generators,
+es5/no-modules,
+es5/no-object-super,
+es5/no-rest-parameters,
+es5/no-shorthand-properties,
+es5/no-spread,
+es5/no-template-literals,
+es5/no-typeof-symbol,
+es5/no-unicode-code-point-escape,
+es5/no-unicode-regex
+*/
 
 var meshki = {
   isRTL: function () {
