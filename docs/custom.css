@@ -1,13 +1,16 @@
-.meshki-features i.fa {
+.meshki-features i.fas,
+.meshki-features i.far {
   font-size: 5rem;
   margin-bottom: 20px;
 }
 
-.nav i.fa {
+.nav i.far,
+.nav i.fas {
   font-size: 1.8rem;
 }
 
-.logo i.fa {
+.logo i.far,
+.logo i.fas {
   padding-right: 8px;
 }
 
@@ -29,7 +32,8 @@ div.share-links {
   color: #DB4437;
 }
 
-div.share-links i.fa {
+div.share-links i.far,
+div.share-links i.fas {
   font-size: 4rem;
 }
 
