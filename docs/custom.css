@@ -98,22 +98,22 @@ div.share-links {
   background-color: #333;
 }
 
-.jquery-modal > .image.content {
+.jquery-modal .image.content {
   padding-top: 30px;
 }
 
-.jquery-modal > .image-container {
+.jquery-modal .image-container {
   background-color: #fff;
   margin: 15px auto;
   padding: 10px 20px;
 }
 
-.jquery-modal > .modal-footer {
+.jquery-modal .modal-footer {
   background-color: #222;
   color: #eee;
 }
 
-.jquery-modal > .ui.modal ui.medium.image {
+.jquery-modal .ui.modal ui.medium.image {
   text-align: center;
 }
 
