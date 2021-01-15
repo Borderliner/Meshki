@@ -144,3 +144,9 @@ a {
   0%   { opacity: 1; }
   100% { opacity: .5; }
 }
+
+.celebration-5 {
+  position: relative;
+  top: -32px;
+  left: 20px;
+}
