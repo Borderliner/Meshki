@@ -103,12 +103,18 @@ a {
 }
 
 #coinwidget {
-  width: 90%;
+  width: 100%;
 }
 
 #coinwidget button {
   width: 100%;
 }
+
+.celebration-5 {
+  position: relative;
+  top: 20px;
+}
+
 
 .jquery-modal > .ui.modal {
   background-color: #333;
