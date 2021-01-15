@@ -136,11 +136,11 @@ div.share-links {
 }
 
 .jquery-modal .wallet-number {
+  width: 100%;
   font-size: 1.5rem;
   color: darksalmon;
   border: 2px solid red;
-  padding: 5px 15px;
-  letter-spacing: 1.5px;
+  padding: 5px;
   text-align: center;
   margin: 15px 0;
 }
