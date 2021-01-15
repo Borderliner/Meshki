@@ -29,7 +29,7 @@ Check out <https://borderliner.github.io/Meshki/> for samples and details.
 # Getting Started
 
 There are a couple ways to download Meshki:
-- [Download the zip](https://github.com/Borderliner/Meshki/archive/v2.2.0.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v2.2.0.tar.gz)
+- [Download the zip](https://github.com/Borderliner/Meshki/archive/v2.3.0.zip) or [the tar.gz](https://github.com/Borderliner/Meshki/archive/v2.3.0.tar.gz)
 - Clone the repo: `git clone https://github.com/Borderliner/Meshki.git` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download)
 - Use Bower: `bower install meshki` **(Recommended)**
 - Use npm: `npm install meshki`
@@ -109,7 +109,7 @@ The above list is non-exhaustive. Meshki works perfectly with almost all older v
 
 # Tools Used
 
-Meshki has been developed mainly on macOS, using [Atom Editor](https://atom.io/) and [VSCode](https://code.visualstudio.com). For git GUI, [SourceTree](https://www.sourcetreeapp.com) has been used.
+Meshki has been developed mainly on PC, using [VSCode](https://code.visualstudio.com) and its surrounding tools.
 
 # License
 
@@ -122,8 +122,9 @@ The website of [Meshki](https://borderliner.github.io/Meshki/) uses:
 - [Google's Open Sans font](https://fonts.google.com/specimen/Open+Sans)
 - [Prism](http://prismjs.com)
 - [clipboard.js](https://clipboardjs.com)
+- [Vazir Font](https://rastikerdar.github.io/vazir-font/)
 
 # Acknowledgement
 
-[Meshki](https://borderliner.github.io/Meshki/) started by [Ryan Hajianpour](mailto:ryan.hajianpour@gmail.com) as a fork of [Skeleton](https://github.com/dhg/Skeleton). Although it has changed a lot, and Meshki has experienced a total overhaul
+[Meshki](https://borderliner.github.io/Meshki/) started by [Mohammadreza Hajianpour](mailto:ryan.hajianpour@gmail.com) as a fork of [Skeleton](https://github.com/dhg/Skeleton). Although it has changed a lot, and Meshki has experienced a total overhaul
 Skeleton was created by [Dave Gamache](https://twitter.com/dhg).

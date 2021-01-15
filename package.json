@@ -1,6 +1,6 @@
 {
   "name": "meshki",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Meshki: The most stylish CSS library on planet Earth!",
   "main": "build.js",
   "scripts": {

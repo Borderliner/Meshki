@@ -1,13 +1,13 @@
 {
   "name": "meshki",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "homepage": "https://borderliner.github.io/Meshki/",
   "repository": {
     "type": "git",
     "url": "https://github.com/Borderliner/Meshki"
   },
   "authors": [
-    "Ryan Hajianpour <ryan.hajianpour@gmail.com> (http://foulfell.ca/)"
+    "Mohammadreza Hajianpour <ryan.hajianpour@gmail.com> (http://foulfell.ca/)"
   ],
   "description": "Meshki: The most stylish CSS library on planet Earth!",
   "main": [
