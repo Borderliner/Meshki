@@ -117,7 +117,6 @@ a {
   top: 20px;
 }
 
-
 .jquery-modal > .ui.modal {
   background-color: #333;
 }
@@ -196,8 +195,3 @@ a {
   100% { opacity: .5; }
 }
 
-.celebration-5 {
-  position: relative;
-  top: -32px;
-  left: 20px;
-}
