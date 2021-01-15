@@ -1,5 +1,6 @@
 ## v2.3.1
   - [ ] Change hover text colors to dark
+  - [ ] Remove extra button padding in RTL mode
 
 ## v2.3.0
   - [x] Fix placeholder positioning bug for RTL
