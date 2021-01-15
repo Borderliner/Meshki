@@ -94,6 +94,14 @@ div.share-links {
   right: 35px;
 }
 
+#coinwidget {
+  width: 90%;
+}
+
+#coinwidget button {
+  width: 100%;
+}
+
 .jquery-modal > .ui.modal {
   background-color: #333;
 }
