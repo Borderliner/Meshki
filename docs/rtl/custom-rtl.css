@@ -104,6 +104,8 @@ a {
 
 #coinwidget {
   width: 100%;
+  position: relative;
+  top: 15px;
 }
 
 #coinwidget button {

@@ -136,11 +136,11 @@
             <div class="col two">
               <img class="cake-5" src="../cake-5.png" alt="کیک مشکی به مناسبتا ۵ ساله شدن!">
             </div>
-            <div class="col seven" style="text-align: left; margin-bottom: 50px;">
+            <div class="col seven" style="text-align: left; margin-bottom: 35px;">
               <span class="celebration-5">مشکی اکنون <span style="color: red">۵ ساله</span> شده است. از حمایت همیشگی شما ممنونیم.</span>
             </div>
             <div class="col three">
-              <div id="coinwidget" data-icon="true" data-type="primary" data-text="کمک با ₿" data-wallet="3QMRS8mSudPxE5PAkWHULk3h3b3fxt6KCR" />
+              <div id="coinwidget" data-icon="true" data-type="primary" data-text="حمایت با بیت‌کوین" data-wallet="3QMRS8mSudPxE5PAkWHULk3h3b3fxt6KCR" />
             </div>
           </div>
         </div>
@@ -1091,6 +1091,11 @@
   </div>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ivandiazwm/coinwidget@0.1.1/builds/simple.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css" />
   <script type="text/javascript">
     var percent_update = function() {
       document.getElementById("percent_value").innerHTML = this.value;
@@ -1132,12 +1137,8 @@
         e.trigger.innerHTML = '<i class="fas fa-clipboard" aria-hidden="true"></i>';
       }, 2000);
     });
+    $('#coinwidget button').removeClass('ui primary labled icon').addClass('orange');
   </script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ivandiazwm/coinwidget@0.1.1/builds/simple.js" charset="utf-8"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js" charset="utf-8"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css" />
 </body>
 
 </html>
