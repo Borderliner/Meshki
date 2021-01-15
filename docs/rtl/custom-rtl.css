@@ -106,8 +106,13 @@ a {
   background-color: #333;
 }
 
+.jquery-modal .ui.modal .ui.medium.image {
+  text-align: center;
+}
+
 .jquery-modal .image.content {
-  padding-top: 30px;
+  padding: 30px 0px;
+  width: 90%;
 }
 
 .jquery-modal .image-container {
@@ -119,10 +124,17 @@ a {
 .jquery-modal .modal-footer {
   background-color: #222;
   color: #eee;
+  text-align: left;
 }
 
-.jquery-modal .ui.modal ui.medium.image {
+.jquery-modal .wallet-number {
+  font-size: 1.5rem;
+  color: darksalmon;
+  border: 2px solid red;
+  padding: 5px 15px;
+  letter-spacing: 1.5px;
   text-align: center;
+  margin: 15px 0;
 }
 
 .download-buttons {
