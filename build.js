@@ -23,7 +23,7 @@ const fs = require('fs')
 const fsExtra = require('fs-extra')
 const path = require('path')
 const colors = require('colors') // eslint-disable-line no-unused-vars
-const sass = require('node-sass')
+const sass = require('sass')
 const uglifyJS = require('uglify-js')
 const watch = require('node-watch')
 
@@ -218,7 +218,7 @@ function copyFonts (log) {
   log ? console.log('Copying fonts to dist/fonts...'.yellow) : undefined
   fs.readdirSync(options.main_fonts).forEach((file) => {
     try {
-      fsExtra.copySync(`${__dirname}/${options.main_fonts}${file}`, `${options.output_fonts}${file}`)
+      fsExtra.copySync(path.join(__dirname, options.main_fonts, file), path.join(options.output_fonts, file))
       log ? console.log('=> Successfully copied '.green + file.blue + ' to dist/fonts/'.green) : undefined
     } catch (error) {
       console.log('Could not write the output to the disk. Check if you have write permissions.'.red)

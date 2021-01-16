@@ -9,7 +9,7 @@
     @return percentage($size / 100);
   }
 
-  @elseif $part >= 6 and $part < 12 {
+  @else if $part >= 6 and $part < 12 {
     $size: (((96 / 12) * $part) + (($part - 6) * (2 / 3)));
     @return percentage($size / 100);
   }

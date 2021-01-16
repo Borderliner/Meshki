@@ -28,18 +28,17 @@
   },
   "homepage": "https://borderliner.github.io/Meshki/",
   "devDependencies": {
+    "colors": "^1.4.0",
     "eslint": "^7.17.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-es5": "^1.5.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1"
-  },
-  "dependencies": {
-    "colors": "^1.4.0",
+    "eslint-plugin-promise": "^4.2.1",
     "fs-extra": "^9.0.1",
-    "node-sass": "^4.14.1",
     "node-watch": "^0.7.1",
+    "sass": "^1.32.4",
     "uglify-js": "^3.12.4"
-  }
+  },
+  "dependencies": {}
 }
