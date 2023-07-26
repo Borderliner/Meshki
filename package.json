@@ -1,10 +1,10 @@
 {
   "name": "meshki",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "Meshki: The most stylish CSS library on planet Earth!",
   "main": "build.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No test is specified for Meshki.\" && exit 1",
     "compile": "node build.js",
     "watch": "node build.js --watch",
     "rebuild-sass": "npm rebuild node-sass --force",
@@ -21,7 +21,7 @@
     "boilerplate",
     "black"
   ],
-  "author": "Borderliner",
+  "author": "Reza Hajianpour <hajianpour.mr@gmail.com>",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/Borderliner/Meshki/issues"
