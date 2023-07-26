@@ -3,6 +3,7 @@
   "version": "2.4.0",
   "description": "Meshki: The most stylish CSS library on planet Earth!",
   "main": "build.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"No test is specified for Meshki.\" && exit 1",
     "compile": "node build.js",
@@ -28,7 +29,7 @@
   },
   "homepage": "https://borderliner.github.io/Meshki/",
   "devDependencies": {
-    "colors": "^1.4.0",
+    "chalk": "^5.3.0",
     "eslint": "^7.17.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-es5": "^1.5.0",
@@ -39,6 +40,5 @@
     "node-watch": "^0.7.1",
     "sass": "^1.32.4",
     "uglify-js": "^3.12.4"
-  },
-  "dependencies": {}
+  }
 }
