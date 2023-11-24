@@ -3,18 +3,21 @@ body {
 }
 
 .meshki-features i.fas,
-.meshki-features i.far {
+.meshki-features i.far,
+.meshki-features i.fa-brands {
   font-size: 5rem;
   margin-bottom: 20px;
 }
 
 .nav i.far,
-.nav i.fas {
+.nav i.fas,
+.nav i.fa-brands {
   font-size: 1.8rem;
 }
 
 .logo i.far,
-.logo i.fas {
+.logo i.fas,
+.logo i.fa-brands {
   padding-right: 8px;
 }
 
@@ -38,7 +41,8 @@ div.share-links {
 
 .share-links i.far,
 .share-links i.fas,
-.share-links i.fab {
+.share-links i.fab,
+.share-links i.fa-brands {
   font-size: 4rem;
 }
 

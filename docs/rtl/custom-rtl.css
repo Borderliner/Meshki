@@ -1,5 +1,6 @@
 .logo i.far,
-.logo i.fas {
+.logo i.fas,
+.logo i.fa-brands {
   padding-right: unset;
   padding-left: 8px;
 }
