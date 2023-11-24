@@ -19,18 +19,18 @@
   <meta name="twitter:image" content="https://borderliner.github.io/Meshki/meta-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <!-- DEVELOPMENT FILES
+  <!-- DEVELOPMENT FILES -->
   <link rel="stylesheet" type="text/css" href="../dist/css/meshki.min.css">
   <link rel="stylesheet" type="text/css" href="../dist/plugins/meshki-extra-button-colors.min.css">
   <script type="text/javascript" src="../dist/js/meshki.min.js"></script>
-  DEVELOPMENT FILES -->
-  <!-- PRODUCTION FILES -->
+  <!-- DEVELOPMENT FILES -->
+  <!-- PRODUCTION FILES
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/2.3.0/css/meshki.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/2.3.0/plugins/meshki-extra-button-colors.min.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/meshki/2.3.0/js/meshki.min.js"></script>
-  <!-- PRODUCTION FILES -->
+  PRODUCTION FILES -->
   <link rel="stylesheet" type="text/css" href="custom.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
@@ -40,7 +40,7 @@
 
 </head>
 
-<body class="">
+<body>
   <div class="sidenav push">
     <a href="javascript:void(0);" class="sidenav-close-button" onclick="meshki.closeSidenav()">&times;</a>
     <a href="">Home</a>
@@ -97,7 +97,7 @@
             <a href="#footer-doc">Footer</a>
           </div>
         </li>
-        <li class="nav-right hide-on-tablet">
+        <li class="nav-right hide-on-tablet" style="margin: 1px 10px 0 0;">
           <script type="text/javascript" src="finder.js"></script>
           <input type="text" name="searchbox" id="searchbox" placeholder="Search..." onkeydown="meshkiUtil.search(this)">
         </li>
@@ -129,55 +129,50 @@
             </code>
           </pre>
           <div class="row">
-            <div class="col two">
-              <img class="cake-5" src="cake-5.png" alt="Meshki's cake for becoming 5 years old!">
-            </div>
-            <div class="col seven" style="text-align: left; margin-bottom: 35px;">
-              <span class="celebration-5">Meshki is <span style="color: red">5 years old</span> now! Thank you for your everlasting support.</span>
-            </div>
             <div class="col three">
-              <div id="coinwidget" data-icon="true" data-type="primary" data-text="Donate ₿itcoin" data-wallet="3QMRS8mSudPxE5PAkWHULk3h3b3fxt6KCR" />
+              <img class="balloons" src="balloons.png" alt="Meshki's birthday!">
+            </div>
+            <div class="celebration col nine">
+              <span>Meshki is <span class="celebration-years">8</span> years old! Thank you for your everlasting support.</span>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
       <div class="row meshki-features" style="margin-bottom: 50px;">
         <div class="four col text-center">
           <i class="fas fa-clock" aria-hidden="true"></i><br>
-          <h5>Minimalism and Simplicity</h5>
+          <h4>Minimalist, Simple</h4>
           <span>Design your whole UI in absolutely no time. We have done our best to keep Meshki stupidly simple and clean, and bring you an up-to-date documentation for your convenience.</span>
         </div>
         <div class="four col text-center">
           <i class="fas fa-eye" aria-hidden="true"></i><br>
-          <h5>Eye-Friendly</h5>
+          <h4>Eye-Friendly</h4>
           <span>Give your eyes some rest. Making use of a pleasant dark color, reading pages has never been this wonderful. It is especially important in web pages with plenty of textual content.</span>
         </div>
         <div class="four col text-center">
           <i class="fas fa-rocket" aria-hidden="true"></i><br>
-          <h5>Rocket-Fast</h5>
+          <h4>Rocket-Fast</h4>
           <span>By using less code and less complex logics, Meshki is light-weight and is not resource-hungry. In other words, your browser doesn't have to render and save much code.</span>
         </div>
       </div>
       <div class="row meshki-features">
         <div class="col four text-center">
           <i class="fas fa-crop-alt" aria-hidden="true"></i><br>
-          <h5>Professional</h5>
+          <h4>Professional</h4>
           <span>Simplicity doesn't mean lack of features. Meshki was designed with creativity in mind, so your design can be totally different from this page. We are proud to be from the Iranian open-source community, where computer science and technology is gaining momentum.</span>
         </div>
         <div class="col four text-center">
           <i class="fas fa-check-double" aria-hidden="true"></i><br>
-          <h5>Code Correctness</h5>
+          <h4>Code Correctness</h4>
           <span>We value code correctness and stability more than anything else. We want to make sure that we've provided the most reliable tool, so that you wouldn't need to worry about irritating bugs. Enjoy using Meshki, and let us do the dirty work of debugging.</span>
         </div>
         <div class="col four text-center">
           <i class="fas fa-chess-rook" aria-hidden="true"></i><br>
-          <h5>Stable</h5>
+          <h4>Stable</h4>
           <span>Meshki has been with you for 5 years now. Imagine the original stable project of Skeleton being maintained for another 5 years. Just sit down and enjoy the smooth experience from Meshki.</span>
         </div>
       </div>
-
+  
       <div class="row">
         <h3>What is Meshki?</h3>
         <hr>
@@ -187,7 +182,7 @@
           Don't be afraid to check out Meshki's source code! If you've spotted any bugs, or you want to ask for some improvements, head to <a href="https://github.com/Borderliner/Meshki" target="_blank">our GitHub repository</a> and open an issue or a pull request!
         </p>
       </div>
-
+  
       <div class="row">
         <h3>Why Meshki?</h3>
         <hr>
@@ -204,7 +199,7 @@
           Meshki and Skeleton have vast differences. Although Meshki is derived from Skeleton, it's far more complete than her parent. Just have a look at Skeleton's website. Most of the code there doesn't belong to original Skeleton and there are many custom CSS alongside the site. <b>But this website is pure Meshki</b>, and uses <a href="custom.css" id="components" target="_blank">custom.css</a> to customize website-related stuff.
         </p>
       </div>
-
+  
       <div class="row">
         <h3>Getting Started</h3>
         <hr>
@@ -218,42 +213,42 @@
             title="Copy to clipboard"
             data-clipboard-target="#code-get-started"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
           <code class="language-html" id="code-get-started">
-&lt;!DOCTYPE html>
-&lt;html>
-&lt;head>
+  &lt;!DOCTYPE html>
+  &lt;html>
+  &lt;head>
   &lt;title>Meshki&lt;/title>
   &lt;meta charset="UTF-8">
   &lt;!-- Make the page Mobile-Friendly -->
   &lt;meta name="viewport" content="width=device-width, initial-scale=1">
-
+  
   &lt;!-- Add OpenSans font -->
   &lt;link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
+  
   &lt;!-- Add Meshki's files -->
   &lt;link rel="stylesheet" type="text/css" href="dist/css/meshki.min.css">
   &lt;script type="text/javascript" src="dist/js/meshki.min.js">&lt;/script>
-&lt;/head>
-&lt;body>
-
+  &lt;/head>
+  &lt;body>
+  
   &lt;div class="sidenav">
     &lt;!-- Sidenav links here -->
   &lt;/div>
-
+  
   &lt;div class="container">
-
+  
     &lt;!-- This is your navbar -->
     &lt;nav>
       &lt;ul>
         &lt;li>&lt;a class="logo" href="javascript:void(0)">My Website&lt;/a>&lt;/li>
       &lt;/ul>
     &lt;/nav>
-
+  
     &lt;!-- The main content goes here -->
     &lt;div class="content">
       &lt;h3>Welcome to my cool website&lt;/h3>
       &lt;p>This is a sample paragraph.&lt;/p>
     &lt;/div>
-
+  
     &lt;!-- And finally, your cool footer -->
     &lt;footer>
       &lt;div class="row">
@@ -263,11 +258,11 @@
       &lt;/div>
     &lt;/footer>
   &lt;/div>
-
-&lt;/body>
+  
+  &lt;/body>
           </code>
         </pre>
-
+  
         <div class="row">
           <figure class="twelve centerize text-center">
             <img class="responsive" src="meshki_structure.png" />
@@ -279,7 +274,7 @@
           </figure>
         </div>
       </div>
-
+  
       <div class="row">
         <h3>Components</h3>
         <hr>
@@ -288,7 +283,7 @@
           Here are a list of components and how you can put them into use:
         </p>
       </div>
-
+  
       <div class="row">
         <div id="buttons-doc"></div>
         <h4>Buttons</h4>
@@ -304,7 +299,7 @@
             <input type="submit" class="green large" value="Green" />
             <input type="reset" class="red medium" value="Red" />
             <input type="button" class="orange small" value="Orange" />
-
+  
             <div class="button-couple">
               <button class="blue medium">Agree</button>
               <button class="medium disabled" disabled>or</button>
@@ -337,25 +332,25 @@
                 title="Copy to clipboard"
                 data-clipboard-target="#code-buttons"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
                 <code class="language-html" id="code-buttons">
-&lt;a class="button small"&gt;Simple&lt;/a&gt;
-&lt;button class="blue medium"&gt;Blue&lt;/button&gt;
-&lt;input type="submit" class="green large" value="Green" /&gt;
-&lt;input type="reset" class="red medium" value="Red" /&gt;
-&lt;input type="button" class="orange small" value="Orange" /&gt;
-
-&lt;div class="button-couple">
+  &lt;a class="button small"&gt;Simple&lt;/a&gt;
+  &lt;button class="blue medium"&gt;Blue&lt;/button&gt;
+  &lt;input type="submit" class="green large" value="Green" /&gt;
+  &lt;input type="reset" class="red medium" value="Red" /&gt;
+  &lt;input type="button" class="orange small" value="Orange" /&gt;
+  
+  &lt;div class="button-couple">
   &lt;button class="blue medium">Agree&lt;/button>
   &lt;button class="medium disabled">or&lt;/button>
   &lt;button class="red medium">Disagree&lt;/button>
-&lt;/div>
-
-&lt;button class="expand large"&gt;Large Expanded Button&lt;/button&gt;
+  &lt;/div>
+  
+  &lt;button class="expand large"&gt;Large Expanded Button&lt;/button&gt;
                 </code>
               </pre>
           </div>
         </div>
       </div>
-
+  
       <div class="row">
         <div id="sidenav-doc"></div>
         <h4>Sidenav</h4>
@@ -369,7 +364,7 @@
             title="Copy to clipboard"
             data-clipboard-target="#code-sidenav"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
           <code class="language-html" id="code-sidenav">
-&lt;body>
+  &lt;body>
   &lt;div class="sidenav push">
     &lt;!-- Note that javascript:void(0) stops your page from jumping to the top -->
     &lt;a href="javascript:void(0)" class="sidenav-close-button" onclick="meshki.closeSidenav()">&amp;times;&lt;/a>
@@ -383,7 +378,7 @@
           </code>
         </pre>
       </div>
-
+  
       <div class="row">
         <div id="navbar-doc"></div>
         <h4>Navbar</h4>
@@ -397,13 +392,13 @@
             title="Copy to clipboard"
             data-clipboard-target="#code-navbar"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
           <code class="language-html" id="code-navbar">
-&lt;nav class="fixed">
+  &lt;nav class="fixed">
   &lt;ul>
     &lt;!-- Note that javascript:void(0) stops your page from jumping to the top -->
     &lt;li>&lt;a class="logo" href="javascript:void(0)" onclick="meshki.openSidenav()">Meshki&lt;/a>&lt;/li>
     &lt;li>&lt;a href="https://github.com/Borderliner/Meshki/releases">News&lt;/a>&lt;/li>
     &lt;li>&lt;a href="https://github.com/Borderliner/Meshki">GitHub&lt;/a>&lt;/li>
-
+  
     &lt;!-- Dropdown in Nav -->
     &lt;li class="nav-dropdown">
       &lt;a href="javascript:void(0)" class="nav-dropdown-button">Title&lt;/a>
@@ -414,11 +409,11 @@
       &lt;/div>
     &lt;/li>
   &lt;/ul>
-&lt;/nav>
+  &lt;/nav>
           </code>
         </pre>
       </div>
-
+  
       <div class="row">
         <div id="grid-doc"></div>
         <h4>The Grid System</h4>
@@ -428,7 +423,7 @@
           <b>Note</b>: The col must be the first elements at the beginning of a <code>row</code>. <u>This is very important.</u>
         </p>
       </div>
-
+  
       <div class="row grid-table">
         <div>
           <div class="one col">ONE</div>
@@ -500,46 +495,46 @@
             title="Copy to clipboard"
             data-clipboard-target="#code-grid"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
             <code class="language-html" id="code-grid">
-&lt;div class="row"&gt;
+  &lt;div class="row"&gt;
   &lt;div class="one col"&gt;
     A div with one col length
   &lt;/div&gt;
   &lt;div class="eleven col"&gt;
     A div with eleven col length
   &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="row"&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="row"&gt;
   &lt;div class="one-third col"&gt;
     A div with one-third of the screen's length
   &lt;/div&gt;
   &lt;div class="two-thirds col"&gt;
     A div with two-thirds of the screen's length
   &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="row"&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="row"&gt;
   &lt;div class="one-half col"&gt;
     A div with half of the screen's length
   &lt;/div&gt;
   &lt;div class="one-half col"&gt;
     A div with the other half of the screen's length
   &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="row"&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="row"&gt;
   &lt;div class="six offset-by-two col"&gt;
     &lt;!-- Pushes a six-width-element by two units -->
   &lt;/div&gt;
   &lt;div class="two col"&gt;
     &lt;!-- The rest of the screen -->
   &lt;/div&gt;
-&lt;/div&gt;
-
+  &lt;/div&gt;
+  
             </code>
           </pre>
       </div>
-
+  
       <div class="row">
         <div id="form-doc"></div>
         <h4>Form Elements</h4>
@@ -605,7 +600,7 @@
           <label for="chk-news" class="checkbox">I wish to receive newsletters from this site.</label>
         </div>
       </div>
-
+  
       <div class="row">
         <div class="two col">
           Budget: <span id="percent_value">0</span> $
@@ -617,7 +612,7 @@
           <span>100 $</span>
         </div>
       </div>
-
+  
       <div class="row">
         <div class="twelve col">
           <fieldset>
@@ -629,7 +624,7 @@
           </fieldset>
         </div>
       </div>
-
+  
       <div class="row text-center">
         <button class="blue expand">Submit</button>
       </div>
@@ -644,7 +639,7 @@
             title="Copy to clipboard"
             data-clipboard-target="#code-forms"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
             <code class="language-html" id="code-forms">
-&lt;form>
+  &lt;form>
   &lt;!--Text Inputs -->
   &lt;div class="row">
     &lt;div class="six col">
@@ -656,7 +651,7 @@
       &lt;input id="pass1" class="expand" type="password" name="pass1">
     &lt;/div>
   &lt;/div>
-
+  
   &lt;!--Disabled Text Inputs -->
   &lt;div class="row">
     &lt;div class="twelve col">
@@ -664,14 +659,14 @@
       &lt;input id="dis-email1" class="expand" type="email" name="dis-email1" value="me@borderliner.ir" disabled>
     &lt;/div>
   &lt;/div>
-
+  
   &lt;!--Text Area -->
   &lt;div class="row">
     &lt;div class="twelve col">
       &lt;textarea class="expand">This is a sample &lt;textarea&gt; element.&lt;/textarea>
     &lt;/div>
   &lt;/div>
-
+  
   &lt;!--Dropdown -->
   &lt;div class="row">
     &lt;div class="six col">
@@ -684,7 +679,7 @@
       &lt;/select>
     &lt;/div>
   &lt;/div>
-
+  
   &lt;!--Checkboxes and Radio Buttons -->
   &lt;div class="row">
     &lt;div class="six col">
@@ -702,12 +697,12 @@
       &lt;label for="chk-news" class="checkbox">I wish to receive newsletters from this site.&lt;/label>
     &lt;/div>
   &lt;/div>
-
+  
   &lt;!-- Slider -->
   &lt;div class="row">
     &lt;input class="expand" type="range" name="percent" min="0" max="100" step="1" value="0">
   &lt;/div>
-
+  
   &lt;!-- Field Set -->
   &lt;fieldset>
     &lt;legend>Overview&lt;/legend>
@@ -716,11 +711,11 @@
     &lt;span>Age: 50&lt;/span>
     &lt;span>Location: Albuquerque, New Mexico&lt;/span>
   &lt;/fieldset>
-&lt;/form>
+  &lt;/form>
             </code>
           </pre>
       </div>
-
+  
       <div class="row">
         <div id="typography-doc"></div>
         <h4>Typography</h4>
@@ -755,28 +750,28 @@
         <div class="twelve col">
           <pre>
             <code>
-&lt;code>bower install meshki&lt;/code>
-
-&lt;pre>
+  &lt;code>bower install meshki&lt;/code>
+  
+  &lt;pre>
   &lt;code>
   .some-class {
     background-color: red;
   }
   &lt;/code>
-&lt;/pre>
+  &lt;/pre>
             </code>
           </pre>
           <pre class="filled">
             <code>
-&lt;code class="filled">bower install meshki&lt;/code>
-
-&lt;pre class="filled">
+  &lt;code class="filled">bower install meshki&lt;/code>
+  
+  &lt;pre class="filled">
   &lt;code>
   (function(
     console.log('Hello world!');
   ))();
   &lt;/code>
-&lt;/pre>
+  &lt;/pre>
             </code>
           </pre>
         </div>
@@ -851,7 +846,7 @@
             title="Copy to clipboard"
             data-clipboard-target="#code-footer"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
           <code class="language-html" id="code-footer">
-&lt;footer>
+  &lt;footer>
   &lt;div class="row">
     &lt;div class="six col">
       &lt;p>Created by: Reza Hajianpour (Borderliner)&lt;/p>
@@ -860,11 +855,11 @@
       &lt;p>2017, Licensed under Apache-2.0&lt;/p>
     &lt;/div>
   &lt;/div>
-&lt;/footer>
+  &lt;/footer>
           </code>
         </pre>
       </div>
-
+  
       <div class="row">
         <h4>Media Queries</h4>
         <hr>
@@ -890,22 +885,22 @@
       <div class="row">
         <pre>
             <code class="language-css">
-/* Mobile first queries */
-
-/* Larger than mobile */
-@media (min-width: 400px) {}
-
-/* Larger than phablet */
-@media (min-width: 544px) {}
-
-/* Larger than tablet */
-@media (min-width: 768px) {}
-
-/* Larger than desktop */
-@media (min-width: 992px) {}
-
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {}
+  /* Mobile first queries */
+  
+  /* Larger than mobile */
+  @media (min-width: 400px) {}
+  
+  /* Larger than phablet */
+  @media (min-width: 544px) {}
+  
+  /* Larger than tablet */
+  @media (min-width: 768px) {}
+  
+  /* Larger than desktop */
+  @media (min-width: 992px) {}
+  
+  /* Larger than Desktop HD */
+  @media (min-width: 1200px) {}
             </code>
           </pre>
       </div>
@@ -919,74 +914,74 @@
       <div class="row">
         <pre>
           <code class="language-css">
-/* Make element full width */
-.expand {
+  /* Make element full width */
+  .expand {
   width: 100%;
   box-sizing: border-box;
-}
-
-/* Makes sure elements don't run outside containers (great for images in col) */
-.responsive {
+  }
+  
+  /* Makes sure elements don't run outside containers (great for images in col) */
+  .responsive {
   max-width: 100%;
   box-sizing: border-box;
-}
-
-/* Float either direction */
-.float-left {
+  }
+  
+  /* Float either direction */
+  .float-left {
   float: left !important;
-}
-
-.float-right {
+  }
+  
+  .float-right {
   float: right !important;
-}
-
-/* Center an element */
-.centerize {
+  }
+  
+  /* Center an element */
+  .centerize {
   margin-left: auto;
   margin-right: auto;
-}
-
-/* Center a text */
-.text-center {
+  }
+  
+  /* Center a text */
+  .text-center {
   text-align: center;
-}
-
-/* Vertical line */
-.vertical-line {
+  }
+  
+  /* Vertical line */
+  .vertical-line {
   border-left: 1px solid #E1E1E1;
-}
-
-/* Hides the element on mobiles and phablets */
-@media (max-width: 544px) {
+  }
+  
+  /* Hides the element on mobiles and phablets */
+  @media (max-width: 544px) {
   .hide-on-mobile {
     display: none;
   }
-}
-
-/* Hides the element on tablets and smaller */
-@media (max-width: 768px) {
+  }
+  
+  /* Hides the element on tablets and smaller */
+  @media (max-width: 768px) {
   .hide-on-tablet {
     display: none;
   }
-}
-
-/* Hides the element on desktops */
-@media (min-width: 768px) {
+  }
+  
+  /* Hides the element on desktops */
+  @media (min-width: 768px) {
   .hide-on-desktop {
     display: none;
   }
-}
-
-/* Hides the element on non-mobile and non-phablets */
-@media (min-width: 544px) {
+  }
+  
+  /* Hides the element on non-mobile and non-phablets */
+  @media (min-width: 544px) {
   .hide-on-non-mobile {
     display: none;
   }
-}
+  }
           </code>
         </pre>
       </div>
-
+  
       <div class="row">
         <div id="extra-button-colors"></div>
         <h4>[Plugin] Extra Button Colors</h4>
@@ -999,7 +994,7 @@
             title="Copy to clipboard"
             data-clipboard-target="#code-extra-button-colors"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
             <code class="language-html" id="code-extra-button-colors">
-&lt;link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/2.2.0/plugins/meshki-extra-button-colors.min.css">
+  &lt;link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/2.2.0/plugins/meshki-extra-button-colors.min.css">
             </code>
           </pre>
         </p>
@@ -1035,7 +1030,7 @@
           </div>
         </div>
       </div>
-
+  
       <div id="important-notes" class="row">
         <h4>Important Notes</h4>
         <hr>
@@ -1043,7 +1038,7 @@
           Meshki v2.x.x is a major release and has introduced some breaking changes, which means that it's not backwards-compatible with previous versions. Make sure you read the <a href="https://github.com/Borderliner/Meshki/blob/master/CHANGELOG.md">Changelog</a>, so you can understand the latest important changes in Meshki.
         </p>
       </div>
-
+  
       <div class="row">
         <h4>This webpage uses...</h4>
         <hr>
@@ -1065,7 +1060,7 @@
           <p>Created with <i class="fas fa-heart custom-love"></i> by Reza Hajianpour (<a href="https://github.com/Borderliner">Borderliner</a>)</p>
         </div>
         <div class="six col text-center">
-          <p>2016-2021, Licensed under <a href="https://github.com/Borderliner/Meshki/blob/master/LICENSE">Apache-2.0</a></p>
+          <p>2016-2024, Licensed under <a href="https://github.com/Borderliner/Meshki/blob/master/LICENSE">Apache-2.0</a></p>
         </div>
       </div>
     </div>
@@ -1073,7 +1068,6 @@
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ivandiazwm/coinwidget@0.1.1/builds/simple.js" charset="utf-8"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js" charset="utf-8"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css" />
@@ -1085,6 +1079,8 @@
 
     document.getElementById("percent").onchange = percent_update;
     document.getElementById("percent").oninput = percent_update;
+
+    document.getElementsByClassName("celebration-years")[0].innerHTML = (new Date().getFullYear() - 2015);
 
     var clipboard = new Clipboard('.clipboard-btn');
     clipboard.on('success', function(e) {
@@ -1118,7 +1114,6 @@
         e.trigger.innerHTML = '<i class="fas fa-clipboard" aria-hidden="true"></i>';
       }, 2000);
     });
-    $('#coinwidget button').removeClass('ui primary labled icon').addClass('orange');
   </script>
 </body>
 

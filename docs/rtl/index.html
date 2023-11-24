@@ -19,21 +19,22 @@
   <meta name="twitter:image" content="../meta-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <!-- DEVELOPMENT FILES
+  <!-- DEVELOPMENT FILES -->
   <link rel="stylesheet" type="text/css" href="../../dist/css/meshki.min.css">
   <link rel="stylesheet" type="text/css" href="../../dist/plugins/meshki-rtl.min.css">
   <link rel="stylesheet" type="text/css" href="../../dist/plugins/meshki-extra-button-colors.min.css">
   <script type="text/javascript" src="../../dist/js/meshki.min.js"></script>
-  DEVELOPMENT FILES -->
-  <!-- PRODUCTION FILES -->
+  <!-- DEVELOPMENT FILES -->
+  <!-- PRODUCTION FILES
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/2.3.0/css/meshki.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/2.3.0/plugins/meshki-rtl.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/2.3.0/plugins/meshki-extra-button-colors.min.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/meshki/2.3.0/js/meshki.min.js"></script>
-  <!-- PRODUCTION FILES -->
+  PRODUCTION FILES -->
 
+  <link rel="stylesheet" type="text/css" href="../custom.css">
   <link rel="stylesheet" type="text/css" href="custom-rtl.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
@@ -42,7 +43,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css">
 </head>
 
-<body class="">
+<body>
   <div class="sidenav push">
     <a href="javascript:void(0);" class="sidenav-close-button" onclick="meshki.closeSidenav()">&times;</a>
     <a href="">خانه</a>
@@ -99,7 +100,7 @@
             <a href="#footer-doc">پابرگ</a>
           </div>
         </li>
-        <li class="nav-left hide-on-tablet">
+        <li class="nav-left hide-on-tablet" style="margin: 1px 0 0 10px;">
           <script type="text/javascript" src="../finder.js"></script>
           <input type="text" name="searchbox" id="searchbox" placeholder="جستجو..." onkeydown="meshkiUtil.search(this)">
         </li>
@@ -133,20 +134,15 @@
             </code>
           </pre>
           <div class="row">
-            <div class="col two">
-              <img class="cake-5" src="../cake-5.png" alt="کیک مشکی به مناسبتا ۵ ساله شدن!">
-            </div>
-            <div class="col seven" style="text-align: right; margin-bottom: 35px;">
-              <span class="celebration-5">مشکی اکنون <span style="color: red">۵ ساله</span> شده است. از حمایت همیشگی شما ممنونیم.</span>
-            </div>
             <div class="col three">
-              <div id="coinwidget" data-icon="true" data-type="primary" data-text="حمایت با بیت‌کوین" data-wallet="3QMRS8mSudPxE5PAkWHULk3h3b3fxt6KCR" />
+              <img class="balloons" src="../balloons.png" alt="تولد مشکی!">
+            </div>
+            <div class="celebration col nine">
+              <span>مشکی اکنون <span class="celebration-years">۸</span> ساله شده است. از حمایت همیشگی شما ممنونیم.</span>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
       <div class="row meshki-features" style="margin-bottom: 50px;">
 
         <div class="four col text-center">
@@ -182,7 +178,7 @@
           <span>مشکی به تازگی ۵ ساله شد! تصور کنید که پروژه‌ای به پایداریِ اسکلتون ۵ سال بیشتر نگهداری شود. نتیجه‌ی آن چیزی نیست جز لذت بردن از تجربه‌ی بی‌نقصی به نام مشکی.</span>
         </div>
       </div>
-
+  
       <div class="row">
         <h3>مشکی چیست؟</h3>
         <hr>
@@ -193,7 +189,7 @@
         از نگاه کردن به کدهای مشکی واهمه نداشته باشید! اگر ایرادی مشاهده کردید، یا قسمتی از مشکی نیاز به ارتقاء داشت، به <a href="https://github.com/Borderliner/Meshki" target="_blank">مخزن گیتهاب ما</a> بروید و یک Issue یا Pull Request باز کنید!
         </p>
       </div>
-
+  
       <div class="row">
         <h3>چرا مشکی؟</h3>
         <hr>
@@ -210,7 +206,7 @@
         مشکی و اسکلتون تفاوت‌های بسیاری دارند. اگرچه مشکی از اسکلتون مشتق شده است، ولی بسیار کامل‌تر از پروژه مادر خود می‌باشد. کافیست به سایت اسکلتون نگاه کنید. مقدار زیادی از کدهای درون وب‌سایت متعلق به اسکلتون نیست و فایل‌های جدای CSS نیز وجود دارند. اما <b>این سایت به طور خالص از مشکی استفاده می‌کند</b>، و از یک فایل <a href="custom-rtl.css" id="components" target="_blank">custom-rtl.css</a> برای شخصی‌سازی بهره می‌برد.
         </p>
       </div>
-
+  
       <div class="row">
         <h3>شروع به کار</h3>
         <hr>
@@ -226,45 +222,45 @@
             title="Copy to clipboard"
             data-clipboard-target="#code-get-started"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
           <code class="language-html" id="code-get-started">
-&lt;!DOCTYPE html>
-&lt;html>
-&lt;head>
+  &lt;!DOCTYPE html>
+  &lt;html>
+  &lt;head>
   &lt;title>مشکی&lt;/title>
   &lt;meta charset="UTF-8">
   &lt;!-- تا صفحه قابل مشاهده در موبایل باشد -->
   &lt;meta name="viewport" content="width=device-width, initial-scale=1">
-
+  
   &lt;!-- OpenSans اضافه کردن فونت -->
   &lt;link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
+  
   &lt;!-- اضافه کردن فایلهای مشکی -->
   &lt;link rel="stylesheet" type="text/css" href="dist/css/meshki.min.css">
   &lt;script type="text/javascript" src="dist/js/meshki.min.js">&lt;/script>
-
+  
   &lt;!-- نسخه فارسی مشکی باید بعد از مشکی اصلی اضافه شود -->
   &lt;link rel="stylesheet" type="text/css" href="dist/plugins/meshki-rtl.min.css">
-&lt;/head>
-&lt;body>
-
+  &lt;/head>
+  &lt;body>
+  
   &lt;div class="sidenav">
     &lt;!-- لینک‌های کشو اینجا هستند -->
   &lt;/div>
-
+  
   &lt;div class="container">
-
+  
     &lt;!-- این منوی شماست -->
     &lt;nav>
       &lt;ul>
         &lt;li>&lt;a class="logo" href="javascript:void(0)">وب‌سایت من&lt;/a>&lt;/li>
       &lt;/ul>
     &lt;/nav>
-
+  
     &lt;!-- مطالب صفحه در اینجا قرار میگیرد -->
     &lt;div class="content">
       &lt;h3>به وب‌سایت من خوش‌آمدید!&lt;/h3>
       &lt;p>این یک پاراگراف نمونه است.&lt;/p>
     &lt;/div>
-
+  
     &lt;!-- و در آخر، پابرگ زیبای شما -->
     &lt;footer>
       &lt;div class="row">
@@ -274,11 +270,11 @@
       &lt;/div>
     &lt;/footer>
   &lt;/div>
-
-&lt;/body>
+  
+  &lt;/body>
           </code>
         </pre>
-
+  
         <div class="row">
           <figure class="twelve centerize text-center">
             <img class="responsive" src="../meshki_structure.png" />
@@ -290,7 +286,7 @@
           </figure>
         </div>
       </div>
-
+  
       <div class="row">
         <h3>اجزا</h3>
         <hr>
@@ -301,7 +297,7 @@
           لیستی از اجزای قابل استفاده را برای شما آماده کرده‌ایم:
         </p>
       </div>
-
+  
       <div class="row">
         <div id="buttons-doc"></div>
         <h4>دکمه‌ها</h4>
@@ -317,7 +313,7 @@
             <input type="submit" class="green large" value="سبز" />
             <input type="reset" class="red medium" value="قرمز" />
             <input type="button" class="orange small" value="نارنجی" />
-
+  
             <div class="button-couple">
               <button class="blue medium">موافقم</button>
               <button class="medium disabled" disabled>یا</button>
@@ -341,7 +337,7 @@
             </div>
           </div>
         </div>
-
+  
         <span>کدهای مربوطه از این قرار هستند:</span><br><br>
           <pre>
             <button
@@ -349,23 +345,23 @@
                 title="Copy to clipboard"
                 data-clipboard-target="#code-buttons"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
             <code class="language-html" id="code-buttons">
-&lt;a class="button small"&gt;ساده&lt;/a&gt;
-&lt;button class="blue medium"&gt;آبی&lt;/button&gt;
-&lt;input type="submit" class="green large" value="سبز" /&gt;
-&lt;input type="reset" class="red medium" value="قرمز" /&gt;
-&lt;input type="button" class="orange small" value="نارنجی" /&gt;
-
-&lt;div class="button-couple">
+  &lt;a class="button small"&gt;ساده&lt;/a&gt;
+  &lt;button class="blue medium"&gt;آبی&lt;/button&gt;
+  &lt;input type="submit" class="green large" value="سبز" /&gt;
+  &lt;input type="reset" class="red medium" value="قرمز" /&gt;
+  &lt;input type="button" class="orange small" value="نارنجی" /&gt;
+  
+  &lt;div class="button-couple">
   &lt;button class="blue medium">موافقم&lt;/button>
   &lt;button class="medium disabled">یا&lt;/button>
   &lt;button class="red medium">مخالفم&lt;/button>
-&lt;/div>
-
-&lt;button class="expand large"&gt;دکمه بزرگ وسیع&lt;/button&gt;
+  &lt;/div>
+  
+  &lt;button class="expand large"&gt;دکمه بزرگ وسیع&lt;/button&gt;
             </code>
           </pre>
       </div>
-
+  
       <div class="row">
         <div id="sidenav-doc"></div>
         <h4>کشو</h4>
@@ -379,7 +375,7 @@
             title="Copy to clipboard"
             data-clipboard-target="#code-sidenav"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
           <code class="language-html" id="code-sidenav">
-&lt;body>
+  &lt;body>
   &lt;div class="sidenav push">
     &lt;!-- از پرش به بالای صفحه جلوگیری می‌کند javascript:void(0) توجه کنید که تابع -->
     &lt;a href="javascript:void(0)" class="sidenav-close-button" onclick="meshki.closeSidenav()">&amp;times;&lt;/a>
@@ -393,7 +389,7 @@
           </code>
         </pre>
       </div>
-
+  
       <div class="row">
         <div id="navbar-doc"></div>
         <h4>منو</h4>
@@ -407,7 +403,7 @@
             title="Copy to clipboard"
             data-clipboard-target="#code-navbar"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
           <code class="language-html" id="code-navbar">
-&lt;nav class="fixed">
+  &lt;nav class="fixed">
   &lt;ul>
     &lt;!-- از پرش به بالای صفحه جلوگیری می‌کند javascript:void(0) توجه کنید که تابع -->
     &lt;li>&lt;a class="logo" href="javascript:void(0)" onclick="meshki.openNav()">مشکی&lt;/a>&lt;/li>
@@ -424,11 +420,11 @@
       &lt;/div>
     &lt;/li>
   &lt;/ul>
-&lt;/nav>
+  &lt;/nav>
           </code>
         </pre>
       </div>
-
+  
       <div class="row">
         <div id="grid-doc"></div>
         <h4>صفحه‌بندی</h4>
@@ -440,7 +436,7 @@
         <b>نکته:</b> ستون ها باید اولین اجزا بعد از <code>div.row</code> باشند. این بسیار حائز اهمیت است.
         </p>
       </div>
-
+  
       <div class="row grid-table">
         <div>
           <div class="one col">یک</div>
@@ -512,45 +508,45 @@
             title="Copy to clipboard"
             data-clipboard-target="#code-grid"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
             <code class="language-html" id="code-grid">
-&lt;div class="row"&gt;
+  &lt;div class="row"&gt;
   &lt;div class="one col"&gt;
     با عرض یک ستون div یک
   &lt;/div&gt;
   &lt;div class="eleven col"&gt;
     با عرض یازده ستون div یک
   &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="row"&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="row"&gt;
   &lt;div class="one-third col"&gt;
     با عرض یک سوم کل صفحه div یک
   &lt;/div&gt;
   &lt;div class="two-thirds col"&gt;
     با عرض دو سوم کل صفحه div یک
   &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="row"&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="row"&gt;
   &lt;div class="one-half col"&gt;
     با عرض نصف کل صفحه div یک
   &lt;/div&gt;
   &lt;div class="one-half col"&gt;
     با عرض نصف بقیه کل صفحه div یک
   &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="row"&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="row"&gt;
   &lt;div class="six offset-by-two col"&gt;
     &lt;!-- یک ستون 6 عرضی را به اندازه 2 ستون منحرف می‌کند -->
   &lt;/div&gt;
   &lt;div class="two col"&gt;
     &lt;!-- بقیه صفحه -->
   &lt;/div&gt;
-&lt;/div&gt;
+  &lt;/div&gt;
             </code>
           </pre>
       </div>
-
+  
       <div class="row">
         <div id="form-doc"></div>
         <h4>فرم‌ها</h4>
@@ -618,7 +614,7 @@
           <label for="chk-news" class="checkbox">مایل هستم از این سایت خبرنامه دریافت کنم.</label>
         </div>
       </div>
-
+  
       <div class="row">
         <div class="two col">
           بودجه: <span id="percent_value">0</span> $
@@ -630,7 +626,7 @@
           <span>100 $</span>
         </div>
       </div>
-
+  
       <div class="row">
         <div class="twelve col">
           <fieldset>
@@ -642,7 +638,7 @@
           </fieldset>
         </div>
       </div>
-
+  
       <div class="row text-center">
         <button class="blue expand">ارسال</button>
       </div>
@@ -657,7 +653,7 @@
             title="Copy to clipboard"
             data-clipboard-target="#code-forms"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
             <code class="language-html" id="code-forms">
-&lt;form>
+  &lt;form>
   &lt;!-- ورودی‌های متن -->
   &lt;div class="row">
     &lt;div class="six col">
@@ -669,7 +665,7 @@
       &lt;input id="pass1" class="expand" type="password" name="pass1">
     &lt;/div>
   &lt;/div>
-
+  
   &lt;!-- ورودی‌های متن غیرفعال -->
   &lt;div class="row">
     &lt;div class="twelve col">
@@ -677,14 +673,14 @@
       &lt;input id="dis-email1" class="expand" type="email" name="dis-email1" value="me@borderliner.ir" disabled>
     &lt;/div>
   &lt;/div>
-
+  
   &lt;!-- ناحیه متن -->
   &lt;div class="row">
     &lt;div class="twelve col">
       &lt;textarea class="expand">این یک نمونه است &lt;textarea&gt; element.&lt;/textarea>
     &lt;/div>
   &lt;/div>
-
+  
   &lt;!--فرم کشویی -->
   &lt;div class="row">
     &lt;div class="six col">
@@ -698,7 +694,7 @@
       &lt;/select>
     &lt;/div>
   &lt;/div>
-
+  
   &lt;!--چک‌باکس‌ها و دکمه‌های رادیویی -->
   &lt;div class="row">
     &lt;div class="six col">
@@ -716,12 +712,12 @@
       &lt;label for="chk-news" class="checkbox">مایل هستم از این سایت خبرنامه دریافت کنم.&lt;/label>
     &lt;/div>
   &lt;/div>
-
+  
   &lt;!-- مثالی از یک لغزنده -->
   &lt;div class="row">
     &lt;input class="expand" type="range" name="percent" min="0" max="100" step="1" value="0">
   &lt;/div>
-
+  
   &lt;!-- Fieldset یک نمونه -->
   &lt;fieldset>
     &lt;legend>نمای کلی&lt;/legend>
@@ -730,11 +726,11 @@
     &lt;span>سن: 50&lt;/span>
     &lt;span>مکان: آلباکرکی، نیو مکزیکو&lt;/span>
   &lt;/fieldset>
-&lt;/form>
+  &lt;/form>
             </code>
           </pre>
       </div>
-
+  
       <div class="row">
         <div id="typography-doc"></div>
         <h4>نگارش</h4>
@@ -773,28 +769,28 @@
         <div class="twelve col">
           <pre>
             <code>
-&lt;code>bower install meshki&lt;/code>
-
-&lt;pre>
+  &lt;code>bower install meshki&lt;/code>
+  
+  &lt;pre>
   &lt;code>
   .some-class {
     background-color: red;
   }
   &lt;/code>
-&lt;/pre>
+  &lt;/pre>
             </code>
           </pre>
           <pre class="filled">
             <code>
-&lt;code class="filled">bower install meshki&lt;/code>
-
-&lt;pre class="filled">
+  &lt;code class="filled">bower install meshki&lt;/code>
+  
+  &lt;pre class="filled">
   &lt;code>
   (function(
     console.log('Hello world!');
   ))();
   &lt;/code>
-&lt;/pre><div id="tables-doc"></div>
+  &lt;/pre><div id="tables-doc"></div>
             </code>
           </pre>
         </div>
@@ -870,7 +866,7 @@
             title="Copy to clipboard"
             data-clipboard-target="#code-footer"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
           <code class="language-html" id="code-footer">
-&lt;footer>
+  &lt;footer>
   &lt;div class="row">
     &lt;div class="six col">
       &lt;p>ساخته شده توسط محمدرضا حاجیانپور&lt;/p>
@@ -879,11 +875,11 @@
       &lt;p>2017، Apache-2.0 تحت لیسانس&lt;/p>
     &lt;/div>
   &lt;/div>
-&lt;/footer>
+  &lt;/footer>
           </code>
         </pre>
       </div>
-
+  
       <div class="row">
         <h4>سایز صفحه</h4>
         <hr>
@@ -909,22 +905,22 @@
       <div class="row">
         <pre>
             <code class="language-css">
-/* اندازه‌ها با اولویت موبایل */
-
-/* بزرگتر از موبایل */
-@media (min-width: 400px) {}
-
-/* بزرگتر از فبلت */
-@media (min-width: 544px) {}
-
-/* بزرگتر از تبلت */
-@media (min-width: 768px) {}
-
-/* بزرگتر از دسکتاپ */
-@media (min-width: 992px) {}
-
-/* بزرگتر از دسکتاپ HD */
-@media (min-width: 1200px) {}
+  /* اندازه‌ها با اولویت موبایل */
+  
+  /* بزرگتر از موبایل */
+  @media (min-width: 400px) {}
+  
+  /* بزرگتر از فبلت */
+  @media (min-width: 544px) {}
+  
+  /* بزرگتر از تبلت */
+  @media (min-width: 768px) {}
+  
+  /* بزرگتر از دسکتاپ */
+  @media (min-width: 992px) {}
+  
+  /* بزرگتر از دسکتاپ HD */
+  @media (min-width: 1200px) {}
             </code>
           </pre>
       </div>
@@ -938,74 +934,74 @@
       <div class="row">
         <pre>
           <code class="language-css">
-/* گسترش دادن یک المان */
-.expand {
+  /* گسترش دادن یک المان */
+  .expand {
   width: 100%;
   box-sizing: border-box;
-}
-
-/* باعث می‌شود تا اجزا از محدوده‌شان خارج نشوند. برای عکسهای داخل ستون انتخاب مناسبی است. */
-.responsive {
+  }
+  
+  /* باعث می‌شود تا اجزا از محدوده‌شان خارج نشوند. برای عکسهای داخل ستون انتخاب مناسبی است. */
+  .responsive {
   max-width: 100%;
   box-sizing: border-box;
-}
-
-/* شناور کردن یک جزء به دو طرف */
-.float-left {
+  }
+  
+  /* شناور کردن یک جزء به دو طرف */
+  .float-left {
   float: left !important;
-}
-
-.float-right {
+  }
+  
+  .float-right {
   float: right !important;
-}
-
-/* قرار دادن یک جزء در مرکز صفحه */
-.centerize {
+  }
+  
+  /* قرار دادن یک جزء در مرکز صفحه */
+  .centerize {
   margin-left: auto;
   margin-right: auto;
-}
-
-/* قرار دادن یک متن در مرکز صفحه */
-.text-center {
+  }
+  
+  /* قرار دادن یک متن در مرکز صفحه */
+  .text-center {
   text-align: center;
-}
-
-/* خط عمودی */
-.vertical-line {
+  }
+  
+  /* خط عمودی */
+  .vertical-line {
   border-left: 1px solid #E1E1E1;
-}
-
-/* جزء مورد نظر را در موبایل و فبلت پنهان می‌کند */
-@media (max-width: 544px) {
+  }
+  
+  /* جزء مورد نظر را در موبایل و فبلت پنهان می‌کند */
+  @media (max-width: 544px) {
   .hide-on-mobile {
     display: none;
   }
-}
-
-/* اجزا را از تبلت‌ها پنهان می‌کند */
-@media (max-width: 768px) {
+  }
+  
+  /* اجزا را از تبلت‌ها پنهان می‌کند */
+  @media (max-width: 768px) {
   .hide-on-tablet {
     display: none;
   }
-}
-
-/* اجزا را از دسکتاپ‌ها پنهان می‌کند */
-@media (min-width: 768px) {
+  }
+  
+  /* اجزا را از دسکتاپ‌ها پنهان می‌کند */
+  @media (min-width: 768px) {
   .hide-on-desktop {
     display: none;
   }
-}
-
-/* اجزا را در دستگاه‌هایی غیر از موبایل و فبلت پنهان می‌کند */
-@media (min-width: 544px) {
+  }
+  
+  /* اجزا را در دستگاه‌هایی غیر از موبایل و فبلت پنهان می‌کند */
+  @media (min-width: 544px) {
   .hide-on-non-mobile {
     display: none;
   }
-}
+  }
           </code>
         </pre>
       </div>
-
+  
       <div class="row">
         <div id="extra-button-colors"></div>
         <h4>[افزونه] دکمه‌های رنگی بیشتر</h4>
@@ -1018,7 +1014,7 @@
             title="Copy to clipboard"
             data-clipboard-target="#code-extra-button-colors"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
             <code class="language-html" id="code-extra-button-colors">
-&lt;link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/2.2.0/plugins/meshki-extra-button-colors.min.css">
+  &lt;link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/2.2.0/plugins/meshki-extra-button-colors.min.css">
             </code>
           </pre>
         </p>
@@ -1054,7 +1050,7 @@
           </div>
         </div>
       </div>
-
+  
       <div id="important-notes" class="row">
         <h4>نکات مهم</h4>
         <hr>
@@ -1062,7 +1058,7 @@
           مشکی نسخه 2 تغییراتی را اعمال کرده که باعث می‌شود با نسخه‌های قبلی مشکی سازگار نباشد. برای مطلع شدن از تغییرات نسخه‌های مشکی، حتما <a href="https://github.com/Borderliner/Meshki/blob/master/CHANGELOG.md">Changelog</a> را مطالعه کنید تا به اشتباه از مشکی استفاده نکنید.
         </p>
       </div>
-
+  
       <div class="row">
         <h4>این صفحه شامل...</h4>
         <hr>
@@ -1084,7 +1080,7 @@
           <p>ساخته شده با <i class="fas fa-heart custom-love"></i> توسط محمدرضا حاجیانپور (<a href="https://github.com/Borderliner">Borderliner</a>)</p>
         </div>
         <div class="six col text-center">
-          <p>2016-2021، تحت مجوز <a href="https://github.com/Borderliner/Meshki/blob/master/LICENSE">Apache-2.0</a></p>
+          <p>2016-2024، تحت مجوز <a href="https://github.com/Borderliner/Meshki/blob/master/LICENSE">Apache-2.0</a></p>
         </div>
       </div>
     </div>
@@ -1092,7 +1088,6 @@
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ivandiazwm/coinwidget@0.1.1/builds/simple.js" charset="utf-8"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js" charset="utf-8"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css" />
@@ -1137,7 +1132,6 @@
         e.trigger.innerHTML = '<i class="fas fa-clipboard" aria-hidden="true"></i>';
       }, 2000);
     });
-    $('#coinwidget button').removeClass('ui primary labled icon').addClass('orange');
   </script>
 </body>
 
