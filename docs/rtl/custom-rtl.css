@@ -1,57 +1,12 @@
-.meshki-features i.far,
-.meshki-features i.fas
- {
-  font-size: 4.2rem;
-  margin-bottom: 20px;
-}
-
-.nav i.far,
-.nav i.fas {
-  font-size: 1.8rem;
-}
-
 .logo i.far,
 .logo i.fas {
+  padding-right: unset;
   padding-left: 8px;
 }
 
-div.share-links {
-  display: -webkit-flex;
-  display: -moz-box;
-  display: inline-flex;
-}
-
-.share-links .fb-share:hover {
-  color: #4570CC;
-}
-
-.share-links .tw-share:hover {
-  color: #1DA1F2;
-}
-
-.share-links .gp-share:hover {
-  color: #DB4437;
-}
-
-.share-links i.far,
-.share-links i.fas,
-.share-links i.fab {
-  font-size: 4rem;
-}
-
-:not(pre)>code[class*=language-], pre[class*=language-] {
-  background-color: #222 !important;
-}
-
 .title {
-  display: block;
+  font-size: inherit;
   width: 40vmax;
-  padding-bottom: 10px;
-  padding-top: 4vw;
-}
-
-.col {
-  margin-bottom: 15px;
 }
 
 a {
@@ -62,136 +17,10 @@ a {
   padding-top: 140px;
 }
 
-.grid-table div div {
-  text-align: center;
-  border-style: solid;
-  border-radius: 5px;
-  font-size: 1.5rem;
-  color: #222;
-  background-color: #E0E0E0;
-}
-
-.heading-font-size {
-  font-size: 1.2rem;
-  color: #959595;
-  letter-spacing: 1px;
-  vertical-align: middle;
-}
-
-.custom-textarea {
-  height: 200px;
-}
-
-.custom-love {
-  font-size: 1.7rem !important;
-  color: red;
-  animation: heart-beat 1s infinite;
-}
-
-.custom-down-cdn {
-  width: 250px;
-}
-
 .custom-down-cdn span {
   font-size: 1.7rem;
 }
 
-.clipboard-btn {
-  float: right;
-  position: absolute;
-  right: 35px;
+.celebration {
+  text-align: right;
 }
-
-#coinwidget {
-  width: 100%;
-  position: relative;
-  top: 15px;
-}
-
-#coinwidget button {
-  width: 100%;
-}
-
-.celebration-5 {
-  position: relative;
-  top: 20px;
-}
-
-.jquery-modal > .ui.modal {
-  background-color: #333;
-}
-
-.jquery-modal .ui.modal .ui.medium.image {
-  text-align: center;
-}
-
-.jquery-modal .image.content {
-  padding: 30px 0px;
-  width: 90%;
-}
-
-.jquery-modal .image-container {
-  background-color: #fff;
-  margin: 15px auto;
-  padding: 10px 20px;
-}
-
-.jquery-modal .modal-footer {
-  background-color: #222;
-  color: #eee;
-  text-align: left;
-}
-
-.jquery-modal .wallet-number {
-  width: 100%;
-  font-size: 1.5rem;
-  color: darksalmon;
-  border: 2px solid red;
-  padding: 5px;
-  text-align: center;
-  margin: 15px 0;
-}
-
-.download-buttons {
-  margin-bottom: 32vh;
-  margin-top: 50px;
-}
-
-.extern-twitter {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-.extern-twitter i {
-  font-size: 3rem;
-}
-
-.extern-npm {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-.extern-npm i {
-  font-size: 4rem;
-}
-
-.extern-github {
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-
-.extern-github i {
-  font-size: 2.8rem;
-}
-
-@media (min-width: 544px) {
-  .custom-text-right {
-    text-align: right;
-  }
-}
-
-@keyframes heart-beat {
-  0%   { opacity: 1; }
-  100% { opacity: .5; }
-}
-

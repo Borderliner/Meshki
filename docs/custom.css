@@ -1,6 +1,10 @@
+body {
+  font-size: 1.6rem;
+}
+
 .meshki-features i.fas,
 .meshki-features i.far {
-  font-size: 4.2rem;
+  font-size: 5rem;
   margin-bottom: 20px;
 }
 
@@ -94,21 +98,28 @@ div.share-links {
   right: 35px;
 }
 
-#coinwidget {
-  width: 100%;
+.celebration-years {
   position: relative;
-  top: 15px;
+  top: 10px;
+  padding: 0 4px;
+  color: rgb(36, 120, 245);
+  font-size: 5rem;
 }
 
-#coinwidget button {
-  width: 100%;
+.balloons {
+  height: 120px;
 }
 
-.celebration-5 {
-  position: relative;
-  top: 20px;
+.celebration {
+  text-align: left;
+  margin-bottom: 35px;
 }
 
+@media (max-width: 768px) {
+  .celebration {
+    text-align: center;
+  }
+}
 
 .jquery-modal > .ui.modal {
   background-color: #333;
