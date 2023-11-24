@@ -148,6 +148,7 @@ input[type='radio']:focus + label.radio {
 input {
   &[type='range'] {
     // Style input range
+    appearance: none;
     -webkit-appearance: none;
     background-color: transparent;
     margin: 0 5px;
