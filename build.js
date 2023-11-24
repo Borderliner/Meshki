@@ -269,9 +269,9 @@ function compileAll (log = true) {
 
 // If --watch has been passed as an argument
 if ((isWatch !== undefined) && (isWatch === '--watch')) {
-  console.log(chalk.magenta('Watching "src" folder...'))
+  console.log(chalk.magenta.italic('Watching "src" folder...'))
   watch('src', { recursive: true }, (evt, name) => {
-    console.log('%s changed.'.magenta, name)
+    console.log('File ' + chalk.magenta('%s') + ' changed.', name)
     compileAll(false) ? console.log(chalk.green('Re-compiled Meshki successfully!')) : undefined
     console.log(chalk.magenta.italic('Watching "src" folder...'))
   })
