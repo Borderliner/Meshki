@@ -117,7 +117,7 @@ The website of [Meshki](https://borderliner.github.io/Meshki/) uses:
 
 # Acknowledgement
 
-[Meshki](https://borderliner.github.io/Meshki/) was originally started by [Reza Hajianpour](mailto:ryan.hajianpour@gmail.com) as a fork of [Skeleton](https://github.com/dhg/Skeleton). Meshki has come a long way since then and has experienced a total overhaul, including porting the codebase from CSS to Scss.
+[Meshki](https://borderliner.github.io/Meshki/) was originally started by [Reza Hajianpour](mailto:hajianpour.mr@gmail.com) as a fork of [Skeleton](https://github.com/dhg/Skeleton). Meshki has come a long way since then and has experienced a total overhaul, including porting the codebase from CSS to Scss.
 [Skeleton](https://github.com/dhg/Skeleton) was created by [Dave Gamache](https://twitter.com/dhg).
 
 <br>
