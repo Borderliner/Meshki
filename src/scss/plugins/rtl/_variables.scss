@@ -1,7 +1,4 @@
-$rtl-font-family:   'Vazir FD';
-$rtl-font-source:   local($rtl-font-family),
-url('https://cdnjs.cloudflare.com/ajax/libs/meshki/2.4.0/fonts/Vazir-Regular-FD.woff') format('woff'),
-url('https://cdnjs.cloudflare.com/ajax/libs/meshki/2.4.0/fonts/Vazir-Regular-FD.ttf') format('truetype');
+$rtl-font-family:   'Vazirmatn', sans-serif;
 
 $rtl-font-size: 1.5rem;
 $rtl-word-spacing: .12em;

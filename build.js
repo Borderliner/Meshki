@@ -76,7 +76,7 @@ function createDist (log) {
     log ? console.log(chalk.yellow('No ') + chalk.blue.bold('"dist"') + chalk.yellow(' folder exists. Creating folders...')) : undefined
     fs.mkdirSync('dist/')
     fs.mkdirSync('dist/plugins/')
-    fs.mkdirSync('dist/fonts/')
+    // fs.mkdirSync('dist/fonts/')
     fs.mkdirSync('dist/css/')
     fs.mkdirSync('dist/js/')
     log ? console.log(chalk.green('=> ') + chalk.blue('"dist"') + chalk.green(' folder was created successfully!')) : undefined
@@ -262,7 +262,7 @@ function compileAll (log = true) {
   uglifyJavaScript(log)
   log ? console.log(chalk.magenta('Copying assets...')) : undefined
   copyJavaScript(log)
-  copyFonts(log)
+  // copyFonts(log)
   copyLicense(log)
   return true
 }

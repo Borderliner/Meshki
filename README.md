@@ -111,7 +111,7 @@ The website of [Meshki](https://borderliner.github.io/Meshki/) uses:
 
 - [Font Awesome](http://fontawesome.io/)
 - [Open Sans font](https://fonts.google.com/specimen/Open+Sans)
-- [Vazir font](https://rastikerdar.github.io/vazir-font/)
+- [Vazirmatn font](https://rastikerdar.github.io/vazirmatn/)
 - [Prism syntax highlighter](http://prismjs.com)
 - [clipboard.js](https://clipboardjs.com)
 

@@ -17,11 +17,7 @@
 
 @import '../meshki';
 @import 'variables';
-
-@font-face {
-  font-family: $rtl-font-family;
-  src: $rtl-font-source;
-}
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
 
 body {
   direction: rtl;
