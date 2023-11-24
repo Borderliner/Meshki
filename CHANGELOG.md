@@ -1,6 +1,17 @@
+## v2.4.0
+  - [x] Remove bower support
+  - [x] Improve and clean up docs
+  - [x] Fix navbar button paddings
+  - [x] Remove yarn support
+  - [x] Replace local VazirFD with online Vazirmatn from google for RTL
+  - [x] Update project info
+  - [x] Fix button sizes in RTL
+  - [x] Clean up project builder
+  - [x] Text align helpers
+
 ## v2.3.1
-  - [ ] Change hover text colors to dark
-  - [ ] Remove extra button padding in RTL mode
+  - [x] Change hover text colors to dark
+  - [x] Remove extra button padding in RTL mode
 
 ## v2.3.0
   - [x] Fix placeholder positioning bug for RTL
