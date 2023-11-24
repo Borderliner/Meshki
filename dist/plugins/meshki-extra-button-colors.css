@@ -1,6 +1,6 @@
 /*
- * Meshki v2.3.0 (https://borderliner.github.io/Meshki/)
- * Copyright 2016-2021 Reza Hajianpour <ryan.hajianpour@gmail.com>
+ * Meshki v2.4.0 (https://borderliner.github.io/Meshki/)
+ * Copyright 2016-2024 Reza Hajianpour <hajianpour.mr@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -103,8 +103,8 @@ a.button.lime,
 input[type=submit].lime,
 input[type=reset].lime,
 input[type=button].lime {
-  border: 2px #c0ca33 solid;
-  color: #c0ca33;
+  border: 2px #9dca33 solid;
+  color: #9dca33;
 }
 
 button.lime:hover,
@@ -112,8 +112,8 @@ a.button.lime:hover,
 input[type=submit].lime:hover,
 input[type=reset].lime:hover,
 input[type=button].lime:hover {
-  background-color: #c0ca33;
-  border-color: #c0ca33;
+  background-color: #9dca33;
+  border-color: #9dca33;
   color: #222;
 }
 
@@ -122,8 +122,8 @@ a.button.lime:active,
 input[type=submit].lime:active,
 input[type=reset].lime:active,
 input[type=button].lime:active {
-  background-color: #9e9d24;
-  border-color: #9e9d24;
+  background-color: #849e24;
+  border-color: #849e24;
 }
 
 button.brown,

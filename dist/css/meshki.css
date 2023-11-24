@@ -1,6 +1,6 @@
 /*
- * Meshki v2.3.0 (https://borderliner.github.io/Meshki/)
- * Copyright 2016-2021 Reza Hajianpour <ryan.hajianpour@gmail.com>
+ * Meshki v2.4.0 (https://borderliner.github.io/Meshki/)
+ * Copyright 2016-2024 Reza Hajianpour <hajianpour.mr@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -41,6 +41,14 @@
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .vertical-line {
   border-left: 1px #e1e1e1 solid;
 }
@@ -49,7 +57,6 @@
   .hide-on-mobile {
     display: none !important;
   }
-
   .vertical-line {
     border-left: 0;
   }
@@ -77,10 +84,8 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -115,12 +120,9 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
 }
 
 /**
@@ -128,10 +130,8 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -148,12 +148,9 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -171,10 +168,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /**
@@ -224,14 +219,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -239,8 +230,7 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input {
-  /* 1 */
+input { /* 1 */
   overflow: visible;
 }
 
@@ -249,8 +239,7 @@ input {
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
@@ -299,18 +288,12 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -333,10 +316,8 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 
 /**
@@ -352,10 +333,8 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /**
@@ -370,10 +349,8 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /* Interactive
@@ -516,7 +493,6 @@ hr {
   .content {
     width: 80%;
   }
-
   .col {
     margin-left: 4%;
   }
@@ -663,23 +639,18 @@ h6 {
   h1 {
     font-size: 5rem;
   }
-
   h2 {
     font-size: 4.2rem;
   }
-
   h3 {
     font-size: 3.6rem;
   }
-
   h4 {
     font-size: 3rem;
   }
-
   h5 {
     font-size: 2.4rem;
   }
-
   h6 {
     font-size: 1.5rem;
   }
@@ -797,7 +768,7 @@ input[type=reset].blue:hover,
 input[type=button].blue:hover {
   background-color: #55acee;
   border-color: #55acee;
-  color: #e1e1e1;
+  color: #222;
 }
 
 button.blue:active,
@@ -825,7 +796,7 @@ input[type=reset].green:hover,
 input[type=button].green:hover {
   background-color: #2ecc71;
   border-color: #2ecc71;
-  color: #e1e1e1;
+  color: #222;
 }
 
 button.green:active,
@@ -853,7 +824,7 @@ input[type=reset].red:hover,
 input[type=button].red:hover {
   background-color: #e74c3c;
   border-color: #e74c3c;
-  color: #e1e1e1;
+  color: #222;
 }
 
 button.red:active,
@@ -881,7 +852,7 @@ input[type=reset].orange:hover,
 input[type=button].orange:hover {
   background-color: #e67e22;
   border-color: #e67e22;
-  color: #e1e1e1;
+  color: #222;
 }
 
 button.orange:active,
@@ -904,7 +875,7 @@ input[type=button].orange:active {
 
 @media (min-width: 768px) {
   .button-couple button:first-child,
-.button-couple a:first-child {
+  .button-couple a:first-child {
     border-bottom-right-radius: 0;
     border-right-style: solid;
     border-top-right-radius: 0;
@@ -912,14 +883,14 @@ input[type=button].orange:active {
     margin-left: 3px;
   }
   .button-couple button:not(:first-child):not(:last-child),
-.button-couple a:not(:first-child):not(:last-child) {
+  .button-couple a:not(:first-child):not(:last-child) {
     border-bottom-style: solid;
     border-top-style: solid;
     display: inline;
     margin: -5px !important;
   }
   .button-couple button:last-child,
-.button-couple a:last-child {
+  .button-couple a:last-child {
     border-bottom-left-radius: 0;
     border-left-style: solid;
     border-top-left-radius: 0;
@@ -943,7 +914,7 @@ select {
   border-radius: 4px;
   box-sizing: border-box;
   color: #000;
-  height: 38px;
+  height: 40px;
   padding: 0 10px;
   transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
@@ -1096,6 +1067,7 @@ input[type=radio]:focus + label.radio {
 }
 
 input[type=range] {
+  appearance: none;
   -webkit-appearance: none;
   background-color: transparent;
   margin: 0 5px;
@@ -1167,7 +1139,7 @@ input[type=range]::-ms-thumb {
 
 nav,
 .nav {
-  height: 55px;
+  height: 54px;
 }
 nav.fixed,
 .nav.fixed {
@@ -1184,6 +1156,7 @@ nav ul,
   overflow: hidden;
   padding: 0;
   width: 100%;
+  height: 100%;
   z-index: 1;
 }
 nav ul li,
@@ -1208,7 +1181,7 @@ nav ul li > a.button, nav ul li > button, nav ul li > input,
 .nav ul li > a.button,
 .nav ul li > button,
 .nav ul li > input {
-  margin: 7px 5px auto !important;
+  margin: 5px 5px !important;
 }
 nav ul li > a.active,
 .nav ul li > a.active {
@@ -1386,7 +1359,7 @@ footer .row,
 
 @media (min-width: 544px) {
   footer,
-.footer {
+  .footer {
     text-align: left;
   }
 }
