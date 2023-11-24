@@ -71,7 +71,7 @@
 @include create-button('.blue:hover') {
   background-color: $button-color-blue;
   border-color: $button-color-blue;
-  color: $text-color;
+  color: $meshki-black;
 }
 
 // Blue button's active
@@ -90,7 +90,7 @@
 @include create-button('.green:hover') {
   background-color: $button-color-green;
   border-color: $button-color-green;
-  color: $text-color;
+  color: $meshki-black;
 }
 
 // Green button's active
@@ -109,7 +109,7 @@
 @include create-button('.red:hover') {
   background-color: $button-color-red;
   border-color: $button-color-red;
-  color: $text-color;
+  color: $meshki-black;
 }
 
 // Red button's active
@@ -128,7 +128,7 @@
 @include create-button('.orange:hover') {
   background-color: $button-color-orange;
   border-color: $button-color-orange;
-  color: $text-color;
+  color: $meshki-black;
 }
 
 // Orange button's active
