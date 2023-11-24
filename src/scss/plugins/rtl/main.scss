@@ -50,7 +50,7 @@ pre {
 
 // Change the button size for RTL version
 @include create-button {
-  padding: 2px 11px;
+  padding: 6px 12px;
 }
 
 // Middle button of button couples for mobile version
@@ -182,6 +182,8 @@ input[type=text]::-webkit-input-placeholder {
     // Logo of the website, it must be the first child of navbar
     li:first-child a.logo i {
       color: $normal-black;
+      position: relative;
+      top: 3px;
     }
   }
 }
