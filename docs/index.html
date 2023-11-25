@@ -19,12 +19,12 @@
   <meta name="twitter:image" content="https://borderliner.github.io/Meshki/meta-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <!-- DEVELOPMENT FILES
+  <!-- DEVELOPMENT FILES -->
   <link rel="stylesheet" type="text/css" href="../dist/css/meshki.min.css">
   <link rel="stylesheet" type="text/css" href="../dist/plugins/meshki-extra-button-colors.min.css">
   <script type="text/javascript" src="../dist/js/meshki.min.js"></script>
-  DEVELOPMENT FILES -->
-  <!-- PRODUCTION FILES -->
+  <!-- DEVELOPMENT FILES -->
+  <!-- PRODUCTION FILES
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/meshki@2.5.0/dist/css/meshki.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/meshki@2.5.0/dist/plugins/meshki-extra-button-colors.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/meshki@2.5.0/dist/js/meshki.min.js"></script>
@@ -835,36 +835,36 @@
         <h4>Code</h4>
         <hr>
         <p>
-          Code styling is kept basic: just wrap anything in a <code>&lt;code></code> and it will appear like <code>this</code>. It also has a <code>filled</code> style which is like <code class="filled">this</code>. For blocks of code, wrap a &lt;code> with a &lt;pre>.
-          <br> Note that for blocks of code, <code>filled</code> class needs to be added to the &lt;pre>, not &lt;code>.
+          Code styling is kept basic: just wrap anything in a <code>&lt;code></code> and it will appear like <code>this</code>. It also has a <code class="filled">filled</code> style. For blocks of code, wrap a &lt;code> with a &lt;pre>.
+          <br> Note that for blocks of code, <code class="filled">filled</code> class needs to be added to the <code>&lt;pre&gt;</code>, not <code>&lt;code&gt;</code>.
         </p>
-        <p>Also note that originally, Meshki doesn't contain syntax highlighting as you can see on this webpage. We use <a href="http://prismjs.com/">Prism</a> for this website. Check it out!</p>
+        <p>Pay attention that Meshki doesn't contain syntax highlighting as you can see on this webpage. We use <a href="http://prismjs.com/">Prism</a> for this website. Check it out!</p>
       </div>
       <div class="row">
         <div class="twelve col">
           <pre>
             <code>
-  &lt;code>bower install meshki&lt;/code>
+  &lt;code>npm install meshki&lt;/code>
   
   &lt;pre>
-  &lt;code>
-  .some-class {
-    background-color: red;
-  }
-  &lt;/code>
+    &lt;code>
+    .some-class {
+      background-color: red;
+    }
+    &lt;/code>
   &lt;/pre>
             </code>
           </pre>
           <pre class="filled">
             <code>
-  &lt;code class="filled">bower install meshki&lt;/code>
+  &lt;code class="filled">npm install meshki&lt;/code>
   
   &lt;pre class="filled">
-  &lt;code>
-  (function(
-    console.log('Hello world!');
-  ))();
-  &lt;/code>
+    &lt;code>
+    (function(
+      console.log('Hello world!');
+    ))();
+    &lt;/code>
   &lt;/pre>
             </code>
           </pre>
