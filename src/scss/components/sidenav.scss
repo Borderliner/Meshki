@@ -11,6 +11,9 @@
   width: 0; // changes with meshki.js
   z-index: 10; // Stays on top of everything, unless a modal is implemented
 
+  & > *:last-child {
+    padding-bottom: calc(100px - calc(2 * 2vh));
+  }
   // Position and style the close button (top right corner)
   .sidenav-close-button {
     font-size: 3.6rem !important;
@@ -60,7 +63,6 @@
     margin-right: 20px !important;
     min-width: 150px;
     width: 84%;
-
   }
 }
 
