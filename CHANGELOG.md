@@ -1,3 +1,14 @@
+## v2.5.0
+ - [x] Add Flexbox layout system at last
+ - [x] Updated and fixed docs greatly
+ - [x] Add useful layout helpers
+ - [x] Fix row positioning
+ - [x] Replace CDNJS with JSDelivr
+ - [x] Update doc modules e.g. prism, clipboardjs
+ - [x] Remove JQuery usage from docs all together
+ - [x] Improve template structure formatting in docs
+ - [x] Optimize & simplify features in docs
+
 ## v2.4.0
   - [x] Remove bower support
   - [x] Improve and clean up docs

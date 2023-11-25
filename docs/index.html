@@ -25,18 +25,18 @@
   <script type="text/javascript" src="../dist/js/meshki.min.js"></script>
   DEVELOPMENT FILES -->
   <!-- PRODUCTION FILES -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/2.4.0/css/meshki.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/2.4.0/plugins/meshki-extra-button-colors.min.css">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/meshki/2.4.0/js/meshki.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/meshki@2.5.0/dist/css/meshki.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/meshki@2.5.0/dist/plugins/meshki-extra-button-colors.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/meshki@2.5.0/dist/js/meshki.min.js"></script>
   <!-- PRODUCTION FILES -->
   <link rel="stylesheet" type="text/css" href="custom.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.min.css">
 
 </head>
 
@@ -55,7 +55,7 @@
       <a href="#buttons-doc" onclick="meshki.closeSidenav()">Buttons</a>
       <a href="#sidenav-doc" onclick="meshki.closeSidenav()">Sidenav</a>
       <a href="#navbar-doc" onclick="meshki.closeSidenav()">Navbar</a>
-      <a href="#grid-doc" onclick="meshki.closeSidenav()">Grid System</a>
+      <a href="#layout-doc" onclick="meshki.closeSidenav()">Layout System</a>
       <a href="#form-doc" onclick="meshki.closeSidenav()">Forms</a>
       <a href="#typography-doc" onclick="meshki.closeSidenav()">Typography</a>
       <a href="#tables-doc" onclick="meshki.closeSidenav()">Tables</a>
@@ -91,7 +91,7 @@
             <a href="#buttons-doc">Buttons</a>
             <a href="#sidenav-doc">Sidenav</a>
             <a href="#navbar-doc">Navbar</a>
-            <a href="#grid-doc">Grid System</a>
+            <a href="#layout-doc">Layout System</a>
             <a href="#form-doc">Forms</a>
             <a href="#typography-doc">Typography</a>
             <a href="#tables-doc">Tables</a>
@@ -115,7 +115,7 @@
       <div class="row text-center download-buttons">
         <div class="col twelve">
           <div class="button-couple">
-            <a class="button red large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v2.4.0.zip">Download (v2.4.0)</a>
+            <a class="button red large custom-down-cdn" href="https://github.com/Borderliner/Meshki/archive/v2.5.0.zip">Download (v2.5.0)</a>
             <a class="button large disabled" disabled>or</a>
             <a class="button cyan large custom-down-cdn" href="javascript:void(0)" onclick="var cdn=document.getElementById('cdn');cdn.style.display=='none'?cdn.style.display='block':cdn.style.display='none';">Use CDN</a>
           </div>
@@ -126,8 +126,8 @@
               title="Copy to clipboard"
               data-clipboard-target="#code-cdn"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
             <code class="language-html" id="code-cdn">
-  &lt;link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/2.4.0/css/meshki.min.css">
-  &lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/meshki/2.4.0/js/meshki.min.js">&lt;/script>
+  &lt;link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/meshki@2.5.0/dist/css/meshki.min.css">
+  &lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/meshki@2.5.0/dist/js/meshki.min.js">&lt;/script>
             </code>
           </pre>
           <div class="row">
@@ -135,7 +135,7 @@
               <img class="balloons" src="balloons.png" alt="Meshki's birthday!">
             </div>
             <div class="celebration col nine">
-              <span>Meshki is <span class="celebration-years">8</span> years old! Thank you for your everlasting support.</span>
+              <span>Meshki is <span class="celebration-years years-old">8</span> years old! Thank you for your everlasting support.</span>
             </div>
           </div>
         </div>
@@ -143,35 +143,35 @@
       <div class="row meshki-features" style="margin-bottom: 50px;">
         <div class="four col text-center">
           <i class="fas fa-clock" aria-hidden="true"></i><br>
-          <h4>Minimalist, Simple</h4>
-          <span>Design your whole UI in absolutely no time. We have done our best to keep Meshki stupidly simple and clean, and bring you an up-to-date documentation for your convenience.</span>
+          <h4>Minimalist & Simple</h4>
+          <span>Design your whole UI in absolutely no time. We have done our best to keep Meshki stupidly simple and clean, and provide you with starter templates.</span>
         </div>
         <div class="four col text-center">
           <i class="fas fa-eye" aria-hidden="true"></i><br>
           <h4>Eye-Friendly</h4>
           <span>Give your eyes some rest. Making use of a pleasant dark color, reading pages has never been this wonderful. It is especially important in web pages with plenty of textual content.</span>
         </div>
-        <div class="four col text-center">
-          <i class="fas fa-rocket" aria-hidden="true"></i><br>
-          <h4>Rocket-Fast</h4>
-          <span>By using less code and less complex logics, Meshki is light-weight and is not resource-hungry. In other words, your browser doesn't have to render and save much code.</span>
-        </div>
-      </div>
-      <div class="row meshki-features">
         <div class="col four text-center">
           <i class="fas fa-crop-alt" aria-hidden="true"></i><br>
           <h4>Professional</h4>
-          <span>Simplicity doesn't mean lack of features. Meshki was designed with creativity in mind, so your design can be totally different from this page. We are proud to be from the Iranian open-source community, where computer science and technology is gaining momentum.</span>
+          <span>Simplicity doesn't mean lack of features. Meshki was designed with creativity in mind, so your design can be totally different from this page.</span>
+        </div>
+      </div>
+      <div class="row meshki-features">
+        <div class="four col text-center">
+          <i class="fas fa-rocket" aria-hidden="true"></i><br>
+          <h4>Rocket-Fast</h4>
+          <span>By using less code and less complex logics, Meshki is light-weight and is not resource-hungry. Your browser doesn't have to render much.</span>
         </div>
         <div class="col four text-center">
-          <i class="fas fa-check-double" aria-hidden="true"></i><br>
-          <h4>Code Correctness</h4>
-          <span>We value code correctness and stability more than anything else. We want to make sure that we've provided the most reliable tool, so that you wouldn't need to worry about irritating bugs. Enjoy using Meshki, and let us do the dirty work of debugging.</span>
+          <i class="fas fa-toolbox" aria-hidden="true"></i><br>
+          <h4>Zero Dependency</h4>
+          <span>Meshki depends on absolutely nothing! It's all vanilla JavaScript and CSS. No JQuery and Tailwind means quick setup with no hassle.</span>
         </div>
         <div class="col four text-center">
           <i class="fas fa-chess-rook" aria-hidden="true"></i><br>
           <h4>Stable</h4>
-          <span>Meshki has been with you for 5 years now. Imagine the original stable project of Skeleton being maintained for another 5 years. Just sit down and enjoy the smooth experience from Meshki.</span>
+          <span>Meshki has been with you for more than <span class="years-old">5</span> years now. Imagine the original stable project of Skeleton being maintained for another <span class="years-old">8</span> years!</span>
         </div>
       </div>
   
@@ -217,51 +217,50 @@
           <code class="language-html" id="code-get-started">
   &lt;!DOCTYPE html>
   &lt;html>
-  &lt;head>
-  &lt;title>Meshki&lt;/title>
-  &lt;meta charset="UTF-8">
-  &lt;!-- Make the page Mobile-Friendly -->
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  &lt;!-- Add OpenSans font -->
-  &lt;link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  
-  &lt;!-- Add Meshki's files -->
-  &lt;link rel="stylesheet" type="text/css" href="dist/css/meshki.min.css">
-  &lt;script type="text/javascript" src="dist/js/meshki.min.js">&lt;/script>
-  &lt;/head>
-  &lt;body>
-  
-  &lt;div class="sidenav">
-    &lt;!-- Sidenav links here -->
-  &lt;/div>
-  
-  &lt;div class="container">
-  
-    &lt;!-- This is your navbar -->
-    &lt;nav>
-      &lt;ul>
-        &lt;li>&lt;a class="logo" href="javascript:void(0)">My Website&lt;/a>&lt;/li>
-      &lt;/ul>
-    &lt;/nav>
-  
-    &lt;!-- The main content goes here -->
-    &lt;div class="content">
-      &lt;h3>Welcome to my cool website&lt;/h3>
-      &lt;p>This is a sample paragraph.&lt;/p>
-    &lt;/div>
-  
-    &lt;!-- And finally, your cool footer -->
-    &lt;footer>
-      &lt;div class="row">
-        &lt;div class="six col">
-          &lt;p>A text on the footer&lt;/p>
-        &lt;/div>
+    &lt;head>
+      &lt;title>Meshki&lt;/title>
+      &lt;meta charset="UTF-8">
+      &lt;!-- Make the page Mobile-Friendly -->
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      &lt;!-- Add OpenSans font -->
+      &lt;link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+      
+      &lt;!-- Add Meshki's files -->
+      &lt;link rel="stylesheet" type="text/css" href="dist/css/meshki.min.css">
+      &lt;script type="text/javascript" src="dist/js/meshki.min.js">&lt;/script>
+    &lt;/head>
+    &lt;body>
+      &lt;div class="sidenav">
+        &lt;!-- Sidenav links here -->
       &lt;/div>
-    &lt;/footer>
-  &lt;/div>
-  
-  &lt;/body>
+      
+      &lt;div class="container">
+        &lt;!-- This is your navbar -->
+        &lt;nav>
+          &lt;ul>
+            &lt;li>&lt;a class="logo" href="javascript:void(0)">My Website&lt;/a>&lt;/li>
+          &lt;/ul>
+        &lt;/nav>
+      
+        &lt;!-- The main content goes here -->
+        &lt;div class="content">
+          &lt;h3>Welcome to my cool website&lt;/h3>
+          &lt;p>This is a sample paragraph.&lt;/p>
+        &lt;/div>
+      
+        &lt;!-- And finally, your cool footer -->
+        &lt;footer>
+          &lt;div class="row">
+            &lt;div class="six col">
+              &lt;p>A text on the footer&lt;/p>
+            &lt;/div>
+          &lt;/div>
+        &lt;/footer>
+      &lt;/div>
+    
+    &lt;/body>
+  &lt;/html>
           </code>
         </pre>
   
@@ -341,9 +340,9 @@
   &lt;input type="button" class="orange small" value="Orange" /&gt;
   
   &lt;div class="button-couple">
-  &lt;button class="blue medium">Agree&lt;/button>
-  &lt;button class="medium disabled">or&lt;/button>
-  &lt;button class="red medium">Disagree&lt;/button>
+    &lt;button class="blue medium">Agree&lt;/button>
+    &lt;button class="medium disabled">or&lt;/button>
+    &lt;button class="red medium">Disagree&lt;/button>
   &lt;/div>
   
   &lt;button class="expand large"&gt;Large Expanded Button&lt;/button&gt;
@@ -395,31 +394,32 @@
             data-clipboard-target="#code-navbar"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
           <code class="language-html" id="code-navbar">
   &lt;nav class="fixed">
-  &lt;ul>
-    &lt;!-- Note that javascript:void(0) stops your page from jumping to the top -->
-    &lt;li>&lt;a class="logo" href="javascript:void(0)" onclick="meshki.openSidenav()">Meshki&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="https://github.com/Borderliner/Meshki/releases">News&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="https://github.com/Borderliner/Meshki">GitHub&lt;/a>&lt;/li>
-  
-    &lt;!-- Dropdown in Nav -->
-    &lt;li class="nav-dropdown">
-      &lt;a href="javascript:void(0)" class="nav-dropdown-button">Title&lt;/a>
-      &lt;div class="nav-dropdown-content">
-        &lt;a href="#">Sub 1&lt;/a>
-        &lt;a href="#">Sub 2&lt;/a>
-        &lt;a href="#">Sub 3&lt;/a>
-      &lt;/div>
-    &lt;/li>
-  &lt;/ul>
+    &lt;ul>
+      &lt;!-- Note that javascript:void(0) stops your page from jumping to the top -->
+      &lt;li>&lt;a class="logo" href="javascript:void(0)" onclick="meshki.openSidenav()">Meshki&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="https://github.com/Borderliner/Meshki/releases">News&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="https://github.com/Borderliner/Meshki">GitHub&lt;/a>&lt;/li>
+    
+      &lt;!-- Dropdown in Nav -->
+      &lt;li class="nav-dropdown">
+        &lt;a href="javascript:void(0)" class="nav-dropdown-button">Title&lt;/a>
+        &lt;div class="nav-dropdown-content">
+          &lt;a href="#">Sub 1&lt;/a>
+          &lt;a href="#">Sub 2&lt;/a>
+          &lt;a href="#">Sub 3&lt;/a>
+        &lt;/div>
+      &lt;/li>
+    &lt;/ul>
   &lt;/nav>
           </code>
         </pre>
       </div>
   
       <div class="row">
-        <div id="grid-doc"></div>
-        <h4>The Grid System</h4>
+        <div id="layout-doc"></div>
+        <h4>The Layout System</h4>
         <hr>
+        <h5>Grid Layout</h5>
         <p>
           The grid is a <u>12-col fluid grid with a max width of 960px</u>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all col will resize accordingly. The syntax is simple and it makes coding responsive much easier. Go ahead, resize the browser.<br>
           <b>Note</b>: The col must be the first elements at the beginning of a <code>row</code>. <u>This is very important.</u>
@@ -498,44 +498,136 @@
             data-clipboard-target="#code-grid"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
             <code class="language-html" id="code-grid">
   &lt;div class="row"&gt;
-  &lt;div class="one col"&gt;
-    A div with one col length
-  &lt;/div&gt;
-  &lt;div class="eleven col"&gt;
-    A div with eleven col length
-  &lt;/div&gt;
-  &lt;/div&gt;
-  
-  &lt;div class="row"&gt;
-  &lt;div class="one-third col"&gt;
-    A div with one-third of the screen's length
-  &lt;/div&gt;
-  &lt;div class="two-thirds col"&gt;
-    A div with two-thirds of the screen's length
-  &lt;/div&gt;
+    &lt;div class="one col"&gt;
+      A div with one col length
+    &lt;/div&gt;
+    &lt;div class="eleven col"&gt;
+      A div with eleven col length
+    &lt;/div&gt;
   &lt;/div&gt;
   
   &lt;div class="row"&gt;
-  &lt;div class="one-half col"&gt;
-    A div with half of the screen's length
-  &lt;/div&gt;
-  &lt;div class="one-half col"&gt;
-    A div with the other half of the screen's length
-  &lt;/div&gt;
+    &lt;div class="one-third col"&gt;
+      A div with one-third of the screen's length
+    &lt;/div&gt;
+    &lt;div class="two-thirds col"&gt;
+      A div with two-thirds of the screen's length
+    &lt;/div&gt;
   &lt;/div&gt;
   
   &lt;div class="row"&gt;
-  &lt;div class="six offset-by-two col"&gt;
-    &lt;!-- Pushes a six-width-element by two units -->
+    &lt;div class="one-half col"&gt;
+      A div with half of the screen's length
+    &lt;/div&gt;
+    &lt;div class="one-half col"&gt;
+      A div with the other half of the screen's length
+    &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class="two col"&gt;
-    &lt;!-- The rest of the screen -->
-  &lt;/div&gt;
+  
+  &lt;div class="row"&gt;
+    &lt;div class="six offset-by-two col"&gt;
+      &lt;!-- Pushes a six-width-element by two units &gt;
+    &lt;/div&gt;
+    &lt;div class="two col"&gt;
+      &lt;!-- The rest of the screen &gt;
+    &lt;/div&gt;
   &lt;/div&gt;
   
             </code>
           </pre>
       </div>
+
+      <div class="row">
+        <h5>Flexbox Layout (New)</h5>
+        <p>
+          Flexbox is a <u>one-dimensional layout method</u> for arranging items in rows or columns. Items flex (expand) to fill additional space or shrink to fit into smaller spaces.
+        </p>
+        <p>You can see all the helpers of a <a href="https://github.com/Borderliner/Meshki/blob/master/src/scss/layout/flex.scss" target="_blank">Flexbox</a>.</p>
+      </div>
+      <div class="row grid-table">
+        <span>Horizontal Flex</span>
+        <div class="flexbox row">
+          <div class="flex one">Flex One</div>
+          <div class="flex three">Flex Three</div>
+          <div class="flex five">Flex Five</div>
+        </div>
+
+        <span>Vertical Flex</span>
+        <div class="flexbox col">
+          <div>One</div>
+          <div>Two</div>
+          <div>Three</div>
+        </div>
+      </div>
+
+      <div class="row">
+          <pre>
+            <button
+            class="blue small clipboard-btn"
+            title="Copy to clipboard"
+            data-clipboard-target="#code-flex"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
+            <code class="language-html" id="code-flex">
+  &lt;!-- Horizontal Flexbox --&gt;
+  &lt;div class="flexbox row"&gt;
+    &lt;div class="flex one"&gt;
+      A div with one unit of flex expansion
+    &lt;/div&gt;
+    &lt;div class="flex three"&gt;
+      A div with three unit of flex expansion
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;!-- Vertical Flexbox --&gt;
+  &lt;div class="flexbox col"&gt;
+    &lt;div&gt;
+      A vertical flex div
+    &lt;/div&gt;
+    &lt;div&gt;
+      The second vertical flex div
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+            </code>
+          </pre>
+      </div>
+
+      <div class="row">
+        <h5>General Helpers (New)</h5>
+        <p>
+          We've added basic general helpers for your convenience. Check them out <a href="https://github.com/Borderliner/Meshki/blob/master/src/scss/layout/general.scss" target="_blank">here</a>.
+        </p>
+      </div>
+
+      <div class="row">
+        <pre>
+          <button
+          class="blue small clipboard-btn"
+          title="Copy to clipboard"
+          data-clipboard-target="#code-general"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
+          <code class="language-css" id="code-general">
+.block {
+  display: block;
+}
+.invisible {
+  visibility: hidden !important;
+}
+.relative {
+  position: relative;
+}
+.fit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.scroll {
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+}
+          </code>
+        </pre>
+    </div>
   
       <div class="row">
         <div id="form-doc"></div>
@@ -849,14 +941,14 @@
             data-clipboard-target="#code-footer"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
           <code class="language-html" id="code-footer">
   &lt;footer>
-  &lt;div class="row">
-    &lt;div class="six col">
-      &lt;p>Created by: Reza Hajianpour (Borderliner)&lt;/p>
+    &lt;div class="row">
+      &lt;div class="six col">
+        &lt;p>Created by: Reza Hajianpour (Borderliner)&lt;/p>
+      &lt;/div>
+      &lt;div class="six col text-center">
+        &lt;p>2024, Licensed under Apache-2.0&lt;/p>
+      &lt;/div>
     &lt;/div>
-    &lt;div class="six col text-center">
-      &lt;p>2017, Licensed under Apache-2.0&lt;/p>
-    &lt;/div>
-  &lt;/div>
   &lt;/footer>
           </code>
         </pre>
@@ -918,67 +1010,63 @@
           <code class="language-css">
   /* Make element full width */
   .expand {
-  width: 100%;
-  box-sizing: border-box;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   /* Makes sure elements don't run outside containers (great for images in col) */
   .responsive {
-  max-width: 100%;
-  box-sizing: border-box;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
-  /* Float either direction */
+  /* Float either direction (left|right) */
   .float-left {
-  float: left !important;
-  }
-  
-  .float-right {
-  float: right !important;
+    float: left !important;
   }
   
   /* Center an element */
   .centerize {
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   
-  /* Center a text */
+  /* Align a text (left|center|right) */
   .text-center {
-  text-align: center;
+    text-align: center;
   }
   
   /* Vertical line */
   .vertical-line {
-  border-left: 1px solid #E1E1E1;
+    border-left: 1px solid #E1E1E1;
   }
   
   /* Hides the element on mobiles and phablets */
   @media (max-width: 544px) {
-  .hide-on-mobile {
-    display: none;
-  }
+    .hide-on-mobile {
+      display: none;
+    }
   }
   
   /* Hides the element on tablets and smaller */
   @media (max-width: 768px) {
-  .hide-on-tablet {
-    display: none;
-  }
+    .hide-on-tablet {
+      display: none;
+    }
   }
   
   /* Hides the element on desktops */
   @media (min-width: 768px) {
-  .hide-on-desktop {
-    display: none;
-  }
+    .hide-on-desktop {
+      display: none;
+    }
   }
   
   /* Hides the element on non-mobile and non-phablets */
   @media (min-width: 544px) {
-  .hide-on-non-mobile {
-    display: none;
-  }
+    .hide-on-non-mobile {
+      display: none;
+    }
   }
           </code>
         </pre>
@@ -996,7 +1084,7 @@
             title="Copy to clipboard"
             data-clipboard-target="#code-extra-button-colors"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
             <code class="language-html" id="code-extra-button-colors">
-  &lt;link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meshki/2.2.0/plugins/meshki-extra-button-colors.min.css">
+  &lt;link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/meshki@2.5.0/dist/plugins/meshki-extra-button-colors.min.css">
             </code>
           </pre>
         </p>
@@ -1047,7 +1135,7 @@
         <p>
           <ul>
             <li>
-              The awesome "<a href="http://fontawesome.io/" target="_blank">font-awesome</a>" to display icons and such. It is by far the best font icon set I've ever encountered. Make sure to check out their website.
+              The awesome <a href="http://fontawesome.io/" target="_blank">font-awesome</a> to display icons and such. It is by far the best font icon set I've ever encountered. Make sure to check out their website.
             </li>
             <li>
               The mighty <a href="http://prismjs.com/">Prism</a> as a syntax highlighter. It's amazing!
@@ -1072,11 +1160,8 @@
     </div>
   </div>
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js" charset="utf-8"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
   <script type="text/javascript">
     var percent_update = function() {
       document.getElementById("percent_value").innerHTML = this.value;
@@ -1086,9 +1171,12 @@
     document.getElementById("percent").onchange = percent_update;
     document.getElementById("percent").oninput = percent_update;
 
-    document.getElementsByClassName("celebration-years")[0].innerHTML = (new Date().getFullYear() - 2015);
+    var years = [].slice.call(document.getElementsByClassName("years-old"));
+    years.forEach(function(element) {
+      element.innerHTML = (new Date().getFullYear() - 2015);
+    });
 
-    var clipboard = new Clipboard('.clipboard-btn');
+    var clipboard = new ClipboardJS('.clipboard-btn');
     clipboard.on('success', function(e) {
       var classArray = e.trigger.className.split(' ');
       classArray.splice(classArray.indexOf('blue'), 1);

@@ -1,5 +1,5 @@
 /*
- * Meshki v2.4.0 (https://borderliner.github.io/Meshki/)
+ * Meshki v2.5.0 (https://borderliner.github.io/Meshki/)
  * Copyright 2016-2024 Reza Hajianpour <hajianpour.mr@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -443,10 +443,12 @@ hr {
 
 ::selection {
   background: #15acee;
+  color: #222;
 }
 
 ::-moz-selection {
   background: #15acee;
+  color: #222;
 }
 
 .content,
@@ -460,11 +462,14 @@ hr {
   display: table;
 }
 
+/*******************************
+            Grid Layout
+  *******************************/
 .row {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .content {
@@ -485,7 +490,8 @@ hr {
 
 @media (min-width: 400px) {
   .content {
-    padding: auto 0;
+    padding-left: 0;
+    padding-right: 0;
     width: 85%;
   }
 }
@@ -588,6 +594,345 @@ hr {
     margin-left: 52%;
   }
 }
+/*
+Usage:
+Horizontal layout:
+<div class="flex row">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+</div>
+
+Vertical layout:
+<div class="flex col">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+</div>
+
+Flexible children with horizontal layout:
+<div class="flex row">
+  <div>Alpha</div>
+  <div class="flex one">Beta (flex)</div>
+  <div>Gamma</div>
+</div>
+
+Flexible ratios:
+<div class="flex row demo">
+  <div class="flex three">Alpha</div>
+  <div class="flex one">Beta</div>
+  <div class="flex two">Gamma</div>
+</div>
+*/
+/*******************************
+            Flex Layout
+  *******************************/
+.flexbox.row,
+.flexbox.row-reverse,
+.flexbox.col,
+.flexbox.col-reverse {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flexbox.inline {
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+
+.flexbox.row {
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+.flexbox.row-reverse {
+  -ms-flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.flexbox.col {
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+@media (min-width: 544px) {
+  .flexbox.col {
+    margin-left: unset;
+    margin-right: unset;
+  }
+}
+.flexbox.col-reverse {
+  -ms-flex-direction: column-reverse;
+  -webkit-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+.flexbox.wrap {
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.flexbox.no-wrap {
+  -ms-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.flexbox.wrap-reverse {
+  -ms-flex-wrap: wrap-reverse;
+  -webkit-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+.flex.auto {
+  -ms-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.flex.none {
+  -ms-flex: none;
+  -webkit-flex: none;
+  flex: none;
+}
+
+.flex-1,
+.flex.one {
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.flex-2,
+.flex.two {
+  -ms-flex: 2;
+  -webkit-flex: 2;
+  flex: 2;
+}
+
+.flex-3,
+.flex.three {
+  -ms-flex: 3;
+  -webkit-flex: 3;
+  flex: 3;
+}
+
+.flex-4,
+.flex.four {
+  -ms-flex: 4;
+  -webkit-flex: 4;
+  flex: 4;
+}
+
+.flex-5,
+.flex.five {
+  -ms-flex: 5;
+  -webkit-flex: 5;
+  flex: 5;
+}
+
+.flex-6,
+.flex.six {
+  -ms-flex: 6;
+  -webkit-flex: 6;
+  flex: 6;
+}
+
+.flex-7,
+.flex.seven {
+  -ms-flex: 7;
+  -webkit-flex: 7;
+  flex: 7;
+}
+
+.flex-8,
+.flex.eight {
+  -ms-flex: 8;
+  -webkit-flex: 8;
+  flex: 8;
+}
+
+.flex-9,
+.flex.nine {
+  -ms-flex: 9;
+  -webkit-flex: 9;
+  flex: 9;
+}
+
+.flex-10,
+.flex.ten {
+  -ms-flex: 10;
+  -webkit-flex: 10;
+  flex: 10;
+}
+
+.flex-11,
+.flex.eleven {
+  -ms-flex: 11;
+  -webkit-flex: 11;
+  flex: 11;
+}
+
+.flex-12,
+.flex.twelve {
+  -ms-flex: 12;
+  -webkit-flex: 12;
+  flex: 12;
+}
+
+/* alignment in cross axis */
+.flexbox.start {
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+
+.flexbox.center,
+.flexbox.center-center {
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.flexbox.end {
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+
+/* alignment in main axis */
+.flexbox.start-justified {
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.flexbox.center-justified,
+.flexbox.center-center {
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.flexbox.end-justified {
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.flexbox.around-justified {
+  -ms-flex-pack: around;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+.flexbox.justified {
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+/* self alignment */
+.self-start {
+  -ms-align-self: flex-start;
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
+}
+
+.self-center {
+  -ms-align-self: center;
+  -webkit-align-self: center;
+  align-self: center;
+}
+
+.self-end {
+  -ms-align-self: flex-end;
+  -webkit-align-self: flex-end;
+  align-self: flex-end;
+}
+
+.self-stretch {
+  -ms-align-self: stretch;
+  -webkit-align-self: stretch;
+  align-self: stretch;
+}
+
+/*******************************
+            General Layout
+  *******************************/
+body.fullbleed {
+  margin: 0;
+  height: 100vh;
+}
+
+.block {
+  display: block;
+}
+
+/* IE 10 support for HTML5 hidden attr */
+[hidden] {
+  display: none !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+.relative {
+  position: relative;
+}
+
+.fit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.scroll {
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+}
+
+/* fixed position */
+.fixed-bottom,
+.fixed-left,
+.fixed-right,
+.fixed-top {
+  position: fixed;
+}
+
+.fixed-top {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.fixed-right {
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.fixed-bottom {
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.fixed-left {
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
 h1,
 h2,
 h3,
@@ -635,7 +980,7 @@ h6 {
   line-height: 1.6;
 }
 
-@media (min-width: 544px) {
+@media (min-width: 768px) {
   h1 {
     font-size: 5rem;
   }

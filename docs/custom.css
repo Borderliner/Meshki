@@ -2,6 +2,10 @@ body {
   font-size: 1.6rem;
 }
 
+.row {
+  margin-bottom: 30px;
+}
+
 .meshki-features i.fas,
 .meshki-features i.far,
 .meshki-features i.fa-brands {
@@ -62,7 +66,7 @@ div.share-links {
 }
 
 .content {
-  padding-top: 170px;
+  padding-top: 160px;
 }
 
 .grid-table div div {
