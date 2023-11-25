@@ -178,8 +178,6 @@ input[type=text]::-webkit-input-placeholder {
     // Logo of the website, it must be the first child of navbar
     li:first-child a.logo i {
       color: $normal-black;
-      position: relative;
-      top: 3px;
     }
   }
 }
@@ -216,4 +214,9 @@ input[type=text]::-webkit-input-placeholder {
 td,
 th {
   text-align: right;
+}
+
+.nav i.far, .nav i.fas, .nav i.fa-brands {
+  position: relative;
+  top: 2px;
 }
