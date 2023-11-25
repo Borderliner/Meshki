@@ -60,10 +60,12 @@ hr {
 // Text selection color
 ::selection {
   background: $text-selection-color; // WebKit/Blink Browsers
+  color: $background-color;
 }
 
 ::-moz-selection {
   background: $text-selection-color; // Gecko Browsers
+  color: $background-color;
 }
 
 // Self Clearing Goodness
