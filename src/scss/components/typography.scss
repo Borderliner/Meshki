@@ -16,8 +16,8 @@ h4 { @include heading-styler(2.4rem, 1.35, -.08rem); }
 h5 { @include heading-styler(1.8rem, 1.5, -.05rem); }
 h6 { @include heading-styler(1.5rem, 1.6, 0); }
 
-// Increase font sizes for devices larger than phablet
-@media (min-width: $media-phablet) {
+// Increase font sizes for devices larger than tablet
+@media (min-width: $media-tablet) {
   h1 { font-size: 5rem;   }
   h2 { font-size: 4.2rem; }
   h3 { font-size: 3.6rem; }
