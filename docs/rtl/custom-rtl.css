@@ -25,3 +25,9 @@ a {
 .celebration {
   text-align: right;
 }
+
+@media (max-width: 768px) {
+  .celebration {
+    text-align: center;
+  }
+}
