@@ -1,8 +1,11 @@
+/*******************************
+            Grid Layout
+  *******************************/
 // Center the row, used to hold columns
 .row {
   @include centerize;
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 // Content creates a responsive space to hold page data
