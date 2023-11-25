@@ -9,7 +9,7 @@ code {
   white-space: nowrap;
 
   // Single code, filled style
-  .filled {
+  &.filled {
     background-color: $text-color;
     color: $meshki-black;
   }
