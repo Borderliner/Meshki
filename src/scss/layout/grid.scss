@@ -29,7 +29,8 @@
 // Decrease the content width for non-mobiles
 @media (min-width: $media-mobile) {
   .content {
-    padding: auto 0;
+    padding-left: 0;
+    padding-right: 0;
     width: 85%;
   }
 }
