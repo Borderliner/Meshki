@@ -1186,15 +1186,13 @@
   <script type="text/javascript">
     var percent_update = function() {
       document.getElementById("percent_value").innerHTML = this.value;
-      console.log(this.value);
     };
-
     document.getElementById("percent").onchange = percent_update;
     document.getElementById("percent").oninput = percent_update;
 
     var years = [].slice.call(document.getElementsByClassName("years-old"));
     years.forEach(function(element) {
-      element.innerHTML = (new Date().getFullYear() - 2015);
+      element.innerHTML = (new Date().getFullYear() - 2015).toLocaleString('fa-ir');
     });
 
     var clipboard = new ClipboardJS('.clipboard-btn');
