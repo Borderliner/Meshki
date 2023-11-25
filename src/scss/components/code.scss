@@ -43,7 +43,10 @@ pre > code {
   display: inline;
   left: 20px;
   overflow: auto;
-  padding-left: 20px;
   position: relative;
   white-space: pre;
+
+  & > span {
+    padding-right: 20px;
+  }
 }
