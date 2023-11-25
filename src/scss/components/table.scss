@@ -31,15 +31,6 @@ table {
 th,
 td {
   border-bottom: 1px $table-color-border solid;
-  padding: 12px 15px;
+  padding: 12px 10px;
   text-align: left;
-
-  // First and last children (most right and most left cells) do not need padding
-  &:first-child {
-    padding-left: 0;
-  }
-
-  &:last-child {
-    padding-right: 0;
-  }
 }
