@@ -1,3 +1,9 @@
+## v2.5.1
+ - [x] Fix navbar visuals
+ - [x] Fix and improve code styling
+ - [x] Update and greatly improve docs
+ - [x] Fix Sidenav bottom paddings
+
 ## v2.5.0
  - [x] Add Flexbox layout system at last
  - [x] Updated and fixed docs greatly

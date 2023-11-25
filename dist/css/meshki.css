@@ -1,5 +1,5 @@
 /*
- * Meshki v2.5.0 (https://borderliner.github.io/Meshki/)
+ * Meshki v2.5.1 (https://borderliner.github.io/Meshki/)
  * Copyright 2016-2024 Reza Hajianpour <hajianpour.mr@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -1484,7 +1484,7 @@ input[type=range]::-ms-thumb {
 
 nav,
 .nav {
-  height: 54px;
+  height: 52px;
 }
 nav.fixed,
 .nav.fixed {
@@ -1614,6 +1614,9 @@ li.nav-dropdown .nav-dropdown-content a:hover {
   transition: 0.5s;
   width: 0;
   z-index: 10;
+}
+.sidenav > *:last-child {
+  padding-bottom: calc(100px - 4vh);
 }
 .sidenav .sidenav-close-button {
   font-size: 3.6rem !important;
@@ -1749,16 +1752,8 @@ table.hoverable > tbody tr:hover {
 th,
 td {
   border-bottom: 1px #7c7c7c solid;
-  padding: 12px 15px;
+  padding: 12px 10px;
   text-align: left;
-}
-th:first-child,
-td:first-child {
-  padding-left: 0;
-}
-th:last-child,
-td:last-child {
-  padding-right: 0;
 }
 
 code {
@@ -1770,7 +1765,7 @@ code {
   padding: 1px 5px;
   white-space: nowrap;
 }
-code .filled {
+code.filled {
   background-color: #e1e1e1;
   color: #222;
 }
@@ -1797,7 +1792,9 @@ pre > code {
   display: inline;
   left: 20px;
   overflow: auto;
-  padding-left: 20px;
   position: relative;
   white-space: pre;
+}
+pre > code > span {
+  padding-right: 20px;
 }
