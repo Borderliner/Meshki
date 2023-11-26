@@ -206,3 +206,100 @@ div.share-links {
   0%   { opacity: 1; }
   100% { opacity: .5; }
 }
+
+/** Modal */
+.modal {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: fixed;
+  top: 120px;
+  left: 0;
+  right: 0;
+  max-width: calc(100vw - 110px);
+  margin: 0 auto;
+  padding: 30px;
+  background: #222;
+  border-radius: 4px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+  .modal {
+    top: 80px;
+  }
+}
+.modal-close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 18px;
+  padding: 0 5px;
+}
+
+.modal-title {
+  max-width: calc(110vw - 200px);
+}
+
+.modal p {
+  margin-bottom: 4px;
+}
+
+.fiat a {
+  display: block;
+  margin: 5px auto 0 auto;
+  width: 70%;
+}
+
+.crypto-coin {
+  display: block;
+  padding: 6px 0;
+  text-align: center;
+}
+
+.crypto-coin > * {
+  display: block;
+}
+
+.crypto-title {
+  position: relative;
+  bottom: 12px;
+}
+
+.crypto-address {
+  word-wrap: anywhere;
+  padding: 4px 12px;
+  border: solid #eee 1px;
+  border-radius: 15px;
+  margin-top: 6px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.crypto-coin svg {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+/** Overlay */
+.modal-overlay {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+/** JS */
+.modal-is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}

@@ -31,3 +31,9 @@ a {
     text-align: center;
   }
 }
+
+.modal-close-btn {
+  right: unset;
+  left: 10px;
+  padding: 5px 10px 0px 10px;
+}
