@@ -5,9 +5,10 @@
 
 // Simple button, with no style
 @include create-button  {
-  -moz-transition: .3s;
-  -o-transition: .3s;
-  -webkit-transition: .3s;
+  -moz-transition: all .3s !important;
+  -o-transition: all .3s  !important;
+  -webkit-transition: all .3s  !important;
+  transition: all .3s  !important;
   background-color: transparent;
   border: 2px solid $button-color-simple;
   border-radius: 5px;
@@ -20,7 +21,6 @@
   max-width: 98%;
   padding: 8px 10px;
   text-decoration: none;
-  transition: .3s;
 }
 
 @include create-button('.small')  {
