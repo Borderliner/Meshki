@@ -1,19 +1,17 @@
 nav,
 .nav {
-  height: 52px;
-
+  width: 100%;
+  z-index: 1;
   // Fixed Navbar properties
   &.fixed {
     position: fixed;
-    width: 100%;
-    z-index: 1;
   }
 
   ul {
     background-color: $meshki-black;
     border-bottom: 2px solid $text-color;
     list-style-type: none;
-    margin-top: 0;
+    margin: 0;
     overflow: hidden;
     padding: 0;
     width: 100%;
