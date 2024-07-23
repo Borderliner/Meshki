@@ -90,9 +90,19 @@ var meshki = {
 
     overlayDiv.style.opacity = 0
     overlayDiv.style.visibility = 'hidden'
+  },
+
+  setupOverlay: function () {
+    var overlayDiv = document.createElement('div')
+    if (document.getElementsByClassName('sidenav')[0]) {
+      overlayDiv.className = 'overlay'
+      overlayDiv.onclick = function () { meshki.closeSidenav() }
+      document.body.appendChild(overlayDiv)
+    }
   }
 }
 
+// Setup
 function ready (fn) {
   document.onreadystatechange = function () {
     if (document.readyState === 'complete') {
@@ -102,10 +112,5 @@ function ready (fn) {
 }
 
 ready(function () {
-  var overlayDiv = document.createElement('div')
-  if (document.getElementsByClassName('sidenav')[0]) {
-    overlayDiv.className = 'overlay'
-    overlayDiv.onclick = function () { meshki.closeSidenav() }
-    document.body.appendChild(overlayDiv)
-  }
+  meshki.setupOverlay()
 })
