@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-@import 'utils/variables/module';
 @import 'utils/mixins/module';
 @import 'utils/functions/module';
 
-@import 'utils/module';
 @import 'vendor/module';
 
-@import 'base/module';
 @import 'layout/module';
+@import 'base/module';
 @import 'components/module';
+
+@import 'utils/module';

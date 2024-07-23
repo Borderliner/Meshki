@@ -1,0 +1,49 @@
+@import 'colors';
+
+// General scrollbar color
+html, body, .container, .content {
+  /* Works on Firefox */
+  scrollbar-width: auto;
+  scrollbar-color: $scrollbar-color-front $background-color;
+
+  /* Works on Chrome, Edge, and Safari */
+  ::-webkit-scrollbar {
+      width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: $background-color;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background-color: $scrollbar-color-front;
+      border-radius: 8px;
+      border: 3px solid $scrollbar-color-bg;
+      background-clip: padding-box;
+  }
+}
+
+.sidenav {
+  /* Works on Firefox */
+  scrollbar-width: auto;
+  scrollbar-color: $scrollbar-color-front $scrollbar-color-bg;
+
+  &:hover {
+    scrollbar-color: $scrollbar-color-hover $scrollbar-color-bg;
+  }
+
+  /* Works on Chrome, Edge, and Safari */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: $scrollbar-color-bg;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-color-front;
+    border-radius: 8px;
+    border: 3px solid $scrollbar-color-bg;
+  }
+}

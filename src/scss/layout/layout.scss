@@ -1,0 +1,89 @@
+@import 'variables';
+
+/*******************************
+            General Layout
+*******************************/
+// Pushes the container div with effect
+.container {
+  position: absolute;
+  transition: margin-left .5s, margin-right .5s;
+  width: 100%;
+  height: fit-content;
+}
+
+// Content creates a responsive space to hold page data
+.content {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: $content-max-width;
+  padding: 52px 20px 70px 20px;
+  position: relative;
+  width: 100%;
+}
+
+body.fullbleed {
+  margin: 0;
+  height: 100vh;
+}
+  
+.block {
+  display: block;
+}
+
+/* IE 10 support for HTML5 hidden attr */
+[hidden] {
+  display: none !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+.relative {
+  position: relative;
+}
+
+.fit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.scroll {
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+}
+
+/* fixed position */
+.fixed-bottom,
+.fixed-left,
+.fixed-right,
+.fixed-top {
+  position: fixed;
+}
+
+.fixed-top {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.fixed-right {
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.fixed-bottom {
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.fixed-left {
+  top: 0;
+  bottom: 0;
+  left: 0;
+}

@@ -15,7 +15,10 @@
  * limitations under the License.
  */
 
-@import '../meshki';
+@import '../../utils/module';
+@import '../../base/colors';
+@import '../../base/variables';
+@import '../../layout/variables';
 @import 'variables';
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
 
@@ -45,7 +48,7 @@ pre {
 // Buttons //================================
 
 // Change the button size for RTL version
-@include create-button {
+@include button-mixin {
   padding: 6px 12px;
 }
 

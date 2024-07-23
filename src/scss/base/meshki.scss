@@ -1,34 +1,20 @@
+@import 'colors';
+@import 'variables';
+
 // Base Styles
 html {
   -webkit-tap-highlight-color: $transparent-color; // Remove highlight color
-  font-size: $font-size-global;
   height: 100%;
-
 }
 
 // General attributes of the body tag
 body {
   background-color: $background-color;
-  color: $text-color;
-  font-family: $font-family;
-  font-size: $font-size-body;
-  font-weight: $font-weight;
   height: 100%;
-  line-height: $font-line-height;
-}
-
-// Nice blue for links
-a {
-  color: $link-color-default;
-  text-decoration: none;
-
-  &:hover {
-    color: $link-color-hover;
-  }
 }
 
 // Spacing
-@include create-button {
+@include button-mixin {
   margin-bottom: 1rem;
 }
 
@@ -57,40 +43,6 @@ hr {
   margin-top: 3rem;
 }
 
-// Text selection color
-::selection {
-  background: $text-selection-color; // WebKit/Blink Browsers
-  color: $background-color;
-}
-
-::-moz-selection {
-  background: $text-selection-color; // Gecko Browsers
-  color: $background-color;
-}
-
-// General scrollbar color
-html, body, .container, .content {
-  /* Works on Firefox */
-  scrollbar-width: auto;
-  scrollbar-color: $scrollbar-color-front $background-color;
-
-  /* Works on Chrome, Edge, and Safari */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: $background-color;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: $sidenav-color-links;
-    border-radius: 8px;
-    border: 3px solid $sidenav-color-bg;
-    background-clip: padding-box;
-  }
-}
-
 // Self Clearing Goodness
 .content,
 .row {
@@ -102,22 +54,15 @@ html, body, .container, .content {
   }
 }
 
-// Pushes the container div with effect
-.container {
-  position: absolute;
-  transition: margin-left .5s, margin-right .5s;
-  width: 100%;
-  height: fit-content;
+// Text selection color
+::selection {
+  background: $text-selection-color; // WebKit/Blink Browsers
+  color: $background-color;
 }
 
-// Content creates a responsive space to hold page data
-.content {
-  box-sizing: border-box;
-  margin: 0 auto;
-  max-width: $content-max-width;
-  padding: 52px 20px 70px 20px;
-  position: relative;
-  width: 100%;
+::-moz-selection {
+  background: $text-selection-color; // Gecko Browsers
+  color: $background-color;
 }
 
 // Media Queries

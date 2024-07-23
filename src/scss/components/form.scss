@@ -1,5 +1,8 @@
+@import 'colors';
+@import 'variables';
+
 // General attributes
-@include create-input-elements {
+@include input-elements-mixin {
   // Removes awkward default styles on some inputs for iOS
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -16,7 +19,7 @@
 }
 
 // Dim the form elements when they're disabled
-@include create-input-elements(':disabled') {
+@include input-elements-mixin(':disabled') {
   background-color: $form-color-disabled;
   border-color: $form-color-disabled;
   color: $form-color-disabled-text;
@@ -43,24 +46,24 @@ textarea {
 }
 
 // Blue light animation when the form elements get focus
-@include create-input-elements(':focus') {
+@include input-elements-mixin(':focus') {
   background-color: $white;
   // border: 1px solid $form-color-border;
   // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
   outline: 0 !important;
 }
 
-@include create-input-elements('.error') {
+@include input-elements-mixin('.error') {
   border: 1px $button-color-red solid;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .1) inset, 0 0 8px $button-color-red;
 }
 
-@include create-input-elements('.warning') {
+@include input-elements-mixin('.warning') {
   border: 1px $button-color-orange solid;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .1) inset, 0 0 8px $button-color-orange;
 }
 
-@include create-input-elements('.success') {
+@include input-elements-mixin('.success') {
   border: 1px $button-color-green solid;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .1) inset, 0 0 8px $button-color-green;
 }
@@ -82,7 +85,7 @@ fieldset {
 }
 
 // Checkbox and Radio normalization
-@include create-checkradio {
+@include checkradio-mixin {
   display: inline;
 
   // Make the actual boxes invisible

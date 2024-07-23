@@ -1,9 +1,9 @@
 // NOTE: Use it like this:
-// @include create-button(".large.yellow") {
+// @include button-mixin(".large.yellow") {
 //   width: 50%;
 // }
 
-@mixin create-button($options:'') {
+@mixin button-mixin($options:'') {
   button#{$options},
   a.button#{$options},
   input[type="submit"]#{$options},

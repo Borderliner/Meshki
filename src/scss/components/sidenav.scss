@@ -1,7 +1,5 @@
-// Sidenav variables
-$sidenav-width:                    275px;
-$sidenav-animation-duration:       .5s;
-$sidenav-text-animation-duration:  .3s;
+@import 'colors';
+@import 'variables';
 
 :root {
   --sidenav-width: #{$sidenav-width};
@@ -74,31 +72,6 @@ $sidenav-text-animation-duration:  .3s;
     min-width: 150px;
     width: 84%;
   }
-
-  & {
-      /* Works on Firefox */
-      scrollbar-width: auto;
-      scrollbar-color: $sidenav-color-links $sidenav-color-bg;
-
-      &:hover {
-        scrollbar-color: $scrollbar-color-hover $sidenav-color-bg;
-      }
-
-      /* Works on Chrome, Edge, and Safari */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      
-      ::-webkit-scrollbar-track {
-        background: $sidenav-color-bg;
-      }
-      
-      ::-webkit-scrollbar-thumb {
-        background-color: $sidenav-color-links;
-        border-radius: 8px;
-        border: 3px solid $sidenav-color-bg;
-      }
-    }
 }
 
 .overlay {

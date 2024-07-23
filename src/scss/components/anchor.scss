@@ -1,0 +1,11 @@
+@import 'colors';
+
+// Nice blue for links
+a {
+  color: $anchor-color-default;
+  text-decoration: none;
+
+  &:hover {
+    color: $anchor-color-hover;
+  }
+}
