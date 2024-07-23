@@ -57,20 +57,21 @@ var meshki = {
     var overlayDiv = document.getElementsByClassName('overlay')[0]
 
     // Set Sidenav's width to 250px, starts sliding
-    sidenav.style.width = '250px'
+    var sidenavWidth = window.getComputedStyle(document.documentElement).getPropertyValue('--sidenav-width') || '275px';
+    sidenav.style.width = sidenavWidth
     // If on Desktop and the sidenav is a push one, push "container"
     if (window.innerWidth > 768 && isSidenavPush) {
       // Hide body overflow-x
       document.body.style.overflowX = 'hidden'
       // If not RTL
       if (!this.isRTL()) {
-        container.style.marginLeft = '250px'
+        container.style.marginLeft = sidenavWidth
       } else {
-        container.style.marginRight = '250px'
+        container.style.marginRight = sidenavWidth
       }
     }
 
-    overlayDiv.style.opacity = 0.4
+    overlayDiv.style.opacity = 0.55
     overlayDiv.style.visibility = 'visible'
   },
 
