@@ -12,8 +12,9 @@
   z-index: 10; // Stays on top of everything, unless a modal is implemented
 
   & > *:last-child {
-    padding-bottom: calc(100px - calc(2 * 2vh));
+    margin-bottom: calc(100px - 2vh);
   }
+
   // Position and style the close button (top right corner)
   .sidenav-close-button {
     font-size: 3.6rem !important;
@@ -64,13 +65,31 @@
     min-width: 150px;
     width: 84%;
   }
-}
 
-// Pushes the container div with effect
-.container {
-  position: absolute;
-  transition: margin-left .5s, margin-right .5s;
-  width: 100%;
+  & {
+      /* Works on Firefox */
+      scrollbar-width: auto;
+      scrollbar-color: $sidenav-color-links $sidenav-color-bg;
+
+      &:hover {
+        scrollbar-color: $scrollbar-color-hover $sidenav-color-bg;
+      }
+
+      /* Works on Chrome, Edge, and Safari */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: $sidenav-color-bg;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background-color: $sidenav-color-links;
+        border-radius: 8px;
+        border: 3px solid $sidenav-color-bg;
+      }
+    }
 }
 
 .overlay {
