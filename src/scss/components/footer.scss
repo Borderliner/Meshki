@@ -4,12 +4,16 @@ footer,
   background-color: $footer-color-background;
   border-top: 2px solid $text-color;
   display: block;
-  left: 0;
-  max-width: 100%;
-  padding: 25px 50px 0;
   position: absolute;
-  right: 0;
+  left: 0;
+  bottom: 0;
+  max-width: 100%;
+  width: 100%;
   text-align: center;
+
+  &.fixed {
+    position: fixed;
+  }
 
   // Remove bottom margins of columns
   // Remove bottom margin of .row for footer, it takes lots of space
