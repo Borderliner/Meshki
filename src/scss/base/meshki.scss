@@ -68,6 +68,29 @@ hr {
   color: $background-color;
 }
 
+// General scrollbar color
+html, body, .container, .content {
+  /* Works on Firefox */
+  scrollbar-width: auto;
+  scrollbar-color: $scrollbar-color-front $background-color;
+
+  /* Works on Chrome, Edge, and Safari */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $sidenav-color-links;
+    border-radius: 8px;
+    border: 3px solid $sidenav-color-bg;
+    background-clip: padding-box;
+  }
+}
+
 // Self Clearing Goodness
 .content,
 .row {
@@ -77,6 +100,24 @@ hr {
     content: "";
     display: table;
   }
+}
+
+// Pushes the container div with effect
+.container {
+  position: absolute;
+  transition: margin-left .5s, margin-right .5s;
+  width: 100%;
+  height: fit-content;
+}
+
+// Content creates a responsive space to hold page data
+.content {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: $content-max-width;
+  padding: 52px 20px 70px 20px;
+  position: relative;
+  width: 100%;
 }
 
 // Media Queries

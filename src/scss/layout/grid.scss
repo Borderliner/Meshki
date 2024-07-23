@@ -8,17 +8,6 @@
   margin-bottom: 10px;
 }
 
-// Content creates a responsive space to hold page data
-.content {
-  box-sizing: border-box;
-  margin: 0 auto;
-  max-width: $content-max-width;
-  padding: 0 20px;
-  padding-top: 40px;
-  position: relative;
-  width: 100%;
-}
-
 // Columns fill their parent from the left side
 .col {
   box-sizing: border-box;
