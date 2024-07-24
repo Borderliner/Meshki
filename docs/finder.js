@@ -23,9 +23,8 @@ es5/no-unicode-regex
 */
 const meshkiUtil = {
   TRange: null,
-  search (el) {
-    if (event.keyCode === 13 || el === true) {
-      const str = document.getElementById('searchbox').value
+  search (event, str) {
+    if (event.keyCode === 13 || event.type === 'click') {
       if (parseInt(navigator.appVersion) < 4) { return }
       let strFound
       if (window.find) {

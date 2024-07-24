@@ -18,13 +18,16 @@
   <meta name="twitter:description" content="Meshki: The most stylish CSS library on planet Earth!">
   <meta name="twitter:image" content="https://borderliner.github.io/Meshki/meta-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <!-- DEVELOPMENT FILES
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- DEVELOPMENT FILES -->
   <link rel="stylesheet" type="text/css" href="../dist/css/meshki.min.css">
   <link rel="stylesheet" type="text/css" href="../dist/plugins/meshki-extra-button-colors.min.css">
+  <link rel="stylesheet" type="text/css" href="../dist/plugins/meshki-light-mode.min.css">
   <script type="text/javascript" src="../dist/js/meshki.min.js"></script>
   <!-- DEVELOPMENT FILES -->
-  <!-- PRODUCTION FILES -->
+  <!-- PRODUCTION FILES
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/meshki@2.5.1/dist/css/meshki.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/meshki@2.5.1/dist/plugins/meshki-extra-button-colors.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/meshki@2.5.1/dist/js/meshki.min.js"></script>
@@ -102,9 +105,38 @@
         <li><a href="javascript:void(0)" onclick="onModalButtonClick()">Donate</a></li>
         <li class="nav-right hide-on-tablet" style="margin-right: 10px;">
           <script type="text/javascript" src="finder.js"></script>
-          <input type="text" name="searchbox" id="searchbox" placeholder="Search..." onkeydown="meshkiUtil.search(this)">
+          <input type="text" name="searchbox" id="searchbox" style="position: relative; top: 2px;" placeholder="Search...">
         </li>
-        <li class="nav-right hide-on-tablet"><button class="green" onclick="alert('Search button working!')"><i class="fas fa-search" aria-hidden="true"></i></button></li>
+        <li class="nav-right hide-on-tablet">
+          <button id="search-button" class="green" style="position: relative; top: 1px; padding: 9px 11px;"><i class="fas fa-search" aria-hidden="true"></i></button>
+          <script>
+            function doSearch(event) {
+              var searchbox = document.getElementById('searchbox')
+              meshkiUtil.search(event, searchbox.value)
+            }
+            document.getElementById('searchbox').addEventListener('keydown', doSearch)
+            document.getElementById('search-button').addEventListener('click', doSearch)
+          </script>
+        </li>
+        <li class="nav-right">
+          <button id="toggle-dark" class="btn btn-simple" style="padding: 10px 20px; position: relative; top: 1px;"><i class="fa-solid fa-moon" style="padding-right: 6px;"></i>Dark</button>
+          <script>
+            function toggleDark() {
+              var toggleButton = document.getElementById('toggle-dark')
+              var htmlElement = document.documentElement
+              var isLight = htmlElement.classList.contains('light-mode')
+              if (isLight) {
+                htmlElement.classList.remove('light-mode')
+                toggleButton.innerHTML = '<i class="fa-solid fa-moon" style="padding-right: 6px;"></i>Dark'
+              } else {
+                htmlElement.classList.add('light-mode')
+                toggleButton.innerHTML = '<i class="fa-solid fa-sun" style="padding-right: 6px;"></i>Light'
+              }
+            }
+
+            document.getElementById('toggle-dark').addEventListener('click', toggleDark)
+          </script>
+        </li>
       </ul>
     </div>
     <div class="content">
@@ -694,6 +726,13 @@
           <input id="chk-news" type="checkbox" name="chk-news">
           <label for="chk-news" class="checkbox">I wish to receive newsletters from this site.</label>
         </div>
+      </div>
+
+      <div class="row">
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider"></span>
+        </label>
       </div>
   
       <div class="row">
