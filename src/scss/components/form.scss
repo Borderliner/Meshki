@@ -148,87 +148,90 @@ input[type='radio']:focus + label.radio {
   outline: none !important;
 }
 
-input {
-  &[type='range'] {
-    // Style input range
-    appearance: none;
-    -webkit-appearance: none;
-    background-color: transparent;
-    margin: 0 5px;
-
-    &:focus {
-      outline: none;
-    }
-
-    &::-webkit-slider-runnable-track {
-
-      background: $meshki-black;
-      border: 2px solid $form-color-background;
-      border-radius: 25px;
-      cursor: pointer;
-      height: 26px;
-      width: 100%;
-    }
-
-    &::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      background-color: $form-color-background;
-      border: 2px solid transparent;
-      border-radius: 25px;
-      cursor: pointer;
-      height: 22px;
-      width: 22px;
-    }
-
-    &::-moz-range-track {
-      background-color: $meshki-black;
-      border: 2px solid $form-color-background;
-      border-radius: 25px;
-      cursor: pointer;
-      height: 23px;
-      width: 100%;
-    }
-
-    &::-moz-range-thumb {
-      background-color: $form-color-background;
-      border: 2px solid transparent;
-      border-radius: 25px;
-      cursor: pointer;
-      height: 17px;
-      width: 17px;
-    }
-
-    // Fix Firefox outline bug
-    &::-moz-focus-outer {
-      border: 0;
-    }
-
-    &::-ms-track {
-      background-color: transparent;
-      border-color: transparent;
-      color: transparent;
-      cursor: pointer;
-      height: 26px;
-      width: 100%;
-    }
-
-    &::-ms-fill-lower,
-    &::-ms-fill-upper {
-      background-color: $meshki-black;
-      border: 2px solid $form-color-background;
-      border-radius: 50px;
-    }
-
-    &::-ms-thumb {
-      background-color: $form-color-background;
-      border: 2px solid transparent;
-      border-radius: 25px;
-      cursor: pointer;
-      height: 20px;
-    }
-  }
+input[type='checkbox'] + label, input[type='radio'] + label,
+label.checkbox, label.radio {
+  cursor: pointer;
 }
 
+// Range
+input[type='range'] {
+  // Style input range
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  margin: 0 5px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+
+    background: $meshki-black;
+    border: 2px solid $form-color-background;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 26px;
+    width: 100%;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: $form-color-background;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 22px;
+    width: 22px;
+  }
+
+  &::-moz-range-track {
+    background-color: $meshki-black;
+    border: 2px solid $form-color-background;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 23px;
+    width: 100%;
+  }
+
+  &::-moz-range-thumb {
+    background-color: $form-color-background;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 17px;
+    width: 17px;
+  }
+
+  // Fix Firefox outline bug
+  &::-moz-focus-outer {
+    border: 0;
+  }
+
+  &::-ms-track {
+    background-color: transparent;
+    border-color: transparent;
+    color: transparent;
+    cursor: pointer;
+    height: 26px;
+    width: 100%;
+  }
+
+  &::-ms-fill-lower,
+  &::-ms-fill-upper {
+    background-color: $meshki-black;
+    border: 2px solid $form-color-background;
+    border-radius: 50px;
+  }
+
+  &::-ms-thumb {
+    background-color: $form-color-background;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 20px;
+  }
+}
 
 // Change placeholder color for text inputs
 // Chrome
