@@ -4,6 +4,7 @@
 a {
   color: $anchor-color-default;
   text-decoration: none;
+  transition: color .2s;
 
   &:hover {
     color: $anchor-color-hover;
