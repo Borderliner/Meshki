@@ -1,3 +1,4 @@
+@import "../base/colors";
 // Anchor Colors //================================
 $anchor-color-default: #55acee;
 $anchor-color-hover: #74c1fb;
@@ -37,7 +38,7 @@ $form-checkradio-color:            #33bbf0;
 $form-color-placeholder:           #6a6a6a;
 
 // Navbar Colors //================================
-$navbar-color-button-active:       $text-color;
+$navbar-color-button-active:       #111;
 $navbar-color-logo:                $text-color;
 $navbar-color-logo-hover:          #f5f5f5;
 $navbar-color-dropdown-button-bg:  #444;
