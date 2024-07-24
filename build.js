@@ -48,7 +48,8 @@ const options = {
     'dist/js/meshki.min.js',
     'dist/css/meshki.min.css',
     'dist/plugins/meshki-extra-button-colors.min.css',
-    'dist/plugins/meshki-rtl.min.css'
+    'dist/plugins/meshki-rtl.min.css',
+    'dist/plugins/meshki-light-mode.css'
   ]
 }
 
@@ -269,6 +270,8 @@ function compileAll (log = true) {
 
 // If --watch has been passed as an argument
 if ((isWatch !== undefined) && (isWatch === '--watch')) {
+  console.log(chalk.greenBright.italic('Compiling project...'))
+  compileAll()
   console.log(chalk.magenta.italic('Watching "src" folder...'))
   watch('src', { recursive: true }, (evt, name) => {
     console.log('File ' + chalk.magenta('%s') + ' changed.', name)
