@@ -1,0 +1,77 @@
+// Blue button
+@import "colors";
+
+@include button-mixin('.blue') {
+  border: 2px $button-color-blue solid;
+  color: $button-color-blue;
+}
+
+// Blue button's hover
+@include button-mixin('.blue:hover') {
+  background-color: $button-color-blue;
+  border-color: $button-color-blue;
+  color: $meshki-black;
+}
+
+// Blue button's active
+@include button-mixin('.blue:active') {
+  background-color: $button-color-blue-active;
+  border-color: $button-color-blue-active;
+}
+
+// Green button
+@include button-mixin('.green') {
+  border: 2px $button-color-green solid;
+  color: $button-color-green;
+}
+
+// Green button's hover
+@include button-mixin('.green:hover') {
+  background-color: $button-color-green;
+  border-color: $button-color-green;
+  color: $meshki-black;
+}
+
+// Green button's active
+@include button-mixin('.green:active') {
+  background-color: $button-color-green-active;
+  border-color: $button-color-green-active;
+}
+
+// Red button
+@include button-mixin('.red') {
+  border: 2px $button-color-red solid;
+  color: $button-color-red;
+}
+
+// Red button's hover
+@include button-mixin('.red:hover') {
+  background-color: $button-color-red;
+  border-color: $button-color-red;
+  color: $meshki-black;
+}
+
+// Red button's active
+@include button-mixin('.red:active') {
+  background-color: $button-color-red-active;
+  border-color: $button-color-red-active;
+}
+
+// Orange button
+@include button-mixin('.orange') {
+  border: 2px $button-color-orange solid;
+  color: $button-color-orange;
+}
+
+// Orange button's hover
+@include button-mixin('.orange:hover') {
+  background-color: $button-color-orange;
+  border-color: $button-color-orange;
+  color: $meshki-black;
+}
+
+// Orange button's active
+@include button-mixin('.orange:active') {
+  background-color: $button-color-orange-active;
+  border-color: $button-color-orange-active;
+}

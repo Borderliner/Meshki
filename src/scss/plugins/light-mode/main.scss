@@ -1,297 +1,325 @@
 @import '../../utils/module';
 @import 'colors';
 
-// Base //==============================
-body {
-  background-color: $lm-background-color;
-  color: $lm-text-color;
-}
+html.light-mode {
 
-// Misc
-hr {
-  border-color: $lm-text-color;
-}
-
-// Text selection color
-::selection {
-  color: $lm-background-color;
-}
-
-::-moz-selection {
-  color: $lm-background-color;
-}
-
-// Nice blue for links
-a {
-  color: $lm-anchor-color-default;
-
-  &:hover {
-    color: $lm-anchor-color-hover;
+  // Base //==============================
+  body {
+    background-color: $lm-background-color;
+    color: $lm-text-color;
   }
-}
 
-// Navbar //==============================
-nav, .nav {
-  ul {
-    background-color: $lm-meshki-white-darker;
+  // Misc
+  hr {
     border-color: $lm-text-color;
+  }
 
-    li {
-      & > a {
-        color: $lm-text-color;
-      }
+  // Text selection color
+  ::selection {
+    color: $lm-background-color;
+  }
 
-       // Change the link color to #111 (black) on hover
-       // Only direct children are affected, which means it excludes dropdowns
-      & > a:hover, &.nav-dropdown:hover .nav-dropdown-button {
-        background-color: $lm-navbar-color-button-hover;
-      }
+  ::-moz-selection {
+    color: $lm-background-color;
+  }
 
-      // Active navbar button
-      & > a.active {
-        background-color: $lm-navbar-color-button-active;
-      }
+  // Nice blue for links
+  a {
+    color: $lm-anchor-color-default;
 
-      // Logo of the website, it must be the first child of navbar
-      &:first-child a.logo {
-        background-color: $lm-navbar-color-logo;
-        color: white;
-      }
+    &:hover {
+      color: $lm-anchor-color-hover;
+    }
+  }
 
-      // Lighten the logo when the mouse is over it
-      &:first-child a.logo:hover {
-        background-color: $lm-navbar-color-logo-hover;
-        color: white;
-      }
+  // Navbar //==============================
+  nav,
+  .nav {
+    ul {
+      background-color: $lm-meshki-white-darker;
+      border-color: $lm-text-color;
 
-      /* Navigation Dropdown Button */
-      &.nav-dropdown {
-        &:hover {
-          /* When the dropdown is open, change the color of dropdown's button */
-          .nav-dropdown-button {
-            background-color: $lm-navbar-color-button-hover;
-          }
-        }
-
-        /* Dropdown content attributes */
-        .nav-dropdown-content {
-          background-color: $lm-navbar-color-button-hover;
-        }
-
-        /* Each link in dropdown's content */
-        .nav-dropdown-content a {
+      li {
+        &>a {
           color: $lm-text-color;
         }
 
-        /* When the mouse is on each option */
-        .nav-dropdown-content a:hover {
-          background-color: $lm-navbar-color-dropdown-button-bg;
+        // Change the link color to #111 (black) on hover
+        // Only direct children are affected, which means it excludes dropdowns
+        &>a:hover,
+        &.nav-dropdown:hover .nav-dropdown-button {
+          background-color: $lm-navbar-color-button-hover;
+        }
+
+        // Active navbar button
+        &>a.active {
+          background-color: $lm-navbar-color-button-active;
+        }
+
+        // Logo of the website, it must be the first child of navbar
+        &:first-child a.logo {
+          background-color: $lm-navbar-color-logo;
+          color: white;
+        }
+
+        // Lighten the logo when the mouse is over it
+        &:first-child a.logo:hover {
+          background-color: $lm-navbar-color-logo-hover;
+          color: white;
+        }
+
+        /* Navigation Dropdown Button */
+        &.nav-dropdown {
+          &:hover {
+
+            /* When the dropdown is open, change the color of dropdown's button */
+            .nav-dropdown-button {
+              background-color: $lm-navbar-color-button-hover;
+            }
+          }
+
+          /* Dropdown content attributes */
+          .nav-dropdown-content {
+            background-color: $lm-navbar-color-button-hover;
+          }
+
+          /* Each link in dropdown's content */
+          .nav-dropdown-content a {
+            color: $lm-text-color;
+          }
+
+          /* When the mouse is on each option */
+          .nav-dropdown-content a:hover {
+            background-color: $lm-navbar-color-dropdown-button-bg;
+          }
         }
       }
     }
   }
-}
 
-// General scrollbar color
-html, body, .container, .content {
-  scrollbar-color: $lm-text-color $lm-background-color;
-
-  ::-webkit-scrollbar-track {
-      background: $lm-background-color;
-  }
-
-  ::-webkit-scrollbar-thumb {
-      background-color: $lm-text-color;
-      border-color: $lm-scrollbar-color-bg;
-  }
-}
-
-// Sidenav //==============================
-.sidenav.light {
-  background-color: $lm-sidenav-color-bg;
-  scrollbar-color: $lm-text-color $lm-sidenav-color-bg;
-
-  &:hover {
-    scrollbar-color: black $lm-sidenav-color-bg;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: $lm-scrollbar-color-bg;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: $lm-text-color;
-    border-color: $lm-scrollbar-color-bg;
-  }
-
-  // Special form of <hr> for sidenav
-  hr {
-    border-color: $lm-sidenav-color-links;
-    width: 80%;
-  }
-
-  // The links inside side navigation panel
-  a {
-    color: $lm-sidenav-color-links;
+  // Sidenav //==============================
+  .sidenav.light {
+    background-color: $lm-sidenav-color-bg;
+    scrollbar-color: $lm-text-color $lm-sidenav-color-bg;
 
     &:hover {
-      color: $lm-text-color;
+      scrollbar-color: black $lm-sidenav-color-bg;
     }
 
-    &[disabled]:hover {
+    ::-webkit-scrollbar-track {
+      background: $lm-scrollbar-color-bg;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: $lm-text-color;
+      border-color: $lm-scrollbar-color-bg;
+    }
+
+    // Special form of <hr> for sidenav
+    hr {
+      border-color: $lm-sidenav-color-links;
+      width: 80%;
+    }
+
+    // The links inside side navigation panel
+    a {
       color: $lm-sidenav-color-links;
+
+      &:hover {
+        color: $lm-text-color;
+      }
+
+      &[disabled]:hover {
+        color: $lm-sidenav-color-links;
+      }
     }
   }
-}
 
-// Footer //==============================
-footer,
-.footer {
-  background-color: $lm-meshki-white-darker;
-  border-color: $lm-text-color;
-}
-
-// Code //==============================
-code {
-  background-color: transparent;
-  border: 1px $lm-text-color solid;
-  color: $lm-text-color;
-  // Single code, filled style
-  &.filled {
-    background-color: $lm-text-color;
-    color: $lm-meshki-white;
+  // Footer //==============================
+  footer,
+  .footer {
+    background-color: $lm-meshki-white-darker;
+    border-color: $lm-text-color;
   }
-}
 
-// pre is used for a block of code
-pre {
-  background-color: transparent;
-  border-color: $lm-text-color;
-  color: $lm-text-color;
+  // Code //==============================
+  code {
+    background-color: transparent;
+    border: 1px $lm-text-color solid;
+    color: $lm-text-color;
 
-  // Filled mode for blocks of code
-  &.filled {
-    background-color: $lm-text-color;
-    color: $lm-meshki-white;
-
-    // If the code is the immediate child of pre with filled mode
-    & > code {
+    // Single code, filled style
+    &.filled {
       background-color: $lm-text-color;
       color: $lm-meshki-white;
     }
   }
-}
 
-// Buttons //==============================
-@include button-mixin {
-  border-color: $lm-button-color-simple;
-  color: $lm-button-color-simple;
-}
-
-// Simple button's hover
-@include button-mixin(':hover') {
-  background-color: $lm-button-color-simple;
-  border-color: $lm-button-color-simple;
-  color: $lm-meshki-white;
-}
-
-// Simple button's active
-@include button-mixin(':active') {
-  background-color: $lm-button-color-simple-active;
-  border-color: $lm-button-color-simple-active;
-}
-
-// Forms //==============================
-@include input-elements-mixin {
-  background-color: $lm-form-color-background;
-  border-color: $lm-form-color-border;
-  color: black;
-}
-
-@include input-elements-mixin(':focus') {
-  border-color: $lm-form-color-border-focus;
-}
-
-// Fieldset normalization
-fieldset {
-  border-color: $lm-fieldset-color;
-}
-
-input[type='checkbox'] + label.checkbox::before,
-input[type='radio'] + label.radio::before {
-  background-color: transparent;
-  border-color: $lm-text-color;
-}
-
-// When the checkbox is checked
-input[type='checkbox']:checked + label.checkbox:before {
-  background-color: $lm-form-checkradio-color;
-}
-
-// When the radio button is checked
-input[type='radio']:checked + label.radio:before {
-  background-color: $lm-form-checkradio-color;
-}
-
-input[type='range'] {
-  background-color: transparent;
-  
-  &::-webkit-slider-runnable-track {
-    background: transparent;
-    border-color: $lm-text-color;
-  }
-
-  &::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    background-color: $lm-text-color;
-    border-color: $lm-text-color;
-  }
-
-  &::-moz-range-track {
+  // pre is used for a block of code
+  pre {
     background-color: transparent;
     border-color: $lm-text-color;
-  }
+    color: $lm-text-color;
 
-  &::-moz-range-thumb {
-    background-color: $lm-text-color;
-    border-color: $lm-text-color;
-  }
+    // Filled mode for blocks of code
+    &.filled {
+      background-color: $lm-text-color;
+      color: $lm-meshki-white;
 
-  &::-ms-thumb {
-    background-color: $lm-text-color;
-    border-color: $lm-text-color;
-  }
-
-  &::-ms-track {
-    background-color: transparent;
-    border-color: transparent;
-    color: transparent;
-  }
-
-  &::-ms-fill-lower,
-  &::-ms-fill-upper {
-    background-color: transparent;
-    border-color: $lm-text-color;
-  }
-}
-
-// Table //==============================
-table {
-  // Stripped table
-  &.striped tr:nth-child(even) {
-    background-color: $table-color-striped;
-  }
-
-  &.hoverable {
-    // Changes color when the mouse is over each row
-    & > tbody tr:hover {
-      background-color: $table-color-hover;
+      // If the code is the immediate child of pre with filled mode
+      &>code {
+        background-color: $lm-text-color;
+        color: $lm-meshki-white;
+      }
     }
   }
+
+  // Buttons //==============================
+  @include button-mixin('') {
+    border-color: $lm-button-color-simple;
+    color: $lm-button-color-simple;
+  }
+
+  // Simple button's hover
+  @include button-mixin(':hover') {
+    background-color: $lm-button-color-simple;
+    border-color: $lm-button-color-simple;
+    color: $lm-meshki-white;
+  }
+
+  // Simple button's active
+  @include button-mixin(':active') {
+    background-color: $lm-button-color-simple-active;
+    border-color: $lm-button-color-simple-active;
+  }
+
+  @import "../../components/button-colors";
+
+  // Forms //==============================
+  @include input-elements-mixin {
+    background-color: $lm-form-color-background;
+    border-color: $lm-form-color-border;
+    color: black;
+  }
+
+  @include input-elements-mixin(':focus') {
+    border-color: $lm-form-color-border-focus;
+  }
+
+  // Fieldset normalization
+  fieldset {
+    border-color: $lm-fieldset-color;
+  }
+
+  input[type='checkbox']+label.checkbox::before,
+  input[type='radio']+label.radio::before {
+    background-color: transparent;
+    border-color: $lm-text-color;
+  }
+
+  // When the checkbox is checked
+  input[type='checkbox']:checked+label.checkbox:before {
+    background-color: $lm-form-checkradio-color;
+  }
+
+  // When the radio button is checked
+  input[type='radio']:checked+label.radio:before {
+    background-color: $lm-form-checkradio-color;
+  }
+
+  /* Switch */
+  .slider {
+    border: 2px solid $lm-text-color;
+  }
+
+  .slider:before {
+    background-color: $lm-text-color;
+  }
+
+  .switch input:checked+.slider {
+    box-shadow: 0 0 10px rgba(9, 117, 241, 0.8);
+    border: 2px solid #0974f1;
+  }
+
+  input[type='range'] {
+    background-color: transparent;
+
+    &::-webkit-slider-runnable-track {
+      background: transparent;
+      border-color: $lm-text-color;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      background-color: $lm-text-color;
+      border-color: $lm-text-color;
+    }
+
+    &::-moz-range-track {
+      background-color: transparent;
+      border-color: $lm-text-color;
+    }
+
+    &::-moz-range-thumb {
+      background-color: $lm-text-color;
+      border-color: $lm-text-color;
+    }
+
+    &::-ms-thumb {
+      background-color: $lm-text-color;
+      border-color: $lm-text-color;
+    }
+
+    &::-ms-track {
+      background-color: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+
+    &::-ms-fill-lower,
+    &::-ms-fill-upper {
+      background-color: transparent;
+      border-color: $lm-text-color;
+    }
+  }
+
+  // Table //==============================
+  table {
+
+    // Stripped table
+    &.striped tr:nth-child(even) {
+      background-color: $table-color-striped;
+    }
+
+    &.hoverable {
+
+      // Changes color when the mouse is over each row
+      &>tbody tr:hover {
+        background-color: $table-color-hover;
+      }
+    }
+  }
+
+  // Padding and stuff for each cell
+  th,
+  td {
+    border-color: $table-color-border;
+  }
 }
 
-// Padding and stuff for each cell
-th,
-td {
-  border-color: $table-color-border;
+// General scrollbar color
+.light-mode,
+.light-mode body,
+.light-mode .container,
+.light-mode .content {
+  scrollbar-color: $lm-text-color $lm-background-color;
+
+  ::-webkit-scrollbar-track {
+    background: $lm-background-color;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $lm-text-color;
+    border-color: $lm-scrollbar-color-bg;
+  }
 }

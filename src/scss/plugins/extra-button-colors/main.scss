@@ -20,152 +20,152 @@
 
 // Yellow button
 @include button-mixin('.yellow') {
-  border: 2px $x-button-color-yellow solid;
-  color: $x-button-color-yellow;
+  border: 2px $x-button-color-yellow solid !important;
+  color: $x-button-color-yellow !important;
 }
 
 // Yellow button's hover
 @include button-mixin('.yellow:hover') {
-  background-color: $x-button-color-yellow;
-  border-color: $x-button-color-yellow;
-  color: $meshki-black;
+  background-color: $x-button-color-yellow !important;
+  border-color: $x-button-color-yellow !important;
+  color: $meshki-black !important;
 }
 
 // Yellow button's active
 @include button-mixin('.yellow:active') {
-  background-color: $x-button-color-yellow-active;
-  border-color: $x-button-color-yellow-active;
+  background-color: $x-button-color-yellow-active !important;
+  border-color: $x-button-color-yellow-active !important;
 }
 
 // Crimson button
 @include button-mixin('.crimson') {
-  border: 2px $x-button-color-crimson solid;
-  color: $x-button-color-crimson;
+  border: 2px $x-button-color-crimson solid !important;
+  color: $x-button-color-crimson !important;
 }
 
 // Crimson button's hover
 @include button-mixin('.crimson:hover') {
-  background-color: $x-button-color-crimson;
-  border-color: $x-button-color-crimson;
-  color: $text-color;
+  background-color: $x-button-color-crimson !important;
+  border-color: $x-button-color-crimson !important;
+  color: $text-color !important;
 }
 
 // Crimson button's active
 @include button-mixin('.crimson:active') {
-  background-color: $x-button-color-crimson-active;
-  border-color: $x-button-color-crimson-active;
+  background-color: $x-button-color-crimson-active !important;
+  border-color: $x-button-color-crimson-active !important;
 }
 
 // Purple button
 @include button-mixin('.purple') {
-  border: 2px $x-button-color-purple solid;
-  color: $x-button-color-purple;
+  border: 2px $x-button-color-purple solid !important;
+  color: $x-button-color-purple !important;
 }
 
 // Purple button's hover
 @include button-mixin('.purple:hover') {
-  background-color: $x-button-color-purple;
-  border-color: $x-button-color-purple;
-  color: $text-color;
+  background-color: $x-button-color-purple !important;
+  border-color: $x-button-color-purple !important;
+  color: $text-color !important;
 }
 
 // Purple button's active
 @include button-mixin('.purple:active') {
-  background-color: $x-button-color-purple-active;
-  border-color: $x-button-color-purple-active;
+  background-color: $x-button-color-purple-active !important;
+  border-color: $x-button-color-purple-active !important;
 }
 
 // Lime button
 @include button-mixin('.lime') {
-  border: 2px $x-button-color-lime solid;
-  color: $x-button-color-lime;
+  border: 2px $x-button-color-lime solid !important;
+  color: $x-button-color-lime !important;
 }
 
 // Lime button's hover
 @include button-mixin('.lime:hover') {
-  background-color: $x-button-color-lime;
-  border-color: $x-button-color-lime;
-  color: $meshki-black;
+  background-color: $x-button-color-lime !important;
+  border-color: $x-button-color-lime !important;
+  color: $meshki-black !important;
 }
 
 // Lime button's active
 @include button-mixin('.lime:active') {
-  background-color: $x-button-color-lime-active;
-  border-color: $x-button-color-lime-active;
+  background-color: $x-button-color-lime-active !important;
+  border-color: $x-button-color-lime-active !important;
 }
 
 // Brown button
 @include button-mixin('.brown') {
-  border: 2px $x-button-color-brown solid;
-  color: $x-button-color-brown;
+  border: 2px $x-button-color-brown solid !important;
+  color: $x-button-color-brown !important;
 }
 
 // Brown button's hover
 @include button-mixin('.brown:hover') {
-  background-color: $x-button-color-brown;
-  border-color: $x-button-color-brown;
-  color: $text-color;
+  background-color: $x-button-color-brown !important;
+  border-color: $x-button-color-brown !important;
+  color: $text-color !important;
 }
 
 // Brown button's active
 @include button-mixin('.brown:active') {
-  background-color: $x-button-color-brown-active;
-  border-color: $x-button-color-brown-active;
+  background-color: $x-button-color-brown-active !important;
+  border-color: $x-button-color-brown-active !important;
 }
 
 // Space button
 @include button-mixin('.space') {
-  border: 2px $x-button-color-space solid;
-  color: $x-button-color-space;
+  border: 2px $x-button-color-space solid !important;
+  color: $x-button-color-space !important;
 }
 
 // Space button's hover
 @include button-mixin('.space:hover') {
-  background-color: $x-button-color-space;
-  border-color: $x-button-color-space;
-  color: $text-color;
+  background-color: $x-button-color-space !important;
+  border-color: $x-button-color-space !important;
+  color: $text-color !important;
 }
 
 // Space button's active
 @include button-mixin('.space:active') {
-  background-color: $x-button-color-space-active;
-  border-color: $x-button-color-space-active;
+  background-color: $x-button-color-space-active !important;
+  border-color: $x-button-color-space-active !important;
 }
 
 // Rose button
 @include button-mixin('.rose') {
-  border: 2px $x-button-color-rose solid;
-  color: $x-button-color-rose;
+  border: 2px $x-button-color-rose solid !important;
+  color: $x-button-color-rose !important;
 }
 
 // Rose button's hover
 @include button-mixin('.rose:hover') {
-  background-color: $x-button-color-rose;
-  border-color: $x-button-color-rose;
-  color: $text-color;
+  background-color: $x-button-color-rose !important;
+  border-color: $x-button-color-rose !important;
+  color: $text-color !important;
 }
 
 // Rose button's active
 @include button-mixin('.rose:active') {
-  background-color: $x-button-color-rose-active;
-  border-color: $x-button-color-rose-active;
+  background-color: $x-button-color-rose-active !important;
+  border-color: $x-button-color-rose-active !important;
 }
 
 // Cyan button
 @include button-mixin('.cyan') {
-  border: 2px $x-button-color-cyan solid;
-  color: $x-button-color-cyan;
+  border: 2px $x-button-color-cyan solid !important;
+  color: $x-button-color-cyan !important;
 }
 
 // Cyan button's hover
 @include button-mixin('.cyan:hover') {
-  background-color: $x-button-color-cyan;
-  border-color: $x-button-color-cyan;
-  color: $meshki-black;
+  background-color: $x-button-color-cyan !important;
+  border-color: $x-button-color-cyan !important;
+  color: $meshki-black !important;
 }
 
 // Cyan button's active
 @include button-mixin('.cyan:active') {
-  background-color: $x-button-color-cyan-active;
-  border-color: $x-button-color-cyan-active;
+  background-color: $x-button-color-cyan-active !important;
+  border-color: $x-button-color-cyan-active !important;
 }
