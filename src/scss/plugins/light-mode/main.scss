@@ -37,16 +37,16 @@ html.light-mode {
   .nav {
     ul {
       background-color: $lm-meshki-white-darker;
-      border-color: $lm-text-color;
+      border-color: $lm-meshki-white;
 
       li {
-        &>a {
+        & > a {
           color: $lm-text-color;
         }
 
         // Change the link color to #111 (black) on hover
         // Only direct children are affected, which means it excludes dropdowns
-        &>a:hover,
+        & > a:hover,
         &.nav-dropdown:hover .nav-dropdown-button {
           background-color: $lm-navbar-color-button-hover;
         }
@@ -58,8 +58,8 @@ html.light-mode {
 
         // Logo of the website, it must be the first child of navbar
         &:first-child a.logo {
-          background-color: $lm-navbar-color-logo;
-          color: white;
+          background-color: $lm-background-color;
+          color: $lm-text-color;
         }
 
         // Lighten the logo when the mouse is over it
@@ -98,7 +98,7 @@ html.light-mode {
   }
 
   // Sidenav //==============================
-  .sidenav.light {
+  .sidenav {
     background-color: $lm-sidenav-color-bg;
     scrollbar-color: $lm-text-color $lm-sidenav-color-bg;
 
@@ -126,7 +126,7 @@ html.light-mode {
       color: $lm-sidenav-color-links;
 
       &:hover {
-        color: $lm-text-color;
+        color: $lm-sidenav-color-links-hover;
       }
 
       &[disabled]:hover {
@@ -145,7 +145,6 @@ html.light-mode {
   // Code //==============================
   code {
     background-color: transparent;
-    border: 1px $lm-text-color solid;
     color: $lm-text-color;
 
     // Single code, filled style
@@ -167,7 +166,7 @@ html.light-mode {
       color: $lm-meshki-white;
 
       // If the code is the immediate child of pre with filled mode
-      &>code {
+      & > code {
         background-color: $lm-text-color;
         color: $lm-meshki-white;
       }
@@ -191,6 +190,31 @@ html.light-mode {
   @include button-mixin(':active') {
     background-color: $lm-button-color-simple-active;
     border-color: $lm-button-color-simple-active;
+  }
+
+  // Extra colors
+  @import "../../base/colors";
+  $lm-x-button-color-yellow:         #d8d400;
+  $lm-x-button-color-yellow-text:    #979500;
+  $lm-x-button-color-yellow-active:  #ccc900;
+
+  // Yellow button
+  @include button-mixin('.yellow') {
+    border: 2px $lm-x-button-color-yellow solid !important;
+    color: $lm-x-button-color-yellow-text !important;
+  }
+
+  // Yellow button's hover
+  @include button-mixin('.yellow:hover') {
+    background-color: $lm-x-button-color-yellow !important;
+    border-color: $lm-x-button-color-yellow !important;
+    color: $meshki-black !important;
+  }
+
+  // Yellow button's active
+  @include button-mixin('.yellow:active') {
+    background-color: $lm-x-button-color-yellow-active !important;
+    border-color: $lm-x-button-color-yellow-active !important;
   }
 
   @import "../../components/button-colors";
@@ -288,14 +312,14 @@ html.light-mode {
 
     // Stripped table
     &.striped tr:nth-child(even) {
-      background-color: $table-color-striped;
+      background-color: $lm-table-color-striped;
     }
 
     &.hoverable {
 
       // Changes color when the mouse is over each row
       &>tbody tr:hover {
-        background-color: $table-color-hover;
+        background-color: $lm-table-color-hover;
       }
     }
   }
@@ -303,7 +327,7 @@ html.light-mode {
   // Padding and stuff for each cell
   th,
   td {
-    border-color: $table-color-border;
+    border-color: $lm-table-color-border;
   }
 }
 

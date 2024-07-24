@@ -1,6 +1,24 @@
 // Blue button
 @import "colors";
 
+// Button Colors //================================
+$button-color-disabled:            #888;
+
+$button-color-simple:              $text-color;
+$button-color-simple-active:       #b9b9b9;
+
+$button-color-blue:                #55acee;
+$button-color-blue-active:         #4b82b7;
+
+$button-color-green:               #2ecc71;
+$button-color-green-active:        #21a057;
+
+$button-color-red:                 #e74c3c;
+$button-color-red-active:          #bd382a;
+
+$button-color-orange:              #e67e22;
+$button-color-orange-active:       #c16819;
+
 @include button-mixin('.blue') {
   border: 2px $button-color-blue solid;
   color: $button-color-blue;

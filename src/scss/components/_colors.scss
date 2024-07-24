@@ -8,24 +8,6 @@ $button-small-size:                1.2rem;
 $button-medium-size:               1.6rem;
 $button-large-size:                2.2rem;
 
-// Button Colors //================================
-$button-color-disabled:            #888;
-
-$button-color-simple:              $text-color;
-$button-color-simple-active:       #b9b9b9;
-
-$button-color-blue:                #55acee;
-$button-color-blue-active:         #4b82b7;
-
-$button-color-green:               #2ecc71;
-$button-color-green-active:        #21a057;
-
-$button-color-red:                 #e74c3c;
-$button-color-red-active:          #bd382a;
-
-$button-color-orange:              #e67e22;
-$button-color-orange-active:       #c16819;
-
 // Footer Colors //================================
 $footer-color-background:          #111;
 
@@ -39,8 +21,8 @@ $form-color-placeholder:           #6a6a6a;
 
 // Navbar Colors //================================
 $navbar-color-button-active:       #111;
-$navbar-color-logo:                $text-color;
-$navbar-color-logo-hover:          #f5f5f5;
+$navbar-color-logo:                $meshki-black;
+$navbar-color-logo-hover:          #d4d4d4;
 $navbar-color-dropdown-button-bg:  #444;
 
 // Sidenav Colors //================================

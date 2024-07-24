@@ -18,12 +18,13 @@ $lm-navbar-color-bg:                  $lm-meshki-white-darker;
 $lm-navbar-color-button-active:       $lm-text-color;
 $lm-navbar-color-button-hover :       #c7c7c7;
 $lm-navbar-color-logo:                $lm-text-color;
-$lm-navbar-color-logo-hover:          #444;
+$lm-navbar-color-logo-hover:          rgb(29, 29, 29);
 $lm-navbar-color-dropdown-button-bg:  #e6e6e6;
 
 // Sidenav Colors //================================
 $lm-sidenav-color-bg:                 rgb(247, 247, 247);
-$lm-sidenav-color-links:              #202020;
+$lm-sidenav-color-links:              #494949;
+$lm-sidenav-color-links-hover:              #000000;
 $lm-sidenav-color-overlay:            #000;
 
 // Button Colors //================================
@@ -43,6 +44,6 @@ $lm-form-color-placeholder:           #4d4d4d;
 $lm-fieldset-color:                   #3f3f3f;
 
 // Table Colors //================================
-$table-color-border:               #7c7c7c;
-$table-color-striped:              #d1d1d1;
-$table-color-hover:                #afafaf;
+$lm-table-color-border:               #7c7c7c;
+$lm-table-color-striped:              #d1d1d1;
+$lm-table-color-hover:                #afafaf;

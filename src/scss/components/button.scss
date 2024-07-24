@@ -1,3 +1,5 @@
+@import "button-colors";
+
 // Removed focus outlines, especially in Firefox
 @include button-mixin(':focus') {
   outline: 0 !important;

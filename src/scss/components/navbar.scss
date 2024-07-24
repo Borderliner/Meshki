@@ -8,7 +8,7 @@ nav, .nav {
 
   ul {
     background-color: $meshki-black-darker;
-    border-bottom: 2px solid $text-color;
+    border-bottom: 2px solid $meshki-black;
     list-style-type: none;
     margin: 0;
     overflow: hidden;
@@ -53,7 +53,7 @@ nav, .nav {
       // Logo of the website, it must be the first child of navbar
       &:first-child a.logo {
         background-color: $navbar-color-logo;
-        color: $normal-black;
+        color: $text-color;
       }
 
       // Lighten the logo when the mouse is over it
