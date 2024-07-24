@@ -1,3 +1,4 @@
+@import '../base/colors';
 @import 'colors';
 @import 'variables';
 
@@ -153,6 +154,58 @@ label.checkbox, label.radio {
   cursor: pointer;
 }
 
+// Fancy switch
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 2.90em;
+  height: 1.5em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  border: 2px solid $text-color;
+  border-radius: 8px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.1em;
+  width: 1.1em;
+  left: 1px;
+  bottom: 0.1em;
+  background-color: $text-color;
+  border-radius: 6px;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.switch input:checked + .slider {
+  box-shadow: 0 0 10px rgba(9, 117, 241, 0.8);
+  border: 2px solid #0974f1;
+}
+
+.switch input:checked + .slider:before {
+  background-color: #0974f1;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.45em);
+}
+
 // Range
 input[type='range'] {
   // Style input range
@@ -160,16 +213,16 @@ input[type='range'] {
   -webkit-appearance: none;
   background-color: transparent;
   margin: 0 5px;
+  transition: .3s;
 
   &:focus {
     outline: none;
   }
 
   &::-webkit-slider-runnable-track {
-
     background: $meshki-black;
     border: 2px solid $form-color-background;
-    border-radius: 25px;
+    border-radius: 8px;
     cursor: pointer;
     height: 26px;
     width: 100%;
@@ -179,28 +232,57 @@ input[type='range'] {
     -webkit-appearance: none;
     background-color: $form-color-background;
     border: 2px solid transparent;
-    border-radius: 25px;
+    border-radius: 6px;
     cursor: pointer;
-    height: 22px;
-    width: 22px;
+    height: 20px;
+    width: 50px;
+    position: relative;
+    top: 1px;
+    left: 1px;
+  }
+
+  &::-webkit-slider-thumb:hover:active, &::-webkit-slider-thumb:active {
+    background-color: #0b60c2;
+    border-color: #0b60c2;
+    transition: .3s;
+  }
+
+  &::-webkit-slider-thumb:hover {
+    background-color: #0974f1;
+    border-color: #0974f1;
+    transition: .3s;
   }
 
   &::-moz-range-track {
     background-color: $meshki-black;
     border: 2px solid $form-color-background;
-    border-radius: 25px;
+    border-radius: 8px;
     cursor: pointer;
-    height: 23px;
-    width: 100%;
+    height: 22px;
+    width: 100.5%;
+    transition: .3s;
   }
 
   &::-moz-range-thumb {
     background-color: $form-color-background;
     border: 2px solid transparent;
-    border-radius: 25px;
+    border-radius: 6px;
     cursor: pointer;
-    height: 17px;
-    width: 17px;
+    height: 16px;
+    width: 45px;
+    transition: .3s;
+  }
+
+  &::-moz-range-thumb:hover:active, &::-moz-range-thumb:active {
+    background-color: #0b60c2;
+    border-color: #0b60c2;
+    transition: .3s;
+  }
+
+  &::-moz-range-thumb:hover {
+    background-color: #0974f1;
+    border-color: #0974f1;
+    transition: .3s;
   }
 
   // Fix Firefox outline bug
@@ -221,13 +303,13 @@ input[type='range'] {
   &::-ms-fill-upper {
     background-color: $meshki-black;
     border: 2px solid $form-color-background;
-    border-radius: 50px;
+    border-radius: 8px;
   }
 
   &::-ms-thumb {
     background-color: $form-color-background;
     border: 2px solid transparent;
-    border-radius: 25px;
+    border-radius: 8px;
     cursor: pointer;
     height: 20px;
   }
