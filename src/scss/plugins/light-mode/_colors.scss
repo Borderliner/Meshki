@@ -1,0 +1,48 @@
+// General Colors
+$lm-meshki-white: #e2e2e2;
+$lm-meshki-white-darker: #d6d6d6;
+$lm-background-color: $lm-meshki-white;
+$lm-text-color: #222;
+
+// Scrollbar Colors //================================
+$lm-scrollbar-color-bg:               #bebebe;
+$lm-scrollbar-color-front:            rgb(65, 65, 65);
+$lm-scrollbar-color-hover:            $lm-text-color;
+
+// Anchor Colors //================================
+$lm-anchor-color-default: #1098ff;
+$lm-anchor-color-hover: #59b7ff;
+
+// Navbar Colors //================================
+$lm-navbar-color-bg:                  $lm-meshki-white-darker;
+$lm-navbar-color-button-active:       $lm-text-color;
+$lm-navbar-color-button-hover :       #c7c7c7;
+$lm-navbar-color-logo:                $lm-text-color;
+$lm-navbar-color-logo-hover:          #444;
+$lm-navbar-color-dropdown-button-bg:  #e6e6e6;
+
+// Sidenav Colors //================================
+$lm-sidenav-color-bg:                 rgb(247, 247, 247);
+$lm-sidenav-color-links:              #202020;
+$lm-sidenav-color-overlay:            #000;
+
+// Button Colors //================================
+$lm-button-color-simple:              rgb(58, 58, 58);
+$lm-button-color-simple-active:       rgb(39, 39, 39);
+
+// Form Colors //================================
+$lm-form-color-background:            #ececec;
+$lm-form-color-foreground:            #313131;
+$lm-form-color-border:                #b4b4b4;
+$lm-form-color-border-focus:          rgba(55, 175, 255, 0.781);
+$lm-form-color-disabled:              #8a8a8a;
+$lm-form-color-disabled-text:         #1b1b1b;
+$lm-form-checkradio-color:            #1d9acc;
+$lm-form-color-placeholder:           #4d4d4d;
+
+$lm-fieldset-color:                   #3f3f3f;
+
+// Table Colors //================================
+$table-color-border:               #7c7c7c;
+$table-color-striped:              #d1d1d1;
+$table-color-hover:                #afafaf;
