@@ -1,6 +1,6 @@
 /*
- * Meshki v2.5.1 (https://borderliner.github.io/Meshki/)
- * Copyright 2016-2024 Reza Hajianpour <hajianpour.mr@gmail.com>
+ * Meshki v3.0.0 (https://borderliner.github.io/Meshki/)
+ * Copyright 2016-2024 Mohammadreza Hajianpour <hajianpour.mr@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,8 +19,8 @@ a.button.yellow,
 input[type=submit].yellow,
 input[type=reset].yellow,
 input[type=button].yellow {
-  border: 2px #f9f300 solid;
-  color: #f9f300;
+  border: 2px #f9f300 solid !important;
+  color: #f9f300 !important;
 }
 
 button.yellow:hover,
@@ -28,9 +28,9 @@ a.button.yellow:hover,
 input[type=submit].yellow:hover,
 input[type=reset].yellow:hover,
 input[type=button].yellow:hover {
-  background-color: #f9f300;
-  border-color: #f9f300;
-  color: #222;
+  background-color: #f9f300 !important;
+  border-color: #f9f300 !important;
+  color: #222 !important;
 }
 
 button.yellow:active,
@@ -38,8 +38,9 @@ a.button.yellow:active,
 input[type=submit].yellow:active,
 input[type=reset].yellow:active,
 input[type=button].yellow:active {
-  background-color: #bfbb1a;
-  border-color: #bfbb1a;
+  background-color: #bfbb1a !important;
+  border-color: #bfbb1a !important;
+  color: #222 !important;
 }
 
 button.crimson,
@@ -47,8 +48,8 @@ a.button.crimson,
 input[type=submit].crimson,
 input[type=reset].crimson,
 input[type=button].crimson {
-  border: 2px #9a0000 solid;
-  color: #9a0000;
+  border: 2px #9a0000 solid !important;
+  color: #9a0000 !important;
 }
 
 button.crimson:hover,
@@ -56,9 +57,9 @@ a.button.crimson:hover,
 input[type=submit].crimson:hover,
 input[type=reset].crimson:hover,
 input[type=button].crimson:hover {
-  background-color: #9a0000;
-  border-color: #9a0000;
-  color: #e1e1e1;
+  background-color: #9a0000 !important;
+  border-color: #9a0000 !important;
+  color: #e1e1e1 !important;
 }
 
 button.crimson:active,
@@ -66,8 +67,9 @@ a.button.crimson:active,
 input[type=submit].crimson:active,
 input[type=reset].crimson:active,
 input[type=button].crimson:active {
-  background-color: #6f0606;
-  border-color: #6f0606;
+  background-color: #6f0606 !important;
+  border-color: #6f0606 !important;
+  color: #e1e1e1 !important;
 }
 
 button.purple,
@@ -75,8 +77,8 @@ a.button.purple,
 input[type=submit].purple,
 input[type=reset].purple,
 input[type=button].purple {
-  border: 2px #9c27b0 solid;
-  color: #9c27b0;
+  border: 2px #9c27b0 solid !important;
+  color: #9c27b0 !important;
 }
 
 button.purple:hover,
@@ -84,9 +86,9 @@ a.button.purple:hover,
 input[type=submit].purple:hover,
 input[type=reset].purple:hover,
 input[type=button].purple:hover {
-  background-color: #9c27b0;
-  border-color: #9c27b0;
-  color: #e1e1e1;
+  background-color: #9c27b0 !important;
+  border-color: #9c27b0 !important;
+  color: #e1e1e1 !important;
 }
 
 button.purple:active,
@@ -94,8 +96,9 @@ a.button.purple:active,
 input[type=submit].purple:active,
 input[type=reset].purple:active,
 input[type=button].purple:active {
-  background-color: #7b1fa2;
-  border-color: #7b1fa2;
+  background-color: #7b1fa2 !important;
+  border-color: #7b1fa2 !important;
+  color: #e1e1e1 !important;
 }
 
 button.lime,
@@ -103,8 +106,8 @@ a.button.lime,
 input[type=submit].lime,
 input[type=reset].lime,
 input[type=button].lime {
-  border: 2px #9dca33 solid;
-  color: #9dca33;
+  border: 2px #9dca33 solid !important;
+  color: #9dca33 !important;
 }
 
 button.lime:hover,
@@ -112,9 +115,9 @@ a.button.lime:hover,
 input[type=submit].lime:hover,
 input[type=reset].lime:hover,
 input[type=button].lime:hover {
-  background-color: #9dca33;
-  border-color: #9dca33;
-  color: #222;
+  background-color: #9dca33 !important;
+  border-color: #9dca33 !important;
+  color: #222 !important;
 }
 
 button.lime:active,
@@ -122,8 +125,9 @@ a.button.lime:active,
 input[type=submit].lime:active,
 input[type=reset].lime:active,
 input[type=button].lime:active {
-  background-color: #849e24;
-  border-color: #849e24;
+  background-color: #849e24 !important;
+  border-color: #849e24 !important;
+  color: #222 !important;
 }
 
 button.brown,
@@ -131,8 +135,8 @@ a.button.brown,
 input[type=submit].brown,
 input[type=reset].brown,
 input[type=button].brown {
-  border: 2px #8d6e63 solid;
-  color: #8d6e63;
+  border: 2px #8d6e63 solid !important;
+  color: #8d6e63 !important;
 }
 
 button.brown:hover,
@@ -140,9 +144,9 @@ a.button.brown:hover,
 input[type=submit].brown:hover,
 input[type=reset].brown:hover,
 input[type=button].brown:hover {
-  background-color: #8d6e63;
-  border-color: #8d6e63;
-  color: #e1e1e1;
+  background-color: #8d6e63 !important;
+  border-color: #8d6e63 !important;
+  color: #e1e1e1 !important;
 }
 
 button.brown:active,
@@ -150,8 +154,9 @@ a.button.brown:active,
 input[type=submit].brown:active,
 input[type=reset].brown:active,
 input[type=button].brown:active {
-  background-color: #6d4c41;
-  border-color: #6d4c41;
+  background-color: #6d4c41 !important;
+  border-color: #6d4c41 !important;
+  color: #e1e1e1 !important;
 }
 
 button.space,
@@ -159,8 +164,8 @@ a.button.space,
 input[type=submit].space,
 input[type=reset].space,
 input[type=button].space {
-  border: 2px #607d8b solid;
-  color: #607d8b;
+  border: 2px #607d8b solid !important;
+  color: #607d8b !important;
 }
 
 button.space:hover,
@@ -168,9 +173,9 @@ a.button.space:hover,
 input[type=submit].space:hover,
 input[type=reset].space:hover,
 input[type=button].space:hover {
-  background-color: #607d8b;
-  border-color: #607d8b;
-  color: #e1e1e1;
+  background-color: #607d8b !important;
+  border-color: #607d8b !important;
+  color: #e1e1e1 !important;
 }
 
 button.space:active,
@@ -178,8 +183,9 @@ a.button.space:active,
 input[type=submit].space:active,
 input[type=reset].space:active,
 input[type=button].space:active {
-  background-color: #455a64;
-  border-color: #455a64;
+  background-color: #455a64 !important;
+  border-color: #455a64 !important;
+  color: #e1e1e1 !important;
 }
 
 button.rose,
@@ -187,8 +193,8 @@ a.button.rose,
 input[type=submit].rose,
 input[type=reset].rose,
 input[type=button].rose {
-  border: 2px #e91e63 solid;
-  color: #e91e63;
+  border: 2px #e91e63 solid !important;
+  color: #e91e63 !important;
 }
 
 button.rose:hover,
@@ -196,9 +202,9 @@ a.button.rose:hover,
 input[type=submit].rose:hover,
 input[type=reset].rose:hover,
 input[type=button].rose:hover {
-  background-color: #e91e63;
-  border-color: #e91e63;
-  color: #e1e1e1;
+  background-color: #e91e63 !important;
+  border-color: #e91e63 !important;
+  color: #e1e1e1 !important;
 }
 
 button.rose:active,
@@ -206,8 +212,9 @@ a.button.rose:active,
 input[type=submit].rose:active,
 input[type=reset].rose:active,
 input[type=button].rose:active {
-  background-color: #c2185b;
-  border-color: #c2185b;
+  background-color: #c2185b !important;
+  border-color: #c2185b !important;
+  color: #e1e1e1 !important;
 }
 
 button.cyan,
@@ -215,8 +222,8 @@ a.button.cyan,
 input[type=submit].cyan,
 input[type=reset].cyan,
 input[type=button].cyan {
-  border: 2px #00e5ff solid;
-  color: #00e5ff;
+  border: 2px #00e5ff solid !important;
+  color: #00e5ff !important;
 }
 
 button.cyan:hover,
@@ -224,9 +231,9 @@ a.button.cyan:hover,
 input[type=submit].cyan:hover,
 input[type=reset].cyan:hover,
 input[type=button].cyan:hover {
-  background-color: #00e5ff;
-  border-color: #00e5ff;
-  color: #222;
+  background-color: #00e5ff !important;
+  border-color: #00e5ff !important;
+  color: #222 !important;
 }
 
 button.cyan:active,
@@ -234,6 +241,7 @@ a.button.cyan:active,
 input[type=submit].cyan:active,
 input[type=reset].cyan:active,
 input[type=button].cyan:active {
-  background-color: #00b8d4;
-  border-color: #00b8d4;
+  background-color: #00b8d4 !important;
+  border-color: #00b8d4 !important;
+  color: #222 !important;
 }

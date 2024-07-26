@@ -1,6 +1,6 @@
 /*
- * Meshki v2.5.1 (https://borderliner.github.io/Meshki/)
- * Copyright 2016-2024 Reza Hajianpour <hajianpour.mr@gmail.com>
+ * Meshki v3.0.0 (https://borderliner.github.io/Meshki/)
+ * Copyright 2016-2024 Mohammadreza Hajianpour <hajianpour.mr@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

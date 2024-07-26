@@ -1,3 +1,23 @@
+## v3.1.0
+  - [ ] Add Tailwind-like utility classes as a plugin
+
+## v3.0.0
+  - [x] Add light-mode plugin
+  - [x] Add Switch button component
+  - [x] Change navbar style
+  - [x] Add scrollbar style
+  - [x] Fix button color bugs
+  - [x] Clean up code structure for colors
+  - [x] Add flex-flow classes
+  - [x] Add getting started boilerplate
+  - [x] Clean up and update docs
+  - [x] Better scroll ui and animations
+  - [x] Minimize layout styling for row and footer
+  - [x] Fix doc search functionality
+  - [x] Remove hard-coded sidenav width, now configurable with "--sidenav-width" in ":root"
+  - [x] Better source code watch for dev
+  - [x] Fix small bugs here and there
+
 ## v2.5.1
  - [x] Fix navbar visuals
  - [x] Fix and improve code styling

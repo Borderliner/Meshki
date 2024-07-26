@@ -1,6 +1,6 @@
 /*
- * Meshki v2.5.1 (https://borderliner.github.io/Meshki/)
- * Copyright 2016-2024 Reza Hajianpour <hajianpour.mr@gmail.com>
+ * Meshki v3.0.0 (https://borderliner.github.io/Meshki/)
+ * Copyright 2016-2024 Mohammadreza Hajianpour <hajianpour.mr@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -57,20 +57,21 @@ var meshki = {
     var overlayDiv = document.getElementsByClassName('overlay')[0]
 
     // Set Sidenav's width to 250px, starts sliding
-    sidenav.style.width = '250px'
+    var sidenavWidth = window.getComputedStyle(document.documentElement).getPropertyValue('--sidenav-width') || '275px';
+    sidenav.style.width = sidenavWidth
     // If on Desktop and the sidenav is a push one, push "container"
     if (window.innerWidth > 768 && isSidenavPush) {
       // Hide body overflow-x
       document.body.style.overflowX = 'hidden'
       // If not RTL
       if (!this.isRTL()) {
-        container.style.marginLeft = '250px'
+        container.style.marginLeft = sidenavWidth
       } else {
-        container.style.marginRight = '250px'
+        container.style.marginRight = sidenavWidth
       }
     }
 
-    overlayDiv.style.opacity = 0.4
+    overlayDiv.style.opacity = 0.55
     overlayDiv.style.visibility = 'visible'
   },
 
@@ -89,9 +90,19 @@ var meshki = {
 
     overlayDiv.style.opacity = 0
     overlayDiv.style.visibility = 'hidden'
+  },
+
+  setupOverlay: function () {
+    var overlayDiv = document.createElement('div')
+    if (document.getElementsByClassName('sidenav')[0]) {
+      overlayDiv.className = 'overlay'
+      overlayDiv.onclick = function () { meshki.closeSidenav() }
+      document.body.appendChild(overlayDiv)
+    }
   }
 }
 
+// Setup
 function ready (fn) {
   document.onreadystatechange = function () {
     if (document.readyState === 'complete') {
@@ -101,10 +112,5 @@ function ready (fn) {
 }
 
 ready(function () {
-  var overlayDiv = document.createElement('div')
-  if (document.getElementsByClassName('sidenav')[0]) {
-    overlayDiv.className = 'overlay'
-    overlayDiv.onclick = function () { meshki.closeSidenav() }
-    document.body.appendChild(overlayDiv)
-  }
+  meshki.setupOverlay()
 })
