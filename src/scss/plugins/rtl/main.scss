@@ -176,11 +176,10 @@ input[type=text]::-webkit-input-placeholder {
     // Navbar buttons should be on the right side
     li {
       float: right;
-    }
 
-    // Logo of the website, it must be the first child of navbar
-    li:first-child a.logo i {
-      color: $normal-black;
+      &.nav-dropdown .nav-dropdown-content a {
+        text-align: right;
+      }
     }
   }
 }
@@ -222,4 +221,13 @@ th {
 .nav i.far, .nav i.fas, .nav i.fa-brands {
   position: relative;
   top: 2px;
+}
+
+.switch .slider:before {
+  left: unset;
+  right: 1px;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(-1.45em);
 }
