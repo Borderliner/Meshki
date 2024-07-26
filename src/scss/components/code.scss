@@ -41,12 +41,6 @@ pre {
 pre > code {
   border: 0;
   display: inline;
-  left: 20px;
   overflow: auto;
-  position: relative;
   white-space: pre;
-
-  & > span {
-    padding-right: 20px;
-  }
 }
