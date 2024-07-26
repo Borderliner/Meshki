@@ -90,6 +90,30 @@ Flexible ratios:
   flex-wrap: nowrap;
 }
 
+.flexbox.flow-row {
+  -ms-flex-flow: row;
+  -webkit-flex-flow: row;
+  flex-flow: row;
+}
+
+.flexbox.flow-col {
+  -ms-flex-flow: col;
+  -webkit-flex-flow: col;
+  flex-flow: col;
+}
+
+.flexbox.flow-wrap {
+  -ms-flex-flow: wrap;
+  -webkit-flex-flow: wrap;
+  flex-flow: wrap;
+}
+
+.flexbox.flow-nowrap {
+  -ms-flex-flow: nowrap;
+  -webkit-flex-flow: nowrap;
+  flex-flow: nowrap;
+}
+
 .flexbox.wrap-reverse {
   -ms-flex-wrap: wrap-reverse;
   -webkit-flex-wrap: wrap-reverse;
