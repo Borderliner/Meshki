@@ -162,48 +162,86 @@ label.checkbox, label.radio {
   display: inline-block;
   width: 2.90em;
   height: 1.5em;
-}
 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
+  /* Hide default HTML checkbox */
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
 
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  inset: 0;
-  border: 2px solid $text-color;
-  border-radius: 8px;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    border: 2px solid $text-color;
+    border-radius: 8px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: 2.7em;
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 1.1em;
-  width: 1.1em;
-  left: 1px;
-  bottom: 0.1em;
-  background-color: $text-color;
-  border-radius: 6px;
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
-}
-
-.switch input:checked + .slider {
-  box-shadow: 0 0 10px rgba(9, 117, 241, 0.8);
-  border: 2px solid #0974f1;
-}
-
-.switch input:checked + .slider:before {
-  background-color: #0974f1;
+    &:before {
+      position: absolute;
+      content: "";
+      height: 1.1em;
+      width: 1.1em;
+      left: 1px;
+      bottom: 0.1em;
+      background-color: $text-color;
+      border-radius: 6px;
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+  }
 }
 
 .switch input:checked + .slider:before {
   transform: translateX(1.45em);
+}
+
+.switch input:checked + .slider {
+  box-shadow: 0 0 10px $button-color-simple;
+  border: 2px solid $button-color-simple;
+}
+
+.switch input:checked + .slider:before {
+  background-color: $button-color-simple;
+}
+
+// Colors
+.switch.blue input:checked + .slider {
+  box-shadow: 0 0 10px rgba(9, 117, 241, 0.8);
+  border: 2px solid #0974f1;
+}
+
+.switch.blue input:checked + .slider:before {
+  background-color: #0974f1;
+}
+
+.switch.green input:checked + .slider {
+  box-shadow: 0 0 10px #2ecc70d0;
+  border: 2px solid #2ecc71;
+}
+
+.switch.green input:checked + .slider:before {
+  background-color: #2ecc71;
+}
+
+.switch.orange input:checked + .slider {
+  box-shadow: 0 0 10px #e67d22d2;
+  border: 2px solid #e67e22;
+}
+
+.switch.orange input:checked + .slider:before {
+  background-color: #e67e22;
+}
+
+.switch.red input:checked + .slider {
+  box-shadow: 0 0 10px #e74d3ccc;
+  border: 2px solid #e74c3c;
+}
+
+.switch.red input:checked + .slider:before {
+  background-color: #e74c3c;
 }
 
 // Range
@@ -270,6 +308,12 @@ input[type='range'] {
     cursor: pointer;
     height: 16px;
     width: 45px;
+    transition: .3s;
+  }
+
+  &::-moz-range-thumb:hover {
+    background-color: #0974f1;
+    border-color: #0974f1;
     transition: .3s;
   }
 
