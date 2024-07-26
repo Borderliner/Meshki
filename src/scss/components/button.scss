@@ -6,7 +6,7 @@
 }
 
 // Simple button, with no style
-@include button-mixin  {
+@include button-mixin {
   -moz-transition: all .3s !important;
   -o-transition: all .3s  !important;
   -webkit-transition: all .3s  !important;
@@ -48,6 +48,7 @@
 @include button-mixin(':active') {
   background-color: $button-color-simple-active;
   border-color: $button-color-simple-active;
+  color: $meshki-black;
 }
 
 // Disabled button

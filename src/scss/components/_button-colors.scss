@@ -35,6 +35,7 @@ $button-color-orange-active:       #c16819;
 @include button-mixin('.blue:active') {
   background-color: $button-color-blue-active;
   border-color: $button-color-blue-active;
+  color: $meshki-black;
 }
 
 // Green button
@@ -54,6 +55,7 @@ $button-color-orange-active:       #c16819;
 @include button-mixin('.green:active') {
   background-color: $button-color-green-active;
   border-color: $button-color-green-active;
+  color: $meshki-black;
 }
 
 // Red button
@@ -73,6 +75,7 @@ $button-color-orange-active:       #c16819;
 @include button-mixin('.red:active') {
   background-color: $button-color-red-active;
   border-color: $button-color-red-active;
+  color: $meshki-black;
 }
 
 // Orange button
@@ -92,4 +95,5 @@ $button-color-orange-active:       #c16819;
 @include button-mixin('.orange:active') {
   background-color: $button-color-orange-active;
   border-color: $button-color-orange-active;
+  color: $meshki-black;
 }
