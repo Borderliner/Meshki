@@ -35,6 +35,7 @@
 @include button-mixin('.yellow:active') {
   background-color: $x-button-color-yellow-active !important;
   border-color: $x-button-color-yellow-active !important;
+  color: $meshki-black !important;
 }
 
 // Crimson button
@@ -54,6 +55,7 @@
 @include button-mixin('.crimson:active') {
   background-color: $x-button-color-crimson-active !important;
   border-color: $x-button-color-crimson-active !important;
+  color: $text-color !important;
 }
 
 // Purple button
@@ -73,6 +75,7 @@
 @include button-mixin('.purple:active') {
   background-color: $x-button-color-purple-active !important;
   border-color: $x-button-color-purple-active !important;
+  color: $text-color !important;
 }
 
 // Lime button
@@ -92,6 +95,7 @@
 @include button-mixin('.lime:active') {
   background-color: $x-button-color-lime-active !important;
   border-color: $x-button-color-lime-active !important;
+  color: $meshki-black !important;
 }
 
 // Brown button
@@ -111,6 +115,7 @@
 @include button-mixin('.brown:active') {
   background-color: $x-button-color-brown-active !important;
   border-color: $x-button-color-brown-active !important;
+  color: $text-color !important;
 }
 
 // Space button
@@ -130,6 +135,7 @@
 @include button-mixin('.space:active') {
   background-color: $x-button-color-space-active !important;
   border-color: $x-button-color-space-active !important;
+  color: $text-color !important;
 }
 
 // Rose button
@@ -149,6 +155,7 @@
 @include button-mixin('.rose:active') {
   background-color: $x-button-color-rose-active !important;
   border-color: $x-button-color-rose-active !important;
+  color: $text-color !important;
 }
 
 // Cyan button
@@ -168,4 +175,5 @@
 @include button-mixin('.cyan:active') {
   background-color: $x-button-color-cyan-active !important;
   border-color: $x-button-color-cyan-active !important;
+  color: $meshki-black !important;
 }
