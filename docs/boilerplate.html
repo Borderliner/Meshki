@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Meshki Boilerplate</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Meshki: The most stylish CSS library on planet Earth!">
+  <meta name="keywords" content="HTML,CSS,Meshki,UI,Framework,JavaScript">
+  <meta name="author" content="Reza Hajianpour">
+  <meta property="og:title" content="Meshki UI"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://borderliner.github.io/Meshki/meta-image.png"/>
+  <meta property="og:url" content="https://borderliner.github.io/Meshki/"/>
+  <meta property="og:description" content="Meshki: The most stylish CSS library on planet Earth!"/>
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@Meshki_UI">
+  <meta name="twitter:title" content="Meshki UI">
+  <meta name="twitter:description" content="Meshki: The most stylish CSS library on planet Earth!">
+  <meta name="twitter:image" content="https://borderliner.github.io/Meshki/meta-image.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- DEVELOPMENT FILES -->
+  <link rel="stylesheet" type="text/css" href="../dist/css/meshki.min.css">
+  <link rel="stylesheet" type="text/css" href="../dist/plugins/meshki-extra-button-colors.min.css">
+  <link rel="stylesheet" type="text/css" href="../dist/plugins/meshki-light-mode.min.css">
+  <script type="text/javascript" src="../dist/js/meshki.min.js"></script>
+  <!-- DEVELOPMENT FILES -->
+  <!-- PRODUCTION FILES
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/meshki@2.5.1/dist/css/meshki.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/meshki@2.5.1/dist/plugins/meshki-extra-button-colors.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/meshki@2.5.1/dist/js/meshki.min.js"></script>
+  <!-- PRODUCTION FILES -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+  <div class="sidenav push">
+    <a href="javascript:void(0);" class="sidenav-close-button" onclick="meshki.closeSidenav()">&times;</a>
+    <a href="javascript:void(0);">Home</a>
+    <a href="javascript:void(0);">Sidebar Link #1</a>
+    <a href="javascript:void(0);">Sidebar Link #2</a>
+    <div class="hide-on-mobile">
+        <a href="javascript:void(0);" onclick="meshki.closeSidenav()">Desktop-only Link #1</a>
+        <a href="javascript:void(0);" onclick="meshki.closeSidenav()">Desktop-onlu Link #2</a>
+      </div>
+    <hr class="hide-on-non-mobile">
+    <div class="hide-on-non-mobile">
+      <a href="javascript:void(0);" onclick="meshki.closeSidenav()">Mobile-only Link #1</a>
+      <a href="javascript:void(0);" onclick="meshki.closeSidenav()">Mobile-onlu Link #2</a>
+    </div>
+    <hr>
+    <button class="button blue medium" onclick="">Blue button</button>
+    <button class="button red medium" onclick="">Red button</button>
+    <button class="button medium" onclick="">Normal button</button>
+  </div>
+  <div class="container">
+    <div class="nav fixed">
+      <ul>
+        <li>
+            <a class="logo"
+                href="javascript:void(0);"
+                onclick="meshki.openSidenav()"
+            ><i class="fas fa-bars" aria-hidden="true" style="margin-right: 8px;"></i>Menu</a>
+        </li>
+        <li><a href="javascript:void(0);">Normal Menu</a></li>
+        <li class="nav-dropdown">
+            <a href="javascript:void(0)" class="nav-dropdown-button">With Submenu</a>
+            <div class="nav-dropdown-content">
+                <a href="javascript:void(0);">Submenu #1</a>
+                <a href="javascript:void(0);">Submenu #2</a>
+                <a href="javascript:void(0);">Submenu #3</a>
+                <a href="javascript:void(0);">Submenu #4</a>
+                <a href="javascript:void(0);">Submenu #5</a>
+                <a href="javascript:void(0);">Submenu #6</a>
+            </div>
+          </li>
+        <li class="nav-dropdown hide-on-mobile">
+          <a href="javascript:void(0)" class="nav-dropdown-button">Hides on Mobile</a>
+          <div class="nav-dropdown-content">
+            <a href="javascript:void(0);">Desktop Submenu #1</a>
+            <a href="javascript:void(0);">Desktop Submenu #2</a>
+          </div>
+        </li>
+        <li class="nav-right hide-on-tablet" style="margin-right: 10px;">
+          <input type="text" name="searchbox" id="searchbox" placeholder="Search..." onkeydown="">
+        </li>
+        <li class="nav-right hide-on-tablet"><button class="green" style="position: relative; top: 1px; padding: 9px 11px;" onclick="alert('Search button working!')"><i class="fas fa-search" aria-hidden="true"></i></button></li>
+      </ul>
+    </div>
+    <div class="content">
+        <div class="col">
+            <h1 class="text-center" style="margin-top: 40px;">Get Started with Meshki</h1>
+            
+            <div>
+              <p>This is a simple boilerplate to get you started. Enjoy coding!</p>
+
+              <p>
+                Bibendum feugiat dis nibh nulla malesuada morbi urna augue euismod erat class bibendum. Lacus arcu aenean vestibulum; quisque nulla urna. Libero lacinia ut aliquet tempus. Pulvinar massa quisque arcu! Pretium pretium vitae sed metus habitant. Conubia ut mollis etiam ac tempus fringilla primis sem a. Litora augue, posuere eu ad mus pellentesque commodo? Gravida nam erat pharetra vel adipiscing platea consequat etiam habitant dictum elementum libero. Ac scelerisque gravida dictum elementum! Auctor facilisi hendrerit, hac montes montes tincidunt lectus montes libero metus sed mattis. Egestas condimentum nascetur amet blandit blandit. Nisi est taciti.
+                </p>
+                <p>
+                Integer non ut dolor montes metus. Scelerisque risus mauris sit hac. Habitant dictumst proin fermentum felis eleifend magnis dignissim interdum nulla lectus. Tristique sem dictum dictumst in in. Sollicitudin etiam porta ipsum. Mattis adipiscing interdum natoque leo sodales ante tortor quisque hac. Ac quam libero ipsum purus augue ridiculus nullam ac non sit aliquet habitant? Volutpat faucibus class magna dapibus ullamcorper. Vestibulum dui natoque fusce sociosqu porttitor mauris euismod.
+                </p>
+                <p>
+                Hendrerit sociosqu mollis euismod tempus class? Cum pellentesque laoreet placerat nostra congue montes? Orci aliquam tellus pellentesque scelerisque erat pharetra pretium id sollicitudin ullamcorper. Massa luctus auctor augue dictumst egestas dapibus hac rutrum ultrices pulvinar? Risus vivamus turpis semper metus quisque mollis viverra ut gravida. Pharetra, eget amet natoque sagittis molestie hendrerit cubilia nascetur velit porttitor? Pharetra augue imperdiet massa cras donec nibh erat, ante rhoncus vehicula. Habitant est suspendisse placerat consequat eu. Adipiscing sollicitudin posuere litora. Purus sapien lacinia fusce iaculis! Aliquet pulvinar ligula vivamus vehicula lectus. Rutrum vitae scelerisque ultricies dapibus, mollis accumsan lobortis sapien. Et consectetur, vivamus sodales orci nam hac quisque purus id? Sapien neque cum rutrum praesent duis interdum adipiscing laoreet nisl magnis nam gravida? Sollicitudin sociosqu aptent facilisi, consequat nullam scelerisque pulvinar in quis. Rhoncus metus mi egestas non? Vitae quam pulvinar vestibulum venenatis senectus, ipsum rutrum. Senectus nullam, augue.
+                </p>
+                <ul>
+                  <li>
+                  Malesuada urna lobortis parturient erat porttitor euismod tellus torquent vehicula tincidunt dui odio netus nam ullamcorper congue elementum non conubia.
+                  </li>
+                  <li>
+                  Felis platea amet nascetur velit curae; rhoncus aenean habitasse iaculis eleifend ultrices tellus consectetur auctor pellentesque aenean enim diam dolor.
+                  </li>
+                  <li>
+                  Ad mollis accumsan mattis maecenas hendrerit natoque rhoncus etiam convallis donec fringilla ac senectus primis natoque taciti venenatis pulvinar dapibus?
+                  </li>
+                  <li>
+                  Dignissim rutrum sodales eros auctor integer taciti ac rhoncus pretium eros ut ligula praesent nisl placerat scelerisque ligula mollis ullamcorper.
+                  </li>
+                  <li>
+                  Venenatis penatibus sapien auctor nunc nam suspendisse arcu posuere metus bibendum rhoncus aenean nascetur phasellus ultrices montes, facilisi cum vivamus.
+                  </li>
+                  </ul>                
+                <p>
+                Habitant urna dictum himenaeos bibendum quis tellus. Conubia placerat, vivamus nullam eget quis vehicula! Aenean lobortis mauris dignissim sapien lacus auctor nam donec turpis quam molestie. Libero ante eleifend suspendisse, eget diam scelerisque ridiculus! Suspendisse taciti faucibus dictumst parturient inceptos sed pulvinar vestibulum! Erat ipsum aliquet amet amet. Nulla netus, sed parturient tincidunt volutpat! Tellus nisl sociosqu condimentum primis primis eget imperdiet massa. Imperdiet sapien platea arcu, aenean tempor gravida tristique maecenas parturient nec euismod! Arcu class orci eros curabitur sem lacus lorem venenatis facilisis himenaeos sit class. Nam eros semper rutrum.
+                </p>
+                <p>
+                Natoque sodales mi nec porta elementum nullam! Vulputate etiam nam interdum condimentum turpis et? Leo ac commodo cubilia purus tempus. Eleifend blandit adipiscing tempor aliquet est vulputate nulla dolor! Natoque, iaculis est risus duis nascetur augue. Eros facilisi molestie lorem leo urna consequat pulvinar feugiat consectetur laoreet orci. Cubilia dictum duis quam. Ultrices egestas, a dolor ipsum magna sociis natoque. Molestie egestas ultrices primis eu aliquet fermentum consectetur lectus luctus libero! Metus per consequat montes ad vel. Sapien duis penatibus ornare convallis accumsan imperdiet vitae taciti! Sociosqu augue nullam massa ornare convallis nullam vivamus. Bibendum porttitor sapien non ligula. Vehicula faucibus.
+                </p>
+                <p>
+                Quisque mollis aliquet faucibus fames. Parturient et sapien augue augue primis turpis! Primis nascetur est tortor phasellus id vel congue odio commodo volutpat nibh. Ridiculus lacinia vitae integer. Sociosqu elit in aliquam quisque tortor tristique. Fermentum justo cum sodales lacus elit dignissim est sit sapien est, porta aenean. Cursus magna mauris fringilla nunc conubia lacinia. Elementum elit tortor ut. Quisque cursus justo parturient. Suspendisse phasellus consequat dictum et magna vivamus varius vivamus quisque egestas curabitur! Eu porta molestie nulla placerat class, suspendisse integer accumsan amet congue tellus? Ipsum non gravida dolor ut elementum magnis erat himenaeos nullam faucibus. Luctus facilisis dignissim porta. Suspendisse cursus quisque pellentesque tempus curabitur habitant ligula congue.
+                </p>
+                <p>
+                Nisi duis leo phasellus mattis quis habitasse sit feugiat penatibus feugiat! Lectus lobortis tellus proin per varius habitasse lectus class? Cubilia congue hendrerit, augue accumsan ultrices ullamcorper sed luctus himenaeos nascetur sagittis. Mauris arcu ad eleifend aenean. Pellentesque, parturient pulvinar ridiculus ornare posuere congue lobortis maecenas iaculis quam feugiat! Aliquam lacinia phasellus ut condimentum auctor aenean lacus magnis molestie metus? Iaculis dignissim lorem eget dictumst egestas iaculis vel. Ligula fusce sollicitudin lorem bibendum commodo morbi neque sociis himenaeos mus feugiat est. Metus lacus et eu posuere erat lobortis ante venenatis at aptent duis quis. Massa eu aenean eget tellus? Interdum penatibus pretium turpis taciti quis rutrum ac ad pretium aliquet ante suscipit. Ultrices mollis cubilia ligula aenean natoque blandit condimentum! Imperdiet sociosqu viverra magna sollicitudin sociis nibh vitae eleifend sociis ridiculus? Ullamcorper, etiam taciti magnis natoque mi egestas vitae netus. Adipiscing tellus laoreet cubilia per dignissim ornare massa.
+                </p>
+                <ul>
+                  <li>
+                  Malesuada urna lobortis parturient erat porttitor euismod tellus torquent vehicula tincidunt dui odio netus nam ullamcorper congue elementum non conubia.
+                  </li>
+                  <li>
+                  Felis platea amet nascetur velit curae; rhoncus aenean habitasse iaculis eleifend ultrices tellus consectetur auctor pellentesque aenean enim diam dolor.
+                  </li>
+                  <li>
+                  Ad mollis accumsan mattis maecenas hendrerit natoque rhoncus etiam convallis donec fringilla ac senectus primis natoque taciti venenatis pulvinar dapibus?
+                  </li>
+                  <li>
+                  Dignissim rutrum sodales eros auctor integer taciti ac rhoncus pretium eros ut ligula praesent nisl placerat scelerisque ligula mollis ullamcorper.
+                  </li>
+                  <li>
+                  Venenatis penatibus sapien auctor nunc nam suspendisse arcu posuere metus bibendum rhoncus aenean nascetur phasellus ultrices montes, facilisi cum vivamus.
+                  </li>
+                  </ul>                
+                <p>
+                Non, cubilia netus tempus elit. Est quam habitasse vel quisque vestibulum. Morbi faucibus scelerisque nunc iaculis fermentum fermentum penatibus. Sed curabitur montes, etiam gravida ad erat hac. Penatibus porta netus ultricies sollicitudin dictumst mi nec id turpis semper imperdiet. Venenatis volutpat praesent mattis parturient curabitur sociosqu. Vestibulum integer aliquet porta lacus justo ipsum nostra elit eros. Molestie sociosqu hendrerit inceptos nulla sociosqu? Phasellus purus nibh suscipit nec curabitur lacinia porttitor tellus. Hac ullamcorper mus vehicula pretium sit at eu? Proin lacus auctor rutrum dis placerat. Nullam cubilia ad facilisis mollis convallis netus sagittis; id himenaeos. Natoque, sapien ornare rhoncus pellentesque. Cum sit himenaeos lectus arcu. Laoreet eros malesuada ac volutpat mattis. Faucibus consectetur faucibus ullamcorper augue malesuada malesuada. Parturient dui parturient senectus donec euismod sem phasellus ante lacus habitasse tempus? Sociosqu torquent ipsum tempus ridiculus feugiat consequat quis amet.
+                </p>
+                <p>
+                Dictum adipiscing etiam tempus nulla purus vestibulum ullamcorper congue porttitor ipsum lectus. Litora tortor ipsum cursus senectus facilisi. Mi nunc consectetur viverra eros vehicula ridiculus ullamcorper. Parturient vestibulum aptent tortor nunc luctus penatibus laoreet dui turpis ac. Mi hac pellentesque est at odio quisque duis dictum. Inceptos torquent mollis et sollicitudin. At ridiculus euismod aptent imperdiet elementum eros netus mus ultrices! Justo ante dignissim tempus torquent laoreet dignissim. Laoreet semper dui donec vulputate natoque nascetur. Vestibulum tincidunt taciti eleifend est sapien ac dolor ipsum etiam sollicitudin. Imperdiet lacinia tincidunt dolor augue mauris nisi nisi consequat class senectus. Ac at pulvinar sociis, ultrices pulvinar feugiat. Mauris metus vulputate inceptos curae; nisl. Nec fringilla pulvinar a. Nibh augue ornare, dis phasellus quis lectus fringilla volutpat. Curabitur class posuere nulla lacinia vivamus posuere suspendisse torquent, aliquam proin accumsan. Diam pellentesque quisque nostra cras nisl? Duis cursus, ac aliquet!
+                </p>
+                <p>
+                Ornare sed praesent enim metus curabitur ridiculus venenatis mi scelerisque donec donec habitasse? Suspendisse enim odio erat ullamcorper sem montes ultricies, mi porta! Metus dapibus volutpat vivamus. Nec cursus cras sed viverra nam habitant ullamcorper donec. Magnis cursus venenatis, litora duis purus tempor non netus conubia. Donec nunc rhoncus scelerisque molestie semper gravida vulputate a aliquet. Quisque risus penatibus lorem turpis eget nam orci pretium litora sed justo. Vulputate dapibus facilisis mollis nascetur ut ridiculus. Habitasse scelerisque scelerisque.
+                </p>   
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+      <div class="row" style="padding: 25px 50px 0px 50px">
+        <div class="six col">
+          <p>Created by Mohammadreza Hajianpour (<a href="https://github.com/Borderliner">Borderliner</a>)</p>
+        </div>
+        <div class="six col text-center">
+          <p>Copyright© 2024, All rights reserved for this website.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
