@@ -39,8 +39,8 @@
   <![endif]-->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.min.css">
-
 </head>
 
 <body>
@@ -86,6 +86,7 @@
           <div class="nav-dropdown-content">
             <a href="rtl/">RTL Mode (Persian)</a>
             <a href="#extra-button-colors">Extra Button Colors</a>
+            <a href="#light-mode">Light Mode</a>
           </div>
         </li>
         <li><a href="https://github.com/Borderliner/Meshki">GitHub</a></li>
@@ -124,13 +125,16 @@
             function toggleDark() {
               var toggleButton = document.getElementById('toggle-dark')
               var htmlElement = document.documentElement
+              var colorModeTitle = document.getElementById('color-mode-title')
               var isLight = htmlElement.classList.contains('light-mode')
               if (isLight) {
                 htmlElement.classList.remove('light-mode')
                 toggleButton.innerHTML = '<i class="fa-solid fa-moon" style="padding-right: 6px;"></i>Dark'
+                colorModeTitle.innerText = 'Dark'
               } else {
                 htmlElement.classList.add('light-mode')
                 toggleButton.innerHTML = '<i class="fa-solid fa-sun" style="padding-right: 6px;"></i>Light'
+                colorModeTitle.innerText = 'Light'
               }
             }
 
@@ -139,10 +143,10 @@
         </li>
       </ul>
     </div>
-    <div class="content">
+    <div class="content line-numbers">
       <div class="row">
         <h1 class="text-center title">Meshki</h1>
-        <h2 class="text-center">Stylish. Dark. Responsive.</h2>
+        <h2 class="text-center">Stylish. <span id="color-mode-title">Dark</span>. Responsive.</h2>
       </div>
 
       <div class="row text-center download-buttons">
@@ -163,14 +167,6 @@
 &lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/meshki@2.5.1/dist/js/meshki.min.js">&lt;/script>
             </code>
           </pre>
-          <div class="row">
-            <div class="col three">
-              <img class="balloons" src="balloons.png" alt="Meshki's birthday!">
-            </div>
-            <div class="celebration col nine">
-              <span>Meshki is <span class="celebration-years years-old">8</span> years old! Thank you for your everlasting support.</span>
-            </div>
-          </div>
         </div>
       </div>
       <div class="row meshki-features" style="margin-bottom: 50px;">
@@ -212,7 +208,7 @@
         <h3>What is Meshki?</h3>
         <hr>
         <p>
-          Meshki is a simple, dark-colored, responsive boilerplate to kickstart any responsive project. It is only ~20 KiB (minified) and ~30 KiB (normal), including both CSS and JS files, which makes it superb for small to medium projects. It's easy to use, clean and is just beautiful.
+          Meshki is a simple, dark-colored, responsive css library to kickstart any web UI project. It is only ~20 KiB (minified) and ~30 KiB (normal), including both CSS and JS files, which makes it superb for small to medium projects. It's easy to use, clean and is just beautiful.
           It was started as a fork of <a href="http://getskeleton.com" target="_blank">Skeleton</a> project, and it still uses the same logic. Though Meshki is considered to be a totally different project than Skeleton, and it barely resembles it when you take a look at it.
           Don't be afraid to check out Meshki's source code! If you've spotted any bugs, or you want to ask for some improvements, head to <a href="https://github.com/Borderliner/Meshki" target="_blank">our GitHub repository</a> and open an issue or a pull request!
         </p>
@@ -239,7 +235,7 @@
         <h3>Getting Started</h3>
         <hr>
         <p>
-          Meshki uses a fixed structure to lessen the burden of setting extra ids and classes. So you always need to create the same structure for all your apps. Don't worry, this structure is very basic and it does not limit you in any ways.<br>
+          Meshki uses a fixed structure to lessen the burden of setting extra ids and classes. So you always need to create the same structure for all your apps. Don't worry, this structure is very basic and it does not limit you in any ways. You can check out the <a href="./boilerplate.html" target="_blank">Boilerplate</a>'s source code to get started quickly.<br>
           First of all, you need to have a <code>&lt;div></code> with the <code>sidenav</code> class, just after the beginning of the body. Your <a href="#sidenav-doc">sidenav</a>'s links will reside in here. Then, you need to create a <code>&lt;div></code> after the sidenav's div, with the <code>container</code> class. The rest of your body should be created inside the "container" div. Inspect the elements on this page to understand the structure. Ah! Here's a sample code:<br>
         </p>
         <pre>
@@ -729,10 +725,48 @@
       </div>
 
       <div class="row">
-        <label class="switch">
-          <input type="checkbox">
-          <span class="slider"></span>
-        </label>
+        <div class="row">
+          <div class="col four flexbox flow-row">
+            <span class="flex-2">Simple switch</span>
+            <label class="switch flex-1">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+  
+          <div class="col four flexbox flow-row">
+            <span class="flex-2">Primary switch</span>
+            <label class="switch blue flex-1">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+  
+          <div class="col four flexbox flow-row">
+            <span class="flex-2">Success switch</span>
+            <label class="switch green flex-1">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col four flexbox flow-row">
+            <span class="flex-2">Warning switch</span>
+            <label class="switch orange flex-1">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+  
+          <div class="col four flexbox flow-row">
+            <span class="flex-2">Error switch</span>
+            <label class="switch red flex-1">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
       </div>
   
       <div class="row">
@@ -1160,13 +1194,40 @@
           </div>
         </div>
       </div>
+
+      <div class="row">
+        <div id="light-mode"></div>
+        <h4>[Plugin] Light-mode</h4>
+        <hr>
+        <p>
+          Since Meshki v3.0.0, you can take advantage of the light-mode in your designs. All you need to do is to add the following &lt;link> tag and apply "light-mode" class to your &lt;html> tag.
+          <pre>
+            <button
+            class="blue small clipboard-btn"
+            title="Copy to clipboard"
+            data-clipboard-target="#light-mode"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
+            <code class="language-html" id="light-mode">
+&lt;link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/meshki@2.5.1/dist/plugins/meshki-light-mode.min.css">
+            </code>
+          </pre>
+        </p>
+      </div>
   
       <div id="important-notes" class="row">
         <h4>Important Notes</h4>
         <hr>
-        <p>
-          Meshki v2.x.x is a major release and has introduced some breaking changes, which means that it's not backwards-compatible with previous versions. Make sure you read the <a href="https://github.com/Borderliner/Meshki/blob/master/CHANGELOG.md">Changelog</a>, so you can understand the latest important changes in Meshki.
-        </p>
+        <ul>
+          <li>
+            <p>
+              Meshki v3.x.x is a major release and has introduced some breaking changes, but the changes are 80% compatible with Meshki v2.x.x. Make sure you read the <a href="https://github.com/Borderliner/Meshki/blob/master/CHANGELOG.md">Changelog</a>, so you can understand the latest important changes in Meshki.
+            </p>
+          </li>
+          <li>
+            <p>
+              Meshki v2.x.x is a major release and has introduced some breaking changes, which means that it's not backwards-compatible with previous versions. Make sure you read the <a href="https://github.com/Borderliner/Meshki/blob/master/CHANGELOG.md">Changelog</a>, so you can understand the latest important changes in Meshki.
+            </p>
+          </li>
+        </ul>
       </div>
   
       <div class="row">
@@ -1188,10 +1249,10 @@
         <button class="button large green" id="btn-modal" onclick="onModalButtonClick()"><i class="fas fa-dollar" style="margin: 0 10px;"></i>Donate to Meshki</button>
       </div>
     </div>
-    <div class="footer">
+    <div class="footer" style="padding-top: 25px">
       <div class="row">
         <div class="six col">
-          <p>Created with <i class="fas fa-heart custom-love"></i> by Reza Hajianpour (<a href="https://github.com/Borderliner">Borderliner</a>)</p>
+          <p style="position: relative; left: 50px;">Created with <i class="fas fa-heart custom-love"></i> by Reza Hajianpour (<a href="https://github.com/Borderliner">Borderliner</a>)</p>
         </div>
         <div class="six col text-center">
           <p>2016-2024, Licensed under <a href="https://github.com/Borderliner/Meshki/blob/master/LICENSE">Apache-2.0</a></p>
@@ -1239,6 +1300,7 @@
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
   <script type="text/javascript">
     var openModal = function() {
       document.getElementById('modal-overlay').classList.add('modal-is-visible');

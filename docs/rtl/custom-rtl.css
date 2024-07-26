@@ -6,8 +6,10 @@
 }
 
 .title {
-  font-size: inherit;
-  width: 40vmax;
+  display: block;
+  font-size: 12vmax;
+  padding-bottom: 10px;
+  padding-top: 4vw;
 }
 
 a {

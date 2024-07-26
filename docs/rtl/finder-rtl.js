@@ -26,7 +26,7 @@ const meshkiUtil = {
   search (event, str) {
     if (event.keyCode === 13 || event.type === 'click') {
       if (!str && str === "" && str.trim().length <= 0) {
-        alert(`Nothing to search for. Please enter a text.`)
+        alert(`متنی برای جستجو ننوشته‌اید.`)
         return
       }
       if (parseInt(navigator.appVersion) < 4) { return }
@@ -49,10 +49,10 @@ const meshkiUtil = {
           if (strFound) { meshki.TRange.select() }
         }
       } else if (navigator.appName === 'Opera') {
-        alert('Opera browsers not supported, sorry...')
+        alert('این قابلیت از مرورگر اوپرا پشتیبانی نمی‌کند.')
         return
       }
-      if (!strFound) { alert(`String '${str}' not found!`) }
+      if (!strFound) { alert(`متن '${str}' یافت نشد!`) }
     }
   }
 }

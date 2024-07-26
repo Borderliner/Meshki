@@ -54,6 +54,22 @@ div.share-links {
   background-color: #222 !important;
 }
 
+.light-mode :not(pre)>code[class*=language-], pre[class*=language-] {
+  background-color: unset !important;
+}
+
+.line-numbers .line-numbers-rows {
+  left: -10em !important;
+}
+
+.light-mode code[class*=language-], .light-mode pre[class*=language-] {
+  text-shadow: none;
+}
+
+.light-mode .token.punctuation {
+  color: #222;
+}
+
 .title {
   display: block;
   font-size: 12vmax;
@@ -222,6 +238,15 @@ div.share-links {
   background: #222;
   border-radius: 4px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+.light-mode .modal {
+  background: #d6d6d6;
+  color: #222;
+}
+
+.light-mode .crypto-address {
+  border-color: #222;
 }
 
 @media (max-width: 768px) {

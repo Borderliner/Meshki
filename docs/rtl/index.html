@@ -18,29 +18,35 @@
   <meta name="twitter:description" content="مشکی: شیک ترین کتابخونه CSS دنیا!">
   <meta name="twitter:image" content="../meta-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <!-- DEVELOPMENT FILES
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+  <!-- DEVELOPMENT FILES -->
   <link rel="stylesheet" type="text/css" href="../../dist/css/meshki.min.css">
   <link rel="stylesheet" type="text/css" href="../../dist/plugins/meshki-rtl.min.css">
   <link rel="stylesheet" type="text/css" href="../../dist/plugins/meshki-extra-button-colors.min.css">
+  <link rel="stylesheet" type="text/css" href="../../dist/plugins/meshki-light-mode.min.css">
   <script type="text/javascript" src="../../dist/js/meshki.min.js"></script>
   <!-- DEVELOPMENT FILES -->
-  <!-- PRODUCTION FILES -->
+  <!-- PRODUCTION FILES
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/meshki@2.5.1/dist/css/meshki.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/meshki@2.5.1/dist/plugins/meshki-rtl.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/meshki@2.5.1/dist/plugins/meshki-extra-button-colors.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/meshki@2.5.1/dist/js/meshki.min.js"></script>
   <!-- PRODUCTION FILES -->
 
-  <link rel="stylesheet" type="text/css" href="../custom.css">
-  <link rel="stylesheet" type="text/css" href="custom-rtl.css">
+  
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.min.css">
+
+  <link rel="stylesheet" type="text/css" href="../custom.css">
+  <link rel="stylesheet" type="text/css" href="custom-rtl.css">
 </head>
 
 <body>
@@ -86,6 +92,7 @@
           <div class="nav-dropdown-content">
             <a href="/Meshki">چپ-به-راست (انگلیسی)</a>
             <a href="#extra-button-colors">دکمه‌های رنگی بیشتر</a>
+            <a href="#light-mode">حالت روشن</a>
           </div>
         </li>
         <li><a href="https://github.com/Borderliner/Meshki">گیت‌هاب</a></li>
@@ -104,16 +111,48 @@
         </li>
         <li><a href="javascript:void(0)" onclick="onModalButtonClick()">حمایت</a></li>
         <li class="nav-left hide-on-tablet" style="margin-left: 10px;">
-          <script type="text/javascript" src="../finder.js"></script>
-          <input type="text" name="searchbox" id="searchbox" placeholder="جستجو..." onkeydown="meshkiUtil.search(this)">
+          <script type="text/javascript" src="finder-rtl.js"></script>
+          <input type="text" name="searchbox" id="searchbox" placeholder="جستجو..." style="position: relative; top: 2px;">
         </li>
-        <li class="nav-left hide-on-tablet"><button class="green" onclick="alert('مثل ساعت کار می‌کنه!')"><i class="fas fa-search" aria-hidden="true"></i></button></li>
+        <li class="nav-left hide-on-tablet">
+          <button id="search-button" class="green" style="position: relative; top: 1px; padding: 7px 11px;"><i class="fas fa-search" aria-hidden="true"></i></button>
+          <script>
+            function doSearch(event) {
+              var searchbox = document.getElementById('searchbox')
+              meshkiUtil.search(event, searchbox.value)
+            }
+            document.getElementById('searchbox').addEventListener('keydown', doSearch)
+            document.getElementById('search-button').addEventListener('click', doSearch)
+          </script>
+        </li>
+        <li class="nav-left">
+          <button id="toggle-dark" class="button small" style="padding: 10px 20px; position: relative; top: 1px;">تیره<i class="fa-solid fa-moon" style="padding-right: 6px;"></i></button>
+          <script>
+            function toggleDark() {
+              var toggleButton = document.getElementById('toggle-dark')
+              var htmlElement = document.documentElement
+              var colorModeTitle = document.getElementById('color-mode-title')
+              var isLight = htmlElement.classList.contains('light-mode')
+              if (isLight) {
+                htmlElement.classList.remove('light-mode')
+                toggleButton.innerHTML = 'تیره<i class="fa-solid fa-moon" style="padding-right: 6px;"></i>'
+                colorModeTitle.innerText = 'مشکی'
+              } else {
+                htmlElement.classList.add('light-mode')
+                toggleButton.innerHTML = 'روشن<i class="fa-solid fa-sun" style="padding-right: 6px;"></i>'
+                colorModeTitle.innerText = 'روشن'
+              }
+            }
+
+            document.getElementById('toggle-dark').addEventListener('click', toggleDark)
+          </script>
+        </li>
       </ul>
     </div>
-    <div class="content">
+    <div class="content line-numbers">
       <div class="row">
-        <img class="text-center title centerize" src="meshki.png" style="margin-bottom: 15px;"></img>
-        <h2 class="text-center">زیبا.  مشکی.  واکنش‌گرا.</h2>
+        <h1 class="text-center title">مشکی</h1>
+        <h2 class="text-center">زیبا.  <span id="color-mode-title">مشکی</span>.  واکنش‌گرا.</h2>
       </div>
 
       <div class="row text-center download-buttons">
@@ -136,14 +175,6 @@
 &lt;link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/meshki@2.5.1/dist/js/meshki-rtl.min.css">
             </code>
           </pre>
-          <div class="row">
-            <div class="col three">
-              <img class="balloons" src="../balloons.png" alt="تولد مشکی!">
-            </div>
-            <div class="celebration col nine">
-              <span>مشکی اکنون <span class="celebration-years years-old">۸</span> ساله شده است. از حمایت همیشگی شما ممنونیم.</span>
-            </div>
-          </div>
         </div>
       </div>
       <div class="row meshki-features" style="margin-bottom: 50px;">
@@ -216,6 +247,7 @@
         <p>
           مشکی از یک ساختار ثابت، برای کاهش دردسرهای مربوط به کلاس‌ها و idها استفاده می‌نماید. برای همین، کافیست تا از همین ساختار برای تمامی برنامه‌هایتان استفاده کنید. نگران نباشید، این ساختار بسیار ابتدایی و پایه می‌باشد و شما را به هیچ عنوان محدود نمی‌کند.
         </p>
+        <p>برای شروع می‌توانید سورس کد <a href="../boilerplate.html" target="_blank">قالب ابتدایی</a> را بررسی کنید.</p>
         <p>
           ابتدا، یک <code>div</code> که شامل کلاس <code>sidenav</code> است را بلافاصله بعد از شروع تگ <code>body</code> بسازید. لینک‌های <a href="#sidenav-doc">کشو</a> در اینجا سکونت خواهند داشت. سپس، یک <code>div</code> دیگر بعد از div کشو بسازید، که شامل کلاس <code>content</code> باشد. تمامی مطالب اصلی شما باید درون این div قرار بگیرد. اجزای این صفحه را با مرورگر خود مشاهده کنید تا ساختار دقیق را متوجه شوید. کد زیر هم نمونه‌ای از این ساختار است:
         </p>
@@ -708,6 +740,51 @@
           <label for="chk-news" class="checkbox">مایل هستم از این سایت خبرنامه دریافت کنم.</label>
         </div>
       </div>
+
+      <div class="row">
+        <div class="row">
+          <div class="col four flexbox flow-row">
+            <span class="flex-2">کلید ساده</span>
+            <label class="switch flex-1">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+  
+          <div class="col four flexbox flow-row">
+            <span class="flex-2">کلید اصلی</span>
+            <label class="switch blue flex-1">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+  
+          <div class="col four flexbox flow-row">
+            <span class="flex-2">کلید موفقیت</span>
+            <label class="switch green flex-1">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col four flexbox flow-row">
+            <span class="flex-2">کلید اخطار</span>
+            <label class="switch orange flex-1">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+  
+          <div class="col four flexbox flow-row">
+            <span class="flex-2">کلید خطا</span>
+            <label class="switch red flex-1">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
   
       <div class="row">
         <div class="two col">
@@ -1140,13 +1217,42 @@
           </div>
         </div>
       </div>
+
+      <div class="row">
+        <div id="light-mode"></div>
+        <h4>[افزونه] حالت روشن</h4>
+        <hr>
+        <p>
+          در نسخه ۳ مشکی، قابلیت پوسته‌ی روشن اضافه شده است. تنها کاری که باید بکنید این است که تگ &lt;link> زیر را به قسمت سربرگ صفحه خود اضافه کرده و کلاس "light-mode" را به تگ &lt;html> خود بیافزایید.
+          <pre>
+            <button
+            class="blue small clipboard-btn"
+            title="Copy to clipboard"
+            data-clipboard-target="#light-mode"><i class="fas fa-clipboard" aria-hidden="true"></i></button>
+            <code class="language-html" id="light-mode">
+&lt;link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/meshki@2.5.1/dist/plugins/meshki-light-mode.min.css">
+            </code>
+          </pre>
+        </p>
+      </div>
   
       <div id="important-notes" class="row">
         <h4>نکات مهم</h4>
         <hr>
-        <p>
-          مشکی نسخه 2 تغییراتی را اعمال کرده که باعث می‌شود با نسخه‌های قبلی مشکی سازگار نباشد. برای مطلع شدن از تغییرات نسخه‌های مشکی، حتما <a href="https://github.com/Borderliner/Meshki/blob/master/CHANGELOG.md">Changelog</a> را مطالعه کنید تا به اشتباه از مشکی استفاده نکنید.
-        </p>
+        <ul>
+          <li>
+            <p>
+              مشکی نسخه ۳ تغییراتی را اعمال کرده که باعث می‌شود با نسخه‌های قبلی مشکی کاملا سازگار نباشد، هرچند نسخه‌ی جدید تا ۸۰٪ با نسخه‌ی ۲ سازگار است. برای مطلع شدن از تغییرات نسخه‌های مشکی، حتما <a href="https://github.com/Borderliner/Meshki/blob/master/CHANGELOG.md">Changelog</a> را مطالعه کنید تا اشتباه از مشکی استفاده نکنید.
+            </p>
+          </li>
+          <li>
+            <p>
+              مشکی نسخه ۲ تغییراتی را اعمال کرده که باعث می‌شود با نسخه‌های قبلی مشکی سازگار نباشد. برای مطلع شدن از تغییرات نسخه‌های مشکی، حتما <a href="https://github.com/Borderliner/Meshki/blob/master/CHANGELOG.md">Changelog</a> را مطالعه کنید تا اشتباه از مشکی استفاده نکنید.
+            </p>
+          </li>
+        </ul>
+        
+        
       </div>
   
       <div class="row">
@@ -1168,10 +1274,10 @@
         <button class="button large green" id="btn-modal" onclick="onModalButtonClick()"><i class="fas fa-dollar" style="margin: 0 10px;"></i>حمایت مالی کنید</button>
       </div>
     </div>
-    <div class="footer">
+    <div class="footer" style="padding-top: 25px">
       <div class="row">
         <div class="six col">
-          <p>ساخته شده با <i class="fas fa-heart custom-love"></i> توسط محمدرضا حاجیانپور (<a href="https://github.com/Borderliner">Borderliner</a>)</p>
+          <p style="position: relative; right: 50px;">ساخته شده با <i class="fas fa-heart custom-love"></i> توسط محمدرضا حاجیانپور (<a href="https://github.com/Borderliner">Borderliner</a>)</p>
         </div>
         <div class="six col text-center">
           <p>2016-2024، تحت مجوز <a href="https://github.com/Borderliner/Meshki/blob/master/LICENSE">Apache-2.0</a></p>
