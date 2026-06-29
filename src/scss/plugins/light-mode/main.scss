@@ -16,6 +16,8 @@
  */
 
 @import '../../utils/module';
+@import '../../base/colors';
+@import '../../components/button-colors';
 @import 'colors';
 
 html.light-mode {
@@ -211,7 +213,6 @@ html.light-mode {
   }
 
   // Extra colors
-  @import "../../base/colors";
   $lm-x-button-color-yellow:         #d8d400;
   $lm-x-button-color-yellow-text:    #979500;
   $lm-x-button-color-yellow-active:  #ccc900;
@@ -235,7 +236,7 @@ html.light-mode {
     border-color: $lm-x-button-color-yellow-active !important;
   }
 
-  @import "../../components/button-colors";
+  @include emit-button-colors;
 
   // Forms //==============================
   @include input-elements-mixin {

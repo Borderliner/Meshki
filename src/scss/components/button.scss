@@ -1,7 +1,6 @@
-// Defines the button color variables (used below) and emits the colored-button
-// rules. Imported once only — colored selectors out-specify the base, so order
-// does not matter and a second import would just duplicate the output.
+// Provides the button colour variables and the colored-button emit mixin.
 @import "button-colors";
+@include emit-button-colors;
 
 // Suppress the default ring on mouse click, but show a clear one for keyboard
 // users via :focus-visible.

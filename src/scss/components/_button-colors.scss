@@ -26,24 +26,28 @@ $button-colors: (
   'orange': ($button-color-orange, $button-color-orange-active)
 );
 
-@each $name, $cfg in $button-colors {
-  $color: nth($cfg, 1);
-  $active: nth($cfg, 2);
+// Emits the colored-button rules. A mixin (rather than top-level output) so it
+// can also be re-emitted, scoped, by the light-mode plugin.
+@mixin emit-button-colors {
+  @each $name, $cfg in $button-colors {
+    $color: nth($cfg, 1);
+    $active: nth($cfg, 2);
 
-  @include button-mixin('.#{$name}') {
-    border: 2px $color solid;
-    color: $color;
-  }
+    @include button-mixin('.#{$name}') {
+      border: 2px $color solid;
+      color: $color;
+    }
 
-  @include button-mixin('.#{$name}:hover') {
-    background-color: $color;
-    border-color: $color;
-    color: $meshki-black;
-  }
+    @include button-mixin('.#{$name}:hover') {
+      background-color: $color;
+      border-color: $color;
+      color: $meshki-black;
+    }
 
-  @include button-mixin('.#{$name}:active') {
-    background-color: $active;
-    border-color: $active;
-    color: $meshki-black;
+    @include button-mixin('.#{$name}:active') {
+      background-color: $active;
+      border-color: $active;
+      color: $meshki-black;
+    }
   }
 }
