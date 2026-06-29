@@ -4,6 +4,15 @@
   "description": "Meshki: The most stylish CSS library on planet Earth!",
   "main": "build.js",
   "type": "module",
+  "files": [
+    "dist",
+    "src",
+    "build.js",
+    "README.md",
+    "CHANGELOG.md",
+    "COPYING",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "node --test --test-concurrency=1",
     "compile": "node build.js",
