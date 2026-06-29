@@ -16,10 +16,7 @@
 
 // Simple button, with no style
 @include button-mixin {
-  -moz-transition: all .3s !important;
-  -o-transition: all .3s  !important;
-  -webkit-transition: all .3s  !important;
-  transition: all .3s  !important;
+  transition: all .3s;
   background-color: transparent;
   border: 2px solid $button-color-simple;
   border-radius: 5px;

@@ -93,7 +93,7 @@
   transition: opacity $sidenav-animation-duration, visibility $sidenav-animation-duration;
   visibility: hidden;
   width: 100%;
-  z-index: 1;
+  z-index: 9; // above the navbar (1), below the sidenav (10)
 }
 
 // Change the style of the sidenav for non-mobiles

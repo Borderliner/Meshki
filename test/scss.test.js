@@ -80,3 +80,37 @@ describe('scss — Phase 2 accessibility', () => {
     assert.match(main, /\.nav-dropdown:focus-within/)
   })
 })
+
+describe('scss — Phase 3 correctness & cleanup', () => {
+  let main
+  before(() => { main = compile('src/scss/main.scss') })
+
+  it('switch glow colours match their borders (off-by-one typos fixed)', () => {
+    // Sass renders the 8-digit hex as rgba(); the RGB must equal each border colour.
+    assert.match(main, /rgba\(9,\s*116,\s*241/) // #0974f1 blue
+    assert.match(main, /rgba\(46,\s*204,\s*113/) // #2ecc71 green
+    assert.match(main, /rgba\(230,\s*126,\s*34/) // #e67e22 orange
+    assert.match(main, /rgba\(231,\s*76,\s*60/) // #e74c3c red
+    // the old off-by-one channels are gone
+    assert.doesNotMatch(main, /rgba\(9,\s*117,\s*241|rgba\(46,\s*204,\s*112|rgba\(230,\s*125,\s*34|rgba\(231,\s*77,\s*60/)
+  })
+
+  it('overlay sits above the navbar but below the sidenav', () => {
+    assert.match(main, /\.overlay\s*\{[^}]*z-index:\s*9/)
+  })
+
+  it('<pre> preserves formatting (white-space is not collapsed)', () => {
+    assert.match(main, /\bpre\s*\{[^}]*white-space:\s*pre-wrap/)
+  })
+
+  it('drops the obsolete prefixed/!important button transitions', () => {
+    assert.doesNotMatch(main, /-moz-transition|-o-transition/)
+    assert.doesNotMatch(main, /transition:\s*all\s*\.3s\s*!important/)
+  })
+
+  it('grid column widths are unchanged by the math cleanup (still sum correctly)', () => {
+    // representative widths from column-width(): 1 -> 4.6667%, 12 columns use 100%
+    assert.match(main, /\.col\.one\s*\{[^}]*width:\s*4\.6+\d*%/)
+    assert.match(main, /\.col\.twelve\s*\{[^}]*width:\s*100%/)
+  })
+})

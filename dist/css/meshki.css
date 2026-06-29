@@ -1227,10 +1227,7 @@ a.button,
 input[type=submit],
 input[type=reset],
 input[type=button] {
-  -moz-transition: all 0.3s !important;
-  -o-transition: all 0.3s !important;
-  -webkit-transition: all 0.3s !important;
-  transition: all 0.3s !important;
+  transition: all 0.3s;
   background-color: transparent;
   border: 2px solid #e1e1e1;
   border-radius: 5px;
@@ -1580,7 +1577,7 @@ label.checkbox, label.radio {
 }
 
 .switch.blue input:checked + .slider {
-  box-shadow: 0 0 10px rgba(9, 117, 241, 0.8);
+  box-shadow: 0 0 10px rgba(9, 116, 241, 0.8);
   border: 2px solid #0974f1;
 }
 
@@ -1589,7 +1586,7 @@ label.checkbox, label.radio {
 }
 
 .switch.green input:checked + .slider {
-  box-shadow: 0 0 10px rgba(46, 204, 112, 0.8156862745);
+  box-shadow: 0 0 10px rgba(46, 204, 113, 0.8156862745);
   border: 2px solid #2ecc71;
 }
 
@@ -1598,7 +1595,7 @@ label.checkbox, label.radio {
 }
 
 .switch.orange input:checked + .slider {
-  box-shadow: 0 0 10px rgba(230, 125, 34, 0.8235294118);
+  box-shadow: 0 0 10px rgba(230, 126, 34, 0.8235294118);
   border: 2px solid #e67e22;
 }
 
@@ -1607,7 +1604,7 @@ label.checkbox, label.radio {
 }
 
 .switch.red input:checked + .slider {
-  box-shadow: 0 0 10px rgba(231, 77, 60, 0.8);
+  box-shadow: 0 0 10px rgba(231, 76, 60, 0.8);
   border: 2px solid #e74c3c;
 }
 
@@ -1930,7 +1927,7 @@ nav ul li.nav-dropdown .nav-dropdown-content a:hover, .nav ul li.nav-dropdown .n
   transition: opacity 0.5s, visibility 0.5s;
   visibility: hidden;
   width: 100%;
-  z-index: 1;
+  z-index: 9;
 }
 
 @media (min-width: 544px) {
@@ -2006,7 +2003,7 @@ pre {
   border-radius: 5px;
   color: #e1e1e1;
   overflow-x: auto;
-  white-space: normal;
+  white-space: pre-wrap;
 }
 pre.filled {
   background-color: #e1e1e1;

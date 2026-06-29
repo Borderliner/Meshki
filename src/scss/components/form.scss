@@ -214,7 +214,7 @@ label.checkbox, label.radio {
 
 // Colors
 .switch.blue input:checked + .slider {
-  box-shadow: 0 0 10px rgba(9, 117, 241, 0.8);
+  box-shadow: 0 0 10px rgba(9, 116, 241, 0.8); // match the #0974f1 border
   border: 2px solid #0974f1;
 }
 
@@ -223,7 +223,7 @@ label.checkbox, label.radio {
 }
 
 .switch.green input:checked + .slider {
-  box-shadow: 0 0 10px #2ecc70d0;
+  box-shadow: 0 0 10px #2ecc71d0; // match the #2ecc71 border
   border: 2px solid #2ecc71;
 }
 
@@ -232,7 +232,7 @@ label.checkbox, label.radio {
 }
 
 .switch.orange input:checked + .slider {
-  box-shadow: 0 0 10px #e67d22d2;
+  box-shadow: 0 0 10px #e67e22d2; // match the #e67e22 border
   border: 2px solid #e67e22;
 }
 
@@ -241,7 +241,7 @@ label.checkbox, label.radio {
 }
 
 .switch.red input:checked + .slider {
-  box-shadow: 0 0 10px #e74d3ccc;
+  box-shadow: 0 0 10px #e74c3ccc; // match the #e74c3c border
   border: 2px solid #e74c3c;
 }
 

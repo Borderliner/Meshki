@@ -7,12 +7,16 @@
 @function column-width($part) {
   @if $part >= 1 and $part < 6 {
     $size: ((math.div(96, 12) * $part) - ((6 - $part) * math.div(2, 3)));
-    @return percentage(calc($size / 100));
+    @return percentage(math.div($size, 100));
   }
 
   @else if $part >= 6 and $part < 12 {
     $size: ((math.div(96, 12) * $part) + (($part - 6) * math.div(2, 3)));
     @return percentage(math.div($size, 100));
+  }
+
+  @else {
+    @error "column-width(): $part must be an integer in [1, 11], got #{$part}.";
   }
 }
 
