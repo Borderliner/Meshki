@@ -1,3 +1,6 @@
+// Defines the button color variables (used below) and emits the colored-button
+// rules. Imported once only — colored selectors out-specify the base, so order
+// does not matter and a second import would just duplicate the output.
 @import "button-colors";
 
 // Removed focus outlines, especially in Firefox
@@ -63,8 +66,6 @@
   color: $button-color-disabled;
   pointer-events: none;
 }
-
-@import "button-colors";
 
 .button-couple {
   button:not(:first-child):not(:last-child),

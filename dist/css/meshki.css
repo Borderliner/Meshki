@@ -628,9 +628,9 @@ Flexible ratios:
 }
 
 .flexbox.flow-col {
-  -ms-flex-flow: col;
-  -webkit-flex-flow: col;
-  flex-flow: col;
+  -ms-flex-flow: column;
+  -webkit-flex-flow: column;
+  flex-flow: column;
 }
 
 .flexbox.flow-wrap {
@@ -959,13 +959,13 @@ html, body, .container, .content {
   scrollbar-color: #bebebe #222;
   /* Works on Chrome, Edge, and Safari */
 }
-html ::-webkit-scrollbar, body ::-webkit-scrollbar, .container ::-webkit-scrollbar, .content ::-webkit-scrollbar {
+html::-webkit-scrollbar, body::-webkit-scrollbar, .container::-webkit-scrollbar, .content::-webkit-scrollbar {
   width: 8px;
 }
-html ::-webkit-scrollbar-track, body ::-webkit-scrollbar-track, .container ::-webkit-scrollbar-track, .content ::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track, body::-webkit-scrollbar-track, .container::-webkit-scrollbar-track, .content::-webkit-scrollbar-track {
   background: #222;
 }
-html ::-webkit-scrollbar-thumb, body ::-webkit-scrollbar-thumb, .container ::-webkit-scrollbar-thumb, .content ::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb, .container::-webkit-scrollbar-thumb, .content::-webkit-scrollbar-thumb {
   background-color: #bebebe;
   border-radius: 8px;
   border: 3px solid #000;
@@ -981,13 +981,13 @@ html ::-webkit-scrollbar-thumb, body ::-webkit-scrollbar-thumb, .container ::-we
 .sidenav:hover {
   scrollbar-color: #e1e1e1 #000;
 }
-.sidenav ::-webkit-scrollbar {
+.sidenav::-webkit-scrollbar {
   width: 8px;
 }
-.sidenav ::-webkit-scrollbar-track {
+.sidenav::-webkit-scrollbar-track {
   background: #000;
 }
-.sidenav ::-webkit-scrollbar-thumb {
+.sidenav::-webkit-scrollbar-thumb {
   background-color: #bebebe;
   border-radius: 8px;
   border: 3px solid #000;
@@ -1297,122 +1297,6 @@ input[type=button].disabled {
   border-color: #888;
   color: #888;
   pointer-events: none;
-}
-
-button.blue,
-a.button.blue,
-input[type=submit].blue,
-input[type=reset].blue,
-input[type=button].blue {
-  border: 2px #55acee solid;
-  color: #55acee;
-}
-
-button.blue:hover,
-a.button.blue:hover,
-input[type=submit].blue:hover,
-input[type=reset].blue:hover,
-input[type=button].blue:hover {
-  background-color: #55acee;
-  border-color: #55acee;
-  color: #222;
-}
-
-button.blue:active,
-a.button.blue:active,
-input[type=submit].blue:active,
-input[type=reset].blue:active,
-input[type=button].blue:active {
-  background-color: #4b82b7;
-  border-color: #4b82b7;
-  color: #222;
-}
-
-button.green,
-a.button.green,
-input[type=submit].green,
-input[type=reset].green,
-input[type=button].green {
-  border: 2px #2ecc71 solid;
-  color: #2ecc71;
-}
-
-button.green:hover,
-a.button.green:hover,
-input[type=submit].green:hover,
-input[type=reset].green:hover,
-input[type=button].green:hover {
-  background-color: #2ecc71;
-  border-color: #2ecc71;
-  color: #222;
-}
-
-button.green:active,
-a.button.green:active,
-input[type=submit].green:active,
-input[type=reset].green:active,
-input[type=button].green:active {
-  background-color: #21a057;
-  border-color: #21a057;
-  color: #222;
-}
-
-button.red,
-a.button.red,
-input[type=submit].red,
-input[type=reset].red,
-input[type=button].red {
-  border: 2px #e74c3c solid;
-  color: #e74c3c;
-}
-
-button.red:hover,
-a.button.red:hover,
-input[type=submit].red:hover,
-input[type=reset].red:hover,
-input[type=button].red:hover {
-  background-color: #e74c3c;
-  border-color: #e74c3c;
-  color: #222;
-}
-
-button.red:active,
-a.button.red:active,
-input[type=submit].red:active,
-input[type=reset].red:active,
-input[type=button].red:active {
-  background-color: #bd382a;
-  border-color: #bd382a;
-  color: #222;
-}
-
-button.orange,
-a.button.orange,
-input[type=submit].orange,
-input[type=reset].orange,
-input[type=button].orange {
-  border: 2px #e67e22 solid;
-  color: #e67e22;
-}
-
-button.orange:hover,
-a.button.orange:hover,
-input[type=submit].orange:hover,
-input[type=reset].orange:hover,
-input[type=button].orange:hover {
-  background-color: #e67e22;
-  border-color: #e67e22;
-  color: #222;
-}
-
-button.orange:active,
-a.button.orange:active,
-input[type=submit].orange:active,
-input[type=reset].orange:active,
-input[type=button].orange:active {
-  background-color: #c16819;
-  border-color: #c16819;
-  color: #222;
 }
 
 .button-couple button:not(:first-child):not(:last-child),

@@ -149,6 +149,16 @@ input[type=text]::-webkit-input-placeholder {
       margin-right: 0;
     }
 
+    // Reset the base (LTR) left offset before applying the right offset,
+    // otherwise the more-specific base rule leaves a margin on both sides.
+    &.offset-by-one, &.offset-by-two, &.offset-by-three, &.offset-by-four,
+    &.offset-by-five, &.offset-by-six, &.offset-by-seven, &.offset-by-eight,
+    &.offset-by-nine, &.offset-by-ten, &.offset-by-eleven,
+    &.offset-by-one-third, &.offset-by-two-third, &.offset-by-two-thirds,
+    &.offset-by-half, &.offset-by-one-half {
+      margin-left: 0;
+    }
+
     // Offsets from right
     &.offset-by-one          { margin-right: 8.66666666667%; }
     &.offset-by-two          { margin-right: 17.3333333333%; }
@@ -163,8 +173,10 @@ input[type=text]::-webkit-input-placeholder {
     &.offset-by-eleven       { margin-right: 95.3333333333%; }
 
     &.offset-by-one-third    { margin-right: 34.6666666667%; }
+    &.offset-by-two-third,
     &.offset-by-two-thirds   { margin-right: 69.3333333333%; }
 
+    &.offset-by-half,
     &.offset-by-one-half     { margin-right: 52%; }
   }
 }

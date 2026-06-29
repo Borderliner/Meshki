@@ -97,9 +97,9 @@ Flexible ratios:
 }
 
 .flexbox.flow-col {
-  -ms-flex-flow: col;
-  -webkit-flex-flow: col;
-  flex-flow: col;
+  -ms-flex-flow: column;
+  -webkit-flex-flow: column;
+  flex-flow: column;
 }
 
 .flexbox.flow-wrap {
