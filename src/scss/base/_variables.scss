@@ -1,6 +1,10 @@
 // Misc.
 $general-animation-duration:         .3s;
 
+// Accessibility — keyboard focus ring colour (see :focus-visible styles).
+// Matches $button-color-blue; kept here so it is available app-wide.
+$focus-ring-color:                   #55acee !default;
+
 :root {
   --general-animation-duration: #{$general-animation-duration};
 }

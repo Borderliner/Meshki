@@ -40,3 +40,43 @@ describe('scss — Phase 1 correctness fixes', () => {
     assert.match(rtl, /\.col\.offset-by-two-third[,\s]/) // singular alias, not the plural
   })
 })
+
+describe('scss — Phase 2 accessibility', () => {
+  let main
+  before(() => { main = compile('src/scss/main.scss') })
+
+  it('no focus indicator is removed with an un-overridable !important', () => {
+    assert.doesNotMatch(main, /outline:\s*(0|none)\s*!important/)
+  })
+
+  it('buttons expose a :focus-visible ring', () => {
+    assert.match(main, /button:focus-visible[\s\S]*?\{[^}]*outline:\s*2px solid/)
+  })
+
+  it('text inputs/select expose a :focus-visible ring', () => {
+    assert.match(main, /input\[type=text\]:focus-visible/)
+    assert.match(main, /select:focus-visible/)
+  })
+
+  it('checkbox/radio focus is shown on the visible ::before box', () => {
+    assert.match(main, /input\[type=checkbox\]:focus-visible \+ label\.checkbox::before/)
+    assert.match(main, /input\[type=radio\]:focus-visible \+ label\.radio::before/)
+  })
+
+  it('range input exposes a :focus-visible ring', () => {
+    assert.match(main, /input\[type=range\]:focus-visible/)
+  })
+
+  it('sidenav links and close button expose a :focus-visible ring', () => {
+    assert.match(main, /\.sidenav a:focus-visible/)
+    assert.match(main, /\.sidenav-close-button:focus-visible/)
+  })
+
+  it('.button-couple middle buttons stay interactive (pointer-events restored)', () => {
+    assert.match(main, /pointer-events:\s*auto/)
+  })
+
+  it('navbar dropdown opens on :focus-within (keyboard accessible)', () => {
+    assert.match(main, /\.nav-dropdown:focus-within/)
+  })
+})

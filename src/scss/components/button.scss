@@ -3,9 +3,15 @@
 // does not matter and a second import would just duplicate the output.
 @import "button-colors";
 
-// Removed focus outlines, especially in Firefox
+// Suppress the default ring on mouse click, but show a clear one for keyboard
+// users via :focus-visible.
 @include button-mixin(':focus') {
-  outline: 0 !important;
+  outline: none;
+}
+
+@include button-mixin(':focus-visible') {
+  outline: 2px solid $focus-ring-color;
+  outline-offset: 2px;
 }
 
 // Simple button, with no style
@@ -96,6 +102,7 @@
       border-top-style: solid;
       display: inline;
       margin: -5px !important;
+      pointer-events: auto; // re-enable: the mobile rule disables these
     }
 
     button:last-child,

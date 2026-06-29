@@ -25,11 +25,15 @@
   // Position and style the close button (top right corner)
   .sidenav-close-button {
     font-size: 3.6rem !important;
-    outline: 0 !important;
     padding-right: 30px !important;
     position: absolute;
     right: 0;
     top: 0;
+
+    &:focus-visible {
+      outline: 2px solid $focus-ring-color;
+      outline-offset: 2px;
+    }
   }
 
   // Special form of <hr> for sidenav
@@ -43,7 +47,6 @@
     color: $sidenav-color-links;
     display: block;
     font-size: 1.6rem;
-    outline: 0 !important;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     transition: $sidenav-text-animation-duration;
@@ -51,6 +54,11 @@
 
     &:hover {
       color: $text-color;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $focus-ring-color;
+      outline-offset: -2px;
     }
 
     // No color change for disabled sidenav links

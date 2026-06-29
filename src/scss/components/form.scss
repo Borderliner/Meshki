@@ -32,7 +32,6 @@ select {
   background: $select-dropdown-arrow;
   background-color: $form-color-background;
   background-position: 98% 50%;
-  outline: 0 !important;
 
   // Firefox outline bug
   &:-moz-focusring {
@@ -46,12 +45,16 @@ textarea {
   padding: 6px 10px;
 }
 
-// Blue light animation when the form elements get focus
+// Lighten the background on focus; show a clear ring for keyboard users only.
 @include input-elements-mixin(':focus') {
   background-color: $white;
-  // border: 1px solid $form-color-border;
-  // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
-  outline: 0 !important;
+  outline: none;
+}
+
+@include input-elements-mixin(':focus-visible') {
+  border-color: $focus-ring-color;
+  outline: 2px solid $focus-ring-color;
+  outline-offset: 1px;
 }
 
 @include input-elements-mixin('.error') {
@@ -143,10 +146,12 @@ input[type='radio']:checked + label.radio:before {
   background-color: $form-checkradio-color;
 }
 
-// Remove outlines of checkboxes and radio buttons, especially for Firefox
-input[type='checkbox']:focus + label.checkbox,
-input[type='radio']:focus + label.radio {
-  outline: none !important;
+// The real checkbox/radio is visually hidden, so show the keyboard focus ring
+// on the visible ::before box instead.
+input[type='checkbox']:focus-visible + label.checkbox::before,
+input[type='radio']:focus-visible + label.radio::before {
+  outline: 2px solid $focus-ring-color;
+  outline-offset: 2px;
 }
 
 input[type='checkbox'] + label, input[type='radio'] + label,
@@ -255,6 +260,11 @@ input[type='range'] {
 
   &:focus {
     outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $focus-ring-color;
+    outline-offset: 2px;
   }
 
   &::-webkit-slider-runnable-track {

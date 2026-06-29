@@ -87,7 +87,8 @@ nav, .nav {
       &.nav-dropdown {
         display: inline-block;
 
-        &:hover {
+        &:hover,
+        &:focus-within {
           /* When the dropdown is open, change the color of dropdown's button */
           .nav-dropdown-button {
             background-color: $navbar-color-button-active;

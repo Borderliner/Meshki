@@ -1210,7 +1210,16 @@ a.button:focus,
 input[type=submit]:focus,
 input[type=reset]:focus,
 input[type=button]:focus {
-  outline: 0 !important;
+  outline: none;
+}
+
+button:focus-visible,
+a.button:focus-visible,
+input[type=submit]:focus-visible,
+input[type=reset]:focus-visible,
+input[type=button]:focus-visible {
+  outline: 2px solid #55acee;
+  outline-offset: 2px;
 }
 
 button,
@@ -1323,6 +1332,7 @@ input[type=button].disabled {
     border-top-style: solid;
     display: inline;
     margin: -5px !important;
+    pointer-events: auto;
   }
   .button-couple button:last-child,
   .button-couple a:last-child {
@@ -1373,7 +1383,6 @@ select {
   background: url("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Im0xMjEuMywzNC42Yy0xLjYtMS42LTQuMi0xLjYtNS44LDBsLTUxLDUxLjEtNTEuMS01MS4xYy0xLjYtMS42LTQuMi0xLjYtNS44LDAtMS42LDEuNi0xLjYsNC4yIDAsNS44bDUzLjksNTMuOWMwLjgsMC44IDEuOCwxLjIgMi45LDEuMiAxLDAgMi4xLTAuNCAyLjktMS4ybDUzLjktNTMuOWMxLjctMS42IDEuNy00LjIgMC4xLTUuOHoiIGZpbGw9IiMwMDAwMDAiLz4KICA8L2c+Cjwvc3ZnPgo=") no-repeat;
   background-color: #e1e1e1;
   background-position: 98% 50%;
-  outline: 0 !important;
 }
 select:-moz-focusring {
   color: transparent;
@@ -1395,7 +1404,21 @@ input[type=password]:focus,
 textarea:focus,
 select:focus {
   background-color: #fff;
-  outline: 0 !important;
+  outline: none;
+}
+
+input[type=email]:focus-visible,
+input[type=number]:focus-visible,
+input[type=search]:focus-visible,
+input[type=text]:focus-visible,
+input[type=tel]:focus-visible,
+input[type=url]:focus-visible,
+input[type=password]:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  border-color: #55acee;
+  outline: 2px solid #55acee;
+  outline-offset: 1px;
 }
 
 input[type=email].error,
@@ -1496,9 +1519,10 @@ input[type=radio]:checked + label.radio:before {
   background-color: #33bbf0;
 }
 
-input[type=checkbox]:focus + label.checkbox,
-input[type=radio]:focus + label.radio {
-  outline: none !important;
+input[type=checkbox]:focus-visible + label.checkbox::before,
+input[type=radio]:focus-visible + label.radio::before {
+  outline: 2px solid #55acee;
+  outline-offset: 2px;
 }
 
 input[type=checkbox] + label, input[type=radio] + label,
@@ -1600,6 +1624,10 @@ input[type=range] {
 }
 input[type=range]:focus {
   outline: none;
+}
+input[type=range]:focus-visible {
+  outline: 2px solid #55acee;
+  outline-offset: 2px;
 }
 input[type=range]::-webkit-slider-runnable-track {
   background: #222;
@@ -1793,14 +1821,14 @@ nav ul li.nav-dropdown, .nav ul li.nav-dropdown {
   /* Each link in dropdown's content */
   /* When the mouse is on each option */
 }
-nav ul li.nav-dropdown:hover, .nav ul li.nav-dropdown:hover {
+nav ul li.nav-dropdown:hover, nav ul li.nav-dropdown:focus-within, .nav ul li.nav-dropdown:hover, .nav ul li.nav-dropdown:focus-within {
   /* When the dropdown is open, change the color of dropdown's button */
   /* Display the content when the mouse is on dropdown's button */
 }
-nav ul li.nav-dropdown:hover .nav-dropdown-button, .nav ul li.nav-dropdown:hover .nav-dropdown-button {
+nav ul li.nav-dropdown:hover .nav-dropdown-button, nav ul li.nav-dropdown:focus-within .nav-dropdown-button, .nav ul li.nav-dropdown:hover .nav-dropdown-button, .nav ul li.nav-dropdown:focus-within .nav-dropdown-button {
   background-color: #111;
 }
-nav ul li.nav-dropdown:hover .nav-dropdown-content, .nav ul li.nav-dropdown:hover .nav-dropdown-content {
+nav ul li.nav-dropdown:hover .nav-dropdown-content, nav ul li.nav-dropdown:focus-within .nav-dropdown-content, .nav ul li.nav-dropdown:hover .nav-dropdown-content, .nav ul li.nav-dropdown:focus-within .nav-dropdown-content {
   opacity: 1;
   visibility: visible;
 }
@@ -1847,11 +1875,14 @@ nav ul li.nav-dropdown .nav-dropdown-content a:hover, .nav ul li.nav-dropdown .n
 }
 .sidenav .sidenav-close-button {
   font-size: 3.6rem !important;
-  outline: 0 !important;
   padding-right: 30px !important;
   position: absolute;
   right: 0;
   top: 0;
+}
+.sidenav .sidenav-close-button:focus-visible {
+  outline: 2px solid #55acee;
+  outline-offset: 2px;
 }
 .sidenav hr {
   border-color: #818181;
@@ -1861,7 +1892,6 @@ nav ul li.nav-dropdown .nav-dropdown-content a:hover, .nav ul li.nav-dropdown .n
   color: #818181;
   display: block;
   font-size: 1.6rem;
-  outline: 0 !important;
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   transition: 0.3s;
@@ -1869,6 +1899,10 @@ nav ul li.nav-dropdown .nav-dropdown-content a:hover, .nav ul li.nav-dropdown .n
 }
 .sidenav a:hover {
   color: #e1e1e1;
+}
+.sidenav a:focus-visible {
+  outline: 2px solid #55acee;
+  outline-offset: -2px;
 }
 .sidenav a[disabled] {
   cursor: default;
