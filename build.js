@@ -35,13 +35,11 @@ const isWatch = process.argv[2]
 const options = {
   main_scss: 'src/scss/main.scss',
   main_js: 'src/js/meshki.js',
-  main_fonts: 'src/fonts/',
   output_dir: 'dist/',
   output_css: 'dist/css/meshki.css',
   output_css_min: 'dist/css/meshki.min.css',
   output_js: 'dist/js/meshki.js',
   output_js_min: 'dist/js/meshki.min.js',
-  output_fonts: 'dist/fonts/',
   plugins_dir: 'src/scss/plugins',
   source_map: true,
   licensed: [
@@ -49,7 +47,7 @@ const options = {
     'dist/css/meshki.min.css',
     'dist/plugins/meshki-extra-button-colors.min.css',
     'dist/plugins/meshki-rtl.min.css',
-    'dist/plugins/meshki-light-mode.css'
+    'dist/plugins/meshki-light-mode.min.css'
   ]
 }
 
@@ -59,17 +57,7 @@ function listDirectory (srcpath) {
 }
 
 function removeDirectory (srcpath) {
-  if (fs.existsSync(srcpath)) {
-    fs.readdirSync(srcpath).forEach((file) => {
-      const currentPath = `${srcpath}/${file}`
-      if (fs.lstatSync(currentPath).isDirectory()) {
-        removeDirectory(currentPath)
-      } else {
-        fs.unlinkSync(currentPath)
-      }
-    })
-    fs.rmdirSync(srcpath)
-  }
+  fs.rmSync(srcpath, { recursive: true, force: true })
 }
 
 function createDist (log) {
@@ -77,57 +65,65 @@ function createDist (log) {
     log ? console.log(chalk.yellow('No ') + chalk.blue.bold('"dist"') + chalk.yellow(' folder exists. Creating folders...')) : undefined
     fs.mkdirSync('dist/')
     fs.mkdirSync('dist/plugins/')
-    // fs.mkdirSync('dist/fonts/')
     fs.mkdirSync('dist/css/')
     fs.mkdirSync('dist/js/')
     log ? console.log(chalk.green('=> ') + chalk.blue('"dist"') + chalk.green(' folder was created successfully!')) : undefined
   } else {
     log ? console.log(chalk.magenta('Cleaning previously compiled files...')) : undefined
     removeDirectory('dist/')
-    createDist()
+    createDist(log)
   }
 }
 
 const plugins = listDirectory(options.plugins_dir)
 
+// Append a sourceMappingURL comment so browsers can locate the (sibling) map file.
+// The modern Dart Sass API does not emit this comment automatically.
+function withSourceMappingURL (css, mapPath) {
+  return `${css}\n/*# sourceMappingURL=${path.basename(mapPath)} */\n`
+}
+
 function sassifyMeshki (log) {
   log ? console.log(chalk.yellow('Compiling ') + chalk.blue.bold('meshki.scss') + chalk.yellow('...')) : undefined
-  const result = sass.renderSync({
-    file: options.main_scss,
-    outFile: options.output_css
-  })
+  const result = sass.compile(options.main_scss)
   // Write CSS file
   try {
     fs.writeFileSync(options.output_css, result.css)
     log ? console.log(chalk.green('=> Successfully compiled ') + chalk.blue.bold('meshki.scss')) : undefined
   } catch (error) {
     console.log(chalk.red('Could not write the output to the disk. Check if you have write permissions.'))
+    console.log(error)
   }
 }
 
 function minifyMeshki (log) {
   log ? console.log(chalk.yellow('Minifying ') + chalk.blue.bold('meshki.css') + chalk.yellow('...')) : undefined
-  const result = sass.renderSync({
-    file: options.main_scss,
-    outputStyle: 'compressed',
-    outFile: options.output_css_min,
-    sourceMap: options.source_map
+  const result = sass.compile(options.main_scss, {
+    style: 'compressed',
+    sourceMap: options.source_map,
+    sourceMapIncludeSources: true
   })
+  const mapPath = `${options.output_css_min}.map`
+  const css = (options.source_map && result.sourceMap)
+    ? withSourceMappingURL(result.css, mapPath)
+    : result.css
   // Write Minified CSS file
   try {
-    fs.writeFileSync(options.output_css_min, result.css)
+    fs.writeFileSync(options.output_css_min, css)
     log ? console.log(chalk.green('=> Successfully minified ') + chalk.blue.bold('meshki.css')) : undefined
   } catch (error) {
     console.log(chalk.red('Could not write the output to the disk. Check if you have write permissions.'))
+    console.log(error)
   }
 
-  if (options.source_map) {
-    // Write SourceMaps
+  if (options.source_map && result.sourceMap) {
+    // Write SourceMap next to the file that references it
     try {
-      fs.writeFileSync(`${options.output_css}.map`, result.map)
+      fs.writeFileSync(mapPath, JSON.stringify(result.sourceMap))
       log ? console.log(chalk.green('=> Successfully generated source maps for ') + chalk.blue.bold('meshki.min.css')) : undefined
     } catch (error) {
       console.log(chalk.red('Could not write the output to the disk. Check if you have write permissions.'))
+      console.log(error)
     }
   }
 }
@@ -136,10 +132,7 @@ function sassifyPlugins (log) {
   log ? console.log(chalk.magenta('Starting to compile plugins...')) : undefined
   plugins.forEach((name) => {
     log ? console.log(chalk.yellow('Compiling ') + chalk.blue.bold(`${name}`)) : undefined
-    const result = sass.renderSync({
-      file: `${options.plugins_dir}/${name}/main.scss`,
-      outFile: `${options.output_dir}/plugins/`
-    })
+    const result = sass.compile(`${options.plugins_dir}/${name}/main.scss`)
     // Write CSS file
     try {
       fs.writeFileSync(`${options.output_dir}plugins/meshki-${name}.css`, result.css)
@@ -155,26 +148,30 @@ function minifyPlugins (log) {
   log ? console.log(chalk.magenta('Starting to minify plugins...')) : undefined
   plugins.forEach((name) => {
     log ? console.log(chalk.yellow('Minifying ') + chalk.blue.bold(`${name}`)) : undefined
-    const result = sass.renderSync({
-      file: `${options.plugins_dir}/${name}/main.scss`,
-      outFile: `${options.output_dir}/plugins/`,
-      outputStyle: 'compressed',
-      sourceMap: options.source_map
+    const result = sass.compile(`${options.plugins_dir}/${name}/main.scss`, {
+      style: 'compressed',
+      sourceMap: options.source_map,
+      sourceMapIncludeSources: true
     })
+    const outFile = `${options.output_dir}plugins/meshki-${name}.min.css`
+    const mapPath = `${outFile}.map`
+    const css = (options.source_map && result.sourceMap)
+      ? withSourceMappingURL(result.css, mapPath)
+      : result.css
 
     // Write CSS file
     try {
-      fs.writeFileSync(`${options.output_dir}plugins/meshki-${name}.min.css`, result.css)
+      fs.writeFileSync(outFile, css)
       log ? console.log(chalk.green('=> Successfully minified ') + chalk.blue.bold(name)) : undefined
     } catch (error) {
       console.log(chalk.red('Could not write the output to the disk. Check if you have write permissions.'))
       console.log(error)
     }
 
-    if (options.source_map) {
-      // Write source map file
+    if (options.source_map && result.sourceMap) {
+      // Write source map file next to the file that references it
       try {
-        fs.writeFileSync(`${options.output_dir}plugins/meshki-${name}.map`, result.map)
+        fs.writeFileSync(mapPath, JSON.stringify(result.sourceMap))
         log ? console.log(chalk.green('=> Successfully generated source map for ') + chalk.blue.bold(name)) : undefined
       } catch (error) {
         console.log(chalk.red('Could not write the output to the disk. Check if you have write permissions.'))
@@ -186,17 +183,22 @@ function minifyPlugins (log) {
 
 function uglifyJavaScript (log) {
   let code = ''
-  let uglified = {}
   try {
     code = fs.readFileSync(options.main_js, 'utf-8')
-    uglified = uglifyJs.minify(code, {
-      warnings: true
-    })
-    if (uglified.warnings) console.log(uglified.warnings)
   } catch (error) {
     console.log(chalk.red('Could not read the input file from the disk. Check if you have read permissions.'))
     console.log(error)
+    return
   }
+
+  // uglifyJs.minify() does not throw; it reports failures on the `error` field.
+  const uglified = uglifyJs.minify(code, { warnings: true })
+  if (uglified.error) {
+    console.log(chalk.red('Could not uglify meshki.js:'))
+    console.log(uglified.error)
+    return
+  }
+  if (uglified.warnings) console.log(uglified.warnings)
 
   try {
     fs.writeFileSync(options.output_js_min, uglified.code)
@@ -218,30 +220,13 @@ function copyJavaScript (log) {
   }
 }
 
-function copyFonts (log) {
-  log ? console.log(chalk.yellow('Copying ') + chalk.blue.bold('fonts') + chalk.yellow('to dist/fonts')) : undefined
-  fs.readdirSync(options.main_fonts).forEach((file) => {
-    try {
-      fsExtra.copySync(path.join(__dirname, options.main_fonts, file), path.join(options.output_fonts, file))
-      log ? console.log(chalk.green('=> Successfully copied ') + chalk.blue.bold(file) + chalk.green(' to dist/fonts')) : undefined
-    } catch (error) {
-      console.log(chalk.red('Could not write the output to the disk. Check if you have write permissions.'))
-      console.log(error)
-    }
-  })
-}
-
 function copyLicense (log) {
   let copying = ''
   try {
     copying = fs.readFileSync('COPYING', 'utf-8')
-    if (process.platform === 'darwin' || process.platform === 'linux') {
-      log ? console.log(chalk.cyan.bold('✅ Meshki was compiled succesfully! Rock on! 🤘')) : undefined
-    } else {
-      log ? console.log(chalk.cyan.bold('--Meshki was compiled succesfully! Rock on!')) : undefined
-    }
   } catch (error) {
     console.log(error)
+    return
   }
 
   options.licensed.forEach((file) => {
@@ -252,6 +237,12 @@ function copyLicense (log) {
       console.log(error)
     }
   })
+
+  if (process.platform === 'darwin' || process.platform === 'linux') {
+    log ? console.log(chalk.cyan.bold('✅ Meshki was compiled succesfully! Rock on! 🤘')) : undefined
+  } else {
+    log ? console.log(chalk.cyan.bold('--Meshki was compiled succesfully! Rock on!')) : undefined
+  }
 }
 
 function compileAll (log = true) {
@@ -263,13 +254,12 @@ function compileAll (log = true) {
   uglifyJavaScript(log)
   log ? console.log(chalk.magenta('Copying assets...')) : undefined
   copyJavaScript(log)
-  // copyFonts(log)
   copyLicense(log)
   return true
 }
 
 // If --watch has been passed as an argument
-if ((isWatch !== undefined) && (isWatch === '--watch')) {
+if (isWatch === '--watch') {
   console.log(chalk.greenBright.italic('Compiling project...'))
   compileAll()
   console.log(chalk.magenta.italic('Watching "src" folder...'))

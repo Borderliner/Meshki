@@ -51,32 +51,39 @@ var meshki = {
 
   openSidenav: function () {
     var sidenav = document.getElementsByClassName('sidenav')[0]
+    // Nothing to open if there is no sidenav on the page.
+    if (!sidenav) return
     var container = document.getElementsByClassName('container')[0]
+    var overlayDiv = document.getElementsByClassName('overlay')[0]
     // Is sidenav a "Push Sidenav"?
     var isSidenavPush = (sidenav.className.split(' ').indexOf('push') > -1)
-    var overlayDiv = document.getElementsByClassName('overlay')[0]
 
-    // Set Sidenav's width to 250px, starts sliding
-    var sidenavWidth = window.getComputedStyle(document.documentElement).getPropertyValue('--sidenav-width') || '275px';
+    // Read the configured width from the CSS custom property, falling back to a default.
+    var sidenavWidth = window.getComputedStyle(document.documentElement).getPropertyValue('--sidenav-width').trim() || '275px'
+    // Set Sidenav's width, starts sliding
     sidenav.style.width = sidenavWidth
     // If on Desktop and the sidenav is a push one, push "container"
-    if (window.innerWidth > 768 && isSidenavPush) {
+    if (window.innerWidth > 768 && isSidenavPush && container) {
       // Hide body overflow-x
       document.body.style.overflowX = 'hidden'
       // If not RTL
-      if (!this.isRTL()) {
+      if (!meshki.isRTL()) {
         container.style.marginLeft = sidenavWidth
       } else {
         container.style.marginRight = sidenavWidth
       }
     }
 
-    overlayDiv.style.opacity = 0.55
-    overlayDiv.style.visibility = 'visible'
+    if (overlayDiv) {
+      overlayDiv.style.opacity = 0.55
+      overlayDiv.style.visibility = 'visible'
+    }
   },
 
   closeSidenav: function () {
     var sidenav = document.getElementsByClassName('sidenav')[0]
+    // Nothing to close if there is no sidenav on the page.
+    if (!sidenav) return
     var container = document.getElementsByClassName('container')[0]
     var overlayDiv = document.getElementsByClassName('overlay')[0]
     var isSidenavPush = (sidenav.className.split(' ').indexOf('push') > -1)
@@ -84,12 +91,17 @@ var meshki = {
     // Close the Sidenav, pushes it back
     sidenav.style.width = '0'
 
-    if (window.innerWidth > 768 && isSidenavPush) {
-      container.style.margin = '0'
+    if (window.innerWidth > 768 && isSidenavPush && container) {
+      // Undo only the margins openSidenav() set, and restore the body overflow.
+      container.style.marginLeft = '0'
+      container.style.marginRight = '0'
+      document.body.style.overflowX = ''
     }
 
-    overlayDiv.style.opacity = 0
-    overlayDiv.style.visibility = 'hidden'
+    if (overlayDiv) {
+      overlayDiv.style.opacity = 0
+      overlayDiv.style.visibility = 'hidden'
+    }
   },
 
   setupOverlay: function () {
@@ -102,12 +114,13 @@ var meshki = {
   }
 }
 
-// Setup
+// Run `fn` once the DOM is ready, even if the document already finished parsing
+// (e.g. when this script is loaded with `defer` or injected after load).
 function ready (fn) {
-  document.onreadystatechange = function () {
-    if (document.readyState === 'complete') {
-      fn()
-    }
+  if (document.readyState !== 'loading') {
+    fn()
+  } else {
+    document.addEventListener('DOMContentLoaded', fn)
   }
 }
 
