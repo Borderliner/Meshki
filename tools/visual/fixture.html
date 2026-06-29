@@ -1,0 +1,138 @@
+<!doctype html>
+<!-- Kitchen-sink fixture exercising every component the !important rules touch.
+     No CSS here — the snapshot harness injects the compiled dist CSS. -->
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+  <!-- Buttons: simple, base colors, sizes, states -->
+  <button>simple</button>
+  <a class="button">a.button</a>
+  <button class="blue">blue</button>
+  <a class="button green">green</a>
+  <button class="red">red</button>
+  <button class="orange">orange</button>
+  <button class="small">small</button>
+  <button class="medium">medium</button>
+  <button class="large">large</button>
+  <button disabled>disabled</button>
+  <button class="disabled">.disabled</button>
+  <button class="blue" >blue hoverable</button>
+
+  <!-- Extra button colors (plugin) -->
+  <button class="yellow">yellow</button>
+  <button class="crimson">crimson</button>
+  <button class="purple">purple</button>
+  <button class="lime">lime</button>
+  <button class="brown">brown</button>
+  <button class="space">space</button>
+  <button class="rose">rose</button>
+  <button class="cyan">cyan</button>
+
+  <!-- Button couple (negative-margin grouping) -->
+  <div class="button-couple">
+    <button>one</button>
+    <button>two</button>
+    <button>three</button>
+    <a class="button">four</a>
+  </div>
+
+  <!-- Navbar with dropdown, nav-right / nav-left -->
+  <nav class="fixed">
+    <ul>
+      <li><a class="logo" href="#">Logo</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a class="active" href="#">Active</a></li>
+      <li><a class="button blue" href="#">NavBtn</a></li>
+      <li class="nav-right"><a href="#">Right</a></li>
+      <li class="nav-left"><a href="#">Left</a></li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-button" href="#">Drop</a>
+        <div class="nav-dropdown-content">
+          <a href="#">Item 1</a>
+          <a href="#">Item 2</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Sidenav -->
+  <div class="sidenav push">
+    <a class="sidenav-close-button" href="#">&times;</a>
+    <hr>
+    <a href="#">Link</a>
+    <a href="#" disabled>Disabled</a>
+    <button>Sidenav Button</button>
+  </div>
+  <div class="overlay"></div>
+  <div class="container"><div class="content">content</div></div>
+
+  <!-- Forms -->
+  <form>
+    <input type="text" placeholder="text">
+    <input type="email" placeholder="email">
+    <input type="text" class="error" value="error">
+    <input type="text" class="warning" value="warning">
+    <input type="text" class="success" value="success">
+    <select><option>opt</option></select>
+    <textarea>area</textarea>
+    <input type="checkbox" id="cb"><label class="checkbox" for="cb">check</label>
+    <input type="radio" id="rb"><label class="radio" for="rb">radio</label>
+    <input type="range">
+    <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+    <label class="switch blue"><input type="checkbox" checked><span class="slider"></span></label>
+    <label class="switch green"><input type="checkbox" checked><span class="slider"></span></label>
+    <label class="switch orange"><input type="checkbox" checked><span class="slider"></span></label>
+    <label class="switch red"><input type="checkbox" checked><span class="slider"></span></label>
+    <fieldset><legend>legend</legend>field</fieldset>
+  </form>
+
+  <!-- Table -->
+  <table class="striped hoverable">
+    <thead><tr><th>H1</th><th>H2</th></tr></thead>
+    <tbody>
+      <tr><td>a</td><td>b</td></tr>
+      <tr><td>c</td><td>d</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Code -->
+  <p><code>inline</code> and <code class="filled">filled</code></p>
+  <pre>pre block</pre>
+  <pre class="filled"><code>pre &gt; code</code></pre>
+
+  <!-- Grid -->
+  <div class="row">
+    <div class="col one">one</div>
+    <div class="col eleven">eleven</div>
+  </div>
+  <div class="row">
+    <div class="col six">six</div>
+    <div class="col six offset-by-six">offset</div>
+  </div>
+  <div class="row">
+    <div class="col offset-by-half">half-offset</div>
+    <div class="col offset-by-two-third">two-third-offset</div>
+  </div>
+
+  <!-- Flex -->
+  <div class="flexbox row">
+    <div class="flex one">f1</div>
+    <div class="flex two">f2</div>
+  </div>
+  <div class="flexbox flow-col"><div>fc</div></div>
+
+  <!-- Utilities (must keep winning) -->
+  <div class="float-left">fl</div>
+  <div class="float-right">fr</div>
+  <div class="flexbox row hide-on-mobile">hide-mobile-flex</div>
+  <div class="hide-on-tablet">hide-tablet</div>
+  <div class="hide-on-desktop">hide-desktop</div>
+  <div class="hide-on-non-mobile">hide-non-mobile</div>
+  <div class="invisible">invisible</div>
+  <div hidden>hidden-attr</div>
+  <span class="vertical-line">vl</span>
+
+  <!-- Footer -->
+  <footer>footer</footer>
+</body>
+</html>
