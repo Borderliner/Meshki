@@ -114,3 +114,31 @@ describe('scss — Phase 3 correctness & cleanup', () => {
     assert.match(main, /\.col\.twelve\s*\{[^}]*width:\s*100%/)
   })
 })
+
+describe('scss — Phase 4 de-duplication (output-equivalent @each loops)', () => {
+  let main, ebc
+  before(() => {
+    main = compile('src/scss/main.scss')
+    ebc = compile('src/scss/plugins/extra-button-colors/main.scss')
+  })
+
+  it('the @each loop generates all base button colours + states', () => {
+    for (const c of ['blue', 'green', 'red', 'orange']) {
+      assert.match(main, new RegExp(`a\\.button\\.${c},`), `${c} base rule missing`)
+      assert.match(main, new RegExp(`a\\.button\\.${c}:hover`), `${c} :hover missing`)
+      assert.match(main, new RegExp(`a\\.button\\.${c}:active`), `${c} :active missing`)
+    }
+  })
+
+  it('the @each loop generates all 8 extra button colours', () => {
+    for (const c of ['yellow', 'crimson', 'purple', 'lime', 'brown', 'space', 'rose', 'cyan']) {
+      assert.match(ebc, new RegExp(`a\\.button\\.${c},`), `${c} extra button missing`)
+    }
+  })
+
+  it('the @each loop generates all form-validation states', () => {
+    for (const s of ['error', 'warning', 'success']) {
+      assert.match(main, new RegExp(`select\\.${s}\\b`), `${s} state missing`)
+    }
+  })
+})

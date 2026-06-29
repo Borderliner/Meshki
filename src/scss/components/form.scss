@@ -57,19 +57,18 @@ textarea {
   outline-offset: 1px;
 }
 
-@include input-elements-mixin('.error') {
-  border: 1px $button-color-red solid;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .1) inset, 0 0 8px $button-color-red;
-}
+// Validation states — name => border/glow colour. Order matters for output.
+$form-validation-colors: (
+  'error':   $button-color-red,
+  'warning': $button-color-orange,
+  'success': $button-color-green
+);
 
-@include input-elements-mixin('.warning') {
-  border: 1px $button-color-orange solid;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .1) inset, 0 0 8px $button-color-orange;
-}
-
-@include input-elements-mixin('.success') {
-  border: 1px $button-color-green solid;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .1) inset, 0 0 8px $button-color-green;
+@each $state, $color in $form-validation-colors {
+  @include input-elements-mixin('.#{$state}') {
+    border: 1px $color solid;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1) inset, 0 0 8px $color;
+  }
 }
 
 // Label and Legend normalization
