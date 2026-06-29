@@ -1,5 +1,5 @@
 /*
- * Meshki v3.0.0 (https://borderliner.github.io/Meshki/)
+ * Meshki v3.4.0 (https://borderliner.github.io/Meshki/)
  * Copyright 2016-2024 Mohammadreza Hajianpour <hajianpour.mr@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -1231,7 +1231,7 @@ input[type=button] {
   cursor: pointer;
   display: inline-block;
   font-size: 1.4rem;
-  line-height: normal !important;
+  line-height: normal;
   max-width: 98%;
   padding: 8px 10px;
   text-decoration: none;
@@ -1306,7 +1306,7 @@ input[type=button].disabled {
   border-radius: 0;
   border-style: none;
   display: block;
-  margin: -5px auto 5px auto !important;
+  margin: -5px auto 5px auto;
   pointer-events: none;
 }
 
@@ -1316,7 +1316,7 @@ input[type=button].disabled {
     border-bottom-right-radius: 0;
     border-right-style: solid;
     border-top-right-radius: 0;
-    margin-right: 0 !important;
+    margin-right: 0;
     margin-left: 3px;
   }
   .button-couple button:not(:first-child):not(:last-child),
@@ -1324,7 +1324,7 @@ input[type=button].disabled {
     border-bottom-style: solid;
     border-top-style: solid;
     display: inline;
-    margin: -5px !important;
+    margin: -5px;
     pointer-events: auto;
   }
   .button-couple button:last-child,
@@ -1332,7 +1332,7 @@ input[type=button].disabled {
     border-bottom-left-radius: 0;
     border-left-style: solid;
     border-top-left-radius: 0;
-    margin: auto 3px auto 0 !important;
+    margin: auto 3px auto 0;
   }
 }
 input[type=email],
@@ -1781,7 +1781,7 @@ nav ul li > a:hover, .nav ul li > a:hover {
   background-color: #111;
 }
 nav ul li > a.button, nav ul li > button, nav ul li > input, .nav ul li > a.button, .nav ul li > button, .nav ul li > input {
-  margin: 5px 5px !important;
+  margin: 5px 5px;
 }
 nav ul li > a.active, .nav ul li > a.active {
   background-color: #111;
@@ -1795,11 +1795,11 @@ nav ul li:first-child a.logo:hover, .nav ul li:first-child a.logo:hover {
   color: #000;
 }
 nav ul li.nav-right, .nav ul li.nav-right {
-  float: right !important;
+  float: right;
   position: inherit;
 }
 nav ul li.nav-left, .nav ul li.nav-left {
-  float: left !important;
+  float: left;
   position: inherit;
 }
 nav ul li.nav-dropdown.nav-right .nav-dropdown-content, .nav ul li.nav-dropdown.nav-right .nav-dropdown-content {
@@ -1867,8 +1867,8 @@ nav ul li.nav-dropdown .nav-dropdown-content a:hover, .nav ul li.nav-dropdown .n
   margin-bottom: calc(100px - 2vh);
 }
 .sidenav .sidenav-close-button {
-  font-size: 3.6rem !important;
-  padding-right: 30px !important;
+  font-size: 3.6rem;
+  padding-right: 30px;
   position: absolute;
   right: 0;
   top: 0;
@@ -1906,8 +1906,8 @@ nav ul li.nav-dropdown .nav-dropdown-content a:hover, .nav ul li.nav-dropdown .n
   pointer-events: none;
 }
 .sidenav button {
-  margin-left: 20px !important;
-  margin-right: 20px !important;
+  margin-left: 20px;
+  margin-right: 20px;
   min-width: 150px;
   width: 84%;
 }

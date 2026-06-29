@@ -1,3 +1,14 @@
+## v3.4.0
+  - [x] Fix build source maps, license headers and minify error handling
+  - [x] Fix sidenav JS (focus-aware setup, overlay) and the docs search widget
+  - [x] Fix shipped-CSS bugs: scrollbar nesting, `flex-flow`, RTL offsets, duplicate button-colors import
+  - [x] Restore keyboard focus indicators (`:focus-visible`) across components — accessibility
+  - [x] Fix switch glow colours, overlay z-index, `<pre>` whitespace and grid magic-numbers
+  - [x] De-duplicate button/validation colours with `@each` loops
+  - [x] Migrate SCSS from `@import` to the `@use`/`@forward` module system (Dart Sass 3.0 ready)
+  - [x] Make variables themeable via `!default` (`@use ... with`)
+  - [x] Add a Node test suite; patch dev-dependency security advisories
+
 ## v3.1.0
   - [ ] Add Tailwind-like utility classes as a plugin
 

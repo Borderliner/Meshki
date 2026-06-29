@@ -1,5 +1,5 @@
 /*
- * Meshki v3.0.0 (https://borderliner.github.io/Meshki/)
+ * Meshki v3.4.0 (https://borderliner.github.io/Meshki/)
  * Copyright 2016-2024 Mohammadreza Hajianpour <hajianpour.mr@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -53,7 +53,7 @@ input[type=button] {
   border-radius: 0;
   border-style: none;
   display: block;
-  margin: -5px auto 5px auto !important;
+  margin: -5px auto 5px auto;
 }
 
 @media (min-width: 768px) {
@@ -64,14 +64,14 @@ input[type=button] {
     border-style: solid;
     border-top-left-radius: 0;
     border-top-right-radius: 5px;
-    margin-right: 0 !important;
+    margin-right: 0;
   }
   .button-couple button:not(:first-child):not(:last-child),
   .button-couple a:not(:first-child):not(:last-child) {
     border-bottom-style: solid;
     border-top-style: solid;
     display: inline;
-    margin: -9px !important;
+    margin: -9px;
     padding-right: 12px;
     padding-left: 12px;
   }
@@ -82,7 +82,7 @@ input[type=button] {
     border-style: solid;
     border-top-left-radius: 5px;
     border-top-right-radius: 0;
-    margin-left: 0 !important;
+    margin-left: 0;
   }
 }
 @media (min-width: 544px) {
@@ -182,11 +182,10 @@ input[type=text]::-webkit-input-placeholder {
   padding: 8px 32px 8px 8px;
 }
 
-.sidenav-close-button {
+.sidenav .sidenav-close-button {
   left: 0;
-  padding-left: 30px !important;
-  padding-right: 0 !important;
-  right: auto !important;
+  padding-left: 30px;
+  right: auto;
 }
 
 td,

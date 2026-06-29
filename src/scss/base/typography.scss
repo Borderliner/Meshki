@@ -1,6 +1,6 @@
 @use 'colors';
 @use 'variables';
-@use "../layout/variables" as variables2;
+@use "../layout/variables" as layout-vars;
 @use "../utils/mixins/typography";
 
 // Base Styles
@@ -36,7 +36,7 @@ h5 { @include typography.heading-styler(1.8rem, 1.5, -.05rem); }
 h6 { @include typography.heading-styler(1.5rem, 1.6, 0); }
 
 // Increase font sizes for devices larger than tablet
-@media (min-width: variables2.$media-tablet) {
+@media (min-width: layout-vars.$media-tablet) {
   h1 { font-size: 5rem;   }
   h2 { font-size: 4.2rem; }
   h3 { font-size: 3.6rem; }

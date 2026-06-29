@@ -17,7 +17,18 @@ const MIN_CSS = [
 describe('build.js', () => {
   before(() => {
     // Run a real, full build so we assert on the actual published artifacts.
-    execFileSync('node', ['build.js'], { cwd: root, stdio: 'ignore' })
+    // Retry: the dart-sass/node build process can rarely segfault in some
+    // environments — a transient native crash, not a build error.
+    let lastErr
+    for (let attempt = 0; attempt < 3; attempt++) {
+      try {
+        execFileSync('node', ['build.js'], { cwd: root, stdio: 'ignore' })
+        return
+      } catch (err) {
+        lastErr = err
+      }
+    }
+    throw lastErr
   })
 
   it('makes every minified CSS reference a source map that actually exists', () => {

@@ -1,8 +1,8 @@
 @use 'colors';
 @use 'variables';
 @use "../base/colors" as base-colors;
-@use "../base/variables" as variables2;
-@use "../layout/variables" as variables3;
+@use "../base/variables" as base-vars;
+@use "../layout/variables" as layout-vars;
 
 :root {
   --sidenav-width: #{variables.$sidenav-width};
@@ -27,14 +27,14 @@
 
   // Position and style the close button (top right corner)
   .sidenav-close-button {
-    font-size: 3.6rem !important;
-    padding-right: 30px !important;
+    font-size: 3.6rem;
+    padding-right: 30px;
     position: absolute;
     right: 0;
     top: 0;
 
     &:focus-visible {
-      outline: 2px solid variables2.$focus-ring-color;
+      outline: 2px solid base-vars.$focus-ring-color;
       outline-offset: 2px;
     }
   }
@@ -60,7 +60,7 @@
     }
 
     &:focus-visible {
-      outline: 2px solid variables2.$focus-ring-color;
+      outline: 2px solid base-vars.$focus-ring-color;
       outline-offset: -2px;
     }
 
@@ -78,8 +78,8 @@
 
   // The buttons inside side navigation panel
   button {
-    margin-left: 20px !important;
-    margin-right: 20px !important;
+    margin-left: 20px;
+    margin-right: 20px;
     min-width: 150px;
     width: 84%;
   }
@@ -100,7 +100,7 @@
 }
 
 // Change the style of the sidenav for non-mobiles
-@media (min-width: variables3.$media-phablet) {
+@media (min-width: layout-vars.$media-phablet) {
   .sidenav {
     padding-top: 60px;
 

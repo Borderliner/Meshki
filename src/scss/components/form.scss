@@ -1,7 +1,7 @@
 @use '../base/colors' as base-colors;
 @use 'colors';
 @use 'variables';
-@use "../base/variables" as variables2;
+@use "../base/variables" as base-vars;
 @use "../utils/mixins/form";
 @use "button-colors";
 
@@ -55,8 +55,8 @@ textarea {
 }
 
 @include form.input-elements-mixin(':focus-visible') {
-  border-color: variables2.$focus-ring-color;
-  outline: 2px solid variables2.$focus-ring-color;
+  border-color: base-vars.$focus-ring-color;
+  outline: 2px solid base-vars.$focus-ring-color;
   outline-offset: 1px;
 }
 
@@ -152,7 +152,7 @@ input[type='radio']:checked + label.radio:before {
 // on the visible ::before box instead.
 input[type='checkbox']:focus-visible + label.checkbox::before,
 input[type='radio']:focus-visible + label.radio::before {
-  outline: 2px solid variables2.$focus-ring-color;
+  outline: 2px solid base-vars.$focus-ring-color;
   outline-offset: 2px;
 }
 
@@ -265,7 +265,7 @@ input[type='range'] {
   }
 
   &:focus-visible {
-    outline: 2px solid variables2.$focus-ring-color;
+    outline: 2px solid base-vars.$focus-ring-color;
     outline-offset: 2px;
   }
 

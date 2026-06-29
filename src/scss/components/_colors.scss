@@ -1,36 +1,36 @@
 @use "../base/colors";
 // Anchor Colors //================================
-$anchor-color-default: #55acee;
-$anchor-color-hover: #74c1fb;
+$anchor-color-default: #55acee !default;
+$anchor-color-hover: #74c1fb !default;
 
 // Button variables
-$button-small-size:                1.2rem;
-$button-medium-size:               1.6rem;
-$button-large-size:                2.2rem;
+$button-small-size:                1.2rem !default;
+$button-medium-size:               1.6rem !default;
+$button-large-size:                2.2rem !default;
 
 // Footer Colors //================================
-$footer-color-background:          #111;
+$footer-color-background:          #111 !default;
 
 // Form Colors //================================
-$form-color-background:            colors.$text-color;
-$form-color-border:                #d1d1d1;
-$form-color-disabled:              #b1b1b1;
-$form-color-disabled-text:         #444;
-$form-checkradio-color:            #33bbf0;
-$form-color-placeholder:           #6a6a6a;
+$form-color-background:            colors.$text-color !default;
+$form-color-border:                #d1d1d1 !default;
+$form-color-disabled:              #b1b1b1 !default;
+$form-color-disabled-text:         #444 !default;
+$form-checkradio-color:            #33bbf0 !default;
+$form-color-placeholder:           #6a6a6a !default;
 
 // Navbar Colors //================================
-$navbar-color-button-active:       #111;
-$navbar-color-logo:                colors.$meshki-black;
-$navbar-color-logo-hover:          #d4d4d4;
-$navbar-color-dropdown-button-bg:  #444;
+$navbar-color-button-active:       #111 !default;
+$navbar-color-logo:                colors.$meshki-black !default;
+$navbar-color-logo-hover:          #d4d4d4 !default;
+$navbar-color-dropdown-button-bg:  #444 !default;
 
 // Sidenav Colors //================================
-$sidenav-color-bg:                 #000;
-$sidenav-color-links:              #818181;
-$sidenav-color-overlay:            #000;
+$sidenav-color-bg:                 #000 !default;
+$sidenav-color-links:              #818181 !default;
+$sidenav-color-overlay:            #000 !default;
 
 // Table Colors //================================
-$table-color-border:               #7c7c7c;
-$table-color-striped:              #2f2f2f;
-$table-color-hover:                #404040;
+$table-color-border:               #7c7c7c !default;
+$table-color-striped:              #2f2f2f !default;
+$table-color-hover:                #404040 !default;

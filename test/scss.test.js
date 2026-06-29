@@ -168,4 +168,13 @@ describe('scss — Phase 5 @use migration', () => {
       assert.doesNotMatch(readFileSync(f, 'utf-8'), /@import\s+['"]/, `${f} still uses a Sass @import`)
     }
   })
+
+  it('themable: consumers can override variables via @use ... with (!default)', () => {
+    const root = fileURLToPath(new URL('../', import.meta.url))
+    const css = sass.compileString(
+      '@use "src/scss/base/colors" with ($text-color: #123456);\n.x { color: colors.$text-color; }',
+      { loadPaths: [root] }
+    ).css
+    assert.match(css, /#123456/, '$text-color override should reach the output')
+  })
 })
