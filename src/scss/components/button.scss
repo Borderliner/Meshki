@@ -1,29 +1,33 @@
-// Defines the button color variables (used below) and emits the colored-button
-// rules. Imported once only — colored selectors out-specify the base, so order
-// does not matter and a second import would just duplicate the output.
-@import "button-colors";
+// Provides the button colour variables and the colored-button emit mixin.
+@use "button-colors";
+@use "../base/colors";
+@use "../base/variables";
+@use "../layout/variables" as variables2;
+@use "../utils/mixins/button";
+
+@include button-colors.emit-button-colors;
 
 // Suppress the default ring on mouse click, but show a clear one for keyboard
 // users via :focus-visible.
-@include button-mixin(':focus') {
+@include button.button-mixin(':focus') {
   outline: none;
 }
 
-@include button-mixin(':focus-visible') {
-  outline: 2px solid $focus-ring-color;
+@include button.button-mixin(':focus-visible') {
+  outline: 2px solid variables.$focus-ring-color;
   outline-offset: 2px;
 }
 
 // Simple button, with no style
-@include button-mixin {
+@include button.button-mixin {
   transition: all .3s;
   background-color: transparent;
-  border: 2px solid $button-color-simple;
+  border: 2px solid button-colors.$button-color-simple;
   border-radius: 5px;
-  color: $button-color-simple;
+  color: button-colors.$button-color-simple;
   cursor: pointer;
   display: inline-block;
-  font-size: $font-size-button;
+  font-size: variables.$font-size-button;
   line-height: normal !important; // Fix Midori bug
   // Button expands out of boundary bug
   max-width: 98%;
@@ -31,42 +35,42 @@
   text-decoration: none;
 }
 
-@include button-mixin('.small')  {
+@include button.button-mixin('.small')  {
   font-size: 1.2rem;
 }
 
-@include button-mixin('.medium')  {
+@include button.button-mixin('.medium')  {
   font-size: 1.6rem;
 }
 
-@include button-mixin('.large')  {
+@include button.button-mixin('.large')  {
   font-size: 2.2rem;
 }
 
 // Simple button's hover
-@include button-mixin(':hover') {
-  background-color: $button-color-simple;
-  border-color: $button-color-simple;
-  color: $meshki-black;
+@include button.button-mixin(':hover') {
+  background-color: button-colors.$button-color-simple;
+  border-color: button-colors.$button-color-simple;
+  color: colors.$meshki-black;
 }
 
 // Simple button's active
-@include button-mixin(':active') {
-  background-color: $button-color-simple-active;
-  border-color: $button-color-simple-active;
-  color: $meshki-black;
+@include button.button-mixin(':active') {
+  background-color: button-colors.$button-color-simple-active;
+  border-color: button-colors.$button-color-simple-active;
+  color: colors.$meshki-black;
 }
 
 // Disabled button
-@include button-mixin(':disabled') {
-  border-color: $button-color-disabled;
-  color: $button-color-disabled;
+@include button.button-mixin(':disabled') {
+  border-color: button-colors.$button-color-disabled;
+  color: button-colors.$button-color-disabled;
   pointer-events: none;
 }
 
-@include button-mixin('.disabled') {
-  border-color: $button-color-disabled;
-  color: $button-color-disabled;
+@include button.button-mixin('.disabled') {
+  border-color: button-colors.$button-color-disabled;
+  color: button-colors.$button-color-disabled;
   pointer-events: none;
 }
 
@@ -81,7 +85,7 @@
   }
 }
 
-@media (min-width: $media-tablet) {
+@media (min-width: variables2.$media-tablet) {
   .button-couple {
 
     button:first-child,

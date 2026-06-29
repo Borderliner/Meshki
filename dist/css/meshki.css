@@ -993,10 +993,6 @@ html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb, .container::-webki
   border: 3px solid #000;
 }
 
-:root {
-  --general-animation-duration: 0.3s;
-}
-
 html {
   font-size: 62.5%;
 }

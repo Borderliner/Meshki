@@ -1,11 +1,11 @@
-@import 'anchor';
-@import 'button';
-@import 'form';
+@use 'anchor';
+@use 'button';
+@use 'form';
 
-@import 'footer';
-@import 'navbar';
-@import 'sidenav';
+@use 'footer';
+@use 'navbar';
+@use 'sidenav';
 
-@import 'list';
-@import 'table';
-@import 'code';
+@use 'list';
+@use 'table';
+@use 'code';

@@ -14,40 +14,42 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-@import '../../utils/module';
-@import '../../base/colors';
-@import 'colors';
+@use "sass:list";
+@use '../../utils/module';
+@use '../../base/colors' as base-colors;
+@use 'colors';
+@use "../../utils/mixins/button";
 
 // name => (base colour, :active colour, text colour when the button is filled).
 // Order matters for the generated CSS.
 $x-button-colors: (
-  'yellow':  ($x-button-color-yellow,  $x-button-color-yellow-active,  $meshki-black),
-  'crimson': ($x-button-color-crimson, $x-button-color-crimson-active, $text-color),
-  'purple':  ($x-button-color-purple,  $x-button-color-purple-active,  $text-color),
-  'lime':    ($x-button-color-lime,    $x-button-color-lime-active,    $meshki-black),
-  'brown':   ($x-button-color-brown,   $x-button-color-brown-active,   $text-color),
-  'space':   ($x-button-color-space,   $x-button-color-space-active,   $text-color),
-  'rose':    ($x-button-color-rose,    $x-button-color-rose-active,    $text-color),
-  'cyan':    ($x-button-color-cyan,    $x-button-color-cyan-active,    $meshki-black)
+  'yellow':  (colors.$x-button-color-yellow,  colors.$x-button-color-yellow-active,  base-colors.$meshki-black),
+  'crimson': (colors.$x-button-color-crimson, colors.$x-button-color-crimson-active, base-colors.$text-color),
+  'purple':  (colors.$x-button-color-purple,  colors.$x-button-color-purple-active,  base-colors.$text-color),
+  'lime':    (colors.$x-button-color-lime,    colors.$x-button-color-lime-active,    base-colors.$meshki-black),
+  'brown':   (colors.$x-button-color-brown,   colors.$x-button-color-brown-active,   base-colors.$text-color),
+  'space':   (colors.$x-button-color-space,   colors.$x-button-color-space-active,   base-colors.$text-color),
+  'rose':    (colors.$x-button-color-rose,    colors.$x-button-color-rose-active,    base-colors.$text-color),
+  'cyan':    (colors.$x-button-color-cyan,    colors.$x-button-color-cyan-active,    base-colors.$meshki-black)
 );
 
 @each $name, $cfg in $x-button-colors {
-  $color: nth($cfg, 1);
-  $active: nth($cfg, 2);
-  $on-fill: nth($cfg, 3);
+  $color: list.nth($cfg, 1);
+  $active: list.nth($cfg, 2);
+  $on-fill: list.nth($cfg, 3);
 
-  @include button-mixin('.#{$name}') {
+  @include button.button-mixin('.#{$name}') {
     border: 2px $color solid !important;
     color: $color !important;
   }
 
-  @include button-mixin('.#{$name}:hover') {
+  @include button.button-mixin('.#{$name}:hover') {
     background-color: $color !important;
     border-color: $color !important;
     color: $on-fill !important;
   }
 
-  @include button-mixin('.#{$name}:active') {
+  @include button.button-mixin('.#{$name}:active') {
     background-color: $active !important;
     border-color: $active !important;
     color: $on-fill !important;

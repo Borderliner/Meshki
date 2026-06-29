@@ -2,6 +2,7 @@ import { describe, it, before } from 'node:test'
 import assert from 'node:assert/strict'
 import * as sass from 'sass'
 import { fileURLToPath } from 'node:url'
+import { readdirSync, readFileSync } from 'node:fs'
 
 const p = (rel) => fileURLToPath(new URL(rel, new URL('../', import.meta.url)))
 const compile = (rel) => sass.compile(p(rel)).css
@@ -139,6 +140,32 @@ describe('scss — Phase 4 de-duplication (output-equivalent @each loops)', () =
   it('the @each loop generates all form-validation states', () => {
     for (const s of ['error', 'warning', 'success']) {
       assert.match(main, new RegExp(`select\\.${s}\\b`), `${s} state missing`)
+    }
+  })
+})
+
+describe('scss — Phase 5 @use migration', () => {
+  let main
+  before(() => { main = compile('src/scss/main.scss') })
+
+  it('emits --general-animation-duration exactly once (duplicate :root gone)', () => {
+    assert.equal(count(main, '--general-animation-duration'), 1)
+  })
+
+  it('the whole tree uses @use — no remaining Sass @import', () => {
+    const files = []
+    const walk = (dir) => {
+      for (const e of readdirSync(dir, { withFileTypes: true })) {
+        const full = `${dir}/${e.name}`
+        if (e.isDirectory()) walk(full)
+        else if (e.name.endsWith('.scss')) files.push(full)
+      }
+    }
+    walk(p('src/scss'))
+    assert.ok(files.length > 20, 'should have scanned the scss tree')
+    for (const f of files) {
+      // Sass string imports are deprecated; `@import url(...)` for web fonts is allowed.
+      assert.doesNotMatch(readFileSync(f, 'utf-8'), /@import\s+['"]/, `${f} still uses a Sass @import`)
     }
   })
 })

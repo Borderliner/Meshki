@@ -15,20 +15,22 @@
  * limitations under the License.
  */
 
-@import '../../utils/module';
-@import '../../base/colors';
-@import '../../base/variables';
-@import '../../layout/variables';
-@import 'variables';
+@use '../../utils/module';
+@use '../../base/colors';
+@use '../../base/variables' as base-variables;
+@use '../../layout/variables' as layout-variables;
+@use 'variables';
+@use "../../utils/mixins/button";
+
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
 
 body {
   direction: rtl;
-  font-family: $rtl-font-family, $font-family;
-  font-size: $rtl-font-size;
+  font-family: variables.$rtl-font-family, base-variables.$font-family;
+  font-size: variables.$rtl-font-size;
   font-style: normal;
   font-weight: normal;
-  word-spacing: $rtl-word-spacing;
+  word-spacing: variables.$rtl-word-spacing;
 }
 
 // Buttons should use RTL font too
@@ -37,7 +39,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: $rtl-font-family, $font-family;
+  font-family: variables.$rtl-font-family, base-variables.$font-family;
 }
 
 // Keep the blocks of code LTR
@@ -48,7 +50,7 @@ pre {
 // Buttons //================================
 
 // Change the button size for RTL version
-@include button-mixin {
+@include button.button-mixin {
   padding: 6px 12px;
 }
 
@@ -64,7 +66,7 @@ pre {
 }
 
 // Button couples for tablets and upper
-@media (min-width: $media-tablet) {
+@media (min-width: layout-variables.$media-tablet) {
   .button-couple {
 
     // First button
@@ -104,7 +106,7 @@ pre {
 
 // Footer //================================
 
-@media (min-width: $media-phablet) {
+@media (min-width: layout-variables.$media-phablet) {
   // Footer text alignment for RTL
   footer,
   .footer {
@@ -139,7 +141,7 @@ input[type=text]::-webkit-input-placeholder {
 }
 
 // TODO: Use functions to generate offset percentage
-@media (min-width: $media-phablet) {
+@media (min-width: layout-variables.$media-phablet) {
   .col {
     margin-right: 4%;
 

@@ -1,5 +1,6 @@
-@import '../base/colors';
-@import 'variables';
+@use '../base/colors';
+@use 'variables';
+@use "../utils/mixins/layout";
 
 // Make element full width
 .expand {
@@ -24,7 +25,7 @@
 
 // Center an element
 .centerize {
-  @include centerize;
+  @include layout.centerize;
 }
 
 // Align center a text
@@ -44,11 +45,11 @@
 
 // Vertical line
 .vertical-line {
-  border-left: 1px $text-color solid;
+  border-left: 1px colors.$text-color solid;
 }
 
 // Hides the element on mobiles and phablets
-@media (max-width: $media-phablet) {
+@media (max-width: variables.$media-phablet) {
   .hide-on-mobile {
     display: none !important;
   }
@@ -59,21 +60,21 @@
 }
 
 // Hides the element on tablets and smaller
-@media (max-width: $media-tablet) {
+@media (max-width: variables.$media-tablet) {
   .hide-on-tablet {
     display: none !important;
   }
 }
 
 // Hides the element on desktops
-@media (min-width: $media-tablet) {
+@media (min-width: variables.$media-tablet) {
   .hide-on-desktop {
     display: none !important;
   }
 }
 
 // Hides the element on non-mobile and non-phablets
-@media (min-width: $media-phablet) {
+@media (min-width: variables.$media-phablet) {
   .hide-on-non-mobile {
     display: none !important;
   }

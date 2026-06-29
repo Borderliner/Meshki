@@ -1,42 +1,45 @@
-@import '../base/colors';
-@import 'colors';
-@import 'variables';
+@use '../base/colors' as base-colors;
+@use 'colors';
+@use 'variables';
+@use "../base/variables" as variables2;
+@use "../utils/mixins/form";
+@use "button-colors";
 
 // General attributes
-@include input-elements-mixin {
+@include form.input-elements-mixin {
   // Removes awkward default styles on some inputs for iOS
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
 
-  background-color: $form-color-background;
-  border: 1px solid $form-color-border;
+  background-color: colors.$form-color-background;
+  border: 1px solid colors.$form-color-border;
   border-radius: 4px;
   box-sizing: border-box;
-  color: $normal-black;
+  color: base-colors.$normal-black;
   height: 40px;
   padding: 0 10px;
   transition: border .3s, background-color .3s, box-shadow .3s;
 }
 
 // Dim the form elements when they're disabled
-@include input-elements-mixin(':disabled') {
-  background-color: $form-color-disabled;
-  border-color: $form-color-disabled;
-  color: $form-color-disabled-text;
-  -webkit-text-fill-color: $form-color-disabled-text;
+@include form.input-elements-mixin(':disabled') {
+  background-color: colors.$form-color-disabled;
+  border-color: colors.$form-color-disabled;
+  color: colors.$form-color-disabled-text;
+  -webkit-text-fill-color: colors.$form-color-disabled-text;
 }
 
 // Dropdown arrow for everyone!
 select {
-  background: $select-dropdown-arrow;
-  background-color: $form-color-background;
+  background: variables.$select-dropdown-arrow;
+  background-color: colors.$form-color-background;
   background-position: 98% 50%;
 
   // Firefox outline bug
   &:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 $normal-black;
+    text-shadow: 0 0 0 base-colors.$normal-black;
   }
 }
 
@@ -46,26 +49,26 @@ textarea {
 }
 
 // Lighten the background on focus; show a clear ring for keyboard users only.
-@include input-elements-mixin(':focus') {
-  background-color: $white;
+@include form.input-elements-mixin(':focus') {
+  background-color: base-colors.$white;
   outline: none;
 }
 
-@include input-elements-mixin(':focus-visible') {
-  border-color: $focus-ring-color;
-  outline: 2px solid $focus-ring-color;
+@include form.input-elements-mixin(':focus-visible') {
+  border-color: variables2.$focus-ring-color;
+  outline: 2px solid variables2.$focus-ring-color;
   outline-offset: 1px;
 }
 
 // Validation states — name => border/glow colour. Order matters for output.
 $form-validation-colors: (
-  'error':   $button-color-red,
-  'warning': $button-color-orange,
-  'success': $button-color-green
+  'error':   button-colors.$button-color-red,
+  'warning': button-colors.$button-color-orange,
+  'success': button-colors.$button-color-green
 );
 
 @each $state, $color in $form-validation-colors {
-  @include input-elements-mixin('.#{$state}') {
+  @include form.input-elements-mixin('.#{$state}') {
     border: 1px $color solid;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .1) inset, 0 0 8px $color;
   }
@@ -81,14 +84,14 @@ legend {
 
 // Fieldset normalization
 fieldset {
-  border: 2px solid $text-color;
+  border: 2px solid base-colors.$text-color;
   border-radius: 5px;
   margin: 10px 5px;
   padding: 20px;
 }
 
 // Checkbox and Radio normalization
-@include checkradio-mixin {
+@include form.checkradio-mixin {
   display: inline;
 
   // Make the actual boxes invisible
@@ -117,7 +120,7 @@ label {
 input[type='checkbox'] + label.checkbox::before,
 input[type='radio'] + label.radio::before {
   background-color: transparent;
-  border: 2px solid $text-color;
+  border: 2px solid base-colors.$text-color;
   border-radius: 5px;
   content: '';
   display: inline-block;
@@ -137,19 +140,19 @@ input[type='radio'] + label.radio::before {
 
 // When the checkbox is checked
 input[type='checkbox']:checked + label.checkbox:before {
-  background-color: $form-checkradio-color;
+  background-color: colors.$form-checkradio-color;
 }
 
 // When the radio button is checked
 input[type='radio']:checked + label.radio:before {
-  background-color: $form-checkradio-color;
+  background-color: colors.$form-checkradio-color;
 }
 
 // The real checkbox/radio is visually hidden, so show the keyboard focus ring
 // on the visible ::before box instead.
 input[type='checkbox']:focus-visible + label.checkbox::before,
 input[type='radio']:focus-visible + label.radio::before {
-  outline: 2px solid $focus-ring-color;
+  outline: 2px solid variables2.$focus-ring-color;
   outline-offset: 2px;
 }
 
@@ -179,7 +182,7 @@ label.checkbox, label.radio {
     position: absolute;
     cursor: pointer;
     inset: 0;
-    border: 2px solid $text-color;
+    border: 2px solid base-colors.$text-color;
     border-radius: 8px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     width: 2.7em;
@@ -191,7 +194,7 @@ label.checkbox, label.radio {
       width: 1.1em;
       left: 1px;
       bottom: 0.1em;
-      background-color: $text-color;
+      background-color: base-colors.$text-color;
       border-radius: 6px;
       transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
     }
@@ -203,12 +206,12 @@ label.checkbox, label.radio {
 }
 
 .switch input:checked + .slider {
-  box-shadow: 0 0 10px $button-color-simple;
-  border: 2px solid $button-color-simple;
+  box-shadow: 0 0 10px button-colors.$button-color-simple;
+  border: 2px solid button-colors.$button-color-simple;
 }
 
 .switch input:checked + .slider:before {
-  background-color: $button-color-simple;
+  background-color: button-colors.$button-color-simple;
 }
 
 // Colors
@@ -262,13 +265,13 @@ input[type='range'] {
   }
 
   &:focus-visible {
-    outline: 2px solid $focus-ring-color;
+    outline: 2px solid variables2.$focus-ring-color;
     outline-offset: 2px;
   }
 
   &::-webkit-slider-runnable-track {
-    background: $meshki-black;
-    border: 2px solid $form-color-background;
+    background: base-colors.$meshki-black;
+    border: 2px solid colors.$form-color-background;
     border-radius: 8px;
     cursor: pointer;
     height: 26px;
@@ -277,7 +280,7 @@ input[type='range'] {
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    background-color: $form-color-background;
+    background-color: colors.$form-color-background;
     border: 2px solid transparent;
     border-radius: 6px;
     cursor: pointer;
@@ -301,8 +304,8 @@ input[type='range'] {
   }
 
   &::-moz-range-track {
-    background-color: $meshki-black;
-    border: 2px solid $form-color-background;
+    background-color: base-colors.$meshki-black;
+    border: 2px solid colors.$form-color-background;
     border-radius: 8px;
     cursor: pointer;
     height: 22px;
@@ -311,7 +314,7 @@ input[type='range'] {
   }
 
   &::-moz-range-thumb {
-    background-color: $form-color-background;
+    background-color: colors.$form-color-background;
     border: 2px solid transparent;
     border-radius: 6px;
     cursor: pointer;
@@ -354,13 +357,13 @@ input[type='range'] {
 
   &::-ms-fill-lower,
   &::-ms-fill-upper {
-    background-color: $meshki-black;
-    border: 2px solid $form-color-background;
+    background-color: base-colors.$meshki-black;
+    border: 2px solid colors.$form-color-background;
     border-radius: 8px;
   }
 
   &::-ms-thumb {
-    background-color: $form-color-background;
+    background-color: colors.$form-color-background;
     border: 2px solid transparent;
     border-radius: 8px;
     cursor: pointer;
@@ -371,7 +374,7 @@ input[type='range'] {
 // Change placeholder color for text inputs
 // Chrome
 ::placeholder {
-  color: $form-color-placeholder;
+  color: colors.$form-color-placeholder;
   opacity: 1;
 }
 

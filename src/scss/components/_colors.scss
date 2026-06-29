@@ -1,4 +1,4 @@
-@import "../base/colors";
+@use "../base/colors";
 // Anchor Colors //================================
 $anchor-color-default: #55acee;
 $anchor-color-hover: #74c1fb;
@@ -12,7 +12,7 @@ $button-large-size:                2.2rem;
 $footer-color-background:          #111;
 
 // Form Colors //================================
-$form-color-background:            $text-color;
+$form-color-background:            colors.$text-color;
 $form-color-border:                #d1d1d1;
 $form-color-disabled:              #b1b1b1;
 $form-color-disabled-text:         #444;
@@ -21,7 +21,7 @@ $form-color-placeholder:           #6a6a6a;
 
 // Navbar Colors //================================
 $navbar-color-button-active:       #111;
-$navbar-color-logo:                $meshki-black;
+$navbar-color-logo:                colors.$meshki-black;
 $navbar-color-logo-hover:          #d4d4d4;
 $navbar-color-dropdown-button-bg:  #444;
 

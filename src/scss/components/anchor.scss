@@ -1,12 +1,12 @@
-@import 'colors';
+@use 'colors';
 
 // Nice blue for links
 a {
-  color: $anchor-color-default;
+  color: colors.$anchor-color-default;
   text-decoration: none;
   transition: color .2s;
 
   &:hover {
-    color: $anchor-color-hover;
+    color: colors.$anchor-color-hover;
   }
 }

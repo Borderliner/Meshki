@@ -1,38 +1,40 @@
+@use "../base/colors";
+
 // Single code, default style
 code {
   background-color: transparent;
-  border: 1px $text-color solid;
+  border: 1px colors.$text-color solid;
   border-radius: 5px;
-  color: $text-color;
+  color: colors.$text-color;
   font-size: 90%;
   padding: 1px 5px;
   white-space: nowrap;
 
   // Single code, filled style
   &.filled {
-    background-color: $text-color;
-    color: $meshki-black;
+    background-color: colors.$text-color;
+    color: colors.$meshki-black;
   }
 }
 
 // pre is used for a block of code
 pre {
   background-color: transparent;
-  border: 2px $text-color solid;
+  border: 2px colors.$text-color solid;
   border-radius: 5px;
-  color: $text-color;
+  color: colors.$text-color;
   overflow-x: auto;
   white-space: pre-wrap; // preserve formatting; 'normal' collapsed it
 
   // Filled mode for blocks of code
   &.filled {
-    background-color: $text-color;
-    color: $meshki-black;
+    background-color: colors.$text-color;
+    color: colors.$meshki-black;
 
     // If the code is the immediate child of pre with filled mode
     & > code {
-      background-color: $text-color;
-      color: $meshki-black;
+      background-color: colors.$text-color;
+      color: colors.$meshki-black;
     }
   }
 }
