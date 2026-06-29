@@ -1,10 +1,10 @@
-@import 'colors';
+@use 'colors';
 
 // General scrollbar color
 html, body, .container, .content {
   /* Works on Firefox */
   scrollbar-width: auto;
-  scrollbar-color: $scrollbar-color-front $background-color;
+  scrollbar-color: colors.$scrollbar-color-front colors.$background-color;
 
   /* Works on Chrome, Edge, and Safari */
   &::-webkit-scrollbar {
@@ -12,13 +12,13 @@ html, body, .container, .content {
   }
 
   &::-webkit-scrollbar-track {
-      background: $background-color;
+      background: colors.$background-color;
   }
 
   &::-webkit-scrollbar-thumb {
-      background-color: $scrollbar-color-front;
+      background-color: colors.$scrollbar-color-front;
       border-radius: 8px;
-      border: 3px solid $scrollbar-color-bg;
+      border: 3px solid colors.$scrollbar-color-bg;
       background-clip: padding-box;
   }
 }
@@ -26,10 +26,10 @@ html, body, .container, .content {
 .sidenav {
   /* Works on Firefox */
   scrollbar-width: auto;
-  scrollbar-color: $scrollbar-color-front $scrollbar-color-bg;
+  scrollbar-color: colors.$scrollbar-color-front colors.$scrollbar-color-bg;
 
   &:hover {
-    scrollbar-color: $scrollbar-color-hover $scrollbar-color-bg;
+    scrollbar-color: colors.$scrollbar-color-hover colors.$scrollbar-color-bg;
   }
 
   /* Works on Chrome, Edge, and Safari */
@@ -38,12 +38,12 @@ html, body, .container, .content {
   }
 
   &::-webkit-scrollbar-track {
-    background: $scrollbar-color-bg;
+    background: colors.$scrollbar-color-bg;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: $scrollbar-color-front;
+    background-color: colors.$scrollbar-color-front;
     border-radius: 8px;
-    border: 3px solid $scrollbar-color-bg;
+    border: 3px solid colors.$scrollbar-color-bg;
   }
 }

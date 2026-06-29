@@ -1,9 +1,11 @@
+@use "colors";
+
 table {
   border-spacing: 0;
 
   // Stripped table
   &.striped tr:nth-child(even) {
-    background-color: $table-color-striped;
+    background-color: colors.$table-color-striped;
   }
 
   // Centerizes the texts inside each cell
@@ -22,7 +24,7 @@ table {
 
     // Changes color when the mouse is over each row
     & > tbody tr:hover {
-      background-color: $table-color-hover;
+      background-color: colors.$table-color-hover;
     }
   }
 }
@@ -30,7 +32,7 @@ table {
 // Padding and stuff for each cell
 th,
 td {
-  border-bottom: 1px $table-color-border solid;
+  border-bottom: 1px colors.$table-color-border solid;
   padding: 12px 10px;
   text-align: left;
 }

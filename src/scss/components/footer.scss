@@ -1,8 +1,11 @@
+@use "../base/colors";
+@use "../layout/variables";
+
 // The footer tag, or a div with footer (Useful for IE)
 footer,
 .footer {
-  background-color: $meshki-black-darker;
-  border-top: 2px solid $text-color;
+  background-color: colors.$meshki-black-darker;
+  border-top: 2px solid colors.$text-color;
   display: block;
   position: absolute;
   left: 0;
@@ -24,7 +27,7 @@ footer,
 }
 
 // Align the text of the footer to the left for non-mobile
-@media (min-width: $media-phablet) {
+@media (min-width: variables.$media-phablet) {
   footer,
   .footer {
     text-align: left;

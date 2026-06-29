@@ -7,12 +7,12 @@
 @function column-width($part) {
   @if $part >= 1 and $part < 6 {
     $size: ((math.div(96, 12) * $part) - ((6 - $part) * math.div(2, 3)));
-    @return percentage(math.div($size, 100));
+    @return math.percentage(math.div($size, 100));
   }
 
   @else if $part >= 6 and $part < 12 {
     $size: ((math.div(96, 12) * $part) + (($part - 6) * math.div(2, 3)));
-    @return percentage(math.div($size, 100));
+    @return math.percentage(math.div($size, 100));
   }
 
   @else {
@@ -22,5 +22,5 @@
 
 @function offset-column-margin($part) {
   $size: (math.div(96, 12) * $part) + ($part * math.div(2, 3));
-  @return percentage(math.div($size, 100));
+  @return math.percentage(math.div($size, 100));
 }

@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 /*******************************
             General Layout
@@ -15,7 +15,7 @@
 .content {
   box-sizing: border-box;
   margin: 0 auto;
-  max-width: $content-max-width;
+  max-width: variables.$content-max-width;
   padding: 52px 20px 70px 20px;
   position: relative;
   width: 100%;

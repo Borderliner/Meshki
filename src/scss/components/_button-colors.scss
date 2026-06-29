@@ -1,9 +1,12 @@
 // Button Colors //================================
-@import "colors";
+@use "sass:list";
+@use "colors" as colors2;
+@use "../base/colors";
+@use "../utils/mixins/button";
 
 $button-color-disabled:            #888;
 
-$button-color-simple:              $text-color;
+$button-color-simple:              colors.$text-color;
 $button-color-simple-active:       #b9b9b9;
 
 $button-color-blue:                #55acee;
@@ -30,24 +33,24 @@ $button-colors: (
 // can also be re-emitted, scoped, by the light-mode plugin.
 @mixin emit-button-colors {
   @each $name, $cfg in $button-colors {
-    $color: nth($cfg, 1);
-    $active: nth($cfg, 2);
+    $color: list.nth($cfg, 1);
+    $active: list.nth($cfg, 2);
 
-    @include button-mixin('.#{$name}') {
+    @include button.button-mixin('.#{$name}') {
       border: 2px $color solid;
       color: $color;
     }
 
-    @include button-mixin('.#{$name}:hover') {
+    @include button.button-mixin('.#{$name}:hover') {
       background-color: $color;
       border-color: $color;
-      color: $meshki-black;
+      color: colors.$meshki-black;
     }
 
-    @include button-mixin('.#{$name}:active') {
+    @include button.button-mixin('.#{$name}:active') {
       background-color: $active;
       border-color: $active;
-      color: $meshki-black;
+      color: colors.$meshki-black;
     }
   }
 }

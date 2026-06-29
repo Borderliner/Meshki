@@ -1,3 +1,6 @@
+@use "../base/colors" as base-colors;
+@use "colors";
+
 nav, .nav {
   width: 100%;
   z-index: 1;
@@ -7,8 +10,8 @@ nav, .nav {
   }
 
   ul {
-    background-color: $meshki-black-darker;
-    border-bottom: 2px solid $meshki-black;
+    background-color: base-colors.$meshki-black-darker;
+    border-bottom: 2px solid base-colors.$meshki-black;
     list-style-type: none;
     margin: 0;
     overflow: hidden;
@@ -24,7 +27,7 @@ nav, .nav {
 
       // Anchors inside lists' attributes
       & > a {
-        color: $text-color;
+        color: base-colors.$text-color;
         display: inline-block;
         padding: 14px 16px;
         text-align: center;
@@ -35,7 +38,7 @@ nav, .nav {
        // Change the link color to #111 (black) on hover
        // Only direct children are affected, which means it excludes dropdowns
       & > a:hover {
-        background-color: $navbar-color-button-active;
+        background-color: colors.$navbar-color-button-active;
       }
 
       // Buttons positioning on navbar
@@ -47,19 +50,19 @@ nav, .nav {
 
       // Active navbar button
       & > a.active {
-        background-color: $navbar-color-button-active;
+        background-color: colors.$navbar-color-button-active;
       }
 
       // Logo of the website, it must be the first child of navbar
       &:first-child a.logo {
-        background-color: $navbar-color-logo;
-        color: $text-color;
+        background-color: colors.$navbar-color-logo;
+        color: base-colors.$text-color;
       }
 
       // Lighten the logo when the mouse is over it
       &:first-child a.logo:hover {
-        background-color: $navbar-color-logo-hover;
-        color: $normal-black;
+        background-color: colors.$navbar-color-logo-hover;
+        color: base-colors.$normal-black;
       }
 
       /* Send the elements to the right side with nav-right */
@@ -91,7 +94,7 @@ nav, .nav {
         &:focus-within {
           /* When the dropdown is open, change the color of dropdown's button */
           .nav-dropdown-button {
-            background-color: $navbar-color-button-active;
+            background-color: colors.$navbar-color-button-active;
           }
       
           /* Display the content when the mouse is on dropdown's button */
@@ -103,7 +106,7 @@ nav, .nav {
 
         /* Dropdown content attributes */
         .nav-dropdown-content {
-          background-color: $navbar-color-button-active;
+          background-color: colors.$navbar-color-button-active;
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
           display: block;
           min-width: 160px;
@@ -116,7 +119,7 @@ nav, .nav {
 
         /* Each link in dropdown's content */
         .nav-dropdown-content a {
-          color: $text-color;
+          color: base-colors.$text-color;
           display: block;
           padding: 12px 16px;
           text-align: left;
@@ -125,7 +128,7 @@ nav, .nav {
 
         /* When the mouse is on each option */
         .nav-dropdown-content a:hover {
-          background-color: $navbar-color-dropdown-button-bg;
+          background-color: colors.$navbar-color-dropdown-button-bg;
         }
       }
     }

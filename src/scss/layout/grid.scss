@@ -1,9 +1,13 @@
+@use "../utils/functions/layout" as layout2;
+@use "../utils/mixins/layout";
+@use "variables";
+
 /*******************************
             Grid Layout
   *******************************/
 // Center the row, used to hold columns
 .row {
-  @include centerize;
+  @include layout.centerize;
   display: block;
   margin-bottom: 10px;
 }
@@ -16,24 +20,24 @@
 }
 
 // Decrease the content width for non-mobiles
-@media (min-width: $media-mobile) {
+@media (min-width: variables.$media-mobile) {
   .content {
     padding-left: 0;
     padding-right: 0;
-    width: $content-width-phablet;
+    width: variables.$content-width-phablet;
   }
 }
 
 // For devices larger than 544px
-@media (min-width: $media-phablet) {
+@media (min-width: variables.$media-phablet) {
   // Decrease content width for a proper look
   .content {
-    width: $content-width-tablet;
+    width: variables.$content-width-tablet;
   }
 
   // Left margin for columns so they do not collide
   .col {
-    margin-left: $col-margin;
+    margin-left: variables.$col-margin;
 
     // The first column doesn't need left margin
     &:first-child {
@@ -41,17 +45,17 @@
     }
 
     // 12-based columns
-    &.one    { width: column-width(1);  }
-    &.two    { width: column-width(2);  }
-    &.three  { width: column-width(3);  }
-    &.four   { width: column-width(4);  }
-    &.five   { width: column-width(5);  }
-    &.six    { width: column-width(6);  }
-    &.seven  { width: column-width(7);  }
-    &.eight  { width: column-width(8);  }
-    &.nine   { width: column-width(9);  }
-    &.ten    { width: column-width(10); }
-    &.eleven { width: column-width(11); }
+    &.one    { width: layout2.column-width(1);  }
+    &.two    { width: layout2.column-width(2);  }
+    &.three  { width: layout2.column-width(3);  }
+    &.four   { width: layout2.column-width(4);  }
+    &.five   { width: layout2.column-width(5);  }
+    &.six    { width: layout2.column-width(6);  }
+    &.seven  { width: layout2.column-width(7);  }
+    &.eight  { width: layout2.column-width(8);  }
+    &.nine   { width: layout2.column-width(9);  }
+    &.ten    { width: layout2.column-width(10); }
+    &.eleven { width: layout2.column-width(11); }
 
     // Fill the row, with no margin on the left
     &.twelve {
@@ -60,44 +64,44 @@
     }
 
     // Proportional columns
-    &.one-third  { width: column-width(4); }
+    &.one-third  { width: layout2.column-width(4); }
 
     &.two-third,
     &.two-thirds {
-      width: column-width(8);
+      width: layout2.column-width(8);
     }
 
     // Half of the container columns
     &.half,
     &.one-half   {
-      width: column-width(6);
+      width: layout2.column-width(6);
     }
 
     // Offsets
-    &.offset-by-one    { margin-left: offset-column-margin(1);  }
-    &.offset-by-two    { margin-left: offset-column-margin(2);  }
-    &.offset-by-three  { margin-left: offset-column-margin(3);  }
-    &.offset-by-four   { margin-left: offset-column-margin(4);  }
-    &.offset-by-five   { margin-left: offset-column-margin(5);  }
-    &.offset-by-six    { margin-left: offset-column-margin(6);  }
-    &.offset-by-seven  { margin-left: offset-column-margin(7);  }
-    &.offset-by-eight  { margin-left: offset-column-margin(8);  }
-    &.offset-by-nine   { margin-left: offset-column-margin(9);  }
-    &.offset-by-ten    { margin-left: offset-column-margin(10); }
-    &.offset-by-eleven { margin-left: offset-column-margin(11); }
+    &.offset-by-one    { margin-left: layout2.offset-column-margin(1);  }
+    &.offset-by-two    { margin-left: layout2.offset-column-margin(2);  }
+    &.offset-by-three  { margin-left: layout2.offset-column-margin(3);  }
+    &.offset-by-four   { margin-left: layout2.offset-column-margin(4);  }
+    &.offset-by-five   { margin-left: layout2.offset-column-margin(5);  }
+    &.offset-by-six    { margin-left: layout2.offset-column-margin(6);  }
+    &.offset-by-seven  { margin-left: layout2.offset-column-margin(7);  }
+    &.offset-by-eight  { margin-left: layout2.offset-column-margin(8);  }
+    &.offset-by-nine   { margin-left: layout2.offset-column-margin(9);  }
+    &.offset-by-ten    { margin-left: layout2.offset-column-margin(10); }
+    &.offset-by-eleven { margin-left: layout2.offset-column-margin(11); }
 
     // Proportional Offsets
-    &.offset-by-one-third  { margin-left: offset-column-margin(4); }
+    &.offset-by-one-third  { margin-left: layout2.offset-column-margin(4); }
 
     &.offset-by-two-third,
     &.offset-by-two-thirds {
-      margin-left: offset-column-margin(8);
+      margin-left: layout2.offset-column-margin(8);
     }
 
     // Half of the container as offset
     &.offset-by-half,
     &.offset-by-one-half   {
-      margin-left: offset-column-margin(6);
+      margin-left: layout2.offset-column-margin(6);
     }
   }
 }

@@ -1,5 +1,5 @@
 // You may add other layouts here. Meshki comes with a grid layout for now.
-@import 'layout';
-@import 'grid';
-@import 'flex';
-@import 'utils';
+@use 'layout';
+@use 'grid';
+@use 'flex';
+@use 'utils';

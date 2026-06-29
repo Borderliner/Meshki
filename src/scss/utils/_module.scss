@@ -1,2 +1,2 @@
-@import 'functions/module';
-@import 'mixins/module';
+@use 'functions/module';
+@use 'mixins/module' as module2;
