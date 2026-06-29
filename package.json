@@ -5,7 +5,7 @@
   "main": "build.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"No test is specified for Meshki.\" && exit 1",
+    "test": "node --test",
     "compile": "node build.js",
     "watch": "node build.js --watch",
     "rebuild-sass": "npm rebuild node-sass --force",
@@ -37,6 +37,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.6.0",
     "fs-extra": "^11.2.0",
+    "jsdom": "^29.1.1",
     "node-watch": "^0.7.4",
     "sass": "^1.77.8",
     "uglify-js": "^3.19.0"
