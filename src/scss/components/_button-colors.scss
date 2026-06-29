@@ -1,25 +1,24 @@
 // Button Colors //================================
 @use "sass:list";
-@use "colors" as colors2;
-@use "../base/colors";
+@use "../base/colors" as base-colors;
 @use "../utils/mixins/button";
 
-$button-color-disabled:            #888;
+$button-color-disabled:            #888 !default;
 
-$button-color-simple:              colors.$text-color;
-$button-color-simple-active:       #b9b9b9;
+$button-color-simple:              base-colors.$text-color !default;
+$button-color-simple-active:       #b9b9b9 !default;
 
-$button-color-blue:                #55acee;
-$button-color-blue-active:         #4b82b7;
+$button-color-blue:                #55acee !default;
+$button-color-blue-active:         #4b82b7 !default;
 
-$button-color-green:               #2ecc71;
-$button-color-green-active:        #21a057;
+$button-color-green:               #2ecc71 !default;
+$button-color-green-active:        #21a057 !default;
 
-$button-color-red:                 #e74c3c;
-$button-color-red-active:          #bd382a;
+$button-color-red:                 #e74c3c !default;
+$button-color-red-active:          #bd382a !default;
 
-$button-color-orange:              #e67e22;
-$button-color-orange-active:       #c16819;
+$button-color-orange:              #e67e22 !default;
+$button-color-orange-active:       #c16819 !default;
 
 // name => (base colour, :active colour). Order matters for the generated CSS.
 $button-colors: (
@@ -44,13 +43,13 @@ $button-colors: (
     @include button.button-mixin('.#{$name}:hover') {
       background-color: $color;
       border-color: $color;
-      color: colors.$meshki-black;
+      color: base-colors.$meshki-black;
     }
 
     @include button.button-mixin('.#{$name}:active') {
       background-color: $active;
       border-color: $active;
-      color: colors.$meshki-black;
+      color: base-colors.$meshki-black;
     }
   }
 }

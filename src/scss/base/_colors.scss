@@ -1,16 +1,16 @@
 // Base Colors //================================
-$meshki-black:                     #222;
-$meshki-black-darker:              #1a1a1a;
-$background-color:                 $meshki-black;
-$transparent-color:                rgba(0, 0, 0, 0);
-$normal-black:                     #000;
-$white:                            #fff;
+$meshki-black:                     #222 !default;
+$meshki-black-darker:              #1a1a1a !default;
+$background-color:                 $meshki-black !default;
+$transparent-color:                rgba(0, 0, 0, 0) !default;
+$normal-black:                     #000 !default;
+$white:                            #fff !default;
 
 // Typography
-$text-color:                       #e1e1e1;
-$text-selection-color:             #15acee;
+$text-color:                       #e1e1e1 !default;
+$text-selection-color:             #15acee !default;
 
 // Scrollbar Colors //================================
-$scrollbar-color-bg:               #000;
-$scrollbar-color-front:            #bebebe;
-$scrollbar-color-hover:            $text-color;
+$scrollbar-color-bg:               #000 !default;
+$scrollbar-color-front:            #bebebe !default;
+$scrollbar-color-hover:            $text-color !default;

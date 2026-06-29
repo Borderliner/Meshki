@@ -1,8 +1,8 @@
 @use 'colors';
 @use 'variables';
 @use "../base/colors" as base-colors;
-@use "../base/variables" as variables2;
-@use "../layout/variables" as variables3;
+@use "../base/variables" as base-vars;
+@use "../layout/variables" as layout-vars;
 
 :root {
   --sidenav-width: #{variables.$sidenav-width};
@@ -34,7 +34,7 @@
     top: 0;
 
     &:focus-visible {
-      outline: 2px solid variables2.$focus-ring-color;
+      outline: 2px solid base-vars.$focus-ring-color;
       outline-offset: 2px;
     }
   }
@@ -60,7 +60,7 @@
     }
 
     &:focus-visible {
-      outline: 2px solid variables2.$focus-ring-color;
+      outline: 2px solid base-vars.$focus-ring-color;
       outline-offset: -2px;
     }
 
@@ -100,7 +100,7 @@
 }
 
 // Change the style of the sidenav for non-mobiles
-@media (min-width: variables3.$media-phablet) {
+@media (min-width: layout-vars.$media-phablet) {
   .sidenav {
     padding-top: 60px;
 

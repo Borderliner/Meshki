@@ -2,7 +2,7 @@
 @use "button-colors";
 @use "../base/colors";
 @use "../base/variables";
-@use "../layout/variables" as variables2;
+@use "../layout/variables" as layout-vars;
 @use "../utils/mixins/button";
 
 @include button-colors.emit-button-colors;
@@ -85,7 +85,7 @@
   }
 }
 
-@media (min-width: variables2.$media-tablet) {
+@media (min-width: layout-vars.$media-tablet) {
   .button-couple {
 
     button:first-child,
