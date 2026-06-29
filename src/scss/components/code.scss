@@ -22,7 +22,7 @@ pre {
   border-radius: 5px;
   color: $text-color;
   overflow-x: auto;
-  white-space: normal;
+  white-space: pre-wrap; // preserve formatting; 'normal' collapsed it
 
   // Filled mode for blocks of code
   &.filled {

@@ -7,15 +7,15 @@ html, body, .container, .content {
   scrollbar-color: $scrollbar-color-front $background-color;
 
   /* Works on Chrome, Edge, and Safari */
-  ::-webkit-scrollbar {
+  &::-webkit-scrollbar {
       width: 8px;
   }
 
-  ::-webkit-scrollbar-track {
+  &::-webkit-scrollbar-track {
       background: $background-color;
   }
 
-  ::-webkit-scrollbar-thumb {
+  &::-webkit-scrollbar-thumb {
       background-color: $scrollbar-color-front;
       border-radius: 8px;
       border: 3px solid $scrollbar-color-bg;
@@ -33,15 +33,15 @@ html, body, .container, .content {
   }
 
   /* Works on Chrome, Edge, and Safari */
-  ::-webkit-scrollbar {
+  &::-webkit-scrollbar {
     width: 8px;
   }
-  
-  ::-webkit-scrollbar-track {
+
+  &::-webkit-scrollbar-track {
     background: $scrollbar-color-bg;
   }
-  
-  ::-webkit-scrollbar-thumb {
+
+  &::-webkit-scrollbar-thumb {
     background-color: $scrollbar-color-front;
     border-radius: 8px;
     border: 3px solid $scrollbar-color-bg;

@@ -1,6 +1,10 @@
 // Misc.
 $general-animation-duration:         .3s;
 
+// Accessibility — keyboard focus ring colour (see :focus-visible styles).
+// Matches $button-color-blue; kept here so it is available app-wide.
+$focus-ring-color:                   #55acee !default;
+
 :root {
   --general-animation-duration: #{$general-animation-duration};
 }
@@ -8,7 +12,6 @@ $general-animation-duration:         .3s;
 // Typography Variables
 $font-family:              'Roboto Condensed', sans-serif;
 $font-weight:              400;
-$font-size-after:          1.6rem;
 
 // NOTE: html font-size is set to 62.5% so that all the REM measurements
 // throughout Meshki are based on 10px sizing. So basically 1.5rem = 15px

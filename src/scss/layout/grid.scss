@@ -20,7 +20,7 @@
   .content {
     padding-left: 0;
     padding-right: 0;
-    width: 85%;
+    width: $content-width-phablet;
   }
 }
 
@@ -28,7 +28,7 @@
 @media (min-width: $media-phablet) {
   // Decrease content width for a proper look
   .content {
-    width: 80%;
+    width: $content-width-tablet;
   }
 
   // Left margin for columns so they do not collide

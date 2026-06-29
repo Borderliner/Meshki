@@ -117,6 +117,9 @@ input[type=text]::-webkit-input-placeholder {
     margin-left: auto;
     margin-right: 0;
   }
+  .col.offset-by-one, .col.offset-by-two, .col.offset-by-three, .col.offset-by-four, .col.offset-by-five, .col.offset-by-six, .col.offset-by-seven, .col.offset-by-eight, .col.offset-by-nine, .col.offset-by-ten, .col.offset-by-eleven, .col.offset-by-one-third, .col.offset-by-two-third, .col.offset-by-two-thirds, .col.offset-by-half, .col.offset-by-one-half {
+    margin-left: 0;
+  }
   .col.offset-by-one {
     margin-right: 8.6666666667%;
   }
@@ -153,10 +156,10 @@ input[type=text]::-webkit-input-placeholder {
   .col.offset-by-one-third {
     margin-right: 34.6666666667%;
   }
-  .col.offset-by-two-thirds {
+  .col.offset-by-two-third, .col.offset-by-two-thirds {
     margin-right: 69.3333333333%;
   }
-  .col.offset-by-one-half {
+  .col.offset-by-half, .col.offset-by-one-half {
     margin-right: 52%;
   }
 }

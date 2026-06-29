@@ -32,7 +32,6 @@ select {
   background: $select-dropdown-arrow;
   background-color: $form-color-background;
   background-position: 98% 50%;
-  outline: 0 !important;
 
   // Firefox outline bug
   &:-moz-focusring {
@@ -46,27 +45,30 @@ textarea {
   padding: 6px 10px;
 }
 
-// Blue light animation when the form elements get focus
+// Lighten the background on focus; show a clear ring for keyboard users only.
 @include input-elements-mixin(':focus') {
   background-color: $white;
-  // border: 1px solid $form-color-border;
-  // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
-  outline: 0 !important;
+  outline: none;
 }
 
-@include input-elements-mixin('.error') {
-  border: 1px $button-color-red solid;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .1) inset, 0 0 8px $button-color-red;
+@include input-elements-mixin(':focus-visible') {
+  border-color: $focus-ring-color;
+  outline: 2px solid $focus-ring-color;
+  outline-offset: 1px;
 }
 
-@include input-elements-mixin('.warning') {
-  border: 1px $button-color-orange solid;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .1) inset, 0 0 8px $button-color-orange;
-}
+// Validation states — name => border/glow colour. Order matters for output.
+$form-validation-colors: (
+  'error':   $button-color-red,
+  'warning': $button-color-orange,
+  'success': $button-color-green
+);
 
-@include input-elements-mixin('.success') {
-  border: 1px $button-color-green solid;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .1) inset, 0 0 8px $button-color-green;
+@each $state, $color in $form-validation-colors {
+  @include input-elements-mixin('.#{$state}') {
+    border: 1px $color solid;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1) inset, 0 0 8px $color;
+  }
 }
 
 // Label and Legend normalization
@@ -143,10 +145,12 @@ input[type='radio']:checked + label.radio:before {
   background-color: $form-checkradio-color;
 }
 
-// Remove outlines of checkboxes and radio buttons, especially for Firefox
-input[type='checkbox']:focus + label.checkbox,
-input[type='radio']:focus + label.radio {
-  outline: none !important;
+// The real checkbox/radio is visually hidden, so show the keyboard focus ring
+// on the visible ::before box instead.
+input[type='checkbox']:focus-visible + label.checkbox::before,
+input[type='radio']:focus-visible + label.radio::before {
+  outline: 2px solid $focus-ring-color;
+  outline-offset: 2px;
 }
 
 input[type='checkbox'] + label, input[type='radio'] + label,
@@ -209,7 +213,7 @@ label.checkbox, label.radio {
 
 // Colors
 .switch.blue input:checked + .slider {
-  box-shadow: 0 0 10px rgba(9, 117, 241, 0.8);
+  box-shadow: 0 0 10px rgba(9, 116, 241, 0.8); // match the #0974f1 border
   border: 2px solid #0974f1;
 }
 
@@ -218,7 +222,7 @@ label.checkbox, label.radio {
 }
 
 .switch.green input:checked + .slider {
-  box-shadow: 0 0 10px #2ecc70d0;
+  box-shadow: 0 0 10px #2ecc71d0; // match the #2ecc71 border
   border: 2px solid #2ecc71;
 }
 
@@ -227,7 +231,7 @@ label.checkbox, label.radio {
 }
 
 .switch.orange input:checked + .slider {
-  box-shadow: 0 0 10px #e67d22d2;
+  box-shadow: 0 0 10px #e67e22d2; // match the #e67e22 border
   border: 2px solid #e67e22;
 }
 
@@ -236,7 +240,7 @@ label.checkbox, label.radio {
 }
 
 .switch.red input:checked + .slider {
-  box-shadow: 0 0 10px #e74d3ccc;
+  box-shadow: 0 0 10px #e74c3ccc; // match the #e74c3c border
   border: 2px solid #e74c3c;
 }
 
@@ -255,6 +259,11 @@ input[type='range'] {
 
   &:focus {
     outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $focus-ring-color;
+    outline-offset: 2px;
   }
 
   &::-webkit-slider-runnable-track {

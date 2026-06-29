@@ -1,7 +1,6 @@
-// Blue button
+// Button Colors //================================
 @import "colors";
 
-// Button Colors //================================
 $button-color-disabled:            #888;
 
 $button-color-simple:              $text-color;
@@ -19,81 +18,32 @@ $button-color-red-active:          #bd382a;
 $button-color-orange:              #e67e22;
 $button-color-orange-active:       #c16819;
 
-@include button-mixin('.blue') {
-  border: 2px $button-color-blue solid;
-  color: $button-color-blue;
-}
+// name => (base colour, :active colour). Order matters for the generated CSS.
+$button-colors: (
+  'blue':   ($button-color-blue,   $button-color-blue-active),
+  'green':  ($button-color-green,  $button-color-green-active),
+  'red':    ($button-color-red,    $button-color-red-active),
+  'orange': ($button-color-orange, $button-color-orange-active)
+);
 
-// Blue button's hover
-@include button-mixin('.blue:hover') {
-  background-color: $button-color-blue;
-  border-color: $button-color-blue;
-  color: $meshki-black;
-}
+@each $name, $cfg in $button-colors {
+  $color: nth($cfg, 1);
+  $active: nth($cfg, 2);
 
-// Blue button's active
-@include button-mixin('.blue:active') {
-  background-color: $button-color-blue-active;
-  border-color: $button-color-blue-active;
-  color: $meshki-black;
-}
+  @include button-mixin('.#{$name}') {
+    border: 2px $color solid;
+    color: $color;
+  }
 
-// Green button
-@include button-mixin('.green') {
-  border: 2px $button-color-green solid;
-  color: $button-color-green;
-}
+  @include button-mixin('.#{$name}:hover') {
+    background-color: $color;
+    border-color: $color;
+    color: $meshki-black;
+  }
 
-// Green button's hover
-@include button-mixin('.green:hover') {
-  background-color: $button-color-green;
-  border-color: $button-color-green;
-  color: $meshki-black;
-}
-
-// Green button's active
-@include button-mixin('.green:active') {
-  background-color: $button-color-green-active;
-  border-color: $button-color-green-active;
-  color: $meshki-black;
-}
-
-// Red button
-@include button-mixin('.red') {
-  border: 2px $button-color-red solid;
-  color: $button-color-red;
-}
-
-// Red button's hover
-@include button-mixin('.red:hover') {
-  background-color: $button-color-red;
-  border-color: $button-color-red;
-  color: $meshki-black;
-}
-
-// Red button's active
-@include button-mixin('.red:active') {
-  background-color: $button-color-red-active;
-  border-color: $button-color-red-active;
-  color: $meshki-black;
-}
-
-// Orange button
-@include button-mixin('.orange') {
-  border: 2px $button-color-orange solid;
-  color: $button-color-orange;
-}
-
-// Orange button's hover
-@include button-mixin('.orange:hover') {
-  background-color: $button-color-orange;
-  border-color: $button-color-orange;
-  color: $meshki-black;
-}
-
-// Orange button's active
-@include button-mixin('.orange:active') {
-  background-color: $button-color-orange-active;
-  border-color: $button-color-orange-active;
-  color: $meshki-black;
+  @include button-mixin('.#{$name}:active') {
+    background-color: $active;
+    border-color: $active;
+    color: $meshki-black;
+  }
 }
