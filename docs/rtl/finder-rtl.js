@@ -25,28 +25,28 @@ const meshkiUtil = {
   TRange: null,
   search (event, str) {
     if (event.keyCode === 13 || event.type === 'click') {
-      if (!str && str === "" && str.trim().length <= 0) {
-        alert(`متنی برای جستجو ننوشته‌اید.`)
+      if (!str || str.trim().length <= 0) {
+        alert('متنی برای جستجو ننوشته‌اید.')
         return
       }
-      if (parseInt(navigator.appVersion) < 4) { return }
+      if (parseInt(navigator.appVersion, 10) < 4) { return }
       let strFound
       if (window.find) {
-        strFound = self.find(str)
+        strFound = window.find(str)
+        // If not found from the current position, wrap around and try once more.
         if (!strFound) {
-          strFound = self.find(str, 0, 1)
-          while (self.find(str, 0, 1)) { continue }
+          strFound = window.find(str, false, false, true)
         }
       } else if (navigator.appName.indexOf('Microsoft') !== -1) {
-        if (meshki.TRange != null) {
-          meshki.TRange.collapse(false)
-          strFound = meshki.TRange.findText(str)
-          if (strFound) { meshki.TRange.select() }
+        if (meshkiUtil.TRange != null) {
+          meshkiUtil.TRange.collapse(false)
+          strFound = meshkiUtil.TRange.findText(str)
+          if (strFound) { meshkiUtil.TRange.select() }
         }
-        if (meshki.TRange == null || strFound === 0) {
-          meshki.TRange = self.document.body.createTextRange()
-          strFound = meshki.TRange.findText(str)
-          if (strFound) { meshki.TRange.select() }
+        if (meshkiUtil.TRange == null || strFound === 0) {
+          meshkiUtil.TRange = self.document.body.createTextRange()
+          strFound = meshkiUtil.TRange.findText(str)
+          if (strFound) { meshkiUtil.TRange.select() }
         }
       } else if (navigator.appName === 'Opera') {
         alert('این قابلیت از مرورگر اوپرا پشتیبانی نمی‌کند.')
